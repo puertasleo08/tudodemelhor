@@ -1,0 +1,28 @@
+# Regras do Projeto: tudodemelhor.com.br
+
+## 1. Identidade Visual (CSS / Design System)
+- Cor de Fundo Principal: `#232F3E` (Charcoal / Midnight Blue).
+- Cor do Card/Conteúdo: `#1B2530` com bordas sutis em `#37475A`.
+- Botões de Ação Principal (CTA / Comprar): `#FFE600` (Amarelo Mercado Livre) com texto escuro `#0F1111` em negrito.
+- Destaques / Selos de Desconto / Preço: `#FF9900` (Laranja Amazon).
+- Textos: Títulos em `#FFFFFF`, corpo de texto em `#D5D9D9`.
+- Fontes: Sans-serif moderna e legível (Inter, System-UI).
+
+## 2. Estrutura de Páginas de Review (Arquitetura Técnica)
+Sempre que criar uma página de produto ou comparativo, siga este esqueleto HTML:
+1. Header com Logo "Tudo de Melhor" e navegação de categorias.
+2. Breadcrumbs (Início > Categoria > Nome do Produto).
+3. H1 com Nome Exato do Modelo.
+4. Caixas de Veredito Rápido:
+   - "Nota Geral" (0 a 10 com estrelas amareladas).
+   - "Para quem é indicado" / "Destaque Principal".
+5. Bloco de Prós e Contras (Duas colunas responsivas).
+6. Tabela de Especificações Técnicas (Limpa e organizada).
+7. Texto de Review detalhado dividido em seções H2/H3.
+8. Botão de Oferta de Afiliado (Mercado Livre / Amazon) fixo ou em evidência.
+9. FAQ (Perguntas Frequentes com Schema Markup JSON-LD para SEO).
+
+## 3. SEO e IA (NEURONwriter)
+- Toda geração de conteúdo DEVE consultar as palavras-chave LSI recomendadas no NEURONwriter via MCP.
+- Foque na intenção de busca de Fundo de Funil (Pesquisa Comercial e Comparativos).
+- O HTML deve ser semântico, ultrarrápido e sem scripts pesados para hospedagem na Vercel.
