@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Fale com a Tudo de Melhor: WhatsApp, e-mail e formulário para dúvidas sobre análises, sugestões de produtos e atendimento editorial.">
+  <title>Fale Conosco | Tudo de Melhor</title>
+  <link rel="canonical" href="https://tudodemelhor.com.br/contato.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#232F3E',
+              yellow: '#FFE600',
+              orange: '#FF9900',
+              card: 'rgba(27, 37, 48, 0.7)',
+              elevated: '#1B2530',
+              border: '#37475A',
+              muted: '#D5D9D9',
+              dim: '#AAB3BD'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 15px rgba(255, 230, 0, 0.4)',
+            'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
+            'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
+            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)'
+          },
+          backgroundImage: {
+            'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .glass {
+        @apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;
+      }
+    }
+  </style>
+  <style>
+    body {
+      background-image:
+        radial-gradient(ellipse 70% 45% at 85% 10%, rgba(255, 153, 0, 0.14), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 10% 85%, rgba(255, 230, 0, 0.07), transparent 50%),
+        radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+      background-size: auto, auto, 18px 18px;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="bg-brand-bg text-white font-sans antialiased min-h-screen">
+
+  <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+    <div class="mx-auto flex h-[100px] max-w-7xl items-center gap-4 px-4 lg:gap-8">
+      <a href="index.html" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
+        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
+          <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-full w-full object-cover">
+        </div>
+        <div class="flex flex-col justify-center">
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-white lg:text-2xl">Tudo De</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-brand-yellow lg:text-2xl">Melhor</span>
+        </div>
+      </a>
+
+      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-brand-elevated md:hidden" aria-label="Abrir menu" aria-expanded="false">
+        <span class="flex flex-col gap-1.5">
+          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-white"></span>
+        </span>
+      </button>
+
+      <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
+        <a href="index.html#categorias" class="transition hover:text-white">Categorias</a>
+        <a href="categorias.html" class="transition hover:text-white">Rankings</a>
+        <a href="reviews.html" class="transition hover:text-white">Reviews</a>
+        <a href="index.html#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
+      </nav>
+
+      <div class="hidden items-center gap-4 md:flex">
+        <label class="relative">
+          <span class="sr-only">Buscar</span>
+          <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.5-3.5"></path>
+          </svg>
+          <input type="search" placeholder="Buscar" class="h-11 w-44 rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim focus:border-brand-yellow/50 focus:bg-white/10 lg:w-52">
+        </label>
+        <a href="#login" class="inline-flex h-11 items-center rounded-full border border-white/25 px-6 text-sm font-semibold transition hover:bg-white/10">Login</a>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="hidden border-t border-white/10 bg-brand-elevated/98 px-4 py-4 md:hidden">
+      <nav class="flex flex-col gap-1 text-sm">
+        <a href="index.html#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Categorias</a>
+        <a href="categorias.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
+        <a href="reviews.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Reviews</a>
+        <a href="index.html#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
+      </nav>
+      <label class="relative mt-3 block">
+        <span class="sr-only">Buscar</span>
+        <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+        <input type="search" placeholder="Buscar" class="h-11 w-full rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim">
+      </label>
+      <a href="#login" class="mt-3 inline-flex h-11 w-full items-center justify-center rounded-full border border-white/25 font-semibold">Login</a>
+    </div>
+  </header>
+
+  <main class="px-4 pt-8 pb-14">
+    <div class="mx-auto max-w-6xl">
+      <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-brand-yellow">Início</a>
+        <span aria-hidden="true">/</span>
+        <span class="text-white" aria-current="page">Contato</span>
+      </nav>
+
+      <header class="glass relative mb-10 overflow-hidden p-6 md:p-10">
+        <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/10 blur-3xl"></div>
+        <div class="pointer-events-none absolute -bottom-20 left-10 h-40 w-40 rounded-full bg-brand-orange/10 blur-3xl"></div>
+        <p class="relative mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Atendimento</p>
+        <h1 class="relative mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Fale Conosco</h1>
+        <p class="relative max-w-2xl text-lg text-brand-muted">Tem dúvidas sobre alguma análise, sugestões de produtos ou precisa falar com a nossa equipe? Estamos à disposição nos canais abaixo.</p>
+      </header>
+
+      <section aria-label="Canais de atendimento" class="mb-10">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <article class="glass flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow">
+            <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-500/15 text-3xl shadow-glow-emerald ring-1 ring-emerald-400/40" aria-hidden="true">💬</div>
+            <h2 class="mb-2 text-xl font-bold">WhatsApp</h2>
+            <p class="mb-6 flex-1 text-lg font-semibold text-brand-muted">(12) 98176-9332</p>
+            <a href="https://wa.me/5512981769332" target="_blank" rel="noopener noreferrer" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-bold text-black shadow-glow">Enviar Mensagem</a>
+          </article>
+
+          <article class="glass flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow">
+            <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-yellow/15 text-3xl shadow-glow ring-1 ring-brand-yellow/40" aria-hidden="true">✉️</div>
+            <h2 class="mb-2 text-xl font-bold">E-mail</h2>
+            <p class="mb-6 flex-1 break-all text-lg font-semibold text-brand-muted">pplaneta.petss@gmail.com</p>
+            <a href="mailto:pplaneta.petss@gmail.com" class="inline-flex h-12 w-full items-center justify-center rounded-xl border border-white/35 font-bold text-white hover:bg-white/5">Enviar E-mail</a>
+          </article>
+
+          <article class="glass flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow">
+            <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-orange/15 text-3xl shadow-glow-orange ring-1 ring-brand-orange/40" aria-hidden="true">📍</div>
+            <h2 class="mb-2 text-xl font-bold">Escritório</h2>
+            <p class="mb-2 text-lg font-semibold text-brand-muted">Rua Ulisses Cruz, 220</p>
+            <p class="mb-6 flex-1 text-sm text-brand-dim">Atendimento exclusivamente digital. Não realizamos vendas físicas no local.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-label="Formulário de contato">
+        <div class="glass p-6 md:p-10">
+          <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Mensagem direta</p>
+          <h2 class="mb-2 text-2xl font-extrabold md:text-3xl">Envie sua mensagem</h2>
+          <p class="mb-8 max-w-2xl text-sm text-brand-dim">Preencha os campos abaixo. O envio pelo formulário ainda é um layout visual — para resposta imediata, use o WhatsApp ou o e-mail.</p>
+
+          <form class="grid grid-cols-1 gap-5 md:grid-cols-2" action="#" method="post" onsubmit="return false;">
+            <label class="flex flex-col gap-2">
+              <span class="text-sm font-semibold">Nome</span>
+              <input type="text" name="nome" autocomplete="name" placeholder="Seu nome" class="h-12 rounded-xl border border-white/15 bg-white/5 px-4 text-sm text-white outline-none placeholder:text-brand-dim focus:border-brand-yellow/50 focus:bg-white/10">
+            </label>
+            <label class="flex flex-col gap-2">
+              <span class="text-sm font-semibold">E-mail</span>
+              <input type="email" name="email" autocomplete="email" placeholder="voce@email.com" class="h-12 rounded-xl border border-white/15 bg-white/5 px-4 text-sm text-white outline-none placeholder:text-brand-dim focus:border-brand-yellow/50 focus:bg-white/10">
+            </label>
+            <label class="flex flex-col gap-2 md:col-span-2">
+              <span class="text-sm font-semibold">Assunto</span>
+              <input type="text" name="assunto" placeholder="Dúvida, sugestão ou parceria" class="h-12 rounded-xl border border-white/15 bg-white/5 px-4 text-sm text-white outline-none placeholder:text-brand-dim focus:border-brand-yellow/50 focus:bg-white/10">
+            </label>
+            <label class="flex flex-col gap-2 md:col-span-2">
+              <span class="text-sm font-semibold">Mensagem</span>
+              <textarea name="mensagem" rows="6" placeholder="Escreva sua mensagem" class="rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white outline-none placeholder:text-brand-dim focus:border-brand-yellow/50 focus:bg-white/10"></textarea>
+            </label>
+            <div class="md:col-span-2">
+              <button type="submit" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow px-8 font-bold text-black shadow-glow md:w-auto">Enviar Mensagem</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
+    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
+      <div>
+        <a href="index.html" class="mb-3 flex items-center gap-3">
+          <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" width="42" height="42" alt="" class="h-10 w-10 object-contain">
+          <span class="text-sm font-extrabold uppercase tracking-wider">Tudo de Melhor</span>
+        </a>
+        <p class="text-sm text-brand-dim">Rankings e reviews para decidir com segurança. Links de afiliados podem gerar comissão.</p>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Navegação</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="index.html" class="hover:text-brand-yellow">Home</a>
+          <a href="categorias.html" class="hover:text-brand-yellow">Rankings</a>
+          <a href="reviews.html" class="hover:text-brand-yellow">Reviews</a>
+          <a href="index.html#metodologia" class="hover:text-brand-yellow">Metodologia</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Categorias</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="index.html#categorias" class="hover:text-brand-yellow">Eletrônicos</a>
+          <a href="ranking-travesseiros.html" class="hover:text-brand-yellow">Casa e Sono</a>
+          <a href="index.html#categorias" class="hover:text-brand-yellow">Pets</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Legal</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="sobre.html" class="hover:text-brand-yellow">Sobre</a>
+          <a href="privacidade.html" class="hover:text-brand-yellow">Privacidade</a>
+          <a href="trocas.html" class="hover:text-brand-yellow">Trocas e Devoluções</a>
+          <a href="contato.html" class="hover:text-brand-yellow">Contato</a>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto mt-8 max-w-6xl border-t border-white/10 pt-4 text-xs text-brand-dim">
+      © <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const toggle = document.getElementById('nav-toggle');
+    const mobile = document.getElementById('mobile-nav');
+    toggle?.addEventListener('click', () => {
+      const open = mobile.classList.toggle('hidden') === false;
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobile?.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        mobile.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

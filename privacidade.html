@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Política de Privacidade e Termos da Tudo de Melhor: cookies, analytics, links de afiliados e a garantia de que não coletamos dados de pagamento.">
+  <title>Política de Privacidade e Termos | Tudo de Melhor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#232F3E',
+              yellow: '#FFE600',
+              orange: '#FF9900',
+              card: 'rgba(27, 37, 48, 0.7)',
+              elevated: '#1B2530',
+              border: '#37475A',
+              muted: '#D5D9D9',
+              dim: '#AAB3BD'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 15px rgba(255, 230, 0, 0.4)',
+            'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
+            'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
+            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)'
+          },
+          backgroundImage: {
+            'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .glass {
+        @apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;
+      }
+    }
+  </style>
+  <style>
+    body {
+      background-image:
+        radial-gradient(ellipse 70% 45% at 85% 10%, rgba(255, 153, 0, 0.14), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 10% 85%, rgba(255, 230, 0, 0.07), transparent 50%),
+        radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+      background-size: auto, auto, 18px 18px;
+      background-attachment: fixed;
+    }
+    .timeline-line {
+      background: linear-gradient(90deg, #FFE600, #FF9900, rgba(255, 255, 255, 0.35));
+      box-shadow: 0 0 18px rgba(255, 230, 0, 0.45);
+    }
+    @media (max-width: 767px) {
+      .timeline-line {
+        width: 3px;
+        height: 100%;
+        left: 1.35rem;
+        top: 0;
+        right: auto;
+        background: linear-gradient(180deg, #FFE600, #FF9900, rgba(255, 255, 255, 0.35));
+      }
+    }
+  </style>
+</head>
+<body class="bg-brand-bg text-white font-sans antialiased min-h-screen">
+
+  <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+    <div class="mx-auto flex h-[100px] max-w-7xl items-center gap-4 px-4 lg:gap-8">
+      <a href="index.html" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
+        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
+          <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo" class="h-full w-full object-cover">
+        </div>
+        <div class="flex flex-col justify-center">
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-white lg:text-2xl">Tudo De</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-brand-yellow lg:text-2xl">Melhor</span>
+        </div>
+      </a>
+
+      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-brand-elevated md:hidden" aria-label="Abrir menu" aria-expanded="false">
+        <span class="flex flex-col gap-1.5">
+          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-white"></span>
+        </span>
+      </button>
+
+      <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
+        <a href="index.html#categorias" class="transition hover:text-white">Categorias</a>
+        <a href="categorias.html" class="transition hover:text-white">Rankings</a>
+        <a href="reviews.html" class="transition hover:text-white">Reviews</a>
+        <a href="index.html#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
+      </nav>
+
+      <div class="hidden items-center gap-4 md:flex">
+        <label class="relative">
+          <span class="sr-only">Buscar</span>
+          <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.5-3.5"></path>
+          </svg>
+          <input type="search" placeholder="Buscar" class="h-11 w-44 rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim focus:border-brand-yellow/50 focus:bg-white/10 lg:w-52">
+        </label>
+        <a href="#login" class="inline-flex h-11 items-center rounded-full border border-white/25 px-6 text-sm font-semibold transition hover:bg-white/10">Login</a>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="hidden border-t border-white/10 bg-brand-elevated/98 px-4 py-4 md:hidden">
+      <nav class="flex flex-col gap-1 text-sm">
+        <a href="index.html#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Categorias</a>
+        <a href="categorias.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
+        <a href="reviews.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Reviews</a>
+        <a href="index.html#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
+      </nav>
+      <label class="relative mt-3 block">
+        <span class="sr-only">Buscar</span>
+        <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+        <input type="search" placeholder="Buscar" class="h-11 w-full rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim">
+      </label>
+      <a href="#login" class="mt-3 inline-flex h-11 w-full items-center justify-center rounded-full border border-white/25 font-semibold">Login</a>
+    </div>
+  </header>
+
+  <main class="px-4 py-12 md:py-16">
+    <div class="mx-auto max-w-4xl">
+      <nav class="mb-8 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-brand-yellow">Início</a>
+        <span aria-hidden="true">/</span>
+        <span class="text-white" aria-current="page">Privacidade e Termos</span>
+      </nav>
+
+      <article class="glass p-6 md:p-12">
+        <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Legal</p>
+        <h1 class="mb-2 text-3xl font-black md:text-4xl">Política de Privacidade e Termos</h1>
+        <p class="mb-10 text-sm text-brand-dim">Última atualização: agosto de 2026. Documento aplicável ao site tudodemelhor.com.br.</p>
+
+        <div class="prose prose-invert mx-auto max-w-4xl prose-headings:text-white prose-p:text-brand-muted prose-li:text-brand-muted prose-strong:text-white prose-a:text-brand-yellow">
+          <h2>1. Quem somos</h2>
+          <p>
+            A Tudo de Melhor é um portal editorial de rankings, reviews e comparativos de produtos. Não operamos loja virtual própria:
+            conteúdos e links de afiliados existem para informar o leitor e, eventualmente, gerar comissão quando uma compra é feita em plataformas de terceiros.
+          </p>
+          <p>
+            Ao navegar neste site, você concorda com esta Política de Privacidade e com os Termos de uso descritos abaixo.
+            Em caso de dúvida, trate as páginas de <a href="sobre.html">Sobre</a> e <a href="trocas.html">Trocas e Devoluções</a> como complemento deste documento.
+          </p>
+
+          <h2>2. Coleta de cookies e analytics</h2>
+          <p>
+            Utilizamos cookies e tecnologias semelhantes para lembrar preferências de interface, medir audiência e melhorar a navegação.
+            Ferramentas de analytics (por exemplo, estatísticas de páginas mais lidas, origem do tráfego e dispositivos) nos ajudam a entender o que funciona e o que precisa de ajuste editorial.
+          </p>
+          <p>
+            Cookies podem ser próprios (do tudodemelhor.com.br) ou de terceiros (redes de afiliados, analytics ou embeds).
+            Você pode recusar ou apagar cookies nas configurações do navegador; algumas funções do site podem ficar limitadas.
+          </p>
+          <ul>
+            <li><strong>Cookies essenciais:</strong> funcionamento básico, segurança e preferências mínimas.</li>
+            <li><strong>Cookies de desempenho:</strong> analytics agregados para melhorar conteúdo e usabilidade.</li>
+            <li><strong>Cookies de afiliação:</strong> podem ser definidos pela Amazon, Mercado Livre ou redes equivalentes após o clique no link patrocinado, para atribuir comissão — sujeitos às políticas dessas empresas.</li>
+          </ul>
+
+          <h2>3. Dados que não coletamos: pagamento e checkout</h2>
+          <p>
+            <strong>Não coletamos dados sensíveis de pagamento.</strong> Não pedimos nem armazenamos número de cartão de crédito, CVV, senha de banco, dados de Pix para checkout, nem CPF com finalidade de compra.
+            O pagamento, se houver, ocorre exclusivamente fora do nosso domínio, no checkout da loja parceira (Amazon, Mercado Livre ou outro marketplace indicado no link).
+          </p>
+          <p>
+            Também não processamos pedidos, não emitimos nota fiscal de mercadoria e não temos acesso ao seu histórico de compras nessas plataformas, salvo informações agregadas que o programa de afiliados eventualmente reporte (por exemplo, que houve uma conversão atribuída a um clique), sem detalhar o seu cartão ou documento.
+          </p>
+
+          <h2>4. Links de terceiros — isenção de responsabilidade</h2>
+          <p>
+            Nossas páginas contêm links para sites de terceiros, inclusive links de afiliados. Ao clicar, você deixa o tudodemelhor.com.br e passa a se relacionar com a política de privacidade, os termos de uso e as medidas de segurança da loja ou do serviço de destino.
+          </p>
+          <p>
+            <strong>Não controlamos o conteúdo, a disponibilidade, os preços, o estoque nem a segurança</strong> das páginas após o clique.
+            Não nos responsabilizamos por falhas, fraudes, indisponibilidade, alteração de oferta ou tratamento de dados realizado pelo terceiro.
+            Recomendamos ler os termos da Amazon, do Mercado Livre e de qualquer outro destino antes de concluir uma transação.
+          </p>
+
+          <h2>5. Dados que podemos tratar</h2>
+          <p>
+            Além de cookies e analytics, podemos receber dados que você envia voluntariamente (por exemplo, e-mail em um futuro formulário de contato ou cadastro).
+            Esses dados serão usados apenas para responder, enviar conteúdo solicitado ou cumprir obrigação legal.
+            Não vendemos listas de leitores.
+          </p>
+
+          <h2>6. Base legal e seus direitos (LGPD)</h2>
+          <p>
+            Tratamos dados com base em legítimo interesse (melhoria do site e medição de audiência), consentimento quando exigido para cookies não essenciais, e cumprimento de obrigações legais quando aplicável.
+            Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você pode solicitar acesso, correção, anonimização ou exclusão de dados pessoais que tenhamos, bem como informações sobre compartilhamentos.
+          </p>
+
+          <h2>7. Conteúdo editorial e afiliados</h2>
+          <p>
+            Reviews e rankings são opiniões editoriais independentes, com metodologia própria. Links com <code>rel="sponsored"</code> indicam relação comercial de afiliação.
+            A comissão não altera a nota do produto. Preços e disponibilidade nas lojas mudam sem aviso prévio e não são garantidos por este site.
+          </p>
+
+          <h2>8. Limitação de responsabilidade</h2>
+          <p>
+            O conteúdo é informativo e não substitui aconselhamento profissional (médico, jurídico, financeiro ou técnico).
+            Não somos parte do contrato de compra e venda entre você e o marketplace. Para trocas, devoluções e rastreio, consulte a página <a href="trocas.html">Trocas e Devoluções</a>.
+          </p>
+
+          <h2>9. Alterações</h2>
+          <p>
+            Esta política pode ser atualizada. A data no topo da página indica a versão vigente. O uso continuado do site após a publicação constitui ciência das mudanças.
+          </p>
+
+          <h2>10. Contato</h2>
+          <p>
+            Para questões de privacidade relacionadas a tudodemelhor.com.br, utilize os canais institucionais indicados no rodapé quando disponíveis.
+            Solicitações sobre pedidos, entregas ou reembolsos devem ser dirigidas à loja em que a compra foi feita — não temos competência operacional sobre esses fluxos.
+          </p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
+    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
+      <div>
+        <a href="index.html" class="mb-3 flex items-center gap-3">
+          <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" width="42" height="42" alt="" class="h-10 w-10 object-contain">
+          <span class="text-sm font-extrabold uppercase tracking-wider">Tudo de Melhor</span>
+        </a>
+        <p class="text-sm text-brand-dim">Rankings e reviews para decidir com segurança. Links de afiliados podem gerar comissão.</p>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Navegação</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="index.html" class="hover:text-brand-yellow">Home</a>
+          <a href="categorias.html" class="hover:text-brand-yellow">Rankings</a>
+          <a href="reviews.html" class="hover:text-brand-yellow">Reviews</a>
+          <a href="index.html#metodologia" class="hover:text-brand-yellow">Metodologia</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Categorias</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="index.html#categorias" class="hover:text-brand-yellow">Eletrônicos</a>
+          <a href="ranking-travesseiros.html" class="hover:text-brand-yellow">Casa e Sono</a>
+          <a href="index.html#categorias" class="hover:text-brand-yellow">Pets</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Legal</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="sobre.html" class="hover:text-brand-yellow">Sobre</a>
+          <a href="privacidade.html" class="hover:text-brand-yellow">Privacidade</a>
+          <a href="trocas.html" class="hover:text-brand-yellow">Trocas e Devoluções</a>
+          <a href="contato.html" class="hover:text-brand-yellow">Contato</a>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto mt-8 max-w-6xl border-t border-white/10 pt-4 text-xs text-brand-dim">
+      © <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const toggle = document.getElementById('nav-toggle');
+    const mobile = document.getElementById('mobile-nav');
+    toggle?.addEventListener('click', () => {
+      const open = mobile.classList.toggle('hidden') === false;
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobile?.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        mobile.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

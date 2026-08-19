@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Análises detalhadas da Tudo de Melhor: fichas técnicas, testes e vereditos dos travesseiros em destaque no ranking.">
+  <title>Análises Detalhadas | Tudo de Melhor</title>
+  <link rel="canonical" href="https://tudodemelhor.com.br/reviews.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#232F3E',
+              yellow: '#FFE600',
+              orange: '#FF9900',
+              card: 'rgba(27, 37, 48, 0.7)',
+              elevated: '#1B2530',
+              border: '#37475A',
+              muted: '#D5D9D9',
+              dim: '#AAB3BD'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 15px rgba(255, 230, 0, 0.4)',
+            'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
+            'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
+            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)'
+          },
+          backgroundImage: {
+            'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .glass {
+        @apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;
+      }
+    }
+  </style>
+  <style>
+    body {
+      background-image:
+        radial-gradient(ellipse 70% 45% at 85% 10%, rgba(255, 153, 0, 0.14), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 10% 85%, rgba(255, 230, 0, 0.07), transparent 50%),
+        radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+      background-size: auto, auto, 18px 18px;
+      background-attachment: fixed;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://tudodemelhor.com.br/" },
+          { "@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://tudodemelhor.com.br/reviews.html" }
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "Análises Detalhadas",
+        "url": "https://tudodemelhor.com.br/reviews.html",
+        "description": "Fichas técnicas, testes e vereditos completos dos produtos em destaque no mercado."
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-brand-bg text-white font-sans antialiased min-h-screen">
+
+  <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+    <div class="mx-auto flex h-[100px] max-w-7xl items-center gap-4 px-4 lg:gap-8">
+      <a href="index.html" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
+        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
+          <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-full w-full object-cover">
+        </div>
+        <div class="flex flex-col justify-center">
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-white lg:text-2xl">Tudo De</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-brand-yellow lg:text-2xl">Melhor</span>
+        </div>
+      </a>
+
+      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-brand-elevated md:hidden" aria-label="Abrir menu" aria-expanded="false">
+        <span class="flex flex-col gap-1.5">
+          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-white"></span>
+        </span>
+      </button>
+
+      <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
+        <a href="index.html#categorias" class="transition hover:text-white">Categorias</a>
+        <a href="categorias.html" class="transition hover:text-white">Rankings</a>
+        <a href="reviews.html" class="font-semibold text-white">Reviews</a>
+        <a href="index.html#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
+      </nav>
+
+      <div class="hidden items-center gap-4 md:flex">
+        <label class="relative">
+          <span class="sr-only">Buscar</span>
+          <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.5-3.5"></path>
+          </svg>
+          <input type="search" placeholder="Buscar" class="h-11 w-44 rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim focus:border-brand-yellow/50 focus:bg-white/10 lg:w-52">
+        </label>
+        <a href="#login" class="inline-flex h-11 items-center rounded-full border border-white/25 px-6 text-sm font-semibold transition hover:bg-white/10">Login</a>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="hidden border-t border-white/10 bg-brand-elevated/98 px-4 py-4 md:hidden">
+      <nav class="flex flex-col gap-1 text-sm">
+        <a href="index.html#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Categorias</a>
+        <a href="categorias.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
+        <a href="reviews.html" class="rounded-lg px-3 py-3 font-semibold text-white hover:bg-white/5">Reviews</a>
+        <a href="index.html#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
+      </nav>
+      <label class="relative mt-3 block">
+        <span class="sr-only">Buscar</span>
+        <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+        <input type="search" placeholder="Buscar" class="h-11 w-full rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim">
+      </label>
+      <a href="#login" class="mt-3 inline-flex h-11 w-full items-center justify-center rounded-full border border-white/25 font-semibold">Login</a>
+    </div>
+  </header>
+
+  <main class="px-4 pt-8 pb-14">
+    <div class="mx-auto max-w-7xl">
+      <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-brand-yellow">Início</a>
+        <span aria-hidden="true">/</span>
+        <span class="text-white" aria-current="page">Reviews</span>
+      </nav>
+
+      <header class="glass relative mb-10 overflow-hidden p-6 md:p-10">
+        <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/10 blur-3xl"></div>
+        <div class="pointer-events-none absolute -bottom-20 left-10 h-40 w-40 rounded-full bg-brand-orange/10 blur-3xl"></div>
+        <p class="relative mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Hub de reviews</p>
+        <h1 class="relative mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Análises Detalhadas</h1>
+        <p class="relative max-w-2xl text-lg text-brand-muted">Fichas técnicas, testes e vereditos completos dos produtos em destaque no mercado.</p>
+      </header>
+
+      <div class="grid gap-8 lg:grid-cols-[250px_1fr]">
+        <aside class="lg:col-span-1" aria-label="Filtro de categorias">
+          <div class="glass sticky top-28 p-4 lg:p-5">
+            <h2 class="mb-4 text-sm font-extrabold uppercase tracking-[0.12em] text-brand-yellow">Filtrar por Categoria</h2>
+            <nav id="category-filter" class="flex gap-4 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:flex-col lg:gap-1 lg:overflow-visible lg:pb-0" aria-label="Categorias">
+              <a href="#todos" data-filter="todos" class="filter-link whitespace-nowrap rounded-full border border-brand-yellow/40 bg-brand-yellow/10 px-4 py-2 text-sm font-bold text-brand-yellow lg:w-full lg:rounded-xl">Todos</a>
+              <a href="#casa-e-sono" data-filter="casa-e-sono" class="filter-link whitespace-nowrap rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-brand-muted transition hover:border-white/25 hover:text-white lg:w-full lg:rounded-xl">Casa e Sono</a>
+              <a href="#eletrodomesticos" data-filter="eletrodomesticos" class="filter-link whitespace-nowrap rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-brand-muted transition hover:border-white/25 hover:text-white lg:w-full lg:rounded-xl">Eletrodomésticos</a>
+              <a href="#eletronicos" data-filter="eletronicos" class="filter-link whitespace-nowrap rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-brand-muted transition hover:border-white/25 hover:text-white lg:w-full lg:rounded-xl">Eletrônicos</a>
+              <a href="#pets" data-filter="pets" class="filter-link whitespace-nowrap rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-brand-muted transition hover:border-white/25 hover:text-white lg:w-full lg:rounded-xl">Pets</a>
+            </nav>
+          </div>
+        </aside>
+
+        <section aria-label="Vitrine de reviews">
+          <div class="mb-6 flex flex-wrap items-end justify-between gap-3">
+            <h2 class="text-2xl font-extrabold md:text-3xl">Reviews em <span class="text-brand-yellow">destaque</span></h2>
+            <a href="ranking-travesseiros.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ver ranking de travesseiros →</a>
+          </div>
+
+          <div id="reviews-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="casa-e-sono">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">9.6</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#1 · NASA</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_648102-MLB99698762080_122025-O.webp" alt="Travesseiro Hug Nasa Alto" class="max-h-full w-full object-contain" width="240" height="240">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Travesseiro Hug Nasa Alto</h3>
+            <p class="mb-6 flex-1 text-sm text-brand-muted">Vale a pena para quem dorme de lado? Kit 2 viscoelástico 17 cm e nota 9.6 no ranking.</p>
+            <a href="review-hug-nasa.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Análise Completa</a>
+          </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="casa-e-sono">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">9.4</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#2 · Cervical</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_950632-MLA99943168711_112025-O.webp" alt="Travesseiro cervical D40 Lar Conforto" class="max-h-full w-full object-contain" width="240" height="240">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Travesseiro Cervical D40</h3>
+            <p class="mb-6 flex-1 text-sm text-brand-muted">Vale a pena para dor no pescoço? Recorte ortopédico Lar Conforto, densidade D40 e dual height 14/12 cm.</p>
+            <a href="review-cervical-d40.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Análise Completa</a>
+          </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="casa-e-sono">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">9.2</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#3 · Extra firme</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_992095-MLB49700060190_042022-O.webp" alt="Travesseiro extra firme 50x70" class="max-h-full w-full object-contain" width="240" height="240">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Travesseiro Extra Firme</h3>
+            <p class="mb-6 flex-1 text-sm text-brand-muted">Vale a pena se a peça atual afundou? Kit 2 em fibra siliconada 50×70, suporte firme sem o preço NASA.</p>
+            <a href="review-extra-firme.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Análise Completa</a>
+          </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="casa-e-sono">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">9.0</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#4 · Hotel</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_993747-MLA99504199216_112025-O.webp" alt="Travesseiro toque de pluma Select Royal" class="max-h-full w-full object-contain" width="240" height="240">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Travesseiro Toque de Pluma</h3>
+            <p class="mb-6 flex-1 text-sm text-brand-muted">Vale a pena para macieza de hotel? Kit 2 Select Royal 50×70 em pluma sintética, sem pena de ganso.</p>
+            <a href="review-toque-plumas.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Análise Completa</a>
+          </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="casa-e-sono">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">8.8</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#5 · Kit 4</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_998675-MLB72098223701_102023-O.webp" alt="Kit 4 travesseiros impermeáveis" class="max-h-full w-full object-contain" width="240" height="240">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Kit 4 Impermeável</h3>
+            <p class="mb-6 flex-1 text-sm text-brand-muted">Vale a pena para casa inteira? Quatro peças 50×70 com capa que protege contra suor e líquido.</p>
+            <a href="review-kit4-impermeavel.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Análise Completa</a>
+          </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="casa-e-sono">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">8.6</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#6 · Barato</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_936804-MLB98157444182_112025-O.webp" alt="Travesseiro regulável lavável ICRESA" class="max-h-full w-full object-contain" width="240" height="240">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Travesseiro Regulável ICRESA</h3>
+            <p class="mb-6 flex-1 text-sm text-brand-muted">Vale a pena para testar altura? Kit 2 lavável e barato, com enchimento de fibra que você ajusta na mão.</p>
+            <a href="review-regulavel.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Análise Completa</a>
+          </article>
+          </div>
+
+          <p id="filter-empty" class="mt-8 hidden text-sm text-brand-dim">Nenhuma análise nesta categoria ainda. Volte em breve.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
+    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
+      <div>
+        <a href="index.html" class="mb-3 flex items-center gap-3">
+          <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" width="42" height="42" alt="" class="h-10 w-10 object-contain">
+          <span class="text-sm font-extrabold uppercase tracking-wider">Tudo de Melhor</span>
+        </a>
+        <p class="text-sm text-brand-dim">Rankings e reviews para decidir com segurança. Links de afiliados podem gerar comissão.</p>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Navegação</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="index.html" class="hover:text-brand-yellow">Home</a>
+          <a href="categorias.html" class="hover:text-brand-yellow">Rankings</a>
+          <a href="reviews.html" class="hover:text-brand-yellow">Reviews</a>
+          <a href="index.html#metodologia" class="hover:text-brand-yellow">Metodologia</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Categorias</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="index.html#categorias" class="hover:text-brand-yellow">Eletrônicos</a>
+          <a href="ranking-travesseiros.html" class="hover:text-brand-yellow">Casa e Sono</a>
+          <a href="index.html#categorias" class="hover:text-brand-yellow">Pets</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Legal</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="sobre.html" class="hover:text-brand-yellow">Sobre</a>
+          <a href="privacidade.html" class="hover:text-brand-yellow">Privacidade</a>
+          <a href="trocas.html" class="hover:text-brand-yellow">Trocas e Devoluções</a>
+          <a href="contato.html" class="hover:text-brand-yellow">Contato</a>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto mt-8 max-w-6xl border-t border-white/10 pt-4 text-xs text-brand-dim">
+      © <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const toggle = document.getElementById('nav-toggle');
+    const mobile = document.getElementById('mobile-nav');
+    toggle?.addEventListener('click', () => {
+      const open = mobile.classList.toggle('hidden') === false;
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobile?.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        mobile.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const filterNav = document.getElementById('category-filter');
+    const cards = document.querySelectorAll('#reviews-grid [data-category]');
+    const empty = document.getElementById('filter-empty');
+    const activeClass = 'whitespace-nowrap rounded-full border border-brand-yellow/40 bg-brand-yellow/10 px-4 py-2 text-sm font-bold text-brand-yellow lg:w-full lg:rounded-xl';
+    const idleClass = 'whitespace-nowrap rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-brand-muted transition hover:border-white/25 hover:text-white lg:w-full lg:rounded-xl';
+
+    function applyFilter(value) {
+      let visible = 0;
+      cards.forEach((card) => {
+        const show = value === 'todos' || card.dataset.category === value;
+        card.classList.toggle('hidden', !show);
+        if (show) visible += 1;
+      });
+      empty?.classList.toggle('hidden', visible > 0);
+      filterNav?.querySelectorAll('[data-filter]').forEach((link) => {
+        const on = link.dataset.filter === value;
+        link.className = 'filter-link ' + (on ? activeClass : idleClass);
+        link.setAttribute('aria-current', on ? 'true' : 'false');
+      });
+    }
+
+    filterNav?.querySelectorAll('[data-filter]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        applyFilter(link.dataset.filter);
+      });
+    });
+  </script>
+</body>
+</html>

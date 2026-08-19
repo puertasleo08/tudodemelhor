@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aviso importante: tudodemelhor.com.br não vende, não cobra e não entrega produtos. Trocas, devoluções e rastreio devem ser feitos na loja onde você comprou.">
+  <title>Trocas e Devoluções | Tudo de Melhor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#232F3E',
+              yellow: '#FFE600',
+              orange: '#FF9900',
+              card: 'rgba(27, 37, 48, 0.7)',
+              elevated: '#1B2530',
+              border: '#37475A',
+              muted: '#D5D9D9',
+              dim: '#AAB3BD'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 15px rgba(255, 230, 0, 0.4)',
+            'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
+            'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
+            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)'
+          },
+          backgroundImage: {
+            'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .glass {
+        @apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;
+      }
+    }
+  </style>
+  <style>
+    body {
+      background-image:
+        radial-gradient(ellipse 70% 45% at 85% 10%, rgba(255, 153, 0, 0.14), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 10% 85%, rgba(255, 230, 0, 0.07), transparent 50%),
+        radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+      background-size: auto, auto, 18px 18px;
+      background-attachment: fixed;
+    }
+    .timeline-line {
+      background: linear-gradient(90deg, #FFE600, #FF9900, rgba(255, 255, 255, 0.35));
+      box-shadow: 0 0 18px rgba(255, 230, 0, 0.45);
+    }
+    @media (max-width: 767px) {
+      .timeline-line {
+        width: 3px;
+        height: 100%;
+        left: 1.35rem;
+        top: 0;
+        right: auto;
+        background: linear-gradient(180deg, #FFE600, #FF9900, rgba(255, 255, 255, 0.35));
+      }
+    }
+  </style>
+</head>
+<body class="bg-brand-bg text-white font-sans antialiased min-h-screen">
+
+  <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+    <div class="mx-auto flex h-[100px] max-w-7xl items-center gap-4 px-4 lg:gap-8">
+      <a href="index.html" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
+        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
+          <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo" class="h-full w-full object-cover">
+        </div>
+        <div class="flex flex-col justify-center">
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-white lg:text-2xl">Tudo De</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-brand-yellow lg:text-2xl">Melhor</span>
+        </div>
+      </a>
+
+      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-brand-elevated md:hidden" aria-label="Abrir menu" aria-expanded="false">
+        <span class="flex flex-col gap-1.5">
+          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-white"></span>
+        </span>
+      </button>
+
+      <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
+        <a href="index.html#categorias" class="transition hover:text-white">Categorias</a>
+        <a href="categorias.html" class="transition hover:text-white">Rankings</a>
+        <a href="reviews.html" class="transition hover:text-white">Reviews</a>
+        <a href="index.html#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
+      </nav>
+
+      <div class="hidden items-center gap-4 md:flex">
+        <label class="relative">
+          <span class="sr-only">Buscar</span>
+          <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M20 20l-3.5-3.5"></path>
+          </svg>
+          <input type="search" placeholder="Buscar" class="h-11 w-44 rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim focus:border-brand-yellow/50 focus:bg-white/10 lg:w-52">
+        </label>
+        <a href="#login" class="inline-flex h-11 items-center rounded-full border border-white/25 px-6 text-sm font-semibold transition hover:bg-white/10">Login</a>
+      </div>
+    </div>
+
+    <div id="mobile-nav" class="hidden border-t border-white/10 bg-brand-elevated/98 px-4 py-4 md:hidden">
+      <nav class="flex flex-col gap-1 text-sm">
+        <a href="index.html#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Categorias</a>
+        <a href="categorias.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
+        <a href="reviews.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Reviews</a>
+        <a href="index.html#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
+      </nav>
+      <label class="relative mt-3 block">
+        <span class="sr-only">Buscar</span>
+        <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+        <input type="search" placeholder="Buscar" class="h-11 w-full rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim">
+      </label>
+      <a href="#login" class="mt-3 inline-flex h-11 w-full items-center justify-center rounded-full border border-white/25 font-semibold">Login</a>
+    </div>
+  </header>
+
+  <main class="px-4 py-12 md:py-16">
+    <div class="mx-auto max-w-4xl">
+      <nav class="mb-8 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
+        <a href="index.html" class="hover:text-brand-yellow">Início</a>
+        <span aria-hidden="true">/</span>
+        <span class="text-white" aria-current="page">Trocas e Devoluções</span>
+      </nav>
+
+      <div class="mb-8 rounded-2xl border-2 border-brand-orange bg-brand-orange/10 p-6 shadow-glow-orange md:p-8">
+        <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-orange">Aviso importante</p>
+        <h1 class="mb-4 text-3xl font-black leading-tight md:text-5xl">Não vendemos, não cobramos e não entregamos produtos</h1>
+        <p class="text-lg leading-relaxed text-white">
+          O site <strong>tudodemelhor.com.br</strong> <strong class="text-brand-orange">não vende, não cobra e não entrega produtos</strong>.
+          Não processamos pagamentos, não emitimos nota fiscal, não despachamos encomendas e não temos estoque.
+        </p>
+      </div>
+
+      <article class="glass mb-6 p-6 md:p-8">
+        <h2 class="mb-4 text-xl font-bold">Somos um portal de jornalismo de consumo</h2>
+        <p class="mb-4 text-brand-muted">
+          A Tudo de Melhor publica rankings, reviews e comparativos para ajudar você a escolher melhor.
+          Os botões “Ver no Mercado Livre” e “Ver na Amazon” levam você às lojas parceiras. A compra — se houver — é celebrada <strong class="text-white">exclusivamente na plataforma escolhida</strong>.
+        </p>
+        <p class="text-brand-muted">
+          Por isso, <strong class="text-white">toda e qualquer solicitação de troca, devolução, garantia, reembolso, atraso ou rastreio de entrega</strong>
+          deve ser feita diretamente no atendimento da loja onde o pedido foi finalizado (por exemplo, Mercado Livre ou Amazon),
+          usando a conta e o número do pedido daquela plataforma.
+        </p>
+      </article>
+
+      <div class="mb-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <article class="rounded-2xl border border-brand-orange/60 bg-brand-card p-6 backdrop-blur-md">
+          <h3 class="mb-2 text-lg font-bold text-brand-orange">O que não fazemos</h3>
+          <ul class="list-disc space-y-2 pl-5 text-sm text-brand-muted">
+            <li>Não recebemos mercadorias para troca</li>
+            <li>Não estornamos valores nem geramos boletos</li>
+            <li>Não temos código de rastreio próprio</li>
+            <li>Não intermediamos garantia do fabricante</li>
+          </ul>
+        </article>
+        <article class="rounded-2xl border border-brand-orange/60 bg-brand-card p-6 backdrop-blur-md">
+          <h3 class="mb-2 text-lg font-bold text-brand-orange">O que você deve fazer</h3>
+          <ul class="list-disc space-y-2 pl-5 text-sm text-brand-muted">
+            <li>Abra o app ou site da loja da compra</li>
+            <li>Localize o pedido na sua conta</li>
+            <li>Use “Ajuda”, “Devolver” ou “Rastrear”</li>
+            <li>Fale com o seller ou com o suporte oficial</li>
+          </ul>
+        </article>
+      </div>
+
+      <section class="glass p-6 md:p-8">
+        <h2 class="mb-3 text-xl font-bold">Centrais de ajuda oficiais</h2>
+        <p class="mb-6 text-sm text-brand-muted">
+          Use os canais abaixo para tratar troca, devolução, garantia ou rastreio. São páginas das próprias lojas — nós não operamos esses serviços.
+        </p>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a class="inline-flex h-12 flex-1 items-center justify-center rounded-full bg-brand-yellow px-6 font-extrabold text-black shadow-glow" rel="noopener noreferrer" target="_blank" href="https://www.mercadolivre.com.br/ajuda">Ajuda Mercado Livre</a>
+          <a class="inline-flex h-12 flex-1 items-center justify-center rounded-full bg-brand-orange px-6 font-extrabold text-black shadow-glow-orange" rel="noopener noreferrer" target="_blank" href="https://www.amazon.com.br/gp/help/customer/display.html">Ajuda Amazon</a>
+        </div>
+        <p class="mt-4 text-xs text-brand-dim">
+          Links externos para as centrais oficiais. Políticas de prazo e direito de arrependimento seguem o CDC e as regras de cada marketplace.
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
+    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
+      <div>
+        <a href="index.html" class="mb-3 flex items-center gap-3">
+          <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" width="42" height="42" alt="" class="h-10 w-10 object-contain">
+          <span class="text-sm font-extrabold uppercase tracking-wider">Tudo de Melhor</span>
+        </a>
+        <p class="text-sm text-brand-dim">Rankings e reviews para decidir com segurança. Links de afiliados podem gerar comissão.</p>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Navegação</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="index.html" class="hover:text-brand-yellow">Home</a>
+          <a href="categorias.html" class="hover:text-brand-yellow">Rankings</a>
+          <a href="reviews.html" class="hover:text-brand-yellow">Reviews</a>
+          <a href="index.html#metodologia" class="hover:text-brand-yellow">Metodologia</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Categorias</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="index.html#categorias" class="hover:text-brand-yellow">Eletrônicos</a>
+          <a href="ranking-travesseiros.html" class="hover:text-brand-yellow">Casa e Sono</a>
+          <a href="index.html#categorias" class="hover:text-brand-yellow">Pets</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="mb-3 text-sm font-bold">Legal</h4>
+        <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="sobre.html" class="hover:text-brand-yellow">Sobre</a>
+          <a href="privacidade.html" class="hover:text-brand-yellow">Privacidade</a>
+          <a href="trocas.html" class="hover:text-brand-yellow">Trocas e Devoluções</a>
+          <a href="contato.html" class="hover:text-brand-yellow">Contato</a>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto mt-8 max-w-6xl border-t border-white/10 pt-4 text-xs text-brand-dim">
+      © <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const toggle = document.getElementById('nav-toggle');
+    const mobile = document.getElementById('mobile-nav');
+    toggle?.addEventListener('click', () => {
+      const open = mobile.classList.toggle('hidden') === false;
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobile?.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', () => {
+        mobile.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
