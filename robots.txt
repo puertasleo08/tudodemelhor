@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tudodemelhor.com.br/sitemap.xml
