@@ -17,22 +17,22 @@
 ## 3. Estrutura do Ranking (Top 6)
 1. [Nome do Produto 1] (Nota: [X.X])
    - Link Afiliado ML:https: https://meli.la/1mmCVg7
-   - Link Afiliado Amazon: https://...
+   - Link Afiliado Amazon: https://link.amazon/B044Mb62o
 2. [Nome do Produto 2] (Nota: [X.X])
    - Link Afiliado ML: https://meli.la/1FyU24i
-   - Link Afiliado Amazon: https://...
+   - Link Afiliado Amazon: https://link.amazon/B0d4Qqm46
 3. [Nome do Produto 3] (Nota: [X.X])
    - Link Afiliado ML: https://meli.la/1vpShZD
-   - Link Afiliado Amazon: https://...
+   - Link Afiliado Amazon: https://link.amazon/B09bCt1Qd
 4. [Nome do Produto 4] (Nota: [X.X])
    - Link Afiliado ML: https://meli.la/1hCgdgr
-   - Link Afiliado Amazon: https://...
+   - Link Afiliado Amazon: https://link.amazon/B0injKYGW
 5. [Nome do Produto 5] (Nota: [X.X])
    - Link Afiliado ML: https://meli.la/2HeG59E
-   - Link Afiliado Amazon: https://...
+   - Link Afiliado Amazon: https://link.amazon/B0enclimY
 6. [Nome do Produto 6] (Nota: [X.X])
    - Link Afiliado ML: https://meli.la/1rpw8U3
-   - Link Afiliado Amazon: https://...
+   - Link Afiliado Amazon: https://link.amazon/B02uBQ0f0
 
 ## 4. FAQ (Perguntas Frequentes)
 *Preencher com dúvidas reais do Google "As pessoas também perguntam"*

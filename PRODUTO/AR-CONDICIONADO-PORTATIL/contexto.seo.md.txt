@@ -17,19 +17,19 @@
 ## 3. Estrutura do Ranking (Top 6)
 1. [Nome do Produto 1] (Nota: [X.X])
    - Link Afiliado ML:https:  https://meli.la/2BeNZSK
-   - Link Afiliado Amazon: https://...
+   - Link Afiliado Amazon: https://link.amazon/B0hZ3PNFq
 2. [Nome do Produto 2] (Nota: [X.X])
    - Link Afiliado ML: https://meli.la/1PnrSP3
-   - Link Afiliado Amazon: https://...
+   - Link Afiliado Amazon: https://link.amazon/B020RP2Xt
 3. [Nome do Produto 3] (Nota: [X.X])
    - Link Afiliado ML: https://meli.la/2CSb4UV
-   - Link Afiliado Amazon: https://...
+   - Link Afiliado Amazon: https://link.amazon/B0aG3DlVl
 4. [Nome do Produto 4] (Nota: [X.X])
    - Link Afiliado ML: https://meli.la/1ugV9fm
-   - Link Afiliado Amazon: https://...
+   - Link Afiliado Amazon: https://link.amazon/B08xRElhn
 5. [Nome do Produto 5] (Nota: [X.X])
    - Link Afiliado ML: https://meli.la/2R67iGx
-   - Link Afiliado Amazon: https://...
+   - Link Afiliado Amazon: https://link.amazon/B0iQyArD8
 6. [Nome do Produto 6] (Nota: [X.X])
    - Link Afiliado ML: .
    - Link Afiliado Amazon: https://...
