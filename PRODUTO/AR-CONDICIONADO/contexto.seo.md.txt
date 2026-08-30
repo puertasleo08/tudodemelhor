@@ -15,6 +15,9 @@
   4. [Ex: ]
 
 ## 3. Estrutura do Ranking (Top 6)
+
+link Categoria afiliado Mercado Livre: https://meli.la/31n7tqs
+
 1. [Nome do Produto 1] (Nota: [X.X])
    - Link Afiliado ML:https://meli.la/1TfKTmZ
    - Link Afiliado Amazon: https://link.amazon/B00L04Ult

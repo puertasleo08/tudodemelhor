@@ -15,6 +15,9 @@
   4. [Ex: travesseiro bom e barato]
 
 ## 3. Estrutura do Ranking (Top 6)
+
+link Categoria afiliado Mercado Livre: https://meli.la/2KN6Kze
+
 1. [Nome do Produto 1] (Nota: [X.X])
    - Link Afiliado ML: https://meli.la/2dkbdGj
    - Link Afiliado Amazon: https://link.amazon/B0fi6WaX2

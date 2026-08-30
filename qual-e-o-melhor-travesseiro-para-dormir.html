@@ -227,8 +227,7 @@
     </div>
   </header>
 
-  <main>
-    <div class="mx-auto max-w-6xl px-4 pt-8">
+  <main class="mx-auto max-w-7xl px-4 pt-8">
       <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
         <a href="index.html" class="hover:text-brand-yellow">Início</a>
         <span aria-hidden="true">/</span>
@@ -236,98 +235,301 @@
         <span aria-hidden="true">/</span>
         <span class="text-white" aria-current="page">Travesseiros</span>
       </nav>
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[200px_1fr] xl:grid-cols-[240px_1fr]">
+      <aside class="sticky top-28 hidden h-fit lg:block" aria-label="Índice da página">
+        <nav class="flex flex-col gap-3 text-sm">
+          <a href="#ranking-topo" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Ranking</a>
+          <a href="#criterios" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Critérios</a>
+          <a href="#produto-1" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">1. Hug NASA</a>
+          <a href="#produto-2" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">2. Cervical D40</a>
+          <a href="#produto-3" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">3. Extra firme</a>
+          <a href="#produto-4" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">4. Toque de plumas</a>
+          <a href="#como-escolher" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Como escolher</a>
+          <a href="#tabela" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Tabela</a>
+          <a href="#faq" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">FAQ</a>
+        </nav>
+        <div class="mt-8 border-t border-white/10 pt-6">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-wider text-brand-dim">Compartilhar</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftudodemelhor.com.br%2Fqual-e-o-melhor-travesseiro-para-dormir.html&amp;text=Qual%20%C3%A9%20o%20melhor%20travesseiro%20para%20dormir%3F%20Ranking%202026" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" aria-label="Compartilhar no X"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftudodemelhor.com.br%2Fqual-e-o-melhor-travesseiro-para-dormir.html" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" aria-label="Compartilhar no Facebook"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://wa.me/?text=Qual%20%C3%A9%20o%20melhor%20travesseiro%20para%20dormir%3F%20Ranking%202026%20https%3A%2F%2Ftudodemelhor.com.br%2Fqual-e-o-melhor-travesseiro-para-dormir.html" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" aria-label="Compartilhar no WhatsApp"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            <button type="button" class="copy-page-link flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" data-url="https://tudodemelhor.com.br/qual-e-o-melhor-travesseiro-para-dormir.html" aria-label="Copiar link"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="min-w-0">
 
       <header class="glass mb-8 p-6 md:p-10">
         <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Casa · Sono · Ranking 2026</p>
-        <h1 class="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Qual é o melhor travesseiro para dormir? Ranking 2026</h1>
-        <p class="mb-4 max-w-3xl text-brand-muted">
-          Descobrir qual é o melhor travesseiro para dormir muda a qualidade do sono, o alinhamento da coluna cervical e o risco de dores no pescoço.
+        <h1 class="mb-8 text-3xl font-extrabold leading-tight md:text-5xl">Qual é o melhor travesseiro para dormir? Ranking 2026</h1>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
+          <div>
+            <p class="mb-4 text-brand-muted">
+              Descobrir qual é o melhor travesseiro para dormir muda a qualidade do sono, o alinhamento da coluna cervical e o risco de dores no pescoço.
           Neste ranking comparamos seis kits reais à venda no Mercado Livre — viscoelástica NASA, cervical ortopédico, toque de pluma, extra firme e opções laváveis — para você escolher o travesseiro ideal conforme a posição de dormir.
           Também citamos o que diferencia linhas conhecidas como Altenburg, Duoflex e Buddemeyer, mas a lista abaixo foca nos produtos rastreados com preço e imagem atuais.
-        </p>
-        <p class="mb-4 max-w-3xl text-sm text-brand-dim">
-          Se você busca um bom travesseiro para uma noite de sono tranquila, o segredo está em combinar enchimento, altura e firmeza com o seu colchão.
+            </p>
+            <p class="mb-4 text-sm text-brand-dim">
+              Se você busca um bom travesseiro para uma noite de sono tranquila, o segredo está em combinar enchimento, altura e firmeza com o seu colchão.
           Não existe um único modelo perfeito para todo mundo: quem dorme de lado precisa de suporte diferente de quem dorme de bruços.
-        </p>
-        <div class="flex flex-wrap gap-2">
+            </p>
+            <div class="flex flex-wrap gap-2">
           <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Atualizado em agosto de 2026</span>
           <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Dados extraídos do Mercado Livre</span>
           <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Metodologia própria</span>
         </div>
-      </header>
-
-      <nav class="mb-8 flex gap-2 overflow-x-auto pb-2 text-sm" aria-label="Índice da página">
-        <a href="#ranking-topo" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Ranking</a>
-        <a href="#criterios" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Critérios</a>
-        <a href="#produto-1" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">1. Hug NASA</a>
-        <a href="#produto-2" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">2. Cervical D40</a>
-        <a href="#produto-3" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">3. Extra firme</a>
-        <a href="#produto-4" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">4. Toque de plumas</a>
-        <a href="#como-escolher" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Como escolher</a>
-        <a href="#tabela" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Tabela</a>
-        <a href="#faq" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">FAQ</a>
-      </nav>
-
-      <aside class="mb-10" id="ranking-topo" aria-label="Topo do ranking">
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-          <a class="glass col-span-2 row-span-2 flex flex-col gap-3 p-5 transition hover:-translate-y-1 hover:shadow-glow" href="#produto-1">
-            <div class="flex items-center justify-between gap-2">
-              <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.6</span>
-              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#1 · Melhor NASA</span>
-            </div>
-            <div class="flex min-h-[160px] items-center justify-center overflow-hidden rounded-xl bg-white p-4">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_648102-MLB99698762080_122025-O.webp" alt="Melhor travesseiro NASA Hug viscoelástico alto 60x40x17 para dormir" class="max-h-44 w-full object-contain" width="400" height="400">
-            </div>
-            <strong class="text-base">Hug Nasa Alto 60x40x17</strong>
-            <span class="text-xs text-brand-dim">Espuma viscoelástica · 4,8★</span>
-            <span class="mt-auto inline-flex h-10 w-full items-center justify-center rounded-xl bg-brand-yellow text-sm font-bold text-black shadow-glow">Ver no Mercado Livre</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-2">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.4</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_950632-MLA99943168711_112025-O.webp" alt="Travesseiro para dor no pescoço Nasa ortopédico cervical D40" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Cervical D40</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-3">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.2</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_992095-MLB49700060190_042022-O.webp" alt="Travesseiro antialérgico extra firme 50x70 com suporte firme" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Extra firme</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-4">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.0</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_993747-MLA99504199216_112025-O.webp" alt="Travesseiro Select Royal toque de plumas linha hotel para macieza" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Toque de plumas</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-5">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">8.8</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_998675-MLB72098223701_102023-O.webp" alt="Kit 4 travesseiros antialérgicos impermeáveis 50x70 super macios" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Kit 4 impermeável</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
-          <a class="glass col-span-2 flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow md:col-span-2" href="#produto-6">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">8.6</span>
-            <div class="flex min-h-[88px] w-full max-w-[180px] items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_936804-MLB98157444182_112025-O.webp" alt="Travesseiro bom e barato antialérgico regulável lavável fibra 50x70" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Regulável · bom e barato</strong>
-            <span class="mt-1 inline-flex h-9 w-full max-w-xs items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
+          </div>
+          <div class="glass rounded-2xl border border-white/10 p-5 md:p-6">
+            <img src="assets/produtos/RANKING/TRAVESSEIRO/capa.jpeg" alt="Travesseiros — capa da categoria no ranking Tudo de Melhor" class="w-full h-auto object-cover rounded-xl" width="640" height="480" loading="eager">
+            <a class="mt-4 inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow px-6 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/2KN6Kze">Ver categoria completa no Mercado Livre</a>
+          </div>
         </div>
-      </aside>
-    </div>
+      </header>
+      <nav class="mb-8 lg:hidden" aria-label="Índice da página (mobile)">
+        <label for="page-index-mobile" class="mb-2 block text-xs font-bold uppercase tracking-wider text-brand-dim">Ir para seção</label>
+        <select id="page-index-mobile" class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none focus:border-brand-yellow/50">
+          <option value="">Selecione uma seção…</option>
+          <option value="#ranking-topo">Ranking</option>
+          <option value="#criterios">Critérios</option>
+          <option value="#produto-1">1. Hug NASA</option>
+          <option value="#produto-2">2. Cervical D40</option>
+          <option value="#produto-3">3. Extra firme</option>
+          <option value="#produto-4">4. Toque de plumas</option>
+          <option value="#como-escolher">Como escolher</option>
+          <option value="#tabela">Tabela</option>
+          <option value="#faq">FAQ</option>
+        </select>
+      </nav>
+    <section id="ranking-topo" class="py-10" aria-label="Os 6 melhores travesseiros para dormir">
+      <div class="w-full">
+        <p class="mb-2 text-center text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Ranking 2026</p>
+        <h2 class="mb-8 text-center text-2xl font-extrabold text-white md:text-3xl">Os 6 melhores travesseiros para dormir</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
 
-    <section id="criterios" class="px-4 py-14">
-      <div class="mx-auto max-w-6xl">
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-1">
+            <span id="analise-1" class="sr-only">Análise Kit 2 Travesseiros Viscoelástico Hug Nasa Alto 60x40x17</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 1">1</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_648102-MLB99698762080_122025-O.webp" alt="Melhor travesseiro NASA Hug viscoelástico alto 60x40x17 cm para dormir de lado" class="max-h-44 w-full object-contain" width="400" height="400">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">4,8</span>
+              <h2 class="text-lg font-bold text-white">Kit 2 Travesseiros Viscoelástico Hug Nasa Alto 60x40x17</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Dormir de lado: altura de 17 cm preenche ombro e cabeça.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Melhor travesseiro NASA em viscoelástica com suporte alto.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem busca alívio de pressão com molde ao pescoço.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">96</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Espuma viscoelástica NASA que se adapta à cabeça</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Altura 17 cm favorece quem dorme de lado</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Kit com 2 peças e boa nota dos compradores (4,8)</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Indicado para quem busca suporte cervical estruturado</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 172,90</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/26nAgGR">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="travesseiro-hug-nasa-alto-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-2">
+            <span id="analise-2" class="sr-only">Análise Kit 2 Travesseiro Nasa Ortopédico Cervical D40 Lar Conforto</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 2">2</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_950632-MLA99943168711_112025-O.webp" alt="Melhor travesseiro para dor no pescoço Nasa ortopédico cervical D40 Lar Conforto" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">4,7</span>
+              <h2 class="text-lg font-bold text-white">Kit 2 Travesseiro Nasa Ortopédico Cervical D40 Lar Conforto</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Dor cervical: formato ortopédico com suporte firme na curva.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem precisa de travesseiro cervical após orientação médica.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Adaptação a altura média-alta — não é para quem gosta de baixo e macio.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">94</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Design cervical / ortopédico</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Espuma viscoelástica com suporte firme</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Foco em coluna cervical e dores no pescoço</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 182,45</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/2tsz92A">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="travesseiro-nasa-ortopedico-cervical-d40-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-3">
+            <span id="analise-3" class="sr-only">Análise Kit 2 Travesseiro Antialérgico 50x70 Extra Firme</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 3">3</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_992095-MLB49700060190_042022-O.webp" alt="Kit 2 travesseiros antialérgicos extra firme 50x70 para suporte da cabeça" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">4,7</span>
+              <h2 class="text-lg font-bold text-white">Kit 2 Travesseiro Antialérgico 50x70 Extra Firme</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem rejeita travesseiros que afundam: enchimento extra firme 50x70.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Sustentação sem pagar ticket de viscoelástica NASA.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Antialérgico com firmeza real, não só maciez.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">92</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Suporte firme sem preço de NASA</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Antialérgico, tamanho 50x70</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Kit duplo com boa nota (4,7)</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 79,11</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/2p6S7DV">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="travesseiro-extra-firme-altenburg-suporte-extra-firme-em-percal-180-fios.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-4">
+            <span id="analise-4" class="sr-only">Análise Kit 2 Travesseiros Select Royal Toque De Plumas Linha Hotel</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 4">4</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_993747-MLA99504199216_112025-O.webp" alt="Kit 2 travesseiros Select Royal toque de plumas linha hotel para macieza" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">4,5</span>
+              <h2 class="text-lg font-bold text-white">Kit 2 Travesseiros Select Royal Toque De Plumas Linha Hotel</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Sensação de hotel: pluma sintética macia e aconchegante.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem prioriza conforto aconchegante, não suporte ortopédico.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Dormir de barriga para cima ou de lado leve.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">90</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Macieza tipo pluma / linha hotel</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Boa para quem prefere toque fofo</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Visual de cama de hospedagem</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 166,13</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/24XVWzz">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="travesseiro-toque-de-pluma-buddemeyer-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-5">
+            <span id="analise-5" class="sr-only">Análise 4 Travesseiros Antialérgico Impermeável 50x70 Super Macio</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 5">5</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_998675-MLB72098223701_102023-O.webp" alt="4 travesseiros antialérgicos impermeáveis 50x70 super macios para dormir bem" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow"></span>
+              <h2 class="text-lg font-bold text-white">4 Travesseiros Antialérgico Impermeável 50x70 Super Macio</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Kit família: 4 peças impermeáveis e antialérgicas 50x70.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Hóspedes, casal com filhos ou troca completa de uma vez.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Praticidade com capa contra líquidos a preço por unidade.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">88</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Quatro unidades no mesmo pedido</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Impermeável e antialérgico</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Toque macio e tamanho 50x70</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 109,25</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/2dkbdGj">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="travesseiro-impermeavel-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-6">
+            <span id="analise-6" class="sr-only">Análise Kit 2 Travesseiro Antialérgico Regulável Lavável Fibra 50x70</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 6">6</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_936804-MLB98157444182_112025-O.webp" alt="Travesseiro bom e barato ICRESA antialérgico regulável lavável fibra 50x70" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">4,5</span>
+              <h2 class="text-lg font-bold text-white">Kit 2 Travesseiro Antialérgico Regulável Lavável Fibra 50x70</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Travesseiro bom e barato: regulável, lavável e de fibra.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem ainda descobre a altura ideal sem gastar em premium.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Primeira compra antes de investir em látex ou NASA caro.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">86</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Preço baixo no kit com 2</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Altura regulável para testar o travesseiro ideal</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Lavável e antialérgico</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 55,29</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/336xvU8">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="travesseiro-regulavel-lavavel-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+<section id="criterios" class="py-14">
+      <div class="w-full">
         <p class="mb-2 text-center text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Metodologia</p>
         <h2 class="mx-auto mb-12 max-w-2xl text-center text-3xl font-extrabold md:text-4xl">Como escolhemos o melhor travesseiro?</h2>
 
@@ -381,279 +583,8 @@
       </div>
     </section>
 
-    <div class="mx-auto max-w-6xl space-y-6 px-4 pb-12">
-      <!-- 1 Hug NASA -->
-      <article class="glass p-5 md:p-6" id="produto-1">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.6</span>
-          <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#1 · Melhor travesseiro NASA</span>
-          <span class="text-brand-yellow" aria-label="4,8 de 5 estrelas">★★★★★</span>
-          <span class="text-xs text-brand-dim">4,8 · avaliações no Mercado Livre</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_648102-MLB99698762080_122025-O.webp" alt="Melhor travesseiro NASA Hug viscoelástico alto 60x40x17 cm para dormir de lado" class="max-h-[200px] w-full object-contain" width="440" height="440">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">1. Kit 2 Travesseiros Viscoelástico Hug Nasa Alto 60x40x17</h2>
-            <p class="mb-3 text-sm text-brand-dim">Hug Comercio · a partir de R$ 172,90 o kit</p>
-            <p class="mb-4 text-brand-muted">
-              Se a pergunta é qual o melhor travesseiro NASA nesta lista, a resposta é o Hug Alto em espuma viscoelástica.
-              A peça de 17 cm é ideal para quem precisa de um travesseiro mais alto ao dormir de lado: ela preenche o espaço entre o ombro e a cabeça, molda ao formato da cabeça e pescoço e distribui o peso para reduzir pontos de pressão.
-              Compradores destacam o suporte personalizado e o alívio nas dores cervicais; as críticas mais comuns são o cheiro inicial típico do poliuretano e a firmeza, que pode parecer excessiva para quem prefere macieza extrema.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/26nAgGR">Ver no Mercado Livre</a>
-              <a href="travesseiro-hug-nasa-alto-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do Hug Nasa Alto →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Espuma viscoelástica NASA que se adapta à cabeça</li>
-              <li>Altura 17 cm favorece quem dorme de lado</li>
-              <li>Kit com 2 peças e boa nota dos compradores (4,8)</li>
-              <li>Indicado para quem busca suporte cervical estruturado</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Pode ser alto demais para quem dorme de bruços</li>
-              <li>Odor de fábrica nas primeiras noites</li>
-              <li>Sensação firme, menos “fofa” que fibra</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- 2 Cervical -->
-      <article class="glass p-5 md:p-6" id="produto-2">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.4</span>
-          <span class="rounded-md bg-brand-orange px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow-orange">#2 · Dor no pescoço</span>
-          <span class="text-brand-yellow" aria-label="4,7 de 5 estrelas">★★★★★</span>
-          <span class="text-xs text-brand-dim">4,7 · avaliações no Mercado Livre</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_950632-MLA99943168711_112025-O.webp" alt="Melhor travesseiro para dor no pescoço Nasa ortopédico cervical D40 Lar Conforto" class="max-h-[200px] w-full object-contain" width="440" height="440" loading="lazy">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">2. Kit 2 Travesseiro Nasa Ortopédico Cervical D40 Lar Conforto</h2>
-            <p class="mb-3 text-sm text-brand-dim">Lar Conforto · a partir de R$ 182,45 o kit</p>
-            <p class="mb-4 text-brand-muted">
-              Este é o destaque para quem pesquisa travesseiro para dor no pescoço. O formato ortopédico cervical acomoda a curva da vértebra cervical e oferece suporte firme na região da cabeça e do pescoço.
-              Relatos de compra apontam alívio nas dores cervicais depois da adaptação; o outro lado é o período de acostumar e a altura, que não agrada quem prefere um modelo baixo e macio.
-              Se um ortopedista já sugeriu travesseiro cervical, este kit de dois é o mais alinhado da seleção.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/2tsz92A">Ver no Mercado Livre</a>
-              <a href="travesseiro-nasa-ortopedico-cervical-d40-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do Cervical D40 →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Design cervical / ortopédico</li>
-              <li>Espuma viscoelástica com suporte firme</li>
-              <li>Foco em coluna cervical e dores no pescoço</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Exige adaptação nas primeiras noites</li>
-              <li>Pouco versátil para dormir de bruços</li>
-              <li>Pode reter mais calor que fibra</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- 3 Extra firme -->
-      <article class="glass p-5 md:p-6" id="produto-3">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.2</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">#3 · Extra firme</span>
-          <span class="text-brand-yellow" aria-label="4,7 de 5 estrelas">★★★★★</span>
-          <span class="text-xs text-brand-dim">4,7 · avaliações no Mercado Livre</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_992095-MLB49700060190_042022-O.webp" alt="Kit 2 travesseiros antialérgicos extra firme 50x70 para suporte da cabeça" class="max-h-[200px] w-full object-contain" width="440" height="440" loading="lazy">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">3. Kit 2 Travesseiro Antialérgico 50x70 Extra Firme</h2>
-            <p class="mb-3 text-sm text-brand-dim">Fassini · a partir de R$ 79,11 o kit</p>
-            <p class="mb-4 text-brand-muted">
-              Quem rejeita travesseiros tradicionais que “afundam” encontra aqui enchimento extra firme em 50x70, tamanho padrão de capa.
-              É um bom travesseiro para quem quer sustentação sem pagar o ticket da viscoelástica NASA. Avaliações elogiam a firmeza e o toque antialérgico; as críticas repetem que pode ser duro demais se você busca só macieza.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/2p6S7DV">Ver no Mercado Livre</a>
-              <a href="travesseiro-extra-firme-altenburg-suporte-extra-firme-em-percal-180-fios.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do extra firme →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Suporte firme sem preço de NASA</li>
-              <li>Antialérgico, tamanho 50x70</li>
-              <li>Kit duplo com boa nota (4,7)</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Pode parecer rígido demais</li>
-              <li>Menos “abraço” que viscoelástico</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- 4 Plumas -->
-      <article class="glass p-5 md:p-6" id="produto-4">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.0</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">#4 · Macieza hotel</span>
-          <span class="text-brand-yellow" aria-label="4,5 de 5 estrelas">★★★★☆</span>
-          <span class="text-xs text-brand-dim">4,5 · avaliações no Mercado Livre</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_993747-MLA99504199216_112025-O.webp" alt="Kit 2 travesseiros Select Royal toque de plumas linha hotel para macieza" class="max-h-[200px] w-full object-contain" width="440" height="440" loading="lazy">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">4. Kit 2 Travesseiros Select Royal Toque De Plumas Linha Hotel</h2>
-            <p class="mb-3 text-sm text-brand-dim">TRP Imports · a partir de R$ 166,13 o kit</p>
-            <p class="mb-4 text-brand-muted">
-              Os travesseiros de pluma sintéticos da linha hotel entregam macieza e aquela sensação de pousada. A fibra macia é ideal para quem busca conforto aconchegante, não suporte ortopédico.
-              Elogios falam em toque hotel e volume; reclamações citam perda de forma com o uso e pouco apoio para ombros e pescoço — o oposto do Hug NASA.
-              Capa com cara de percal 200 fios ajuda no frescor visual, mas o desempenho térmico depende da ventilação do quarto.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/24XVWzz">Ver no Mercado Livre</a>
-              <a href="travesseiro-toque-de-pluma-buddemeyer-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do toque de plumas →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Macieza tipo pluma / linha hotel</li>
-              <li>Boa para quem prefere toque fofo</li>
-              <li>Visual de cama de hospedagem</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Pode perder volume com o tempo</li>
-              <li>Pouco suporte para dores no pescoço</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- 5 Kit 4 -->
-      <article class="glass p-5 md:p-6" id="produto-5">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">8.8</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">#5 · Kit família</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_998675-MLB72098223701_102023-O.webp" alt="4 travesseiros antialérgicos impermeáveis 50x70 super macios para dormir bem" class="max-h-[200px] w-full object-contain" width="440" height="440" loading="lazy">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">5. 4 Travesseiros Antialérgico Impermeável 50x70 Super Macio</h2>
-            <p class="mb-3 text-sm text-brand-dim">A partir de R$ 109,25 o kit com 4</p>
-            <p class="mb-4 text-brand-muted">
-              Quatro peças impermeáveis e antialérgicas em 50x70, com toque super macio. É a escolha prática para hóspedes, casal + filhos ou para trocar o jogo inteiro de uma vez.
-              O consumidor elogia o kit, a capa que ajuda contra líquidos e o preço por unidade; o ponto fraco é a durabilidade do enchimento de fibra, que pode achatar mais rápido que látex natural ou NASA.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/2dkbdGj">Ver no Mercado Livre</a>
-              <a href="travesseiro-impermeavel-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do kit 4 impermeável →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Quatro unidades no mesmo pedido</li>
-              <li>Impermeável e antialérgico</li>
-              <li>Toque macio e tamanho 50x70</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Pouco firme para uso cervical</li>
-              <li>Fibra pode perder forma</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- 6 Regulável barato -->
-      <article class="glass p-5 md:p-6" id="produto-6">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">8.6</span>
-          <span class="rounded-md bg-brand-orange px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow-orange">#6 · Bom e barato</span>
-          <span class="text-brand-yellow" aria-label="4,5 de 5 estrelas">★★★★☆</span>
-          <span class="text-xs text-brand-dim">4,5 · avaliações no Mercado Livre</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_936804-MLB98157444182_112025-O.webp" alt="Travesseiro bom e barato ICRESA antialérgico regulável lavável fibra 50x70" class="max-h-[200px] w-full object-contain" width="440" height="440" loading="lazy">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">6. Kit 2 Travesseiro Antialérgico Regulável Lavável Fibra 50x70</h2>
-            <p class="mb-3 text-sm text-brand-dim">ICRESA · a partir de R$ 55,29 o kit</p>
-            <p class="mb-4 text-brand-muted">
-              O travesseiro bom e barato do ranking: regulável, lavável e de fibra, para quem ainda está aprendendo a escolher o travesseiro certo.
-              Camadas ou volume ajustável ajudam a adaptar a altura à posição ao dormir sem gastar com Altenburg Levitare Plus ou Duoflex Látex Real Alto.
-              Pode ser lavado (siga a etiqueta); o trade-off é a menor durabilidade da fibra frente a travesseiros de espuma densos.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/336xvU8">Ver no Mercado Livre</a>
-              <a href="travesseiro-regulavel-lavavel-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do regulável →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Preço baixo no kit com 2</li>
-              <li>Altura regulável para testar o travesseiro ideal</li>
-              <li>Lavável e antialérgico</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Fibra menos durável que NASA</li>
-              <li>Pode ficar baixo demais se perder enchimento</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <section class="px-4 py-12" id="como-escolher">
-      <div class="glass mx-auto max-w-6xl p-6 md:p-10">
+    <section class="py-12" id="como-escolher">
+      <div class="glass w-full p-6 md:p-10">
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Como escolher o travesseiro <span class="text-brand-yellow">ideal para dormir</span></h2>
         <p class="mb-6 text-brand-muted">
           Escolher um travesseiro começa pela posição em que você dorme. O travesseiro certo preenche o espaço entre a cabeça e o colchão e evita torcer ombros e pescoço.
@@ -683,8 +614,8 @@
       </div>
     </section>
 
-    <section class="px-4 py-12" id="tabela">
-      <div class="mx-auto max-w-6xl">
+    <section class="py-12" id="tabela">
+      <div class="w-full">
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Tabela comparativa: <span class="text-brand-yellow">qual o melhor travesseiro</span></h2>
         <div class="glass overflow-x-auto">
           <table class="w-full min-w-[720px] text-left text-sm">
@@ -710,8 +641,8 @@
       </div>
     </section>
 
-    <section class="px-4 py-12" id="faq">
-      <div class="mx-auto max-w-6xl">
+    <section class="py-12" id="faq">
+      <div class="w-full">
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre o <span class="text-brand-yellow">melhor travesseiro para dormir</span></h2>
         <div class="space-y-3">
           <details class="glass group p-5" open>
@@ -750,8 +681,8 @@
       </div>
     </section>
 
-    <section class="px-4 pb-14" aria-label="Autor">
-      <div class="glass mx-auto flex max-w-6xl flex-col items-start gap-4 p-6 sm:flex-row sm:items-center">
+    <section class="pb-14" aria-label="Autor">
+      <div class="glass flex w-full flex-col items-start gap-4 p-6 sm:flex-row sm:items-center">
         <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-brand-gradient text-sm font-black text-black shadow-glow">Equipe</div>
         <div>
           <h3 class="mb-1 text-lg font-bold">Equipe Tudo de Melhor</h3>
@@ -760,6 +691,8 @@
         </div>
       </div>
     </section>
+        </div>
+    </div>
   </main>
 
   <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
@@ -783,6 +716,7 @@
       <div>
         <h4 class="mb-3 text-sm font-bold">Categorias</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="melhores-bicicletas-eletricas.html" class="hover:text-brand-yellow">Bicicletas Elétricas</a>
           <a href="index.html#categorias" class="hover:text-brand-yellow">Eletrônicos</a>
           <a href="qual-e-o-melhor-travesseiro-para-dormir.html" class="hover:text-brand-yellow">Casa e Sono</a>
           <a href="index.html#categorias" class="hover:text-brand-yellow">Pets</a>
@@ -817,6 +751,23 @@
         toggle.setAttribute('aria-expanded', 'false');
       });
     });
-  </script>
+  
+    document.querySelectorAll('.copy-page-link').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const url = btn.dataset.url || window.location.href;
+        try { await navigator.clipboard.writeText(url); } catch {
+          const input = document.createElement('input');
+          input.value = url;
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand('copy');
+          input.remove();
+        }
+      });
+    });
+    document.getElementById('page-index-mobile')?.addEventListener('change', (e) => {
+      const value = e.target.value;
+      if (value) { location.href = value; e.target.value = ''; }
+    });  </script>
 </body>
 </html>

@@ -226,8 +226,7 @@
     </div>
   </header>
 
-  <main>
-    <div class="mx-auto max-w-6xl px-4 pt-8">
+  <main class="mx-auto max-w-7xl px-4 pt-8">
       <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
         <a href="index.html" class="hover:text-brand-yellow">Início</a>
         <span aria-hidden="true">/</span>
@@ -235,100 +234,298 @@
         <span aria-hidden="true">/</span>
         <span class="text-white" aria-current="page">Purificadores de água</span>
       </nav>
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[200px_1fr] xl:grid-cols-[240px_1fr]">
+      <aside class="sticky top-28 hidden h-fit lg:block" aria-label="Índice da página">
+        <nav class="flex flex-col gap-3 text-sm">
+          <a href="#ranking-topo" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Ranking</a>
+          <a href="#criterios" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Critérios</a>
+          <a href="#produto-1" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">1. IBBL</a>
+          <a href="#produto-2" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">2. PE12G</a>
+          <a href="#produto-3" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">3. PE11X</a>
+          <a href="#produto-4" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">4. Consul</a>
+          <a href="#produto-5" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">5. Facile</a>
+          <a href="#produto-6" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">6. Acquabios</a>
+          <a href="#como-escolher" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Como escolher</a>
+          <a href="#tabela" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Tabela</a>
+          <a href="#faq" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">FAQ</a>
+        </nav>
+        <div class="mt-8 border-t border-white/10 pt-6">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-wider text-brand-dim">Compartilhar</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftudodemelhor.com.br%2Fmelhores-purificadores-de-agua-2026.html&amp;text=Melhores%20purificadores%20de%20%C3%A1gua%202026%3A%20ranking%20com%20compressor%2C%20gelada%20e%20natural%20e%20melhor%20custo-benef%C3%ADcio" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" aria-label="Compartilhar no X"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftudodemelhor.com.br%2Fmelhores-purificadores-de-agua-2026.html" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" aria-label="Compartilhar no Facebook"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://wa.me/?text=Melhores%20purificadores%20de%20%C3%A1gua%202026%3A%20ranking%20com%20compressor%2C%20gelada%20e%20natural%20e%20melhor%20custo-benef%C3%ADcio%20https%3A%2F%2Ftudodemelhor.com.br%2Fmelhores-purificadores-de-agua-2026.html" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" aria-label="Compartilhar no WhatsApp"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            <button type="button" class="copy-page-link flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" data-url="https://tudodemelhor.com.br/melhores-purificadores-de-agua-2026.html" aria-label="Copiar link"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="min-w-0">
 
       <header class="glass mb-8 p-6 md:p-10">
         <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Casa · Água · Ranking 2026</p>
-        <h1 class="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Melhores purificadores de água 2026: ranking com compressor, gelada e natural e melhor custo-benefício</h1>
-        <p class="mb-4 max-w-3xl text-brand-muted">
-          Escolher o melhor purificador de água muda a qualidade da água da família, o consumo de água engarrafada e a praticidade de ter água gelada ou água natural em casa.
+        <h1 class="mb-8 text-3xl font-extrabold leading-tight md:text-5xl">Melhores purificadores de água 2026: ranking com compressor, gelada e natural e melhor custo-benefício</h1>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
+          <div>
+            <p class="mb-4 text-brand-muted">
+              Escolher o melhor purificador de água muda a qualidade da água da família, o consumo de água engarrafada e a praticidade de ter água gelada ou água natural em casa.
           Neste ranking comparamos seis purificadores de água para comprar no Mercado Livre — IBBL com compressor, Electrolux PE12G e PE11X (água gelada, fria e natural), Consul refrigerado, Hidrofiltros Facile C3 de parede e Acquabios Premium Single — com preço e imagem atuais.
           Também situamos as melhores marcas de purificador (IBBL, Electrolux, Consul, Hidrofiltros e Acquabios) para você escolher um purificador de água ideal ao orçamento e ao uso diário.
-        </p>
-        <p class="mb-4 max-w-3xl text-sm text-brand-dim">
-          Se você quer garantir água de qualidade, cruze refrigeração (compressor ou placa eletrônica), selo Inmetro, troca de filtro e volume de água gelada por hora.
+            </p>
+            <p class="mb-4 text-sm text-brand-dim">
+              Se você quer garantir água de qualidade, cruze refrigeração (compressor ou placa eletrônica), selo Inmetro, troca de filtro e volume de água gelada por hora.
           Quem precisa só de água filtrada na torneira pode investir em um purificador de parede; quem quer gelar a água com frequência deve mirar modelos com compressor ou placa.
-        </p>
-        <div class="flex flex-wrap gap-2">
+            </p>
+            <div class="flex flex-wrap gap-2">
           <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Atualizado em agosto de 2026</span>
           <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Dados extraídos do Mercado Livre</span>
           <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Metodologia própria</span>
         </div>
-      </header>
-
-      <nav class="mb-8 flex gap-2 overflow-x-auto pb-2 text-sm" aria-label="Índice da página">
-        <a href="#ranking-topo" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Ranking</a>
-        <a href="#criterios" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Critérios</a>
-        <a href="#produto-1" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">1. IBBL</a>
-        <a href="#produto-2" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">2. PE12G</a>
-        <a href="#produto-3" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">3. PE11X</a>
-        <a href="#produto-4" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">4. Consul</a>
-        <a href="#produto-5" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">5. Facile</a>
-        <a href="#produto-6" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">6. Acquabios</a>
-        <a href="#como-escolher" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Como escolher</a>
-        <a href="#tabela" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Tabela</a>
-        <a href="#faq" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">FAQ</a>
-      </nav>
-
-      <aside class="mb-10" id="ranking-topo" aria-label="Topo do ranking">
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-          <a class="glass col-span-2 row-span-2 flex flex-col gap-3 p-5 transition hover:-translate-y-1 hover:shadow-glow" href="#produto-1">
-            <div class="flex items-center justify-between gap-2">
-              <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.6</span>
-              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#1 · Melhor com compressor</span>
-            </div>
-            <div class="flex min-h-[160px] items-center justify-center overflow-hidden rounded-xl bg-white p-4">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_864407-MLA99560720718_122025-O.webp" alt="Melhor purificador de água gelada IBBL FR600 Exclusive com compressor prata" class="max-h-44 w-full object-contain" width="400" height="400">
-            </div>
-            <strong class="text-base">IBBL FR600 Exclusive</strong>
-            <span class="text-xs text-brand-dim">Compressor · a partir de R$ 929,99</span>
-            <span class="mt-auto inline-flex h-10 w-full items-center justify-center rounded-xl bg-brand-yellow text-sm font-bold text-black shadow-glow">Ver no Mercado Livre</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-2">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.4</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_619844-MLA99938311049_112025-O.webp" alt="Purificador de água Electrolux PE12G gelada fria e natural" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Electrolux PE12G</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-3">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.2</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_827641-MLU76394011194_052024-O.webp" alt="Purificador de água Electrolux PE11X gelada fria e natural" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Electrolux PE11X</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-4">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.0</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_992196-MLA99984544191_112025-O.webp" alt="Purificador de água Consul CPB34 refrigerado branco bivolt" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Consul CPB34</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-5">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">8.8</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_894907-MLA112423102796_062026-O.webp" alt="Purificador de água de parede Hidrofiltros Facile C3 Inmetro" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Facile C3</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
-          <a class="glass col-span-2 flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow md:col-span-2" href="#produto-6">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">8.6</span>
-            <div class="flex min-h-[88px] w-full max-w-xs items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_604047-MLA84549285974_052025-O.webp" alt="Purificador de água de parede Acquabios Premium Single preto" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Acquabios Premium Single</strong>
-            <span class="mt-1 inline-flex h-9 w-full max-w-xs items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
+          </div>
+          <div class="glass rounded-2xl border border-white/10 p-5 md:p-6">
+            <img src="assets/produtos/RANKING/PURIFICADOR-DE-AGUA/capa.jpeg" alt="Purificadores de água — capa da categoria no ranking Tudo de Melhor" class="w-full h-auto object-cover rounded-xl" width="640" height="480" loading="eager">
+            <a class="mt-4 inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow px-6 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/1HErSZt">Ver categoria completa no Mercado Livre</a>
+          </div>
         </div>
-      </aside>
-    </div>
+      </header>
+      <nav class="mb-8 lg:hidden" aria-label="Índice da página (mobile)">
+        <label for="page-index-mobile" class="mb-2 block text-xs font-bold uppercase tracking-wider text-brand-dim">Ir para seção</label>
+        <select id="page-index-mobile" class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none focus:border-brand-yellow/50">
+          <option value="">Selecione uma seção…</option>
+          <option value="#ranking-topo">Ranking</option>
+          <option value="#criterios">Critérios</option>
+          <option value="#produto-1">1. IBBL</option>
+          <option value="#produto-2">2. PE12G</option>
+          <option value="#produto-3">3. PE11X</option>
+          <option value="#produto-4">4. Consul</option>
+          <option value="#produto-5">5. Facile</option>
+          <option value="#produto-6">6. Acquabios</option>
+          <option value="#como-escolher">Como escolher</option>
+          <option value="#tabela">Tabela</option>
+          <option value="#faq">FAQ</option>
+        </select>
+      </nav>
+    <section id="ranking-topo" class="py-10" aria-label="As 6 melhores purificadores de água">
+      <div class="w-full">
+        <p class="mb-2 text-center text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Ranking 2026</p>
+        <h2 class="mb-8 text-center text-2xl font-extrabold text-white md:text-3xl">As 6 melhores purificadores de água</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
 
-    <section id="criterios" class="px-4 py-14">
-      <div class="mx-auto max-w-6xl">
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-1">
+            <span id="analise-1" class="sr-only">Análise FR600 Exclusive Prata</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 1">1</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_864407-MLA99560720718_122025-O.webp" alt="Purificador de água IBBL FR600 Exclusive prata com compressor água gelada" class="max-h-44 w-full object-contain" width="400" height="400">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">IBBL</span>
+              <h2 class="text-lg font-bold text-white">FR600 Exclusive Prata</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem prioriza água gelada estável com compressor IBBL.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Famílias que consomem muito volume de água fria no dia a dia.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Investimento premium em refrigeração robusta e marca consolidada.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">96</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">compressor</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">gelada</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 929,99 (de ~R$ 1.599)</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/1mmCVg7">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="ibbl-fr600-exclusive-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-2">
+            <span id="analise-2" class="sr-only">Análise PE12G</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 2">2</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_619844-MLA99938311049_112025-O.webp" alt="Electrolux purificador de água gelada PE12G fria e natural elétrico" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">ELECTROLUX</span>
+              <h2 class="text-lg font-bold text-white">PE12G</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Melhor custo-benefício para água gelada e natural sem compressor.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer marca Electrolux com refrigeração eletrônica.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Uso residencial com saída prática e consumo moderado.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">94</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">placa</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">gelada/fria/natural</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 629,90 (de ~R$ 769)</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/1FyU24i">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="purificador-electrolux-pe12g.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-3">
+            <span id="analise-3" class="sr-only">Análise PE11X</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 3">3</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_827641-MLU76394011194_052024-O.webp" alt="Purificador de água Electrolux PE11X gelada fria e natural" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">ELECTROLUX</span>
+              <h2 class="text-lg font-bold text-white">PE11X</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Design moderno Electrolux com gelada fria e natural.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer subir de faixa em acabamento e fluxo estável.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Cozinha que valoriza tratamento de água da linha premium da marca.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">92</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">eletrônico</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">gelada/fria/natural</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 1.019 (de ~R$ 1.199)</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/1vpShZD">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="electrolux-pe11x-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-4">
+            <span id="analise-4" class="sr-only">Análise CPB34ASVNA</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 4">4</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_992196-MLA99984544191_112025-O.webp" alt="Purificador de água Consul CPB34ASVNA refrigerado branco bivolt" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">CONSUL</span>
+              <h2 class="text-lg font-bold text-white">CPB34ASVNA</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Apartamento com orçamento acessível e tensão bivolt.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Entrada forte em água refrigerada com marca Consul conhecida.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer água natural ou gelada sem pagar compressor.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">90</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">refrigerado</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">bivolt</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 470,30 (de ~R$ 639)</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/1hCgdgr">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="purificador-de-agua-consul-cpb34as.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-5">
+            <span id="analise-5" class="sr-only">Análise Facile C3</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 5">5</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_894907-MLA112423102796_062026-O.webp" alt="Melhor purificador de água aprovado pelo Inmetro Hidrofiltros Facile C3 parede" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">HIDROFILTROS</span>
+              <h2 class="text-lg font-bold text-white">Facile C3</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Parede sem refrigeração: só filtragem com selo Inmetro.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Orçamento econômico para água mais pura na torneira.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem não precisa de água gelada, só tratamento diário.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">88</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">natural</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Inmetro</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 149,87 (de ~R$ 179,90)</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/2HeG59E">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="purificador-de-agua-hidrofiltros-facile-c3.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-6">
+            <span id="analise-6" class="sr-only">Análise Premium Single</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 6">6</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_604047-MLA84549285974_052025-O.webp" alt="Purificador de água natural Acquabios Premium Single preto de parede" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">ACQUABIOS</span>
+              <h2 class="text-lg font-bold text-white">Premium Single</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Menor custo para água natural filtrada no ponto de uso.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Apartamento compacto que precisa só de água limpa, não gelada.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Primeiro purificador barato antes de investir em refrigeração.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">86</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">parede</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">natural</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 72,70 (de ~R$ 77,90)</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/1rpw8U3">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="acquabios-premium-single.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+<section id="criterios" class="py-14">
+      <div class="w-full">
         <p class="mb-2 text-center text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Metodologia</p>
         <h2 class="mx-auto mb-12 max-w-3xl text-center text-3xl font-extrabold md:text-4xl">Como escolhemos os melhores purificadores de água de 2026?</h2>
 
@@ -381,279 +578,8 @@
         </div>
       </div>
     </section>
-
-    <div class="mx-auto max-w-6xl space-y-6 px-4 pb-12">
-      <article class="glass p-5 md:p-6" id="produto-1">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.6</span>
-          <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#1 · Melhor com compressor</span>
-          <span class="text-brand-yellow" aria-label="Nota editorial alta">★★★★★</span>
-          <span class="text-xs text-brand-dim">IBBL · compressor · gelada</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_864407-MLA99560720718_122025-O.webp" alt="Purificador de água IBBL FR600 Exclusive prata com compressor água gelada" class="max-h-[200px] w-full object-contain" width="440" height="440">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">1. IBBL FR600 Exclusive Prata — purificador com compressor</h2>
-            <p class="mb-3 text-sm text-brand-dim">IBBL · a partir de R$ 929,99 (de ~R$ 1.599)</p>
-            <p class="mb-4 text-brand-muted">
-              Se a pergunta é qual o melhor purificador de água gelada nesta lista, a resposta é o purificador de água IBBL FR600 Exclusive: é o melhor purificador para quem prioriza modelos com compressor e quantidade de água gelada estável.
-              A IBBL é uma das melhores marcas de purificador no Brasil em bebedouros e refrigeração por compressor; compradores elogiam a água gelada forte e a construção; críticas comuns citam ruído do compressor e peso na instalação.
-              Ideal para famílias que querem gelar a água com frequência e garantir água de qualidade sem depender de garrafões.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/1mmCVg7">Ver no Mercado Livre</a>
-              <a href="ibbl-fr600-exclusive-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do IBBL FR600 →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Compressor: mais litro de água gelada por hora</li>
-              <li>Marca IBBL consolidada em purificação de água</li>
-              <li>Água gelada estável para casa ou escritório pequeno</li>
-              <li>Bom equilíbrio entre qualidade da água e desempenho</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Compressor pode ser mais audível que placa eletrônica</li>
-              <li>Preço acima das opções só naturais de parede</li>
-              <li>Instalação e espaço de bancada exigem planejamento</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass p-5 md:p-6" id="produto-2">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.4</span>
-          <span class="rounded-md bg-brand-orange px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow-orange">#2 · Melhor custo-benefício gelada</span>
-          <span class="text-brand-yellow" aria-label="Nota editorial alta">★★★★★</span>
-          <span class="text-xs text-brand-dim">Electrolux · placa · gelada/fria/natural</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_619844-MLA99938311049_112025-O.webp" alt="Electrolux purificador de água gelada PE12G fria e natural elétrico" class="max-h-[200px] w-full object-contain" width="440" height="440">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">2. Electrolux PE12G — purificador de água gelada, fria e natural</h2>
-            <p class="mb-3 text-sm text-brand-dim">Electrolux · a partir de R$ 629,90 (de ~R$ 769)</p>
-            <p class="mb-4 text-brand-muted">
-              O purificador Electrolux PE12G é o melhor custo-benefício desta seleção para quem quer água gelada fria e natural sem pagar o ticket do compressor.
-              Refrigeração por placa eletrônica, saída de água prática e marca Electrolux — um dos purificadores de água do mercado mais buscados em 2026.
-              Elogios citam água limpa e praticidade; críticas apontam que a placa gela menos litros que um compressor e que a troca de filtro deve ser programada.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/1FyU24i">Ver no Mercado Livre</a>
-              <a href="purificador-electrolux-pe12g.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do Electrolux PE12G →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Água gelada, fria e natural no mesmo aparelho</li>
-              <li>Preço competitivo frente a modelos com compressor</li>
-              <li>Purificador de água Electrolux com boa disponibilidade de peças</li>
-              <li>Operação mais silenciosa que compressor típico</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Placa eletrônica gela menos que compressor</li>
-              <li>Volume de água gelada limitado em picos de uso</li>
-              <li>Refil e manutenção periódica obrigatórios</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass p-5 md:p-6" id="produto-3">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.2</span>
-          <span class="rounded-md border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-extrabold uppercase text-brand-muted">#3 · Electrolux premium</span>
-          <span class="text-brand-yellow" aria-label="Nota editorial">★★★★☆</span>
-          <span class="text-xs text-brand-dim">Electrolux · eletrônico · gelada/fria/natural</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_827641-MLU76394011194_052024-O.webp" alt="Purificador de água Electrolux PE11X gelada fria e natural" class="max-h-[200px] w-full object-contain" width="440" height="440">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">3. Electrolux PE11X — purificador de água gelada fria e natural</h2>
-            <p class="mb-3 text-sm text-brand-dim">Electrolux · a partir de R$ 1.019 (de ~R$ 1.199)</p>
-            <p class="mb-4 text-brand-muted">
-              O Electrolux PE11X sobe de faixa em relação ao PE12G: é um bom purificador para quem quer design moderno, água gelada fria e natural elétrico e tratamento de água da linha Electrolux.
-              Entre os melhores purificadores de água gelada da marca, beneficia quem busca acabamento e fluxo de água estável.
-              Preço mais alto que o PE12G; vale se o orçamento permite investir em um purificador com visual e recursos dessa linha.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/1vpShZD">Ver no Mercado Livre</a>
-              <a href="electrolux-pe11x-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do Electrolux PE11X →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Três temperaturas: gelada, fria e natural</li>
-              <li>Linha Electrolux com boa reputação de assistência</li>
-              <li>Água purificada com filtragem e refrigeração eletrônica</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Custo acima do PE12G sem ser compressor</li>
-              <li>Não substitui compressor em demanda alta de água gelada</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass p-5 md:p-6" id="produto-4">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.0</span>
-          <span class="rounded-md border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-extrabold uppercase text-brand-muted">#4 · Consul refrigerado</span>
-          <span class="text-brand-yellow" aria-label="Nota editorial">★★★★☆</span>
-          <span class="text-xs text-brand-dim">Consul · refrigerado · bivolt</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_992196-MLA99984544191_112025-O.webp" alt="Purificador de água Consul CPB34ASVNA refrigerado branco bivolt" class="max-h-[200px] w-full object-contain" width="440" height="440">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">4. Consul CPB34ASVNA — purificador de água Consul refrigerado</h2>
-            <p class="mb-3 text-sm text-brand-dim">Consul · a partir de R$ 470,30 (de ~R$ 639)</p>
-            <p class="mb-4 text-brand-muted">
-              O purificador de água Consul CPB34ASVNA é a porta de entrada forte para água refrigerada com marca conhecida e tensão bivolt.
-              Entre marcas de purificador de água populares, a Consul entrega água natural ou gelada em faixa acessível — escolha do purificador para apartamentos que querem ter água pura sem gastar em compressor.
-              Elogios: preço e praticidade; críticas: refrigeração menos agressiva que IBBL compressor e necessidade de acompanhar o consumo de água e o refil.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/1hCgdgr">Ver no Mercado Livre</a>
-              <a href="purificador-de-agua-consul-cpb34as.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do Consul CPB34 →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Preço acessível entre refrigerados</li>
-              <li>Bivolt facilita a instalação em várias casas</li>
-              <li>Marca Consul com peças fáceis de achar</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Não é o purificador ideal para alto volume de água gelada</li>
-              <li>Acabamento mais básico que linhas Electrolux premium</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass p-5 md:p-6" id="produto-5">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">8.8</span>
-          <span class="rounded-md border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-extrabold uppercase text-brand-muted">#5 · Parede + Inmetro</span>
-          <span class="text-brand-yellow" aria-label="Nota editorial">★★★★☆</span>
-          <span class="text-xs text-brand-dim">Hidrofiltros · natural · Inmetro</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_894907-MLA112423102796_062026-O.webp" alt="Melhor purificador de água aprovado pelo Inmetro Hidrofiltros Facile C3 parede" class="max-h-[200px] w-full object-contain" width="440" height="440">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">5. Hidrofiltros Facile C3 — purificadores de água de parede (natural)</h2>
-            <p class="mb-3 text-sm text-brand-dim">Hidrofiltros · a partir de R$ 149,87 (de ~R$ 179,90)</p>
-            <p class="mb-4 text-brand-muted">
-              Para escolher o purificador de parede sem refrigeração, o Facile C3 entrega água natural com selo Inmetro e preço de entrada.
-              É opção para quem quer água mais pura e segura na torneira, água filtrada no dia a dia e o melhor purificador de água aprovado em faixa econômica — sem água gelada.
-              Perfeito quando o objetivo é tratamento de água na parede e não gelar a água.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/2HeG59E">Ver no Mercado Livre</a>
-              <a href="purificador-de-agua-hidrofiltros-facile-c3.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do Hidrofiltros Facile C3 →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Selo Inmetro e foco em água limpa</li>
-              <li>Preço baixo e instalação de parede</li>
-              <li>Ideal para água natural sem eletricidade de refrigeração</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Sem água gelada</li>
-              <li>Não compete com bebedouros de bancada refrigerados</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass p-5 md:p-6" id="produto-6">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">8.6</span>
-          <span class="rounded-md border border-white/15 bg-white/5 px-2 py-1 text-[10px] font-extrabold uppercase text-brand-muted">#6 · Entrada parede</span>
-          <span class="text-brand-yellow" aria-label="Nota editorial">★★★★☆</span>
-          <span class="text-xs text-brand-dim">Acquabios · parede · natural</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_604047-MLA84549285974_052025-O.webp" alt="Purificador de água natural Acquabios Premium Single preto de parede" class="max-h-[200px] w-full object-contain" width="440" height="440">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">6. Acquabios Premium Single — filtro de parede econômico</h2>
-            <p class="mb-3 text-sm text-brand-dim">Acquabios · a partir de R$ 72,70 (de ~R$ 77,90)</p>
-            <p class="mb-4 text-brand-muted">
-              O Acquabios Premium Single fecha a lista como purificador de água natural de parede no menor custo: água ideal para quem só precisa filtrar e ter água mais limpa no ponto de uso.
-              Não é o melhor purificador para água gelada — e não tenta ser. É a escolha do melhor purificador de entrada para comprar um purificador de água barato e compacto.
-              Útil em kitnet, escritório pequeno ou como segundo ponto de água filtrada.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/1rpw8U3">Ver no Mercado Livre</a>
-              <a href="acquabios-premium-single.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do Acquabios Premium Single →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Menor preço dos purificadores desta lista</li>
-              <li>Compacto para parede</li>
-              <li>Bom ponto de partida para água filtrada</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Sem refrigeração</li>
-              <li>Recursos e vazão limitados frente a bancada refrigerada</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <section id="como-escolher" class="px-4 py-12">
-      <div class="mx-auto max-w-6xl">
+<section id="como-escolher" class="px-4 py-12">
+      <div class="w-full">
         <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Como escolher o melhor purificador de água?</h2>
         <div class="glass space-y-4 p-6 text-brand-muted">
           <p>
@@ -673,7 +599,7 @@
     </section>
 
     <section id="tabela" class="px-4 pb-12">
-      <div class="mx-auto max-w-6xl">
+      <div class="w-full">
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Tabela comparativa — purificadores de água para comprar</h2>
         <div class="glass overflow-x-auto p-2 md:p-4">
           <table class="w-full min-w-[720px] text-left text-sm">
@@ -743,8 +669,8 @@
       </div>
     </section>
 
-    <section class="px-4 py-12" id="faq">
-      <div class="mx-auto max-w-6xl">
+    <section class="py-12" id="faq">
+      <div class="w-full">
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre os <span class="text-brand-yellow">melhores purificadores de água</span></h2>
         <div class="space-y-3">
           <details class="glass group p-5" open>
@@ -783,8 +709,8 @@
       </div>
     </section>
 
-    <section class="px-4 pb-14" aria-label="Autor">
-      <div class="glass mx-auto flex max-w-6xl flex-col items-start gap-4 p-6 sm:flex-row sm:items-center">
+    <section class="pb-14" aria-label="Autor">
+      <div class="glass flex w-full flex-col items-start gap-4 p-6 sm:flex-row sm:items-center">
         <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-brand-gradient text-sm font-black text-black shadow-glow">Equipe</div>
         <div>
           <h3 class="mb-1 text-lg font-bold">Equipe Tudo de Melhor</h3>
@@ -793,6 +719,8 @@
         </div>
       </div>
     </section>
+        </div>
+    </div>
   </main>
 
   <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
@@ -819,6 +747,7 @@
           <a href="index.html#categorias" class="hover:text-brand-yellow">Eletrônicos</a>
           <a href="qual-e-o-melhor-travesseiro-para-dormir.html" class="hover:text-brand-yellow">Casa e Sono</a>
           <a href="melhores-marcas-de-ar-condicionado-2026.html" class="hover:text-brand-yellow">Ar-condicionado</a>
+          <a href="melhores-bicicletas-eletricas.html" class="hover:text-brand-yellow">Bicicletas Elétricas</a>
           <a href="melhores-purificadores-de-agua-2026.html" class="hover:text-brand-yellow">Purificadores</a>
           <a href="index.html#categorias" class="hover:text-brand-yellow">Pets</a>
         </div>
@@ -852,6 +781,28 @@
         toggle.setAttribute('aria-expanded', 'false');
       });
     });
-  </script>
+  
+    document.querySelectorAll('.copy-page-link').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const url = btn.dataset.url || window.location.href;
+        try {
+          await navigator.clipboard.writeText(url);
+        } catch {
+          const input = document.createElement('input');
+          input.value = url;
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand('copy');
+          input.remove();
+        }
+      });
+    });
+    document.getElementById('page-index-mobile')?.addEventListener('change', (e) => {
+      const value = e.target.value;
+      if (value) {
+        location.href = value;
+        e.target.value = '';
+      }
+    });  </script>
 </body>
 </html>

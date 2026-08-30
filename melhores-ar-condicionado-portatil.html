@@ -181,8 +181,7 @@
     </div>
   </header>
 
-  <main>
-    <div class="mx-auto max-w-6xl px-4 pt-8">
+  <main class="mx-auto max-w-7xl px-4 pt-8">
       <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
         <a href="index.html" class="hover:text-brand-yellow">Início</a>
         <span aria-hidden="true">/</span>
@@ -190,88 +189,263 @@
         <span aria-hidden="true">/</span>
         <span class="text-white" aria-current="page">Portátil</span>
       </nav>
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[200px_1fr] xl:grid-cols-[240px_1fr]">
+      <aside class="sticky top-28 hidden h-fit lg:block" aria-label="Índice da página">
+        <nav class="flex flex-col gap-3 text-sm">
+          <a href="#ranking-topo" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Ranking</a>
+          <a href="#criterios" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Critérios</a>
+          <a href="#produto-1" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">1. Philco</a>
+          <a href="#produto-2" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">2. Hisense</a>
+          <a href="#produto-3" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">3. Electrolux</a>
+          <a href="#produto-4" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">4. LG</a>
+          <a href="#produto-5" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">5. Rheem</a>
+          <a href="#como-escolher" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Como escolher</a>
+          <a href="#tabela" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">Tabela</a>
+          <a href="#faq" class="text-brand-muted transition-all hover:translate-x-1 hover:text-white">FAQ</a>
+        </nav>
+        <div class="mt-8 border-t border-white/10 pt-6">
+          <p class="mb-3 text-[10px] font-bold uppercase tracking-wider text-brand-dim">Compartilhar</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftudodemelhor.com.br%2Fmelhores-ar-condicionado-portatil.html&amp;text=Melhores%20ar%20condicionado%20portatil%3A%20o%20melhor%20ar-condicionado%20port%C3%A1til%20de%202026" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" aria-label="Compartilhar no X"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftudodemelhor.com.br%2Fmelhores-ar-condicionado-portatil.html" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" aria-label="Compartilhar no Facebook"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+            <a href="https://wa.me/?text=Melhores%20ar%20condicionado%20portatil%3A%20o%20melhor%20ar-condicionado%20port%C3%A1til%20de%202026%20https%3A%2F%2Ftudodemelhor.com.br%2Fmelhores-ar-condicionado-portatil.html" target="_blank" rel="noopener noreferrer" class="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" aria-label="Compartilhar no WhatsApp"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            <button type="button" class="copy-page-link flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-muted transition hover:border-brand-yellow/40 hover:text-white" data-url="https://tudodemelhor.com.br/melhores-ar-condicionado-portatil.html" aria-label="Copiar link"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="min-w-0">
 
       <header class="glass mb-8 p-6 md:p-10">
         <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Casa · Climatização · Ranking 2026</p>
-        <h1 class="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Melhores ar condicionado portatil: o melhor ar-condicionado portátil de 2026</h1>
-        <p class="mb-4 max-w-3xl text-brand-muted">
-          Se você busca os melhores ar condicionado portatil sem obra de parede, este ranking reúne cinco unidades rastreadas no Mercado Livre — do PAC10FN de 10.000 BTUs ao ar-condicionado portátil LG Dual Inverter de 14.000 BTUs.
+        <h1 class="mb-8 text-3xl font-extrabold leading-tight md:text-5xl">Melhores ar condicionado portatil: o melhor ar-condicionado portátil de 2026</h1>
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
+          <div>
+            <p class="mb-4 text-brand-muted">
+              Se você busca os melhores ar condicionado portatil sem obra de parede, este ranking reúne cinco unidades rastreadas no Mercado Livre — do PAC10FN de 10.000 BTUs ao ar-condicionado portátil LG Dual Inverter de 14.000 BTUs.
           O foco é praticidade: rodízios, tubo de exaustão, controle remoto e refrigeração real no ambiente.
-        </p>
-        <p class="mb-4 max-w-3xl text-sm text-brand-dim">
-          Para escolher o melhor ar-condicionado portátil, cruze BTUs com o tamanho do ambiente (m²), tensão (127V ou 220V), nível de ruído e se há Wi-Fi.
+            </p>
+            <p class="mb-4 text-sm text-brand-dim">
+              Para escolher o melhor ar-condicionado portátil, cruze BTUs com o tamanho do ambiente (m²), tensão (127V ou 220V), nível de ruído e se há Wi-Fi.
           Não inventamos selo Inmetro: confira a etiqueta no anúncio do dia.
-        </p>
-        <div class="flex flex-wrap gap-2">
+            </p>
+            <div class="flex flex-wrap gap-2">
           <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Atualizado em agosto de 2026</span>
           <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Dados do Mercado Livre</span>
           <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Metodologia própria</span>
         </div>
-      </header>
-
-      <nav class="mb-8 flex gap-2 overflow-x-auto pb-2 text-sm" aria-label="Índice da página">
-        <a href="#ranking-topo" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Ranking</a>
-        <a href="#criterios" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Critérios</a>
-        <a href="#produto-1" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">1. Philco</a>
-        <a href="#produto-2" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">2. Hisense</a>
-        <a href="#produto-3" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">3. Electrolux</a>
-        <a href="#produto-4" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">4. LG</a>
-        <a href="#produto-5" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">5. Rheem</a>
-        <a href="#como-escolher" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Como escolher</a>
-        <a href="#tabela" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">Tabela</a>
-        <a href="#faq" class="whitespace-nowrap rounded-full border border-white/10 bg-white/5 px-4 py-2 hover:border-brand-yellow/40">FAQ</a>
-      </nav>
-
-      <aside class="mb-10" id="ranking-topo" aria-label="Topo do ranking">
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-          <a class="glass col-span-2 row-span-2 flex flex-col gap-3 p-5 transition hover:-translate-y-1 hover:shadow-glow" href="#produto-1">
-            <div class="flex items-center justify-between gap-2">
-              <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.6</span>
-              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#1 · Philco 10k</span>
-            </div>
-            <div class="flex min-h-[160px] items-center justify-center overflow-hidden rounded-xl bg-white p-4">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_657688-MLA108106617219_032026-O.webp" alt="Melhores ar condicionado portatil Philco PAC10FN 10000 BTUs frio" class="max-h-44 w-full object-contain" width="400" height="400">
-            </div>
-            <strong class="text-base">Philco PAC10FN 10.000 BTUs</strong>
-            <span class="text-xs text-brand-dim">Portátil · a partir de R$ 2.464</span>
-            <span class="mt-auto inline-flex h-10 w-full items-center justify-center rounded-xl bg-brand-yellow text-sm font-bold text-black shadow-glow">Ver no Mercado Livre</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-2">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.4</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_711674-MLA99585997938_122025-O.webp" alt="Ar condicionado portatil 12000 btus Hisense com Wi-Fi" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Hisense 12k Wi-Fi</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-3">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.2</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_900722-MLB95353292809_102025-O.webp" alt="Ar condicionado portatil Electrolux SP12F 12000 BTUs" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Electrolux SP12F</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-4">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.0</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_688896-MLB106749713454_022026-O.webp" alt="Ar condicionado portatil inverter LG Dual Inverter 14000 BTUs" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">LG Dual Inverter 14k</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
-          <a class="glass flex flex-col items-center gap-2 p-4 text-center transition hover:-translate-y-1 hover:shadow-glow" href="#produto-5">
-            <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">8.8</span>
-            <div class="flex min-h-[88px] w-full items-center justify-center overflow-hidden rounded-xl bg-white p-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_665407-MLA99445985882_112025-O.webp" alt="Ar condicionado portatil Rheem 12000 BTUs frio" class="max-h-20 w-full object-contain" width="200" height="200">
-            </div>
-            <strong class="text-sm">Rheem 12k</strong>
-            <span class="mt-1 inline-flex h-9 w-full items-center justify-center rounded-xl bg-brand-yellow text-xs font-bold text-black shadow-glow">Ver preço</span>
-          </a>
+          </div>
+          <div class="glass rounded-2xl border border-white/10 p-5 md:p-6">
+            <img src="assets/produtos/RANKING/AR-CONDICIONADO-PORTATIL/capa.jpeg" alt="Ar-condicionado portátil — capa da categoria no ranking Tudo de Melhor" class="w-full h-auto object-cover rounded-xl" width="640" height="480" loading="eager">
+            <a class="mt-4 inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow px-6 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/2G7Vyn6">Ver categoria completa no Mercado Livre</a>
+          </div>
         </div>
-      </aside>
+      </header>
+      <nav class="mb-8 lg:hidden" aria-label="Índice da página (mobile)">
+        <label for="page-index-mobile" class="mb-2 block text-xs font-bold uppercase tracking-wider text-brand-dim">Ir para seção</label>
+        <select id="page-index-mobile" class="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white outline-none focus:border-brand-yellow/50">
+          <option value="">Selecione uma seção…</option>
+          <option value="#ranking-topo">Ranking</option>
+          <option value="#criterios">Critérios</option>
+          <option value="#produto-1">1. Philco</option>
+          <option value="#produto-2">2. Hisense</option>
+          <option value="#produto-3">3. Electrolux</option>
+          <option value="#produto-4">4. LG</option>
+          <option value="#produto-5">5. Rheem</option>
+          <option value="#como-escolher">Como escolher</option>
+          <option value="#tabela">Tabela</option>
+          <option value="#faq">FAQ</option>
+        </select>
+      </nav>
+    <section id="ranking-topo" class="py-10" aria-label="Os 5 melhores ar-condicionados portáteis">
+      <div class="w-full">
+        <p class="mb-2 text-center text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Ranking 2026</p>
+        <h2 class="mb-8 text-center text-2xl font-extrabold text-white md:text-3xl">Os 5 melhores ar-condicionados portáteis</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
 
-      <section class="mb-10" id="criterios">
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-1">
+            <span id="analise-1" class="sr-only">Análise Portátil PAC10FN 10.000 BTUs Frio</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 1">1</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_657688-MLA108106617219_032026-O.webp" alt="Ar condicionado portatil philco PAC10FN 10000 BTUs frio" class="max-h-44 w-full object-contain" width="400" height="400">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">PHILCO</span>
+              <h2 class="text-lg font-bold text-white">Portátil PAC10FN 10.000 BTUs Frio</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quarto ou escritório pequeno: 10.000 BTUs sem obra.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Melhor custo-benefício portátil com marca Philco e rodízios.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Aluguel ou imóvel onde split de parede não é opção.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">96</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Desconto agressivo no rastreio</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Marca Philco fácil de achar</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">10.000 BTUs para quarto/escritório</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 2.464 (de ~R$ 3.999)</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/2BeNZSK">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="philco-pac10fn-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-2">
+            <span id="analise-2" class="sr-only">Análise Portátil Wi-Fi 12.000 BTUs</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 2">2</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_711674-MLA99585997938_122025-O.webp" alt="Ar condicionado portatil 12000 btus Hisense Wi-Fi" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">HISENSE</span>
+              <h2 class="text-lg font-bold text-white">Portátil Wi-Fi 12.000 BTUs</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Sala média com 12.000 BTUs e controle pelo app Wi-Fi.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Melhor ticket para capacidade 12k com conectividade.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem aceita ruído de portátil em troca de mobilidade.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">94</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">12.000 BTUs com Wi-Fi</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Preço agressivo no rastreio</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Boa praticidade no dia a dia</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 2.076 (de ~R$ 4.201)</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/1PnrSP3">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="hisense-portatil-12000-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-3">
+            <span id="analise-3" class="sr-only">Análise Portátil SP12F 12.000 BTUs</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 3">3</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_900722-MLB95353292809_102025-O.webp" alt="Ar condicionado portatil Electrolux SP12F 12.000 BTUs branco 220V" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">ELECTROLUX</span>
+              <h2 class="text-lg font-bold text-white">Portátil SP12F 12.000 BTUs</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>12.000 BTUs frio 220V com marca Electrolux reconhecida.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Umidade alta: ventilação e desumidificação no mesmo aparelho.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem paga mais pela marca e assistência local.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">92</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">12.000 BTUs frio Electrolux</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">220V explícito no rastreio</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Marca consolidada</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 3.399</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/2CSb4UV">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="electrolux-sp12f-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-4">
+            <span id="analise-4" class="sr-only">Análise Dual Inverter AI Portátil 14.000 BTUs 127V</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 4">4</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_688896-MLB106749713454_022026-O.webp" alt="Ar condicionado portatil inverter LG Dual Inverter AI 14000 BTUs 127V" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">LG</span>
+              <h2 class="text-lg font-bold text-white">Dual Inverter AI Portátil 14.000 BTUs 127V</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Cômodos maiores: único inverter portátil com 14.000 BTUs.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Ticket premium para máximo resfriamento sem obra.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Rede 127V confirmada e tubo de exaustão instalado.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">90</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Dual Inverter / inverter</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">14.000 BTUs de capacidade</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Marca LG Dual Inverter</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 5.654</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/1ugV9fm">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="lg-dual-inverter-portatil-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow" id="produto-5">
+            <span id="analise-5" class="sr-only">Análise Portátil 12.000 BTUs Frio</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 5">5</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_665407-MLA99445985882_112025-O.webp" alt="Ar condicionado portatil Rheem 12000 BTUs frio" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">RHEEM</span>
+              <h2 class="text-lg font-bold text-white">Portátil 12.000 BTUs Frio</h2>
+            </div>
+                        <div class="mt-3 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>12.000 BTUs com preço intermediário frente ao Electrolux.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Economia sem abrir mão da capacidade de sala média.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Mesmas regras de portátil: tubo, dreno e ruído esperados.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">88</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">12.000 BTUs com desconto</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Faixa intermediária de preço</span>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">R$ 2.699 (de ~R$ 3.399)</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="https://meli.la/2R67iGx">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="rheem-portatil-12000-vale-a-pena.html">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+<section class="mb-10" id="criterios">
         <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Como escolhemos os <span class="text-brand-yellow">melhores modelos</span></h2>
         <div class="glass grid grid-cols-1 gap-4 p-6 md:grid-cols-3">
           <div>
@@ -287,217 +461,11 @@
             <p class="text-sm text-brand-muted">Nível de ruído típico de portátil, ticket do dia e recursos (Wi-Fi, timer, modo dormir) no anúncio.</p>
           </div>
         </div>
-      </section>
-
-      <article class="glass mb-6 p-5 md:p-6" id="produto-1">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.6</span>
-          <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#1 · Philco</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_657688-MLA108106617219_032026-O.webp" alt="Ar condicionado portatil philco PAC10FN 10000 BTUs frio" class="max-h-[200px] w-full object-contain" width="440" height="440">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">1. Philco Portátil PAC10FN 10.000 BTUs Frio</h2>
-            <p class="mb-3 text-sm text-brand-dim">Philco · a partir de R$ 2.464 (de ~R$ 3.999)</p>
-            <p class="mb-4 text-brand-muted">
-              O ar-condicionado portátil Philco abre o ranking pelo pacote preço + marca: 10.000 BTUs frio, mobilidade com rodízios e controle remoto no uso diário.
-              É a escolha de custo-benefício quando o cômodo é menor e você quer resfriar sem obra. Confira tensão e kit de tubo no anúncio.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/2BeNZSK">Ver no Mercado Livre</a>
-              <a href="philco-pac10fn-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do Philco PAC10FN →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Desconto agressivo no rastreio</li>
-              <li>Marca Philco fácil de achar</li>
-              <li>10.000 BTUs para quarto/escritório</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Ruído típico de portátil</li>
-              <li>Exige tubo na janela e dreno</li>
-              <li>Não rivaliza split silencioso</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass mb-6 p-5 md:p-6" id="produto-2">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.4</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">#2 · 12.000 BTUs Wi-Fi</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_711674-MLA99585997938_122025-O.webp" alt="Ar condicionado portatil 12000 btus Hisense Wi-Fi" class="max-h-[200px] w-full object-contain" width="440" height="440" loading="lazy">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">2. Hisense Portátil Wi-Fi 12.000 BTUs</h2>
-            <p class="mb-3 text-sm text-brand-dim">Hisense · a partir de R$ 2.076 (de ~R$ 4.201)</p>
-            <p class="mb-4 text-brand-muted">
-              Melhor ticket desta lista para capacidade de 12.000 BTUs com conectividade Wi-Fi. Ideal para quem quer ar frio e app no celular, com resfriamento para salas médias.
-              Ainda precisa de tubo e aceita um nível de ruído maior que parede.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/1PnrSP3">Ver no Mercado Livre</a>
-              <a href="hisense-portatil-12000-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do Hisense 12k Wi-Fi →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>12.000 BTUs com Wi-Fi</li>
-              <li>Preço agressivo no rastreio</li>
-              <li>Boa praticidade no dia a dia</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Ruído e exaustão obrigatórios</li>
-              <li>App depende de Wi-Fi estável</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass mb-6 p-5 md:p-6" id="produto-3">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.2</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">#3 · Electrolux 12k</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_900722-MLB95353292809_102025-O.webp" alt="Ar condicionado portatil Electrolux SP12F 12.000 BTUs branco 220V" class="max-h-[200px] w-full object-contain" width="440" height="440" loading="lazy">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">3. Electrolux Portátil SP12F 12.000 BTUs</h2>
-            <p class="mb-3 text-sm text-brand-dim">Electrolux · a partir de R$ 3.399 · 220V</p>
-            <p class="mb-4 text-brand-muted">
-              Modelo portátil Electrolux com 12.000 BTUs frio e rede 220V. Marca conhecida, ventilação e desumidificação úteis quando a umidade sobe.
-              Custa mais que o Hisense equivalente — pague pela marca se assistência local importar.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/2CSb4UV">Ver no Mercado Livre</a>
-              <a href="electrolux-sp12f-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do Electrolux SP12F →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>12.000 BTUs frio Electrolux</li>
-              <li>220V explícito no rastreio</li>
-              <li>Marca consolidada</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Ticket acima do Hisense 12k</li>
-              <li>Tubo e condensado no dia a dia</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass mb-6 p-5 md:p-6" id="produto-4">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.0</span>
-          <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">#4 · LG Dual Inverter</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_688896-MLB106749713454_022026-O.webp" alt="Ar condicionado portatil inverter LG Dual Inverter AI 14000 BTUs 127V" class="max-h-[200px] w-full object-contain" width="440" height="440" loading="lazy">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">4. LG Dual Inverter AI Portátil 14.000 BTUs 127V</h2>
-            <p class="mb-3 text-sm text-brand-dim">LG · a partir de R$ 5.654 · 127V</p>
-            <p class="mb-4 text-brand-muted">
-              O ar-condicionado portátil inverter da lista: LG Dual Inverter com tecnologia inverter e 14.000 BTUs para cômodos maiores.
-              Ticket premium; confirme 127V na rede. Ainda exige tubo — não é milagre sem exaustão.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/1ugV9fm">Ver no Mercado Livre</a>
-              <a href="lg-dual-inverter-portatil-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do LG Dual Inverter 14k →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Dual Inverter / inverter</li>
-              <li>14.000 BTUs de capacidade</li>
-              <li>Marca LG Dual Inverter</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Preço bem mais alto</li>
-              <li>Só 127V neste SKU</li>
-              <li>Ainda precisa de tubo</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="glass mb-10 p-5 md:p-6" id="produto-5">
-        <div class="mb-4 flex flex-wrap items-center gap-3">
-          <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">8.8</span>
-          <span class="rounded-md bg-brand-orange px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow-orange">#5 · Rheem 12k</span>
-        </div>
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-[220px_1fr]">
-          <div class="flex min-h-[180px] items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white p-4">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_665407-MLA99445985882_112025-O.webp" alt="Ar condicionado portatil Rheem 12000 BTUs frio" class="max-h-[200px] w-full object-contain" width="440" height="440" loading="lazy">
-          </div>
-          <div>
-            <h2 class="mb-2 text-xl font-bold md:text-2xl">5. Rheem Portátil 12.000 BTUs Frio</h2>
-            <p class="mb-3 text-sm text-brand-dim">Rheem · a partir de R$ 2.699 (de ~R$ 3.399)</p>
-            <p class="mb-4 text-brand-muted">
-              Fecha a lista com 12.000 BTUs e preço intermediário. Menos citadas que Philco ou LG no varejo BR, mas útil para economizar frente ao Electrolux no mesmo porte.
-              Mesmas regras: tubo, dreno e ruído.
-            </p>
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="https://meli.la/2R67iGx">Ver no Mercado Livre</a>
-              <a href="rheem-portatil-12000-vale-a-pena.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ler análise completa do Rheem 12k →</a>
-            </div>
-          </div>
-        </div>
-        <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4">
-            <h4 class="mb-2 font-bold text-emerald-300">Prós</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>12.000 BTUs com desconto</li>
-              <li>Faixa intermediária de preço</li>
-            </ul>
-          </div>
-          <div class="rounded-xl border border-red-400/20 bg-red-400/10 p-4">
-            <h4 class="mb-2 font-bold text-red-300">Contras</h4>
-            <ul class="list-disc space-y-1 pl-5 text-sm text-brand-muted">
-              <li>Marca menos popular no BR</li>
-              <li>Limitações típicas de portátil</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+      </section>
     </div>
 
     <section id="como-escolher" class="px-4 py-12">
-      <div class="mx-auto max-w-6xl">
+      <div class="w-full">
         <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Como escolher o melhor ar-condicionado portátil?</h2>
         <div class="glass space-y-4 p-6 text-brand-muted">
           <p>
@@ -517,7 +485,7 @@
     </section>
 
     <section id="tabela" class="px-4 pb-12">
-      <div class="mx-auto max-w-6xl">
+      <div class="w-full">
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Tabela comparativa — portáteis rastreados</h2>
         <div class="glass overflow-x-auto p-2 md:p-4">
           <table class="w-full min-w-[720px] text-left text-sm">
@@ -544,7 +512,7 @@
     </section>
 
     <section id="faq" class="px-4 pb-16">
-      <div class="mx-auto max-w-6xl">
+      <div class="w-full">
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas <span class="text-brand-yellow">frequentes</span></h2>
         <div class="space-y-3">
           <details class="glass p-5" open>
@@ -566,6 +534,8 @@
         </div>
       </div>
     </section>
+        </div>
+    </div>
   </main>
 
   <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
@@ -589,6 +559,7 @@
         <h4 class="mb-3 text-sm font-bold">Categorias</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
           <a href="melhores-marcas-de-ar-condicionado-2026.html" class="hover:text-brand-yellow">Ar-condicionado split</a>
+          <a href="melhores-bicicletas-eletricas.html" class="hover:text-brand-yellow">Bicicletas Elétricas</a>
           <a href="melhores-ar-condicionado-portatil.html" class="hover:text-brand-yellow">Portátil</a>
           <a href="melhores-purificadores-de-agua-2026.html" class="hover:text-brand-yellow">Purificadores</a>
         </div>
@@ -615,6 +586,28 @@
       const open = mobile.classList.toggle('hidden') === false;
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-  </script>
+  
+    document.querySelectorAll('.copy-page-link').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const url = btn.dataset.url || window.location.href;
+        try {
+          await navigator.clipboard.writeText(url);
+        } catch {
+          const input = document.createElement('input');
+          input.value = url;
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand('copy');
+          input.remove();
+        }
+      });
+    });
+    document.getElementById('page-index-mobile')?.addEventListener('change', (e) => {
+      const value = e.target.value;
+      if (value) {
+        location.href = value;
+        e.target.value = '';
+      }
+    });  </script>
 </body>
 </html>

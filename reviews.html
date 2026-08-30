@@ -114,6 +114,7 @@
       <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
         <a href="index.html#categorias" class="transition hover:text-white">Categorias</a>
         <a href="categorias.html" class="transition hover:text-white">Rankings</a>
+
         <a href="reviews.html" class="font-semibold text-white">Reviews</a>
         <a href="index.html#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
       </nav>
@@ -135,6 +136,7 @@
       <nav class="flex flex-col gap-1 text-sm">
         <a href="index.html#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Categorias</a>
         <a href="categorias.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
+
         <a href="reviews.html" class="rounded-lg px-3 py-3 font-semibold text-white hover:bg-white/5">Reviews</a>
         <a href="index.html#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
       </nav>
@@ -173,6 +175,7 @@
             <nav id="category-filter" class="flex gap-4 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:flex-col lg:gap-1 lg:overflow-visible lg:pb-0" aria-label="Categorias">
               <a href="#todos" data-filter="todos" class="filter-link whitespace-nowrap rounded-full border border-brand-yellow/40 bg-brand-yellow/10 px-4 py-2 text-sm font-bold text-brand-yellow lg:w-full lg:rounded-xl">Todos</a>
               <a href="#casa-e-sono" data-filter="casa-e-sono" class="filter-link whitespace-nowrap rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-brand-muted transition hover:border-white/25 hover:text-white lg:w-full lg:rounded-xl">Casa e Sono</a>
+              <a href="#mobilidade" data-filter="mobilidade" class="filter-link whitespace-nowrap rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-brand-muted transition hover:border-white/25 hover:text-white lg:w-full lg:rounded-xl">Mobilidade</a>
               <a href="#eletrodomesticos" data-filter="eletrodomesticos" class="filter-link whitespace-nowrap rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-brand-muted transition hover:border-white/25 hover:text-white lg:w-full lg:rounded-xl">Eletrodomésticos</a>
               <a href="#eletronicos" data-filter="eletronicos" class="filter-link whitespace-nowrap rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-brand-muted transition hover:border-white/25 hover:text-white lg:w-full lg:rounded-xl">Eletrônicos</a>
               <a href="#pets" data-filter="pets" class="filter-link whitespace-nowrap rounded-full border border-white/10 px-4 py-2 text-sm font-medium text-brand-muted transition hover:border-white/25 hover:text-white lg:w-full lg:rounded-xl">Pets</a>
@@ -183,7 +186,10 @@
         <section aria-label="Vitrine de reviews">
           <div class="mb-6 flex flex-wrap items-end justify-between gap-3">
             <h2 class="text-2xl font-extrabold md:text-3xl">Reviews em <span class="text-brand-yellow">destaque</span></h2>
-            <a href="qual-e-o-melhor-travesseiro-para-dormir.html" class="text-sm font-semibold text-brand-yellow hover:underline">Ver ranking de travesseiros →</a>
+            <div class="flex flex-wrap gap-4 text-sm font-semibold">
+              <a href="qual-e-o-melhor-travesseiro-para-dormir.html" class="text-brand-yellow hover:underline">Ranking de travesseiros →</a>
+              <a href="melhores-bicicletas-eletricas.html" class="text-brand-yellow hover:underline">Ranking de bicicletas →</a>
+            </div>
           </div>
 
           <div id="reviews-grid" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -264,6 +270,146 @@
             <p class="mb-6 flex-1 text-sm text-brand-muted">Vale a pena para testar altura? Kit 2 lavável e barato, com enchimento de fibra que você ajusta na mão.</p>
             <a href="travesseiro-regulavel-lavavel-vale-a-pena.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Análise Completa</a>
           </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">9.7</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#1 · Dobrável</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_822384-MLB109485329446_042026-O.webp" alt="Oimotoo S6 bicicleta elétrica dobrável 450W" class="max-h-full w-full object-contain" width="240" height="240">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Oimotoo S6 Dobrável 450W</h3>
+            <div class="mb-6 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Commute urbano dobrável: cabe no elevador e porta-malas com bateria 48V removível.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Melhor custo-benefício dobrável da lista para orçamento até R$ 2.500.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Trajetos planos de até 35 km sem exigir potência extrema em subidas.</span></li>
+              </ul>
+            </div>
+            <a href="review-oimotoo-s6.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+          </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">9.4</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#2 · Aro 26</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_809321-MLA111871083304_062026-O.webp" alt="Xroymexroy UCITYS bicicleta elétrica 750W aro 26" class="max-h-full w-full object-contain" width="240" height="240" loading="lazy">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Xroymexroy UCITYS 750W</h3>
+            <div class="mb-6 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Deslocamento diário de 15–25 km com folga em rampas moderadas.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem prefere visual de bike clássica aro 26 em vez de scooter.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Equilíbrio entre motor 750W e preço intermediário.</span></li>
+              </ul>
+            </div>
+            <a href="review-xroymexroy-ucitys.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+          </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">9.3</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#3 · Fat tire</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_801018-MLA115363054279_072026-O.webp" alt="Honeywhale S6-S bicicleta elétrica dobrável 750W fat tire" class="max-h-full w-full object-contain" width="240" height="240" loading="lazy">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Honeywhale S6-S 750W</h3>
+            <div class="mb-6 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Calçadas irregulares e vias com buracos: fat tire + motor 750W.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Uso urbano com carga até 125 kg e cesto para compras.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer robustez dobrável com autonomia de 40 km.</span></li>
+              </ul>
+            </div>
+            <a href="review-honeywhale-s6-s.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+          </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">9.1</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#4 · Entrada</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_708869-MLB97636357574_112025-O.webp" alt="Bicicleta elétrica dobrável 400W 48V 10Ah suspensão urbana" class="max-h-full w-full object-contain" width="240" height="240" loading="lazy">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Bike Dobrável 400W 48V</h3>
+            <div class="mb-6 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Primeira bike elétrica: entrada honesta com 48V 10Ah e suspensão.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Apartamento pequeno: formato compacto e dobrável para guardar.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Trajetos planos de até 20 km sem subidas íngremes.</span></li>
+              </ul>
+            </div>
+            <a href="review-bike-dobravel-400w.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+          </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">8.9</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#5 · Potência</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_872353-MLB115691776769_082026-O.webp" alt="Bike elétrica V9 Max 1000W freio hidráulico" class="max-h-full w-full object-contain" width="240" height="240" loading="lazy">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">V9 Max 1000W Street Go</h3>
+            <div class="mb-6 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Substituir carro ou moto em trajetos longos com subidas.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Exige frenagem confiável: freio hidráulico dianteiro e traseiro.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Prioriza potência (1000W) e autonomia de 48 km.</span></li>
+              </ul>
+            </div>
+            <a href="review-v9-max.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+          </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">8.8</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#6 · Urbana</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_833188-MLB114054554339_072026-O.webp" alt="Bicicleta elétrica Tomate 350W aro 26 pedal assistido" class="max-h-full w-full object-contain" width="240" height="240" loading="lazy">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Tomate 350W Aro 26</h3>
+            <div class="mb-6 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Ciclovias e vias planas com visual discreto de bicicleta convencional.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Pedal assistido para quem não quer parecer scooter elétrico.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Conforto urbano com suspensão dupla aro 26.</span></li>
+              </ul>
+            </div>
+            <a href="review-tomate-350w.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+          </article>
+
+          <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
+            <div class="mb-4 flex items-center justify-between gap-3">
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">8.6</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-dim">#7 · Utilitária</span>
+            </div>
+            <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-white p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_898691-MLB113402906913_062026-O.webp" alt="Nado K3 bicicleta elétrica 750W aro 20 bateria removível" class="max-h-full w-full object-contain" width="240" height="240" loading="lazy">
+            </div>
+            <h3 class="mb-2 text-xl font-bold">Nado K3 750W</h3>
+            <div class="mb-6 flex-1">
+              <div class="flex items-center gap-2 mb-3"><span class="text-blue-500">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Entregas leves e commute multimodal em corredores apertados.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Bateria de lítio 48V removível para carregar no destino.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Aro 20 ágil com motor 750W para manobras urbanas.</span></li>
+              </ul>
+            </div>
+            <a href="review-nado-k3.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+          </article>
           </div>
 
           <p id="filter-empty" class="mt-8 hidden text-sm text-brand-dim">Nenhuma análise nesta categoria ainda. Volte em breve.</p>
@@ -293,6 +439,7 @@
       <div>
         <h4 class="mb-3 text-sm font-bold">Categorias</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
+          <a href="melhores-bicicletas-eletricas.html" class="hover:text-brand-yellow">Bicicletas Elétricas</a>
           <a href="index.html#categorias" class="hover:text-brand-yellow">Eletrônicos</a>
           <a href="qual-e-o-melhor-travesseiro-para-dormir.html" class="hover:text-brand-yellow">Casa e Sono</a>
           <a href="index.html#categorias" class="hover:text-brand-yellow">Pets</a>
