@@ -12,7 +12,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Tudo de Melhor — rankings e reviews para tomar decisões inteligentes. Critérios rigorosos, análises detalhadas e ofertas no Mercado Livre e Amazon.">
+  <meta name="description" content="Tudo de Melhor — rankings e reviews de bicicletas elétricas, ar-condicionado, travesseiros e purificadores. Análises reais com nota editorial e ofertas no Mercado Livre.">
   <title>Tudo de Melhor | Rankings e Reviews de Produtos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,14 +113,10 @@
       </nav>
 
       <div class="hidden items-center gap-4 md:flex">
-        <label class="relative">
-          <span class="sr-only">Buscar</span>
-          <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="11" cy="11" r="7"></circle>
-            <path d="M20 20l-3.5-3.5"></path>
-          </svg>
-          <input type="search" placeholder="Buscar" class="h-11 w-44 rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim focus:border-brand-yellow/50 focus:bg-white/10 lg:w-52">
-        </label>
+        <a href="#home-search" class="inline-flex h-11 items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 text-sm font-medium text-brand-muted transition hover:border-brand-yellow/40 hover:text-white">
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          Buscar
+        </a>
         <a href="#login" class="inline-flex h-11 items-center rounded-full border border-white/25 px-6 text-sm font-semibold transition hover:bg-white/10">Login</a>
       </div>
     </div>
@@ -132,136 +128,141 @@
         <a href="reviews.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Reviews</a>
         <a href="#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
       </nav>
-      <label class="relative mt-3 block">
-        <span class="sr-only">Buscar</span>
-        <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <circle cx="11" cy="11" r="7"></circle>
-          <path d="M20 20l-3.5-3.5"></path>
-        </svg>
-        <input type="search" placeholder="Buscar" class="h-11 w-full rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim">
-      </label>
+      <a href="#home-search" class="mt-3 inline-flex h-11 w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 text-sm font-medium text-brand-muted">Buscar produtos</a>
       <a href="#login" class="mt-3 inline-flex h-11 w-full items-center justify-center rounded-full border border-white/25 font-semibold">Login</a>
     </div>
   </header>
 
   <main>
-    <!-- HERO EXATO DA IMAGEM DE REFERÊNCIA -->
-    <section class="relative flex min-h-[85vh] items-center overflow-hidden px-4 py-12 lg:py-0">
-      
-      <!-- Brilhos de fundo (Glows) -->
+    <!-- HERO + BUSCA -->
+    <section class="relative overflow-hidden px-4 py-10 lg:py-14">
       <div class="pointer-events-none absolute right-[10%] top-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-brand-orange/10 blur-[120px]"></div>
-      
-      <div class="relative mx-auto w-full max-w-7xl grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.4fr]">
-        
-        <!-- LADO ESQUERDO: Textos e Botão -->
-        <div class="flex flex-col items-start gap-6 z-10">
-          <h1 class="text-5xl font-black uppercase leading-[1.05] tracking-tight text-white drop-shadow-2xl md:text-6xl lg:text-7xl">
-            As Melhores<br>Escolhas
-          </h1>
-          <p class="max-w-md text-lg leading-relaxed text-brand-muted">
-            Encontre os melhores produtos com avaliações confiáveis e ofertas exclusivas.
-          </p>
-          <a href="#ofertas" class="mt-4 inline-flex h-14 items-center justify-center rounded-full bg-brand-yellow px-8 text-lg font-extrabold text-black shadow-glow transition hover:scale-105 hover:brightness-110">
-            VER OFERTAS →
-          </a>
-        </div>
 
-        <!-- LADO DIREITO: Painel de Vidro com os 3 Produtos -->
-        <div class="relative rounded-[2rem] border border-white/10 bg-[#1B2530]/40 p-6 backdrop-blur-2xl shadow-2xl lg:p-8">
-          
-          <!-- Aro de luz decorativo simulando a imagem -->
-          <div class="absolute -top-[1px] left-1/2 h-[1px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-brand-yellow to-transparent opacity-50"></div>
-          
-          <!-- Grid dos 3 Produtos -->
-          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            
-            <!-- CARD PRODUTO 1 -->
-            <article class="group flex flex-col items-center justify-between gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 transition hover:bg-white/10 hover:shadow-glow-lg">
-              <div class="flex w-full items-start justify-between">
-                <div class="flex flex-col items-center justify-center rounded-xl bg-brand-yellow p-2 text-black shadow-glow">
-                  <span class="text-xl leading-none">★</span>
-                  <span class="mt-1 text-center text-[9px] font-black uppercase leading-tight">Top<br>Choice</span>
-                </div>
-                <div class="text-right">
-                  <span class="block text-[10px] font-extrabold tracking-wide text-brand-yellow">5 ESTRELAS</span>
-                  <span class="text-xs text-brand-yellow">★★★★★</span>
-                  <span class="block mt-0.5 text-[9px] text-brand-dim">4.9/5 1.2k Avaliações</span>
-                </div>
-              </div>
-              
-              <!-- IMAGEM DO PRODUTO 1 AQUI (Fundo Transparente) -->
-              <div class="relative flex h-36 w-full items-center justify-center p-2">
-                <img src="assets/produtos/iphone/iPhone_15_transparent_background_202608141034.jpeg" alt="iPhone 15" class="h-full w-full object-contain drop-shadow-2xl transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=250&h=250'">
-              </div>
+      <div class="relative mx-auto w-full max-w-7xl">
+        <div class="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-10">
+          <div>
+            <h1 class="text-5xl font-black uppercase leading-[1.05] tracking-tight text-white drop-shadow-2xl md:text-6xl lg:text-7xl">
+              As Melhores<br>Escolhas
+            </h1>
+            <p class="mt-4 max-w-xl text-lg leading-relaxed text-brand-muted">
+              Rankings e análises reais dos produtos que testamos — do travesseiro NASA ao ar portátil Philco.
+            </p>
 
-              <div class="flex w-full flex-col items-center gap-2">
-                <span class="inline-flex w-full justify-center rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-bold text-white">R$ 5.499,00</span>
-                <h3 class="text-center text-sm font-bold text-white">iPhone 15</h3>
+            <form id="home-search" action="reviews.html" method="get" class="glass mt-8 flex scroll-mt-28 flex-col gap-3 p-4 shadow-glow md:flex-row md:items-center md:p-5" aria-label="Busca de produtos">
+              <div class="relative flex-1">
+                <svg class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="M20 20l-3.5-3.5"></path>
+                </svg>
+                <label class="sr-only" for="home-search-input">Buscar produtos analisados</label>
+                <input id="home-search-input" name="q" type="search" class="h-14 w-full rounded-xl border border-brand-border bg-brand-bg pl-12 pr-4 text-base text-white outline-none placeholder:text-brand-dim focus:border-brand-yellow" autocomplete="off">
               </div>
-            </article>
+              <button type="submit" class="inline-flex h-14 w-full shrink-0 items-center justify-center rounded-xl bg-brand-yellow px-8 text-base font-bold text-black shadow-glow transition hover:brightness-110 md:w-auto">Buscar</button>
+            </form>
 
-            <!-- CARD PRODUTO 2 -->
-            <article class="group flex flex-col items-center justify-between gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 transition hover:bg-white/10 hover:shadow-glow-lg">
-              <div class="flex w-full items-start justify-between">
-                <div class="flex flex-col items-center justify-center rounded-xl bg-brand-yellow p-2 text-black shadow-glow">
-                  <span class="text-xl leading-none">★</span>
-                  <span class="mt-1 text-center text-[9px] font-black uppercase leading-tight">Top<br>Choice</span>
-                </div>
-                <div class="text-right">
-                  <span class="block text-[10px] font-extrabold tracking-wide text-brand-yellow">5 ESTRELAS</span>
-                  <span class="text-xs text-brand-yellow">★★★★★</span>
-                  <span class="block mt-0.5 text-[9px] text-brand-dim">4.8/5 1.2k Avaliações</span>
-                </div>
-              </div>
-              
-              <!-- IMAGEM DO PRODUTO 2 AQUI (Fundo Transparente) -->
-              <div class="relative flex h-36 w-full items-center justify-center p-2">
-                <img src="assets/produtos/sony/Sony_XAV-AX5600_transparent_back._202608141021.jpeg" alt="Sony XAV-AX5600" class="h-full w-full object-contain drop-shadow-2xl transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1603513360481-28562d94e365?auto=format&fit=crop&q=80&w=250&h=250'">
-              </div>
+            <a href="#ofertas" class="mt-6 inline-flex h-14 items-center justify-center rounded-full bg-brand-yellow px-8 text-lg font-extrabold text-black shadow-glow transition hover:scale-105 hover:brightness-110">
+              VER OFERTAS →
+            </a>
+          </div>
 
-              <div class="flex w-full flex-col items-center gap-2">
-                <span class="inline-flex w-full justify-center rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-bold text-white">R$ 2.499,90</span>
-                <h3 class="text-center text-sm font-bold text-white">Sony XAV-AX5600</h3>
-              </div>
-            </article>
+          <div>
+            <img src="./assets/ui/capa-home/capa.png" alt="Tudo de Melhor — rankings e reviews de produtos" class="mb-6 w-full aspect-video rounded-2xl object-cover shadow-glow" width="1280" height="720" loading="eager">
 
-            <!-- CARD PRODUTO 3 -->
-            <article class="group flex flex-col items-center justify-between gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 transition hover:bg-white/10 hover:shadow-glow-lg">
-              <div class="flex w-full items-start justify-between">
-                <div class="flex flex-col items-center justify-center rounded-xl bg-brand-yellow p-2 text-black shadow-glow">
-                  <span class="text-xl leading-none">★</span>
-                  <span class="mt-1 text-center text-[9px] font-black uppercase leading-tight">Top<br>Choice</span>
-                </div>
-                <div class="text-right">
-                  <span class="block text-[10px] font-extrabold tracking-wide text-brand-yellow">5 ESTRELAS</span>
-                  <span class="text-xs text-brand-yellow">★★★★★</span>
-                  <span class="block mt-0.5 text-[9px] text-brand-dim">4.8/5 1.2k Avaliações</span>
-                </div>
-              </div>
-              
-              <!-- IMAGEM DO PRODUTO 3 AQUI (Fundo Transparente) -->
-              <div class="relative flex h-36 w-full items-center justify-center p-2">
-                <img src="assets/produtos/furadeira.png" alt="DeWalt DCD791" class="h-full w-full object-contain drop-shadow-2xl transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&q=80&w=250&h=250'">
-              </div>
-
-              <div class="flex w-full flex-col items-center gap-2">
-                <span class="inline-flex w-full justify-center rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-bold text-white">R$ 2.499,90</span>
-                <h3 class="text-center text-sm font-bold text-white">DeWalt DCD791</h3>
-              </div>
-            </article>
-
+            <p class="mb-4 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Por que confiar na Tudo de Melhor?</p>
+            <div class="grid grid-cols-2 gap-4">
+              <article class="glass p-4">
+                <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-gradient text-lg text-black shadow-glow" aria-hidden="true">🗄️</div>
+                <h2 class="mb-1 text-sm font-bold text-brand-yellow">Qualidade dos dados</h2>
+                <p class="text-xs leading-relaxed text-brand-muted">Informações coletadas em múltiplas bases para precisão editorial.</p>
+              </article>
+              <article class="glass p-4">
+                <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-gradient text-lg text-black shadow-glow" aria-hidden="true">📊</div>
+                <h2 class="mb-1 text-sm font-bold text-brand-yellow">Padronização</h2>
+                <p class="text-xs leading-relaxed text-brand-muted">Critérios uniformes em todos os rankings para comparar com facilidade.</p>
+              </article>
+              <article class="glass p-4">
+                <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-gradient text-lg text-black shadow-glow" aria-hidden="true">⏱️</div>
+                <h2 class="mb-1 text-sm font-bold text-brand-yellow">Atualização constante</h2>
+                <p class="text-xs leading-relaxed text-brand-muted">Preços e fichas revisados regularmente para manter relevância.</p>
+              </article>
+              <article class="glass p-4">
+                <div class="mb-2 flex h-10 w-10 items-center justify-center rounded-xl bg-brand-gradient text-lg text-black shadow-glow" aria-hidden="true">⚖️</div>
+                <h2 class="mb-1 text-sm font-bold text-brand-yellow">Imparcialidade</h2>
+                <p class="text-xs leading-relaxed text-brand-muted">Sem vínculo com marcas — o foco é a melhor escolha para você.</p>
+              </article>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SEARCH -->
-    <section class="px-4 pb-4" aria-label="Busca">
-      <form action="categorias.html" method="get" class="glass mx-auto flex max-w-6xl flex-col gap-3 p-4 md:flex-row md:items-center">
-        <label class="sr-only" for="home-search">Buscar</label>
-        <input id="home-search" name="q" type="search" placeholder="Busque por melhores travesseiros, airfryer, fone bluetooth..." class="h-12 w-full flex-1 rounded-xl border border-brand-border bg-brand-bg px-4 text-white outline-none placeholder:text-brand-dim focus:border-brand-yellow">
-        <button type="submit" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow px-6 font-bold text-black shadow-glow md:w-auto">Buscar</button>
-      </form>
+    <!-- DESTAQUES ANALISADOS -->
+    <section class="px-4 pb-4" aria-label="Produtos em destaque">
+      <div class="mx-auto max-w-7xl">
+        <div class="relative rounded-[2rem] border border-white/10 bg-[#1B2530]/40 p-6 backdrop-blur-2xl shadow-2xl lg:p-8">
+          <div class="absolute -top-[1px] left-1/2 h-[1px] w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-brand-yellow to-transparent opacity-50"></div>
+          <p class="mb-6 text-center text-sm font-semibold uppercase tracking-[0.14em] text-brand-yellow">Análises com nota editorial</p>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <article class="group flex flex-col items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 transition hover:bg-white/10 hover:shadow-glow-lg">
+                <div class="flex w-full items-start justify-between">
+                  <div class="flex flex-col items-center justify-center rounded-xl bg-brand-yellow p-2 text-black shadow-glow">
+                    <span class="text-xl leading-none">★</span>
+                    <span class="mt-1 text-center text-[9px] font-black uppercase leading-tight">Top<br>Choice</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="block text-[10px] font-extrabold tracking-wide text-brand-yellow">NOTA 9.7</span>
+                    <span class="text-xs text-brand-yellow">★★★★★</span>
+                    <span class="block mt-0.5 text-[9px] text-brand-dim">Mobilidade</span>
+                  </div>
+                </div>
+                <div class="relative flex h-36 w-full items-center justify-center rounded-xl bg-white p-2">
+                  <img src="https://http2.mlstatic.com/D_NQ_NP_822384-MLB109485329446_042026-O.webp" alt="Bicicleta elétrica Oimotoo S6 dobrável 450W" class="max-h-full w-full object-contain drop-shadow-2xl transition group-hover:scale-105" width="240" height="240">
+                </div>
+                <h3 class="text-center text-sm font-bold leading-snug text-white">Oimotoo S6 Dobrável</h3>
+                <a href="review-oimotoo-s6.html" class="inline-flex h-11 w-full items-center justify-center rounded-xl border border-brand-yellow bg-transparent text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Ver Análise</a>
+              </article>
+
+              <article class="group flex flex-col items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 transition hover:bg-white/10 hover:shadow-glow-lg">
+                <div class="flex w-full items-start justify-between">
+                  <div class="flex flex-col items-center justify-center rounded-xl bg-brand-yellow p-2 text-black shadow-glow">
+                    <span class="text-xl leading-none">★</span>
+                    <span class="mt-1 text-center text-[9px] font-black uppercase leading-tight">Top<br>Choice</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="block text-[10px] font-extrabold tracking-wide text-brand-yellow">NOTA 9.6</span>
+                    <span class="text-xs text-brand-yellow">★★★★★</span>
+                    <span class="block mt-0.5 text-[9px] text-brand-dim">Climatização</span>
+                  </div>
+                </div>
+                <div class="relative flex h-36 w-full items-center justify-center rounded-xl bg-white p-2">
+                  <img src="https://http2.mlstatic.com/D_NQ_NP_657688-MLA108106617219_032026-O.webp" alt="Ar-condicionado portátil Philco PAC10FN 10.000 BTUs" class="max-h-full w-full object-contain drop-shadow-2xl transition group-hover:scale-105" width="240" height="240" loading="lazy">
+                </div>
+                <h3 class="text-center text-sm font-bold leading-snug text-white">Philco PAC10FN Portátil</h3>
+                <a href="philco-pac10fn-vale-a-pena.html" class="inline-flex h-11 w-full items-center justify-center rounded-xl border border-brand-yellow bg-transparent text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Ver Análise</a>
+              </article>
+
+              <article class="group flex flex-col items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 transition hover:bg-white/10 hover:shadow-glow-lg">
+                <div class="flex w-full items-start justify-between">
+                  <div class="flex flex-col items-center justify-center rounded-xl bg-brand-yellow p-2 text-black shadow-glow">
+                    <span class="text-xl leading-none">★</span>
+                    <span class="mt-1 text-center text-[9px] font-black uppercase leading-tight">Top<br>Choice</span>
+                  </div>
+                  <div class="text-right">
+                    <span class="block text-[10px] font-extrabold tracking-wide text-brand-yellow">NOTA 9.6</span>
+                    <span class="text-xs text-brand-yellow">★★★★★</span>
+                    <span class="block mt-0.5 text-[9px] text-brand-dim">Casa e Sono</span>
+                  </div>
+                </div>
+                <div class="relative flex h-36 w-full items-center justify-center rounded-xl bg-white p-2">
+                  <img src="https://http2.mlstatic.com/D_NQ_NP_648102-MLB99698762080_122025-O.webp" alt="Travesseiro Hug NASA Alto viscoelástico 17 cm" class="max-h-full w-full object-contain drop-shadow-2xl transition group-hover:scale-105" width="240" height="240" loading="lazy">
+                </div>
+                <h3 class="text-center text-sm font-bold leading-snug text-white">Travesseiro Hug NASA Alto</h3>
+                <a href="travesseiro-hug-nasa-alto-vale-a-pena.html" class="inline-flex h-11 w-full items-center justify-center rounded-xl border border-brand-yellow bg-transparent text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Ver Análise</a>
+              </article>
+            </div>
+        </div>
+      </div>
     </section>
 
     <!-- CATEGORIES BENTO -->
@@ -369,43 +370,47 @@
     <div id="novidades" class="scroll-mt-28"></div>
     <section id="ofertas" class="px-4 py-12">
       <div class="mx-auto max-w-6xl">
-        <h2 class="mb-2 text-2xl font-extrabold md:text-3xl">Rankings em <span class="text-brand-yellow">destaque</span></h2>
-        <p class="mb-8 max-w-xl text-brand-dim">Seleções atualizadas com notas, prós e contras e links para Mercado Livre e Amazon.</p>
+        <h2 class="mb-2 text-2xl font-extrabold md:text-3xl">Melhores <span class="text-brand-yellow">Ofertas</span></h2>
+        <p class="mb-8 max-w-xl text-brand-dim">Modelos premium em destaque — ranking completo e link direto para o Mercado Livre.</p>
 
         <div class="grid grid-cols-1 gap-6">
-          <article class="glass p-5 md:p-6">
+          <article class="glass overflow-hidden p-5 md:p-6">
+            <div class="mb-4 flex flex-wrap items-center gap-3">
+              <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">8.9</span>
+              <span class="rounded-md bg-brand-orange px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow-orange">⚡ Premium</span>
+              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Mobilidade</span>
+            </div>
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-[200px_1fr]">
+              <div class="flex min-h-[160px] items-center justify-center rounded-xl bg-white p-4">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_872353-MLB115691776769_082026-O.webp" alt="Bicicleta elétrica V9 Max 1000W freio hidráulico" class="max-h-full w-full object-contain" width="200" height="200">
+              </div>
+              <div>
+                <h3 class="mb-2 text-xl font-bold">Bicicleta Elétrica V9 Max 1000W</h3>
+                <p class="mb-5 text-brand-muted">Potência bruta para subidas e trajetos longos. Freio hidráulico, motor 1000W e 48 km de autonomia para quem busca o máximo desempenho.</p>
+                <div class="flex flex-col gap-3 sm:flex-row">
+                  <a href="melhores-bicicletas-eletricas.html" class="inline-flex h-12 flex-1 items-center justify-center rounded-xl bg-brand-yellow font-bold text-black shadow-glow sm:flex-none sm:px-6">Ver ranking completo</a>
+                  <a href="https://meli.la/2VBFMUG" rel="sponsored noopener" target="_blank" class="inline-flex h-12 flex-1 items-center justify-center rounded-xl border border-white/35 font-semibold hover:bg-white/5 sm:flex-none sm:px-6">Ver no Mercado Livre</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="glass overflow-hidden p-5 md:p-6">
             <div class="mb-4 flex flex-wrap items-center gap-3">
               <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.4</span>
-              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">★ Top Choice</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Atualizado ago/2026</span>
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">📱 Smart</span>
+              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Climatização</span>
             </div>
-            <div class="grid grid-cols-1 gap-5 md:grid-cols-[180px_1fr]">
-              <div class="flex min-h-[140px] items-center justify-center rounded-xl border border-dashed border-brand-border bg-brand-elevated/80 text-sm text-brand-dim">Casa &amp; Sono</div>
-              <div>
-                <h3 class="mb-2 text-xl font-bold">Melhores Travesseiros de 2026 para Dormir Bem</h3>
-                <p class="mb-5 text-brand-muted">Descubra látex, NASA, cervicais e custo-benefício com análises detalhadas das melhores marcas do mercado.</p>
-                <div class="flex flex-col gap-3 sm:flex-row">
-                  <a href="qual-e-o-melhor-travesseiro-para-dormir.html" class="inline-flex h-12 flex-1 items-center justify-center rounded-xl bg-brand-yellow font-bold text-black shadow-glow sm:flex-none sm:px-6">Ver ranking completo</a>
-                  <a href="review.html" class="inline-flex h-12 flex-1 items-center justify-center rounded-xl border border-white/35 font-semibold hover:bg-white/5 sm:flex-none sm:px-6">Review: Duoflex Látex</a>
-                </div>
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-[200px_1fr]">
+              <div class="flex min-h-[160px] items-center justify-center rounded-xl bg-white p-4">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_711674-MLA99585997938_122025-O.webp" alt="Ar-condicionado portátil Hisense 12.000 BTUs Wi-Fi" class="max-h-full w-full object-contain" width="200" height="200" loading="lazy">
               </div>
-            </div>
-          </article>
-
-          <article class="glass p-5 md:p-6">
-            <div class="mb-4 flex flex-wrap items-center gap-3">
-              <span class="inline-flex min-w-[3rem] items-center justify-center rounded-lg bg-brand-gradient px-2 py-1 text-sm font-extrabold text-black shadow-glow">9.2</span>
-              <span class="rounded-md bg-brand-orange px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow-orange">Mais versátil</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Altura regulável</span>
-            </div>
-            <div class="grid grid-cols-1 gap-5 md:grid-cols-[180px_1fr]">
-              <div class="flex min-h-[140px] items-center justify-center rounded-xl border border-dashed border-brand-border bg-brand-elevated/80 text-sm text-brand-dim">Destaque</div>
               <div>
-                <h3 class="mb-2 text-xl font-bold">Duoflex Altura Regulável</h3>
-                <p class="mb-5 text-brand-muted">Ideal para quem dorme de lado e ainda está escolhendo a altura certa do travesseiro — avaliação criteriosa e imparcial.</p>
+                <h3 class="mb-2 text-xl font-bold">Hisense Portátil 12.000 BTUs Wi-Fi</h3>
+                <p class="mb-5 text-brand-muted">O ar-condicionado portátil inteligente. Capacidade de 12.000 BTUs, controle total pelo celular e refrigeração eficiente para salas e quartos maiores.</p>
                 <div class="flex flex-col gap-3 sm:flex-row">
-                  <a href="qual-e-o-melhor-travesseiro-para-dormir.html#produto-2" class="inline-flex h-12 flex-1 items-center justify-center rounded-xl bg-brand-yellow font-bold text-black shadow-glow sm:flex-none sm:px-6">Ver no ranking</a>
-                  <a href="qual-e-o-melhor-travesseiro-para-dormir.html#como-escolher" class="inline-flex h-12 flex-1 items-center justify-center rounded-xl border border-white/35 font-semibold hover:bg-white/5 sm:flex-none sm:px-6">Como escolher</a>
+                  <a href="melhores-ar-condicionado-portatil.html" class="inline-flex h-12 flex-1 items-center justify-center rounded-xl bg-brand-yellow font-bold text-black shadow-glow sm:flex-none sm:px-6">Ver ranking completo</a>
+                  <a href="https://meli.la/1PnrSP3" rel="sponsored noopener" target="_blank" class="inline-flex h-12 flex-1 items-center justify-center rounded-xl border border-white/35 font-semibold hover:bg-white/5 sm:flex-none sm:px-6">Ver no Mercado Livre</a>
                 </div>
               </div>
             </div>
@@ -414,81 +419,48 @@
       </div>
     </section>
 
-    <!-- VERSUS -->
-    <section id="versus" class="px-4 py-12">
+    <!-- MAIS OFERTAS E RANKINGS -->
+    <section id="mais-rankings" class="px-4 py-12">
       <div class="mx-auto max-w-6xl">
-        <h2 class="mb-2 text-2xl font-extrabold md:text-3xl">Comparativos <span class="text-brand-yellow">Versus</span></h2>
-        <p class="mb-8 max-w-xl text-brand-dim">Coloque opções lado a lado e veja os diferenciais antes de comprar.</p>
+        <h2 class="mb-2 text-2xl font-extrabold md:text-3xl">Mais Ofertas e <span class="text-brand-yellow">Rankings</span></h2>
+        <p class="mb-8 max-w-xl text-brand-dim">Explore outras categorias com análises completas e comparações atualizadas.</p>
 
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <article class="glass p-5">
-            <div class="mb-4 grid grid-cols-[1fr_auto_1fr] items-center gap-3">
-              <div class="text-center">
-                <div class="mb-2 flex min-h-[90px] items-center justify-center rounded-xl border border-dashed border-brand-border bg-brand-elevated text-xs text-brand-dim">Látex Natural</div>
-                <h3 class="text-sm font-bold">Duoflex Látex</h3>
-              </div>
-              <div class="flex h-11 w-11 items-center justify-center rounded-full bg-brand-yellow text-xs font-black text-black shadow-glow">VS</div>
-              <div class="text-center">
-                <div class="mb-2 flex min-h-[90px] items-center justify-center rounded-xl border border-dashed border-brand-border bg-brand-elevated text-xs text-brand-dim">Nasa Gelflex</div>
-                <h3 class="text-sm font-bold">Duoflex Nasa</h3>
-              </div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <a href="melhores-purificadores-de-agua-2026.html" class="glass group flex flex-col overflow-hidden transition hover:-translate-y-1 hover:shadow-glow">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/produtos/RANKING/PURIFICADOR-DE-AGUA/capa.jpeg" alt="Purificadores de água — ranking 2026" class="h-full w-full object-cover transition group-hover:scale-105" width="400" height="300" loading="lazy">
             </div>
-            <a href="qual-e-o-melhor-travesseiro-para-dormir.html" class="inline-flex h-11 w-full items-center justify-center rounded-xl border border-white/35 font-semibold hover:bg-white/5">Comparar no ranking</a>
-          </article>
-
-          <article class="glass p-5">
-            <div class="mb-4 grid grid-cols-[1fr_auto_1fr] items-center gap-3">
-              <div class="text-center">
-                <div class="mb-2 flex min-h-[90px] items-center justify-center rounded-xl border border-dashed border-brand-border bg-brand-elevated text-xs text-brand-dim">Cervical</div>
-                <h3 class="text-sm font-bold">Nasa Cervical</h3>
-              </div>
-              <div class="flex h-11 w-11 items-center justify-center rounded-full bg-brand-yellow text-xs font-black text-black shadow-glow">VS</div>
-              <div class="text-center">
-                <div class="mb-2 flex min-h-[90px] items-center justify-center rounded-xl border border-dashed border-brand-border bg-brand-elevated text-xs text-brand-dim">Fibrasca</div>
-                <h3 class="text-sm font-bold">Fibrasca Ortopédico</h3>
-              </div>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <span class="text-xs font-extrabold uppercase tracking-wider text-brand-yellow">Casa e Água</span>
+              <h3 class="text-lg font-bold">Purificadores de Água</h3>
+              <p class="flex-1 text-sm text-brand-dim">Compressor, gelada e natural — 6 modelos comparados.</p>
+              <span class="text-sm font-semibold text-brand-yellow group-hover:underline">Ver ranking →</span>
             </div>
-            <a href="qual-e-o-melhor-travesseiro-para-dormir.html#produto-4" class="inline-flex h-11 w-full items-center justify-center rounded-xl border border-white/35 font-semibold hover:bg-white/5">Ver diferenças</a>
-          </article>
-        </div>
-      </div>
-    </section>
+          </a>
 
-    <!-- TRUST -->
-    <section id="confianca" class="px-4 py-14">
-      <div class="mx-auto max-w-6xl">
-        <h2 class="mb-10 text-center text-2xl font-extrabold md:text-3xl">
-          Por que confiar na <span class="text-brand-yellow">Tudo de Melhor?</span>
-        </h2>
+          <a href="qual-e-o-melhor-travesseiro-para-dormir.html" class="glass group flex flex-col overflow-hidden transition hover:-translate-y-1 hover:shadow-glow">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/produtos/RANKING/TRAVESSEIRO/capa.jpeg" alt="Travesseiros para dormir — ranking 2026" class="h-full w-full object-cover transition group-hover:scale-105" width="400" height="300" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <span class="text-xs font-extrabold uppercase tracking-wider text-brand-yellow">Casa e Sono</span>
+              <h3 class="text-lg font-bold">Travesseiros para Dormir</h3>
+              <p class="flex-1 text-sm text-brand-dim">NASA, cervical, extra firme e custo-benefício.</p>
+              <span class="text-sm font-semibold text-brand-yellow group-hover:underline">Ver ranking →</span>
+            </div>
+          </a>
 
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
-          <article class="glass relative overflow-hidden p-6 text-center">
-            <span class="pointer-events-none absolute right-3 top-1 text-5xl font-extrabold text-white/[0.06]">01</span>
-            <div class="relative mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-gradient text-3xl text-black shadow-glow">🗄️</div>
-            <h3 class="relative mb-2 text-lg font-bold text-brand-yellow">Qualidade dos dados</h3>
-            <p class="relative text-sm text-brand-muted">Coletamos nossas informações em múltiplas bases de dados, de modo a apresentar informações precisas.</p>
-          </article>
-
-          <article class="glass relative overflow-hidden p-6 text-center">
-            <span class="pointer-events-none absolute right-3 top-1 text-5xl font-extrabold text-white/[0.06]">02</span>
-            <div class="relative mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-gradient text-3xl text-black shadow-glow">📊</div>
-            <h3 class="relative mb-2 text-lg font-bold text-brand-yellow">Padronização</h3>
-            <p class="relative text-sm text-brand-muted">Nós padronizamos todo o conteúdo apresentado, facilitando o seu processo de comparação e escolha.</p>
-          </article>
-
-          <article class="glass relative overflow-hidden p-6 text-center">
-            <span class="pointer-events-none absolute right-3 top-1 text-5xl font-extrabold text-white/[0.06]">03</span>
-            <div class="relative mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-gradient text-3xl text-black shadow-glow">⏱️</div>
-            <h3 class="relative mb-2 text-lg font-bold text-brand-yellow">Atualização constante</h3>
-            <p class="relative text-sm text-brand-muted">Nossos conteúdos passam por revisões e atualizações constantes, a fim de garantir sua relevância.</p>
-          </article>
-
-          <article class="glass relative overflow-hidden p-6 text-center">
-            <span class="pointer-events-none absolute right-3 top-1 text-5xl font-extrabold text-white/[0.06]">04</span>
-            <div class="relative mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-gradient text-3xl text-black shadow-glow">⚖️</div>
-            <h3 class="relative mb-2 text-lg font-bold text-brand-yellow">Imparcialidade</h3>
-            <p class="relative text-sm text-brand-muted">Não representamos nenhuma empresa, nosso foco é encontrar a melhor solução para você, sem viés.</p>
-          </article>
+          <a href="melhores-marcas-de-ar-condicionado-2026.html" class="glass group flex flex-col overflow-hidden transition hover:-translate-y-1 hover:shadow-glow">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/produtos/RANKING/AR-CONDICIONADO/capa.jpeg" alt="Ar-condicionado split — ranking 2026" class="h-full w-full object-cover transition group-hover:scale-105" width="400" height="300" loading="lazy">
+            </div>
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <span class="text-xs font-extrabold uppercase tracking-wider text-brand-yellow">Climatização</span>
+              <h3 class="text-lg font-bold">Ar-Condicionado Split</h3>
+              <p class="flex-1 text-sm text-brand-dim">Inverter 9k e 12k BTUs — Midea, TCL, Hisense e mais.</p>
+              <span class="text-sm font-semibold text-brand-yellow group-hover:underline">Ver ranking →</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -551,6 +523,57 @@
         toggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    (function typingPlaceholder() {
+      const input = document.getElementById('home-search-input');
+      if (!input) return;
+      const phrases = [
+        'bicicleta elétrica Oimotoo',
+        'ar portátil Philco PAC10FN',
+        'travesseiro NASA Hug',
+        'purificador de água IBBL',
+        'umidificador Midea 6L',
+        'ar-condicionado split Midea',
+      ];
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let deleting = false;
+
+      function tick() {
+        const current = phrases[phraseIndex];
+        if (!deleting) {
+          charIndex += 1;
+          input.placeholder = 'Busque por ' + current.slice(0, charIndex) + '...';
+          if (charIndex === current.length) {
+            deleting = true;
+            setTimeout(tick, 1800);
+            return;
+          }
+          setTimeout(tick, 55);
+        } else {
+          charIndex -= 1;
+          input.placeholder = 'Busque por ' + current.slice(0, charIndex) + '...';
+          if (charIndex === 0) {
+            deleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(tick, 400);
+            return;
+          }
+          setTimeout(tick, 30);
+        }
+      }
+
+      input.addEventListener('focus', () => { input.placeholder = 'Digite o produto ou categoria...'; });
+      input.addEventListener('blur', () => {
+        if (!input.value) {
+          charIndex = 0;
+          deleting = false;
+          tick();
+        }
+      });
+
+      tick();
+    })();
   </script>
 </body>
 </html>
