@@ -1,0 +1,151 @@
+# Cluster: [melhores bicicletas eletricas]
+
+## 1. URLs e Metadados
+- **URL Canônica:** `https://tudodemelhor.com.br/melhores-bicicletas-eletricas
+- **Meta Title:** [Deixe em branco para o Cursor gerar com foco na KW Primária]
+- **Meta Description:** [Deixe em branco para o Cursor gerar com foco na KW Primária]
+
+## 2. Estratégia de Palavras-Chave (Alta Recorrência no Google)
+*As palavras abaixo estão listadas em estrita ordem de prioridade para otimização.*
+- **Palavra-chave Primária (Foco Principal):** [melhores bicicletas eletricas​]
+- **Palavras-chave Adicionais (Secundárias / LSI):**
+  1. [Ex: bike eletrica]
+  2. [Ex: ar condicionado]
+  3. [Ex: bicicleta eletrica melhor custo beneficio]
+  4. [Ex: ]
+
+## 3. Estrutura do Ranking (Top 7)
+
+link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
+
+> **Nota (extração Firecrawl, ago/2026):** links `meli.la` redirecionam ao perfil de afiliado; a PDP completa do ML bloqueia scraping automatizado (503/verificação). URLs abaixo são fotos principais em alta (`-O.webp`) extraídas via Firecrawl Agent + perfil afiliado. Para ampliar a galeria (3–5 fotos), abra o anúncio no navegador logado e cole URLs adicionais da galeria nativa.
+
+1. Oimotoo S6 Bicicleta Elétrica Dobrável 450W (Nota: 9.7)
+   - Link Afiliado ML: https://meli.la/1eqMgcv
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_822384-MLB109485329446_042026-O.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_968967-MLB110402709073_042026-F-oimotoo-s6-bicicleta-eletrica-dobravel-450w35km40kmh.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_617187-MLB109485591698_042026-F-oimotoo-s6-bicicleta-eletrica-dobravel-450w35km40kmh.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_777218-MLB110353770253_042026-F-oimotoo-s6-bicicleta-eletrica-dobravel-450w35km40kmh.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_810098-MLB110353799831_042026-F-oimotoo-s6-bicicleta-eletrica-dobravel-450w35km40kmh.webp
+
+       alt: Oimotoo S6 dobrável 450W — melhor bike elétrica urbana vista principal
+   
+2. Xroymexroy UCITYS Aro 26 750W (Nota: 9.4)
+   - Link Afiliado ML: https://meli.la/1gT9Gkw
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_809321-MLA111871083304_062026-O.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_879966-MLA111871371378_062026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_943909-MLA112985467843_062026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_845353-MLA112985556923_062026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_600751-MLA112985675247_062026-F.webp
+     - url:
+     - url:
+
+       alt: Xroymexroy UCITYS 750W aro 26 — bicicleta elétrica com bateria removível
+    
+3. Honeywhale S6-S Bicicleta Elétrica 750W Dobrável (Nota: 9.3)
+   - Link Afiliado ML: https://meli.la/1MDt7cC
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_801018-MLA115363054279_072026-O.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_697454-MLA112602754069_062026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_752211-MLA88260511375_072025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_819640-MLA87922629388_072025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_881280-MLA88260511401_072025-F.webp
+     - url:
+       alt: Honeywhale S6-S 750W dobrável — bike elétrica fat tire vista principal
+    
+4. Bicicleta Elétrica 400W 48V 10Ah Scooter Dobrável (Nota: 9.1)
+   - Link Afiliado ML: https://meli.la/16hjFVz
+   - Link vídeo youtube: 
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_708869-MLB97636357574_112025-O.webp
+     - url:https://http2.mlstatic.com/D_NQ_NP_2X_796112-MLB98099441441_112025-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_635535-MLB98099123737_112025-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_840232-MLA105448315693_012026-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp
+     - url:
+       alt: Bike elétrica dobrável 400W 48V 10Ah — vista principal do anúncio
+5. Bicicleta Bike Elétrica V9 Max 1000W (Nota: 8.9)
+   - Link Afiliado ML: https://meli.la/2VBFMUG
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_872353-MLB115691776769_082026-O.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_778025-MLB108428875465_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp
+     - url:https://http2.mlstatic.com/D_NQ_NP_2X_769187-MLB107689205204_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_854622-MLB108427266093_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_749200-MLB108426020599_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp
+     - url:
+       alt: V9 Max 1000W — bike elétrica potente com freio hidráulico
+6. Bicicleta Elétrica Tomate 350W Aro 26 (Nota: 8.8)
+   - Link Afiliado ML: https://meli.la/17mcYdW
+   - Link vídeo youtube: 
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_833188-MLB114054554339_072026-O.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_928654-MLB112853848556_072026-F-bicicleta-eletrica-tomate-350w-aro-26-com-pedal-assistido.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_856363-MLB114055950139_072026-F-bicicleta-eletrica-tomate-350w-aro-26-com-pedal-assistido.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_676276-MLB114055950205_072026-F-bicicleta-eletrica-tomate-350w-aro-26-com-pedal-assistido.webp
+     - url:
+       alt: Tomate 350W aro 26 — bicicleta elétrica pedal assistido urbana
+7. Nado K3 Bicicleta Elétrica Scooter 750W (Nota: 8.6)
+   - Link Afiliado ML: https://meli.la/1GuHCbJ
+   - Link vídeo youtube: 
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_898691-MLB113402906913_062026-O.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_731087-MLB112252915962_062026-F-nado-k3-bicicleta-eletrica-scooter-750w-bike-aro20-litio-48v.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_607804-MLB113402198667_062026-F-nado-k3-bicicleta-eletrica-scooter-750w-bike-aro20-litio-48v.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_637772-MLB113402495135_062026-F-nado-k3-bicicleta-eletrica-scooter-750w-bike-aro20-litio-48v.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_674319-MLB113402495155_062026-F-nado-k3-bicicleta-eletrica-scooter-750w-bike-aro20-litio-48v.webp
+     - url:  https://http2.mlstatic.com/D_NQ_NP_2X_737509-MLB113402287857_062026-F-nado-k3-bicicleta-eletrica-scooter-750w-bike-aro20-litio-48v.webp
+       alt: Nado K3 750W aro 20 — scooter elétrico utilitário vista principal
+
+## 4. FAQ (Perguntas Frequentes)
+*Preencher com dúvidas reais do Google "As pessoas também perguntam"*
+- Pergunta 1: [qual a melhor bicicleta eletrica?]
+- Pergunta 2: [como carregar bicicleta eletrica​?]
+- Pergunta 3: [como montar bicicleta eletrica​?]
+- Pergunta 4: [como funciona a bicicleta eletrica​​?]
+
+## 5. Diretrizes de Geração e SEO (Regras de Ouro)
+- **NEURONwriter (MCP):** É obrigatório o uso do MCP do NEURONwriter para otimizar a redação. O conteúdo final deve atingir um **Score de 80+**, garantindo a inserção semântica da palavra-chave primária e das adicionais listadas na Seção 2.
+- **Meta Tags:** O Meta Title e a Meta Description devem ser gerados com foco agressivo na Palavra-chave Primária, otimizados para atrair o clique (alto CTR).
+- **SEO de Imagens:** Todas as tags `<img src="...">` geradas no HTML devem obrigatoriamente conter o atributo `alt` preenchido. O texto alternativo deve ser descritivo e incorporar as palavras-chave indicadas na Seção 2 de forma natural.
+- **Estrutura:** O código deve respeitar a estrutura de listagem, utilizando a classe `.glass` e o design system do `tudodemelhor.com.br`.
+- Uso do Firecrawl (Data Scraping): Acesse as URLs dos links de afiliado fornecidos na Seção 3 utilizando o Firecrawl. Extraia a ficha técnica real, as funcionalidades e leia os comentários dos compradores para formular os blocos de "Prós e Contras" e a "Análise Detalhada" com extrema precisão e veracidade.
+
+## 6. Galeria de imagens (`imagens_galeria`)
+
+Campo opcional em cada produto da Seção 3. As URLs aparecem como miniaturas (60×60 px) abaixo do botão "Comprar no Mercado Livre" nas páginas `review-*.html`.
+
+**Formato no contexto (por produto):**
+
+```yaml
+- imagens_galeria:
+  - url: https://http2.mlstatic.com/foto-principal.webp
+    alt: Descrição SEO da foto (obrigatório para acessibilidade)
+  - url: https://http2.mlstatic.com/foto-detalhe.webp
+    alt: Outro ângulo do produto
+```
+
+**Atalho (só URL):** se omitir `alt`, o gerador cria automaticamente "Foto N — Marca Modelo":
+
+```yaml
+- imagens_galeria:
+  - https://http2.mlstatic.com/foto-1.webp
+  - https://http2.mlstatic.com/foto-2.webp
+```
+
+**Lista vazia** (sem galeria na página):
+
+```yaml
+- imagens_galeria: []
+```
+
+**Como chega no HTML:** copie o array para o campo `galleryImages` do produto em `scripts/generate_bike_reviews_philco.mjs` e rode `node scripts/generate_bike_reviews_philco.mjs`. Exemplo:
+
+```javascript
+galleryImages: [
+  { url: 'https://http2.mlstatic.com/foto-1.webp', alt: 'Oimotoo S6 dobrável — vista lateral' },
+  'https://http2.mlstatic.com/foto-2.webp'
+],
+```
+
+Use URLs diretas de imagem (`.webp`, `.jpg`) do Mercado Livre ou assets locais (`assets/produtos/...`).
