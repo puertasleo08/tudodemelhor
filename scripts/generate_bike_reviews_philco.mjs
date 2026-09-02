@@ -313,7 +313,7 @@ function renderAltCard(slug) {
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
               <p class="text-xl font-bold text-white">${c.price}</p>
               <div class="mt-3 flex flex-col gap-2">
-                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" href="${c.mlLink}">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="${c.mlLink}">Comprar no Mercado Livre</a>
                 <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="${c.href}">Ver Análise Completa</a>
               </div>
             </div>
@@ -375,7 +375,7 @@ function renderStickyBar(p) {
         <strong class="block truncate text-base text-white sm:text-lg">${productLabel}</strong>
         <div class="text-base font-bold text-brand-yellow">Nota ${p.score} · a partir de ${p.priceDisplay}</div>
       </div>
-      <a class="inline-flex w-full items-center justify-center rounded-xl bg-yellow-400 px-6 py-3 text-lg font-bold text-black shadow-lg transition-all hover:bg-yellow-500 sm:w-auto" rel="sponsored noopener" target="_blank" href="${p.mlLink}">Comprar no Mercado Livre</a>
+      <a class="inline-flex w-full items-center justify-center rounded-xl bg-yellow-400 px-6 py-3 text-lg font-bold text-black shadow-lg transition-all hover:bg-yellow-500 sm:w-auto" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="${p.mlLink}">Comprar no Mercado Livre</a>
     </div>
   </div>`;
 }
@@ -1126,7 +1126,7 @@ function renderPhilcoPage(p) {
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">A partir de ${p.priceDisplay}</span>
           </div>
           <div class="flex flex-col gap-3 sm:flex-row">
-            <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="${p.mlLink}">Comprar no Mercado Livre</a>
+            <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="${p.mlLink}">Comprar no Mercado Livre</a>
           </div>
           ${renderGallery(p)}
         </div>
@@ -1199,7 +1199,7 @@ function renderPhilcoPage(p) {
               <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Link de oferta</span>
             </div>
             <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: ${p.brand} ${p.model}. Confira seller, frete, garantia e o preço do dia.</p>
-            <a class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" href="${p.mlLink}">Ir para o Mercado Livre</a>
+            <a class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="${p.mlLink}">Ir para o Mercado Livre</a>
           </article>
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
