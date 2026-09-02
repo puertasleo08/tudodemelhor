@@ -14,6 +14,7 @@ const RANK_TO_SLUG = {
   5: 'review-v9-max',
   6: 'review-tomate-350w',
   7: 'review-nado-k3',
+  8: 'review-xroymexroy-eb5',
 };
 
 function escapeHtmlAttr(value) {
@@ -61,14 +62,14 @@ function parseContextoGalleries(filePath) {
   const text = readFileSync(filePath, 'utf8');
   const result = {};
 
-  for (let rank = 1; rank <= 7; rank++) {
+  for (let rank = 1; rank <= 8; rank++) {
     const slug = RANK_TO_SLUG[rank];
     const blockStart = text.search(new RegExp(`^${rank}\\. `, 'm'));
     if (blockStart === -1) continue;
 
     const rest = text.slice(blockStart + 1);
     const blockEnd =
-      rank < 7
+      rank < 8
         ? rest.search(new RegExp(`^${rank + 1}\\. `, 'm'))
         : rest.search(/^## 4\./m);
     const block = blockEnd === -1 ? text.slice(blockStart) : text.slice(blockStart, blockStart + 1 + blockEnd);
@@ -244,6 +245,23 @@ const RANKING_CATALOG = {
     tags: ['Motor 750W', '48V Lítio', 'Aro 20', 'Bateria removível'],
     price: 'R$ 5.791',
     mlLink: 'https://meli.la/1GuHCbJ',
+  },
+  'review-xroymexroy-eb5': {
+    rank: 8,
+    href: 'review-xroymexroy-eb5.html',
+    brandTag: 'XROYMEXROY',
+    title: 'EB5 750W',
+    image: 'https://http2.mlstatic.com/D_NQ_NP_932379-MLA102587125925_122025-O.webp',
+    imageAlt: 'Xroymexroy EB5 750W fat tire aro 20 — bicicleta elétrica com bateria 10.4Ah',
+    paraQuem: [
+      'Conforto superior do banco para trajetos diários mais longos sem fadiga.',
+      'Robustez do pneu Fat Tire em terrenos irregulares, buracos e paralelepípedo.',
+      'Motor 750W eficiente em ladeiras, mesmo com bateria de 10.4Ah.',
+    ],
+    scoreDisplay: '92',
+    tags: ['Motor 750W', 'Bateria 10.4Ah', 'Fat Tire', 'Velocidade 32km/h'],
+    price: 'R$ 5.542',
+    mlLink: 'https://meli.la/1y5KwDP',
   },
 };
 
@@ -921,6 +939,91 @@ const lote3Products = [
   }
 ];
 
+const strategicProducts = [
+  {
+    slug: 'review-xroymexroy-eb5',
+    rank: 8,
+    brand: 'Xroymexroy',
+    model: 'EB5 750W',
+    modelShort: 'EB5',
+    breadcrumbName: 'Xroymexroy EB5',
+    videoUrl: '',
+    videoFile: 'videos/Bicicleta-Eletrica-Xroymexroy-EB5-750W-Bateria- 10.4Ah.mp4',
+    heroCaption: 'EB5 · 750W · fat tire · aro 20 · bateria 10.4Ah',
+    badge: 'Fat Bike Custo-Benefício',
+    h1: 'Xroymexroy EB5 vale a pena? Análise da bike elétrica 750W fat tire 10.4Ah',
+    title: 'Review Xroymexroy EB5 750W Vale a Pena? Bike Elétrica Fat Tire | Tudo de Melhor',
+    description: 'Xroymexroy EB5 vale a pena? Review da bike elétrica 750W fat tire aro 20 com bateria 10.4Ah, velocidade 32 km/h, nota 9.2 e preço R$ 5.542 no Mercado Livre.',
+    score: '9.2',
+    priceDisplay: 'R$ 5.542',
+    priceSchema: '5542.00',
+    mlLink: 'https://meli.la/1y5KwDP',
+    image: 'https://http2.mlstatic.com/D_NQ_NP_932379-MLA102587125925_122025-O.webp',
+    imageAlt: 'Xroymexroy EB5 750W fat tire aro 20 — bicicleta elétrica com bateria 10.4Ah',
+    galleryImages: [
+      {
+        url: 'https://http2.mlstatic.com/D_NQ_NP_932379-MLA102587125925_122025-O.webp',
+        alt: 'Xroymexroy EB5 750W fat tire aro 20 — bicicleta elétrica com bateria 10.4Ah',
+      },
+    ],
+    heroIntro: 'A <strong>Xroymexroy EB5 750W</strong> é a fat bike de melhor custo-benefício do ranking: motor <strong>750W</strong>, pneus <strong>Fat Tire</strong> para terreno irregular, banco confortável e bateria <strong>10.4Ah</strong> — por cerca de <strong>R$ 5.542</strong> no Mercado Livre. Velocidade assistida de até <strong>32 km/h</strong>.',
+    verdictText: 'A EB5 vale a pena quando você quer conforto de fat tire e torque de 750W sem pagar o premium de marcas top. O banco generoso e os pneus largos fazem diferença real em cidade com asfalto ruim.',
+    paraQuem: 'Quem prioriza conforto no banco, estabilidade em piso irregular e motor forte em ladeiras com bateria 10.4Ah.',
+    diferencial: 'Fat bike 750W com melhor custo-benefício do segmento',
+    promessa: 'Pneu largo, banco confortável e 750W para subir ladeiras — sem abrir mão do preço competitivo.',
+    pros: [
+      'Banco largo e confortável para trajetos diários prolongados',
+      'Pneus Fat Tire absorvem buracos, paralelepípedo e terrenos irregulares',
+      'Motor 750W com torque eficiente em ladeiras moderadas',
+      'Velocidade assistida de até 32 km/h',
+      'Aro 20 ágil com estabilidade de pneu largo',
+      'Melhor custo-benefício entre fat bikes 750W do ranking'
+    ],
+    cons: [
+      'Bateria 10.4Ah limita autonomia vs. packs de 15Ah ou 20Ah',
+      'Não dobra — exige espaço de guarda como bike fixa',
+      'Preço acima de R$ 5.500 — não é entrada de mercado',
+      'Marca Xroymexroy com assistência limitada vs. marcas tradicionais',
+      'Peso maior que dobráveis compactas (~27–30 kg)'
+    ],
+    specs: [
+      ['Marca', 'Xroymexroy'],
+      ['Modelo', 'EB5 · bicicleta elétrica fat tire aro 20'],
+      ['Motor', '750W brushless'],
+      ['Bateria', '48V 10.4Ah lítio'],
+      ['Autonomia', '25–35 km (uso urbano misto)'],
+      ['Velocidade máxima', '32 km/h (assistida)'],
+      ['Pneus', 'Fat Tire largos'],
+      ['Aro', '20"'],
+      ['Freios', 'Disco dianteiro e traseiro'],
+      ['Peso suportado', 'Até 120 kg'],
+      ['Diferencial', 'Banco confortável + fat tire + 750W'],
+      ['Preço observado', 'A partir de R$ 5.542 (confira o dia)']
+    ],
+    analysis: {
+      title: 'Análise detalhada: avaliação da <span class="text-brand-yellow">bike elétrica Xroymexroy EB5</span>',
+      intro: 'A Xroymexroy EB5 responde a uma demanda clara: fat tire com motor 750W a preço competitivo. O banco largo reduz fadiga em trajetos de 15–25 km; os pneus largos estabilizam a rolagem em buracos e paralelepípedo; e o motor de 750W mantém ritmo em ladeiras onde packs menores de 10.4Ah costumam sofrer — desde que o uso não seja turbo constante em subida longa.',
+      sections: [
+        { h3: 'Conforto do banco e uso diário', body: 'O selim largo e a postura ereta da EB5 priorizam conforto sobre performance de corrida. Para commute urbano de 15 a 25 km, a diferença vs. bancos finos de scooter é perceptível após 20 minutos de pedal. Ideal para quem usa a bike todos os dias e não quer dor lombar ao chegar no destino.' },
+        { h3: 'Fat Tire em terreno irregular', body: 'Pneus largos distribuem o impacto em valetas, buracos e paralelepípedo — cenário comum em cidades brasileiras. A EB5 não substitui suspensão completa, mas reduz o "tranco" que aros finos transmitem ao guidão. Em asfalto liso, a rolagem é estável e previsível até 32 km/h.' },
+        { h3: 'Motor 750W e bateria 10.4Ah em ladeiras', body: 'O motor de 750W entrega torque suficiente para aclives de 8–10% com assistência moderada. A bateria de 10.4Ah é o limite: em subidas longas no modo turbo, a autonomia cai para 20–25 km. Para trajetos mistos com rampas curtas, o conjunto funciona bem. Subidas íngremes prolongadas pedem pedal ativo ou modelo com pack maior.' },
+        { h3: 'EB5 vs. Honeywhale S6-S e UCITYS', body: 'A Honeywhale S6-S (R$ 3.799) dobra e tem cesto, mas formato scooter. A UCITYS (R$ 4.379) tem aro 26 clássico sem fat tire. A EB5 brilha quando conforto do banco + fat tire + 750W importam mais que dobrar — e o preço fica abaixo de fat bikes premium acima de R$ 7.000.' }
+      ]
+    },
+    faq: [
+      ['A Xroymexroy EB5 vale a pena?', 'Sim, para quem quer <strong>fat tire 750W</strong> com banco confortável e preço abaixo de R$ 6.000. É a melhor custo-benefício fat bike do ranking.'],
+      ['Qual a autonomia real da EB5?', 'Entre <strong>25 e 35 km</strong> em uso urbano misto. Turbo constante e subidas reduzem para ~22 km com bateria 10.4Ah.'],
+      ['EB5 ou Honeywhale S6-S?', 'Honeywhale: dobrável, R$ 3.799, fat tire scooter. EB5: banco mais confortável, aro 20 fixo, melhor para quem não precisa dobrar.'],
+      ['A EB5 dobra?', 'Não. Formato fixo aro 20 — planeje garagem ou bicicletário coberto.'],
+      ['Qual a velocidade máxima da EB5?', 'Até <strong>32 km/h</strong> em modo assistido, conforme anúncio e legislação local.'],
+      ['EB5 ou UCITYS?', 'UCITYS: aro 26 clássico, bateria removível, R$ 4.379. EB5: fat tire, banco confortável, melhor em piso irregular, R$ 5.542.']
+    ],
+    altLinks: ['review-honeywhale-s6-s', 'review-xroymexroy-ucitys'],
+    productSchemaName: 'Xroymexroy EB5 750W Bicicleta Elétrica Fat Tire',
+    productDesc: 'Bicicleta elétrica Xroymexroy EB5 750W fat tire aro 20 com bateria 10.4Ah. #8 do ranking Tudo de Melhor.'
+  },
+];
+
 function renderPhilcoPage(p) {
   const faqSchema = p.faq.map(([q]) => ({ '@type': 'Question', name: q.replace(/<[^>]+>/g, ''), acceptedAnswer: { '@type': 'Answer', text: '' } }));
   p.faq.forEach(([q, a], i) => { faqSchema[i].acceptedAnswer.text = a.replace(/<[^>]+>/g, ''); });
@@ -1115,7 +1218,7 @@ function renderPhilcoPage(p) {
           <a class="glass flex flex-col justify-center p-5 transition hover:-translate-y-1 hover:shadow-glow" href="melhores-bicicletas-eletricas.html">
             <p class="mb-2 text-xs font-bold uppercase text-brand-yellow">Lista completa</p>
             <h3 class="mb-2 text-lg font-bold text-white">Voltar ao ranking</h3>
-            <p class="text-sm text-brand-dim">Ver as 7 bicicletas elétricas comparadas lado a lado.</p>
+            <p class="text-sm text-brand-dim">Ver as 8 bicicletas elétricas comparadas lado a lado.</p>
           </a>
         </div>
       </section>
@@ -1161,9 +1264,10 @@ function renderPhilcoPage(p) {
 }
 
 const lotArg = process.argv[2];
-const toGenerate = lotArg === '3' ? lote3Products
+const toGenerate = lotArg === 'eb5' ? strategicProducts
+  : lotArg === '3' ? lote3Products
   : lotArg === '2' ? products
-  : [...products, ...lote3Products];
+  : [...products, ...lote3Products, ...strategicProducts];
 
 const contextGalleries = parseContextoGalleries(CONTEXTO_PATH);
 

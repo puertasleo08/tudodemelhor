@@ -14,7 +14,7 @@
   3. [Ex: bicicleta eletrica melhor custo beneficio]
   4. [Ex: ]
 
-## 3. Estrutura do Ranking (Top 7)
+## 3. Estrutura do Ranking (Top 8)
 
 link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
 
@@ -96,6 +96,13 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_674319-MLB113402495155_062026-F-nado-k3-bicicleta-eletrica-scooter-750w-bike-aro20-litio-48v.webp
      - url:  https://http2.mlstatic.com/D_NQ_NP_2X_737509-MLB113402287857_062026-F-nado-k3-bicicleta-eletrica-scooter-750w-bike-aro20-litio-48v.webp
        alt: Nado K3 750W aro 20 — scooter elétrico utilitário vista principal
+
+8. Bicicleta Elétrica Xroymexroy EB5 750W (Bateria 10.4Ah) (Nota: 9.2)
+   - Link Afiliado ML: https://meli.la/1y5KwDP
+   - Link vídeo local: videos/Bicicleta-Eletrica-Xroymexroy-EB5-750W-Bateria- 10.4Ah.mp4
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_932379-MLA102587125925_122025-O.webp
+       alt: Xroymexroy EB5 750W fat tire aro 20 — bicicleta elétrica com bateria 10.4Ah
 
 ## 4. FAQ (Perguntas Frequentes)
 *Preencher com dúvidas reais do Google "As pessoas também perguntam"*
