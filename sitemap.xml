@@ -52,7 +52,7 @@
   </url>
   <url>
     <loc>https://tudodemelhor.com.br/melhores-bicicletas-eletricas.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://tudodemelhor.com.br/review-xroymexroy-eb5.html</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -248,6 +248,12 @@
   </url>
 
   <!-- Reviews: Travesseiros -->
+  <url>
+    <loc>https://tudodemelhor.com.br/review.html</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://tudodemelhor.com.br/travesseiro-hug-nasa-alto-vale-a-pena.html</loc>
     <lastmod>2026-08-25</lastmod>
