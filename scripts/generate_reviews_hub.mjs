@@ -8,21 +8,6 @@ const CHECK =
 
 const SECTIONS = [
   {
-    category: "casa-e-sono",
-    title: "Casa e Sono",
-    subtitle: "Travesseiros",
-    file: "qual-e-o-melhor-travesseiro-para-dormir.html",
-    badges: ["NASA", "Cervical", "Extra firme", "Hotel", "Kit 4", "Barato"],
-    shortTitles: [
-      "Travesseiro Hug Nasa Alto",
-      "Travesseiro Cervical D40",
-      "Travesseiro Extra Firme",
-      "Travesseiro Toque de Pluma",
-      "Kit 4 Impermeável",
-      "Travesseiro Regulável ICRESA",
-    ],
-  },
-  {
     category: "mobilidade",
     title: "Mobilidade",
     subtitle: "Bicicletas elétricas",
@@ -46,32 +31,6 @@ const SECTIONS = [
       "Nado K3 750W",
     ],
     badges: ["Dobrável", "Aro 26", "Fat tire", "Entrada", "Potência", "Urbana", "Utilitária"],
-  },
-  {
-    category: "climatizacao",
-    title: "Climatização",
-    subtitle: "Ar-condicionado split",
-    file: "melhores-marcas-de-ar-condicionado-2026.html",
-  },
-  {
-    category: "climatizacao",
-    title: "Climatização",
-    subtitle: "Ar-condicionado portátil",
-    file: "melhores-ar-condicionado-portatil.html",
-    skipSectionHeader: true,
-  },
-  {
-    category: "climatizacao",
-    title: "Climatização",
-    subtitle: "Umidificadores de ar",
-    file: "melhores-umidificadores-de-ar-2026.html",
-    skipSectionHeader: true,
-  },
-  {
-    category: "agua",
-    title: "Água",
-    subtitle: "Purificadores",
-    file: "melhores-purificadores-de-agua-2026.html",
   },
 ];
 

@@ -8,35 +8,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 CONFIG = {
-    "melhores-umidificadores-de-ar-2026.html": {
-        "image": "assets/produtos/RANKING/UMIDIFICADOR-DE-AR/capa.jpeg",
-        "image_alt": "Umidificadores de ar — capa da categoria no ranking Tudo de Melhor",
-        "category_link": "https://meli.la/33sAS7H",
-        "ranking_h2": "As 6 melhores umidificadores de ar",
-    },
-    "melhores-purificadores-de-agua-2026.html": {
-        "image": "assets/produtos/RANKING/PURIFICADOR-DE-AGUA/capa.jpeg",
-        "image_alt": "Purificadores de água — capa da categoria no ranking Tudo de Melhor",
-        "category_link": "https://meli.la/1HErSZt",
-        "ranking_h2": "As 6 melhores purificadores de água",
-    },
-    "melhores-marcas-de-ar-condicionado-2026.html": {
-        "image": "assets/produtos/RANKING/AR-CONDICIONADO/capa.jpeg",
-        "image_alt": "Ar-condicionado — capa da categoria no ranking Tudo de Melhor",
-        "category_link": "https://meli.la/31n7tqs",
-        "ranking_h2": "As 5 melhores marcas de ar-condicionado",
-    },
-    "melhores-ar-condicionado-portatil.html": {
-        "image": "assets/produtos/RANKING/AR-CONDICIONADO-PORTATIL/capa.jpeg",
-        "image_alt": "Ar-condicionado portátil — capa da categoria no ranking Tudo de Melhor",
-        "category_link": "https://meli.la/2G7Vyn6",
-        "ranking_h2": "Os 5 melhores ar-condicionados portáteis",
-    },
-    "qual-e-o-melhor-travesseiro-para-dormir.html": {
-        "image": "assets/produtos/RANKING/TRAVESSEIRO/capa.jpeg",
-        "image_alt": "Travesseiros — capa da categoria no ranking Tudo de Melhor",
-        "category_link": "https://meli.la/2KN6Kze",
-        "ranking_h2": "Os 6 melhores travesseiros para dormir",
+    "melhores-bicicletas-eletricas.html": {
+        "image": "assets/produtos/RANKING/BICICLETA-ELETRICA/capa.jpeg",
+        "image_alt": "Bicicletas elétricas — capa da categoria no ranking Tudo de Melhor",
+        "category_link": "https://meli.la/19sTjji",
+        "ranking_h2": "As melhores bicicletas elétricas",
     },
 }
 

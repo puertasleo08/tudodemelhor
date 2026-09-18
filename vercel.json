@@ -1,24 +1,708 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/acquabios-premium-single",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/acquabios-premium-single.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ar-condicionado-midea-12000-btus-inverter",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ar-condicionado-midea-12000-btus-inverter.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ar-condicionado-tcl-9000-btus",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ar-condicionado-tcl-9000-btus.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/electrolux-pe11x-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/electrolux-pe11x-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/electrolux-sp12f-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/electrolux-sp12f-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/hisense-18000-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/hisense-18000-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/hisense-portatil-12000-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/hisense-portatil-12000-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ibbl-fr600-exclusive-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ibbl-fr600-exclusive-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/lg-dual-inverter-portatil-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/lg-dual-inverter-portatil-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/melhores-ar-condicionado-portatil",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/melhores-ar-condicionado-portatil.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/melhores-marcas-de-ar-condicionado-2026",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/melhores-marcas-de-ar-condicionado-2026.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/melhores-purificadores-de-agua-2026",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/melhores-purificadores-de-agua-2026.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/melhores-umidificadores-de-ar-2026",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/melhores-umidificadores-de-ar-2026.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/midea-airvolution-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/midea-airvolution-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/mini-umidificador-de-ar-portatil-zyhum-500ml",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/mini-umidificador-de-ar-portatil-zyhum-500ml.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/philco-9000-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/philco-9000-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/philco-pac10fn-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/philco-pac10fn-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/purificador-de-agua-consul-cpb34as",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/purificador-de-agua-consul-cpb34as.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/purificador-de-agua-hidrofiltros-facile-c3",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/purificador-de-agua-hidrofiltros-facile-c3.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/purificador-electrolux-pe12g",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/purificador-electrolux-pe12g.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/qual-e-o-melhor-travesseiro-para-dormir",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/qual-e-o-melhor-travesseiro-para-dormir.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ranking-ar-condicionado",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ranking-ar-condicionado-portatil",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ranking-ar-condicionado-portatil.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ranking-ar-condicionado.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ranking-purificadores",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ranking-purificadores.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ranking-travesseiros",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ranking-travesseiros.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ranking-umidificadores",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ranking-umidificadores.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-acquabios-premium",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-acquabios-premium.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-cervical-d40",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-cervical-d40.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-consul-cpb34",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-consul-cpb34.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-electrolux-pe11x",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-electrolux-pe11x.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-electrolux-pe12g",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-electrolux-pe12g.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-extra-firme",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-extra-firme.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-hidrofiltros-facile-c3",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-hidrofiltros-facile-c3.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-hisense-18k",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-hisense-18k.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-hug-nasa",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-hug-nasa.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-ibbl-fr600",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-ibbl-fr600.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-kit4-impermeavel",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-kit4-impermeavel.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-midea-airvolution",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-midea-airvolution.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-midea-ecomaster",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-midea-ecomaster.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-philco-9k",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-philco-9k.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-portatil-electrolux-sp12f",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-portatil-electrolux-sp12f.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-portatil-hisense-12k",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-portatil-hisense-12k.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-portatil-lg-dual-inverter-14k",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-portatil-lg-dual-inverter-14k.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-portatil-philco-pac10fn",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-portatil-philco-pac10fn.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-portatil-rheem-12k",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-portatil-rheem-12k.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-regulavel",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-regulavel.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-tcl-tpro",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-tcl-tpro.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-toque-plumas",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-toque-plumas.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-black-decker-air1000",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-black-decker-air1000.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-kian-5l",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-kian-5l.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-midea-master-connect",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-midea-master-connect.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-mimo-style",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-mimo-style.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-wap-air-flow",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-wap-air-flow.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-zyhum-mini",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review-umidificador-zyhum-mini.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/review.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/rheem-portatil-12000-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/rheem-portatil-12000-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-extra-firme-altenburg-suporte-extra-firme-em-percal-180-fios",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-extra-firme-altenburg-suporte-extra-firme-em-percal-180-fios.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-hug-nasa-alto-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-hug-nasa-alto-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-impermeavel-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-impermeavel-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-nasa-ortopedico-cervical-d40-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-nasa-ortopedico-cervical-d40-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-regulavel-lavavel-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-regulavel-lavavel-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-toque-de-pluma-buddemeyer-vale-a-pena",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/travesseiro-toque-de-pluma-buddemeyer-vale-a-pena.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/umidificador-de-ar-black-decker-air1000",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/umidificador-de-ar-black-decker-air1000.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/umidificador-de-ar-midea-master-connect-6l",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/umidificador-de-ar-midea-master-connect-6l.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/umidificador-de-ar-mimo-style-25l",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/umidificador-de-ar-mimo-style-25l.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/umidificador-de-ar-ultrassonico-kian-5l",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/umidificador-de-ar-ultrassonico-kian-5l.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/umidificador-de-ar-wap-air-flow-4-litros",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/umidificador-de-ar-wap-air-flow-4-litros.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/css/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ]
