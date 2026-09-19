@@ -1,0 +1,142 @@
+# Cluster: [melhor patinete eletrico]
+
+## 1. URLs e Metadados
+- **URL Canônica:** `https://tudodemelhor.com.br/melhor-patinete-eletrico
+- **Meta Title:** [Deixe em branco para o Cursor gerar com foco na KW Primária]
+- **Meta Description:** [Deixe em branco para o Cursor gerar com foco na KW Primária]
+
+## 2. Estratégia de Palavras-Chave (Alta Recorrência no Google)
+*As palavras abaixo estão listadas em estrita ordem de prioridade para otimização.*
+- **Palavra-chave Primária (Foco Principal):** [melhor scooter eletrica​]
+- **Palavras-chave Adicionais (Secundárias / LSI):**
+  1. [Ex: melhor patinete eletrico]
+  2. [Ex: melhores patinetes eletricos]
+  3. [Ex: melhor marca de patinete eletrico​]
+  4. [Ex: melhor patinete eletrico adulto]
+  5. [Ex: patinete eletrico 1000w]
+
+
+## 3. Estrutura do Ranking (Top 6)
+
+link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
+
+> **Nota (extração Firecrawl, ago/2026):** links `meli.la` redirecionam ao perfil de afiliado; a PDP completa do ML bloqueia scraping automatizado (503/verificação). URLs abaixo são fotos principais em alta (`-O.webp`) extraídas via Firecrawl Agent + perfil afiliado. Para ampliar a galeria (3–5 fotos), abra o anúncio no navegador logado e cole URLs adicionais da galeria nativa.
+
+1.  (Nota: )
+   - Link Afiliado ML: https://meli.la/1m3uzM3
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_Q_NP_703871-MLA99508887442_112025-R.webp
+     - url: https://http2.mlstatic.com/D_Q_NP_884867-MLA93691287635_092025-R.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_617756-MLA93051994666_092025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_911474-MLA93467924981_092025-F.webp
+     
+
+       alt: 
+   
+2.  (Nota: )
+   - Link Afiliado ML: https://meli.la/2bTXMis
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_872730-MLA95500784090_102025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_988550-MLA95501409670_102025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_982994-MLA106351574641_022026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_822242-MLA97076410590_112025-O.webp
+    
+
+       alt: 
+    
+3.  (Nota: )
+   - Link Afiliado ML: https://meli.la/1okPPJd
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_830454-MLB115951297532_092026-F-patinete-eletrico-off-road-h18-1000w-48v-20ah-hitway.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_812649-MLB117247748939_092026-F-patinete-eletrico-off-road-h18-1000w-48v-20ah-hitway.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_870432-MLB110997147687_042026-F-patinete-eletrico-off-road-h18-1000w-48v-20ah-hitway.webp
+    
+       alt: 
+    
+4.  (Nota: )
+   - Link Afiliado ML: https://meli.la/117ifNw
+    
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_956101-MLA95497932360_102025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_710140-MLA95498926054_102025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_811594-MLA95498220754_102025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_782128-MLA95498866360_102025-F.webp
+   
+       alt: 
+
+5. (Nota: )
+   - Link Afiliado ML: https://meli.la/1paSzgp
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_612224-MLA112140606730_062026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_725121-MLA83166243263_032025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_896556-MLA83166686749_032025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_651316-MLA83166686753_032025-F.webp
+     - url: 
+     - url:
+       alt: 
+
+6. (Nota: )
+   - Link Afiliado ML: https://meli.la/34aypuk
+   - Link vídeo youtube: 
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_732856-MLB110923083212_052026-F-oimotoo-patinete-scooter-eletrico-350w-dobravel-cbluetooth.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_962333-MLB114053937340_072026-F-oimotoo-patinete-scooter-eletrico-350w-dobravel-cbluetooth.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_604696-MLB108909088203_032026-F-oimotoo-patinete-scooter-eletrico-350w-dobravel-cbluetooth.webp
+     - url:
+     - url:
+       alt: 
+
+
+## 4. FAQ (Perguntas Frequentes)
+*Preencher com dúvidas reais do Google "As pessoas também perguntam"*
+- Pergunta 1: [quanto custa patinete eletrico​?]
+- Pergunta 2: [qual melhor patinete eletrico​?]
+- Pergunta 3: [como carregar patinete eletrico​?]
+- Pergunta 4: [onde comprar patinete eletrico​​​?]
+- Pergunta 5: [como funciona o patinete eletrico​​​?]
+
+## 5. Diretrizes de Geração e SEO (Regras de Ouro)
+- **NEURONwriter (MCP):** É obrigatório o uso do MCP do NEURONwriter para otimizar a redação. O conteúdo final deve atingir um **Score de 80+**, garantindo a inserção semântica da palavra-chave primária e das adicionais listadas na Seção 2.
+- **Meta Tags:** O Meta Title e a Meta Description devem ser gerados com foco agressivo na Palavra-chave Primária, otimizados para atrair o clique (alto CTR).
+- **SEO de Imagens:** Todas as tags `<img src="...">` geradas no HTML devem obrigatoriamente conter o atributo `alt` preenchido. O texto alternativo deve ser descritivo e incorporar as palavras-chave indicadas na Seção 2 de forma natural.
+- **Estrutura:** O código deve respeitar a estrutura de listagem, utilizando a classe `.glass` e o design system do `tudodemelhor.com.br`.
+- Uso do Firecrawl (Data Scraping): Acesse as URLs dos links de afiliado fornecidos na Seção 3 utilizando o Firecrawl. Extraia a ficha técnica real, as funcionalidades e leia os comentários dos compradores para formular os blocos de "Prós e Contras" e a "Análise Detalhada" com extrema precisão e veracidade.
+
+## 6. Galeria de imagens (`imagens_galeria`)
+
+Campo opcional em cada produto da Seção 3. As URLs aparecem como miniaturas (60×60 px) abaixo do botão "Comprar no Mercado Livre" nas páginas `review-*.html`.
+
+**Formato no contexto (por produto):**
+
+```yaml
+- imagens_galeria:
+  - url: https://http2.mlstatic.com/foto-principal.webp
+    alt: Descrição SEO da foto (obrigatório para acessibilidade)
+  - url: https://http2.mlstatic.com/foto-detalhe.webp
+    alt: Outro ângulo do produto
+```
+
+**Atalho (só URL):** se omitir `alt`, o gerador cria automaticamente "Foto N — Marca Modelo":
+
+```yaml
+- imagens_galeria:
+  - 
+  - 
+```
+
+**Lista vazia** (sem galeria na página):
+
+```yaml
+- imagens_galeria: []
+```
+
+**Como chega no HTML:** copie o array para o campo `galleryImages` do produto em `scripts/generate_bike_reviews_philco.mjs` e rode `node scripts/generate_bike_reviews_philco.mjs`. Exemplo:
+
+```javascript
+galleryImages: [
+  { url: ' },
+  ''
+],
+```
+
+Use URLs diretas de imagem (`.webp`, `.jpg`) do Mercado Livre ou assets locais (`assets/produtos/...`).

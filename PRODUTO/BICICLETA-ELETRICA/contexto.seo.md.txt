@@ -29,6 +29,14 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_777218-MLB110353770253_042026-F-oimotoo-s6-bicicleta-eletrica-dobravel-450w35km40kmh.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_810098-MLB110353799831_042026-F-oimotoo-s6-bicicleta-eletrica-dobravel-450w35km40kmh.webp
 
+- imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_680377-MLA110215636750_052026-O.webp
+     - url:https://http2.mlstatic.com/D_NQ_NP_2X_891831-MLA111296580265_052026-O.webp
+     - url:https://http2.mlstatic.com/D_NQ_NP_2X_700407-MLA111296580271_052026-O.webp
+     - url:https://http2.mlstatic.com/D_NQ_NP_2X_795708-MLA112072896409_052026-O.webp
+     - url:
+
+
        alt: Oimotoo S6 dobrável 450W — melhor bike elétrica urbana vista principal
    
 2. Xroymexroy UCITYS Aro 26 750W (Nota: 9.4)
@@ -39,8 +47,13 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_943909-MLA112985467843_062026-F.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_845353-MLA112985556923_062026-F.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_600751-MLA112985675247_062026-F.webp
-     - url:
-     - url:
+   
+imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_771271-MLA113564986915_062026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_665951-MLA112404425214_062026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_778648-MLA112404795828_062026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_747351-MLA112537240516_062026-F.webp
+
 
        alt: Xroymexroy UCITYS 750W aro 26 — bicicleta elétrica com bateria removível
     
@@ -52,7 +65,13 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_752211-MLA88260511375_072025-F.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_819640-MLA87922629388_072025-F.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_881280-MLA88260511401_072025-F.webp
-     - url:
+
+imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_600351-MLA99974654710_122025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_878718-MLA100461374537_122025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_793185-MLA93592118811_092025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_975053-MLA93591891557_092025-F.webp
+
        alt: Honeywhale S6-S 750W dobrável — bike elétrica fat tire vista principal
     
 4. Bicicleta Elétrica 400W 48V 10Ah Scooter Dobrável (Nota: 9.1)
@@ -63,7 +82,14 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url:https://http2.mlstatic.com/D_NQ_NP_2X_796112-MLB98099441441_112025-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_635535-MLB98099123737_112025-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_840232-MLA105448315693_012026-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp
-     - url:
+     
+imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_788946-MLA109396003683_032026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_645846-MLA111472532593_052026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_923887-MLA109394572439_032026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_885313-MLA111472388181_052026-F.webp
+
+
        alt: Bike elétrica dobrável 400W 48V 10Ah — vista principal do anúncio
 5. Bicicleta Bike Elétrica V9 Max 1000W (Nota: 8.9)
    - Link Afiliado ML: https://meli.la/2VBFMUG
@@ -73,7 +99,13 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url:https://http2.mlstatic.com/D_NQ_NP_2X_769187-MLB107689205204_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_854622-MLB108427266093_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_749200-MLB108426020599_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp
-     - url:
+
+imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_857542-MLA112343395659_052026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_672823-MLA111446969218_052026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_797527-MLA111446969216_052026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_937828-MLA115989278097_082026-F.webp
+
        alt: V9 Max 1000W — bike elétrica potente com freio hidráulico
 6. Bicicleta Elétrica Tomate 350W Aro 26 (Nota: 8.8)
    - Link Afiliado ML: https://meli.la/17mcYdW
@@ -83,8 +115,15 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_928654-MLB112853848556_072026-F-bicicleta-eletrica-tomate-350w-aro-26-com-pedal-assistido.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_856363-MLB114055950139_072026-F-bicicleta-eletrica-tomate-350w-aro-26-com-pedal-assistido.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_676276-MLB114055950205_072026-F-bicicleta-eletrica-tomate-350w-aro-26-com-pedal-assistido.webp
-     - url:
+
+imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_762502-MLA114706164765_072026-F.webp
+    - url: https://http2.mlstatic.com/D_NQ_NP_2X_680842-MLA114706164761_072026-F.webp
+    - url: https://http2.mlstatic.com/D_NQ_NP_2X_918967-MLA110947029810_052026-F.webp
+    - url:https://http2.mlstatic.com/D_NQ_NP_2X_885335-MLA111733882174_062026-F.webp
+
        alt: Tomate 350W aro 26 — bicicleta elétrica pedal assistido urbana
+
 7. Nado K3 Bicicleta Elétrica Scooter 750W (Nota: 8.6)
    - Link Afiliado ML: https://meli.la/1GuHCbJ
    - Link vídeo youtube: 
@@ -95,6 +134,14 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_637772-MLB113402495135_062026-F-nado-k3-bicicleta-eletrica-scooter-750w-bike-aro20-litio-48v.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_674319-MLB113402495155_062026-F-nado-k3-bicicleta-eletrica-scooter-750w-bike-aro20-litio-48v.webp
      - url:  https://http2.mlstatic.com/D_NQ_NP_2X_737509-MLB113402287857_062026-F-nado-k3-bicicleta-eletrica-scooter-750w-bike-aro20-litio-48v.webp
+
+imagens_depoimentos:
+     - url:https://http2.mlstatic.com/D_NQ_NP_2X_839637-MLA94374995493_102025-F.webp
+    - url: https://http2.mlstatic.com/D_NQ_NP_2X_692905-MLA91609721090_092025-F.webp
+    - url: https://http2.mlstatic.com/D_NQ_NP_2X_659909-MLA98560603064_112025-F.webp
+    - url: https://http2.mlstatic.com/D_NQ_NP_2X_700697-MLA91941482019_092025-F.webp
+    
+
        alt: Nado K3 750W aro 20 — scooter elétrico utilitário vista principal
 
 8. Bicicleta Elétrica Xroymexroy EB5 750W (Bateria 10.4Ah) (Nota: 9.2)
@@ -102,6 +149,13 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
    - Link vídeo local: videos/Bicicleta-Eletrica-Xroymexroy-EB5-750W-Bateria- 10.4Ah.mp4
    - imagens_galeria:
      - url: https://http2.mlstatic.com/D_NQ_NP_932379-MLA102587125925_122025-O.webp
+
+imagens_depoimentos:
+     - url:https://http2.mlstatic.com/D_NQ_NP_2X_810527-MLA106196984152_022026-O.webp
+     - url:https://http2.mlstatic.com/D_NQ_NP_2X_728805-MLA116071327480_092026-O.webp
+     - url:https://http2.mlstatic.com/D_NQ_NP_2X_830269-MLA116071648436_092026-O.webp
+ 
+
        alt: Xroymexroy EB5 750W fat tire aro 20 — bicicleta elétrica com bateria 10.4Ah
 
 ## 4. FAQ (Perguntas Frequentes)
