@@ -30,6 +30,13 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_617756-MLA93051994666_092025-F.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_911474-MLA93467924981_092025-F.webp
      
+- imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_605135-MLA95366195479_102025-F.webp
+    - url: https://http2.mlstatic.com/D_NQ_NP_2X_955994-MLA97372660562_112025-F.webp
+    - url: https://http2.mlstatic.com/D_NQ_NP_2X_959292-MLA95366067517_102025-F.webp
+    - url: https://http2.mlstatic.com/D_NQ_NP_2X_770331-MLA95366274917_102025-F.webp
+    - url: https://http2.mlstatic.com/D_NQ_NP_2X_943269-MLA96773401705_102025-F.webp
+    - url: https://http2.mlstatic.com/D_NQ_NP_2X_721076-MLA108925039098_032026-F.webp
 
        alt: 
    
@@ -41,6 +48,14 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_982994-MLA106351574641_022026-F.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_822242-MLA97076410590_112025-O.webp
     
+- imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_982994-MLA106351574641_022026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_863107-MLA106351802701_022026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_849994-MLA94518004329_102025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_879695-MLA115295625801_072026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_919147-MLA115295890257_072026-F.webp
+
+
 
        alt: 
     
@@ -50,21 +65,16 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_830454-MLB115951297532_092026-F-patinete-eletrico-off-road-h18-1000w-48v-20ah-hitway.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_812649-MLB117247748939_092026-F-patinete-eletrico-off-road-h18-1000w-48v-20ah-hitway.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_870432-MLB110997147687_042026-F-patinete-eletrico-off-road-h18-1000w-48v-20ah-hitway.webp
+- imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_809081-MLA111604103881_052026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_724057-MLA111006334937_042026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_856761-MLA112450842754_062026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_947160-MLA111647224767_052026-F.webp
     
        alt: 
     
-4.  (Nota: )
-   - Link Afiliado ML: https://meli.la/117ifNw
-    
-   - imagens_galeria:
-     - url: https://http2.mlstatic.com/D_NQ_NP_2X_956101-MLA95497932360_102025-F.webp
-     - url: https://http2.mlstatic.com/D_NQ_NP_2X_710140-MLA95498926054_102025-F.webp
-     - url: https://http2.mlstatic.com/D_NQ_NP_2X_811594-MLA95498220754_102025-F.webp
-     - url: https://http2.mlstatic.com/D_NQ_NP_2X_782128-MLA95498866360_102025-F.webp
-   
-       alt: 
 
-5. (Nota: )
+4. (Nota: )
    - Link Afiliado ML: https://meli.la/1paSzgp
    - imagens_galeria:
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_612224-MLA112140606730_062026-F.webp
@@ -72,10 +82,16 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_896556-MLA83166686749_032025-F.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_651316-MLA83166686753_032025-F.webp
      - url: 
-     - url:
+- imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_933427-MLA94378841672_102025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_664724-MLA94808830623_102025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_821971-MLA94378772472_102025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_960701-MLA86974366940_072025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_763970-MLA87299364879_072025-F.webp
+
        alt: 
 
-6. (Nota: )
+5. (Nota: )
    - Link Afiliado ML: https://meli.la/34aypuk
    - Link vídeo youtube: 
    - imagens_galeria:
@@ -83,7 +99,13 @@ link Categoria afiliado Mercado Livre: https://meli.la/1nJv5Ed
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_962333-MLB114053937340_072026-F-oimotoo-patinete-scooter-eletrico-350w-dobravel-cbluetooth.webp
      - url: https://http2.mlstatic.com/D_NQ_NP_2X_604696-MLB108909088203_032026-F-oimotoo-patinete-scooter-eletrico-350w-dobravel-cbluetooth.webp
      - url:
-     - url:
+- imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_970432-MLA109936183208_042026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_822108-MLA110036838043_042026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_709799-MLA109867338088_042026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_842653-MLA110544940809_042026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_646109-MLA109661189450_042026-F.webp
+
        alt: 
 
 
