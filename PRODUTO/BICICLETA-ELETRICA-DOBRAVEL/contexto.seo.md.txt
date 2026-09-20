@@ -1,0 +1,146 @@
+# Cluster: [bicicleta eletrica dobravel]
+
+## 1. URLs e Metadados
+- **URL Canônica:** `https://tudodemelhor.com.br/bicicleta-eletrica-dobravel
+- **Meta Title:** [Deixe em branco para o Cursor gerar com foco na KW Primária]
+- **Meta Description:** [Deixe em branco para o Cursor gerar com foco na KW Primária]
+
+## 2. Estratégia de Palavras-Chave (Alta Recorrência no Google)
+*As palavras abaixo estão listadas em estrita ordem de prioridade para otimização.*
+- **Palavra-chave Primária (Foco Principal):** [​]
+- **Palavras-chave Adicionais (Secundárias / LSI):**
+  1. [Ex: melhor bicicleta eletrica dobravel]
+  2. [Ex: ]
+  3. [Ex: ]
+  4. [Ex: ]
+  5. [Ex:]
+
+
+## 3. Estrutura do Ranking (Top 6)
+
+link Categoria afiliado Mercado Livre: 
+
+> **Nota (extração Firecrawl, ago/2026):** links `meli.la` redirecionam ao perfil de afiliado; a PDP completa do ML bloqueia scraping automatizado (503/verificação). URLs abaixo são fotos principais em alta (`-O.webp`) extraídas via Firecrawl Agent + perfil afiliado. Para ampliar a galeria (3–5 fotos), abra o anúncio no navegador logado e cole URLs adicionais da galeria nativa.
+
+1.  (Nota: )
+   - Link Afiliado ML: https://meli.la/2i6rBNV
+- video_capa:
+     - url:https://video-static-clips.mms.mlstatic.com/62c82f1f923a3f082b72612d/019f8721909e7feabea7b448d369e82f/preview/preview_019f877505417f02bcf4cf2772e7d2ed_019f872192ea7288b7580f60d1e0594c.mp4
+
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_603508-MLA113190607451_062026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_754037-MLA89719898443_082025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_635827-MLA89352913696_082025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_910827-MLA89353187538_082025-F.webp
+     
+- imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_601910-MLA103233382400_012026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_994867-MLA103233657942_012026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_925883-MLA91329469295_082025-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_990532-MLA114834565276_082026-F.webp
+
+       alt: 
+   
+2.  (Nota: )
+   - Link Afiliado ML: https://meli.la/1eqMgcv
+   - imagens_galeria:
+   
+    
+- imagens_depoimentos:
+
+
+
+
+       alt: 
+    
+3.  (Nota: )
+   - Link Afiliado ML: https://meli.la/28brFBe
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_844827-MLB117511102955_092026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_959196-MLB116033697350_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_781495-MLB116033756808_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_734295-MLB116033756806_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp
+    
+       alt: 
+    
+
+4. (Nota: )
+   - Link Afiliado ML: https://meli.la/2joNhs5
+   - imagens_galeria:
+    
+
+       alt: 
+
+5. (Nota: )
+   - Link Afiliado ML: https://meli.la/334S41E
+- video_capa:
+     - url: https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/01a07e8d80b571d7ba70e662e89e5b90/master.m3u8
+
+   - imagens_galeria:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_996242-MLB112164339248_062026-F-bicicleta-eletrica-dobravel-350w-bateria-48v-78ah--brinde.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_836887-MLB112166181280_062026-F-bicicleta-eletrica-dobravel-350w-bateria-48v-78ah--brinde.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_791749-MLB112165145290_062026-F-bicicleta-eletrica-dobravel-350w-bateria-48v-78ah--brinde.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_724141-MLB112166506058_062026-F-bicicleta-eletrica-dobravel-350w-bateria-48v-78ah--brinde.webp
+- imagens_depoimentos:
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_787099-MLA117332041647_092026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_751029-MLA115253775384_082026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_900779-MLA115253540972_082026-F.webp
+     - url: https://http2.mlstatic.com/D_NQ_NP_2X_914494-MLA115482005006_082026-F.webp
+    
+
+       alt: 
+
+
+## 4. FAQ (Perguntas Frequentes)
+*Preencher com dúvidas reais do Google "As pessoas também perguntam"*
+- Pergunta 1: [quanto custa bicicleta eletrica dobravel?]
+- Pergunta 2: [qual melhor bicicleta eletrica dobravel​?]
+- Pergunta 3: [como carregar a bicicleta eletrica?]
+- Pergunta 4: [onde comprar bicicleta eletrica dobravel?]
+- Pergunta 5: [como funciona a bicicleta eletrica dobravel?]
+
+## 5. Diretrizes de Geração e SEO (Regras de Ouro)
+- **NEURONwriter (MCP):** É obrigatório o uso do MCP do NEURONwriter para otimizar a redação. O conteúdo final deve atingir um **Score de 80+**, garantindo a inserção semântica da palavra-chave primária e das adicionais listadas na Seção 2.
+- **Meta Tags:** O Meta Title e a Meta Description devem ser gerados com foco agressivo na Palavra-chave Primária, otimizados para atrair o clique (alto CTR).
+- **SEO de Imagens:** Todas as tags `<img src="...">` geradas no HTML devem obrigatoriamente conter o atributo `alt` preenchido. O texto alternativo deve ser descritivo e incorporar as palavras-chave indicadas na Seção 2 de forma natural.
+- **Estrutura:** O código deve respeitar a estrutura de listagem, utilizando a classe `.glass` e o design system do `tudodemelhor.com.br`.
+- Uso do Firecrawl (Data Scraping): Acesse as URLs dos links de afiliado fornecidos na Seção 3 utilizando o Firecrawl. Extraia a ficha técnica real, as funcionalidades e leia os comentários dos compradores para formular os blocos de "Prós e Contras" e a "Análise Detalhada" com extrema precisão e veracidade.
+
+## 6. Galeria de imagens (`imagens_galeria`)
+
+Campo opcional em cada produto da Seção 3. As URLs aparecem como miniaturas (60×60 px) abaixo do botão "Comprar no Mercado Livre" nas páginas `review-*.html`.
+
+**Formato no contexto (por produto):**
+
+```yaml
+- imagens_galeria:
+  - url: https://http2.mlstatic.com/foto-principal.webp
+    alt: Descrição SEO da foto (obrigatório para acessibilidade)
+  - url: https://http2.mlstatic.com/foto-detalhe.webp
+    alt: Outro ângulo do produto
+```
+
+**Atalho (só URL):** se omitir `alt`, o gerador cria automaticamente "Foto N — Marca Modelo":
+
+```yaml
+- imagens_galeria:
+  - 
+  - 
+```
+
+**Lista vazia** (sem galeria na página):
+
+```yaml
+- imagens_galeria: []
+```
+
+**Como chega no HTML:** copie o array para o campo `galleryImages` do produto em `scripts/generate_bike_reviews_philco.mjs` e rode `node scripts/generate_bike_reviews_philco.mjs`. Exemplo:
+
+```javascript
+galleryImages: [
+  { url: ' },
+  ''
+],
+```
+
+Use URLs diretas de imagem (`.webp`, `.jpg`) do Mercado Livre ou assets locais (`assets/produtos/...`).
