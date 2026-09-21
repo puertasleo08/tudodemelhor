@@ -1,0 +1,32 @@
+---
+description: Funil obrigatório de páginas de ranking (Header → Prova social → TL;DR → Produtos → Tabela → Texto)
+globs: melhores-*.html
+alwaysApply: true
+---
+
+# Funil de ranking (não inverter)
+
+Toda página `melhores-*.html` nova ou editada segue **esta ordem visual**, depois do header do site e do breadcrumb:
+
+1. **Header da página** — H1, intro, capa, CTA Mercado Livre
+2. **Prova social** — `#prova-social`, título “Opiniões Reais, Resultados Reais”, carrossel horizontal `.glass` (`aspect-[9/16]`, `overflow-x-auto snap-x`)
+3. **Veredito / TL;DR** — `#veredito` + `aria-label="Resumo rápido"` (bullets de escolha)
+4. **Produtos** — `#ranking-topo` (cards do ranking)
+5. **Tabela comparativa** — `#tabela`
+6. **Texto de apoio** — critérios, como escolher, FAQ, conclusão, autor
+
+```html
+<!-- ✅ GOOD -->
+<header>…capa + CTA…</header>
+<section id="prova-social">…vídeos/fotos…</section>
+<section id="veredito" aria-label="Resumo rápido">…</section>
+<section id="ranking-topo">…</section>
+<section id="tabela">…</section>
+<section id="criterios">…</section>
+
+<!-- ❌ BAD: ranking ou tabela antes da prova social / TL;DR -->
+```
+
+- Vídeo de prova social: `<video controls muted loop playsinline>`
+- Foto: `<img class="object-cover w-full h-full">`
+- Não quebrar o carrossel das dobráveis; copiar o markup, só trocar mídia
