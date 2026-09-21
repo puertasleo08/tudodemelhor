@@ -1,7 +1,7 @@
 # Cluster: [bicicleta eletrica dobravel]
 
 ## 1. URLs e Metadados
-- **URL Canônica:** `https://tudodemelhor.com.br/bicicleta-eletrica-dobravel
+- **URL Canônica:** `https://www.tudodemelhor.com.br/bicicleta-eletrica-dobravel
 - **Meta Title:** [Deixe em branco para o Cursor gerar com foco na KW Primária]
 - **Meta Description:** [Deixe em branco para o Cursor gerar com foco na KW Primária]
 

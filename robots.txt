@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tudodemelhor.com.br/sitemap.xml
+Sitemap: https://www.tudodemelhor.com.br/sitemap.xml

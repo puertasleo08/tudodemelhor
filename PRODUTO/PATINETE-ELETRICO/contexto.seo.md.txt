@@ -1,7 +1,7 @@
 # Cluster: [melhor patinete eletrico]
 
 ## 1. URLs e Metadados
-- **URL Canônica:** `https://tudodemelhor.com.br/melhor-patinete-eletrico
+- **URL Canônica:** `https://www.tudodemelhor.com.br/melhor-patinete-eletrico
 - **Meta Title:** [Deixe em branco para o Cursor gerar com foco na KW Primária]
 - **Meta Description:** [Deixe em branco para o Cursor gerar com foco na KW Primária]
 
