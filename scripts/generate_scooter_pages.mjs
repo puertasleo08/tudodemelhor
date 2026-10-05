@@ -301,12 +301,13 @@ function navScript() {
 }
 
 function gtagBlock() {
-  return `  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJRGBSSWQG"></script>
+  return `  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GV4ZZ5WB0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-KJRGBSSWQG');
+    gtag('config', 'G-3GV4ZZ5WB0');
+    gtag('config', 'AW-18490413648');
   </script>`;
 }
 
