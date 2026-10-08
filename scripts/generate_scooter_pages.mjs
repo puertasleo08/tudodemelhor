@@ -308,6 +308,7 @@ function gtagBlock() {
     gtag('js', new Date());
     gtag('config', 'G-3GV4ZZ5WB0');
     gtag('config', 'AW-18490413648');
+    gtag('event', 'conversion', {'send_to': 'AW-18490413648/FQ1MCJr2y5QdENCk9fBE'});
   </script>`;
 }
 
