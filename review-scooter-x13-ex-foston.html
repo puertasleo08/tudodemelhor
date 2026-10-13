@@ -75,6 +75,8 @@
     @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
     .animate-marquee { animation: marquee 25s linear infinite; width: max-content; }
     .animate-marquee:hover, .animate-marquee:active { animation-play-state: paused; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
   </style>
   <script type="application/ld+json">
   {
@@ -331,14 +333,14 @@
         </div>
       </header>
 
-      <nav class="glass mb-8 flex flex-wrap gap-2 p-3 sm:p-4" aria-label="Índice da review">
-        <p class="w-full text-[10px] font-bold uppercase tracking-wider text-brand-dim">Índice</p>
-        <a href="#veredito" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Veredito</a>
-        <a href="#compradores" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Compradores</a>
-        <a href="#pros-contras" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Prós e Contras</a>
-        <a href="#especificacoes" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Especificações</a>
-        <a href="#analise" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Análise</a>
-        <a href="#faq" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">FAQ</a>
+      <nav class="glass mb-8 flex items-center gap-2 overflow-x-auto snap-x whitespace-nowrap scrollbar-hide p-3 sm:p-4" aria-label="Índice da review">
+        <p class="shrink-0 snap-start pr-1 text-[10px] font-bold uppercase tracking-wider text-brand-dim">Índice</p>
+        <a href="#veredito" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Veredito</a>
+        <a href="#compradores" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Compradores</a>
+        <a href="#pros-contras" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Prós e Contras</a>
+        <a href="#especificacoes" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Especificações</a>
+        <a href="#analise" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Análise</a>
+        <a href="#faq" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">FAQ</a>
       </nav>
 
       <section id="veredito" class="mb-10 scroll-mt-28 grid grid-cols-2 gap-4 md:grid-cols-4" aria-label="Veredito rápido">
@@ -371,7 +373,7 @@
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-brand-yellow">quem comprou</span></h2>
         <div class="glass p-5 md:p-6">
           <p class="mb-4 text-sm text-brand-muted">Imagens no estilo de quem comprou — o tipo de prova social que você vê em Instagram e no anúncio — e fotos do produto no contexto real de uso.</p>
-          <div class="overflow-hidden w-full relative">
+          <div class="overflow-x-auto scroll-smooth scrollbar-hide w-full relative">
             <div class="flex gap-4 animate-marquee">
               <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
               <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
@@ -416,7 +418,7 @@
 
       <section id="especificacoes" class="mb-10 scroll-mt-28">
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Especificações <span class="text-brand-yellow">técnicas</span></h2>
-        <div class="glass overflow-hidden">
+        <div class="glass overflow-x-auto">
           <table class="w-full text-left text-sm">
             <tbody>
               <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Nome completo</th><td class="px-4 py-3 text-brand-muted">Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza Cinza-escuro</td></tr>
@@ -437,7 +439,7 @@
       </section>
 
       <section id="analise" class="mb-10 scroll-mt-28">
-        <article class="glass p-6 md:p-10">
+        <article class="glass p-6 leading-relaxed md:p-10">
           <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: scooter elétrica <span class="text-brand-yellow">Foston X13 Ex</span></h2>
 
           <p class="mb-5 text-brand-muted">
