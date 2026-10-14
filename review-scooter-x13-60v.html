@@ -75,6 +75,8 @@
     @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
     .animate-marquee { animation: marquee 25s linear infinite; width: max-content; }
     .animate-marquee:hover, .animate-marquee:active { animation-play-state: paused; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
   </style>
   <script type="application/ld+json">
   {
@@ -328,25 +330,25 @@
           </div>
         </div>
 
-        <div class="glass relative order-1 flex h-full min-h-[420px] flex-col overflow-hidden p-5 shadow-glow-emerald md:order-2 md:min-h-0 md:p-6">
+        <div class="glass relative order-1 flex flex-col self-center overflow-hidden p-5 shadow-glow-emerald md:order-2 md:p-6">
           <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-brand-yellow/5"></div>
           <div class="relative flex min-h-0 flex-1 items-center justify-center">
-            <div class="hero-video-wrap relative mx-auto aspect-[9/16] h-full w-full max-h-full max-w-[min(100%,315px)] overflow-hidden rounded-2xl bg-white/95 shadow-lg dark:bg-black/20">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_773122-MLA107693927314_032026-F.webp" alt="Scooter Bicicleta Elétrica X13 1000w Bateria 60v Cor Azul" class="h-full w-full object-contain" referrerpolicy="no-referrer">
+            <div class="aspect-video w-full overflow-hidden rounded-xl shadow-glow relative">
+              <iframe class="absolute inset-0 h-full w-full" src="https://www.youtube.com/embed/eW068vVUQDU?si=hhGIXj4qRD-2Z79z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
           <p class="relative mt-4 text-center text-xs text-brand-dim">X13 60V Azul · 1000W · bateria 60V</p>
         </div>
       </header>
 
-      <nav class="glass mb-8 flex flex-wrap gap-2 p-3 sm:p-4" aria-label="Índice da review">
-        <p class="w-full text-[10px] font-bold uppercase tracking-wider text-brand-dim">Índice</p>
-        <a href="#veredito" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Veredito</a>
-        <a href="#pros-contras" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Prós e Contras</a>
-        <a href="#especificacoes" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Especificações</a>
-        <a href="#compradores" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Compradores</a>
-        <a href="#analise" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Análise</a>
-        <a href="#faq" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">FAQ</a>
+      <nav class="glass mb-8 flex flex-nowrap items-center gap-2 overflow-x-auto snap-x whitespace-nowrap scrollbar-hide p-3 sm:p-4" aria-label="Índice da review">
+        <p class="shrink-0 snap-start pr-1 text-[10px] font-bold uppercase tracking-wider text-brand-dim">Índice</p>
+        <a href="#veredito" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Veredito</a>
+        <a href="#compradores" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Compradores</a>
+        <a href="#pros-contras" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Prós e Contras</a>
+        <a href="#especificacoes" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Especificações</a>
+        <a href="#analise" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Análise</a>
+        <a href="#faq" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">FAQ</a>
       </nav>
 
       <section id="veredito" class="mb-10 scroll-mt-28 grid grid-cols-2 gap-4 md:grid-cols-4" aria-label="Veredito rápido">
@@ -373,6 +375,27 @@
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Promessa</h3>
           <p class="m-0 text-sm text-brand-muted">Mobilidade com pack 60V e design azul — confira Ah, autonomia, teto de velocidade e frete no anúncio do Mercado Livre.</p>
         </article>
+      </section>
+
+      <section id="compradores" class="mb-10 scroll-mt-28" aria-label="Fotos de quem comprou">
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-brand-yellow">quem comprou</span></h2>
+        <div class="glass p-5 md:p-6">
+          <p class="mb-4 text-sm text-brand-muted">Imagens no estilo de quem comprou — o tipo de prova social que você vê em Instagram e no anúncio — e fotos do produto no contexto real de uso.</p>
+          <div class="relative flex w-full gap-4 overflow-x-auto scroll-smooth scrollbar-hide">
+            <div class="flex gap-4 animate-marquee">
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_619632-MLA113163361563_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_947005-MLA112847497277_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_717739-MLA111611220490_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_749775-MLA114603133657_072026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_627571-MLA114154488796_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_619632-MLA113163361563_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_947005-MLA112847497277_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_717739-MLA111611220490_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_749775-MLA114603133657_072026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_627571-MLA114154488796_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="pros-contras" class="mb-10 scroll-mt-28">
@@ -419,27 +442,6 @@
               <tr class="even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Preço observado</th><td class="px-4 py-3 text-brand-muted">~R$ 10.440 no Mercado Livre (ofertas e 12x sem juros variam — confira o dia)</td></tr>
             </tbody>
           </table>
-        </div>
-      </section>
-
-      <section id="compradores" class="mb-10 scroll-mt-28" aria-label="Fotos de quem comprou">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-brand-yellow">quem comprou</span></h2>
-        <div class="glass p-5 md:p-6">
-          <p class="mb-4 text-sm text-brand-muted">Imagens no estilo de quem comprou — o tipo de prova social que você vê em Instagram e no anúncio — e fotos do produto no contexto real de uso.</p>
-          <div class="overflow-hidden w-full relative">
-            <div class="flex gap-4 animate-marquee">
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_619632-MLA113163361563_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_947005-MLA112847497277_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_717739-MLA111611220490_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_749775-MLA114603133657_072026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_627571-MLA114154488796_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_619632-MLA113163361563_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_947005-MLA112847497277_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_717739-MLA111611220490_062026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_749775-MLA114603133657_072026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_627571-MLA114154488796_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-            </div>
-          </div>
         </div>
       </section>
 
