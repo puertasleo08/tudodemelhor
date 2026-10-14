@@ -75,6 +75,8 @@
     @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
     .animate-marquee { animation: marquee 25s linear infinite; width: max-content; }
     .animate-marquee:hover, .animate-marquee:active { animation-play-state: paused; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
   </style>
   <script type="application/ld+json">
   {
@@ -299,25 +301,25 @@
           </div>
         </div>
 
-        <div class="glass relative order-1 flex h-full min-h-[420px] flex-col overflow-hidden p-5 shadow-glow-emerald md:order-2 md:min-h-0 md:p-6">
+        <div class="glass relative order-1 flex flex-col self-center overflow-hidden p-5 shadow-glow-emerald md:order-2 md:p-6">
           <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-brand-yellow/5"></div>
           <div class="relative flex min-h-0 flex-1 items-center justify-center">
-            <div class="hero-video-wrap relative mx-auto aspect-[9/16] h-full w-full max-h-full max-w-[min(100%,315px)] overflow-hidden rounded-2xl bg-black/20 shadow-lg">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_844827-MLB117511102955_092026-F.webp" alt="Oimotoo A9 bicicleta elétrica dobrável 600W 40 km/h — bike elétrica preta aro 14" class="h-full w-full object-contain" referrerpolicy="no-referrer">
+            <div class="hero-video-wrap aspect-video w-full overflow-hidden rounded-xl shadow-glow relative bg-black/20">
+              <iframe class="absolute inset-0 h-full w-full" src="https://www.youtube.com/embed/Mhai_rFpIA0?si=mPNjTPNKEaK88B51" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
           <p class="relative mt-4 text-center text-xs text-brand-dim">Oimotoo A9 · 600W · 40 km/h · 40 km · dobrável</p>
         </div>
       </header>
 
-      <nav class="glass mb-8 flex flex-wrap gap-2 p-3 sm:p-4" aria-label="Índice da review">
-        <p class="w-full text-[10px] font-bold uppercase tracking-wider text-brand-dim">Índice</p>
-        <a href="#veredito" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Veredito</a>
-        <a href="#compradores" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Compradores</a>
-        <a href="#pros-contras" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Prós e Contras</a>
-        <a href="#especificacoes" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Especificações</a>
-        <a href="#analise" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Análise</a>
-        <a href="#faq" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">FAQ</a>
+      <nav class="glass mb-8 flex flex-nowrap items-center gap-2 overflow-x-auto snap-x whitespace-nowrap scrollbar-hide p-3 sm:p-4" aria-label="Índice da review">
+        <p class="shrink-0 snap-start pr-1 text-[10px] font-bold uppercase tracking-wider text-brand-dim">Índice</p>
+        <a href="#veredito" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Veredito</a>
+        <a href="#compradores" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Compradores</a>
+        <a href="#pros-contras" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Prós e Contras</a>
+        <a href="#especificacoes" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Especificações</a>
+        <a href="#analise" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Análise</a>
+        <a href="#faq" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">FAQ</a>
       </nav>
 
       <section id="veredito" class="mb-10 scroll-mt-28 grid grid-cols-2 gap-4 md:grid-cols-4" aria-label="Veredito rápido">
@@ -333,17 +335,52 @@
           <p class="mt-4 text-brand-muted">A Oimotoo A9 vale a pena quando potência e velocidade pesam mais que o menor preço. É a <strong>bicicleta elétrica dobrável</strong> mais forte desta lista compacta: 600W, 40 km/h e 40 km de autonomia.</p>
         </article>
         <article class="glass p-5">
-          <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Para quem é</h3>
+          <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">🎯</span> Para quem é</h3>
           <p class="m-0 text-sm text-brand-muted">Quem quer 40 km/h em commute urbano e aceita um pouco mais de peso (~25 kg) para ter 600W.</p>
         </article>
         <article class="glass p-5">
-          <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Diferencial</h3>
+          <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">⭐</span> Diferencial</h3>
           <p class="m-0 text-sm font-bold text-brand-yellow">600W · 40 km/h · 40 km</p>
         </article>
         <article class="glass col-span-2 p-5 md:col-span-2">
-          <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Promessa</h3>
+          <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">🤝</span> Promessa</h3>
           <p class="m-0 text-sm text-brand-muted">Alta performance dobrável — arranca mais forte que um 440W, cobre até 40 km e ainda cabe no elevador.</p>
         </article>
+      </section>
+
+      <section id="compradores" class="mb-10 scroll-mt-28" aria-label="Fotos de quem comprou">
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-brand-yellow">quem comprou</span></h2>
+        <div class="glass p-5 md:p-6">
+          <p class="mb-4 text-sm text-brand-muted">O anúncio não listou fotos de compradores neste lote — abaixo estão ângulos oficiais da bicicleta elétrica dobrável no Mercado Livre.</p>
+          <div class="relative w-full overflow-x-auto scroll-smooth scrollbar-hide snap-x touch-pan-x">
+            <div class="flex gap-4 animate-marquee overflow-x-auto scroll-smooth scrollbar-hide snap-x touch-pan-x">
+            <div class="glass shrink-0 snap-start w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_844827-MLB117511102955_092026-F.webp" alt="Oimotoo A9 bicicleta elétrica dobrável 600W 40 km/h — bike elétrica preta aro 14" class="w-full h-full object-cover" loading="lazy" decoding="async">
+            </div>
+            <div class="glass shrink-0 snap-start w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_959196-MLB116033697350_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="Oimotoo A9 bicicleta elétrica 600W dobrável — foto 2 da galeria no Mercado Livre" class="w-full h-full object-cover" loading="lazy" decoding="async">
+            </div>
+            <div class="glass shrink-0 snap-start w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_781495-MLB116033756808_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="Oimotoo A9 bike elétrica 600W — foto 3 da galeria, detalhes do quadro" class="w-full h-full object-cover" loading="lazy" decoding="async">
+            </div>
+            <div class="glass shrink-0 snap-start w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_734295-MLB116033756806_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="Oimotoo A9 bicicleta elétrica dobrável 40 km — foto 4 da galeria" class="w-full h-full object-cover" loading="lazy" decoding="async">
+            </div>
+            <div class="glass shrink-0 snap-start w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_844827-MLB117511102955_092026-F.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
+            </div>
+            <div class="glass shrink-0 snap-start w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_959196-MLB116033697350_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
+            </div>
+            <div class="glass shrink-0 snap-start w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_781495-MLB116033756808_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
+            </div>
+            <div class="glass shrink-0 snap-start w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_734295-MLB116033756806_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
+            </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="pros-contras" class="mb-10 scroll-mt-28">
@@ -390,41 +427,6 @@
               <tr class="even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Preço observado</th><td class="px-4 py-3 text-brand-muted">A partir de R$ 2.999 (confira o dia)</td></tr>
             </tbody>
           </table>
-        </div>
-      </section>
-
-      <section id="compradores" class="mb-10 scroll-mt-28" aria-label="Fotos de quem comprou">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-brand-yellow">quem comprou</span></h2>
-        <div class="glass p-5 md:p-6">
-          <p class="mb-4 text-sm text-brand-muted">O anúncio não listou fotos de compradores neste lote — abaixo estão ângulos oficiais da bicicleta elétrica dobrável no Mercado Livre.</p>
-          <div class="overflow-hidden w-full relative">
-            <div class="flex gap-4 animate-marquee">
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_844827-MLB117511102955_092026-F.webp" alt="Oimotoo A9 bicicleta elétrica dobrável 600W 40 km/h — bike elétrica preta aro 14" class="w-full h-full object-cover" loading="lazy" decoding="async">
-            </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_959196-MLB116033697350_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="Oimotoo A9 bicicleta elétrica 600W dobrável — foto 2 da galeria no Mercado Livre" class="w-full h-full object-cover" loading="lazy" decoding="async">
-            </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_781495-MLB116033756808_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="Oimotoo A9 bike elétrica 600W — foto 3 da galeria, detalhes do quadro" class="w-full h-full object-cover" loading="lazy" decoding="async">
-            </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_734295-MLB116033756806_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="Oimotoo A9 bicicleta elétrica dobrável 40 km — foto 4 da galeria" class="w-full h-full object-cover" loading="lazy" decoding="async">
-            </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_844827-MLB117511102955_092026-F.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
-            </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_959196-MLB116033697350_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
-            </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_781495-MLB116033756808_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
-            </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_734295-MLB116033756806_092026-F-oimotoo-a9-bicicleta-eletrica-600w-dobravel-40kmh40km.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
-            </div>
-            </div>
-          </div>
         </div>
       </section>
 
