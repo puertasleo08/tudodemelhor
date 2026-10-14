@@ -151,12 +151,17 @@
       background-attachment: fixed;
     }
     .marquee-track:hover, .marquee-track:focus-within { animation-play-state: paused; }
+    .price-bar {
+      background-size: 200% 100%;
+      animation: price-flow 3s linear infinite;
+    }
+    @keyframes price-flow { 0% { background-position: 0% 0; } 100% { background-position: -200% 0; } }
     .marquee-mask {
       -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
       mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
     }
     @media (prefers-reduced-motion: reduce) {
-      .marquee-track, .animate-shine, .animate-pulse-soft, .animate-float, .animate-fade-up { animation: none !important; }
+      .marquee-track, .price-bar, .animate-shine, .animate-pulse-soft, .animate-float, .animate-fade-up { animation: none !important; }
       .marquee-wrap { overflow-x: auto; }
     }
   </style>
@@ -200,6 +205,109 @@
       <div class="mx-auto max-w-md animate-float">
         <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/2H57Yr5">👑 Ver a campeã: Ouxi V9 Max S →</a>
         <p class="mt-2 text-xs text-brand-dim">2 baterias · antifurto completo · freio hidráulico</p>
+      </div>
+    </section>
+
+    <!-- PROVA SOCIAL -->
+    <section id="compradores" class="scroll-mt-20 pb-12">
+      <div class="glass relative overflow-hidden border-brand-green/40 py-8 shadow-glow-green md:py-10">
+        <div class="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand-green/20 blur-3xl" aria-hidden="true"></div>
+        <div class="relative px-5 text-center">
+          <h2 class="mb-6 text-2xl font-black md:text-3xl">Fotos e Vídeos de Quem Já Comprou</h2>
+        </div>
+        <div class="marquee-wrap marquee-mask relative overflow-hidden">
+          <div class="marquee-track flex w-max gap-4 animate-marquee px-2">
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 1" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
+              <video data-hls="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/019fa5c4df507b7ba6f23eb7374734be/master.m3u8" class="buyer-video h-full w-full object-cover" muted loop playsinline autoplay preload="none" aria-label="Vídeo de comprador verificado rodando com a bike elétrica"></video>
+              <span class="absolute right-3 top-3 rounded-full bg-black/60 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white">▶ Vídeo</span>
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_890165-MLA107291357737_022026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 3" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 4" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_636814-MLA113467269380_072026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 5" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_946841-MLA109687587586_042026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 6" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_720694-MLA109688056946_042026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 7" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
+              <video data-hls="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/019fa5c4df507b7ba6f23eb7374734be/master.m3u8" class="buyer-video h-full w-full object-cover" muted loop playsinline autoplay preload="none" aria-label=""></video>
+              <span class="absolute right-3 top-3 rounded-full bg-black/60 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white">▶ Vídeo</span>
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_890165-MLA107291357737_022026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_636814-MLA113467269380_072026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_946841-MLA109687587586_042026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_720694-MLA109688056946_042026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
+                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="relative mx-auto mt-6 max-w-md px-5">
+          <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/2H57Yr5">Quero a campeã: Ouxi V9 Max S →</a>
+        </div>
       </div>
     </section>
 
@@ -258,6 +366,14 @@
                 <div class="spec"><dt>Freio</dt><dd>Hidráulico</dd></div>
                 <div class="spec"><dt>Antifurto</dt><dd>Alarme + NFC + trava</dd></div>
               </dl>
+              <div class="mt-4 rounded-xl border border-brand-green/40 bg-brand-green/10 p-4 shadow-glow-green">
+                <p class="mb-1 flex items-center gap-2 text-sm font-black text-brand-neon">📉 Preço pode mudar a qualquer momento</p>
+                <p class="mb-3 text-xs text-brand-muted">Bikes 1000W com 2 baterias costumam ter preço e estoque oscilando no Mercado Livre. Confira o valor de hoje antes que mude.</p>
+                <div class="relative h-3 overflow-hidden rounded-full bg-white/10" aria-hidden="true">
+                  <div class="price-bar absolute inset-y-0 left-0 w-full rounded-full bg-gradient-to-r from-brand-yellow via-brand-orange to-brand-neon"></div>
+                </div>
+                <p class="mt-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-brand-neon"><span class="h-1.5 w-1.5 rounded-full bg-brand-neon animate-pulse-soft" aria-hidden="true"></span> Oferta ativa no Mercado Livre agora</p>
+              </div>
             </div>
             <div class="flex flex-col gap-3 md:border-l md:border-white/10 md:pl-6">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-dim">Melhor para</p>
@@ -371,109 +487,6 @@
           </div>
         </article>
 
-      </div>
-    </section>
-
-    <!-- PROVA SOCIAL -->
-    <section id="compradores" class="scroll-mt-20 pb-12">
-      <div class="glass relative overflow-hidden border-brand-green/40 py-8 shadow-glow-green md:py-10">
-        <div class="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-brand-green/20 blur-3xl" aria-hidden="true"></div>
-        <div class="relative px-5 text-center">
-          <h2 class="mb-6 text-2xl font-black md:text-3xl">Fotos e Vídeos de Quem Já Comprou</h2>
-        </div>
-        <div class="marquee-wrap marquee-mask relative overflow-hidden">
-          <div class="marquee-track flex w-max gap-4 animate-marquee px-2">
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 1" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
-              <video data-hls="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/019fa5c4df507b7ba6f23eb7374734be/master.m3u8" class="buyer-video h-full w-full object-cover" muted loop playsinline autoplay preload="none" aria-label="Vídeo de comprador verificado rodando com a bike elétrica"></video>
-              <span class="absolute right-3 top-3 rounded-full bg-black/60 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white">▶ Vídeo</span>
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_890165-MLA107291357737_022026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 3" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 4" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_636814-MLA113467269380_072026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 5" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_946841-MLA109687587586_042026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 6" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_720694-MLA109688056946_042026-F.webp" alt="Foto de comprador verificado da bike elétrica no Mercado Livre 7" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
-              <video data-hls="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/019fa5c4df507b7ba6f23eb7374734be/master.m3u8" class="buyer-video h-full w-full object-cover" muted loop playsinline autoplay preload="none" aria-label=""></video>
-              <span class="absolute right-3 top-3 rounded-full bg-black/60 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white">▶ Vídeo</span>
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_890165-MLA107291357737_022026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_636814-MLA113467269380_072026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_946841-MLA109687587586_042026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-            <figure class="glass group relative aspect-[3/4] w-56 shrink-0 overflow-hidden border-brand-green/30 transition-transform duration-300 hover:scale-[1.02] hover:shadow-glow-green sm:w-64" aria-hidden="true">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_720694-MLA109688056946_042026-F.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="300" height="400" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-              <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 pt-8">
-                <span class="block text-sm text-brand-yellow" aria-label="Nota 5 de 5">★★★★★</span>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class="relative mx-auto mt-6 max-w-md px-5">
-          <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/2H57Yr5">Quero a campeã: Ouxi V9 Max S →</a>
-        </div>
       </div>
     </section>
 
