@@ -66,7 +66,8 @@
               elevated: '#1B2530',
               border: '#37475A',
               muted: '#D5D9D9',
-              dim: '#AAB3BD'
+              dim: '#AAB3BD',
+              neon: '#34F5A0'
             }
           },
           fontFamily: {
@@ -76,10 +77,21 @@
             glow: '0 0 15px rgba(255, 230, 0, 0.4)',
             'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
             'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
-            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)'
+            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)',
+            'glow-green': '0 0 20px rgba(16, 185, 129, 0.4)',
+            'glow-dual': '0 0 28px rgba(255, 230, 0, 0.3), 0 0 44px rgba(16, 185, 129, 0.35)'
           },
           backgroundImage: {
             'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
+          },
+          keyframes: {
+            'pulse-soft': {
+              '0%, 100%': { boxShadow: '0 0 0 0 rgba(52, 245, 160, 0.45)' },
+              '50%': { boxShadow: '0 0 0 6px rgba(52, 245, 160, 0)' }
+            }
+          },
+          animation: {
+            'pulse-soft': 'pulse-soft 2.2s ease-in-out infinite'
           }
         }
       }
@@ -89,6 +101,9 @@
     @layer utilities {
       .glass {
         @apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;
+      }
+      .badge-neon {
+        @apply inline-flex items-center gap-1.5 rounded-full border border-brand-neon/50 bg-emerald-500/15 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-brand-neon shadow-glow-green animate-pulse-soft sm:text-[11px];
       }
     }
   </style>
@@ -111,6 +126,10 @@
     details > summary { list-style: none; }
     details > summary::-webkit-details-marker { display: none; }
     details[open] .faq-chevron { transform: rotate(180deg); }
+    @media (prefers-reduced-motion: reduce) {
+      .animate-pulse-soft, .badge-neon { animation: none !important; }
+      .price-dot-ring { display: none; }
+    }
   </style>
 </head>
 <body class="bg-brand-bg text-white font-sans antialiased min-h-screen pb-24 md:pb-0">
@@ -237,15 +256,21 @@
 
     <!-- VENCEDOR IMEDIATO -->
     <section id="vencedor" class="scroll-mt-28 py-8">
-      <div class="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border-2 border-brand-yellow bg-brand-elevated shadow-glow-lg">
+      <div class="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border-2 border-brand-yellow bg-brand-elevated shadow-glow-dual ring-1 ring-emerald-400/40">
         <div class="bg-brand-gradient px-4 py-2.5 text-center text-xs font-black uppercase tracking-[0.18em] text-black sm:text-sm">🏆 Recomendação do Especialista</div>
         <div class="grid grid-cols-1 md:grid-cols-[300px_1fr]">
-          <div class="relative flex min-h-[220px] items-center justify-center bg-white p-6">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_838481-MLA99949573633_112025-O.webp" alt="Midea AI EcoMaster Inverter 9.000 BTUs" referrerpolicy="no-referrer" class="max-h-52 w-full object-contain">
-            <span class="absolute bottom-2 right-2 rounded bg-black/50 px-1.5 py-0.5 text-[9px] text-white">Fonte: Mercado Livre</span>
+          <div class="flex items-center justify-center p-4 pb-0 sm:p-6 sm:pb-0 md:items-start md:pb-6 md:pr-0">
+            <div class="relative flex min-h-[220px] w-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_838481-MLA99949573633_112025-O.webp" alt="Midea AI EcoMaster Inverter 9.000 BTUs" referrerpolicy="no-referrer" class="max-h-56 w-auto max-w-full rounded-xl object-contain sm:max-h-64">
+              <span class="absolute bottom-2 right-2 rounded bg-black/50 px-1.5 py-0.5 text-[9px] text-white">Fonte: Mercado Livre</span>
+            </div>
           </div>
           <div class="space-y-4 p-5 sm:p-7">
-            <span class="inline-block rounded-md bg-emerald-600 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-white">💰 Maior economia comprovada</span>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="inline-block rounded-md bg-emerald-600 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-white">💰 Maior economia comprovada</span>
+              <span class="badge-neon">💡 Até 70% de economia de energia*</span>
+              <span class="badge-neon">🔒 Compra Garantida Mercado Livre</span>
+            </div>
             <h2 class="text-2xl font-black leading-tight text-white sm:text-3xl">Midea AI EcoMaster Inverter Q/F</h2>
             <p class="text-sm leading-relaxed text-brand-muted sm:text-base">Se você quer <strong class="text-white">uma resposta rápida</strong>, é este. A inteligência artificial do EcoMaster aprende seu padrão de uso e ajusta o compressor sozinha para gastar o mínimo de energia possível. Gela e esquenta, é silencioso e custa menos que vários concorrentes "premium".</p>
             <ul class="grid grid-cols-1 gap-2 text-sm sm:grid-cols-2">
@@ -254,7 +279,81 @@
               <li class="flex items-center gap-2 text-white"><svg class="h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Um dos menores preços do Top 5</li>
               <li class="flex items-center gap-2 text-white"><svg class="h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>10 anos de garantia no compressor*</li>
             </ul>
-            <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-lg font-black text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.99]">Ver Preço no Mercado Livre →</a>
+            <div class="rounded-xl border border-emerald-400/40 bg-emerald-500/10 p-3 shadow-glow-green sm:p-4">
+              <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+                <p class="text-sm font-black uppercase tracking-wide text-brand-neon">📉 Faixa de preço no Mercado Livre (últimos 30 dias)</p>
+                <span class="badge-neon">🟢 Ofertas a partir de R$ 1.912,68 *</span>
+              </div>
+              <div class="mb-3 grid grid-cols-3 gap-1.5 text-center sm:gap-2">
+                <div class="rounded-lg border border-white/10 bg-white/5 px-2 py-2">
+                  <p class="text-[9px] font-bold uppercase tracking-wide text-brand-dim sm:text-[10px]">Início do mês</p>
+                  <p class="whitespace-nowrap text-xs font-black text-white line-through decoration-rose-400/70 sm:text-base">≈ R$ 2.750</p>
+                </div>
+                <div class="rounded-lg border border-white/10 bg-white/5 px-2 py-2">
+                  <p class="text-[9px] font-bold uppercase tracking-wide text-brand-dim sm:text-[10px]">Menor histórico</p>
+                  <p class="whitespace-nowrap text-xs font-black text-white sm:text-base">R$ 1.889,00</p>
+                </div>
+                <div class="rounded-lg border border-emerald-400/50 bg-emerald-500/15 px-2 py-2">
+                  <p class="text-[9px] font-bold uppercase tracking-wide text-brand-neon sm:text-[10px]">Menor atual</p>
+                  <p class="whitespace-nowrap text-xs font-black text-brand-neon sm:text-base">R$ 1.912,68</p>
+                </div>
+              </div>
+              <svg viewBox="0 0 320 124" class="h-auto w-full" role="img" aria-label="Menor preço do Midea AI EcoMaster no Mercado Livre entre 02/10 e 14/10: cerca de R$ 2.750 até 04/10, queda para cerca de R$ 2.050 em 05/10, mínimo de R$ 1.889 em 07/10 e R$ 1.912,68 em 14/10">
+                <defs>
+                  <linearGradient id="ac-line" x1="0" x2="1" y1="0" y2="0">
+                    <stop offset="0%" stop-color="#FFE600"/>
+                    <stop offset="45%" stop-color="#FF9900"/>
+                    <stop offset="100%" stop-color="#34F5A0"/>
+                  </linearGradient>
+                  <linearGradient id="ac-area" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="rgba(52, 245, 160, 0.15)"/>
+                    <stop offset="100%" stop-color="rgba(52, 245, 160, 0)"/>
+                  </linearGradient>
+                </defs>
+                <g stroke="rgba(255,255,255,0.08)" stroke-width="1">
+                  <line x1="20" x2="300" y1="12" y2="12"/>
+                  <line x1="20" x2="300" y1="60" y2="60"/>
+                  <line x1="20" x2="300" y1="108" y2="108"/>
+                </g>
+                <g fill="#AAB3BD" font-size="7" font-family="Inter, sans-serif">
+                  <text x="0" y="14">2.800</text>
+                  <text x="0" y="62">2.300</text>
+                  <text x="0" y="110">1.800</text>
+                </g>
+                <path d="M20 16.8 L100 16.8 C120 16.8 120 84 140 84 C160 84 160 82.1 180 82.1 C200 82.1 200 99.5 220 99.5 C240 99.5 240 82.1 260 82.1 C280 82.1 280 97.2 300 97.2 L300 108 L20 108 Z" fill="url(#ac-area)"/>
+                <path d="M20 16.8 L100 16.8 C120 16.8 120 84 140 84 C160 84 160 82.1 180 82.1 C200 82.1 200 99.5 220 99.5 C240 99.5 240 82.1 260 82.1 C280 82.1 280 97.2 300 97.2" fill="none" stroke="url(#ac-line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <g fill="#1B2530" stroke="#FFE600" stroke-width="1.5">
+                  <circle cx="20" cy="16.8" r="2.5"/>
+                  <circle cx="60" cy="16.8" r="2.5"/>
+                  <circle cx="100" cy="16.8" r="2.5"/>
+                  <circle cx="140" cy="84" r="2.5" stroke="#FF9900"/>
+                  <circle cx="180" cy="82.1" r="2.5" stroke="#FF9900"/>
+                  <circle cx="260" cy="82.1" r="2.5" stroke="#34F5A0"/>
+                </g>
+                <circle cx="220" cy="99.5" r="3" fill="#fff"/>
+                <text x="220" y="119" fill="#D5D9D9" font-size="7" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">mín. R$ 1.889</text>
+                <circle class="price-dot-ring" cx="300" cy="97.2" r="5" fill="none" stroke="#34F5A0" stroke-width="2">
+                  <animate attributeName="r" values="5;11;5" dur="2.2s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.9;0;0.9" dur="2.2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="300" cy="97.2" r="5" fill="#34F5A0"/>
+                <text x="304" y="70" fill="#34F5A0" font-size="8" font-weight="800" text-anchor="end" font-family="Inter, sans-serif">hoje R$ 1.912,68</text>
+              </svg>
+              <div class="relative mt-1 h-4 text-[9px] font-semibold text-brand-dim sm:text-[10px]" aria-hidden="true">
+                <span class="absolute -translate-x-1/2" style="left:6.25%">02/10</span>
+                <span class="absolute -translate-x-1/2" style="left:18.75%">03/10</span>
+                <span class="absolute -translate-x-1/2" style="left:31.25%">04/10</span>
+                <span class="absolute -translate-x-1/2" style="left:43.75%">05/10</span>
+                <span class="absolute -translate-x-1/2" style="left:56.25%">06/10</span>
+                <span class="absolute -translate-x-1/2" style="left:68.75%">07/10</span>
+                <span class="absolute -translate-x-1/2" style="left:81.25%">08/10</span>
+                <span class="absolute -translate-x-1/2 text-brand-neon" style="left:93.75%">14/10</span>
+              </div>
+              <div class="mt-3 rounded-lg border border-brand-yellow/30 bg-brand-yellow/10 p-3 text-[11px] leading-relaxed text-brand-muted sm:text-xs">
+                <p><strong class="text-brand-yellow">* 📌 Nota sobre valores:</strong> O preço pode variar entre R$ 1.889 e R$ 2.579 conforme a voltagem escolhida (127V ou 220V), a região do frete e o vendedor selecionado. Clique em 'Ver Preço' para conferir a oferta ativa para a sua cidade.</p>
+              </div>
+            </div>
+            <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-4 text-base font-black sm:px-6 sm:text-lg text-black shadow-glow-lg transition-transform duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-[0.99]">Ver Preço no Mercado Livre →</a>
             <p class="text-center text-xs text-brand-dim">🔒 Compra protegida pelo Mercado Livre · Frete e parcelamento no anúncio</p>
           </div>
         </div>
@@ -292,7 +391,7 @@
               <td class="px-3 py-4 align-middle">Maior economia comprovada</td>
               <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-400">●●●●●</span><span class="block text-xs">Muito baixo</span></td>
               <td class="whitespace-nowrap px-3 py-4 align-middle">
-                <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-yellow px-4 text-sm font-black text-black shadow-glow transition hover:brightness-110">Ver Preço</a>
+                <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-gradient px-4 text-sm font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110">Ver Preço</a>
               </td>
             </tr>
             <tr class="border-b border-white/5">
@@ -302,7 +401,7 @@
               <td class="px-3 py-4 align-middle">Gela sem vento direto</td>
               <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-400">●●●●●</span><span class="block text-xs">Muito baixo</span></td>
               <td class="whitespace-nowrap px-3 py-4 align-middle">
-                <a href="https://meli.la/2ZZLurG" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-yellow px-4 text-sm font-black text-black shadow-glow transition hover:brightness-110">Ver Preço</a>
+                <a href="https://meli.la/2ZZLurG" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-gradient px-4 text-sm font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110">Ver Preço</a>
               </td>
             </tr>
             <tr class="border-b border-white/5">
@@ -312,7 +411,7 @@
               <td class="px-3 py-4 align-middle">Confiável + controle por voz</td>
               <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-400">●●●●○</span><span class="block text-xs">Baixo</span></td>
               <td class="whitespace-nowrap px-3 py-4 align-middle">
-                <a href="https://meli.la/1dShFqo" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-yellow px-4 text-sm font-black text-black shadow-glow transition hover:brightness-110">Ver Preço</a>
+                <a href="https://meli.la/1dShFqo" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-gradient px-4 text-sm font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110">Ver Preço</a>
               </td>
             </tr>
             <tr class="border-b border-white/5">
@@ -322,7 +421,7 @@
               <td class="px-3 py-4 align-middle">Robusto, quente e frio</td>
               <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-400">●●●●○</span><span class="block text-xs">Baixo</span></td>
               <td class="whitespace-nowrap px-3 py-4 align-middle">
-                <a href="https://meli.la/1u6ycm8" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-yellow px-4 text-sm font-black text-black shadow-glow transition hover:brightness-110">Ver Preço</a>
+                <a href="https://meli.la/1u6ycm8" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-gradient px-4 text-sm font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110">Ver Preço</a>
               </td>
             </tr>
             <tr>
@@ -332,7 +431,7 @@
               <td class="px-3 py-4 align-middle">Inverter + Wi-Fi mais acessível</td>
               <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-400">●●●●○</span><span class="block text-xs">Baixo</span></td>
               <td class="whitespace-nowrap px-3 py-4 align-middle">
-                <a href="https://meli.la/24WS5Ui" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-yellow px-4 text-sm font-black text-black shadow-glow transition hover:brightness-110">Ver Preço</a>
+                <a href="https://meli.la/24WS5Ui" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-gradient px-4 text-sm font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110">Ver Preço</a>
               </td>
             </tr>
           </tbody>
@@ -352,7 +451,7 @@
 
       <!-- 1. MIDEA -->
       <article id="midea-ai-ecomaster" class="scroll-mt-28 mx-auto max-w-4xl space-y-5">
-        <div class="glass overflow-hidden border-brand-yellow/40">
+        <div class="glass overflow-hidden border-emerald-400/50 shadow-glow-green">
           <div class="grid grid-cols-1 items-stretch md:grid-cols-[280px_1fr]">
             <div class="relative flex min-h-[220px] items-center justify-center bg-white p-5">
               <img src="https://http2.mlstatic.com/D_NQ_NP_838481-MLA99949573633_112025-O.webp" alt="Ar Condicionado Split 9.000 Btus Inverter AI EcoMaster Q/F Midea" referrerpolicy="no-referrer" loading="lazy" class="max-h-48 w-full object-contain">
@@ -369,7 +468,7 @@
           </div>
         </div>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-3">
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>Até 70% de economia (Inverter)</li>
+          <li class="flex items-center gap-2 rounded-xl border border-brand-neon/50 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-brand-neon shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
           <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
           <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
         </ul>
@@ -390,7 +489,7 @@
             </ul>
           </div>
         </div>
-        <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-lg font-black text-black shadow-glow transition hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
+        <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-4 text-base font-black sm:px-6 sm:text-lg text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
       </article>
 
       <!-- 2. SAMSUNG -->
@@ -412,7 +511,7 @@
           </div>
         </div>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-3">
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>Até 70% de economia (Inverter)</li>
+          <li class="flex items-center gap-2 rounded-xl border border-brand-neon/50 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-brand-neon shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
           <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
           <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
         </ul>
@@ -433,7 +532,7 @@
             </ul>
           </div>
         </div>
-        <a href="https://meli.la/2ZZLurG" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-lg font-black text-black shadow-glow transition hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
+        <a href="https://meli.la/2ZZLurG" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-4 text-base font-black sm:px-6 sm:text-lg text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
       </article>
 
       <!-- 3. LG -->
@@ -455,7 +554,7 @@
           </div>
         </div>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-3">
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>Até 70% de economia (Inverter)</li>
+          <li class="flex items-center gap-2 rounded-xl border border-brand-neon/50 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-brand-neon shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
           <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
           <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
         </ul>
@@ -476,7 +575,7 @@
             </ul>
           </div>
         </div>
-        <a href="https://meli.la/1dShFqo" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-lg font-black text-black shadow-glow transition hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
+        <a href="https://meli.la/1dShFqo" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-4 text-base font-black sm:px-6 sm:text-lg text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
       </article>
 
       <!-- 4. GREE -->
@@ -498,7 +597,7 @@
           </div>
         </div>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-3">
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>Até 70% de economia (Inverter)</li>
+          <li class="flex items-center gap-2 rounded-xl border border-brand-neon/50 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-brand-neon shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
           <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
           <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
         </ul>
@@ -519,7 +618,7 @@
             </ul>
           </div>
         </div>
-        <a href="https://meli.la/1u6ycm8" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-lg font-black text-black shadow-glow transition hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
+        <a href="https://meli.la/1u6ycm8" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-4 text-base font-black sm:px-6 sm:text-lg text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
       </article>
 
       <!-- 5. ELGIN -->
@@ -541,7 +640,7 @@
           </div>
         </div>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-3">
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>Até 70% de economia (Inverter)</li>
+          <li class="flex items-center gap-2 rounded-xl border border-brand-neon/50 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-brand-neon shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
           <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
           <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de fábrica no compressor**</li>
         </ul>
@@ -562,7 +661,7 @@
             </ul>
           </div>
         </div>
-        <a href="https://meli.la/24WS5Ui" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-lg font-black text-black shadow-glow transition hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
+        <a href="https://meli.la/24WS5Ui" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-4 text-base font-black sm:px-6 sm:text-lg text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
       </article>
 
       <p class="mx-auto max-w-4xl text-xs leading-relaxed text-brand-dim">* Samsung, LG, Gree e Midea oferecem 10 anos de garantia no compressor dos modelos Inverter, normalmente condicionada à instalação por empresa credenciada e à nota fiscal do serviço. ** Consulte o prazo de garantia do compressor da Elgin no anúncio. A economia de "até 70%" é a divulgada pelos fabricantes em relação a aparelhos convencionais e varia conforme o uso.</p>
@@ -634,14 +733,14 @@
       <div class="glass mt-8 space-y-4 border-brand-yellow/40 p-6 text-center">
         <p class="text-lg font-black text-white">Resumo: se é para escolher um só, vá de <span class="text-brand-yellow">Midea AI EcoMaster</span>.</p>
         <p class="text-sm text-brand-muted">Maior economia, quente e frio e um dos menores preços do Top 5.</p>
-        <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-lg font-black text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
+        <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-4 text-base font-black sm:px-6 sm:text-lg text-black shadow-glow-lg transition-transform duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
       </div>
     </section>
   </main>
 
   <!-- CTA fixo mobile -->
   <div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-brand-elevated/95 p-3 backdrop-blur-md md:hidden">
-    <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-4 text-base font-black text-black shadow-glow">🏆 Ver preço do campeão →</a>
+    <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-4 text-base font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02]">🏆 Ver preço do campeão →</a>
   </div>
 
   <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
