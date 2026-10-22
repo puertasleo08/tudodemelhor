@@ -12,6 +12,20 @@
     gtag('config', 'AW-18490413648');
     gtag('event', 'conversion', {'send_to': 'AW-18490413648/FQ1MCJr2y5QdENCk9fBE'});
   </script>
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
   <!-- Google tag (gtag.js) event - delayed navigation helper -->
   <script>
     function gtagSendEvent(url) {
@@ -197,7 +211,7 @@
             <div class="flex flex-col gap-3 md:border-l md:border-white/10 md:pl-6">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-dim">A partir de</p>
               <p class="text-4xl font-black text-brand-yellow">R$ 2.806</p>
-              <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/14nVSPT">Ver oferta no Mercado Livre →</a>
+              <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/14nVSPT');" href="https://meli.la/14nVSPT">Ver oferta no Mercado Livre →</a>
               <p class="text-center text-xs text-brand-dim">✔ Ideal para primeira bike elétrica</p>
             </div>
           </div>
@@ -226,7 +240,7 @@
             <div class="flex flex-col gap-3 md:border-l md:border-white/10 md:pl-6">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-dim">A partir de</p>
               <p class="text-4xl font-black text-brand-yellow">R$ 5.067</p>
-              <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/2bQvZua">Ver oferta no Mercado Livre →</a>
+              <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2bQvZua');" href="https://meli.la/2bQvZua">Ver oferta no Mercado Livre →</a>
               <p class="text-center text-xs text-brand-dim">✔ Ideal para trabalho e subidas</p>
             </div>
           </div>
@@ -255,7 +269,7 @@
             <div class="flex flex-col gap-3 md:border-l md:border-white/10 md:pl-6">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-dim">A partir de</p>
               <p class="text-4xl font-black text-brand-yellow">R$ 3.685</p>
-              <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/1MDt7cC">Ver oferta no Mercado Livre →</a>
+              <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/1MDt7cC');" href="https://meli.la/1MDt7cC">Ver oferta no Mercado Livre →</a>
               <p class="text-center text-xs text-brand-dim">✔ Ideal para cidade, buraco e apartamento</p>
             </div>
           </div>
@@ -284,7 +298,7 @@
             <div class="flex flex-col gap-3 md:border-l md:border-white/10 md:pl-6">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-dim">A partir de</p>
               <p class="text-4xl font-black text-brand-yellow">R$ 7.053</p>
-              <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/2vgWTUZ">Ver oferta no Mercado Livre →</a>
+              <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2vgWTUZ');" href="https://meli.la/2vgWTUZ">Ver oferta no Mercado Livre →</a>
               <p class="text-center text-xs text-brand-dim">✔ Ideal para subidas e trajetos longos</p>
             </div>
           </div>
@@ -313,7 +327,7 @@
             <div class="flex flex-col gap-3 md:border-l md:border-white/10 md:pl-6">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-dim">A partir de</p>
               <p class="text-4xl font-black text-brand-yellow">R$ 9.832</p>
-              <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/23H3Ukp">Ver oferta no Mercado Livre →</a>
+              <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/23H3Ukp');" href="https://meli.la/23H3Ukp">Ver oferta no Mercado Livre →</a>
               <p class="text-center text-xs text-brand-dim">✔ Ideal para quem roda mais de 50 km por dia</p>
             </div>
           </div>
@@ -338,11 +352,11 @@
             </tr>
           </thead>
           <tbody class="text-brand-muted">
-            <tr class="border-b border-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">1. STARMEGA F9</th><td class="px-4 py-3">400W</td><td class="px-4 py-3">48V 10Ah</td><td class="px-4 py-3">15–20 km</td><td class="px-4 py-3 font-bold text-white">R$ 2.806</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/14nVSPT">Ver oferta</a></td></tr>
-            <tr class="border-b border-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">2. NADO C2</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">48V 20Ah</td><td class="px-4 py-3">Até 60 km</td><td class="px-4 py-3 font-bold text-white">R$ 5.067</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/2bQvZua">Ver oferta</a></td></tr>
-            <tr class="border-b border-white/5 bg-brand-yellow/5"><th scope="row" class="px-4 py-3 font-semibold text-white">3. Honeywhale S6-S <span class="ml-1 text-[10px] font-black uppercase text-brand-yellow">Custo-benefício</span></th><td class="px-4 py-3">750W</td><td class="px-4 py-3">48V 15Ah</td><td class="px-4 py-3">Até 40 km</td><td class="px-4 py-3 font-bold text-white">R$ 3.685</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/1MDt7cC">Ver oferta</a></td></tr>
-            <tr class="border-b border-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">4. Ouxi V9 Max</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">48V 15,6Ah</td><td class="px-4 py-3">50–60 km</td><td class="px-4 py-3 font-bold text-white">R$ 7.053</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/2vgWTUZ">Ver oferta</a></td></tr>
-            <tr><th scope="row" class="px-4 py-3 font-semibold text-white">5. Ouxi V8 Pro S</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">2× 48V 15Ah</td><td class="px-4 py-3">80–100 km</td><td class="px-4 py-3 font-bold text-white">R$ 9.832</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/23H3Ukp">Ver oferta</a></td></tr>
+            <tr class="border-b border-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">1. STARMEGA F9</th><td class="px-4 py-3">400W</td><td class="px-4 py-3">48V 10Ah</td><td class="px-4 py-3">15–20 km</td><td class="px-4 py-3 font-bold text-white">R$ 2.806</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/14nVSPT');" href="https://meli.la/14nVSPT">Ver oferta</a></td></tr>
+            <tr class="border-b border-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">2. NADO C2</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">48V 20Ah</td><td class="px-4 py-3">Até 60 km</td><td class="px-4 py-3 font-bold text-white">R$ 5.067</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2bQvZua');" href="https://meli.la/2bQvZua">Ver oferta</a></td></tr>
+            <tr class="border-b border-white/5 bg-brand-yellow/5"><th scope="row" class="px-4 py-3 font-semibold text-white">3. Honeywhale S6-S <span class="ml-1 text-[10px] font-black uppercase text-brand-yellow">Custo-benefício</span></th><td class="px-4 py-3">750W</td><td class="px-4 py-3">48V 15Ah</td><td class="px-4 py-3">Até 40 km</td><td class="px-4 py-3 font-bold text-white">R$ 3.685</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/1MDt7cC');" href="https://meli.la/1MDt7cC">Ver oferta</a></td></tr>
+            <tr class="border-b border-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">4. Ouxi V9 Max</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">48V 15,6Ah</td><td class="px-4 py-3">50–60 km</td><td class="px-4 py-3 font-bold text-white">R$ 7.053</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2vgWTUZ');" href="https://meli.la/2vgWTUZ">Ver oferta</a></td></tr>
+            <tr><th scope="row" class="px-4 py-3 font-semibold text-white">5. Ouxi V8 Pro S</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">2× 48V 15Ah</td><td class="px-4 py-3">80–100 km</td><td class="px-4 py-3 font-bold text-white">R$ 9.832</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/23H3Ukp');" href="https://meli.la/23H3Ukp">Ver oferta</a></td></tr>
           </tbody>
         </table>
       </div>
@@ -376,7 +390,7 @@
         <h2 class="relative mb-3 text-2xl font-black md:text-3xl">Vá de Honeywhale S6-S por R$ 3.685</h2>
         <p class="relative mx-auto mb-6 max-w-xl text-sm text-brand-muted">750W, bateria 48V, até 40 km, dobrável e com freio a disco. A escolha mais equilibrada do vídeo.</p>
         <div class="relative mx-auto max-w-md">
-          <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/1MDt7cC">Ver oferta da Honeywhale S6-S →</a>
+          <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/1MDt7cC');" href="https://meli.la/1MDt7cC">Ver oferta da Honeywhale S6-S →</a>
         </div>
       </div>
     </section>
@@ -401,7 +415,7 @@
         <p class="text-[10px] font-extrabold uppercase tracking-wider text-brand-yellow">💰 Melhor custo-benefício</p>
         <p class="truncate text-sm font-bold">Honeywhale S6-S · R$ 3.685</p>
       </div>
-      <a class="inline-flex min-h-12 shrink-0 items-center rounded-xl bg-brand-gradient px-5 text-sm font-black text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" href="https://meli.la/1MDt7cC">Ver oferta →</a>
+      <a class="inline-flex min-h-12 shrink-0 items-center rounded-xl bg-brand-gradient px-5 text-sm font-black text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/1MDt7cC');" href="https://meli.la/1MDt7cC">Ver oferta →</a>
     </div>
   </div>
 
