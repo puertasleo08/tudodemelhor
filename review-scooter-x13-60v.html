@@ -47,7 +47,8 @@
             glow: '0 0 15px rgba(255, 230, 0, 0.4)',
             'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
             'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
-            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)'
+            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)',
+            'neon-emerald': '0 0 12px rgba(52, 211, 153, 0.55), inset 0 0 8px rgba(52, 211, 153, 0.15)'
           },
           backgroundImage: {
             'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
@@ -77,6 +78,24 @@
     .animate-marquee:hover, .animate-marquee:active { animation-play-state: paused; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
+    .btn-shine::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -75%; z-index: -1; width: 50%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+      transform: skewX(-20deg);
+      animation: shine 2.8s ease-in-out infinite;
+    }
+    @keyframes shine { 0% { left: -75%; } 60%, 100% { left: 130%; } }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+    .pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .btn-shine::after { display: none; }
+      .pulse-dot { animation: none; }
+    }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .details-chevron { transform: rotate(180deg); }
   </style>
   <script type="application/ld+json">
   {
@@ -138,7 +157,7 @@
           "@type": "Offer",
           "url": "https://meli.la/1yrJ2iy",
           "priceCurrency": "BRL",
-          "price": "10440.00",
+          "price": "13990.00",
           "availability": "https://schema.org/InStock"
         },
         "aggregateRating": {
@@ -156,7 +175,7 @@
             "name": "Scooter elétrica X13 60V vale a pena?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sim, se você busca o modelo azul versátil com motor de 1000W, pack 60V e perfil scooter bike. É a #4 do nosso ranking (nota 8.8), badge Versátil. Vale no dia a dia urbano — desde que o preço (~R$ 10.440), o peso e a ficha do anúncio façam sentido."
+              "text": "Sim, se você busca o modelo azul versátil com motor de 1000W, pack 60V e perfil scooter bike. É a #3 do nosso ranking (nota 8.8), badge Versátil. Vale no dia a dia urbano — desde que o preço (~R$ 13.990), o peso e a ficha do anúncio façam sentido."
             }
           },
           {
@@ -164,7 +183,7 @@
             "name": "Qual o preço da X13 60V Azul?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "O preço observado no card afiliado do Mercado Livre fica em torno de R$ 10.440. Confira ofertas do dia (meli.la/1yrJ2iy), pois pode variar com promoção, frete e seller."
+              "text": "O preço observado no card afiliado do Mercado Livre fica em torno de R$ 13.990. Confira ofertas do dia (meli.la/1yrJ2iy), pois pode variar com promoção, frete e seller."
             }
           },
           {
@@ -172,7 +191,7 @@
             "name": "Qual a diferença da X13 60V para a X13 Ex Foston?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A X13 60V Azul destaca o pack 60V (frente a muitos 48V) e o perfil híbrido. A X13 Ex Foston (#3, nota 9.0) foca NFC, visual cinza e velocidade anunciada de até 32 km/h. Confira motor, Ah, teto e CNH em cada anúncio."
+              "text": "A X13 60V Azul destaca o pack 60V (frente a muitos 48V) e o perfil híbrido. A X13 Ex Foston (#2, nota 9.0) foca NFC, visual cinza e velocidade anunciada de até 32 km/h. Confira motor, Ah, teto e CNH em cada anúncio."
             }
           },
           {
@@ -204,7 +223,7 @@
             "name": "X13 60V, X13 Ex Foston ou Dx5: qual escolher?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A Dx5 (#2, nota 9.3) prioriza 1500W e até 55 km/h. A X13 Ex Foston (#3, nota 9.0) foca NFC e 32 km/h. A X13 60V Azul (#4, nota 8.8) é a opção versátil: 1000W 60V e visual azul."
+              "text": "A Dx5 (#1, nota 9.3) prioriza 1500W e até 55 km/h. A X13 Ex Foston (#2, nota 9.0) foca NFC e 32 km/h. A X13 60V Azul (#3, nota 8.8) é a opção versátil: 1000W 60V e visual azul."
             }
           },
           {
@@ -303,20 +322,23 @@
       <header class="mb-8 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div class="glass relative order-2 overflow-hidden p-6 md:order-1 md:p-10">
           <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/10 blur-3xl"></div>
-          <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · #4 do ranking scooters 2026</p>
+          <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · #3 do ranking scooters 2026</p>
           <h1 class="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Scooter elétrica X13 60V Azul vale a pena? Review X13 1000W</h1>
           <p class="mb-6 hidden max-w-2xl text-lg text-brand-muted md:block">
-            A <strong>scooter elétrica X13 60V</strong> (modelo <strong>X13 60V Azul</strong>) é a nossa escolha #4, badge <strong>Versátil</strong>: híbrido <strong>scooter bike</strong> / <strong>bike elétrica</strong> com <strong>motor de 1000W</strong> e pack 60V na cor azul — preço observado perto de R$ 10.440 no Mercado Livre.
+            A <strong>scooter elétrica X13 60V</strong> (modelo <strong>X13 60V Azul</strong>) é a nossa escolha #3, badge <strong>Versátil</strong>: híbrido <strong>scooter bike</strong> / <strong>bike elétrica</strong> com <strong>motor de 1000W</strong> e pack 60V na cor azul — preço observado perto de R$ 13.990 no Mercado Livre.
           </p>
+          <div class="mb-3 flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Oferta Verificada no Mercado Livre</span>
+          </div>
           <div class="mb-6 flex flex-wrap gap-2">
-            <span class="rounded-md bg-brand-yellow px-3 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#4 Ranking</span>
+            <span class="rounded-md bg-brand-yellow px-3 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#3 Ranking</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Nota editorial 8.8</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">~R$ 10.440</span>
+            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">~R$ 13.990</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Versátil</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">1000W · 60V · Azul</span>
           </div>
           <div class="flex flex-col gap-3 sm:flex-row">
-            <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1yrJ2iy">Comprar no Mercado Livre</a>
+            <a class="btn-shine inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1yrJ2iy">Comprar no Mercado Livre</a>
           </div>
           <div class="product-gallery mt-4" aria-label="Galeria de fotos do produto" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_773122-MLA107693927314_032026-F.webp","alt":"Scooter Bicicleta Elétrica X13 1000w Bateria 60v Cor Azul — vista principal"},{"url":"https://http2.mlstatic.com/D_NQ_NP_773122-MLA107693927314_032026-O.webp","alt":"X13 60V Azul — foto do anúncio no Mercado Livre"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_619632-MLA113163361563_062026-F.webp","alt":"Scooter elétrica X13 60V azul — foto de comprador / produto 1"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_947005-MLA112847497277_062026-F.webp","alt":"Moto scooter elétrica X13 1000W 60V — foto 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_717739-MLA111611220490_062026-F.webp","alt":"X13 60V Azul — detalhe visual 3"}]'>
             <p class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Fotos do produto</p>
@@ -361,7 +383,7 @@
               <p class="m-0 text-sm text-brand-dim">Escala 0–10 · ranking Tudo de Melhor</p>
             </div>
           </div>
-          <p class="mt-4 text-brand-muted">A <strong>X13 60V Azul</strong> vale a pena para quem quer perfil <strong>versátil</strong>: modelo 1000W 60V com visual azul moderno e boa praticidade no deslocamento urbano. É #4 do ranking — aceite o peso um pouco maior, confira o teto de velocidade no anúncio e calibre CNH/CONTRAN com a ficha real do lote.</p>
+          <p class="mt-4 text-brand-muted">A <strong>X13 60V Azul</strong> vale a pena para quem quer perfil <strong>versátil</strong>: modelo 1000W 60V com visual azul moderno e boa praticidade no deslocamento urbano. É #3 do ranking — aceite o peso um pouco maior, confira o teto de velocidade no anúncio e calibre CNH/CONTRAN com a ficha real do lote.</p>
         </article>
         <article class="glass p-5">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">🎯</span> Para quem é</h3>
@@ -375,6 +397,39 @@
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">🤝</span> Promessa</h3>
           <p class="m-0 text-sm text-brand-muted">Mobilidade com pack 60V e design azul — confira Ah, autonomia, teto de velocidade e frete no anúncio do Mercado Livre.</p>
         </article>
+      </section>
+
+      <section id="historico" class="mb-10 scroll-mt-28" aria-labelledby="historico-titulo">
+        <div class="glass overflow-hidden p-5 md:p-7">
+          <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</p>
+            </div>
+            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300">Novo monitoramento</span>
+          </div>
+
+          <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base">
+            🟢 Menor preço registrado: R$ 13.990,00 à vista ou 10x de R$ 1.448,90 sem juros
+          </div>
+
+          <figure>
+              <svg viewBox="0 0 600 220" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço: R$ 13.990,00 em 22/10">
+                <defs><linearGradient id="area-h" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/><stop offset="100%" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs>
+                <g stroke="rgba(255,255,255,0.08)" stroke-width="1"><line x1="40" y1="20.0" x2="580" y2="20.0"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95.0" x2="580" y2="95.0"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170.0" x2="580" y2="170.0"/></g>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25.0">14,4k</text><text x="36" y="62.5">14,2k</text><text x="36" y="100.0">14k</text><text x="36" y="137.5">13,8k</text><text x="36" y="175.0">13,6k</text></g>
+                <polygon fill="url(#area-h)" points="56,96.9 566,96.9 566,170 56,170"/>
+                <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56,96.9 566,96.9"/>
+                <g fill="#34d399"><circle cx="56" cy="96.9" r="4"/></g>
+                <circle cx="566" cy="96.9" r="10" fill="#34d399" fill-opacity="0.25"/>
+                <circle cx="566" cy="96.9" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
+                <g font-family="Inter, sans-serif" font-weight="800" font-size="20"><text x="566" y="80.9" fill="#6ee7b7" text-anchor="end">R$ 13.990</text></g>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56" y="212">22/10</text><text x="562" y="212" fill="#6ee7b7" font-weight="700">Hoje</text></g>
+              </svg>
+            <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+              <strong class="text-brand-muted">Transparência:</strong> Monitoramento iniciado em 22/10/2026. No checkout simulado, o frete para SP foi de R$ 499 — as 10x sem juros de R$ 1.448,90 já incluem esse frete. A venda, entrega e garantia são do vendedor no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar — confira no anúncio antes de pagar.
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section id="compradores" class="mb-10 scroll-mt-28" aria-label="Fotos de quem comprou">
@@ -438,8 +493,8 @@
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Pack / remoção</th><td class="px-4 py-4 text-brand-muted">Verifique se o pack é lítio removível no anúncio (bateria removível nem sempre vem explícita)</td></tr>
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Peso</th><td class="px-4 py-4 text-brand-muted">Pode ser um pouco pesada (contra do ranking)</td></tr>
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Habilitação</th><td class="px-4 py-4 text-brand-muted">Confirme CONTRAN/local — CNH, autopropelido e emplacamento dependem do teto real do anúncio</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Nota ranking</th><td class="px-4 py-4 text-brand-muted">8.8 (88/100) · #4 · badge Versátil</td></tr>
-              <tr class="even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Preço observado</th><td class="px-4 py-4 text-brand-muted">~R$ 10.440 no Mercado Livre (ofertas e 12x sem juros variam — confira o dia)</td></tr>
+              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Nota ranking</th><td class="px-4 py-4 text-brand-muted">8.8 (88/100) · #3 · badge Versátil</td></tr>
+              <tr class="even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Preço observado</th><td class="px-4 py-4 text-brand-muted">~R$ 13.990 no Mercado Livre (ofertas e 12x sem juros variam — confira o dia)</td></tr>
             </tbody>
           </table>
         </div>
@@ -450,7 +505,7 @@
           <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: scooter elétrica <span class="text-brand-yellow">X13 60V Azul</span></h2>
 
           <p class="mb-5 text-brand-muted">
-            A pergunta que mais chega é direta: a <strong>scooter elétrica X13 60V</strong> vale a pena? No nosso ranking de <a href="melhores-scooters-eletricas.html" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">melhores scooters elétricas</a>, a <strong>X13 60V Azul</strong> ocupa o quarto lugar com nota 8.8 e o badge <strong>Versátil</strong> — não por ser a mais premium da lista, e sim por entregar um veículo <strong>elétrica 1000W</strong> com pack 60V e visual azul pensado para a cidade. Se o objetivo é <strong>mobilidade urbana</strong> com autonomia de pack mais alto e perfil híbrido, a X13 60V entra na conversa certa.
+            A pergunta que mais chega é direta: a <strong>scooter elétrica X13 60V</strong> vale a pena? No nosso ranking de <a href="melhores-scooters-eletricas.html" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">melhores scooters elétricas</a>, a <strong>X13 60V Azul</strong> ocupa o terceiro lugar com nota 8.8 e o badge <strong>Versátil</strong> — não por ser a mais premium da lista, e sim por entregar um veículo <strong>elétrica 1000W</strong> com pack 60V e visual azul pensado para a cidade. Se o objetivo é <strong>mobilidade urbana</strong> com autonomia de pack mais alto e perfil híbrido, a X13 60V entra na conversa certa.
           </p>
           <p class="mb-5 text-brand-muted">
             Antes de qualquer entusiasmo: a <strong>velocidade máxima</strong> não veio fortemente especificada no material do ranking — <strong>alguns anúncios apontam até 32 km/h; confira o lote</strong>. O peso <strong>pode ser um pouco pesado</strong> (contra editorial). Sem teto confirmado, a orientação de CNH é: use o número real do lote + regras CONTRAN/local — <strong>não prometemos “sem CNH”</strong>, nem “sem emplacamento” de forma absoluta.
@@ -488,12 +543,12 @@
 
           <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Compra no Mercado Livre: preço e o que conferir</h3>
           <p class="mb-5 text-brand-muted">
-            O preço observado no card afiliado gira em torno de <strong>R$ 10.440</strong> — confira ofertas e condições (incluindo 12x sem juros, quando houver) no Mercado Livre (<a href="https://meli.la/1yrJ2iy" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');">meli.la/1yrJ2iy</a>). Valide seller, <strong>garantia</strong>, frete, carregador, peso, Ah e o teto listado. Prefira loja com boa reputação e fotos reais. Buscas por “scooter eletrica x13” ou “elétrica scooter” no ML também mostram lots vizinhos — compare ficha. Amazon ainda não está ativa nesta página (em breve).
+            O preço observado no card afiliado gira em torno de <strong>R$ 13.990</strong> — confira ofertas e condições (incluindo 12x sem juros, quando houver) no Mercado Livre (<a href="https://meli.la/1yrJ2iy" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');">meli.la/1yrJ2iy</a>). Valide seller, <strong>garantia</strong>, frete, carregador, peso, Ah e o teto listado. Prefira loja com boa reputação e fotos reais. Buscas por “scooter eletrica x13” ou “elétrica scooter” no ML também mostram lots vizinhos — compare ficha. Amazon ainda não está ativa nesta página (em breve).
           </p>
 
           <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Para quem é — e para quem não é</h3>
           <p class="mb-5 text-brand-muted">
-            <strong>É para você</strong> se busca a X13 60V Azul versátil (híbrido scooter/bike), motor 1000W, pack 60V e design azul — e aceita ticket na faixa de ~R$ 10 mil, peso um pouco maior e a obrigação de ler a ficha no anúncio.
+            <strong>É para você</strong> se busca a X13 60V Azul versátil (híbrido scooter/bike), motor 1000W, pack 60V e design azul — e aceita ticket na faixa de ~R$ 14 mil, peso um pouco maior e a obrigação de ler a ficha no anúncio.
           </p>
           <p class="text-brand-muted">
             <strong>Não é para você</strong> se precisa de marca premium Aima, se o peso leve é critério número 1, se quer NFC e perfil 32 km/h já fechado (olhe a <a href="review-scooter-x13-ex-foston.html" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">X13 Ex Foston</a>), ou se prioriza 1500W / 55 km/h (olhe a <a href="review-scooter-eletrico-dx5.html" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Dx5</a>). Linhas tipo scooter Ibiza Zurbe ou Bolin X13 são outra conversa de seller — não misture fichas.
@@ -509,8 +564,65 @@
               <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Mercado Livre</span>
               <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Link de oferta</span>
             </div>
-            <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Scooter Bicicleta Elétrica X13 1000w Bateria 60v Cor Azul. Confira seller, frete, garantia, teto de velocidade e o preço do dia (~R$ 10.440).</p>
-            <a class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1yrJ2iy">Ir para o Mercado Livre</a>
+            <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Scooter Bicicleta Elétrica X13 1000w Bateria 60v Cor Azul. Confira seller, frete, garantia, teto de velocidade e o preço do dia (~R$ 13.990).</p>
+            <div class="mb-4 overflow-hidden rounded-xl border border-white/10">
+              <table class="w-full text-left text-sm">
+                <caption class="sr-only">Formas de pagamento da X13 60V no Mercado Livre</caption>
+                <tbody>
+                  <tr class="border-b border-white/10 bg-emerald-400/[0.07]">
+                    <th scope="row" class="px-4 py-3 align-top">
+                      <span class="block font-bold text-white">À vista</span>
+                      <span class="text-xs font-normal text-brand-dim">PIX / Boleto</span>
+                    </th>
+                    <td class="px-4 py-3 text-right align-top">
+                      <span class="block whitespace-nowrap text-base font-extrabold text-emerald-300 sm:text-lg">R$ 13.990,00</span>
+                      <span class="text-xs text-brand-dim">+ frete R$ 499 (SP)</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="px-4 py-3 align-top">
+                      <span class="block font-bold text-white">Parcelado no cartão</span>
+                      <span class="text-xs font-normal text-brand-dim">em até 10x</span>
+                    </th>
+                    <td class="px-4 py-3 text-right align-top">
+                      <span class="block whitespace-nowrap text-base font-extrabold text-brand-yellow sm:text-lg">10x de R$ 1.448,90</span>
+                      <span class="text-xs text-brand-dim">sem juros · já com frete</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <details class="border-t border-white/10">
+                <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-white">
+                  Ver todas as parcelas (3x a 10x)
+                  <svg class="details-chevron h-4 w-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+                </summary>
+                <table class="w-full text-left text-sm">
+                  <thead>
+                    <tr class="border-y border-white/10 text-[10px] uppercase tracking-wider text-brand-dim">
+                      <th scope="col" class="px-4 py-2 font-bold">Parcelas</th>
+                      <th scope="col" class="px-4 py-2 text-right font-bold">Condição</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-brand-muted">
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">3x</strong> R$ 4.829,67</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">4x</strong> R$ 3.622,25</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">5x</strong> R$ 2.897,80</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">6x</strong> R$ 2.414,83</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">7x</strong> R$ 2.069,86</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">8x</strong> R$ 1.811,13</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">9x</strong> R$ 1.609,89</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr><td class="px-4 py-2.5"><strong class="text-brand-yellow">10x</strong> R$ 1.448,90</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                  </tbody>
+                </table>
+                <p class="px-4 pb-4 pt-2 text-[11px] text-brand-dim">Valores simulados no checkout do Mercado Livre em 22/10/2026, com frete de R$ 499 para SP incluído (total R$ 14.489): até 10x sem juros. O frete muda conforme o estado.</p>
+              </details>
+            </div>
+            <ul class="mb-5 grid grid-cols-3 gap-2 text-[11px] text-brand-muted sm:text-xs">
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">↩️</span>Devolução Grátis</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🏅</span>MercadoLíder Gold</li>
+            </ul>
+            <a class="btn-shine inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1yrJ2iy">Ir para o Mercado Livre</a>
           </article>
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
@@ -527,7 +639,7 @@
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Alternativas no <span class="text-brand-yellow">ranking</span></h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow">
-            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 3">3</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 2">2</span>
             <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp" alt="Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy" referrerpolicy="no-referrer">
             </div>
@@ -539,7 +651,7 @@
               <div class="mb-3 flex gap-2"><strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
               <ul class="space-y-2">
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer NFC e uso urbano elegante até 32 km/h.</span></li>
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#3 do ranking — nota 9.0, visual cinza.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#2 do ranking — nota 9.0, visual cinza.</span></li>
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Alternativa à X13 60V com ficha de velocidade mais clara.</span></li>
               </ul>
             </div>
@@ -558,7 +670,7 @@
           </article>
 
           <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow">
-            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 2">2</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 1">1</span>
             <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_656446-MLA111034434156_052026-F.webp" alt="Scooter Elétrico Dx5 Motor 1500w Adulto Max 55km/h Preto" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy" referrerpolicy="no-referrer">
             </div>
@@ -571,7 +683,7 @@
               <ul class="space-y-2">
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer custo-benefício com motor 1500W.</span></li>
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Até 55 km/h — ficha de velocidade mais explícita.</span></li>
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#2 do ranking — nota 9.3.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#1 do ranking — nota 9.3.</span></li>
               </ul>
             </div>
             <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
@@ -601,15 +713,15 @@
         <div class="space-y-3">
           <details class="glass p-5" open>
             <summary class="cursor-pointer list-none font-bold">Scooter elétrica X13 60V vale a pena?</summary>
-            <p class="mt-3 text-sm text-brand-muted">Sim, se você busca o modelo azul versátil com <strong>motor de 1000W</strong>, pack 60V e perfil scooter bike. É a #4 do ranking (nota 8.8). Vale no dia a dia urbano — desde que o preço (~R$ 10.440), o peso e a ficha do anúncio façam sentido.</p>
+            <p class="mt-3 text-sm text-brand-muted">Sim, se você busca o modelo azul versátil com <strong>motor de 1000W</strong>, pack 60V e perfil scooter bike. É a #3 do ranking (nota 8.8). Vale no dia a dia urbano — desde que o preço (~R$ 13.990), o peso e a ficha do anúncio façam sentido.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Qual o preço da X13 60V Azul?</summary>
-            <p class="mt-3 text-sm text-brand-muted">O preço observado fica em torno de <strong>R$ 10.440</strong>. Confira ofertas do dia (e 12x sem juros, se disponíveis) no anúncio rastreado meli.la/1yrJ2iy.</p>
+            <p class="mt-3 text-sm text-brand-muted">O preço observado fica em torno de <strong>R$ 13.990</strong>. Confira ofertas do dia (e 12x sem juros, se disponíveis) no anúncio rastreado meli.la/1yrJ2iy.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Qual a diferença da X13 60V para a X13 Ex Foston?</summary>
-            <p class="mt-3 text-sm text-brand-muted">A <strong>X13 60V Azul</strong> destaca o pack 60V (frente a muitos 48V) e o perfil híbrido. A <strong>X13 Ex Foston</strong> (#3, nota 9.0) foca NFC, visual cinza e velocidade anunciada de até 32 km/h. Confira motor, Ah, teto e CNH em cada anúncio.</p>
+            <p class="mt-3 text-sm text-brand-muted">A <strong>X13 60V Azul</strong> destaca o pack 60V (frente a muitos 48V) e o perfil híbrido. A <strong>X13 Ex Foston</strong> (#2, nota 9.0) foca NFC, visual cinza e velocidade anunciada de até 32 km/h. Confira motor, Ah, teto e CNH em cada anúncio.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">É preciso CNH? É autopropelido? Precisa de emplacamento?</summary>
@@ -625,7 +737,7 @@
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">X13 60V, X13 Ex Foston ou Dx5: qual escolher?</summary>
-            <p class="mt-3 text-sm text-brand-muted">A Dx5 (#2, nota 9.3) prioriza 1500W e até 55 km/h. A X13 Ex Foston (#3, nota 9.0) foca NFC e 32 km/h. A X13 60V Azul (#4, nota 8.8) é a opção <strong>versátil</strong>: 1000W 60V e visual azul.</p>
+            <p class="mt-3 text-sm text-brand-muted">A Dx5 (#1, nota 9.3) prioriza 1500W e até 55 km/h. A X13 Ex Foston (#2, nota 9.0) foca NFC e 32 km/h. A X13 60V Azul (#3, nota 8.8) é a opção <strong>versátil</strong>: 1000W 60V e visual azul.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">A X13 60V é boa para o dia a dia?</summary>
@@ -643,7 +755,7 @@
           <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-brand-gradient text-sm font-black text-black shadow-glow">Equipe</div>
           <div>
             <h3 class="mb-1 text-lg font-bold">Equipe Tudo de Melhor</h3>
-            <p class="text-sm text-brand-muted">Review do #4 do ranking de scooters elétricas (badge Versátil). Nome, imagem e preço extraídos do anúncio do Mercado Livre. Links de afiliados podem gerar comissão, sem custo extra para você.</p>
+            <p class="text-sm text-brand-muted">Review do #3 do ranking de scooters elétricas (badge Versátil). Nome, imagem e preço extraídos do anúncio do Mercado Livre. Links de afiliados podem gerar comissão, sem custo extra para você.</p>
           </div>
         </div>
       </section>
@@ -656,10 +768,10 @@
         <img src="https://http2.mlstatic.com/D_NQ_NP_2X_773122-MLA107693927314_032026-F.webp" alt="Scooter Bicicleta Elétrica X13 1000w Bateria 60v Cor Azul — vista principal" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-white/10 bg-white/5 object-cover sm:block">
         <div class="min-w-0">
           <strong class="block max-w-[200px] truncate text-sm font-bold text-white sm:max-w-xs sm:text-base">X13 60V</strong>
-          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 8.8</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">~R$ 10.440</span></div>
+          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 8.8</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">R$ 13.990</span></div>
         </div>
       </div>
-      <a class="inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1yrJ2iy">Comprar no Mercado Livre</a>
+      <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1yrJ2iy">Comprar no Mercado Livre</a>
     </div>
   </div>
 

@@ -671,6 +671,16 @@
       "source": "/umidificador-de-ar-wap-air-flow-4-litros.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/review-scooter-aima-tiger-s5",
+      "destination": "/melhores-scooters-eletricas",
+      "permanent": true
+    },
+    {
+      "source": "/review-scooter-aima-tiger-s5.html",
+      "destination": "/melhores-scooters-eletricas",
+      "permanent": true
     }
   ],
   "headers": [

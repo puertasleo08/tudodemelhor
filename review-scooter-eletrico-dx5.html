@@ -47,7 +47,8 @@
             glow: '0 0 15px rgba(255, 230, 0, 0.4)',
             'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
             'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
-            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)'
+            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)',
+            'neon-emerald': '0 0 12px rgba(52, 211, 153, 0.55), inset 0 0 8px rgba(52, 211, 153, 0.15)'
           },
           backgroundImage: {
             'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
@@ -75,6 +76,24 @@
     @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
     .animate-marquee { animation: marquee 25s linear infinite; width: max-content; }
     .animate-marquee:hover, .animate-marquee:active { animation-play-state: paused; }
+    .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
+    .btn-shine::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -75%; z-index: -1; width: 50%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+      transform: skewX(-20deg);
+      animation: shine 2.8s ease-in-out infinite;
+    }
+    @keyframes shine { 0% { left: -75%; } 60%, 100% { left: 130%; } }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+    .pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .btn-shine::after { display: none; }
+      .pulse-dot { animation: none; }
+    }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .details-chevron { transform: rotate(180deg); }
   </style>
   <script type="application/ld+json">
   {
@@ -136,7 +155,7 @@
           "@type": "Offer",
           "url": "https://meli.la/1omWLKf",
           "priceCurrency": "BRL",
-          "price": "5321.00",
+          "price": "5039.43",
           "availability": "https://schema.org/InStock"
         },
         "aggregateRating": {
@@ -154,7 +173,7 @@
             "name": "Scooter elétrica Dx5 vale a pena?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sim, se você busca moto scooter elétrica 1500W com bom custo-benefício: até 55 km/h, design preto adulto e preço na casa dos R$ 5 mil — bem abaixo da Aima Tiger S5. É a #2 do nosso ranking (nota 9.3), com badge de custo-benefício. Vale se você tem ACC/CNH e aceita marca menos conhecida que Aima+Bosch."
+              "text": "Sim, se você busca moto scooter elétrica 1500W com bom custo-benefício: até 55 km/h, design preto adulto e preço na casa dos R$ 5 mil — bem abaixo da Aima Tiger S5. É a #1 do nosso ranking (nota 9.3), com badge de custo-benefício. Vale se você tem ACC/CNH e aceita marca menos conhecida que Aima+Bosch."
             }
           },
           {
@@ -162,7 +181,7 @@
             "name": "Qual o preço da scooter elétrica Dx5?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "O preço observado no Mercado Livre fica em torno de R$ 5.321. Confira o valor do dia no anúncio rastreado, pois pode variar com promoção e frete."
+              "text": "O preço observado no Mercado Livre fica em torno de R$ 5.039. Confira o valor do dia no anúncio rastreado, pois pode variar com promoção e frete."
             }
           },
           {
@@ -202,7 +221,7 @@
             "name": "Dx5 ou Aima Tiger S5: qual escolher?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A Aima Tiger S5 (#1, nota 9.6) entrega motor Bosch, até 60 km/h e marca mais estabelecida, perto de R$ 10 mil. A Dx5 (#2, nota 9.3) prioriza custo-benefício: 1500W, até 55 km/h e cerca de R$ 5.321. Se o orçamento pesa e 55 km/h basta, a Dx5 costuma ser a escolha mais racional."
+              "text": "A Aima Tiger S5 (fora do nosso ranking atual) entrega motor Bosch, até 60 km/h e marca mais estabelecida, perto de R$ 10 mil. A Dx5 (#1, nota 9.3) prioriza custo-benefício: 1500W, até 55 km/h e cerca de R$ 5.039. Se o orçamento pesa e 55 km/h basta, a Dx5 costuma ser a escolha mais racional."
             }
           },
           {
@@ -293,20 +312,23 @@
       <header class="mb-8 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div class="glass relative order-2 overflow-hidden p-6 md:order-1 md:p-10">
           <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/10 blur-3xl"></div>
-          <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · #2 do ranking scooters 2026</p>
+          <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · #1 do ranking scooters 2026</p>
           <h1 class="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Scooter elétrica Dx5 vale a pena? Review motor 1500W até 55 km/h</h1>
           <p class="mb-6 hidden max-w-2xl text-lg text-brand-muted md:block">
-            A <strong>scooter elétrica Dx5</strong> é a nossa escolha #2 entre as melhores scooters elétricas, com badge de <strong>custo-benefício</strong>: <strong>moto scooter elétrica 1500W</strong> adulto, até 55 km/h, cor preto e bateria de alta capacidade (confira o anúncio) — com preço observado perto de R$ 5.321 no Mercado Livre.
+            A <strong>scooter elétrica Dx5</strong> é a nossa escolha #1 entre as melhores scooters elétricas, com badge de <strong>custo-benefício</strong>: <strong>moto scooter elétrica 1500W</strong> adulto, até 55 km/h, cor preto e bateria de alta capacidade (confira o anúncio) — com preço observado perto de R$ 5.039 no Mercado Livre.
           </p>
+          <div class="mb-3 flex flex-wrap gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Oferta Verificada no Mercado Livre</span>
+          </div>
           <div class="mb-6 flex flex-wrap gap-2">
-            <span class="rounded-md bg-brand-yellow px-3 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#2 Ranking</span>
+            <span class="rounded-md bg-brand-yellow px-3 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#1 Ranking</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Nota editorial 9.3</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">~R$ 5.321</span>
+            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">~R$ 5.039</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Custo-benefício</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">1500W · 55 km/h</span>
           </div>
           <div class="flex flex-col gap-3 sm:flex-row">
-            <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1omWLKf">Comprar no Mercado Livre</a>
+            <a class="btn-shine inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1omWLKf">Comprar no Mercado Livre</a>
           </div>
           <div class="product-gallery mt-4" aria-label="Galeria de fotos do produto" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_656446-MLA111034434156_052026-F.webp","alt":"Scooter Elétrico Dx5 Motor 1500w Adulto Max 55km/h Preto — vista principal"},{"url":"https://http2.mlstatic.com/D_NQ_NP_656446-MLA111034434156_052026-O.webp","alt":"Dx5 1500W — foto do anúncio no Mercado Livre"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_812014-MLA114475937766_082026-F.webp","alt":"Scooter elétrico Dx5 — foto de comprador / produto 1"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_863731-MLA105506364296_012026-F.webp","alt":"Moto scooter elétrica Dx5 1500W — foto 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_698620-MLA109741431179_032026-F.webp","alt":"Dx5 preto adulto — detalhe visual 3"}]'>
             <p class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Fotos do produto</p>
@@ -351,7 +373,7 @@
               <p class="m-0 text-sm text-brand-dim">Escala 0–10 · ranking Tudo de Melhor</p>
             </div>
           </div>
-          <p class="mt-4 text-brand-muted">A <strong>scooter elétrica Dx5</strong> vale a pena para quem quer <strong>custo-benefício</strong> em moto scooter elétrica 1500W: até 55 km/h, visual preto adulto e preço cerca de metade da Aima. É #2 do ranking — desde que você tenha ACC/CNH e aceite marca/assistente menos estabelecida que Aima+Bosch.</p>
+          <p class="mt-4 text-brand-muted">A <strong>scooter elétrica Dx5</strong> vale a pena para quem quer <strong>custo-benefício</strong> em moto scooter elétrica 1500W: até 55 km/h, visual preto adulto e preço cerca de metade da Aima. É #1 do ranking — desde que você tenha ACC/CNH e aceite marca/assistente menos estabelecida que Aima+Bosch.</p>
         </article>
         <article class="glass p-5">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">🎯</span> Para quem é</h3>
@@ -365,6 +387,50 @@
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">🤝</span> Promessa</h3>
           <p class="m-0 text-sm text-brand-muted">Mobilidade urbana com potência de scooter adulta e ticket bem abaixo das rivais top — bateria de alta capacidade no anúncio (confira o lote).</p>
         </article>
+      </section>
+
+      <section id="historico" class="mb-10 scroll-mt-28" aria-labelledby="historico-titulo">
+        <div class="glass overflow-hidden p-5 md:p-7">
+          <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</p>
+            </div>
+            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300">-6% desde 19/10</span>
+          </div>
+
+          <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base">
+            🟢 Menor preço histórico: R$ 5.039,43 à vista ou 10x de R$ 503,94 sem juros
+          </div>
+
+          <div class="mb-5 grid grid-cols-2 gap-3">
+            <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Pico · 19/10</p>
+              <p class="mt-1 text-xl font-extrabold text-brand-dim line-through decoration-orange-400/80 md:text-2xl">~R$ 5.360</p>
+            </div>
+            <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-center">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Hoje · 22/10</p>
+              <p class="mt-1 text-xl font-extrabold text-emerald-300 md:text-2xl">R$ 5.039</p>
+            </div>
+          </div>
+
+          <figure>
+              <svg viewBox="0 0 600 220" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço: R$ 5.190,00 em 22/09, R$ 5.360,00 em 19/10, R$ 5.039,43 em 22/10">
+                <defs><linearGradient id="area-h" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/><stop offset="100%" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs>
+                <g stroke="rgba(255,255,255,0.08)" stroke-width="1"><line x1="40" y1="20.0" x2="580" y2="20.0"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95.0" x2="580" y2="95.0"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170.0" x2="580" y2="170.0"/></g>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25.0">5,4k</text><text x="36" y="62.5">5,3k</text><text x="36" y="100.0">5,2k</text><text x="36" y="137.5">5,1k</text><text x="36" y="175.0">5k</text></g>
+                <polygon fill="url(#area-h)" points="56,98.8 141,98.8 226,98.8 311,98.8 396,35.0 481,35.0 566,155.2 566,170 56,170"/>
+                <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56,98.8 141,98.8 226,98.8 311,98.8 396,35.0 481,35.0 566,155.2"/>
+                <g fill="#34d399"><circle cx="56" cy="98.8" r="4"/><circle cx="141" cy="98.8" r="4"/><circle cx="226" cy="98.8" r="4"/><circle cx="311" cy="98.8" r="4"/><circle cx="396" cy="35.0" r="4"/><circle cx="481" cy="35.0" r="4"/></g>
+                <circle cx="566" cy="155.2" r="10" fill="#34d399" fill-opacity="0.25"/>
+                <circle cx="566" cy="155.2" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
+                <g font-family="Inter, sans-serif" font-weight="800" font-size="20"><text x="56" y="86.8" fill="#D5D9D9">~R$ 5.190</text><text x="396" y="23.0" fill="#D5D9D9" text-anchor="middle">~R$ 5.360</text><text x="546" y="179.2" fill="#6ee7b7" text-anchor="end">R$ 5.039</text></g>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56" y="212">22/09</text><text x="141" y="212">23/09</text><text x="226" y="212">24/09</text><text x="311" y="212">25/09</text><text x="396" y="212">19/10</text><text x="481" y="212">20/10</text><text x="562" y="212" fill="#6ee7b7" font-weight="700">22/10</text></g>
+              </svg>
+            <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+              <strong class="text-brand-muted">Transparência:</strong> Histórico de 22/09 a 22/10/2026. No checkout simulado em 22/10, o frete (R$ 296) saiu grátis — pode variar conforme o CEP. A venda, entrega e garantia são do vendedor no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar — confira no anúncio antes de pagar.
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section id="pros-contras" class="mb-10 scroll-mt-28">
@@ -407,8 +473,8 @@
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Cor</th><td class="px-4 py-4 text-brand-muted">Preto</td></tr>
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Perfil</th><td class="px-4 py-4 text-brand-muted">Scooter elétrica adulta / mobilidade urbana</td></tr>
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Habilitação</th><td class="px-4 py-4 text-brand-muted">Em geral ACC/CNH (55 km/h ≠ autopropelido 32 km/h)</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Nota ranking</th><td class="px-4 py-4 text-brand-muted">9.3 (93/100) · #2 · badge Custo-benefício</td></tr>
-              <tr class="even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Preço observado</th><td class="px-4 py-4 text-brand-muted">~R$ 5.321 no Mercado Livre (confira o dia)</td></tr>
+              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Nota ranking</th><td class="px-4 py-4 text-brand-muted">9.3 (93/100) · #1 · badge Custo-benefício</td></tr>
+              <tr class="even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Preço observado</th><td class="px-4 py-4 text-brand-muted">~R$ 5.039 no Mercado Livre (confira o dia)</td></tr>
             </tbody>
           </table>
         </div>
@@ -460,7 +526,7 @@
           <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: scooter elétrica <span class="text-brand-yellow">Dx5</span></h2>
 
           <p class="mb-5 text-brand-muted">
-            A pergunta que mais chega é direta: a <strong>scooter elétrica Dx5</strong> vale a pena? No nosso ranking de <a href="melhores-scooters-eletricas.html" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">melhores scooters elétricas</a>, ela ocupa o segundo lugar com nota 9.3 e o badge de <strong>custo-benefício</strong> — não por ser a mais sofisticada da lista, e sim por entregar <strong>moto scooter elétrica 1500W</strong>, até 55 km/h e visual adulto preto por cerca de R$ 5.321, bem abaixo da rival número 1. Se o seu objetivo é <strong>mobilidade</strong> <strong>urbana</strong> com potência de verdade, sem estourar R$ 10 mil, a Dx5 entra na conversa certa.
+            A pergunta que mais chega é direta: a <strong>scooter elétrica Dx5</strong> vale a pena? No nosso ranking de <a href="melhores-scooters-eletricas.html" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">melhores scooters elétricas</a>, ela ocupa o primeiro lugar com nota 9.3 e o badge de <strong>custo-benefício</strong> — não por ser a mais sofisticada da lista, e sim por entregar <strong>moto scooter elétrica 1500W</strong>, até 55 km/h e visual adulto preto por cerca de R$ 5.039, bem abaixo da Aima Tiger S5. Se o seu objetivo é <strong>mobilidade</strong> <strong>urbana</strong> com potência de verdade, sem estourar R$ 10 mil, a Dx5 entra na conversa certa.
           </p>
           <p class="mb-5 text-brand-muted">
             Antes de qualquer entusiasmo, três pontos precisam ficar claros: a <strong>autonomia</strong> prática depende do uso (não inventamos Ah/V quando o anúncio não fecha o número), o conjunto tem peso típico de scooter adulta — não é leve — e, com teto de <strong>55 km/h</strong>, em geral você precisa de ACC ou CNH. Aceitando esse recorte, o restante da análise faz sentido. Em vídeos e fotos de compradores (e em reviews no YouTube), o que mais se repete é a sensação de moto no dia a dia — não de patinete.
@@ -510,7 +576,7 @@
 
           <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Compra no Mercado Livre: preço e o que conferir</h3>
           <p class="mb-5 text-brand-muted">
-            O preço observado gira em torno de <strong>R$ 5.321</strong> — confira o dia, porque promoção e frete mudam o ticket. Use o link rastreado desta review no Mercado Livre, valide seller, garantia, prazo de entrega e se o anúncio descreve mesmo motor 1500W, velocidade máxima até 55 km/h, cor preto e a bateria de alta capacidade anunciada. Prefira loja com boa reputação e fotos reais do lote. Amazon ainda não está ativa nesta página (em breve).
+            O preço observado gira em torno de <strong>R$ 5.039</strong> — confira o dia, porque promoção e frete mudam o ticket. Use o link rastreado desta review no Mercado Livre, valide seller, garantia, prazo de entrega e se o anúncio descreve mesmo motor 1500W, velocidade máxima até 55 km/h, cor preto e a bateria de alta capacidade anunciada. Prefira loja com boa reputação e fotos reais do lote. Amazon ainda não está ativa nesta página (em breve).
           </p>
 
           <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Para quem é — e para quem não é</h3>
@@ -518,7 +584,7 @@
             <strong>É para você</strong> se busca <strong>custo-benefício</strong> em scooter elétrica adulta: potência 1500W, até 55 km/h, visual preto e orçamento perto de R$ 5 mil, com habilitação em dia. Também faz sentido se você considerou a Aima Tiger S5 (~R$ 10 mil) e achou o salto de preço alto demais para 5 km/h a mais e a marca Bosch — a Dx5 costuma ser a melhor opção nessa faixa de preço.
           </p>
           <p class="text-brand-muted">
-            <strong>Não é para você</strong> se precisa de algo leve para elevador, se quer o teto de 60 km/h e o ecossistema Aima+Bosch, se só aceita marca premium, ou se você não tem (e não pretende tirar) ACC/CNH. Nesse caso, olhe a <a href="review-scooter-aima-tiger-s5.html" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Aima Tiger S5</a>, a X13 Ex Foston (perfil 32 km/h) no ranking, ou categorias de patinete e bike elétrica, que resolvem outro problema de mobilidade.
+            <strong>Não é para você</strong> se precisa de algo leve para elevador, se quer o teto de 60 km/h e o ecossistema Aima+Bosch, se só aceita marca premium, ou se você não tem (e não pretende tirar) ACC/CNH. Nesse caso, olhe a X13 Ex Foston (perfil 32 km/h) no ranking, ou categorias de patinete e bike elétrica, que resolvem outro problema de mobilidade.
           </p>
         </article>
       </section>
@@ -531,8 +597,65 @@
               <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Mercado Livre</span>
               <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Link de oferta</span>
             </div>
-            <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Scooter Elétrico Dx5 Motor 1500w Adulto Max 55km/h Preto. Confira seller, frete, garantia e o preço do dia (~R$ 5.321).</p>
-            <a class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1omWLKf">Ir para o Mercado Livre</a>
+            <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Scooter Elétrico Dx5 Motor 1500w Adulto Max 55km/h Preto. Confira seller, frete, garantia e o preço do dia (~R$ 5.039).</p>
+            <div class="mb-4 overflow-hidden rounded-xl border border-white/10">
+              <table class="w-full text-left text-sm">
+                <caption class="sr-only">Formas de pagamento da Dx5 no Mercado Livre</caption>
+                <tbody>
+                  <tr class="border-b border-white/10 bg-emerald-400/[0.07]">
+                    <th scope="row" class="px-4 py-3 align-top">
+                      <span class="block font-bold text-white">À vista</span>
+                      <span class="text-xs font-normal text-brand-dim">PIX / Boleto</span>
+                    </th>
+                    <td class="px-4 py-3 text-right align-top">
+                      <span class="block whitespace-nowrap text-base font-extrabold text-emerald-300 sm:text-lg">R$ 5.039,43</span>
+                      <span class="text-xs text-brand-dim">melhor preço</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="px-4 py-3 align-top">
+                      <span class="block font-bold text-white">Parcelado no cartão</span>
+                      <span class="text-xs font-normal text-brand-dim">em até 10x</span>
+                    </th>
+                    <td class="px-4 py-3 text-right align-top">
+                      <span class="block whitespace-nowrap text-base font-extrabold text-brand-yellow sm:text-lg">10x de R$ 503,94</span>
+                      <span class="text-xs text-brand-dim">sem juros</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <details class="border-t border-white/10">
+                <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-white">
+                  Ver todas as parcelas (3x a 10x)
+                  <svg class="details-chevron h-4 w-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+                </summary>
+                <table class="w-full text-left text-sm">
+                  <thead>
+                    <tr class="border-y border-white/10 text-[10px] uppercase tracking-wider text-brand-dim">
+                      <th scope="col" class="px-4 py-2 font-bold">Parcelas</th>
+                      <th scope="col" class="px-4 py-2 text-right font-bold">Condição</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-brand-muted">
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">3x</strong> R$ 1.679,81</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">4x</strong> R$ 1.259,86</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">5x</strong> R$ 1.007,89</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">6x</strong> R$ 839,91</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">7x</strong> R$ 719,92</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">8x</strong> R$ 629,93</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">9x</strong> R$ 559,94</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr><td class="px-4 py-2.5"><strong class="text-brand-yellow">10x</strong> R$ 503,94</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                  </tbody>
+                </table>
+                <p class="px-4 pb-4 pt-2 text-[11px] text-brand-dim">Valores simulados no checkout do Mercado Livre em 22/10/2026: até 10x sem juros. Parcelas variam conforme cartão e banco.</p>
+              </details>
+            </div>
+            <ul class="mb-5 grid grid-cols-3 gap-2 text-[11px] text-brand-muted sm:text-xs">
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">↩️</span>Devolução Grátis</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🏅</span>MercadoLíder Gold</li>
+            </ul>
+            <a class="btn-shine inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1omWLKf">Ir para o Mercado Livre</a>
           </article>
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
@@ -549,38 +672,7 @@
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Alternativas no <span class="text-brand-yellow">ranking</span></h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow">
-            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 1">1</span>
-            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_653891-MLA100086848055_122025-F.webp" alt="Scooter elétrica Aima Tiger S5 Motor Bosch 1200W 60 km/h" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy" referrerpolicy="no-referrer">
-            </div>
-            <div class="mt-4 flex flex-wrap items-center gap-2">
-              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">AIMA</span>
-              <h3 class="text-lg font-bold text-white">Aima Tiger S5</h3>
-            </div>
-            <div class="mt-3 flex-1">
-              <div class="mb-3 flex gap-2"><strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
-              <ul class="space-y-2">
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem prioriza motor Bosch 1200W e até 60 km/h.</span></li>
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#1 do ranking — pacote premium perto de R$ 10 mil.</span></li>
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Modos Eco/Comfort/Power e freios a disco.</span></li>
-              </ul>
-            </div>
-            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
-              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">96</span><span class="text-sm text-brand-dim">/100</span></div>
-            </div>
-            <div class="mt-5 border-t border-white/10 pt-4">
-              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
-              <p class="text-xl font-bold text-white">Confira no ML</p>
-              <div class="mt-3 flex flex-col gap-2">
-                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2KVzFr5">Comprar no Mercado Livre</a>
-                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="review-scooter-aima-tiger-s5.html">Ver Análise Completa</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow">
-            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 3">3</span>
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 2">2</span>
             <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp" alt="Scooter Moto Elétrica X13 Ex Foston 1000W 32 km/h NFC" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy" referrerpolicy="no-referrer">
             </div>
@@ -593,7 +685,7 @@
               <ul class="space-y-2">
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Uso urbano elegante com motor 1000W.</span></li>
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Velocidade máxima de 32 km/h (perfil mais brando).</span></li>
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#3 do ranking — alternativa mais “cidade leve”.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#2 do ranking — alternativa mais “cidade leve”.</span></li>
               </ul>
             </div>
             <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
@@ -606,6 +698,37 @@
               <div class="mt-3 flex flex-col gap-2">
                 <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2DnA5yX">Comprar no Mercado Livre</a>
                 <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="#">Ver Análise Completa</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow">
+            <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 3">3</span>
+            <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_773122-MLA107693927314_032026-F.webp" alt="Scooter Bicicleta Elétrica X13 1000w Bateria 60v Cor Azul" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy" referrerpolicy="no-referrer">
+            </div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">X13</span>
+              <h3 class="text-lg font-bold text-white">X13 60V</h3>
+            </div>
+            <div class="mt-3 flex-1">
+              <div class="mb-3 flex gap-2"><strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <ul class="space-y-2">
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer pack 60V e perfil híbrido scooter/bike.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#3 do ranking — nota 8.8, badge Versátil.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Alternativa à Dx5 com pack 60V e perfil versátil.</span></li>
+              </ul>
+            </div>
+            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">88</span><span class="text-sm text-brand-dim">/100</span></div>
+            </div>
+            <div class="mt-5 border-t border-white/10 pt-4">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
+              <p class="text-xl font-bold text-white">Confira no ML</p>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1yrJ2iy">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="review-scooter-x13-60v.html">Ver Análise Completa</a>
               </div>
             </div>
           </article>
@@ -623,11 +746,11 @@
         <div class="space-y-3">
           <details class="glass p-5" open>
             <summary class="cursor-pointer list-none font-bold">Scooter elétrica Dx5 vale a pena?</summary>
-            <p class="mt-3 text-sm text-brand-muted">Sim, se você busca <strong>moto scooter elétrica 1500W</strong> com bom <strong>custo-benefício</strong>: até 55 km/h, design preto adulto e preço na casa dos R$ 5 mil — bem abaixo da Aima Tiger S5. É a #2 do nosso ranking (nota 9.3). Vale se você já tem ACC/CNH e aceita marca menos conhecida que Aima+Bosch.</p>
+            <p class="mt-3 text-sm text-brand-muted">Sim, se você busca <strong>moto scooter elétrica 1500W</strong> com bom <strong>custo-benefício</strong>: até 55 km/h, design preto adulto e preço na casa dos R$ 5 mil — bem abaixo da Aima Tiger S5. É a #1 do nosso ranking (nota 9.3). Vale se você já tem ACC/CNH e aceita marca menos conhecida que Aima+Bosch.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Qual o preço da scooter elétrica Dx5?</summary>
-            <p class="mt-3 text-sm text-brand-muted">O preço observado no Mercado Livre fica em torno de <strong>R$ 5.321</strong>. Confira o valor do dia no anúncio rastreado, pois pode variar com promoção e frete.</p>
+            <p class="mt-3 text-sm text-brand-muted">O preço observado no Mercado Livre fica em torno de <strong>R$ 5.039</strong>. Confira o valor do dia no anúncio rastreado, pois pode variar com promoção e frete.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">É preciso CNH para scooter elétrica Dx5?</summary>
@@ -647,7 +770,7 @@
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Dx5 ou Aima Tiger S5: qual escolher?</summary>
-            <p class="mt-3 text-sm text-brand-muted">A Aima Tiger S5 (#1, nota 9.6) entrega motor Bosch, até 60 km/h e marca mais estabelecida, perto de R$ 10 mil. A Dx5 (#2, nota 9.3) prioriza custo-benefício: 1500W, até 55 km/h e cerca de R$ 5.321. Se o orçamento pesa e 55 km/h basta, a Dx5 costuma ser a escolha mais racional.</p>
+            <p class="mt-3 text-sm text-brand-muted">A Aima Tiger S5 (fora do nosso ranking atual) entrega motor Bosch, até 60 km/h e marca mais estabelecida, perto de R$ 10 mil. A Dx5 (#1, nota 9.3) prioriza custo-benefício: 1500W, até 55 km/h e cerca de R$ 5.039. Se o orçamento pesa e 55 km/h basta, a Dx5 costuma ser a escolha mais racional.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">A scooter elétrica Dx5 é leve para apartamento?</summary>
@@ -661,7 +784,7 @@
           <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-brand-gradient text-sm font-black text-black shadow-glow">Equipe</div>
           <div>
             <h3 class="mb-1 text-lg font-bold">Equipe Tudo de Melhor</h3>
-            <p class="text-sm text-brand-muted">Review do #2 do ranking de scooters elétricas (badge custo-benefício). Nome, imagem e preço extraídos do anúncio do Mercado Livre. Links de afiliados podem gerar comissão, sem custo extra para você.</p>
+            <p class="text-sm text-brand-muted">Review do #1 do ranking de scooters elétricas (badge custo-benefício). Nome, imagem e preço extraídos do anúncio do Mercado Livre. Links de afiliados podem gerar comissão, sem custo extra para você.</p>
           </div>
         </div>
       </section>
@@ -674,10 +797,10 @@
         <img src="https://http2.mlstatic.com/D_NQ_NP_2X_656446-MLA111034434156_052026-F.webp" alt="Scooter Elétrico Dx5 Motor 1500w Adulto Max 55km/h Preto — vista principal" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-white/10 bg-white/5 object-cover sm:block">
         <div class="min-w-0">
           <strong class="block max-w-[200px] truncate text-sm font-bold text-white sm:max-w-xs sm:text-base">Dx5 1500W</strong>
-          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 9.3</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">~R$ 5.321</span></div>
+          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 9.3</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">R$ 5.039</span></div>
         </div>
       </div>
-      <a class="inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1omWLKf">Comprar no Mercado Livre</a>
+      <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1omWLKf">Comprar no Mercado Livre</a>
     </div>
   </div>
 
