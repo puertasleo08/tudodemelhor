@@ -47,7 +47,7 @@
             glow: '0 0 15px rgba(255, 230, 0, 0.4)',
             'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
             'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
-            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)'
+            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)','neon-emerald':'0 0 12px rgba(52, 211, 153, 0.55), inset 0 0 8px rgba(52, 211, 153, 0.15)'
           },
           backgroundImage: {
             'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
@@ -75,6 +75,15 @@
     @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
     .animate-marquee { animation: marquee 25s linear infinite; width: max-content; }
     .animate-marquee:hover, .animate-marquee:active { animation-play-state: paused; }
+  
+    .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
+    .btn-shine::after { content: ''; position: absolute; top: 0; left: -75%; z-index: -1; width: 50%; height: 100%; background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.75), transparent); transform: skewX(-20deg); animation: shine 2.8s ease-in-out infinite; }
+    @keyframes shine { 0% { left: -75%; } 60%, 100% { left: 130%; } }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+    .pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 6px rgba(52, 211, 153, 0.35), 0 0 0 rgba(255, 230, 0, 0); } 50% { box-shadow: 0 0 18px rgba(52, 211, 153, 0.75), 0 0 28px rgba(255, 230, 0, 0.3); } }
+    .sem-juros-glow { animation: glow-pulse 2.2s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) { .btn-shine::after { display: none; } .pulse-dot { animation: none; } .sem-juros-glow { animation: none; box-shadow: 0 0 12px rgba(52, 211, 153, 0.5); } }
   </style>
   <script type="application/ld+json">
   {
@@ -134,9 +143,9 @@
         },
         "offers": {
           "@type": "Offer",
-          "url": "https://meli.la/2i6rBNV",
+          "url": "https://meli.la/1kQVeNg",
           "priceCurrency": "BRL",
-          "price": "2399.00",
+          "price": "2324.00",
           "availability": "https://schema.org/InStock"
         },
         "aggregateRating": {
@@ -154,7 +163,7 @@
             "name": "Honeywhale B20 vale a pena?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sim, para commute urbano até 35 km com orçamento na casa de R$ 2.400. É a melhor bicicleta elétrica dobrável de equilíbrio deste ranking: 440W, discos e aro 14."
+              "text": "Sim, para commute urbano até 35 km com orçamento na casa de R$ 2.300. É a melhor bicicleta elétrica dobrável de equilíbrio deste ranking: 440W, discos e aro 14."
             }
           },
           {
@@ -162,7 +171,7 @@
             "name": "Quanto custa bicicleta elétrica dobrável?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Nesta seleção, a Honeywhale B20 parte de R$ 2.399; a Oimotoo S6 cerca de R$ 2.446; a Dobrável 350W cerca de R$ 2.509; a Oimotoo A9 cerca de R$ 2.999; a Honeywhale S6-S cerca de R$ 3.799. Preços variam no Mercado Livre."
+              "text": "Nesta seleção, a Honeywhale B20 parte de R$ 2.324; a Oimotoo S6 cerca de R$ 2.552; a Dobrável 350W cerca de R$ 2.557; a Oimotoo A9 cerca de R$ 2.699; a Honeywhale S6-S cerca de R$ 3.799. Preços variam no Mercado Livre."
             }
           },
           {
@@ -280,15 +289,19 @@
           <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · #1 do ranking dobrável 2026</p>
           <h1 class="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Honeywhale B20 vale a pena? Análise da bicicleta elétrica dobrável 440W</h1>
           <p class="mb-6 hidden max-w-2xl text-lg text-brand-muted md:block">
-            Se você busca uma <strong>bicicleta elétrica dobrável</strong> equilibrada — potência suficiente para o dia a dia, autonomia de até 35 km e freios a disco nas duas rodas — a Honeywhale B20 lidera este ranking: motor 440W, carga de 120 kg e aro 14, a partir de R$ 2.399 no Mercado Livre.
+            Se você busca uma <strong>bicicleta elétrica dobrável</strong> equilibrada — potência suficiente para o dia a dia, autonomia de até 35 km e freios a disco nas duas rodas — a Honeywhale B20 lidera este ranking: motor 440W, carga de 120 kg e aro 14, a partir de R$ 2.324 no Mercado Livre.
           </p>
+          <div class="mb-3 flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Oferta Verificada no Mercado Livre</span>
+            <div class="sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-sm font-black text-white">10x de R$ 252,40</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>
+          </div>
           <div class="mb-6 flex flex-wrap gap-2">
             <span class="rounded-md bg-brand-yellow px-3 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Custo-benefício</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Nota editorial 9.4</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">A partir de R$ 2.399</span>
+            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">A partir de R$ 2.324</span>
           </div>
           <div class="flex flex-col gap-3 sm:flex-row">
-            <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2i6rBNV">Comprar no Mercado Livre</a>
+            <a class="btn-shine inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1kQVeNg">Comprar no Mercado Livre</a>
           </div>
           <div class="product-gallery mt-4" aria-label="Galeria de fotos do produto" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_603508-MLA113190607451_062026-F.webp","alt":"Honeywhale B20 bicicleta elétrica dobrável 440W — melhor bike elétrica urbana aro 14"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_754037-MLA89719898443_082025-F.webp","alt":"Honeywhale B20 bicicleta elétrica dobrável 440W — foto 2 da galeria no Mercado Livre"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_635827-MLA89352913696_082025-F.webp","alt":"Honeywhale B20 bike elétrica dobrável — foto 3 da galeria, ângulo do quadro"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_910827-MLA89353187538_082025-F.webp","alt":"Honeywhale B20 bicicleta elétrica dobrável — foto 4 da galeria, detalhes do guidão"}]'>
             <p class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Fotos do produto</p>
@@ -355,6 +368,38 @@
         </article>
       </section>
 
+      <section id="historico" class="mb-10 scroll-mt-28" aria-labelledby="historico-titulo">
+        <div class="glass overflow-hidden p-5 md:p-7">
+          <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
+            <p id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</p>
+            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300">Menor preço histórico</span>
+          </div>
+          <div class="mb-5 flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base">
+            🟢 Menor preço histórico: R$ 2.324,00 no Pix ou 10x de R$ 252,40 sem juros
+          </div>
+          <div class="mb-5 grid grid-cols-2 gap-3">
+            <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">13/08</p><p class="mt-1 text-xl font-extrabold text-brand-muted line-through decoration-orange-400/80 md:text-2xl">~R$ 2.450</p></div>
+            <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-center"><p class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Hoje · 23/10</p><p class="mt-1 text-xl font-extrabold text-emerald-300 md:text-2xl">R$ 2.324</p></div>
+          </div>
+          <figure>
+              <svg viewBox="0 0 600 220" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço: R$ 2.450,00 em 13/08, R$ 2.525,00 em 07/09, R$ 2.380,00 em 08/09, R$ 2.380,00 em 09/09, R$ 2.525,00 em 10/09, R$ 2.525,00 em 11/09, R$ 2.525,00 em 16/09, R$ 2.525,00 em 17/09, R$ 2.525,00 em 18/09, R$ 2.525,00 em 19/09, R$ 2.400,00 em 28/09, R$ 2.400,00 em 29/09, R$ 2.400,00 em 30/09, R$ 2.400,00 em 01/10, R$ 2.400,00 em 02/10, R$ 2.400,00 em 04/10, R$ 2.400,00 em 05/10, R$ 2.400,00 em 06/10, R$ 2.324,00 em 23/10">
+                <defs><linearGradient id="area-reviewhoneywhaleb20html" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/><stop offset="100%" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs>
+                <g stroke="rgba(255,255,255,0.08)" stroke-width="1"><line x1="40" y1="20.0" x2="580" y2="20.0"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95.0" x2="580" y2="95.0"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170.0" x2="580" y2="170.0"/></g>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25.0">2,6k</text><text x="36" y="62.5">2,5k</text><text x="36" y="100.0">2,4k</text><text x="36" y="137.5">2,3k</text><text x="36" y="175.0">2,2k</text></g>
+                <polygon fill="url(#area-reviewhoneywhaleb20html)" points="56.0,76.2 84.3,48.1 112.7,102.5 141.0,102.5 169.3,48.1 197.7,48.1 226.0,48.1 254.3,48.1 282.7,48.1 311.0,48.1 339.3,95.0 367.7,95.0 396.0,95.0 424.3,95.0 452.7,95.0 481.0,95.0 509.3,95.0 537.7,95.0 566.0,123.5 566.0,170 56.0,170"/>
+                <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56.0,76.2 84.3,48.1 112.7,102.5 141.0,102.5 169.3,48.1 197.7,48.1 226.0,48.1 254.3,48.1 282.7,48.1 311.0,48.1 339.3,95.0 367.7,95.0 396.0,95.0 424.3,95.0 452.7,95.0 481.0,95.0 509.3,95.0 537.7,95.0 566.0,123.5"/>
+                <g fill="#34d399"><circle cx="56.0" cy="76.2" r="4"/><circle cx="84.3" cy="48.1" r="4"/><circle cx="112.7" cy="102.5" r="4"/><circle cx="141.0" cy="102.5" r="4"/><circle cx="169.3" cy="48.1" r="4"/><circle cx="197.7" cy="48.1" r="4"/><circle cx="226.0" cy="48.1" r="4"/><circle cx="254.3" cy="48.1" r="4"/><circle cx="282.7" cy="48.1" r="4"/><circle cx="311.0" cy="48.1" r="4"/><circle cx="339.3" cy="95.0" r="4"/><circle cx="367.7" cy="95.0" r="4"/><circle cx="396.0" cy="95.0" r="4"/><circle cx="424.3" cy="95.0" r="4"/><circle cx="452.7" cy="95.0" r="4"/><circle cx="481.0" cy="95.0" r="4"/><circle cx="509.3" cy="95.0" r="4"/><circle cx="537.7" cy="95.0" r="4"/></g>
+                <circle cx="566.0" cy="123.5" r="10" fill="#34d399" fill-opacity="0.25"/><circle cx="566.0" cy="123.5" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
+                <g font-family="Inter, sans-serif" font-weight="800" font-size="20"><text x="56.0" y="64.2" fill="#D5D9D9">~R$ 2.450</text><text x="546.0" y="147.5" fill="#6ee7b7" text-anchor="end">R$ 2.324</text></g>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56.0" y="212">13/08</text><text x="141.0" y="212">09/09</text><text x="226.0" y="212">16/09</text><text x="311.0" y="212">19/09</text><text x="396.0" y="212">30/09</text><text x="481.0" y="212">04/10</text><text x="562" y="212" fill="#6ee7b7" font-weight="700">23/10</text></g>
+              </svg>
+            <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+              <strong class="text-brand-muted">Transparência:</strong> Histórico de 13/08 a 23/10/2026: o preço atual é o menor registrado. No Pix sai R$ 2.324; no cartão, R$ 2.524 em até 10x sem juros. Anúncio da loja oficial Honeywhale no Mercado Livre. A venda, entrega e garantia são do vendedor no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar — confira no anúncio antes de pagar.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section id="pros-contras" class="mb-10 scroll-mt-28">
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-brand-yellow">contras</span> da Honeywhale B20</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -365,7 +410,7 @@
               <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sistema de freios a disco dianteiro e traseiro</li>
               <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Design robusto com carga de até 120 kg</li>
               <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Aro 14 e quadro dobrável facilitam armazenamento</li>
-              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Melhor equilíbrio custo-benefício do ranking dobrável (a partir de R$ 2.399)</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Melhor equilíbrio custo-benefício do ranking dobrável (a partir de R$ 2.324)</li>
               <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Peso declarado em torno de 20 kg — levantável para o elevador</li>
             </ul>
           </div>
@@ -396,7 +441,7 @@
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Peso suportado</th><td class="px-4 py-4 text-brand-muted">Até 120 kg</td></tr>
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Peso da bike</th><td class="px-4 py-4 text-brand-muted">~20 kg (confira o anúncio)</td></tr>
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Dobrável</th><td class="px-4 py-4 text-brand-muted">Sim</td></tr>
-              <tr class="even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Preço observado</th><td class="px-4 py-4 text-brand-muted">A partir de R$ 2.399 (confira o dia)</td></tr>
+              <tr class="even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Preço observado</th><td class="px-4 py-4 text-brand-muted">A partir de R$ 2.324 (confira o dia)</td></tr>
             </tbody>
           </table>
         </div>
@@ -475,7 +520,28 @@
               <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Link de oferta</span>
             </div>
             <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Honeywhale B20 Bicicleta Elétrica Dobrável 440W. Confira seller, frete, garantia e o preço do dia.</p>
-            <a class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2i6rBNV">Ir para o Mercado Livre</a>
+            <div class="mb-4"><div class="sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-base font-black text-white">10x de R$ 252,40</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span><span class="text-[11px] font-semibold text-emerald-100/80">R$ 2.524 no cartão</span></div></div>
+            <div class="mb-4 overflow-hidden rounded-xl border border-white/10">
+              <table class="w-full text-left text-sm">
+                <caption class="sr-only">Formas de pagamento da Honeywhale B20 no Mercado Livre</caption>
+                <tbody>
+                  <tr class="border-b border-white/10 bg-emerald-400/[0.07]">
+                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-white">Pix</span><span class="text-xs font-normal text-brand-dim">PIX</span></th>
+                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-emerald-300 sm:text-lg">R$ 2.324,00</span><span class="text-xs text-brand-dim">no Pix · menor preço histórico</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-white">Parcelado no cartão</span><span class="text-xs font-normal text-brand-dim">em até 10x</span></th>
+                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-brand-yellow sm:text-lg">10x de R$ 252,40</span><span class="text-xs font-bold text-emerald-300">sem juros</span> <span class="text-xs text-brand-dim">· R$ 2.524 no cartão</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="mb-5 grid grid-cols-3 gap-2 text-[11px] text-brand-muted sm:text-xs">
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">↩️</span>Devolução Grátis</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🏪</span>Loja oficial</li>
+            </ul>
+            <a class="btn-shine inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1kQVeNg">Ir para o Mercado Livre</a>
           </article>
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
@@ -504,7 +570,7 @@
               <div class="mb-3 flex items-center gap-2"><span class="text-violet-400">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
               <ul class="space-y-2">
               <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Commute urbano dobrável com bateria 48V removível.</span></li>
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Melhor custo-benefício dobrável até R$ 2.500.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Melhor custo-benefício dobrável até R$ 2.600.</span></li>
               <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Trajetos planos de até 35 km.</span></li>
               </ul>
             </div>
@@ -514,7 +580,7 @@
             </div>
             <div class="mt-5 border-t border-white/10 pt-4">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
-              <p class="text-xl font-bold text-white">R$ 2.446</p>
+              <p class="text-xl font-bold text-white">R$ 2.552</p>
               <div class="mt-3 flex flex-col gap-2">
                 <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1eqMgcv">Comprar no Mercado Livre</a>
                 <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="review-oimotoo-s6.html">Ver Análise Completa</a>
@@ -545,7 +611,7 @@
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
               <p class="text-xl font-bold text-white">R$ 3.799</p>
               <div class="mt-3 flex flex-col gap-2">
-                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2joNhs5">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1MDt7cC">Comprar no Mercado Livre</a>
                 <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="review-honeywhale-s6-s.html">Ver Análise Completa</a>
               </div>
             </div>
@@ -563,11 +629,11 @@
         <div class="space-y-3">
           <details class="glass p-5" open>
             <summary class="cursor-pointer list-none font-bold">Honeywhale B20 vale a pena?</summary>
-            <p class="mt-3 text-sm text-brand-muted">Sim, para commute urbano até 35 km com orçamento na casa de R$ 2.400. É a <strong>melhor bicicleta elétrica dobrável</strong> de equilíbrio deste ranking: 440W, discos e aro 14.</p>
+            <p class="mt-3 text-sm text-brand-muted">Sim, para commute urbano até 35 km com orçamento na casa de R$ 2.300. É a <strong>melhor bicicleta elétrica dobrável</strong> de equilíbrio deste ranking: 440W, discos e aro 14.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Quanto custa bicicleta elétrica dobrável?</summary>
-            <p class="mt-3 text-sm text-brand-muted">Nesta seleção, a Honeywhale B20 parte de <strong>R$ 2.399</strong>; a Oimotoo S6 cerca de R$ 2.446; a Dobrável 350W cerca de R$ 2.509; a Oimotoo A9 cerca de R$ 2.999; a Honeywhale S6-S cerca de R$ 3.799. Preços variam no Mercado Livre.</p>
+            <p class="mt-3 text-sm text-brand-muted">Nesta seleção, a Honeywhale B20 parte de <strong>R$ 2.324</strong>; a Oimotoo S6 cerca de R$ 2.552; a Dobrável 350W cerca de R$ 2.557; a Oimotoo A9 cerca de R$ 2.699; a Honeywhale S6-S cerca de R$ 3.799. Preços variam no Mercado Livre.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Qual a melhor bicicleta elétrica dobrável?</summary>
@@ -606,10 +672,10 @@
         <img src="https://http2.mlstatic.com/D_NQ_NP_2X_603508-MLA113190607451_062026-F.webp" alt="Honeywhale B20 bicicleta elétrica dobrável 440W — melhor bike elétrica urbana aro 14" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-white/10 bg-white/5 object-cover sm:block">
         <div class="min-w-0">
           <strong class="block max-w-[200px] truncate text-sm font-bold text-white sm:max-w-xs sm:text-base">Honeywhale B20</strong>
-          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 9.4</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">a partir de R$ 2.399</span></div>
+          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 9.4</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">R$ 2.324</span><span class="text-white/20" aria-hidden="true">|</span><span class="whitespace-nowrap font-extrabold text-emerald-300">10x sem juros</span></div>
         </div>
       </div>
-      <a class="inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2i6rBNV">Comprar no Mercado Livre</a>
+      <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1kQVeNg">Comprar no Mercado Livre</a>
     </div>
   </div>
 
