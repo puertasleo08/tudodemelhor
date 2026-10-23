@@ -28,7 +28,7 @@
         extend: {
           colors: { brand: { bg: '#232F3E', yellow: '#FFE600', orange: '#FF9900', card: 'rgba(27, 37, 48, 0.7)', elevated: '#1B2530', border: '#37475A', muted: '#D5D9D9', dim: '#AAB3BD' } },
           fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
-          boxShadow: { glow: '0 0 15px rgba(255, 230, 0, 0.4)', 'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)', 'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)', 'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)' },
+          boxShadow: { glow: '0 0 15px rgba(255, 230, 0, 0.4)', 'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)', 'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)', 'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)', 'neon-emerald': '0 0 12px rgba(52, 211, 153, 0.55), inset 0 0 8px rgba(52, 211, 153, 0.15)' },
           backgroundImage: { 'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)' }
         }
       }
@@ -49,8 +49,18 @@
     @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
     .animate-marquee { animation: marquee 25s linear infinite; width: max-content; }
     .animate-marquee:hover, .animate-marquee:active { animation-play-state: paused; }
+    .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
+    .btn-shine::after { content: ''; position: absolute; top: 0; left: -75%; z-index: -1; width: 50%; height: 100%; background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.75), transparent); transform: skewX(-20deg); animation: shine 2.8s ease-in-out infinite; }
+    @keyframes shine { 0% { left: -75%; } 60%, 100% { left: 130%; } }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+    .pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 6px rgba(52, 211, 153, 0.35), 0 0 0 rgba(255, 230, 0, 0); } 50% { box-shadow: 0 0 18px rgba(52, 211, 153, 0.75), 0 0 28px rgba(255, 230, 0, 0.3); } }
+    .sem-juros-glow { animation: glow-pulse 2.2s ease-in-out infinite; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .details-chevron { transform: rotate(180deg); }
+    @media (prefers-reduced-motion: reduce) { .btn-shine::after { display: none; } .pulse-dot { animation: none; } .sem-juros-glow { animation: none; box-shadow: 0 0 12px rgba(52, 211, 153, 0.5); } }
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Honeywhale M2 MAX-B Vale a Pena? Review Sincero e Preço 2026","description":"Honeywhale M2 MAX-B vale a pena? Patinete elétrico 500W com assento, autonomia de até 32 km e 32 km/h. Confira o veredito antes de comprar!","author":{"@type":"Organization","name":"Equipe Tudo de Melhor","url":"https://www.tudodemelhor.com.br/sobre"},"datePublished":"2026-09-19T19:56:54-03:00","dateModified":"2026-10-18T13:56:28-03:00","image":["https://http2.mlstatic.com/D_NQ_NP_2X_612224-MLA112140606730_062026-F.webp"],"publisher":{"@type":"Organization","@id":"https://www.tudodemelhor.com.br/#organization","name":"Tudo de Melhor","url":"https://www.tudodemelhor.com.br/","logo":{"@type":"ImageObject","url":"https://www.tudodemelhor.com.br/assets/ui/logo-site/logo-tudo-melhor.jpeg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.tudodemelhor.com.br/review-honeywhale-m2-max-b"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.tudodemelhor.com.br/"},{"@type":"ListItem","position":2,"name":"Melhores Patinetes Elétricos","item":"https://www.tudodemelhor.com.br/melhores-patinetes-eletricos.html"},{"@type":"ListItem","position":3,"name":"Honeywhale M2 MAX-B"}]},{"@type":"Product","name":"Honeywhale M2 MAX-B Patinete Elétrico com Assento 500W","brand":{"@type":"Brand","name":"HONEYWHALE"},"image":"https://http2.mlstatic.com/D_NQ_NP_2X_612224-MLA112140606730_062026-F.webp","description":"Honeywhale M2 MAX-B Patinete Elétrico com Assento 500W. #5 do ranking Tudo de Melhor de melhores patinetes elétricos.","review":{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"8.8","bestRating":"10"},"author":{"@type":"Organization","name":"Tudo de Melhor","url":"https://www.tudodemelhor.com.br/"},"positiveNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"Assento incluso — raro nos melhores patinetes elétricos urbanos desta faixa"},{"@type":"ListItem","position":2,"name":"Motor 500W acima dos 350W de entrada"},{"@type":"ListItem","position":3,"name":"Autonomia de até 32 km e 32 km/h"},{"@type":"ListItem","position":4,"name":"App Bluetooth da Honeywhale"},{"@type":"ListItem","position":5,"name":"Dobrável para guarda"},{"@type":"ListItem","position":6,"name":"Preço a partir de R$ 2.321, competitivo para scooter elétrica com banco"}]},"negativeNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"Assento aumenta volume dobrado — cabe pior no metrô que a Foston 15 kg"},{"@type":"ListItem","position":2,"name":"32 km/h ainda é recorte urbano, não off-road 1000W"},{"@type":"ListItem","position":3,"name":"Bateria 36V pede atenção em subida longa"},{"@type":"ListItem","position":4,"name":"Banco de patinete não substitui selim de bike em 25 km diários"},{"@type":"ListItem","position":5,"name":"Peças de desgaste (banco, dobradiça) exigem seller com boa reputação"}]}},"offers":{"@type":"Offer","url":"https://meli.la/1paSzgp","priceCurrency":"BRL","price":"2321.00","availability":"https://schema.org/InStock"},"url":"https://www.tudodemelhor.com.br/review-honeywhale-m2-max-b"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Honeywhale M2 MAX-B vale a pena?","acceptedAnswer":{"@type":"Answer","text":"Vale a pena se o assento é inegociável. Em pé, a Foston S09 Pro custa menos; em potência bruta, o H18 1000W e a G3 Pro passam na frente."}},{"@type":"Question","name":"Quanto custa patinete elétrico?","acceptedAnswer":{"@type":"Answer","text":"Nesta seleção de setembro de 2026, a Oimotoo 350W parte de R$ 1.079; a Foston S09 Pro de R$ 1.989; a Honeywhale M2 MAX-B de R$ 2.321; o Hitway H18 1000W de R$ 4.900; e a Honeywhale G3 Pro de R$ 6.725. O Honeywhale M2 MAX-B está em R$ 2.321 no anúncio rastreado."}},{"@type":"Question","name":"Como carregar patinete elétrico?","acceptedAnswer":{"@type":"Answer","text":"Conecte o carregador bivolt na tomada e na porta da bateria. A primeira carga deve ser completa. Evite umidade no conector e não deixe dias no 100% depois de cheio. Tempo típico: 4 a 8 horas conforme Ah."}},{"@type":"Question","name":"Qual a autonomia real?","acceptedAnswer":{"@type":"Answer","text":"Até 32 km na prática cai com subida, peso e modo turbo. Planeje margem de 20–30%."}},{"@type":"Question","name":"Onde comprar patinete elétrico?","acceptedAnswer":{"@type":"Answer","text":"Onde comprar patinete elétrico com rastreio desta review: Mercado Livre no link de afiliado da Honeywhale M2 MAX-B. Compare seller, frete e garantia antes de fechar."}},{"@type":"Question","name":"Honeywhale M2 MAX-B ou Honeywhale G3 Pro?","acceptedAnswer":{"@type":"Answer","text":"A Honeywhale M2 MAX-B (8.8/10, R$ 2.321) atende adulto que quer patinete elétrico com banco para trajetos de 8 a 20 km sem fadiga nas pernas. A Honeywhale G3 Pro (9.6/10, R$ 6.725) é a alternativa se o recorte mudar. Veja o ranking completo dos melhores patinetes elétricos."}}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Honeywhale M2 MAX-B Vale a Pena? Review Sincero e Preço 2026","description":"Honeywhale M2 MAX-B vale a pena? Patinete elétrico 500W com assento, autonomia de até 32 km e 32 km/h. Confira o veredito antes de comprar!","author":{"@type":"Organization","name":"Equipe Tudo de Melhor","url":"https://www.tudodemelhor.com.br/sobre"},"datePublished":"2026-09-19T19:56:54-03:00","dateModified":"2026-10-23T12:00:00-03:00","image":["https://http2.mlstatic.com/D_NQ_NP_2X_612224-MLA112140606730_062026-F.webp"],"publisher":{"@type":"Organization","@id":"https://www.tudodemelhor.com.br/#organization","name":"Tudo de Melhor","url":"https://www.tudodemelhor.com.br/","logo":{"@type":"ImageObject","url":"https://www.tudodemelhor.com.br/assets/ui/logo-site/logo-tudo-melhor.jpeg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.tudodemelhor.com.br/review-honeywhale-m2-max-b"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.tudodemelhor.com.br/"},{"@type":"ListItem","position":2,"name":"Melhores Patinetes Elétricos","item":"https://www.tudodemelhor.com.br/melhores-patinetes-eletricos.html"},{"@type":"ListItem","position":3,"name":"Honeywhale M2 MAX-B"}]},{"@type":"Product","name":"Honeywhale M2 MAX-B Patinete Elétrico com Assento 500W","brand":{"@type":"Brand","name":"HONEYWHALE"},"image":"https://http2.mlstatic.com/D_NQ_NP_2X_612224-MLA112140606730_062026-F.webp","description":"Honeywhale M2 MAX-B Patinete Elétrico com Assento 500W. #4 do ranking Tudo de Melhor de melhores patinetes elétricos.","review":{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"8.8","bestRating":"10"},"author":{"@type":"Organization","name":"Tudo de Melhor","url":"https://www.tudodemelhor.com.br/"},"positiveNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"Assento incluso — raro nos melhores patinetes elétricos urbanos desta faixa"},{"@type":"ListItem","position":2,"name":"Motor 500W acima dos 350W de entrada"},{"@type":"ListItem","position":3,"name":"Autonomia de até 32 km e 32 km/h"},{"@type":"ListItem","position":4,"name":"App Bluetooth da Honeywhale"},{"@type":"ListItem","position":5,"name":"Dobrável para guarda"},{"@type":"ListItem","position":6,"name":"Preço a partir de R$ 2.321, competitivo para scooter elétrica com banco"}]},"negativeNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"Assento aumenta volume dobrado — cabe pior no metrô que a Foston 15 kg"},{"@type":"ListItem","position":2,"name":"32 km/h ainda é recorte urbano, não off-road 1000W"},{"@type":"ListItem","position":3,"name":"Bateria 36V pede atenção em subida longa"},{"@type":"ListItem","position":4,"name":"Banco de patinete não substitui selim de bike em 25 km diários"},{"@type":"ListItem","position":5,"name":"Peças de desgaste (banco, dobradiça) exigem seller com boa reputação"}]}},"offers":{"@type":"Offer","url":"https://meli.la/1paSzgp","priceCurrency":"BRL","price":"2321.03","availability":"https://schema.org/InStock"},"url":"https://www.tudodemelhor.com.br/review-honeywhale-m2-max-b"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Honeywhale M2 MAX-B vale a pena?","acceptedAnswer":{"@type":"Answer","text":"Vale a pena se o assento é inegociável. Em pé, a Foston S09 Pro custa menos; em potência bruta, o H18 1000W e a G3 Pro passam na frente."}},{"@type":"Question","name":"Quanto custa patinete elétrico?","acceptedAnswer":{"@type":"Answer","text":"Nesta seleção de outubro de 2026, a Oimotoo 350W parte de R$ 1.047; a Foston S09 Pro de R$ 1.851; a Honeywhale M2 MAX-B de R$ 2.321; o Hitway H18 1000W de R$ 5.649; e a Honeywhale G3 Pro de R$ 6.725. O Honeywhale M2 MAX-B está em R$ 2.321 no anúncio rastreado."}},{"@type":"Question","name":"Como carregar patinete elétrico?","acceptedAnswer":{"@type":"Answer","text":"Conecte o carregador bivolt na tomada e na porta da bateria. A primeira carga deve ser completa. Evite umidade no conector e não deixe dias no 100% depois de cheio. Tempo típico: 4 a 8 horas conforme Ah."}},{"@type":"Question","name":"Qual a autonomia real?","acceptedAnswer":{"@type":"Answer","text":"Até 32 km na prática cai com subida, peso e modo turbo. Planeje margem de 20–30%."}},{"@type":"Question","name":"Onde comprar patinete elétrico?","acceptedAnswer":{"@type":"Answer","text":"Onde comprar patinete elétrico com rastreio desta review: Mercado Livre no link de afiliado da Honeywhale M2 MAX-B. Compare seller, frete e garantia antes de fechar."}},{"@type":"Question","name":"Honeywhale M2 MAX-B ou Honeywhale G3 Pro?","acceptedAnswer":{"@type":"Answer","text":"A Honeywhale M2 MAX-B (8.8/10, R$ 2.321) atende adulto que quer patinete elétrico com banco para trajetos de 8 a 20 km sem fadiga nas pernas. A Honeywhale G3 Pro (9.6/10, R$ 6.725) é a alternativa se o recorte mudar. Veja o ranking completo dos melhores patinetes elétricos."}}]}]}</script>
 </head>
 <body class="bg-brand-bg text-white font-sans antialiased min-h-screen pb-32">
   <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
@@ -104,16 +114,20 @@
       <header class="mb-8 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div class="glass relative order-2 overflow-hidden p-6 md:order-1 md:p-10">
           <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/10 blur-3xl"></div>
-          <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · #5 do ranking 2026</p>
+          <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · #4 do ranking 2026</p>
           <h1 class="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Honeywhale M2 MAX-B vale a pena? Análise do patinete elétrico M2 MAX-B 500W</h1>
           <p class="mb-6 hidden max-w-2xl text-lg text-brand-muted md:block">A M2 MAX-B é o melhor patinete elétrico com assento do ranking: mais conforto que a Foston em pé, sem o preço da G3 Pro.</p>
+          <div class="mb-3 flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Oferta Verificada no Mercado Livre</span>
+            <div class="sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-sm font-black text-white">10x de R$ 252,10</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>
+          </div>
           <div class="mb-6 flex flex-wrap gap-2">
             <span class="rounded-md bg-brand-yellow px-3 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Melhor com Assento</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Nota editorial 8.8</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">A partir de R$ 2.321</span>
           </div>
           <div class="flex flex-col gap-3 sm:flex-row">
-            <a class="inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1paSzgp">Comprar no Mercado Livre</a>
+            <a class="btn-shine inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1paSzgp">Comprar no Mercado Livre</a>
           </div>
           <div class="product-gallery mt-4" aria-label="Galeria de fotos do produto" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_612224-MLA112140606730_062026-F.webp","alt":"Honeywhale M2 MAX-B Patinete Elétrico com Assento 500W — melhor patinete eletrico adulto"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_725121-MLA83166243263_032025-F.webp","alt":"Honeywhale M2 MAX-B — foto 2 da galeria do melhor patinete eletrico"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_896556-MLA83166686749_032025-F.webp","alt":"Honeywhale M2 MAX-B — foto 3 da galeria do melhor patinete eletrico"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_651316-MLA83166686753_032025-F.webp","alt":"Honeywhale M2 MAX-B — foto 4 da galeria do melhor patinete eletrico"}]'>
             <p class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Fotos do produto</p>
@@ -161,28 +175,56 @@
         </article>
       </section>
 
+      <section id="historico" class="mb-10 scroll-mt-28" aria-labelledby="historico-titulo">
+        <div class="glass overflow-hidden p-5 md:p-7">
+          <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
+            <p id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</p>
+            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300">Novo monitoramento</span>
+          </div>
+          <div class="mb-5 flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base">
+            🟢 Preço monitorado: R$ 2.321,03 no Pix ou 10x de R$ 252,10 sem juros
+          </div>
+          <figure>
+              <svg viewBox="0 0 600 220" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço: R$ 2.321,03 em 23/10">
+                <defs><linearGradient id="area-m2maxb" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/><stop offset="100%" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs>
+                <g stroke="rgba(255,255,255,0.08)" stroke-width="1"><line x1="40" y1="20.0" x2="580" y2="20.0"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95.0" x2="580" y2="95.0"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170.0" x2="580" y2="170.0"/></g>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25.0">2,4k</text><text x="36" y="62.5">2,35k</text><text x="36" y="100.0">2,3k</text><text x="36" y="137.5">2,25k</text><text x="36" y="175.0">2,2k</text></g>
+                <polygon fill="url(#area-m2maxb)" points="56.0,79.2 566.0,79.2 566.0,170 56.0,170"/>
+                <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56.0,79.2 566.0,79.2"/>
+                <g fill="#34d399"><circle cx="56.0" cy="79.2" r="4"/></g>
+                <circle cx="566.0" cy="79.2" r="10" fill="#34d399" fill-opacity="0.25"/><circle cx="566.0" cy="79.2" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
+                <g font-family="Inter, sans-serif" font-weight="800" font-size="20"><text x="566.0" y="63.2" fill="#6ee7b7" text-anchor="end">R$ 2.321</text></g>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56.0" y="212">23/10</text><text x="562" y="212" fill="#6ee7b7" font-weight="700">Hoje</text></g>
+              </svg>
+            <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+              <strong class="text-brand-muted">Transparência:</strong> Monitoramento iniciado em 23/10/2026. Loja oficial Honeywhale: R$ 2.321,03 vale para o Pix; no cartão o anúncio mostra R$ 2.521,03 em até 10x sem juros. A venda, entrega e garantia são do vendedor no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar — confira no anúncio antes de pagar.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section class="mb-10">
         <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-brand-yellow">contras</span> da Honeywhale M2 MAX-B</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div class="glass border-emerald-500/30 p-6 shadow-glow-emerald">
             <h3 class="mb-4 text-lg font-bold text-emerald-300">Pontos fortes</h3>
-            <ul class="list-disc space-y-2 pl-5 text-sm text-brand-muted">
-              <li>Assento incluso — raro nos melhores patinetes elétricos urbanos desta faixa</li>
-              <li>Motor 500W acima dos 350W de entrada</li>
-              <li>Autonomia de até 32 km e 32 km/h</li>
-              <li>App Bluetooth da Honeywhale</li>
-              <li>Dobrável para guarda</li>
-              <li>Preço a partir de R$ 2.321, competitivo para scooter elétrica com banco</li>
+            <ul class="space-y-3 text-sm text-brand-muted">
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Assento incluso — raro nos melhores patinetes elétricos urbanos desta faixa</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Motor 500W acima dos 350W de entrada</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Autonomia de até 32 km e 32 km/h</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>App Bluetooth da Honeywhale</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Dobrável para guarda</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Preço a partir de R$ 2.321, competitivo para scooter elétrica com banco</span></li>
             </ul>
           </div>
           <div class="glass border-orange-500/30 p-6">
             <h3 class="mb-4 text-lg font-bold text-orange-300">Limitações</h3>
-            <ul class="list-disc space-y-2 pl-5 text-sm text-brand-muted">
-              <li>Assento aumenta volume dobrado — cabe pior no metrô que a Foston 15 kg</li>
-              <li>32 km/h ainda é recorte urbano, não off-road 1000W</li>
-              <li>Bateria 36V pede atenção em subida longa</li>
-              <li>Banco de patinete não substitui selim de bike em 25 km diários</li>
-              <li>Peças de desgaste (banco, dobradiça) exigem seller com boa reputação</li>
+            <ul class="space-y-3 text-sm text-brand-muted">
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Assento aumenta volume dobrado — cabe pior no metrô que a Foston 15 kg</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>32 km/h ainda é recorte urbano, não off-road 1000W</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Bateria 36V pede atenção em subida longa</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Banco de patinete não substitui selim de bike em 25 km diários</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Peças de desgaste (banco, dobradiça) exigem seller com boa reputação</span></li>
             </ul>
           </div>
         </div>
@@ -254,7 +296,7 @@
           <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: avaliação do <span class="text-brand-yellow">patinete elétrico Honeywhale M2 MAX-B</span></h2>
           <p class="mb-5 text-brand-muted">Vale a pena se o assento é inegociável. Em pé, a Foston S09 Pro custa menos; em potência bruta, o H18 1000W e a G3 Pro passam na frente. Nesta avaliação da Honeywhale M2 MAX-B Patinete Elétrico com Assento 500W, cruzamos motor, bateria, autonomia e preço rastreado no Mercado Livre — o mesmo método do ranking das <a href="melhores-patinetes-eletricos.html" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">melhores patinetes elétricos</a> da Tudo de Melhor. A pergunta "Honeywhale M2 MAX-B vale a pena?" só fecha quando o seu trajeto real (km, ladeiras, guarda) casa com o recorte do modelo.</p>
           <h3 class="mb-2 text-lg font-bold text-brand-yellow">Uso diário e autonomia real</h3>
-          <p class="mb-5 text-brand-muted">No commute, autonomia de fábrica quase nunca se confirma no turbo. Peso do piloto, modo de aceleração e piso irregular cortam os km. A Honeywhale M2 MAX-B entra neste ranking como <strong>melhor patinete elétrico</strong> no recorte dela — não como solução universal. Mapeie ida e volta reais antes de comprar; se o ciclo passa do declarado, considere a <a href="review-honeywhale-g3-pro.html" class="text-brand-yellow underline">Honeywhale G3 Pro</a> ou a <a href="review-foston-s09-pro.html" class="text-brand-yellow underline">Foston S09 Pro</a>.</p>
+          <p class="mb-5 text-brand-muted">No commute, autonomia de fábrica quase nunca se confirma no turbo. Peso do piloto, modo de aceleração e piso irregular cortam os km. A Honeywhale M2 MAX-B entra neste ranking como <strong>melhor patinete elétrico</strong> no recorte dela — não como solução universal. Mapeie ida e volta reais antes de comprar; se o ciclo passa do declarado, considere a <a href="review-honeywhale-g3-pro.html" class="text-brand-yellow underline">Honeywhale G3 Pro</a> ou a <a href="review-foston-s09-pro-bluetooth.html" class="text-brand-yellow underline">Foston S09 Pro Bluetooth</a>.</p>
           <h3 class="mb-2 text-lg font-bold text-brand-yellow">Motor, velocidade e legislação</h3>
           <p class="mb-5 text-brand-muted">Patinete elétrico 350W cobre bairro plano; 500W ajuda em rampa curta; <strong>patinete elétrico 1000W</strong> e 1640W mudam o recorte para scooter elétrica de alto desempenho. Velocidades de 50–60 km/h exigem checar normas locais (CONTRAN e regras municipais): o que o anúncio chama de melhor scooter elétrica adulto pode ser tratado como ciclomotor em algumas cidades. Use capacete, luz e faça teste em local aberto.</p>
           <h3 class="mb-2 text-lg font-bold text-brand-yellow">Portabilidade: dobrar, elevador e metrô</h3>
@@ -273,7 +315,54 @@
               <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Link de oferta</span>
             </div>
             <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Honeywhale M2 MAX-B Patinete Elétrico com Assento 500W. Confira seller, frete, garantia e o preço do dia.</p>
-            <a class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1paSzgp">Ir para o Mercado Livre</a>
+            <div class="mb-4"><div class="sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-base font-black text-white">10x de R$ 252,10</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div></div>
+            <div class="mb-4 overflow-hidden rounded-xl border border-white/10">
+              <table class="w-full text-left text-sm">
+                <caption class="sr-only">Formas de pagamento da Honeywhale M2 MAX-B no Mercado Livre</caption>
+                <tbody>
+                  <tr class="border-b border-white/10 bg-emerald-400/[0.07]">
+                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-white">À vista</span><span class="text-xs font-normal text-brand-dim">Pix</span></th>
+                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-emerald-300 sm:text-lg">R$ 2.321,03</span><span class="text-xs text-brand-dim">R$ 200 a menos que no cartão</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-white">Parcelado no cartão</span><span class="text-xs font-normal text-brand-dim">em até 10x</span></th>
+                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-brand-yellow sm:text-lg">10x de R$ 252,10</span><span class="text-xs font-bold text-emerald-300">sem juros · total R$ 2.521,03</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <details class="border-t border-white/10">
+                <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-white">
+                  Ver todas as parcelas (2x a 10x)
+                  <svg class="details-chevron h-4 w-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+                </summary>
+                <table class="w-full text-left text-sm">
+                  <thead>
+                    <tr class="border-y border-white/10 text-[10px] uppercase tracking-wider text-brand-dim">
+                      <th scope="col" class="px-4 py-2 font-bold">Parcelas</th>
+                      <th scope="col" class="px-4 py-2 text-right font-bold">Condição</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-brand-muted">
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">2x</strong> R$ 1.260,52</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">3x</strong> R$ 840,34</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">4x</strong> R$ 630,26</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">5x</strong> R$ 504,21</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">6x</strong> R$ 420,17</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">7x</strong> R$ 360,15</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">8x</strong> R$ 315,13</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">9x</strong> R$ 280,11</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr><td class="px-4 py-2.5"><strong class="text-brand-yellow">10x</strong> R$ 252,10</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                  </tbody>
+                </table>
+                <p class="px-4 pb-4 pt-2 text-[11px] text-brand-dim">Parcelas calculadas a partir do preço no cartão anunciado em 23/10/2026 (R$ 2.521,03), com até 10x sem juros. Os centavos podem variar conforme cartão e banco.</p>
+              </details>
+            </div>
+            <ul class="mb-5 grid grid-cols-3 gap-2 text-[11px] text-brand-muted sm:text-xs">
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🏅</span>Loja oficial</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🔥</span>Mais vendido</li>
+            </ul>
+            <a class="btn-shine inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1paSzgp">Ir para o Mercado Livre</a>
           </article>
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
@@ -327,43 +416,43 @@
           </article><article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow">
             <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 2">2</span>
             <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_872730-MLA95500784090_102025-O.webp" alt="Foston S09 Pro 2024 Patinete Elétrico 350W — melhor scooter eletrica" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_956101-MLA95497932360_102025-F.webp" alt="Foston S09 Pro 350W Bluetooth Dobrável — melhor scooter eletrica" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
             </div>
             <div class="mt-4 flex flex-wrap items-center gap-2">
               <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">FOSTON</span>
-              <h3 class="text-lg font-bold text-white">S09 Pro 350W</h3>
+              <h3 class="text-lg font-bold text-white">S09 Pro Bluetooth</h3>
             </div>
             <div class="mt-3 flex-1">
               <div class="mb-3 flex items-center gap-2"><span class="text-violet-400">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
               <ul class="space-y-2">
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Melhor patinete elétrico custo-benefício para trajetos curtos até 15 km.</span></li>
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>15 kg e base dobrável: sobe no elevador e entra no porta-malas sem drama.</span></li>
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Orçamento até R$ 2.000 no Mercado Livre com roda 8,5" e carga de 120 kg.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer patinete elétrico 350W com app Bluetooth e farol LED.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Bateria 10400 mAh — pack maior que a S09 Pro 2024 de 7800 mAh.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Adulto urbano que aceita 25 km/h e prioriza conectividade no celular.</span></li>
               </ul>
             </div>
             <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
               <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
-              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">93</span><span class="text-sm text-brand-dim">/100</span></div>
+              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">92</span><span class="text-sm text-brand-dim">/100</span></div>
             </div>
             <div class="mt-3 flex flex-wrap gap-2">
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Motor 350W</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Autonomia 30 km</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">15 kg</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Dobrável</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">350W</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Bluetooth</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">10400 mAh</span>
+              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">25 km/h</span>
             </div>
             <div class="mt-5 border-t border-white/10 pt-4">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
-              <p class="text-xl font-bold text-white">R$ 1.989</p>
+              <p class="text-xl font-bold text-white">R$ 1.851</p>
               <div class="mt-3 flex flex-col gap-2">
-                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2bTXMis">Comprar no Mercado Livre</a>
-                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="review-foston-s09-pro.html">Ver Análise Completa</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/117ifNw">Comprar no Mercado Livre</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="review-foston-s09-pro-bluetooth.html">Ver Análise Completa</a>
               </div>
             </div>
           </article>
           <a class="glass flex flex-col justify-center p-5 transition hover:-translate-y-1 hover:shadow-glow" href="melhores-patinetes-eletricos.html">
             <p class="mb-2 text-xs font-bold uppercase text-brand-yellow">Lista completa</p>
             <h3 class="mb-2 text-lg font-bold text-white">Voltar ao ranking</h3>
-            <p class="text-sm text-brand-dim">Ver os 6 patinetes elétricos comparados lado a lado.</p>
+            <p class="text-sm text-brand-dim">Ver os 5 patinetes elétricos comparados lado a lado.</p>
           </a>
         </div>
       </section>
@@ -377,7 +466,7 @@
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Quanto custa patinete elétrico?</summary>
-            <p class="mt-3 text-sm text-brand-muted">Nesta seleção de setembro de 2026, a Oimotoo 350W parte de <strong>R$ 1.079</strong>; a Foston S09 Pro de <strong>R$ 1.989</strong>; a Honeywhale M2 MAX-B de <strong>R$ 2.321</strong>; o Hitway H18 1000W de <strong>R$ 4.900</strong>; e a Honeywhale G3 Pro de <strong>R$ 6.725</strong>. O Honeywhale M2 MAX-B está em <strong>R$ 2.321</strong> no anúncio rastreado.</p>
+            <p class="mt-3 text-sm text-brand-muted">Nesta seleção de outubro de 2026, a Oimotoo 350W parte de <strong>R$ 1.047</strong>; a Foston S09 Pro de <strong>R$ 1.851</strong>; a Honeywhale M2 MAX-B de <strong>R$ 2.321</strong>; o Hitway H18 1000W de <strong>R$ 5.649</strong>; e a Honeywhale G3 Pro de <strong>R$ 6.725</strong>. O Honeywhale M2 MAX-B está em <strong>R$ 2.321</strong> no anúncio rastreado.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Como carregar patinete elétrico?</summary>
@@ -403,7 +492,7 @@
           <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-brand-gradient text-sm font-black text-black shadow-glow">Equipe</div>
           <div>
             <h3 class="mb-1 text-lg font-bold">Equipe Tudo de Melhor</h3>
-            <p class="text-sm text-brand-muted">Review do #5 do ranking de patinetes elétricos. Nome, imagem e preço extraídos do anúncio do Mercado Livre. Links de afiliados podem gerar comissão, sem custo extra para você.</p>
+            <p class="text-sm text-brand-muted">Review do #4 do ranking de patinetes elétricos. Nome, imagem e preço extraídos do anúncio do Mercado Livre. Links de afiliados podem gerar comissão, sem custo extra para você.</p>
           </div>
         </div>
       </section>
@@ -416,10 +505,10 @@
         <img src="https://http2.mlstatic.com/D_NQ_NP_2X_612224-MLA112140606730_062026-F.webp" alt="Honeywhale M2 MAX-B Patinete Elétrico com Assento 500W — melhor patinete eletrico adulto" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-white/10 bg-white/5 object-cover sm:block">
         <div class="min-w-0">
           <strong class="block max-w-[200px] truncate text-sm font-bold text-white sm:max-w-xs sm:text-base">Honeywhale M2 MAX-B</strong>
-          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 8.8</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">a partir de R$ 2.321</span></div>
+          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 8.8</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">R$ 2.321</span><span class="text-white/20" aria-hidden="true">|</span><span class="whitespace-nowrap font-extrabold text-emerald-300">10x sem juros</span></div>
         </div>
       </div>
-      <a class="inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1paSzgp">Comprar no Mercado Livre</a>
+      <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1paSzgp">Comprar no Mercado Livre</a>
     </div>
   </div>
   <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
