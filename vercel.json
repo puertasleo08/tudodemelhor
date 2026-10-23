@@ -691,6 +691,16 @@
       "source": "/review-tomate-350w.html",
       "destination": "/melhores-bicicletas-eletricas",
       "permanent": true
+    },
+    {
+      "source": "/review-foston-s09-pro",
+      "destination": "/review-foston-s09-pro-bluetooth",
+      "permanent": true
+    },
+    {
+      "source": "/review-foston-s09-pro.html",
+      "destination": "/review-foston-s09-pro-bluetooth",
+      "permanent": true
     }
   ],
   "headers": [
