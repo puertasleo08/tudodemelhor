@@ -117,6 +117,14 @@
       .btn-shine::after { display: none; }
       .pulse-dot { animation: none; }
     }
+    @keyframes glow-pulse {
+      0%, 100% { box-shadow: 0 0 6px rgba(52, 211, 153, 0.35), 0 0 0 rgba(255, 230, 0, 0); }
+      50% { box-shadow: 0 0 18px rgba(52, 211, 153, 0.75), 0 0 28px rgba(255, 230, 0, 0.3); }
+    }
+    .sem-juros-glow { animation: glow-pulse 2.2s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .sem-juros-glow { animation: none; box-shadow: 0 0 12px rgba(52, 211, 153, 0.5); }
+    }
   </style>
 </head>
 <body class="bg-brand-bg text-white font-sans antialiased min-h-screen">
@@ -253,7 +261,7 @@
             </div>
             <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
             <p class="text-lg font-bold text-white">R$ 5.039,43 <span class="text-xs font-semibold text-emerald-300">à vista</span></p>
-            <p class="text-sm font-bold text-brand-yellow">ou 10x de R$ 503,94 sem juros</p>
+            <div class="sem-juros-glow mt-1.5 inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-sm font-black text-white">10x de R$ 503,94</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>
             <div class="mt-2 flex flex-col gap-2">
               <a class="btn-shine inline-flex h-10 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition-all hover:scale-[1.02] hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1omWLKf">Comprar no Mercado Livre</a>
               <a class="inline-flex h-10 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="review-scooter-eletrico-dx5.html">Ver Análise Completa</a>
@@ -342,7 +350,7 @@
             </div>
             <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
             <p class="text-lg font-bold text-white">R$ 13.990,00 <span class="text-xs font-semibold text-emerald-300">à vista</span></p>
-            <p class="text-sm font-bold text-brand-yellow">ou 10x de R$ 1.448,90 sem juros</p>
+            <div class="sem-juros-glow mt-1.5 inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-sm font-black text-white">10x de R$ 1.448,90</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>
             <p class="text-[11px] text-brand-dim">já com frete de R$ 499 p/ SP</p>
             <div class="mt-2 flex flex-col gap-2">
               <a class="btn-shine inline-flex h-10 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition-all hover:scale-[1.02] hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1yrJ2iy">Comprar no Mercado Livre</a>

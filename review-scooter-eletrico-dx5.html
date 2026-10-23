@@ -94,6 +94,14 @@
     }
     details > summary::-webkit-details-marker { display: none; }
     details[open] .details-chevron { transform: rotate(180deg); }
+    @keyframes glow-pulse {
+      0%, 100% { box-shadow: 0 0 6px rgba(52, 211, 153, 0.35), 0 0 0 rgba(255, 230, 0, 0); }
+      50% { box-shadow: 0 0 18px rgba(52, 211, 153, 0.75), 0 0 28px rgba(255, 230, 0, 0.3); }
+    }
+    .sem-juros-glow { animation: glow-pulse 2.2s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .sem-juros-glow { animation: none; box-shadow: 0 0 12px rgba(52, 211, 153, 0.5); }
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -598,6 +606,7 @@
               <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Link de oferta</span>
             </div>
             <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Scooter Elétrico Dx5 Motor 1500w Adulto Max 55km/h Preto. Confira seller, frete, garantia e o preço do dia (~R$ 5.039).</p>
+            <div class="mb-4"><div class="sem-juros-glow mt-1.5 inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-sm font-black text-white">10x de R$ 503,94</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div></div>
             <div class="mb-4 overflow-hidden rounded-xl border border-white/10">
               <table class="w-full text-left text-sm">
                 <caption class="sr-only">Formas de pagamento da Dx5 no Mercado Livre</caption>

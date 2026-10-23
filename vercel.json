@@ -681,6 +681,16 @@
       "source": "/review-scooter-aima-tiger-s5.html",
       "destination": "/melhores-scooters-eletricas",
       "permanent": true
+    },
+    {
+      "source": "/review-tomate-350w",
+      "destination": "/melhores-bicicletas-eletricas",
+      "permanent": true
+    },
+    {
+      "source": "/review-tomate-350w.html",
+      "destination": "/melhores-bicicletas-eletricas",
+      "permanent": true
     }
   ],
   "headers": [
