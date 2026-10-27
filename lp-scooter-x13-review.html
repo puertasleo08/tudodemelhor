@@ -14,15 +14,20 @@
   </script>
   <script>
     function gtag_report_conversion(url) {
+      var redirected = false;
       var callback = function () {
+        if (redirected) return;
+        redirected = true;
         if (typeof(url) != 'undefined') {
           window.location = url;
         }
       };
       gtag('event', 'conversion', {
           'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE',
-          'event_callback': callback
+          'event_callback': callback,
+          'event_timeout': 1500
       });
+      setTimeout(callback, 1800);
       return false;
     }
   </script>
@@ -266,7 +271,7 @@
       <section id="cores" class="mb-8 scroll-mt-20" aria-labelledby="cores-titulo">
         <h2 id="cores-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">As 3 cores <span class="text-brand-yellow">lado a lado</span></h2>
         <div class="glass overflow-x-auto">
-          <table class="w-full min-w-[560px] text-left text-sm">
+          <table class="w-full min-w-[640px] text-left text-sm">
             <caption class="sr-only">Preço, parcelamento, vendedor e entrega de cada cor da scooter elétrica X13</caption>
             <thead class="bg-white/5 text-[10px] uppercase tracking-wider text-brand-dim">
               <tr>
@@ -283,21 +288,21 @@
                 <td class="px-4 py-3 font-bold text-white">R$ 10.625,00</td>
                 <td class="px-4 py-3 font-bold text-emerald-300">10x de R$ 1.062,50 sem juros</td>
                 <td class="px-4 py-3 text-xs">Frete grátis · chega rápido · devolução grátis</td>
-                <td class="px-4 py-3 text-right"><button type="button" data-pick="preto" class="rounded-lg border border-brand-yellow/60 px-3 py-1.5 text-xs font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Escolher</button></td>
+                <td class="px-4 py-3 text-right"><div class="flex items-center justify-end gap-2"><button type="button" data-pick="preto" class="rounded-lg border border-brand-yellow/60 px-3 py-1.5 text-xs font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Escolher</button><a href="https://meli.la/1KEaTKK" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine whitespace-nowrap rounded-lg bg-brand-yellow px-3 py-1.5 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110">Ver no ML</a></div></td>
               </tr>
               <tr class="border-t border-white/5 bg-white/[0.03]" data-row="vermelho">
                 <th scope="row" class="px-4 py-3 font-semibold text-white"><span class="mr-2 inline-block h-3 w-3 rounded-full border border-white/50 bg-[#b91c1c] align-middle" aria-hidden="true"></span>Vermelha</th>
                 <td class="px-4 py-3 font-bold text-white">R$ 8.924,25</td>
                 <td class="px-4 py-3">12x de R$ 857,77 (com juros)</td>
                 <td class="px-4 py-3 text-xs">Loja oficial Equipools · 6 meses de garantia</td>
-                <td class="px-4 py-3 text-right"><button type="button" data-pick="vermelho" class="rounded-lg border border-brand-yellow/60 px-3 py-1.5 text-xs font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Escolher</button></td>
+                <td class="px-4 py-3 text-right"><div class="flex items-center justify-end gap-2"><button type="button" data-pick="vermelho" class="rounded-lg border border-brand-yellow/60 px-3 py-1.5 text-xs font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Escolher</button><a href="https://meli.la/2o6ycEk" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine whitespace-nowrap rounded-lg bg-brand-yellow px-3 py-1.5 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110">Ver no ML</a></div></td>
               </tr>
               <tr class="border-t border-white/5" data-row="azul">
                 <th scope="row" class="px-4 py-3 font-semibold text-white"><span class="mr-2 inline-block h-3 w-3 rounded-full border border-white/50 bg-[#1d4ed8] align-middle" aria-hidden="true"></span>Azul</th>
                 <td class="px-4 py-3 font-bold text-white">R$ 13.990,00</td>
                 <td class="px-4 py-3 font-bold text-emerald-300">10x de R$ 1.399 sem juros</td>
                 <td class="px-4 py-3 text-xs">MercadoLíder · entrega a combinar (SP)</td>
-                <td class="px-4 py-3 text-right"><button type="button" data-pick="azul" class="rounded-lg border border-brand-yellow/60 px-3 py-1.5 text-xs font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Escolher</button></td>
+                <td class="px-4 py-3 text-right"><div class="flex items-center justify-end gap-2"><button type="button" data-pick="azul" class="rounded-lg border border-brand-yellow/60 px-3 py-1.5 text-xs font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Escolher</button><a href="https://meli.la/1yrJ2iy" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine whitespace-nowrap rounded-lg bg-brand-yellow px-3 py-1.5 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110">Ver no ML</a></div></td>
               </tr>
             </tbody>
           </table>
