@@ -35,10 +35,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://www.tudodemelhor.com.br/lp-scooter-x13-review">
-  <meta name="description" content="Scooter elétrica X13 1000W com bateria 60V 20Ah em 3 cores: preta por R$ 10.625 em 10x de R$ 1.062,50 sem juros, vermelha por R$ 8.924,25 e azul por R$ 13.990. Compra Garantida no Mercado Livre.">
+  <meta name="description" content="Scooter elétrica X13 1000W com bateria 60V 20Ah em 3 cores: preta a partir de R$ 7.999,99 ou 10x de R$ 1.062,50 sem juros, vermelha por R$ 8.924,25 e azul por R$ 13.990. Compra Garantida no Mercado Livre.">
   <meta name="theme-color" content="#232F3E">
   <link rel="icon" type="image/jpeg" href="assets/ui/logo-site/logo-tudo-melhor.jpeg">
-  <title>Scooter Elétrica X13 1000W em 3 Cores — 10x de R$ 1.062,50 sem Juros | Tudo de Melhor</title>
+  <title>Scooter Elétrica X13 1000W a partir de R$ 7.999 ou 10x sem Juros | Tudo de Melhor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://http2.mlstatic.com">
@@ -121,6 +121,8 @@
     .sem-juros-glow { animation: glow-pulse 2.2s ease-in-out infinite; }
     .color-option[aria-checked="true"] { border-color: rgba(255, 230, 0, 0.85); background: rgba(255, 230, 0, 0.08); box-shadow: 0 0 0 1px rgba(255, 230, 0, 0.5), 0 0 18px rgba(255, 230, 0, 0.25); }
     .color-option[aria-checked="true"] .color-check { opacity: 1; transform: scale(1); }
+    .offer-option[aria-checked="true"] { border-color: rgba(52, 211, 153, 0.9); background: rgba(52, 211, 153, 0.1); box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.55), 0 0 18px rgba(52, 211, 153, 0.25); }
+    .offer-option[aria-checked="true"] .offer-check { opacity: 1; transform: scale(1); }
     .swap-fade { transition: opacity 0.25s ease; }
     .swap-fade.is-swapping { opacity: 0; }
     .price-chart svg { display: block; width: 100%; height: auto; }
@@ -184,15 +186,15 @@
                 <span class="color-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
                 <span class="h-7 w-7 rounded-full border-2 border-white/60 bg-[#111] shadow" aria-hidden="true"></span>
                 <span class="text-xs font-extrabold text-white">Preta</span>
-                <span class="text-[11px] font-bold text-brand-yellow">R$ 10.625</span>
-                <span class="rounded bg-emerald-400/15 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-emerald-300">10x sem juros</span>
+                <span class="text-[11px] font-bold text-brand-yellow">a partir de R$ 7.999</span>
+                <span class="rounded bg-sky-400/15 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-sky-300">Menor preço</span>
               </button>
               <button type="button" role="radio" aria-checked="false" data-color="vermelho" class="color-option relative flex flex-col items-center gap-1.5 rounded-xl border border-white/15 bg-white/5 px-2 py-3 text-center transition hover:border-brand-yellow/50">
                 <span class="color-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
                 <span class="h-7 w-7 rounded-full border-2 border-white/60 bg-[#b91c1c] shadow" aria-hidden="true"></span>
                 <span class="text-xs font-extrabold text-white">Vermelha</span>
                 <span class="text-[11px] font-bold text-brand-yellow">R$ 8.924</span>
-                <span class="rounded bg-sky-400/15 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-sky-300">Menor à vista</span>
+                <span class="rounded bg-white/10 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-brand-muted">Bluetooth + LED</span>
               </button>
               <button type="button" role="radio" aria-checked="false" data-color="azul" class="color-option relative flex flex-col items-center gap-1.5 rounded-xl border border-white/15 bg-white/5 px-2 py-3 text-center transition hover:border-brand-yellow/50">
                 <span class="color-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
@@ -204,13 +206,32 @@
             </div>
           </div>
 
+          <!-- SELETOR DE OFERTA / VENDEDOR -->
+          <div id="offer-picker" class="mb-4">
+            <p id="oferta-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Escolha a oferta da cor preta: <span data-bind="offerName" class="text-white">Menor preço</span></p>
+            <div class="grid grid-cols-2 gap-2" role="radiogroup" aria-labelledby="oferta-label">
+              <button type="button" role="radio" aria-checked="true" data-offer="economica" class="offer-option relative flex flex-col items-start gap-1 rounded-xl border border-white/15 bg-white/5 px-3 py-3 text-left transition hover:border-emerald-300/60">
+                <span class="offer-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-emerald-300 text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
+                <span class="rounded bg-sky-400/15 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-sky-300">🏷️ Menor preço atual</span>
+                <span class="text-base font-black text-white">R$ 7.999,99</span>
+                <span class="text-[11px] text-brand-muted">ELETRO SHOP BRASIL · parcelamento padrão</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" data-offer="parcelada" class="offer-option relative flex flex-col items-start gap-1 rounded-xl border border-white/15 bg-white/5 px-3 py-3 text-left transition hover:border-emerald-300/60">
+                <span class="offer-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-emerald-300 text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
+                <span class="rounded bg-emerald-400/15 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-emerald-300">💳 10x sem juros</span>
+                <span class="text-base font-black text-white">10x de R$ 1.062,50</span>
+                <span class="text-[11px] text-brand-muted">total R$ 10.625,00 no cartão</span>
+              </button>
+            </div>
+          </div>
+
           <!-- CARD DE PREÇO -->
           <div class="glass relative overflow-hidden p-5 shadow-glow-emerald">
             <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-brand-yellow/5"></div>
             <div class="relative swap-fade" data-swap>
-              <p class="mb-1 text-xs text-brand-dim"><span data-bind="anchorText">De R$ 11.499 no anúncio</span> · <span data-bind="discount" class="font-bold text-emerald-300">7% OFF</span></p>
+              <p class="mb-1 text-xs text-brand-dim"><span data-bind="anchorText">De R$ 11.499 no anúncio</span> · <span data-bind="discount" class="font-bold text-emerald-300">30% OFF</span></p>
               <div class="flex flex-wrap items-end gap-x-3 gap-y-1">
-                <span class="text-4xl font-black leading-none text-white md:text-5xl" data-bind="priceBig">R$ 10.625<span class="text-2xl md:text-3xl">,00</span></span>
+                <span class="text-4xl font-black leading-none text-white md:text-5xl" data-bind="priceBig">R$ 7.999<span class="text-2xl md:text-3xl">,99</span></span>
                 <span class="pb-1 text-sm font-bold text-emerald-300" data-bind="priceLabel">no cartão ou Pix</span>
               </div>
               <div class="mt-3" data-bind="installmentBlock"></div>
@@ -285,9 +306,9 @@
             <tbody class="text-brand-muted">
               <tr class="border-t border-white/5" data-row="preto">
                 <th scope="row" class="px-4 py-3 font-semibold text-white"><span class="mr-2 inline-block h-3 w-3 rounded-full border border-white/50 bg-[#111] align-middle" aria-hidden="true"></span>Preta</th>
-                <td class="px-4 py-3 font-bold text-white">R$ 10.625,00</td>
-                <td class="px-4 py-3 font-bold text-emerald-300">10x de R$ 1.062,50 sem juros</td>
-                <td class="px-4 py-3 text-xs">Frete grátis · chega rápido · devolução grátis</td>
+                <td class="px-4 py-3"><span class="block font-bold text-white">R$ 7.999,99</span><span class="text-[11px] text-sky-300">menor preço atual</span></td>
+                <td class="px-4 py-3"><span class="block font-bold text-emerald-300">ou 10x de R$ 1.062,50 sem juros</span><span class="text-[11px] text-brand-dim">na opção parcelada (R$ 10.625)</span></td>
+                <td class="px-4 py-3 text-xs">ELETRO SHOP BRASIL (menor preço) ou opção 10x sem juros no mesmo anúncio</td>
                 <td class="px-4 py-3 text-right"><div class="flex items-center justify-end gap-2"><button type="button" data-pick="preto" class="rounded-lg border border-brand-yellow/60 px-3 py-1.5 text-xs font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Escolher</button><a href="https://meli.la/1KEaTKK" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine whitespace-nowrap rounded-lg bg-brand-yellow px-3 py-1.5 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110">Ver no ML</a></div></td>
               </tr>
               <tr class="border-t border-white/5 bg-white/[0.03]" data-row="vermelho">
@@ -307,7 +328,7 @@
             </tbody>
           </table>
         </div>
-        <p class="mt-2 text-xs text-brand-dim">Cada cor é vendida em um anúncio diferente do mesmo modelo, por isso preço, parcelas e entrega mudam. Valores verificados em 25/10/2026.</p>
+        <p class="mt-2 text-xs text-brand-dim">Cada cor é vendida em um anúncio diferente do mesmo modelo, por isso preço, parcelas e entrega mudam. A preta tem duas ofertas no mesmo anúncio. Valores verificados em 27/10/2026 (preta) e 25/10/2026 (vermelha e azul).</p>
       </section>
 
       <!-- CONDIÇÕES DE PAGAMENTO -->
@@ -414,13 +435,13 @@
                 <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">Até 50 km por carga</strong> — bateria de lítio de 60V e 20Ah para ida e volta do trabalho.</span></li>
                 <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">Sem gasolina e sem óleo</strong> — recarga na tomada e manutenção simples.</span></li>
                 <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">Pneu largo e banco confortável</strong> — absorve melhor os buracos que rodas finas.</span></li>
-                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">3 cores para escolher</strong> — preta e azul em 10x sem juros, vermelha com o menor preço à vista.</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">3 cores para escolher</strong> — preta a partir de R$ 7.999,99, e preta e azul com opção de 10x sem juros.</span></li>
               </ul>
             </div>
             <div class="glass border-orange-500/30 p-5">
               <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-orange-300">Antes de comprar, saiba</h3>
               <ul class="space-y-2 text-sm text-brand-muted">
-                <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-400" aria-hidden="true">!</span>Cada cor está em um anúncio diferente: o preço muda de R$ 8.924 a R$ 13.990.</li>
+                <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-400" aria-hidden="true">!</span>Cada cor está em um anúncio diferente: o preço muda de R$ 7.999 a R$ 13.990.</li>
                 <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-400" aria-hidden="true">!</span>É uma scooter pesada: confira se tem espaço e rampa para guardar.</li>
                 <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-400" aria-hidden="true">!</span>Na azul, a entrega é combinada com o vendedor; na vermelha, as 12x têm juros.</li>
               </ul>
@@ -485,15 +506,15 @@
         <div class="space-y-3">
           <details class="glass p-5" open>
             <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold">Qual cor da X13 sai mais barata?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
-            <p class="mt-3 text-sm text-brand-muted">À vista, a vermelha: R$ 8.924,25. Para parcelar sem juros, a preta é a melhor opção: R$ 10.625 em 10x de R$ 1.062,50. A azul custa R$ 13.990 em 10x de R$ 1.399 sem juros.</p>
+            <p class="mt-3 text-sm text-brand-muted">A preta: R$ 7.999,99 na opção de menor preço, vendida pela ELETRO SHOP BRASIL. Para parcelar sem juros, a própria preta tem a opção de R$ 10.625 em 10x de R$ 1.062,50. A vermelha sai por R$ 8.924,25 e a azul, por R$ 13.990 em 10x de R$ 1.399 sem juros.</p>
           </details>
           <details class="glass p-5">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold">Por que o preço muda conforme a cor?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
-            <p class="mt-3 text-sm text-brand-muted">Cada cor é vendida em um anúncio diferente, com vendedor, estoque e promoção próprios. Por isso o preço, as parcelas e o prazo de entrega não são iguais entre as três.</p>
+            <p class="mt-3 text-sm text-brand-muted">Cada cor é vendida em um anúncio diferente, com vendedor, estoque e promoção próprios. Na preta, o mesmo anúncio ainda tem dois vendedores: um com o menor preço e outro com 10x sem juros. Por isso o preço, as parcelas e o prazo de entrega não são iguais.</p>
           </details>
           <details class="glass p-5">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold">As 10x são sem juros?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
-            <p class="mt-3 text-sm text-brand-muted">Na preta e na azul, sim: o anúncio mostra 10x sem juros. Na vermelha, o parcelamento é em 12x de R$ 857,77, com juros. O Mercado Livre mostra todas as opções antes de você finalizar.</p>
+            <p class="mt-3 text-sm text-brand-muted">Na opção parcelada da preta (R$ 10.625) e na azul, sim: o anúncio mostra 10x sem juros. Na opção de menor preço da preta (R$ 7.999,99), o parcelamento segue as condições do vendedor. Na vermelha, são 12x de R$ 857,77, com juros. O Mercado Livre mostra todas as opções antes de você finalizar.</p>
           </details>
           <details class="glass p-5">
             <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold">Precisa de CNH?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
@@ -518,7 +539,7 @@
           <h2 class="mb-2 text-2xl font-extrabold md:text-4xl">X13 1000W <span data-bind="colorName">Preta</span> por <span class="text-brand-yellow" data-bind="priceFull">R$ 10.625,00</span></h2>
           <p class="mb-6 text-sm text-brand-muted md:text-base" data-bind="finalSub">ou 10x de R$ 1.062,50 sem juros · Compra Garantida no Mercado Livre</p>
           <a href="https://meli.la/1KEaTKK" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine mx-auto inline-flex h-14 w-full max-w-md items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.98]"><span data-bind="ctaText">Ver X13 Preta no Mercado Livre</span></a>
-          <p class="mt-3 text-[11px] text-brand-dim">O preço pode mudar a qualquer momento. Valores verificados em 25/10/2026.</p>
+          <p class="mt-3 text-[11px] text-brand-dim">O preço pode mudar a qualquer momento. Valores verificados em 27/10/2026.</p>
         </div>
       </section>
     </div>
@@ -564,19 +585,48 @@
           name: 'Preta', link: 'https://meli.la/1KEaTKK',
           img: 'https://http2.mlstatic.com/D_NQ_NP_2X_965447-MLA106137655938_022026-F.webp',
           alt: 'Scooter elétrica X13 1000W preta — foto do anúncio',
-          price: 10625.00, anchor: 11499, discount: '7% OFF', priceLabel: 'no cartão ou Pix',
-          semJuros: true, n: 10, parc: 'R$ 1.062,50',
-          extra: 'Na opção “Melhor preço” do mesmo anúncio, a Loja oficial Equipools vende por R$ 10.196 à vista (14% OFF).',
-          delivery: 'Frete grátis, chegada rápida e devolução grátis em 30 dias (confira o seu CEP)',
-          seals: [['🛡️', 'Compra Garantida'], ['↩️', 'Devolução grátis'], ['🚚', 'Frete grátis'], ['💳', '10x sem juros']],
-          protSub: '+ Devolução grátis em 30 dias',
-          hist: [['25/10', 10625]], ref: { v: 10196, label: 'Melhor preço à vista: R$ 10.196' },
-          badge: 'Menor registro: R$ 10.196',
-          banner: '🟢 Preço atual: R$ 10.625,00 em 10x de R$ 1.062,50 sem juros',
-          compare: [['De (anúncio)', 'R$ 11.499', true], ['Hoje · 25/10', 'R$ 10.625']],
-          period: 'monitoramento iniciado em 25/10/2026',
-          note: 'O monitor de preço começou a registrar este anúncio em 25/10/2026, com R$ 10.625 no parcelamento sem juros e R$ 10.196 como menor valor à vista (opção “Melhor preço” da Loja oficial Equipools).',
-          kicker: '🟢 Cor em destaque · 10x sem juros'
+          defaultOffer: 'economica',
+          offers: {
+            economica: {
+              offerName: 'Menor preço', link: 'https://meli.la/1KEaTKK',
+              price: 7999.99, anchor: 11499, discount: '30% OFF', priceLabel: 'menor preço atual',
+              semJuros: false,
+              instHtml: '<p class="text-base font-bold text-brand-yellow">Parcelamento padrão no cartão <span class="text-xs font-semibold text-brand-dim">(condições do vendedor no anúncio)</span></p>',
+              extra: 'Vendido por ELETRO SHOP BRASIL no mesmo anúncio da X13 preta. É o menor preço atual entre as 3 cores. Prefere 10x sem juros? Troque para a opção parcelada acima.',
+              delivery: 'Confira frete e prazo de entrega para o seu CEP no anúncio',
+              seals: [['🛡️', 'Compra Garantida'], ['🏷️', 'Menor preço atual'], ['🔒', 'Pagamento no ML'], ['🧾', 'Vendedor no anúncio']],
+              protSub: '+ regras de devolução do Mercado Livre',
+              payCashSub: '30% OFF sobre R$ 11.499', payMax: 'no cartão', payInst: 'Parcelamento padrão', payInstSub: '<span class="text-brand-dim">condições do vendedor no anúncio</span>',
+              finalSub: 'à vista com a ELETRO SHOP BRASIL · ou 10x de R$ 1.062,50 sem juros na opção parcelada · Compra Garantida no Mercado Livre',
+              stickyInst: 'R$ 7.999,99',
+              stickySub: '<span class="font-bold text-sky-300">menor preço atual</span> <span class="text-brand-dim">· ou 10x sem juros na opção parcelada</span>',
+              cta: 'Ver menor preço da X13 Preta',
+              hist: [['25/10', 10196], ['27/10', 7999.99]], ref: null,
+              badge: 'Menor preço registrado',
+              banner: '🟢 Menor preço registrado: R$ 7.999,99',
+              compare: [['25/10 · menor à vista', 'R$ 10.196', true], ['Hoje · 27/10', 'R$ 7.999']],
+              period: '25/10 a 27/10/2026',
+              note: 'Em 25/10/2026, o menor valor à vista deste anúncio era R$ 10.196; em 27/10/2026, a oferta da ELETRO SHOP BRASIL apareceu por R$ 7.999,99, queda de cerca de 22%. O parcelamento dessa oferta segue as condições do vendedor no anúncio.',
+              kicker: '🟢 Menor preço atual'
+            },
+            parcelada: {
+              offerName: '10x sem juros', link: 'https://meli.la/1KEaTKK',
+              price: 10625.00, anchor: 11499, discount: '7% OFF', priceLabel: 'no cartão',
+              semJuros: true, n: 10, parc: 'R$ 1.062,50',
+              extra: 'Opção com 10x sem juros no mesmo anúncio. Se preferir pagar menos, a opção Menor preço sai por R$ 7.999,99.',
+              delivery: 'Frete grátis, chegada rápida e devolução grátis em 30 dias (confira o seu CEP)',
+              seals: [['🛡️', 'Compra Garantida'], ['↩️', 'Devolução grátis'], ['🚚', 'Frete grátis'], ['💳', '10x sem juros']],
+              protSub: '+ Devolução grátis em 30 dias',
+              cta: 'Ver X13 Preta em 10x sem juros',
+              hist: [['25/10', 10625], ['27/10', 10625]], ref: { v: 7999.99, label: 'Menor preço atual: R$ 7.999,99' },
+              badge: 'Parcelado estável',
+              banner: '🟢 Opção parcelada: R$ 10.625,00 em 10x de R$ 1.062,50 sem juros',
+              compare: [['De (anúncio)', 'R$ 11.499', true], ['Hoje · 27/10', 'R$ 10.625']],
+              period: '25/10 a 27/10/2026',
+              note: 'O valor no parcelamento sem juros se manteve em R$ 10.625 entre 25/10 e 27/10/2026. A linha tracejada mostra o menor preço atual do mesmo anúncio, R$ 7.999,99, da ELETRO SHOP BRASIL.',
+              kicker: '🟢 10x sem juros'
+            }
+          }
         },
         vermelho: {
           name: 'Vermelha', link: 'https://meli.la/2o6ycEk',
@@ -590,11 +640,12 @@
           protSub: '+ 6 meses de garantia de fábrica',
           hist: [['25/10', 8924.25]], ref: null,
           badge: 'Novo monitoramento',
-          banner: '🟢 Menor preço à vista entre as cores: R$ 8.924,25',
+          banner: '🟢 Preço atual: R$ 8.924,25 à vista (25% OFF)',
           compare: [['De (anúncio)', 'R$ 11.899', true], ['Hoje · 25/10', 'R$ 8.924']],
           period: 'monitoramento iniciado em 25/10/2026',
           note: 'O monitor de preço ainda não tinha histórico deste anúncio; a linha mostra o preço registrado em 25/10/2026. O parcelamento em 12x tem juros.',
-          kicker: '🟢 Menor preço à vista'
+          kicker: '🟢 25% OFF à vista',
+          stickySub: '<span class="font-bold text-emerald-300">25% OFF à vista</span> <span class="text-brand-dim">· ou 12x de R$ 857,77</span>'
         },
         azul: {
           name: 'Azul', link: 'https://meli.la/1yrJ2iy',
@@ -712,10 +763,18 @@
       }
 
       let currentKey = 'preto';
+      const offerChoice = {};
+
+      function resolve(key) {
+        const base = VARIANTS[key];
+        if (!base || !base.offers) return base;
+        const offerKey = offerChoice[key] || base.defaultOffer;
+        return Object.assign({}, base, base.offers[offerKey], { offerKey: offerKey });
+      }
 
       function apply(key, opts) {
-        const v = VARIANTS[key];
-        if (!v) return;
+        if (!VARIANTS[key]) return;
+        const v = resolve(key);
         currentKey = key;
         const swaps = $all('[data-swap]');
         swaps.forEach((el) => el.classList.add('is-swapping'));
@@ -730,10 +789,10 @@
           setBind('priceFull', fmt(v.price));
           setBind('anchorText', v.anchor ? 'De <span class="line-through decoration-orange-400/80">' + fmt(v.anchor, false) + '</span> no anúncio' : 'Preço do anúncio');
           setBind('discount', v.discount || 'preço estável');
-          setBind('installmentBlock', v.semJuros ? semJurosBlock(v) : '<p class="text-base font-bold text-brand-yellow">ou ' + v.n + 'x de ' + v.parc + ' <span class="text-xs font-semibold text-brand-dim">(total ' + v.total + ', com juros)</span></p>');
+          setBind('installmentBlock', v.instHtml ? v.instHtml : v.semJuros ? semJurosBlock(v) : '<p class="text-base font-bold text-brand-yellow">ou ' + v.n + 'x de ' + v.parc + ' <span class="text-xs font-semibold text-brand-dim">(total ' + v.total + ', com juros)</span></p>');
           setBind('extraOffer', v.extra);
           setBind('delivery', v.delivery);
-          setBind('ctaText', 'Ver X13 ' + v.name + ' no Mercado Livre');
+          setBind('ctaText', (v.cta || 'Ver X13 ' + v.name) + ' no Mercado Livre');
           setBind('seals', v.seals.map((s) => '<li class="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2 py-2"><span aria-hidden="true">' + s[0] + '</span>' + s[1] + '</li>').join(''));
           setBind('imgBadge', 'Cor: ' + v.name);
 
@@ -746,20 +805,20 @@
             : '<div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-center"><p class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">' + c[0] + '</p><p class="mt-1 text-xl font-extrabold text-emerald-300 md:text-2xl">' + c[1] + '</p></div>').join(''));
 
           setBind('payCash', fmt(v.price));
-          setBind('payCashSub', v.semJuros ? 'mesmo valor do parcelado' : v.discount + ' sobre ' + fmt(v.anchor, false));
-          setBind('payMax', 'em até ' + v.n + 'x');
-          setBind('payInst', v.n + 'x de ' + v.parc);
-          setBind('payInstSub', v.semJuros ? '<span class="font-bold text-emerald-300">sem juros</span>' : '<span class="text-brand-dim">total ' + v.total + ' (com juros)</span>');
+          setBind('payCashSub', v.payCashSub ? v.payCashSub : v.semJuros ? 'mesmo valor do parcelado' : v.discount + ' sobre ' + fmt(v.anchor, false));
+          setBind('payMax', v.payMax || 'em até ' + v.n + 'x');
+          setBind('payInst', v.payInst || v.n + 'x de ' + v.parc);
+          setBind('payInstSub', v.payInstSub ? v.payInstSub : v.semJuros ? '<span class="font-bold text-emerald-300">sem juros</span>' : '<span class="text-brand-dim">total ' + v.total + ' (com juros)</span>');
           setBind('payProtSub', v.protSub);
           setBind('payRows', payRows(v));
           $all('[data-bind-visible="payRows"]').forEach((el) => { el.hidden = !v.semJuros; });
 
           setBind('finalKicker', v.kicker);
-          setBind('finalSub', (v.semJuros ? 'ou ' + v.n + 'x de ' + v.parc + ' sem juros' : 'à vista · ou ' + v.n + 'x de ' + v.parc + ' com juros') + ' · Compra Garantida no Mercado Livre');
-          setBind('stickyInst', v.semJuros ? v.n + 'x de ' + v.parc : fmt(v.price) + ' à vista');
-          setBind('stickySub', v.semJuros
+          setBind('finalSub', v.finalSub ? v.finalSub : ((v.semJuros ? 'ou ' + v.n + 'x de ' + v.parc + ' sem juros' : 'à vista · ou ' + v.n + 'x de ' + v.parc + ' com juros') + ' · Compra Garantida no Mercado Livre'));
+          setBind('stickyInst', v.stickyInst ? v.stickyInst : v.semJuros ? v.n + 'x de ' + v.parc : fmt(v.price) + ' à vista');
+          setBind('stickySub', v.stickySub ? v.stickySub : v.semJuros
             ? '<span class="font-bold text-emerald-300">sem juros</span> <span class="text-brand-dim">· ou ' + fmt(v.price) + '</span>'
-            : '<span class="font-bold text-emerald-300">menor preço à vista</span> <span class="text-brand-dim">· ou ' + v.n + 'x de ' + v.parc + '</span>');
+            : '<span class="font-bold text-emerald-300">preço à vista</span> <span class="text-brand-dim">· ou ' + v.n + 'x de ' + v.parc + '</span>');
 
           $all('[data-cta]').forEach((a) => { a.href = v.link; });
           heroImg.src = v.img; heroImg.alt = v.alt;
@@ -772,6 +831,13 @@
           $all('[data-row]').forEach((r) => r.classList.toggle('ring-1', r.dataset.row === key));
           $all('[data-row]').forEach((r) => r.classList.toggle('ring-brand-yellow/50', r.dataset.row === key));
 
+          const picker = document.getElementById('offer-picker');
+          picker.hidden = !VARIANTS[key].offers;
+          if (v.offerKey) {
+            setBind('offerName', v.offerName);
+            $all('.offer-option').forEach((b) => b.setAttribute('aria-checked', b.dataset.offer === v.offerKey ? 'true' : 'false'));
+          }
+
           renderChart(v);
           swaps.forEach((el) => el.classList.remove('is-swapping'));
           heroImg.classList.remove('is-swapping');
@@ -779,6 +845,12 @@
 
         if (!(opts && opts.silent) && typeof gtag === 'function') gtag('event', 'selecionar_cor', { cor: v.name });
       }
+
+      $all('.offer-option').forEach((b) => b.addEventListener('click', () => {
+        offerChoice.preto = b.dataset.offer;
+        apply('preto', { silent: true });
+        if (typeof gtag === 'function') gtag('event', 'selecionar_oferta', { oferta: b.dataset.offer });
+      }));
 
       $all('.color-option').forEach((b) => b.addEventListener('click', () => apply(b.dataset.color)));
       $all('[data-pick]').forEach((b) => b.addEventListener('click', () => {
@@ -793,9 +865,11 @@
       });
 
       let rt = null;
-      new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(() => renderChart(VARIANTS[currentKey]), 80); }).observe(document.getElementById('price-chart'));
+      new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(() => renderChart(resolve(currentKey)), 80); }).observe(document.getElementById('price-chart'));
 
       const initial = (location.hash.match(/cor=(preto|vermelho|azul)/) || [])[1] || 'preto';
+      const initialOffer = (location.hash.match(/oferta=(economica|parcelada)/) || [])[1];
+      if (initialOffer) offerChoice.preto = initialOffer;
       apply(initial, { instant: true, silent: true });
 
       /* ---------- galeria: move a foto entre mobile e desktop ---------- */

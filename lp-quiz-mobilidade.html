@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GV4ZZ5WB0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3GV4ZZ5WB0');
+    gtag('config', 'AW-18490413648');
+    gtag('event', 'conversion', {'send_to': 'AW-18490413648/FQ1MCJr2y5QdENCk9fBE'});
+  </script>
+  <script>
+    function gtag_report_conversion(url) {
+      var redirected = false;
+      var callback = function () {
+        if (redirected) return;
+        redirected = true;
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE',
+          'event_callback': callback,
+          'event_timeout': 1500
+      });
+      setTimeout(callback, 1800);
+      return false;
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Quiz: Qual Patinete, Bike ou Scooter Elétrica Comprar? 6 Perguntas | Tudo de Melhor</title>
+  <meta name="description" content="Responda 6 perguntas e descubra o patinete, a bicicleta, a moto ou a scooter elétrica ideal para o seu trajeto, relevo e orçamento, com preço atual e histórico de preços do Mercado Livre.">
+  <meta name="theme-color" content="#F8FAFC">
+  <link rel="canonical" href="https://www.tudodemelhor.com.br/lp-quiz-mobilidade">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Tudo de Melhor">
+  <meta property="og:url" content="https://www.tudodemelhor.com.br/lp-quiz-mobilidade">
+  <meta property="og:title" content="Qual veículo elétrico é ideal para você? Faça o quiz em 1 minuto">
+  <meta property="og:description" content="6 perguntas sobre uso, relevo, espaço e orçamento para indicar o patinete, a bike, a moto ou a scooter elétrica certa, entre 15 modelos avaliados.">
+  <meta property="og:image" content="https://http2.mlstatic.com/D_NQ_NP_822384-MLB109485329446_042026-O.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Qual veículo elétrico é ideal para você? Faça o quiz em 1 minuto">
+  <meta name="twitter:description" content="6 perguntas para descobrir o patinete, a bike, a moto ou a scooter elétrica ideal para o seu perfil.">
+  <link rel="icon" type="image/jpeg" href="assets/ui/logo-site/logo-tudo-melhor.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://http2.mlstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1E293B',
+            slate2: '#64748B',
+            page: '#F8FAFC',
+            ice: '#F1F5F9',
+            brand: { yellow: '#FACC15', gold: '#EAB308', orange: '#F97316' }
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          boxShadow: {
+            soft: '0 10px 30px -12px rgba(15, 23, 42, 0.18)',
+            lift: '0 14px 28px -14px rgba(249, 115, 22, 0.45)',
+            cta: '0 10px 24px -8px rgba(249, 115, 22, 0.55)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #F8FAFC;
+      background-image:
+        radial-gradient(ellipse 60% 40% at 90% 0%, rgba(250, 204, 21, 0.16), transparent 60%),
+        radial-gradient(ellipse 50% 35% at 0% 100%, rgba(249, 115, 22, 0.08), transparent 60%);
+      background-attachment: fixed;
+    }
+    .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
+    .btn-shine::after {
+      content: ''; position: absolute; top: 0; left: -75%; z-index: -1; width: 50%; height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+      transform: skewX(-20deg); animation: shine 2.8s ease-in-out infinite;
+    }
+    @keyframes shine { 0% { left: -75%; } 60%, 100% { left: 130%; } }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+    .pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+    .step-enter { animation: step-in 0.4s cubic-bezier(.2,.8,.2,1) both; }
+    .step-leave { animation: step-out 0.22s ease both; }
+    @keyframes step-in { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: none; } }
+    @keyframes step-out { to { opacity: 0; transform: translateX(-24px); } }
+    .option { transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease, background-color .2s ease; }
+    .option:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -16px rgba(15, 23, 42, 0.35); }
+    .option:active { transform: scale(0.97); }
+    .option[aria-checked="true"] { border-color: #F97316; background: linear-gradient(135deg, #FFFBEB 0%, #FFF7ED 100%); box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.16), 0 14px 28px -14px rgba(249, 115, 22, 0.45); }
+    .option[aria-checked="true"] .option-icon { background: linear-gradient(135deg, #FACC15, #F97316); transform: scale(1.06) rotate(-3deg); }
+    .option[aria-checked="true"] .option-check { opacity: 1; transform: scale(1); }
+    .option-icon { transition: transform .25s cubic-bezier(.3,1.6,.5,1), background .2s ease; }
+    .option-check { opacity: 0; transform: scale(.4); transition: transform .25s cubic-bezier(.3,1.6,.5,1), opacity .2s ease; }
+    .pop { animation: pop .35s cubic-bezier(.3,1.6,.5,1); }
+    @keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.035); } 100% { transform: scale(1); } }
+    .spinner { border: 4px solid #FDE68A; border-top-color: #F97316; border-radius: 9999px; animation: spin 0.9s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .bar { transform-origin: bottom; animation: grow .6s cubic-bezier(.2,.8,.2,1) both; }
+    @keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    @media (prefers-reduced-motion: reduce) {
+      .btn-shine::after, .pulse-dot, .step-enter, .step-leave, .spinner, .bar, .pop { animation: none; }
+      .option, .option-icon, .option-check { transition: none; }
+    }
+  </style>
+</head>
+<body class="min-h-screen font-sans text-ink antialiased">
+
+  <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/85 backdrop-blur">
+    <div class="mx-auto flex h-16 max-w-5xl items-center gap-3 px-4">
+      <a href="index.html" class="flex items-center gap-2" aria-label="Tudo de Melhor — início">
+        <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" width="40" height="40" class="h-10 w-10 rounded-lg object-cover shadow-sm">
+        <span class="hidden flex-col leading-none sm:flex">
+          <span class="text-sm font-black uppercase tracking-wider text-ink">Tudo De</span>
+          <span class="text-sm font-black uppercase tracking-wider text-brand-orange">Melhor</span>
+        </span>
+      </a>
+      <span class="ml-1 inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-700 sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true"></span>Preços do Mercado Livre</span>
+      <a href="categorias.html" class="ml-auto text-sm font-semibold text-slate2 transition hover:text-brand-orange">Ver rankings</a>
+    </div>
+  </header>
+
+  <main class="px-4 pb-16 pt-6 md:pt-10">
+    <div class="mx-auto max-w-3xl">
+
+      <!-- INTRO -->
+      <section id="intro" class="mb-6 text-center" aria-labelledby="intro-titulo">
+        <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-orange">Quiz de mobilidade elétrica · 6 perguntas · 1 minuto</p>
+        <h1 id="intro-titulo" class="mx-auto max-w-2xl text-3xl font-black leading-tight tracking-tight text-ink sm:text-4xl">Qual patinete, bike, moto ou scooter elétrica é ideal para você?</h1>
+        <p class="mx-auto mt-3 max-w-xl text-base leading-relaxed text-slate2">Conte como é o seu dia a dia, o relevo da sua cidade e quanto quer investir. Cruzamos suas respostas com os 15 modelos que avaliamos e mostramos o ideal, com preço atual e histórico de preços do Mercado Livre.</p>
+        <ul class="mx-auto mt-5 flex max-w-xl flex-wrap justify-center gap-2 text-xs font-semibold text-slate2">
+          <li class="rounded-full border border-slate-200 bg-white px-3 py-1.5 shadow-sm">✅ 15 modelos avaliados</li>
+          <li class="rounded-full border border-slate-200 bg-white px-3 py-1.5 shadow-sm">🛴 🚲 🛵 4 categorias</li>
+          <li class="rounded-full border border-slate-200 bg-white px-3 py-1.5 shadow-sm">📊 Histórico de preço real</li>
+        </ul>
+      </section>
+
+      <!-- QUIZ -->
+      <section id="quiz" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-soft sm:p-8" aria-live="polite">
+        <div class="mb-6">
+          <div class="mb-2 flex items-center justify-between text-xs font-bold text-slate2">
+            <span id="step-label">Etapa 1 de 6</span>
+            <span id="step-pct">0% concluído</span>
+          </div>
+          <div class="h-2.5 w-full overflow-hidden rounded-full bg-ice" role="progressbar" aria-label="Progresso do quiz" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="progress-bar" class="h-full w-0 rounded-full bg-gradient-to-r from-brand-yellow to-brand-orange transition-all duration-500"></div>
+          </div>
+          <ol id="step-dots" class="mt-3 flex justify-between" aria-hidden="true"></ol>
+        </div>
+
+        <div id="step-container"></div>
+
+        <div class="mt-6 flex items-center justify-between gap-3">
+          <button type="button" id="btn-back" class="inline-flex h-11 items-center gap-2 rounded-xl px-3 text-sm font-semibold text-slate2 transition hover:bg-ice hover:text-ink disabled:invisible">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"/></svg>
+            Voltar
+          </button>
+          <button type="button" id="btn-next" class="btn-shine inline-flex h-12 items-center gap-2 rounded-xl bg-gradient-to-r from-brand-yellow to-brand-orange px-6 text-sm font-extrabold text-ink shadow-cta transition hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-40" disabled>
+            <span id="btn-next-label">Próxima</span>
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- LOADER -->
+      <section id="loader" class="hidden rounded-3xl border border-slate-200 bg-white p-10 text-center shadow-soft" aria-live="assertive">
+        <div class="spinner mx-auto h-14 w-14" aria-hidden="true"></div>
+        <p class="mt-5 text-lg font-extrabold text-ink">Calculando o veículo perfeito para o seu perfil...</p>
+        <p id="loader-sub" class="mt-2 text-sm text-slate2">Cruzando uso, relevo, espaço e orçamento com 15 modelos</p>
+      </section>
+
+      <!-- RESULTADO -->
+      <section id="result" class="hidden" aria-labelledby="result-titulo">
+        <div class="mb-5 text-center">
+          <p class="mb-2 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-emerald-700"><span aria-hidden="true">🎯</span>O veredito do especialista</p>
+          <h2 id="result-titulo" class="text-2xl font-black tracking-tight text-ink sm:text-3xl">Com base no seu perfil, o modelo ideal para você é:</h2>
+        </div>
+
+        <div id="profile-box" class="mb-5 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"></div>
+
+        <article id="main-card" class="overflow-hidden rounded-3xl border-2 border-brand-yellow bg-white shadow-soft"></article>
+
+        <div class="mt-10">
+          <h3 class="mb-1 text-xl font-black text-ink">Outras duas excelentes alternativas para o seu perfil</h3>
+          <p class="mb-4 text-sm text-slate2">Se quiser variar o preço, a categoria ou a marca, estas também combinam com as suas respostas.</p>
+          <div id="alt-cards" class="grid grid-cols-1 gap-4 sm:grid-cols-2"></div>
+        </div>
+
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
+          <button type="button" id="btn-restart" class="inline-flex h-12 items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-6 text-sm font-bold text-ink shadow-sm transition hover:border-brand-orange hover:text-brand-orange">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v6h6M20 20v-6h-6M5.5 15a7 7 0 0011.9 2.5M18.5 9A7 7 0 006.6 6.5"/></svg>
+            Refazer quiz
+          </button>
+          <a href="categorias.html" class="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-ink px-6 text-sm font-bold text-white shadow-sm transition hover:bg-slate-700">Ver todos os rankings completos →</a>
+        </div>
+
+        <p class="mt-8 rounded-2xl border border-slate-200 bg-ice p-4 text-xs leading-relaxed text-slate2"><strong class="text-ink">Transparência:</strong> preços, parcelas e históricos coletados no Mercado Livre entre julho e outubro de 2026 e podem mudar a qualquer momento. A média do histórico considera os registros do monitor de preço de cada anúncio. A venda, entrega e garantia são do vendedor no Mercado Livre; a Tudo de Melhor não vende os produtos. Links de afiliado podem gerar comissão, sem custo extra para você.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white px-4 py-8">
+    <div class="mx-auto max-w-5xl text-xs text-slate2">
+      <div class="mb-3 flex items-center gap-2">
+        <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" width="28" height="28" alt="" class="h-7 w-7 rounded object-cover">
+        <span class="text-sm font-extrabold uppercase tracking-wider text-ink">Tudo de Melhor</span>
+      </div>
+      <p class="mb-3 max-w-3xl">Conteúdo editorial independente. Esta página contém links de afiliado do Mercado Livre: podemos receber comissão pelas compras, sem custo extra para você.</p>
+      <nav class="flex flex-wrap gap-x-5 gap-y-2" aria-label="Links institucionais">
+        <a href="melhores-patinetes-eletricos.html" class="hover:text-brand-orange">Patinetes elétricos</a>
+        <a href="melhores-bicicletas-eletricas.html" class="hover:text-brand-orange">Bicicletas elétricas</a>
+        <a href="melhores-scooters-eletricas.html" class="hover:text-brand-orange">Scooters elétricas</a>
+        <a href="melhores-motos-eletricas.html" class="hover:text-brand-orange">Motos elétricas</a>
+        <a href="sobre.html" class="hover:text-brand-orange">Sobre</a>
+        <a href="privacidade.html" class="hover:text-brand-orange">Privacidade</a>
+      </nav>
+      <p class="mt-3">© <span id="y"></span> tudodemelhor.com.br</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    (function () {
+      /* ============ BANCO DE MODELOS (dados das reviews e rankings do site) ============ */
+      const MODELS = [
+        // ---------- Patinetes ----------
+        { id: 'g3', comfortTxt: 'tem suspensão dupla dianteira e traseira para rodar com conforto',  cat: 'patinete', name: 'Honeywhale G3 Pro', brand: 'Honeywhale', score: 9.6, power: 1640, range: 56, speed: 60, foldable: true, seat: false, comfort: 2, cargo: false, offroad: false, cnh: false,
+          tagline: 'Patinete de performance com 1640W e suspensão dupla', img: 'https://http2.mlstatic.com/D_NQ_NP_703871-MLA99508887442_112025-O.webp',
+          link: 'https://meli.la/1m3uzM3', review: 'review-honeywhale-g3-pro.html',
+          price: 6725.01, priceLabel: 'à vista', inst: '10x de R$ 672,50', semJuros: true,
+          specs: ['1640W', '60V 18Ah', 'Até 56 km', 'Suspensão dupla'],
+          hist: [['10/08', 6790], ['21/08', 6556], ['23/10', 6725.01]] },
+        { id: 's09', cat: 'patinete', name: 'Foston S09 Pro Bluetooth', brand: 'Foston', score: 9.2, power: 350, range: 25, speed: 25, foldable: true, seat: false, comfort: 0, cargo: false, offroad: false, cnh: false,
+          tagline: 'Patinete urbano 350W leve, dobrável e com app', img: 'https://http2.mlstatic.com/D_NQ_NP_2X_956101-MLA95497932360_102025-F.webp',
+          link: 'https://meli.la/117ifNw', review: 'review-foston-s09-pro-bluetooth.html',
+          price: 1851.00, priceLabel: 'à vista', inst: '10x de R$ 185,10', semJuros: true,
+          specs: ['350W', 'App Bluetooth', 'Até 25 km', '25 km/h'],
+          hist: [['04/08', 2100], ['06/08', 2100], ['27/08', 2100], ['19/09', 1990], ['23/10', 1851]] },
+        { id: 'h18', comfortTxt: 'tem pneus off-road e estrutura feita para piso irregular',  cat: 'patinete', name: 'Hitway H18', brand: 'Hitway', score: 9.1, power: 1000, range: 50, speed: 50, foldable: false, seat: false, comfort: 2, cargo: false, offroad: true, cnh: false,
+          tagline: 'Patinete off-road 1000W para piso irregular', img: 'https://http2.mlstatic.com/D_NQ_NP_2X_830454-MLB115951297532_092026-F-patinete-eletrico-off-road-h18-1000w-48v-20ah-hitway.webp',
+          link: 'https://meli.la/1okPPJd', review: 'review-hitway-h18.html',
+          price: 5649.00, priceLabel: 'à vista', inst: '10x de R$ 564,90', semJuros: true,
+          specs: ['1000W', '48V 20Ah', 'Até 50 km', 'Off-road'],
+          hist: [['23/10', 5649]] },
+        { id: 'm2', cat: 'patinete', name: 'Honeywhale M2 MAX-B', brand: 'Honeywhale', score: 8.8, power: 500, range: 32, speed: 32, foldable: true, seat: true, comfort: 1, cargo: false, offroad: false, cnh: false,
+          tagline: 'Patinete 500W com assento e app', img: 'https://http2.mlstatic.com/D_NQ_NP_2X_612224-MLA112140606730_062026-F.webp',
+          link: 'https://meli.la/1paSzgp', review: 'review-honeywhale-m2-max-b.html',
+          price: 2321.03, priceLabel: 'no Pix', inst: '10x de R$ 252,10', semJuros: true,
+          specs: ['500W', 'Com assento', 'Até 32 km', 'Dobrável'],
+          hist: [['23/10', 2321.03]] },
+        // ---------- Bicicletas ----------
+        { id: 's6', cat: 'bike', name: 'Oimotoo S6', brand: 'Oimotoo', score: 9.7, power: 450, range: 35, speed: 25, foldable: true, seat: false, comfort: 0.5, cargo: false, offroad: false, cnh: false,
+          tagline: 'Bike elétrica dobrável 450W com bateria removível', img: 'https://http2.mlstatic.com/D_NQ_NP_822384-MLB109485329446_042026-O.webp',
+          link: 'https://meli.la/1eqMgcv', review: 'review-oimotoo-s6.html',
+          price: 2552.54, priceLabel: 'à vista', inst: '10x de R$ 255,26', semJuros: true,
+          specs: ['450W', '48V removível', 'Até 35 km', 'Dobrável'],
+          hist: [['03/09', 2428.49], ['09/09', 2452], ['22/10', 2552.54]] },
+        { id: 'ucitys', cat: 'bike', name: 'Xroymexroy UCITYS', brand: 'Xroymexroy', score: 9.4, power: 750, range: 40, speed: 32, foldable: false, seat: false, comfort: 1, cargo: false, offroad: false, cnh: false,
+          tagline: 'Bike elétrica urbana 750W de quadro clássico', img: 'https://http2.mlstatic.com/D_NQ_NP_809321-MLA111871083304_062026-O.webp',
+          link: 'https://meli.la/1BMLWuA', review: 'review-xroymexroy-ucitys.html',
+          price: 4379.27, priceLabel: 'à vista', inst: '10x de R$ 437,93', semJuros: true,
+          specs: ['750W', 'Bateria removível', 'Até 40 km', 'Quadro rebaixado'],
+          hist: [['22/10', 4379.27]] },
+        { id: 's6s', comfortTxt: 'tem pneus fat tire que absorvem buracos e piso irregular',  cat: 'bike', name: 'Honeywhale S6-S', brand: 'Honeywhale', score: 9.3, power: 750, range: 40, speed: 35, foldable: true, seat: false, comfort: 2, cargo: false, offroad: false, cnh: false,
+          tagline: 'Bike elétrica dobrável fat tire 750W', img: 'https://http2.mlstatic.com/D_NQ_NP_801018-MLA115363054279_072026-O.webp',
+          link: 'https://meli.la/1MDt7cC', review: 'review-honeywhale-s6-s.html',
+          price: 3799.00, priceLabel: 'à vista', inst: '10x de R$ 379,90', semJuros: true,
+          specs: ['750W', 'Fat tire', 'Até 40 km', 'Dobrável'],
+          hist: [['28/07', 3800], ['14/08', 3685], ['24/08', 3690], ['09/09', 3538.03], ['22/10', 3799]] },
+        { id: 'v9', comfortTxt: 'tem pneus largos e freio hidráulico para rodar com mais segurança e conforto',  cat: 'bike', name: 'V9 Max', brand: 'V9', score: 8.9, power: 1000, range: 48, speed: 45, foldable: false, seat: false, comfort: 2, cargo: false, offroad: true, cnh: false,
+          tagline: 'Bike elétrica 1000W com freio hidráulico', img: 'https://http2.mlstatic.com/D_NQ_NP_872353-MLB115691776769_082026-O.webp',
+          link: 'https://meli.la/2VBFMUG', review: 'review-v9-max.html',
+          price: 6472.23, priceLabel: 'à vista', inst: '10x de R$ 647,22', semJuros: true,
+          specs: ['1000W', 'Freio hidráulico', 'Até 48 km', 'Pneu largo'],
+          hist: [['27/07', 6600], ['08/08', 6620], ['29/08', 7900], ['31/08', 6480], ['08/09', 6530], ['10/09', 6472.23], ['22/10', 6472.23]] },
+        { id: 'b20', cat: 'bike', name: 'Honeywhale B20', brand: 'Honeywhale', score: 9.4, power: 440, range: 35, speed: 25, foldable: true, seat: false, comfort: 0, cargo: false, offroad: false, cnh: false, compact: true,
+          tagline: 'Bike elétrica compacta dobrável de cerca de 20 kg', img: 'https://http2.mlstatic.com/D_NQ_NP_2X_603508-MLA113190607451_062026-F.webp',
+          link: 'https://meli.la/1kQVeNg', review: 'review-honeywhale-b20.html',
+          price: 2324.00, priceLabel: 'no Pix', inst: '10x de R$ 252,40', semJuros: true,
+          specs: ['440W', 'Rodas compactas', 'Até 35 km', 'Dobrável'],
+          hist: [['13/08', 2450], ['07/09', 2525], ['08/09', 2380], ['19/09', 2525], ['28/09', 2400], ['06/10', 2400], ['23/10', 2324]] },
+        // ---------- Motos e scooters ----------
+        { id: 'dx5', cat: 'moto', name: 'Scooter Elétrica Dx5', brand: 'Dx5', score: 9.3, power: 1500, range: 40, rangeLabel: 'Ver anúncio', speed: 55, foldable: false, seat: true, comfort: 1, cargo: false, offroad: false, cnh: true,
+          tagline: 'Scooter 1500W de até 55 km/h estilo motoneta', img: 'https://http2.mlstatic.com/D_NQ_NP_2X_656446-MLA111034434156_052026-F.webp',
+          link: 'https://meli.la/1omWLKf', review: 'review-scooter-eletrico-dx5.html',
+          price: 5039.43, priceLabel: 'à vista', inst: '10x de R$ 503,94', semJuros: true,
+          specs: ['1500W', 'Até 55 km/h', 'Assento largo', 'Exige ACC/CNH'],
+          hist: [['22/09', 5190], ['19/10', 5360], ['22/10', 5039.43]] },
+        { id: 'x13ex', cat: 'moto', name: 'Foston X13 EX', brand: 'Foston', score: 9.1, power: 1000, range: 50, speed: 32, foldable: false, seat: true, comfort: 1, cargo: false, offroad: false, cnh: false,
+          tagline: 'Scooter urbana 1000W com partida por NFC', img: 'https://http2.mlstatic.com/D_NQ_NP_2X_622174-MLA118209423793_092026-F.webp',
+          link: 'https://meli.la/2DnA5yX', review: 'review-scooter-x13-ex-foston.html',
+          price: 6233.00, priceLabel: 'à vista', inst: '12x de R$ 599,10', semJuros: false, instNote: 'total R$ 7.189,14 com juros',
+          specs: ['1000W', 'Lítio 12Ah', 'Até 50 km', 'Partida NFC'],
+          hist: [['04/08', 7900], ['12/08', 6390], ['08/09', 7330], ['21/10', 6233]] },
+        { id: 'azm', cat: 'moto', name: 'AZM X13', brand: 'AZM', score: 9.0, power: 1000, range: 45, rangeLabel: 'Ver anúncio', speed: 32, foldable: false, seat: true, comfort: 1, cargo: 'light', offroad: false, cnh: false,
+          tagline: 'Scooter 1000W com cesto e painel NFC, sem CNH', img: 'https://http2.mlstatic.com/D_NQ_NP_2X_851811-MLB119284133487_102026-F.webp',
+          link: 'https://meli.la/2XF5XbF', review: 'review-scooter-azm-x13.html',
+          price: 5016.00, priceLabel: 'à vista', inst: '10x de R$ 501,60', semJuros: true,
+          specs: ['1000W', '32 km/h', 'Cesto', 'Sem CNH'],
+          hist: [['23/10', 5016]] },
+        { id: 'x13', comfortTxt: 'tem pneus largos e banco longo para dois, com conforto de moto chopper',  cat: 'moto', name: 'Scooter X13 1000W 60V', brand: 'X13', score: 8.8, power: 1000, range: 50, speed: 32, foldable: false, seat: true, comfort: 2, cargo: false, offroad: false, cnh: false,
+          tagline: 'Scooter chopper com bateria de lítio 60V 20Ah', img: 'https://http2.mlstatic.com/D_NQ_NP_2X_965447-MLA106137655938_022026-F.webp',
+          link: 'https://meli.la/1KEaTKK', review: 'scooter-eletrica-x13.html',
+          price: 7999.99, priceLabel: 'menor preço', inst: '10x de R$ 1.062,50', semJuros: true, instNote: 'na opção parcelada de R$ 10.625',
+          specs: ['1000W', '60V 20Ah', 'Até 50 km', 'Pneus largos'],
+          hist: [['25/10', 10196], ['27/10', 7999.99]] },
+        { id: 'verdevento', cat: 'moto', name: 'Verdevento 1000W 60V', brand: 'Verdevento', score: 8.4, power: 1000, range: 35, rangeLabel: 'Ver anúncio', speed: 32, foldable: false, seat: true, comfort: 1, cargo: 'heavy', offroad: false, cnh: false,
+          tagline: 'Scooter estilo moto que leva até 150 kg, com alarme', img: 'https://http2.mlstatic.com/D_NQ_NP_2X_734313-MLB116999009176_102026-F.webp',
+          link: 'https://meli.la/28ourwN', review: 'review-verdevento-1000w-60v.html',
+          price: 6289.20, priceLabel: 'à vista', inst: '10x de R$ 628,92', semJuros: true,
+          specs: ['1000W', 'Carga 150 kg', '32 km/h', 'Alarme'],
+          hist: [['23/10', 6289.20]] },
+        { id: 'gt600', comfortTxt: 'tem estrutura e suspensão de moto off-road para trilha',  cat: 'moto', name: 'Moto Elétrica GT600', brand: 'GT600', score: 8.9, power: 4000, range: 100, speed: 80, foldable: false, seat: true, comfort: 2, cargo: false, offroad: true, cnh: true,
+          tagline: 'Moto off-road com 7500W de pico e até 100 km', img: 'https://http2.mlstatic.com/D_NQ_NP_2X_816798-MLB114234958839_072026-F.webp',
+          link: 'https://meli.la/2RBdvuH', review: 'review-moto-eletrica-gt600.html',
+          price: 14399.00, priceLabel: 'com cupom', inst: '10x de R$ 1.439,90', semJuros: true,
+          specs: ['7500W pico', '72V 30Ah', 'Até 100 km', 'Exige CNH A'],
+          hist: [['13/08', 14650], ['18/08', 14650], ['28/08', 14420], ['30/08', 14430], ['23/10', 14399]] }
+      ];
+
+      /* ============ ETAPAS (6) com dicas contextuais ============ */
+      const STEPS = [
+        { key: 'objetivo', title: 'Qual é o seu principal objetivo de uso?', options: [
+          { v: 'urbano', icon: '🏢', label: 'Ir ao trabalho ou à faculdade', sub: 'Deslocamento diário na cidade' },
+          { v: 'lazer', icon: '🌳', label: 'Lazer e passeios', sub: 'Fim de semana e mobilidade leve' },
+          { v: 'delivery', icon: '📦', label: 'Entregas ou longas jornadas', sub: 'Delivery profissional ou muitas horas rodando' },
+          { v: 'compacto', icon: '🧳', label: 'Praticidade para guardar', sub: 'Espaço compacto, elevador ou porta-malas' } ],
+          tip: () => 'Não existe veículo perfeito para tudo. Começamos pelo seu uso principal para acertar na recomendação.' },
+        { key: 'categoria', title: 'Qual categoria mais combina com o seu estilo?', options: [
+          { v: 'patinete', icon: '🛴', label: 'Patinete elétrico', sub: 'Ágil, leve e ideal para a última milha' },
+          { v: 'bike', icon: '🚲', label: 'Bicicleta elétrica urbana ou dobrável', sub: 'Postura tradicional de pedal' },
+          { v: 'moto', icon: '🛵', label: 'Moto ou scooter elétrica', sub: 'Assento largo, mais conforto, estilo motoneta' },
+          { v: 'offroad', icon: '⛰️', label: 'Off-road ou alta potência', sub: 'Terreno irregular e subidas fortes' } ],
+          tip: (a) => a.objetivo === 'delivery' ? 'Para entregas, scooters com assento e carga costumam render mais por dia.' :
+                      a.objetivo === 'compacto' ? 'Para guardar em espaço pequeno, patinetes e bikes dobráveis levam vantagem.' :
+                      'Cada categoria muda postura, conforto e onde você pode guardar o veículo.' },
+        { key: 'relevo', title: 'Como são os trajetos e o relevo por onde você vai rodar?', options: [
+          { v: 'plano', icon: '🛣️', label: 'Plano e curto', sub: 'Até 15 km por dia' },
+          { v: 'moderado', icon: '🏙️', label: 'Ruas com algumas ladeiras', sub: '15 a 30 km por dia' },
+          { v: 'ingreme', icon: '🧗', label: 'Ladeiras íngremes e longas distâncias', sub: 'Acima de 30 km por dia' } ],
+          tip: (a) => a.categoria === 'patinete' ? 'Em patinetes, subida e distância pesam muito na bateria: escolha com folga.' :
+                      a.categoria === 'moto' ? 'Scooters de 1000W sobem rampas moderadas; ladeiras fortes pedem mais potência.' :
+                      'Autonomia de fábrica cai de 20% a 30% com subidas, peso e velocidade alta.' },
+        { key: 'dobra', title: 'Você precisa que o veículo seja dobrável ou compacto?', options: [
+          { v: 'sim', icon: '🛗', label: 'Sim, é essencial', sub: 'Para elevador, apartamento ou porta-malas' },
+          { v: 'nao', icon: '🏠', label: 'Não, tenho espaço fixo', sub: 'Garagem, quintal ou bicicletário' } ],
+          tip: (a) => a.categoria === 'moto' ? 'Atenção: motos e scooters elétricas não dobram. Se o espaço for crítico, mostramos alternativas compactas.' :
+                      'Modelos dobráveis facilitam a guarda, mas costumam ter bateria e rodas menores.' },
+        { key: 'orcamento', title: 'Qual o seu nível de investimento?', options: [
+          { v: 'low', icon: '💰', label: 'Custo-benefício máximo', sub: 'Até R$ 2.500' },
+          { v: 'mid', icon: '⚖️', label: 'Intermediário equilibrado', sub: 'De R$ 2.500 a R$ 5.000' },
+          { v: 'high', icon: '🚀', label: 'Alta performance', sub: 'Acima de R$ 5.000' } ],
+          tip: (a) => a.categoria === 'moto' ? 'As scooters elétricas do nosso ranking começam perto de R$ 5.000.' :
+                      'Todos os valores são do Mercado Livre e muitos modelos parcelam em 10x sem juros.' },
+        { key: 'fator', title: 'Qual é o fator mais decisivo na sua escolha?', options: [
+          { v: 'preco', icon: '🏷️', label: 'Preço baixo e economia', sub: 'Gastar menos na compra e no dia a dia' },
+          { v: 'autonomia', icon: '🔋', label: 'Autonomia da bateria', sub: 'Não ficar na mão no meio do caminho' },
+          { v: 'potencia', icon: '⚡', label: 'Potência do motor', sub: 'Encarar subidas sem esforço' },
+          { v: 'conforto', icon: '🛋️', label: 'Conforto superior', sub: 'Assento macio, suspensão e pneus largos' } ],
+          tip: () => 'Última pergunta. Ela define o desempate entre os modelos que combinam com você.' }
+      ];
+
+      const LABELS = {
+        objetivo: { urbano: 'trabalho ou faculdade', lazer: 'lazer e passeios', delivery: 'entregas e longas jornadas', compacto: 'guardar em espaço compacto' },
+        categoria: { patinete: 'patinete elétrico', bike: 'bicicleta elétrica', moto: 'moto ou scooter elétrica', offroad: 'off-road e alta potência' },
+        relevo: { plano: 'trajeto plano e curto', moderado: 'ladeiras moderadas, 15 a 30 km', ingreme: 'ladeiras fortes e mais de 30 km' },
+        dobra: { sim: 'precisa ser dobrável', nao: 'tem espaço fixo' },
+        orcamento: { low: 'até R$ 2.500', mid: 'R$ 2.500 a R$ 5.000', high: 'acima de R$ 5.000' },
+        fator: { preco: 'preço e economia', autonomia: 'autonomia', potencia: 'potência', conforto: 'conforto' }
+      };
+
+      /* ============ PONTUAÇÃO ============ */
+      function scoreModel(m, a) {
+        let s = 0;
+        const why = [];
+        // categoria
+        if (a.categoria === 'offroad') { if (m.offroad) { s += 8; why.push('é feito para terreno irregular e subidas fortes'); } else if (m.power >= 1500) s += 3; }
+        else if (m.cat === a.categoria) s += 8;
+        // objetivo
+        if (a.objetivo === 'urbano') { if (m.range >= 25 && !m.offroad) s += 1.5; if (m.speed <= 32) s += 0.5; if (m.power <= 350) s += 1; }
+        if (a.objetivo === 'lazer') { s += m.comfort; if (m.price <= 3000) s += 1; }
+        if (a.objetivo === 'delivery') { if (m.range >= 45) s += 2; if (m.cargo === 'heavy') { s += 3; why.push('aguenta até 150 kg entre piloto e carga, ideal para entregas'); } else if (m.cargo === 'light') { s += 1; why.push('tem cesto para levar compras e pequenas cargas'); } if (m.seat) s += 1; }
+        if (a.objetivo === 'compacto') { if (m.foldable) s += 3; if (m.compact) s += 1.5; if (m.cat === 'moto') s -= 2; }
+        // relevo
+        if (a.relevo === 'plano') { if (m.power <= 750) s += 1.5; if (m.range <= 40) s += 0.5; }
+        if (a.relevo === 'moderado') { if (m.power >= 500 && m.power <= 1500) s += 2; if (m.range >= 30) s += 1; }
+        if (a.relevo === 'ingreme') { if (m.power >= 1000) s += 3; if (m.range >= 45) s += 1.5; if (m.power < 500) s -= 1.5; }
+        // dobrável
+        if (a.dobra === 'sim') s += m.foldable ? 3 : (m.cat === 'moto' && a.categoria === 'moto' ? -1 : -4);
+        if (a.dobra === 'nao' && !m.foldable) s += 1;
+        // orçamento
+        if (a.orcamento === 'low') s += m.price <= 2600 ? 3 : (m.price <= 5100 ? -2 : -5);
+        if (a.orcamento === 'mid') s += m.price >= 2300 && m.price <= 5100 ? 3 : (m.price < 2300 ? 1 : (m.price <= 6500 ? -1 : -4));
+        if (a.orcamento === 'high') s += m.price > 5000 ? 3 : (m.price >= 3500 ? 1 : 0);
+        // fator decisivo
+        if (a.fator === 'preco') s += (m.price <= 2600 ? 3 : (m.price <= 5100 ? 1.5 : 0)) + (m.price <= 2000 ? 1 : 0);
+        if (a.fator === 'autonomia') s += m.range >= 50 ? 3 : (m.range >= 40 ? 1.5 : 0);
+        if (a.fator === 'potencia') s += m.power >= 1000 ? 3 : (m.power >= 750 ? 1.5 : 0);
+        if (a.fator === 'conforto') s += m.comfort * 1.5 + (m.seat ? 1 : 0);
+        return { s: s + m.score / 10, why };
+      }
+
+      function recommend(a) {
+        return MODELS.map((m) => Object.assign({ m }, scoreModel(m, a))).sort((x, y) => y.s - x.s || y.m.score - x.m.score);
+      }
+
+      function reasons(m, a, extra) {
+        const r = [];
+        const fatorTxt = {
+          preco: m.price <= 2600 ? 'está entre os mais acessíveis do nosso ranking' : 'tem um dos melhores custos por recurso da categoria',
+          autonomia: 'tem autonomia de ' + (m.rangeLabel ? 'acordo com o anúncio, com bateria dimensionada para uso diário' : 'até ' + m.range + ' km por carga'),
+          potencia: 'tem motor de ' + (m.id === 'gt600' ? '7500W de pico' : m.power + 'W') + ' para subidas sem esforço',
+          conforto: m.comfortTxt ? m.comfortTxt : (m.seat ? 'tem assento para rodar sentado e sem esforço' : 'tem postura confortável para o dia a dia')
+        };
+        r.push(fatorTxt[a.fator]);
+        if (a.relevo === 'ingreme' && m.power >= 1000) r.push('encara ladeiras íngremes com motor de 1000W ou mais');
+        else if (a.relevo === 'plano' && m.power <= 750) r.push('é eficiente em trajetos planos e curtos');
+        else if (a.relevo === 'moderado') r.push('dá conta de 15 a 30 km por dia com rampas moderadas');
+        if (a.dobra === 'sim' && m.foldable) r.push('é dobrável para elevador, apartamento ou porta-malas');
+        if (a.dobra === 'nao' && !m.foldable) r.push('tem estrutura fixa e mais robusta para garagem');
+        extra.forEach((w) => r.push(w));
+        if (m.semJuros) r.push('pode ser parcelado em ' + m.inst + ' sem juros' + (m.instNote ? ' ' + m.instNote : ''));
+        if (m.cnh) r.push('atenção: exige ACC ou CNH e emplacamento para rodar em via pública');
+        return Array.from(new Set(r)).slice(0, 5);
+      }
+
+      /* ============ HISTÓRICO DE PREÇO (barras) ============ */
+      function priceInsight(m) {
+        const vals = m.hist.map((h) => h[1]);
+        const cur = vals[vals.length - 1];
+        const min = Math.min.apply(null, vals);
+        const avg = vals.reduce((x, y) => x + y, 0) / vals.length;
+        const diff = (cur - avg) / avg;
+        let status;
+        if (vals.length === 1) status = { tone: 'sky', label: '🔵 Monitoramento recente', text: 'Começamos a monitorar este anúncio em ' + m.hist[0][0] + '. O preço registrado é o atual.' };
+        else if (cur <= min + 0.01) status = { tone: 'emerald', label: '🟢 Boa hora para comprar', text: 'O preço atual é o menor registrado desde ' + m.hist[0][0] + '.' };
+        else if (diff <= -0.02) status = { tone: 'emerald', label: '🟢 Abaixo da média', text: 'Está ' + Math.abs(diff * 100).toFixed(0) + '% abaixo da média dos registros.' };
+        else if (diff <= 0.03) status = { tone: 'amber', label: '🟡 Preço na média', text: 'Está perto da média dos registros. O menor valor foi ' + fmt0(min) + '.' };
+        else status = { tone: 'orange', label: '🟠 Acima da média', text: 'Está ' + (diff * 100).toFixed(0) + '% acima da média. O menor valor registrado foi ' + fmt0(min) + '.' };
+        return { cur, min, avg, status };
+      }
+
+      function historyBlock(m) {
+        const ins = priceInsight(m);
+        const pts = m.hist.length === 1 ? [[m.hist[0][0], m.hist[0][1]], ['Hoje', m.hist[0][1]]] : m.hist;
+        const W = 320, H = 130, padB = 22, padT = 14;
+        const vals = pts.map((p) => p[1]);
+        const lo = Math.min.apply(null, vals.concat([ins.avg])) * 0.94;
+        const hi = Math.max.apply(null, vals.concat([ins.avg])) * 1.02;
+        const bw = Math.min(34, (W - 20) / pts.length - 8);
+        const gap = (W - pts.length * bw) / (pts.length + 1);
+        const yv = (v) => padT + (hi - v) / (hi - lo) * (H - padT - padB);
+        let bars = '';
+        pts.forEach((p, i) => {
+          const x = gap + i * (bw + gap);
+          const y = yv(p[1]);
+          const last = i === pts.length - 1;
+          bars += '<rect class="bar" style="animation-delay:' + (i * 70) + 'ms" x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + bw.toFixed(1) + '" height="' + (H - padB - y).toFixed(1) + '" rx="5" fill="' + (last ? 'url(#barNow)' : '#E2E8F0') + '"/>';
+          bars += '<text x="' + (x + bw / 2).toFixed(1) + '" y="' + (H - 6) + '" text-anchor="middle" font-size="10" fill="' + (last ? '#EA580C' : '#94A3B8') + '" font-weight="' + (last ? 800 : 600) + '">' + p[0] + '</text>';
+        });
+        const ay = yv(ins.avg).toFixed(1);
+        const tones = { emerald: 'border-emerald-200 bg-emerald-50 text-emerald-800', amber: 'border-amber-200 bg-amber-50 text-amber-800', orange: 'border-orange-200 bg-orange-50 text-orange-800', sky: 'border-sky-200 bg-sky-50 text-sky-800' };
+        return '<div class="mt-5 rounded-2xl border border-slate-200 bg-ice/60 p-4">' +
+          '<div class="mb-3 flex flex-wrap items-center justify-between gap-2"><p class="text-sm font-black text-ink">📊 Histórico de preços no Mercado Livre</p>' +
+          '<span class="rounded-full border px-2.5 py-1 text-[11px] font-extrabold ' + tones[ins.status.tone] + '">' + ins.status.label + '</span></div>' +
+          '<div class="grid grid-cols-3 gap-2 text-center">' +
+            '<div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] font-bold uppercase tracking-wide text-slate2">Menor registrado</p><p class="mt-0.5 text-sm font-black text-emerald-600">' + fmt0(ins.min) + '</p></div>' +
+            '<div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] font-bold uppercase tracking-wide text-slate2">Média dos registros</p><p class="mt-0.5 text-sm font-black text-ink">' + fmt0(ins.avg) + '</p></div>' +
+            '<div class="rounded-xl bg-white p-2.5 shadow-sm ring-2 ring-brand-orange/40"><p class="text-[10px] font-bold uppercase tracking-wide text-brand-orange">Preço atual</p><p class="mt-0.5 text-sm font-black text-ink">' + fmt0(ins.cur) + '</p></div>' +
+          '</div>' +
+          '<figure class="mt-3"><svg viewBox="0 0 ' + W + ' ' + H + '" class="h-auto w-full" role="img" aria-label="Histórico de preço do ' + m.name + ': ' + m.hist.map((h) => fmt(h[1]) + ' em ' + h[0]).join(', ') + '">' +
+            '<defs><linearGradient id="barNow" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FACC15"/><stop offset="100%" stop-color="#F97316"/></linearGradient></defs>' +
+            bars +
+            '<line x1="6" x2="' + (W - 6) + '" y1="' + ay + '" y2="' + ay + '" stroke="#0EA5E9" stroke-width="1.5" stroke-dasharray="5 4"/>' +
+            '<text x="' + (W - 8) + '" y="' + (+ay - 4) + '" text-anchor="end" font-size="10" font-weight="700" fill="#0284C7">média ' + fmt0(ins.avg) + '</text>' +
+          '</svg><figcaption class="mt-1 text-xs text-slate2">' + ins.status.text + '</figcaption></figure></div>';
+      }
+
+      /* ============ UI DO QUIZ ============ */
+      const answers = {};
+      let step = 0;
+      const $ = (id) => document.getElementById(id);
+      const fmt = (v) => 'R$ ' + v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const fmt0 = (v) => Math.abs(v - Math.round(v)) > 0.004 && Math.abs(v - Math.round(v)) < 0.5 && Math.round(v) % 100 === 0 ? fmt(v) : 'R$ ' + Math.round(v).toLocaleString('pt-BR');
+      const track = (name, params) => { if (typeof gtag === 'function') gtag('event', name, params || {}); };
+
+      function renderDots() {
+        $('step-dots').innerHTML = STEPS.map((st, i) => '<li class="flex flex-1 justify-center"><span class="h-2 w-2 rounded-full ' + (i < step ? 'bg-brand-orange' : i === step ? 'bg-brand-yellow ring-4 ring-amber-100' : 'bg-slate-200') + ' transition-all"></span></li>').join('');
+      }
+
+      function renderStep(dir) {
+        const st = STEPS[step];
+        const pct = Math.round((step / STEPS.length) * 100);
+        $('step-label').textContent = 'Etapa ' + (step + 1) + ' de ' + STEPS.length;
+        $('step-pct').textContent = pct + '% concluído';
+        $('progress-bar').style.width = pct + '%';
+        $('progress-bar').parentElement.setAttribute('aria-valuenow', String(pct));
+        renderDots();
+        const cols = st.options.length === 4 ? 'sm:grid-cols-2' : '';
+        const opts = st.options.map((o, i) => {
+          const sel = answers[st.key] === o.v;
+          return '<button type="button" role="radio" aria-checked="' + sel + '" data-v="' + o.v + '" class="option group relative flex w-full items-center gap-4 rounded-2xl border-2 border-slate-200 bg-white p-4 text-left focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-200">' +
+            '<span class="option-icon flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-ice text-3xl shadow-inner" aria-hidden="true">' + o.icon + '</span>' +
+            '<span class="min-w-0 flex-1"><span class="block text-base font-extrabold text-ink">' + o.label + '</span><span class="mt-0.5 block text-sm leading-snug text-slate2">' + o.sub + '</span></span>' +
+            '<span class="option-check absolute right-3 top-3 flex h-6 w-6 items-center justify-center rounded-full bg-brand-orange text-xs font-black text-white shadow" aria-hidden="true">✓</span>' +
+            '<span class="sr-only">Opção ' + (i + 1) + '</span></button>';
+        }).join('');
+        const tip = st.tip ? st.tip(answers) : '';
+        $('step-container').innerHTML = '<div class="' + (dir === 'back' ? 'step-enter' : 'step-enter') + '">' +
+          '<h2 id="q-title" class="mb-2 text-xl font-black leading-snug text-ink sm:text-2xl">' + st.title + '</h2>' +
+          (tip ? '<p class="mb-5 flex items-start gap-2 rounded-xl bg-amber-50 px-3 py-2 text-sm text-amber-900"><span aria-hidden="true">💡</span><span>' + tip + '</span></p>' : '') +
+          '<div class="grid gap-3 ' + cols + '" role="radiogroup" aria-labelledby="q-title">' + opts + '</div></div>';
+        $('btn-back').disabled = step === 0;
+        $('btn-next').disabled = !answers[st.key];
+        $('btn-next-label').textContent = step === STEPS.length - 1 ? 'Ver meu resultado' : 'Próxima';
+        $('step-container').querySelectorAll('.option').forEach((b) => b.addEventListener('click', () => choose(b)));
+      }
+
+      let autoTimer = null;
+      function choose(btn) {
+        const st = STEPS[step];
+        answers[st.key] = btn.dataset.v;
+        $('step-container').querySelectorAll('.option').forEach((b) => b.setAttribute('aria-checked', b === btn ? 'true' : 'false'));
+        btn.classList.remove('pop'); void btn.offsetWidth; btn.classList.add('pop');
+        if (navigator.vibrate) navigator.vibrate(12);
+        $('btn-next').disabled = false;
+        track('quiz_resposta', { etapa: step + 1, pergunta: st.key, resposta: btn.dataset.v });
+        clearTimeout(autoTimer);
+        autoTimer = setTimeout(next, 450);
+      }
+
+      function next() {
+        clearTimeout(autoTimer);
+        if (!answers[STEPS[step].key]) return;
+        if (step < STEPS.length - 1) {
+          const inner = $('step-container').firstElementChild;
+          if (inner) inner.classList.add('step-leave');
+          setTimeout(() => { step++; renderStep('next'); }, 200);
+          return;
+        }
+        finish();
+      }
+
+      function back() {
+        clearTimeout(autoTimer);
+        if (step > 0) { step--; renderStep('back'); }
+      }
+
+      /* ============ RESULTADO ============ */
+      const CHECK = '<svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>';
+      const CAT = { patinete: '🛴 Patinete elétrico', bike: '🚲 Bicicleta elétrica', moto: '🛵 Moto / scooter elétrica' };
+      const cap = (t) => t.charAt(0).toUpperCase() + t.slice(1);
+      const cta = (m, pos) => 'href="' + m.link + '" target="_blank" rel="sponsored noopener" onclick="return gtag_report_conversion(this.href);" data-modelo="' + m.id + '" data-posicao="' + pos + '"';
+
+      function priceBlock(m, big) {
+        return '<p class="' + (big ? 'text-3xl' : 'text-lg') + ' font-black text-ink">' + fmt(m.price) + ' <span class="text-sm font-bold text-emerald-600">' + m.priceLabel + '</span></p>' +
+          (m.semJuros
+            ? '<p class="mt-2 inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-1.5 ' + (big ? 'text-sm' : 'text-xs') + ' font-black text-emerald-800">' + (m.instNote ? 'ou ' : '') + m.inst + ' <span class="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] uppercase text-white">sem juros</span>' + (m.instNote ? '<span class="font-semibold text-emerald-700">' + m.instNote + '</span>' : '') + '</p>'
+            : '<p class="mt-1 text-sm font-bold text-amber-700">ou ' + m.inst + (m.instNote ? ' <span class="text-xs font-semibold text-slate2">(' + m.instNote + ')</span>' : '') + '</p>');
+      }
+
+      function mainCard(m, a, why) {
+        const rs = reasons(m, a, why);
+        return '<div class="grid md:grid-cols-[0.9fr_1.1fr]">' +
+          '<figure class="relative flex items-center justify-center bg-white p-6 md:border-r md:border-slate-100">' +
+            '<span class="absolute left-4 top-4 rounded-full bg-gradient-to-r from-brand-yellow to-brand-orange px-3 py-1 text-xs font-black uppercase tracking-wide text-ink shadow-sm">🏆 Escolha ideal</span>' +
+            '<img src="' + m.img + '" alt="' + m.name + ' — ' + m.tagline + '" width="420" height="420" loading="eager" decoding="async" referrerpolicy="no-referrer" class="aspect-square w-full max-w-[320px] object-contain">' +
+            '<figcaption class="sr-only">' + m.name + '</figcaption></figure>' +
+          '<div class="p-5 sm:p-7">' +
+            '<div class="mb-2 flex flex-wrap items-center gap-2"><span class="rounded-md bg-ice px-2 py-0.5 text-[11px] font-bold text-slate2">' + CAT[m.cat] + '</span><span class="rounded-md border border-slate-200 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-widest text-slate2">' + m.brand + '</span>' +
+            '<span class="inline-flex items-center gap-1 rounded-md bg-amber-50 px-2 py-0.5 text-xs font-black text-amber-700">★ ' + m.score.toFixed(1).replace('.', ',') + '/10</span></div>' +
+            '<h3 class="text-2xl font-black leading-tight text-ink">' + m.name + '</h3>' +
+            '<p class="mt-1 text-sm text-slate2">' + m.tagline + '</p>' +
+            '<p class="mt-4 rounded-xl bg-emerald-50 p-3 text-sm font-semibold leading-relaxed text-emerald-800">Ideal para você porque ' + rs[0] + '.</p>' +
+            '<ul class="mt-4 space-y-2 text-sm text-ink">' + rs.slice(1).map((r) => '<li class="flex items-start gap-2">' + CHECK + '<span>' + cap(r) + '.</span></li>').join('') + '</ul>' +
+            '<div class="mt-4 flex flex-wrap gap-1.5">' + m.specs.map((sp) => '<span class="rounded-lg bg-ice px-2.5 py-1 text-xs font-semibold text-slate2">' + sp + '</span>').join('') + '</div>' +
+            historyBlock(m) +
+            '<div class="mt-5 border-t border-slate-100 pt-4">' +
+              '<div class="mb-3 flex flex-wrap gap-2"><span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-700"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true"></span>Oferta verificada no Mercado Livre</span>' +
+              '<span class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-slate2">🛡️ Compra Garantida</span></div>' +
+              '<p class="text-[11px] font-bold uppercase tracking-wider text-slate2">Melhor preço</p>' + priceBlock(m, true) +
+              '<a ' + cta(m, 'principal') + ' class="btn-shine cta-ml mt-5 flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-yellow to-brand-orange px-6 text-base font-extrabold text-ink shadow-cta transition hover:brightness-105 active:scale-[0.99]">Ver oferta no Mercado Livre <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg></a>' +
+              '<a href="' + m.review + '" class="mt-3 block text-center text-sm font-semibold text-slate2 underline decoration-slate-300 underline-offset-4 hover:text-brand-orange">Ler a análise completa do ' + m.name + '</a>' +
+            '</div>' +
+          '</div></div>';
+      }
+
+      function altCard(m) {
+        const ins = priceInsight(m);
+        return '<article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-md transition hover:-translate-y-0.5 hover:shadow-lg">' +
+          '<div class="flex items-center gap-3"><img src="' + m.img + '" alt="' + m.name + '" width="96" height="96" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="h-24 w-24 shrink-0 rounded-xl bg-white object-contain">' +
+          '<div class="min-w-0"><p class="text-[10px] font-extrabold uppercase tracking-widest text-slate2">' + CAT[m.cat] + ' · ★ ' + m.score.toFixed(1).replace('.', ',') + '</p>' +
+          '<h4 class="text-base font-black leading-snug text-ink">' + m.name + '</h4><p class="mt-0.5 text-xs text-slate2">' + m.tagline + '</p></div></div>' +
+          '<div class="mt-3">' + priceBlock(m, false) + '</div>' +
+          '<p class="mt-2 text-[11px] font-semibold text-slate2">' + ins.status.label + ' · menor registrado ' + fmt0(ins.min) + '</p>' +
+          '<div class="mt-auto pt-4"><a ' + cta(m, 'alternativa') + ' class="btn-shine cta-ml flex h-11 w-full items-center justify-center rounded-xl bg-brand-yellow text-sm font-extrabold text-ink shadow-sm transition hover:bg-brand-gold">Ver no Mercado Livre</a>' +
+          '<a href="' + m.review + '" class="mt-2 block text-center text-xs font-semibold text-slate2 hover:text-brand-orange">Ver análise completa</a></div></article>';
+      }
+
+      function profileBox(a) {
+        const chips = STEPS.map((st) => '<li class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900">' + LABELS[st.key][a[st.key]] + '</li>').join('');
+        const note = a.categoria === 'moto' && a.dobra === 'sim' ? '<p class="mt-3 text-xs text-slate2">Como motos e scooters não dobram, incluímos alternativas compactas para você comparar.</p>' : '';
+        return '<p class="mb-2 text-xs font-extrabold uppercase tracking-wider text-slate2">Seu perfil</p><ul class="flex flex-wrap gap-2">' + chips + '</ul>' + note;
+      }
+
+      function finish() {
+        $('progress-bar').style.width = '100%';
+        $('quiz').classList.add('hidden');
+        $('intro').classList.add('hidden');
+        $('loader').classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const subs = ['Cruzando uso, relevo, espaço e orçamento com 15 modelos', 'Comparando autonomia, potência e conforto', 'Conferindo preço atual e histórico no Mercado Livre'];
+        let i = 0; const rot = setInterval(() => { i = (i + 1) % subs.length; $('loader-sub').textContent = subs[i]; }, 500);
+        setTimeout(() => {
+          clearInterval(rot);
+          const ranked = recommend(answers);
+          const best = ranked[0];
+          let alts = ranked.slice(1).map((r) => r.m);
+          if (answers.categoria === 'moto' && answers.dobra === 'sim') {
+            const compact = alts.find((m) => m.foldable);
+            alts = [alts[0]].concat(compact && compact !== alts[0] ? [compact] : [alts[1]]);
+          } else alts = alts.slice(0, 2);
+          $('profile-box').innerHTML = profileBox(answers);
+          $('main-card').innerHTML = mainCard(best.m, answers, best.why);
+          $('alt-cards').innerHTML = alts.map(altCard).join('');
+          $('loader').classList.add('hidden');
+          $('result').classList.remove('hidden');
+          $('result').classList.add('step-enter');
+          document.querySelectorAll('.cta-ml').forEach((el) => el.addEventListener('click', () => {
+            track('clique_afiliado_ml', { modelo: el.dataset.modelo, posicao: el.dataset.posicao, origem: 'quiz_mobilidade' });
+          }));
+          track('quiz_resultado', { modelo: best.m.id, alternativas: alts.map((x) => x.id).join(','), categoria: answers.categoria, orcamento: answers.orcamento });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 1500);
+      }
+
+      function restart() {
+        Object.keys(answers).forEach((k) => delete answers[k]);
+        step = 0;
+        $('result').classList.add('hidden');
+        $('intro').classList.remove('hidden');
+        $('quiz').classList.remove('hidden');
+        renderStep();
+        track('quiz_refazer');
+        $('quiz').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      $('btn-next').addEventListener('click', next);
+      $('btn-back').addEventListener('click', back);
+      $('btn-restart').addEventListener('click', restart);
+      document.addEventListener('keydown', (e) => {
+        if ($('quiz').classList.contains('hidden')) return;
+        const opts = Array.from(document.querySelectorAll('#step-container .option'));
+        const n = parseInt(e.key, 10);
+        if (n >= 1 && n <= opts.length) { opts[n - 1].click(); opts[n - 1].focus(); }
+      });
+
+      window.TDM_QUIZ = { recommend: (a) => recommend(a).map((r) => r.m.id), steps: STEPS.map((s) => ({ key: s.key, values: s.options.map((o) => o.v) })) };
+      renderStep();
+      track('quiz_inicio');
+    })();
+  </script>
+</body>
+</html>
