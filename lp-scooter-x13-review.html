@@ -14,21 +14,12 @@
   </script>
   <script>
     function gtag_report_conversion(url) {
-      var redirected = false;
-      var callback = function () {
-        if (redirected) return;
-        redirected = true;
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
       gtag('event', 'conversion', {
           'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE',
-          'event_callback': callback,
-          'event_timeout': 1500
+          'transport_type': 'beacon'
       });
-      setTimeout(callback, 1800);
-      return false;
+      gtag('event', 'clique_afiliado_ml', { 'link_url': url, 'transport_type': 'beacon' });
+      return true;
     }
   </script>
   <meta charset="UTF-8">
@@ -36,13 +27,13 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://www.tudodemelhor.com.br/lp-scooter-x13-review">
   <meta name="description" content="Scooter elétrica X13 1000W com bateria 60V 20Ah em 3 cores: preta a partir de R$ 7.999,99 ou 10x de R$ 1.062,50 sem juros, vermelha por R$ 8.924,25 e azul por R$ 13.990. Compra Garantida no Mercado Livre.">
-  <meta name="theme-color" content="#232F3E">
+  <meta name="theme-color" content="#F8FAFC">
   <link rel="icon" type="image/jpeg" href="assets/ui/logo-site/logo-tudo-melhor.jpeg">
   <title>Scooter Elétrica X13 1000W a partir de R$ 7.999 ou 10x sem Juros | Tudo de Melhor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://http2.mlstatic.com">
-  <link rel="preload" as="image" href="https://http2.mlstatic.com/D_NQ_NP_2X_965447-MLA106137655938_022026-F.webp">
+  <link rel="preload" as="image" href="assets/produtos/LP/x13-capa-poster.webp" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -51,30 +42,33 @@
         extend: {
           colors: {
             brand: {
-              bg: '#232F3E',
-              yellow: '#FFE600',
-              orange: '#FF9900',
-              card: 'rgba(27, 37, 48, 0.7)',
-              elevated: '#1B2530',
-              border: '#37475A',
-              muted: '#D5D9D9',
-              dim: '#AAB3BD'
-            }
+              bg: '#F8FAFC',
+              yellow: '#FACC15',
+              gold: '#EAB308',
+              orange: '#F97316',
+              card: '#FFFFFF',
+              elevated: '#FFFFFF',
+              border: '#E2E8F0',
+              muted: '#475569',
+              dim: '#64748B'
+            },
+            ink: '#1E293B'
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif']
           },
           boxShadow: {
-            glow: '0 0 15px rgba(255, 230, 0, 0.4)',
-            'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
-            'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
-            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)',
-            'neon-emerald': '0 0 12px rgba(52, 211, 153, 0.55), inset 0 0 8px rgba(52, 211, 153, 0.15)',
-            'neon-yellow': '0 0 12px rgba(255, 230, 0, 0.5), inset 0 0 8px rgba(255, 230, 0, 0.12)',
-            'neon-sky': '0 0 12px rgba(56, 189, 248, 0.5), inset 0 0 8px rgba(56, 189, 248, 0.12)'
+            soft: '0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 30px -14px rgba(15, 23, 42, 0.16)',
+            glow: '0 8px 20px -8px rgba(234, 179, 8, 0.6)',
+            'glow-lg': '0 14px 32px -12px rgba(249, 115, 22, 0.55)',
+            'glow-orange': '0 6px 16px -6px rgba(249, 115, 22, 0.35)',
+            'glow-emerald': '0 1px 2px rgba(15, 23, 42, 0.04), 0 14px 32px -16px rgba(16, 185, 129, 0.45)',
+            'neon-emerald': '0 0 0 3px rgba(16, 185, 129, 0.08)',
+            'neon-yellow': '0 0 0 3px rgba(234, 179, 8, 0.1)',
+            'neon-sky': '0 0 0 3px rgba(14, 165, 233, 0.08)'
           },
           backgroundImage: {
-            'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
+            'brand-gradient': 'linear-gradient(135deg, #FACC15 0%, #F97316 100%)'
           }
         }
       }
@@ -83,19 +77,25 @@
   <style type="text/tailwindcss">
     @layer utilities {
       .glass {
-        @apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;
+        @apply bg-white border border-slate-200 rounded-2xl shadow-soft;
       }
     }
   </style>
   <style>
     body {
+      background-color: #F8FAFC;
       background-image:
-        radial-gradient(ellipse 70% 45% at 85% 10%, rgba(255, 153, 0, 0.14), transparent 55%),
-        radial-gradient(ellipse 50% 40% at 10% 85%, rgba(255, 230, 0, 0.07), transparent 50%),
-        radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-      background-size: auto, auto, 18px 18px;
+        radial-gradient(ellipse 65% 40% at 100% 0%, rgba(251, 191, 36, 0.16), transparent 60%),
+        radial-gradient(ellipse 55% 38% at 0% 100%, rgba(249, 115, 22, 0.08), transparent 55%),
+        radial-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+      background-size: auto, auto, 20px 20px;
       background-attachment: fixed;
     }
+    .text-gradient-brand { background: linear-gradient(90deg, #EAB308 0%, #F97316 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .trust-ico { box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06); }
+    .calc-mode[aria-checked="true"] { border-color: #F97316; background: #FFF7ED; color: #9A3412; box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.35); }
+    .calc-range { accent-color: #F97316; }
+    .media-tab[aria-selected="true"] { border-color: #EAB308; background: #FEFCE8; color: #1E293B; box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.45); }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
@@ -115,13 +115,13 @@
     @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
     .pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
     @keyframes glow-pulse {
-      0%, 100% { box-shadow: 0 0 6px rgba(52, 211, 153, 0.35), 0 0 0 rgba(255, 230, 0, 0); }
-      50% { box-shadow: 0 0 18px rgba(52, 211, 153, 0.75), 0 0 28px rgba(255, 230, 0, 0.3); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.25); }
+      50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.08); }
     }
     .sem-juros-glow { animation: glow-pulse 2.2s ease-in-out infinite; }
-    .color-option[aria-checked="true"] { border-color: rgba(255, 230, 0, 0.85); background: rgba(255, 230, 0, 0.08); box-shadow: 0 0 0 1px rgba(255, 230, 0, 0.5), 0 0 18px rgba(255, 230, 0, 0.25); }
+    .color-option[aria-checked="true"] { border-color: #EAB308; background: #FEFCE8; box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.55), 0 8px 18px -10px rgba(234, 179, 8, 0.6); }
     .color-option[aria-checked="true"] .color-check { opacity: 1; transform: scale(1); }
-    .offer-option[aria-checked="true"] { border-color: rgba(52, 211, 153, 0.9); background: rgba(52, 211, 153, 0.1); box-shadow: 0 0 0 1px rgba(52, 211, 153, 0.55), 0 0 18px rgba(52, 211, 153, 0.25); }
+    .offer-option[aria-checked="true"] { border-color: #10B981; background: #ECFDF5; box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.5), 0 8px 18px -10px rgba(16, 185, 129, 0.55); }
     .offer-option[aria-checked="true"] .offer-check { opacity: 1; transform: scale(1); }
     .swap-fade { transition: opacity 0.25s ease; }
     .swap-fade.is-swapping { opacity: 0; }
@@ -130,28 +130,28 @@
     @media (prefers-reduced-motion: reduce) {
       .btn-shine::after { display: none; }
       .pulse-dot { animation: none; }
-      .sem-juros-glow { animation: none; box-shadow: 0 0 12px rgba(52, 211, 153, 0.5); }
+      .sem-juros-glow { animation: none; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12); }
       .swap-fade { transition: none; }
     }
     details > summary::-webkit-details-marker { display: none; }
     details[open] .faq-chevron { transform: rotate(180deg); }
   </style>
 </head>
-<body class="bg-brand-bg text-white font-sans antialiased min-h-screen pb-36 sm:pb-32">
+<body class="bg-brand-bg text-ink font-sans antialiased min-h-screen pb-36 sm:pb-32">
 
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
     <div class="mx-auto flex h-16 max-w-6xl items-center gap-2 px-4 sm:gap-4">
       <a href="#oferta" class="flex shrink-0 items-center gap-2 transition hover:opacity-90" aria-label="Tudo de Melhor">
-        <span class="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-brand-bg shadow-glow-orange">
+        <span class="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white shadow-glow-orange">
           <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-full w-full object-cover" width="40" height="40">
         </span>
         <span class="hidden flex-col leading-none sm:flex">
-          <span class="text-sm font-black uppercase tracking-wider text-white">Tudo De</span>
-          <span class="text-sm font-black uppercase tracking-wider text-brand-yellow">Melhor</span>
+          <span class="text-sm font-black uppercase tracking-wider text-ink">Tudo De</span>
+          <span class="text-sm font-black uppercase tracking-wider text-amber-700">Melhor</span>
         </span>
       </a>
 
-      <span class="inline-flex shrink-0 items-center gap-1 rounded-full border border-emerald-400/50 bg-emerald-400/10 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300 shadow-neon-emerald sm:text-xs">
+      <span class="inline-flex shrink-0 items-center gap-1 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-700 shadow-neon-emerald sm:text-xs">
         <svg class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
         Oferta Verificada
       </span>
@@ -167,59 +167,59 @@
       <section id="oferta" class="mb-8 scroll-mt-20 grid grid-cols-1 gap-5 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8" aria-label="Oferta Scooter Elétrica X13 1000W">
         <div class="lg:order-2">
           <div class="mb-3 flex flex-wrap gap-2">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span>Em estoque no Mercado Livre</span>
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-brand-yellow/60 bg-brand-yellow/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-brand-yellow shadow-neon-yellow sm:text-xs">💳 Até 10x sem juros</span>
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-sky-400/60 bg-sky-400/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-sky-300 shadow-neon-sky sm:text-xs">🎨 3 cores no mesmo modelo</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-700 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true"></span>Em estoque no Mercado Livre</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-amber-700 shadow-neon-yellow sm:text-xs">💳 Até 10x sem juros</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-sky-700 shadow-neon-sky sm:text-xs">🎨 3 cores no mesmo modelo</span>
           </div>
 
-          <h1 class="mb-2 text-2xl font-extrabold leading-tight sm:text-3xl md:text-4xl">Scooter Elétrica <span class="text-brand-yellow">X13 1000W</span> com bateria 60V: escolha a cor e pague em até 10x sem juros</h1>
-          <p class="mb-4 text-sm text-brand-muted md:text-base">Motor 1000W, bateria de lítio 60V 20Ah com até 50 km de autonomia e 32 km/h: categoria autopropelido. <span class="text-brand-yellow">★★★★½</span> 4.4 com 23 avaliações no Mercado Livre.</p>
+          <h1 class="mb-2 text-2xl font-extrabold leading-tight sm:text-3xl md:text-4xl">Scooter Elétrica <span class="text-gradient-brand">X13 1000W</span> com bateria 60V: escolha a cor e pague em até 10x sem juros</h1>
+          <p class="mb-4 text-sm text-brand-muted md:text-base">Motor 1000W, bateria de lítio 60V 20Ah com até 50 km de autonomia e 32 km/h: categoria autopropelido. <span class="text-gradient-brand">★★★★½</span> 4.4 com 23 avaliações no Mercado Livre.</p>
 
           <!-- Imagem (mobile aparece aqui; desktop na coluna da esquerda) -->
           <div class="mb-5 lg:hidden" data-gallery-slot="mobile"></div>
 
           <!-- SELETOR DE CORES -->
           <div class="mb-4">
-            <p id="cor-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Escolha a cor: <span data-bind="colorName" class="text-white">Preta</span></p>
+            <p id="cor-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Escolha a cor: <span data-bind="colorName" class="text-ink">Preta</span></p>
             <div class="grid grid-cols-3 gap-2" role="radiogroup" aria-labelledby="cor-label">
-              <button type="button" role="radio" aria-checked="true" data-color="preto" class="color-option relative flex flex-col items-center gap-1.5 rounded-xl border border-white/15 bg-white/5 px-2 py-3 text-center transition hover:border-brand-yellow/50">
+              <button type="button" role="radio" aria-checked="true" data-color="preto" class="color-option relative flex flex-col items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 px-2 py-3 text-center transition hover:border-amber-300">
                 <span class="color-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
-                <span class="h-7 w-7 rounded-full border-2 border-white/60 bg-[#111] shadow" aria-hidden="true"></span>
-                <span class="text-xs font-extrabold text-white">Preta</span>
-                <span class="text-[11px] font-bold text-brand-yellow">a partir de R$ 7.999</span>
-                <span class="rounded bg-sky-400/15 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-sky-300">Menor preço</span>
+                <span class="h-7 w-7 rounded-full border-2 border-slate-300 bg-[#111] shadow" aria-hidden="true"></span>
+                <span class="text-xs font-extrabold text-ink">Preta</span>
+                <span class="text-[11px] font-bold text-amber-700">a partir de R$ 7.999</span>
+                <span class="rounded bg-sky-50 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-sky-700">Menor preço</span>
               </button>
-              <button type="button" role="radio" aria-checked="false" data-color="vermelho" class="color-option relative flex flex-col items-center gap-1.5 rounded-xl border border-white/15 bg-white/5 px-2 py-3 text-center transition hover:border-brand-yellow/50">
+              <button type="button" role="radio" aria-checked="false" data-color="vermelho" class="color-option relative flex flex-col items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 px-2 py-3 text-center transition hover:border-amber-300">
                 <span class="color-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
-                <span class="h-7 w-7 rounded-full border-2 border-white/60 bg-[#b91c1c] shadow" aria-hidden="true"></span>
-                <span class="text-xs font-extrabold text-white">Vermelha</span>
-                <span class="text-[11px] font-bold text-brand-yellow">R$ 8.924</span>
-                <span class="rounded bg-white/10 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-brand-muted">Bluetooth + LED</span>
+                <span class="h-7 w-7 rounded-full border-2 border-slate-300 bg-[#b91c1c] shadow" aria-hidden="true"></span>
+                <span class="text-xs font-extrabold text-ink">Vermelha</span>
+                <span class="text-[11px] font-bold text-amber-700">R$ 8.924</span>
+                <span class="rounded bg-slate-100 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-brand-muted">Bluetooth + LED</span>
               </button>
-              <button type="button" role="radio" aria-checked="false" data-color="azul" class="color-option relative flex flex-col items-center gap-1.5 rounded-xl border border-white/15 bg-white/5 px-2 py-3 text-center transition hover:border-brand-yellow/50">
+              <button type="button" role="radio" aria-checked="false" data-color="azul" class="color-option relative flex flex-col items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 px-2 py-3 text-center transition hover:border-amber-300">
                 <span class="color-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
-                <span class="h-7 w-7 rounded-full border-2 border-white/60 bg-[#1d4ed8] shadow" aria-hidden="true"></span>
-                <span class="text-xs font-extrabold text-white">Azul</span>
-                <span class="text-[11px] font-bold text-brand-yellow">R$ 13.990</span>
-                <span class="rounded bg-emerald-400/15 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-emerald-300">10x sem juros</span>
+                <span class="h-7 w-7 rounded-full border-2 border-slate-300 bg-[#1d4ed8] shadow" aria-hidden="true"></span>
+                <span class="text-xs font-extrabold text-ink">Azul</span>
+                <span class="text-[11px] font-bold text-amber-700">R$ 13.990</span>
+                <span class="rounded bg-emerald-100 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-emerald-700">10x sem juros</span>
               </button>
             </div>
           </div>
 
           <!-- SELETOR DE OFERTA / VENDEDOR -->
           <div id="offer-picker" class="mb-4">
-            <p id="oferta-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Escolha a oferta da cor preta: <span data-bind="offerName" class="text-white">Menor preço</span></p>
+            <p id="oferta-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Escolha a oferta da cor preta: <span data-bind="offerName" class="text-ink">Menor preço</span></p>
             <div class="grid grid-cols-2 gap-2" role="radiogroup" aria-labelledby="oferta-label">
-              <button type="button" role="radio" aria-checked="true" data-offer="economica" class="offer-option relative flex flex-col items-start gap-1 rounded-xl border border-white/15 bg-white/5 px-3 py-3 text-left transition hover:border-emerald-300/60">
-                <span class="offer-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-emerald-300 text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
-                <span class="rounded bg-sky-400/15 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-sky-300">🏷️ Menor preço atual</span>
-                <span class="text-base font-black text-white">R$ 7.999,99</span>
+              <button type="button" role="radio" aria-checked="true" data-offer="economica" class="offer-option relative flex flex-col items-start gap-1 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-left transition hover:border-emerald-400">
+                <span class="offer-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-emerald-600 text-[10px] font-black text-white opacity-0 transition" aria-hidden="true">✓</span>
+                <span class="rounded bg-sky-50 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-sky-700">🏷️ Menor preço atual</span>
+                <span class="text-base font-black text-ink">R$ 7.999,99</span>
                 <span class="text-[11px] text-brand-muted">ELETRO SHOP BRASIL · parcelamento padrão</span>
               </button>
-              <button type="button" role="radio" aria-checked="false" data-offer="parcelada" class="offer-option relative flex flex-col items-start gap-1 rounded-xl border border-white/15 bg-white/5 px-3 py-3 text-left transition hover:border-emerald-300/60">
-                <span class="offer-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-emerald-300 text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
-                <span class="rounded bg-emerald-400/15 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-emerald-300">💳 10x sem juros</span>
-                <span class="text-base font-black text-white">10x de R$ 1.062,50</span>
+              <button type="button" role="radio" aria-checked="false" data-offer="parcelada" class="offer-option relative flex flex-col items-start gap-1 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-left transition hover:border-emerald-400">
+                <span class="offer-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-emerald-600 text-[10px] font-black text-white opacity-0 transition" aria-hidden="true">✓</span>
+                <span class="rounded bg-emerald-100 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-emerald-700">💳 10x sem juros</span>
+                <span class="text-base font-black text-ink">10x de R$ 1.062,50</span>
                 <span class="text-[11px] text-brand-muted">total R$ 10.625,00 no cartão</span>
               </button>
             </div>
@@ -227,39 +227,45 @@
 
           <!-- CARD DE PREÇO -->
           <div class="glass relative overflow-hidden p-5 shadow-glow-emerald">
-            <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-brand-yellow/5"></div>
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-50/80 via-transparent to-amber-50/50"></div>
             <div class="relative swap-fade" data-swap>
-              <p class="mb-1 text-xs text-brand-dim"><span data-bind="anchorText">De R$ 11.499 no anúncio</span> · <span data-bind="discount" class="font-bold text-emerald-300">30% OFF</span></p>
+              <p class="mb-1 text-xs text-brand-dim"><span data-bind="anchorText">De R$ 11.499 no anúncio</span> · <span data-bind="discount" class="font-bold text-emerald-700">30% OFF</span></p>
               <div class="flex flex-wrap items-end gap-x-3 gap-y-1">
-                <span class="text-4xl font-black leading-none text-white md:text-5xl" data-bind="priceBig">R$ 7.999<span class="text-2xl md:text-3xl">,99</span></span>
-                <span class="pb-1 text-sm font-bold text-emerald-300" data-bind="priceLabel">no cartão ou Pix</span>
+                <span class="text-4xl font-black leading-none text-ink md:text-5xl" data-bind="priceBig">R$ 7.999<span class="text-2xl md:text-3xl">,99</span></span>
+                <span class="pb-1 text-sm font-bold text-emerald-700" data-bind="priceLabel">no cartão ou Pix</span>
               </div>
               <div class="mt-3" data-bind="installmentBlock"></div>
               <p class="mt-2 text-xs text-brand-muted" data-bind="extraOffer"></p>
-              <p class="mt-1 flex items-center gap-2 text-xs text-brand-muted"><span class="pulse-dot inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-400" aria-hidden="true"></span><span data-bind="delivery">Frete grátis e chegada rápida no anúncio (confira o seu CEP)</span></p>
+              <p class="mt-1 flex items-center gap-2 text-xs text-brand-muted"><span class="pulse-dot inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-500" aria-hidden="true"></span><span data-bind="delivery">Frete grátis e chegada rápida no anúncio (confira o seu CEP)</span></p>
 
               <a href="https://meli.la/1KEaTKK" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine mt-5 inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.98]">
                 <span data-bind="ctaText">Ver X13 Preta no Mercado Livre</span>
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
 
-              <ul class="mt-4 grid grid-cols-2 gap-2 text-[11px] text-brand-muted sm:text-xs" data-bind="seals"></ul>
+              <div data-bind="seals"></div>
             </div>
           </div>
         </div>
 
         <div class="hidden lg:order-1 lg:block" data-gallery-slot="desktop">
-          <div id="hero-gallery" class="product-gallery relative" aria-label="Foto da scooter elétrica X13 na cor selecionada" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_965447-MLA106137655938_022026-F.webp","alt":"Scooter elétrica X13 1000W preta — foto do anúncio"}]'>
-            <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white">
-              <img id="hero-img" src="https://http2.mlstatic.com/D_NQ_NP_2X_965447-MLA106137655938_022026-F.webp" alt="Scooter elétrica X13 1000W preta — foto do anúncio" class="product-gallery-thumb swap-fade aspect-square w-full cursor-zoom-in object-contain p-2" data-index="0" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" width="800" height="800">
-              <span class="pointer-events-none absolute left-3 top-3 rounded-full bg-black/75 px-3 py-1 text-xs font-extrabold text-white" data-bind="imgBadge">Cor: Preta</span>
+          <div id="hero-gallery" class="product-gallery relative lg:mx-auto lg:max-w-[540px]" aria-label="Vídeo e foto da scooter elétrica X13" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_965447-MLA106137655938_022026-F.webp","alt":"Scooter elétrica X13 1000W preta — foto do anúncio"}]'>
+            <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-soft">
+              <div id="hero-video-wrap" class="relative bg-black">
+                <video id="hero-video" data-produto="x13" class="aspect-[4/5] w-full object-cover" autoplay muted loop playsinline preload="metadata" poster="assets/produtos/LP/x13-capa-poster.webp" width="720" height="900" aria-label="Vídeo de demonstração da scooter elétrica X13 na cor vermelha"><source src="assets/produtos/LP/x13-capa-loop.mp4" type="video/mp4"></video>
+                <span class="pointer-events-none absolute left-3 top-3 rounded-full bg-black/70 px-3 py-1 text-xs font-extrabold text-white">▶ Vídeo real · X13 vermelha</span>
+                <button type="button" data-full-video="assets/produtos/LP/x13-video-completo.mp4" class="absolute bottom-3 left-1/2 inline-flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-white/95 px-4 py-2 text-xs font-extrabold text-ink shadow-lg transition hover:bg-white">🔊 Assistir completo com som · 1:23</button>
+              </div>
+              <div id="hero-photo-wrap" class="relative" hidden>
+                <img id="hero-img" src="https://http2.mlstatic.com/D_NQ_NP_2X_965447-MLA106137655938_022026-F.webp" alt="Scooter elétrica X13 1000W preta — foto do anúncio" class="product-gallery-thumb swap-fade aspect-[4/5] w-full cursor-zoom-in object-contain p-3" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="800" height="800">
+                <span class="pointer-events-none absolute left-3 top-3 rounded-full bg-black/75 px-3 py-1 text-xs font-extrabold text-white" data-bind="imgBadge">Cor: Preta</span>
+              </div>
             </div>
-            <div class="mt-3 flex items-center justify-center gap-3" aria-hidden="true">
-              <span class="h-3 w-3 rounded-full border border-white/50 bg-[#111]" data-dot="preto"></span>
-              <span class="h-3 w-3 rounded-full border border-white/50 bg-[#b91c1c]" data-dot="vermelho"></span>
-              <span class="h-3 w-3 rounded-full border border-white/50 bg-[#1d4ed8]" data-dot="azul"></span>
+            <div class="mt-3 grid grid-cols-2 gap-2" role="tablist" aria-label="Mídia da scooter X13">
+              <button type="button" role="tab" data-media="video" aria-selected="true" class="media-tab rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-bold text-brand-muted transition hover:border-amber-300">▶ Vídeo real</button>
+              <button type="button" role="tab" data-media="photo" aria-selected="false" class="media-tab rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs font-bold text-brand-muted transition hover:border-amber-300">📷 Foto da cor <span data-bind="colorName">Preta</span></button>
             </div>
-            <p class="mt-1 text-center text-[11px] text-brand-dim">Toque na foto para ampliar · troque a cor ao lado</p>
+            <p class="mt-2 text-center text-[11px] text-brand-dim">Vídeo com a X13 vermelha · toque em uma cor para ver a foto do anúncio</p>
           </div>
         </div>
       </section>
@@ -270,31 +276,202 @@
           <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
             <div>
               <h2 id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</h2>
-              <p class="mt-1 text-xs text-brand-dim">Cor <span data-bind="colorName" class="font-bold text-white">Preta</span> · <span data-bind="histPeriod">monitorado em 25/10/2026</span></p>
+              <p class="mt-1 text-xs text-brand-dim">Cor <span data-bind="colorName" class="font-bold text-ink">Preta</span> · <span data-bind="histPeriod">monitorado em 25/10/2026</span></p>
             </div>
-            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300" data-bind="histBadge">Novo monitoramento</span>
+            <span class="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700" data-bind="histBadge">Novo monitoramento</span>
           </div>
 
-          <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base" data-bind="histBanner"></div>
+          <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-50 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-700 shadow-neon-emerald md:text-base" data-bind="histBanner"></div>
 
           <div class="mb-5 grid grid-cols-2 gap-3" data-bind="histCompare"></div>
 
           <figure>
-            <div id="price-chart" class="price-chart rounded-xl border border-white/5 bg-gradient-to-b from-white/[0.03] to-transparent p-2 sm:p-3"></div>
-            <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+            <div id="price-chart" class="price-chart rounded-xl border border-slate-100 bg-gradient-to-b from-slate-50 to-transparent p-2 sm:p-3"></div>
+            <figcaption class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
               <strong class="text-brand-muted">Transparência:</strong> <span data-bind="histNote"></span> A venda, entrega e garantia são feitas pelo vendedor do anúncio no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar a qualquer momento — confira tudo no anúncio antes de pagar.
             </figcaption>
           </figure>
         </div>
       </section>
 
+      <!-- PARA QUEM É / NÃO É -->
+      <section id="para-quem" class="mb-8 scroll-mt-20" aria-labelledby="para-quem-titulo">
+        <h2 id="para-quem-titulo" class="mb-2 text-2xl font-extrabold md:text-3xl">Ela é para <span class="text-gradient-brand">você?</span></h2>
+        <p class="mb-4 text-sm text-brand-muted">Transparência antes da compra: veja se o seu uso combina com o que a scooter entrega.</p>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class="rounded-2xl border border-emerald-200 bg-white p-5 shadow-soft md:p-6">
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-emerald-700">✓ Para quem é</p>
+            <ul class="space-y-3 text-sm leading-relaxed text-brand-muted">
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M5 13l4 4L19 7"/></svg></span><span><strong class="text-ink">Mobilidade urbana com estilo</strong> — visual chopper e pneu largo que absorve buracos e emendas do asfalto.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M5 13l4 4L19 7"/></svg></span><span><strong class="text-ink">Ida e volta sem recarregar</strong> — bateria de lítio 60V 20Ah com até 50 km por carga, segundo o anúncio.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M5 13l4 4L19 7"/></svg></span><span><strong class="text-ink">Economia no trajeto diário</strong> — troca gasolina, app e estacionamento pela recarga na tomada no caminho de bairro.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M5 13l4 4L19 7"/></svg></span><span><strong class="text-ink">Velocidade segura de até 32 km/h</strong> — ritmo de cidade, dentro do limite dos autopropelidos.</span></li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-orange-200 bg-white p-5 shadow-soft md:p-6">
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full bg-orange-50 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-orange-700">✕ Para quem NÃO é</p>
+            <ul class="space-y-3 text-sm leading-relaxed text-brand-muted">
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M6 18L18 6M6 6l12 12"/></svg></span><span><strong class="text-ink">Quem quer velocidade de moto de rodovia</strong> — acima de 50 km/h, avenidas rápidas e vias expressas.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M6 18L18 6M6 6l12 12"/></svg></span><span><strong class="text-ink">Entrega profissional pesada sem recarga</strong> — quem roda o dia inteiro com carga precisa de autonomia extrema e bateria reserva.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M6 18L18 6M6 6l12 12"/></svg></span><span><strong class="text-ink">Quem precisa guardar em espaço pequeno</strong> — é uma scooter pesada e que não dobra: confira garagem, rampa ou elevador.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CALCULADORA DE ECONOMIA -->
+      <section id="economia" class="mb-8 scroll-mt-20" aria-labelledby="economia-titulo">
+        <div id="calc-economia" class="glass overflow-hidden p-5 md:p-7" data-price="7999.99" data-produto="x13">
+          <div class="mb-5">
+            <h2 id="economia-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">🧮 Calculadora de Economia Mensal</h2>
+            <p class="mt-1 text-sm text-brand-muted">Simule o seu trajeto e veja quanto você deixa de gastar trocando o transporte atual pela scooter elétrica.</p>
+          </div>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-[1.05fr_0.95fr]">
+            <div class="space-y-5">
+              <div>
+                <p id="calc-modo-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Como você se desloca hoje?</p>
+                <div class="grid grid-cols-2 gap-2 sm:grid-cols-4" role="radiogroup" aria-labelledby="calc-modo-label">
+                  <button type="button" role="radio" aria-checked="true" data-mode="app" class="calc-mode rounded-xl border border-slate-200 bg-white px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🚗 Uber/99</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="moto" class="calc-mode rounded-xl border border-slate-200 bg-white px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🏍️ Moto a gasolina</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="carro" class="calc-mode rounded-xl border border-slate-200 bg-white px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🚙 Carro</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="onibus" class="calc-mode rounded-xl border border-slate-200 bg-white px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🚌 Ônibus</button>
+                </div>
+              </div>
+              <div>
+                <div class="mb-1.5 flex items-baseline justify-between"><label for="calc-km" class="text-sm font-bold text-ink">Quilômetros por dia (ida e volta)</label><output id="calc-km-out" for="calc-km" class="text-lg font-black text-orange-600">12 km</output></div>
+                <input id="calc-km" type="range" min="2" max="80" step="1" value="12" class="calc-range w-full">
+                <div class="mt-1 flex justify-between text-[11px] text-brand-dim"><span>2 km</span><span>autonomia da scooter: até 50 km por carga</span><span>80 km</span></div>
+              </div>
+              <div>
+                <div class="mb-1.5 flex items-baseline justify-between"><label for="calc-dias" class="text-sm font-bold text-ink">Dias de uso por mês</label><output id="calc-dias-out" for="calc-dias" class="text-lg font-black text-orange-600">22 dias</output></div>
+                <input id="calc-dias" type="range" min="4" max="30" step="1" value="22" class="calc-range w-full">
+              </div>
+            </div>
+            <div class="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 via-white to-orange-50/60 p-5" aria-live="polite">
+              <div class="grid grid-cols-2 gap-3 text-center">
+                <div class="rounded-xl border border-slate-200 bg-white p-3"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Você gasta hoje</p><p id="calc-atual" class="mt-1 text-lg font-extrabold text-brand-dim line-through decoration-orange-400/70">R$ 0</p><p class="text-[11px] text-brand-dim">por mês</p></div>
+                <div class="rounded-xl border border-slate-200 bg-white p-3"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Com a scooter</p><p id="calc-scooter" class="mt-1 text-lg font-extrabold text-ink">R$ 0</p><p class="text-[11px] text-brand-dim">de energia/mês</p></div>
+              </div>
+              <div class="mt-4 text-center">
+                <p class="text-xs font-extrabold uppercase tracking-[0.14em] text-emerald-700">Economia estimada</p>
+                <p class="mt-1 text-4xl font-black leading-none text-emerald-600 md:text-5xl"><span id="calc-eco">R$ 0</span><span class="text-base font-bold text-brand-dim">/mês</span></p>
+                <p class="mt-1 text-sm font-semibold text-brand-muted"><span id="calc-ano">R$ 0</span> por ano</p>
+              </div>
+              <div class="mt-5">
+                <div class="mb-1 flex justify-between text-[11px] font-bold text-brand-dim"><span>Retorno do investimento</span><span id="calc-meses-label">—</span></div>
+                <div class="relative h-3 overflow-hidden rounded-full bg-slate-200"><div id="calc-bar" class="h-3 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600 transition-all duration-500" style="width:0%"></div></div>
+              </div>
+              <p id="calc-conclusao" class="mt-4 rounded-xl bg-white p-3 text-center text-sm font-bold leading-snug text-ink ring-1 ring-emerald-200"></p>
+            </div>
+          </div>
+          <p class="mt-4 text-[11px] leading-relaxed text-brand-dim"><strong class="text-brand-muted">Premissas da estimativa:</strong> gasolina a R$ 6,30/l, moto 35 km/l, carro 11 km/l, app a R$ 2,30 por km, ônibus a R$ 5,00 por viagem (2 por dia) e energia a R$ 0,95/kWh, com consumo estimado de 0,025 kWh/km na scooter. Não inclui manutenção, IPVA, seguro e estacionamento, que aumentam a economia em relação ao carro e à moto. O retorno usa o preço atual da oferta selecionada.</p>
+        </div>
+      </section>
+
+      <!-- PROVA SOCIAL -->
+      <section id="compradores" class="mb-8 scroll-mt-20" aria-labelledby="compradores-titulo">
+        <div class="mb-4 flex items-end justify-between gap-3">
+          <h2 id="compradores-titulo" class="text-2xl font-extrabold md:text-3xl">Fotos e vídeos de <span class="text-gradient-brand">quem comprou</span></h2>
+          <div class="hidden gap-2 md:flex">
+            <button type="button" data-slider-prev="buyers-track" class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 bg-slate-50 text-xl transition hover:border-amber-300 hover:text-amber-600" aria-label="Anteriores">&#8249;</button>
+            <button type="button" data-slider-next="buyers-track" class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 bg-slate-50 text-xl transition hover:border-amber-300 hover:text-amber-600" aria-label="Próximos">&#8250;</button>
+          </div>
+        </div>
+        <div class="glass p-4 md:p-5">
+          <p class="mb-3 flex items-center gap-2 text-sm text-brand-muted"><span class="text-gradient-brand">★★★★½</span> 4.4 de 5 · 23 avaliações no Mercado Livre</p>
+          <div class="product-gallery" aria-label="Fotos de compradores" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_846133-MLA112847613911_062026-F.webp","alt":"Scooter elétrica X13 — foto de comprador 1"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_717739-MLA111611220490_062026-F.webp","alt":"Scooter elétrica X13 — foto de comprador 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_970049-MLA116601179822_092026-F.webp","alt":"Scooter elétrica X13 — foto de comprador 3"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_749775-MLA114603133657_072026-F.webp","alt":"Scooter elétrica X13 — foto de comprador 4"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_638141-MLA113902080538_072026-F.webp","alt":"Scooter elétrica X13 — foto de comprador 5"}]'>
+            <div id="buyers-track" class="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-1 pb-1">
+              <figure class="relative w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 bg-black transition-all hover:border-amber-300 hover:shadow-glow sm:w-60">
+                <video class="buyer-video aspect-square w-full object-cover" data-hls="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/01a0ce72f06b77bc8ed258bf60337faf/master.m3u8" poster="https://http2.mlstatic.com/D_NQ_NP_2X_846133-MLA112847613911_062026-F.webp" playsinline muted loop preload="none" aria-label="Vídeo de comprador 1 da scooter elétrica X13"></video>
+                <button type="button" class="video-play absolute inset-0 flex items-center justify-center bg-black/35 transition hover:bg-black/20" aria-label="Reproduzir vídeo de comprador 1">
+                  <span class="flex h-14 w-14 items-center justify-center rounded-full bg-brand-yellow text-black shadow-glow-lg"><svg class="ml-1 h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+                </button>
+                <span class="pointer-events-none absolute left-2 top-2 rounded-full bg-black/70 px-2 py-0.5 text-[10px] font-extrabold uppercase text-white">▶ Vídeo</span>
+              </figure>
+              <figure class="relative w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 bg-black transition-all hover:border-amber-300 hover:shadow-glow sm:w-60">
+                <video class="buyer-video aspect-square w-full object-cover" data-hls="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/01a0edd767d572d59039535b5adb7bb9/master.m3u8" poster="https://http2.mlstatic.com/D_NQ_NP_2X_970049-MLA116601179822_092026-F.webp" playsinline muted loop preload="none" aria-label="Vídeo de comprador 2 da scooter elétrica X13"></video>
+                <button type="button" class="video-play absolute inset-0 flex items-center justify-center bg-black/35 transition hover:bg-black/20" aria-label="Reproduzir vídeo de comprador 2">
+                  <span class="flex h-14 w-14 items-center justify-center rounded-full bg-brand-yellow text-black shadow-glow-lg"><svg class="ml-1 h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+                </button>
+                <span class="pointer-events-none absolute left-2 top-2 rounded-full bg-black/70 px-2 py-0.5 text-[10px] font-extrabold uppercase text-white">▶ Vídeo</span>
+              </figure>
+              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_846133-MLA112847613911_062026-F.webp" alt="Scooter elétrica X13 — foto de comprador 1" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_717739-MLA111611220490_062026-F.webp" alt="Scooter elétrica X13 — foto de comprador 2" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_970049-MLA116601179822_092026-F.webp" alt="Scooter elétrica X13 — foto de comprador 3" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_749775-MLA114603133657_072026-F.webp" alt="Scooter elétrica X13 — foto de comprador 4" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_638141-MLA113902080538_072026-F.webp" alt="Scooter elétrica X13 — foto de comprador 5" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+            </div>
+          </div>
+          <p class="mt-2 text-[11px] text-brand-dim md:hidden">Arraste para o lado · toque para ampliar ou dar play →</p>
+        </div>
+      </section>
+
+      <!-- VEREDITO DO ESPECIALISTA -->
+      <section id="veredito" class="mb-8 scroll-mt-20" aria-labelledby="veredito-titulo">
+        <h2 id="veredito-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Veredito do <span class="text-gradient-brand">especialista</span></h2>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-[0.9fr_1.1fr]">
+          <div class="glass p-5 md:p-6">
+            <div class="flex items-end gap-4">
+              <span class="text-6xl font-black leading-none text-gradient-brand ">8.8</span>
+              <div class="pb-1">
+                <div class="text-lg text-amber-600" aria-hidden="true">★★★★½</div>
+                <p class="text-xs text-brand-dim">Nota editorial Tudo de Melhor</p>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-brand-muted">A X13 é a scooter de <strong class="text-ink">visual chopper</strong> para quem quer conforto de pneu largo na cidade: motor 1000W, bateria de 60V e 20Ah e até 50 km por carga, dentro do limite de 32 km/h dos autopropelidos.</p>
+            <div class="mt-5 space-y-3">
+              <div>
+                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-ink">Bateria 60V 20Ah</span><span class="font-bold text-amber-600">9.0</span></div>
+                <div class="h-2 rounded-full bg-slate-100"><div class="h-2 rounded-full bg-brand-gradient" style="width:90%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-ink">Conforto (pneu largo)</span><span class="font-bold text-amber-600">9.0</span></div>
+                <div class="h-2 rounded-full bg-slate-100"><div class="h-2 rounded-full bg-brand-gradient" style="width:90%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-ink">Potência urbana (1000W)</span><span class="font-bold text-amber-600">8.8</span></div>
+                <div class="h-2 rounded-full bg-slate-100"><div class="h-2 rounded-full bg-brand-gradient" style="width:88%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-ink">Custo-benefício</span><span class="font-bold text-amber-600">8.5</span></div>
+                <div class="h-2 rounded-full bg-slate-100"><div class="h-2 rounded-full bg-brand-gradient" style="width:85%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-ink">Portabilidade</span><span class="font-bold text-amber-600">7.5</span></div>
+                <div class="h-2 rounded-full bg-slate-100"><div class="h-2 rounded-full bg-brand-gradient" style="width:75%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4">
+            <div class="glass border-emerald-200 p-5 shadow-glow-emerald">
+              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-emerald-700">Por que vale a pena</h3>
+              <ul class="space-y-3 text-sm text-brand-muted">
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Até 50 km por carga</strong> — bateria de lítio de 60V e 20Ah para ida e volta do trabalho.</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Sem gasolina e sem óleo</strong> — recarga na tomada e manutenção simples.</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Pneu largo e banco confortável</strong> — absorve melhor os buracos que rodas finas.</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">3 cores para escolher</strong> — preta a partir de R$ 7.999,99, e preta e azul com opção de 10x sem juros.</span></li>
+              </ul>
+            </div>
+            <div class="glass border-orange-200 p-5">
+              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-orange-700">Antes de comprar, saiba</h3>
+              <ul class="space-y-2 text-sm text-brand-muted">
+                <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-500" aria-hidden="true">!</span>Cada cor está em um anúncio diferente: o preço muda de R$ 7.999 a R$ 13.990.</li>
+                <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-500" aria-hidden="true">!</span>É uma scooter pesada: confira se tem espaço e rampa para guardar.</li>
+                <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-500" aria-hidden="true">!</span>Na azul, a entrega é combinada com o vendedor; na vermelha, as 12x têm juros.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- COMPARATIVO DE CORES -->
       <section id="cores" class="mb-8 scroll-mt-20" aria-labelledby="cores-titulo">
-        <h2 id="cores-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">As 3 cores <span class="text-brand-yellow">lado a lado</span></h2>
+        <h2 id="cores-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">As 3 cores <span class="text-gradient-brand">lado a lado</span></h2>
         <div class="glass overflow-x-auto">
           <table class="w-full min-w-[640px] text-left text-sm">
             <caption class="sr-only">Preço, parcelamento, vendedor e entrega de cada cor da scooter elétrica X13</caption>
-            <thead class="bg-white/5 text-[10px] uppercase tracking-wider text-brand-dim">
+            <thead class="bg-slate-50 text-[10px] uppercase tracking-wider text-brand-dim">
               <tr>
                 <th scope="col" class="px-4 py-3">Cor</th>
                 <th scope="col" class="px-4 py-3">Preço</th>
@@ -304,26 +481,26 @@
               </tr>
             </thead>
             <tbody class="text-brand-muted">
-              <tr class="border-t border-white/5" data-row="preto">
-                <th scope="row" class="px-4 py-3 font-semibold text-white"><span class="mr-2 inline-block h-3 w-3 rounded-full border border-white/50 bg-[#111] align-middle" aria-hidden="true"></span>Preta</th>
-                <td class="px-4 py-3"><span class="block font-bold text-white">R$ 7.999,99</span><span class="text-[11px] text-sky-300">menor preço atual</span></td>
-                <td class="px-4 py-3"><span class="block font-bold text-emerald-300">ou 10x de R$ 1.062,50 sem juros</span><span class="text-[11px] text-brand-dim">na opção parcelada (R$ 10.625)</span></td>
+              <tr class="border-t border-slate-100" data-row="preto">
+                <th scope="row" class="px-4 py-3 font-semibold text-ink"><span class="mr-2 inline-block h-3 w-3 rounded-full border border-slate-300 bg-[#111] align-middle" aria-hidden="true"></span>Preta</th>
+                <td class="px-4 py-3"><span class="block font-bold text-ink">R$ 7.999,99</span><span class="text-[11px] text-sky-700">menor preço atual</span></td>
+                <td class="px-4 py-3"><span class="block font-bold text-emerald-700">ou 10x de R$ 1.062,50 sem juros</span><span class="text-[11px] text-brand-dim">na opção parcelada (R$ 10.625)</span></td>
                 <td class="px-4 py-3 text-xs">ELETRO SHOP BRASIL (menor preço) ou opção 10x sem juros no mesmo anúncio</td>
-                <td class="px-4 py-3 text-right"><div class="flex items-center justify-end gap-2"><button type="button" data-pick="preto" class="rounded-lg border border-brand-yellow/60 px-3 py-1.5 text-xs font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Escolher</button><a href="https://meli.la/1KEaTKK" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine whitespace-nowrap rounded-lg bg-brand-yellow px-3 py-1.5 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110">Ver no ML</a></div></td>
+                <td class="px-4 py-3 text-right"><div class="flex items-center justify-end gap-2"><button type="button" data-pick="preto" class="rounded-lg border border-amber-300 px-3 py-1.5 text-xs font-bold text-amber-700 transition hover:bg-amber-50">Escolher</button><a href="https://meli.la/1KEaTKK" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine whitespace-nowrap rounded-lg bg-brand-yellow px-3 py-1.5 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110">Ver no ML</a></div></td>
               </tr>
-              <tr class="border-t border-white/5 bg-white/[0.03]" data-row="vermelho">
-                <th scope="row" class="px-4 py-3 font-semibold text-white"><span class="mr-2 inline-block h-3 w-3 rounded-full border border-white/50 bg-[#b91c1c] align-middle" aria-hidden="true"></span>Vermelha</th>
-                <td class="px-4 py-3 font-bold text-white">R$ 8.924,25</td>
+              <tr class="border-t border-slate-100 bg-slate-50/70" data-row="vermelho">
+                <th scope="row" class="px-4 py-3 font-semibold text-ink"><span class="mr-2 inline-block h-3 w-3 rounded-full border border-slate-300 bg-[#b91c1c] align-middle" aria-hidden="true"></span>Vermelha</th>
+                <td class="px-4 py-3 font-bold text-ink">R$ 8.924,25</td>
                 <td class="px-4 py-3">12x de R$ 857,77 (com juros)</td>
                 <td class="px-4 py-3 text-xs">Loja oficial Equipools · 6 meses de garantia</td>
-                <td class="px-4 py-3 text-right"><div class="flex items-center justify-end gap-2"><button type="button" data-pick="vermelho" class="rounded-lg border border-brand-yellow/60 px-3 py-1.5 text-xs font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Escolher</button><a href="https://meli.la/2o6ycEk" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine whitespace-nowrap rounded-lg bg-brand-yellow px-3 py-1.5 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110">Ver no ML</a></div></td>
+                <td class="px-4 py-3 text-right"><div class="flex items-center justify-end gap-2"><button type="button" data-pick="vermelho" class="rounded-lg border border-amber-300 px-3 py-1.5 text-xs font-bold text-amber-700 transition hover:bg-amber-50">Escolher</button><a href="https://meli.la/2o6ycEk" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine whitespace-nowrap rounded-lg bg-brand-yellow px-3 py-1.5 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110">Ver no ML</a></div></td>
               </tr>
-              <tr class="border-t border-white/5" data-row="azul">
-                <th scope="row" class="px-4 py-3 font-semibold text-white"><span class="mr-2 inline-block h-3 w-3 rounded-full border border-white/50 bg-[#1d4ed8] align-middle" aria-hidden="true"></span>Azul</th>
-                <td class="px-4 py-3 font-bold text-white">R$ 13.990,00</td>
-                <td class="px-4 py-3 font-bold text-emerald-300">10x de R$ 1.399 sem juros</td>
+              <tr class="border-t border-slate-100" data-row="azul">
+                <th scope="row" class="px-4 py-3 font-semibold text-ink"><span class="mr-2 inline-block h-3 w-3 rounded-full border border-slate-300 bg-[#1d4ed8] align-middle" aria-hidden="true"></span>Azul</th>
+                <td class="px-4 py-3 font-bold text-ink">R$ 13.990,00</td>
+                <td class="px-4 py-3 font-bold text-emerald-700">10x de R$ 1.399 sem juros</td>
                 <td class="px-4 py-3 text-xs">MercadoLíder · entrega a combinar (SP)</td>
-                <td class="px-4 py-3 text-right"><div class="flex items-center justify-end gap-2"><button type="button" data-pick="azul" class="rounded-lg border border-brand-yellow/60 px-3 py-1.5 text-xs font-bold text-brand-yellow transition hover:bg-brand-yellow/10">Escolher</button><a href="https://meli.la/1yrJ2iy" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine whitespace-nowrap rounded-lg bg-brand-yellow px-3 py-1.5 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110">Ver no ML</a></div></td>
+                <td class="px-4 py-3 text-right"><div class="flex items-center justify-end gap-2"><button type="button" data-pick="azul" class="rounded-lg border border-amber-300 px-3 py-1.5 text-xs font-bold text-amber-700 transition hover:bg-amber-50">Escolher</button><a href="https://meli.la/1yrJ2iy" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine whitespace-nowrap rounded-lg bg-brand-yellow px-3 py-1.5 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110">Ver no ML</a></div></td>
               </tr>
             </tbody>
           </table>
@@ -331,54 +508,66 @@
         <p class="mt-2 text-xs text-brand-dim">Cada cor é vendida em um anúncio diferente do mesmo modelo, por isso preço, parcelas e entrega mudam. A preta tem duas ofertas no mesmo anúncio. Valores verificados em 27/10/2026 (preta) e 25/10/2026 (vermelha e azul).</p>
       </section>
 
+      <!-- ESPECIFICAÇÕES -->
+      <section id="especificacoes" class="mb-8 scroll-mt-20" aria-labelledby="specs-titulo">
+        <h2 id="specs-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Ficha <span class="text-gradient-brand">técnica</span></h2>
+        <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
+          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">⚙️</p><p class="mt-1 text-lg font-extrabold text-ink">1000W</p><p class="text-xs text-brand-dim">Motor</p></div>
+          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">🔋</p><p class="mt-1 text-lg font-extrabold text-ink">60V 20Ah</p><p class="text-xs text-brand-dim">Bateria de lítio</p></div>
+          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">🛣️</p><p class="mt-1 text-lg font-extrabold text-ink">Até 50 km</p><p class="text-xs text-brand-dim">Autonomia por carga</p></div>
+          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">🏁</p><p class="mt-1 text-lg font-extrabold text-ink">32 km/h</p><p class="text-xs text-brand-dim">Velocidade máx.</p></div>
+        </div>
+        <p class="mt-3 text-xs text-brand-dim">Modelo: Scooter Bicicleta Elétrica X13 1000W · marca X13 · quadro de 10 polegadas · cores preta, vermelha e azul. A versão vermelha é anunciada com Bluetooth e LED. Autonomia conforme o anúncio; varia com peso, subidas e velocidade.</p>
+      </section>
+
       <!-- CONDIÇÕES DE PAGAMENTO -->
       <section id="pagamento" class="mb-8 scroll-mt-20" aria-labelledby="pagamento-titulo">
-        <h2 id="pagamento-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Condições de <span class="text-brand-yellow">pagamento</span> · <span data-bind="colorName" class="text-white">Preta</span></h2>
+        <h2 id="pagamento-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Condições de <span class="text-gradient-brand">pagamento</span> · <span data-bind="colorName" class="text-ink">Preta</span></h2>
         <div class="glass overflow-hidden swap-fade" data-swap>
           <table class="w-full text-left text-sm">
             <caption class="sr-only">Formas de pagamento da scooter elétrica X13 na cor selecionada</caption>
             <tbody>
-              <tr class="border-b border-white/10 bg-emerald-400/[0.07]">
+              <tr class="border-b border-slate-200 bg-emerald-50/70">
                 <th scope="row" class="px-4 py-4 align-top">
-                  <span class="block font-bold text-white">À vista</span>
+                  <span class="block font-bold text-ink">À vista</span>
                   <span class="text-xs font-normal text-brand-dim">PIX / Boleto</span>
                 </th>
                 <td class="px-4 py-4 text-right align-top">
-                  <span class="block text-lg font-extrabold text-emerald-300" data-bind="payCash">R$ 10.625,00</span>
+                  <span class="block text-lg font-extrabold text-emerald-700" data-bind="payCash">R$ 10.625,00</span>
                   <span class="text-xs text-brand-dim" data-bind="payCashSub">no anúncio</span>
                 </td>
               </tr>
-              <tr class="border-b border-white/10">
+              <tr class="border-b border-slate-200">
                 <th scope="row" class="px-4 py-4 align-top">
-                  <span class="block font-bold text-white">Parcelado no cartão</span>
+                  <span class="block font-bold text-ink">Parcelado no cartão</span>
                   <span class="text-xs font-normal text-brand-dim" data-bind="payMax">em até 10x</span>
                 </th>
                 <td class="px-4 py-4 text-right align-top">
-                  <span class="block text-lg font-extrabold text-brand-yellow" data-bind="payInst">10x de R$ 1.062,50</span>
+                  <span class="block text-lg font-extrabold text-amber-600" data-bind="payInst">10x de R$ 1.062,50</span>
                   <span class="text-xs" data-bind="payInstSub">sem juros</span>
                 </td>
               </tr>
               <tr>
                 <th scope="row" class="px-4 py-4 align-top">
-                  <span class="block font-bold text-white">Proteção</span>
+                  <span class="block font-bold text-ink">Proteção</span>
                   <span class="text-xs font-normal text-brand-dim">Mercado Livre</span>
                 </th>
                 <td class="px-4 py-4 text-right align-top">
-                  <span class="block font-extrabold text-white">Compra Garantida</span>
+                  <span class="block font-extrabold text-ink">Compra Garantida</span>
                   <span class="text-xs text-brand-dim" data-bind="payProtSub">+ Devolução grátis em 30 dias</span>
                 </td>
               </tr>
             </tbody>
           </table>
 
-          <details class="border-t border-white/10" data-bind-visible="payRows">
-            <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-white">
+          <details class="border-t border-slate-200" data-bind-visible="payRows">
+            <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-ink">
               Ver todas as parcelas (2x a 10x)
               <svg class="faq-chevron h-4 w-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
             </summary>
             <table class="w-full text-left text-sm">
               <thead>
-                <tr class="border-y border-white/10 text-[10px] uppercase tracking-wider text-brand-dim">
+                <tr class="border-y border-slate-200 text-[10px] uppercase tracking-wider text-brand-dim">
                   <th scope="col" class="px-4 py-2 font-bold">Parcelas</th>
                   <th scope="col" class="px-4 py-2 text-right font-bold">Condição</th>
                 </tr>
@@ -391,118 +580,9 @@
         <a href="https://meli.la/1KEaTKK" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="mt-4 inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition hover:brightness-110 active:scale-[0.98]">Conferir parcelas no Mercado Livre</a>
       </section>
 
-      <!-- VEREDITO DO ESPECIALISTA -->
-      <section id="veredito" class="mb-8 scroll-mt-20" aria-labelledby="veredito-titulo">
-        <h2 id="veredito-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Veredito do <span class="text-brand-yellow">especialista</span></h2>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-[0.9fr_1.1fr]">
-          <div class="glass p-5 md:p-6">
-            <div class="flex items-end gap-4">
-              <span class="text-6xl font-black leading-none text-brand-yellow drop-shadow-[0_0_15px_rgba(255,230,0,0.4)]">8.8</span>
-              <div class="pb-1">
-                <div class="text-lg text-brand-yellow" aria-hidden="true">★★★★½</div>
-                <p class="text-xs text-brand-dim">Nota editorial Tudo de Melhor</p>
-              </div>
-            </div>
-            <p class="mt-4 text-sm text-brand-muted">A X13 é a scooter de <strong class="text-white">visual chopper</strong> para quem quer conforto de pneu largo na cidade: motor 1000W, bateria de 60V e 20Ah e até 50 km por carga, dentro do limite de 32 km/h dos autopropelidos.</p>
-            <div class="mt-5 space-y-3">
-              <div>
-                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-white">Bateria 60V 20Ah</span><span class="font-bold text-brand-yellow">9.0</span></div>
-                <div class="h-2 rounded-full bg-white/10"><div class="h-2 rounded-full bg-brand-gradient" style="width:90%"></div></div>
-              </div>
-              <div>
-                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-white">Conforto (pneu largo)</span><span class="font-bold text-brand-yellow">9.0</span></div>
-                <div class="h-2 rounded-full bg-white/10"><div class="h-2 rounded-full bg-brand-gradient" style="width:90%"></div></div>
-              </div>
-              <div>
-                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-white">Potência urbana (1000W)</span><span class="font-bold text-brand-yellow">8.8</span></div>
-                <div class="h-2 rounded-full bg-white/10"><div class="h-2 rounded-full bg-brand-gradient" style="width:88%"></div></div>
-              </div>
-              <div>
-                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-white">Custo-benefício</span><span class="font-bold text-brand-yellow">8.5</span></div>
-                <div class="h-2 rounded-full bg-white/10"><div class="h-2 rounded-full bg-brand-gradient" style="width:85%"></div></div>
-              </div>
-              <div>
-                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-white">Portabilidade</span><span class="font-bold text-brand-yellow">7.5</span></div>
-                <div class="h-2 rounded-full bg-white/10"><div class="h-2 rounded-full bg-brand-gradient" style="width:75%"></div></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 gap-4">
-            <div class="glass border-emerald-500/30 p-5 shadow-glow-emerald">
-              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-emerald-300">Por que vale a pena</h3>
-              <ul class="space-y-3 text-sm text-brand-muted">
-                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">Até 50 km por carga</strong> — bateria de lítio de 60V e 20Ah para ida e volta do trabalho.</span></li>
-                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">Sem gasolina e sem óleo</strong> — recarga na tomada e manutenção simples.</span></li>
-                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">Pneu largo e banco confortável</strong> — absorve melhor os buracos que rodas finas.</span></li>
-                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">3 cores para escolher</strong> — preta a partir de R$ 7.999,99, e preta e azul com opção de 10x sem juros.</span></li>
-              </ul>
-            </div>
-            <div class="glass border-orange-500/30 p-5">
-              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-orange-300">Antes de comprar, saiba</h3>
-              <ul class="space-y-2 text-sm text-brand-muted">
-                <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-400" aria-hidden="true">!</span>Cada cor está em um anúncio diferente: o preço muda de R$ 7.999 a R$ 13.990.</li>
-                <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-400" aria-hidden="true">!</span>É uma scooter pesada: confira se tem espaço e rampa para guardar.</li>
-                <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-400" aria-hidden="true">!</span>Na azul, a entrega é combinada com o vendedor; na vermelha, as 12x têm juros.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROVA SOCIAL -->
-      <section id="compradores" class="mb-8 scroll-mt-20" aria-labelledby="compradores-titulo">
-        <div class="mb-4 flex items-end justify-between gap-3">
-          <h2 id="compradores-titulo" class="text-2xl font-extrabold md:text-3xl">Fotos e vídeos de <span class="text-brand-yellow">quem comprou</span></h2>
-          <div class="hidden gap-2 md:flex">
-            <button type="button" data-slider-prev="buyers-track" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-xl transition hover:border-brand-yellow/50 hover:text-brand-yellow" aria-label="Anteriores">&#8249;</button>
-            <button type="button" data-slider-next="buyers-track" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-xl transition hover:border-brand-yellow/50 hover:text-brand-yellow" aria-label="Próximos">&#8250;</button>
-          </div>
-        </div>
-        <div class="glass p-4 md:p-5">
-          <p class="mb-3 flex items-center gap-2 text-sm text-brand-muted"><span class="text-brand-yellow">★★★★½</span> 4.4 de 5 · 23 avaliações no Mercado Livre</p>
-          <div class="product-gallery" aria-label="Fotos de compradores" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_846133-MLA112847613911_062026-F.webp","alt":"Scooter elétrica X13 — foto de comprador 1"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_717739-MLA111611220490_062026-F.webp","alt":"Scooter elétrica X13 — foto de comprador 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_970049-MLA116601179822_092026-F.webp","alt":"Scooter elétrica X13 — foto de comprador 3"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_749775-MLA114603133657_072026-F.webp","alt":"Scooter elétrica X13 — foto de comprador 4"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_638141-MLA113902080538_072026-F.webp","alt":"Scooter elétrica X13 — foto de comprador 5"}]'>
-            <div id="buyers-track" class="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-1 pb-1">
-              <figure class="relative w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-black transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60">
-                <video class="buyer-video aspect-square w-full object-cover" data-hls="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/01a0ce72f06b77bc8ed258bf60337faf/master.m3u8" poster="https://http2.mlstatic.com/D_NQ_NP_2X_846133-MLA112847613911_062026-F.webp" playsinline muted loop preload="none" aria-label="Vídeo de comprador 1 da scooter elétrica X13"></video>
-                <button type="button" class="video-play absolute inset-0 flex items-center justify-center bg-black/35 transition hover:bg-black/20" aria-label="Reproduzir vídeo de comprador 1">
-                  <span class="flex h-14 w-14 items-center justify-center rounded-full bg-brand-yellow text-black shadow-glow-lg"><svg class="ml-1 h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-                </button>
-                <span class="pointer-events-none absolute left-2 top-2 rounded-full bg-black/70 px-2 py-0.5 text-[10px] font-extrabold uppercase text-white">▶ Vídeo</span>
-              </figure>
-              <figure class="relative w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 bg-black transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60">
-                <video class="buyer-video aspect-square w-full object-cover" data-hls="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/01a0edd767d572d59039535b5adb7bb9/master.m3u8" poster="https://http2.mlstatic.com/D_NQ_NP_2X_970049-MLA116601179822_092026-F.webp" playsinline muted loop preload="none" aria-label="Vídeo de comprador 2 da scooter elétrica X13"></video>
-                <button type="button" class="video-play absolute inset-0 flex items-center justify-center bg-black/35 transition hover:bg-black/20" aria-label="Reproduzir vídeo de comprador 2">
-                  <span class="flex h-14 w-14 items-center justify-center rounded-full bg-brand-yellow text-black shadow-glow-lg"><svg class="ml-1 h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
-                </button>
-                <span class="pointer-events-none absolute left-2 top-2 rounded-full bg-black/70 px-2 py-0.5 text-[10px] font-extrabold uppercase text-white">▶ Vídeo</span>
-              </figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_846133-MLA112847613911_062026-F.webp" alt="Scooter elétrica X13 — foto de comprador 1" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_717739-MLA111611220490_062026-F.webp" alt="Scooter elétrica X13 — foto de comprador 2" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_970049-MLA116601179822_092026-F.webp" alt="Scooter elétrica X13 — foto de comprador 3" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_749775-MLA114603133657_072026-F.webp" alt="Scooter elétrica X13 — foto de comprador 4" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_638141-MLA113902080538_072026-F.webp" alt="Scooter elétrica X13 — foto de comprador 5" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-            </div>
-          </div>
-          <p class="mt-2 text-[11px] text-brand-dim md:hidden">Arraste para o lado · toque para ampliar ou dar play →</p>
-        </div>
-      </section>
-
-      <!-- ESPECIFICAÇÕES -->
-      <section id="especificacoes" class="mb-8 scroll-mt-20" aria-labelledby="specs-titulo">
-        <h2 id="specs-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Ficha <span class="text-brand-yellow">técnica</span></h2>
-        <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
-          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">⚙️</p><p class="mt-1 text-lg font-extrabold text-white">1000W</p><p class="text-xs text-brand-dim">Motor</p></div>
-          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">🔋</p><p class="mt-1 text-lg font-extrabold text-white">60V 20Ah</p><p class="text-xs text-brand-dim">Bateria de lítio</p></div>
-          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">🛣️</p><p class="mt-1 text-lg font-extrabold text-white">Até 50 km</p><p class="text-xs text-brand-dim">Autonomia por carga</p></div>
-          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">🏁</p><p class="mt-1 text-lg font-extrabold text-white">32 km/h</p><p class="text-xs text-brand-dim">Velocidade máx.</p></div>
-        </div>
-        <p class="mt-3 text-xs text-brand-dim">Modelo: Scooter Bicicleta Elétrica X13 1000W · marca X13 · quadro de 10 polegadas · cores preta, vermelha e azul. A versão vermelha é anunciada com Bluetooth e LED. Autonomia conforme o anúncio; varia com peso, subidas e velocidade.</p>
-      </section>
-
       <!-- FAQ -->
       <section id="faq" class="mb-8 scroll-mt-20" aria-labelledby="faq-titulo">
-        <h2 id="faq-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Dúvidas <span class="text-brand-yellow">frequentes</span></h2>
+        <h2 id="faq-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Dúvidas <span class="text-gradient-brand">frequentes</span></h2>
         <div class="space-y-3">
           <details class="glass p-5" open>
             <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold">Qual cor da X13 sai mais barata?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
@@ -534,9 +614,9 @@
       <!-- CTA FINAL -->
       <section class="mb-8" aria-label="Oferta final">
         <div class="glass relative overflow-hidden p-6 text-center shadow-glow md:p-10 swap-fade" data-swap>
-          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/15 blur-3xl"></div>
-          <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-emerald-300" data-bind="finalKicker">🟢 10x sem juros</p>
-          <h2 class="mb-2 text-2xl font-extrabold md:text-4xl">X13 1000W <span data-bind="colorName">Preta</span> por <span class="text-brand-yellow" data-bind="priceFull">R$ 10.625,00</span></h2>
+          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-amber-200/50 blur-3xl"></div>
+          <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-emerald-700" data-bind="finalKicker">🟢 10x sem juros</p>
+          <h2 class="mb-2 text-2xl font-extrabold md:text-4xl">X13 1000W <span data-bind="colorName">Preta</span> por <span class="text-gradient-brand" data-bind="priceFull">R$ 10.625,00</span></h2>
           <p class="mb-6 text-sm text-brand-muted md:text-base" data-bind="finalSub">ou 10x de R$ 1.062,50 sem juros · Compra Garantida no Mercado Livre</p>
           <a href="https://meli.la/1KEaTKK" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine mx-auto inline-flex h-14 w-full max-w-md items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.98]"><span data-bind="ctaText">Ver X13 Preta no Mercado Livre</span></a>
           <p class="mt-3 text-[11px] text-brand-dim">O preço pode mudar a qualquer momento. Valores verificados em 27/10/2026.</p>
@@ -545,30 +625,30 @@
     </div>
   </main>
 
-  <footer class="border-t border-brand-border bg-[#1a222d] px-4 py-8">
+  <footer class="border-t border-brand-border bg-white px-4 py-8">
     <div class="mx-auto max-w-6xl text-xs text-brand-dim">
       <div class="mb-4 flex items-center gap-3">
         <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" width="32" height="32" alt="" class="h-8 w-8 rounded object-cover">
-        <span class="text-sm font-extrabold uppercase tracking-wider text-white">Tudo de Melhor</span>
+        <span class="text-sm font-extrabold uppercase tracking-wider text-ink">Tudo de Melhor</span>
       </div>
       <p class="mb-4 max-w-3xl">Conteúdo editorial independente. Esta página contém links de afiliado do Mercado Livre: podemos receber comissão pelas compras, sem custo extra para você. A venda, entrega, garantia e o atendimento são de responsabilidade do vendedor no Mercado Livre.</p>
       <nav class="mb-4 flex flex-wrap gap-x-5 gap-y-2" aria-label="Links institucionais">
-        <a href="sobre.html" class="hover:text-brand-yellow">Sobre</a>
-        <a href="privacidade.html" class="hover:text-brand-yellow">Privacidade</a>
-        <a href="trocas.html" class="hover:text-brand-yellow">Trocas e Devoluções</a>
-        <a href="contato.html" class="hover:text-brand-yellow">Contato</a>
+        <a href="sobre.html" class="hover:text-amber-600">Sobre</a>
+        <a href="privacidade.html" class="hover:text-amber-600">Privacidade</a>
+        <a href="trocas.html" class="hover:text-amber-600">Trocas e Devoluções</a>
+        <a href="contato.html" class="hover:text-amber-600">Contato</a>
       </nav>
       <p>© <span id="y"></span> tudodemelhor.com.br</p>
     </div>
   </footer>
 
   <!-- STICKY BAR -->
-  <div class="fixed bottom-0 left-0 z-50 w-full border-t border-white/10 bg-brand-bg/90 backdrop-blur-xl sm:bottom-5 sm:left-1/2 sm:w-auto sm:min-w-[620px] sm:max-w-3xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-white/15 sm:shadow-2xl">
+  <div class="fixed bottom-0 left-0 z-50 w-full border-t border-slate-200 bg-white/95 backdrop-blur-md sm:bottom-5 sm:left-1/2 sm:w-auto sm:min-w-[620px] sm:max-w-3xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-slate-200 sm:shadow-2xl">
     <div class="flex items-center gap-3 px-3 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:gap-5 sm:py-3 sm:pl-3 sm:pr-3">
-      <img id="sticky-img" src="https://http2.mlstatic.com/D_NQ_NP_2X_965447-MLA106137655938_022026-F.webp" alt="" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="h-11 w-11 shrink-0 rounded-lg border border-white/10 bg-white object-contain sm:h-12 sm:w-12">
+      <img id="sticky-img" src="https://http2.mlstatic.com/D_NQ_NP_2X_965447-MLA106137655938_022026-F.webp" alt="" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="h-11 w-11 shrink-0 rounded-lg border border-slate-200 bg-white object-contain sm:h-12 sm:w-12">
       <div class="min-w-0 flex-1">
-        <p class="text-[13px] font-extrabold leading-tight text-white sm:text-base"><span class="whitespace-nowrap">X13 1000W <span data-bind="colorName">Preta</span> ·</span> <span class="whitespace-nowrap text-brand-yellow" data-bind="stickyInst">10x de R$ 1.062,50</span></p>
-        <p class="mt-0.5 truncate text-[11px]" data-bind="stickySub"><span class="font-bold text-emerald-300">sem juros</span> <span class="text-brand-dim">· ou R$ 10.625,00</span></p>
+        <p class="text-[13px] font-extrabold leading-tight text-ink sm:text-base"><span class="whitespace-nowrap">X13 1000W <span data-bind="colorName">Preta</span> ·</span> <span class="whitespace-nowrap text-amber-600" data-bind="stickyInst">10x de R$ 1.062,50</span></p>
+        <p class="mt-0.5 truncate text-[11px]" data-bind="stickySub"><span class="font-bold text-emerald-700">sem juros</span> <span class="text-brand-dim">· ou R$ 10.625,00</span></p>
       </div>
       <a href="https://meli.la/1KEaTKK" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine inline-flex h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-4 text-sm font-extrabold text-black shadow-glow transition-all hover:brightness-110 active:scale-[0.98] sm:px-6 sm:text-base">Conferir Oferta</a>
     </div>
@@ -591,15 +671,16 @@
               offerName: 'Menor preço', link: 'https://meli.la/1KEaTKK',
               price: 7999.99, anchor: 11499, discount: '30% OFF', priceLabel: 'menor preço atual',
               semJuros: false,
-              instHtml: '<p class="text-base font-bold text-brand-yellow">Parcelamento padrão no cartão <span class="text-xs font-semibold text-brand-dim">(condições do vendedor no anúncio)</span></p>',
+              instHtml: '<p class="text-base font-bold text-amber-600">Parcelamento padrão no cartão <span class="text-xs font-semibold text-brand-dim">(condições do vendedor no anúncio)</span></p>',
               extra: 'Vendido por ELETRO SHOP BRASIL no mesmo anúncio da X13 preta. É o menor preço atual entre as 3 cores. Prefere 10x sem juros? Troque para a opção parcelada acima.',
               delivery: 'Confira frete e prazo de entrega para o seu CEP no anúncio',
               seals: [['🛡️', 'Compra Garantida'], ['🏷️', 'Menor preço atual'], ['🔒', 'Pagamento no ML'], ['🧾', 'Vendedor no anúncio']],
+              shipTitle: 'Envio pelo vendedor do anúncio', ship: 'ELETRO SHOP BRASIL, com entrega rastreada pelo Mercado Livre.', retTitle: 'Devolução e garantia', ret: 'Regras de devolução do Mercado Livre; garantia do produto conforme o anúncio.',
               protSub: '+ regras de devolução do Mercado Livre',
               payCashSub: '30% OFF sobre R$ 11.499', payMax: 'no cartão', payInst: 'Parcelamento padrão', payInstSub: '<span class="text-brand-dim">condições do vendedor no anúncio</span>',
               finalSub: 'à vista com a ELETRO SHOP BRASIL · ou 10x de R$ 1.062,50 sem juros na opção parcelada · Compra Garantida no Mercado Livre',
               stickyInst: 'R$ 7.999,99',
-              stickySub: '<span class="font-bold text-sky-300">menor preço atual</span> <span class="text-brand-dim">· ou 10x sem juros na opção parcelada</span>',
+              stickySub: '<span class="font-bold text-sky-700">menor preço atual</span> <span class="text-brand-dim">· ou 10x sem juros na opção parcelada</span>',
               cta: 'Ver menor preço da X13 Preta',
               hist: [['25/10', 10196], ['27/10', 7999.99]], ref: null,
               badge: 'Menor preço registrado',
@@ -616,6 +697,7 @@
               extra: 'Opção com 10x sem juros no mesmo anúncio. Se preferir pagar menos, a opção Menor preço sai por R$ 7.999,99.',
               delivery: 'Frete grátis, chegada rápida e devolução grátis em 30 dias (confira o seu CEP)',
               seals: [['🛡️', 'Compra Garantida'], ['↩️', 'Devolução grátis'], ['🚚', 'Frete grátis'], ['💳', '10x sem juros']],
+              shipTitle: 'Frete grátis com entrega rastreada', ship: 'Logística e rastreio pelo Mercado Livre (confira o prazo para o seu CEP).', retTitle: 'Devolução grátis e garantia', ret: 'Devolução grátis em 30 dias; garantia do produto conforme o anúncio.',
               protSub: '+ Devolução grátis em 30 dias',
               cta: 'Ver X13 Preta em 10x sem juros',
               hist: [['25/10', 10625], ['27/10', 10625]], ref: { v: 7999.99, label: 'Menor preço atual: R$ 7.999,99' },
@@ -637,6 +719,7 @@
           extra: 'Versão anunciada com Bluetooth e LED · Loja oficial Equipools, com mais de 100 mil vendas.',
           delivery: 'Chegada prevista para 3 de novembro (confira o frete para o seu CEP)',
           seals: [['🛡️', 'Compra Garantida'], ['🏅', 'Loja oficial'], ['🔧', 'Garantia de 6 meses'], ['🔒', 'Pagamento no ML']],
+          shipTitle: 'Envio da Loja oficial Equipools', ship: 'Loja oficial com mais de 100 mil vendas e entrega rastreada pelo Mercado Livre.', retTitle: 'Garantia de fábrica de 6 meses', ret: 'Mais as regras de devolução do Mercado Livre.',
           protSub: '+ 6 meses de garantia de fábrica',
           hist: [['25/10', 8924.25]], ref: null,
           badge: 'Novo monitoramento',
@@ -645,7 +728,7 @@
           period: 'monitoramento iniciado em 25/10/2026',
           note: 'O monitor de preço ainda não tinha histórico deste anúncio; a linha mostra o preço registrado em 25/10/2026. O parcelamento em 12x tem juros.',
           kicker: '🟢 25% OFF à vista',
-          stickySub: '<span class="font-bold text-emerald-300">25% OFF à vista</span> <span class="text-brand-dim">· ou 12x de R$ 857,77</span>'
+          stickySub: '<span class="font-bold text-emerald-700">25% OFF à vista</span> <span class="text-brand-dim">· ou 12x de R$ 857,77</span>'
         },
         azul: {
           name: 'Azul', link: 'https://meli.la/1yrJ2iy',
@@ -656,6 +739,7 @@
           extra: 'Vendido por PEREGRINUS_OFICIAL · MercadoLíder com mais de 10 mil vendas.',
           delivery: 'Entrega a combinar com o vendedor (Guarulhos/SP)',
           seals: [['🛡️', 'Compra Garantida'], ['🏅', 'MercadoLíder'], ['🔧', 'Garantia de 6 meses'], ['💳', '10x sem juros']],
+          shipTitle: 'Envio do vendedor MercadoLíder', ship: 'PEREGRINUS_OFICIAL, com mais de 10 mil vendas · entrega combinada (Guarulhos/SP).', retTitle: 'Garantia de fábrica de 6 meses', ret: 'Mais as regras de devolução do Mercado Livre.',
           protSub: '+ 6 meses de garantia de fábrica',
           hist: [['22/10', 13990], ['23/10', 13990], ['24/10', 13990], ['25/10', 13990]], ref: null,
           badge: 'Preço estável há 4 dias',
@@ -670,11 +754,15 @@
       const $all = (sel) => Array.from(document.querySelectorAll(sel));
       const setBind = (key, html) => $all('[data-bind="' + key + '"]').forEach((el) => { el.innerHTML = html; });
 
+      function trustBlock(v) {
+        return '<div class="mt-4 rounded-xl border border-emerald-200 bg-gradient-to-b from-emerald-50/80 to-white p-3.5" aria-label="Garantias da compra">                <ul class="space-y-3">                  <li class="flex items-start gap-3"><span class="trust-ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-lg ring-1 ring-emerald-100" aria-hidden="true">🛡️</span><span><strong class="block text-sm font-extrabold text-ink">Compra 100% protegida pelo Mercado Livre</strong><span class="text-xs leading-snug text-brand-dim">Compra Garantida: se não chegar ou vier diferente do anúncio, você recebe o dinheiro de volta.</span></span></li>                  <li class="flex items-start gap-3"><span class="trust-ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-lg ring-1 ring-emerald-100" aria-hidden="true">🚚</span><span><strong class="block text-sm font-extrabold text-ink">' + v.shipTitle + '</strong><span class="text-xs leading-snug text-brand-dim">' + v.ship + '</span></span></li>                  <li class="flex items-start gap-3"><span class="trust-ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-lg ring-1 ring-emerald-100" aria-hidden="true">↩️</span><span><strong class="block text-sm font-extrabold text-ink">' + v.retTitle + '</strong><span class="text-xs leading-snug text-brand-dim">' + v.ret + '</span></span></li>                </ul>                <p class="mt-3 border-t border-emerald-100 pt-2.5 text-[11px] leading-relaxed text-brand-dim">A <strong class="text-ink">Tudo de Melhor</strong> é um portal editorial de curadoria: o pagamento, a entrega e a garantia acontecem dentro do Mercado Livre.</p>              </div>';
+      }
+
       function semJurosBlock(v) {
-        return '<div class="sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5">' +
-          '<span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span>' +
-          '<span class="text-base font-black text-white">' + v.n + 'x de ' + v.parc + '</span>' +
-          '<span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>';
+        return '<div class="sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300 bg-gradient-to-r from-emerald-50 via-emerald-50 to-amber-50 px-3 py-1.5">' +
+          '<span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-600" aria-hidden="true"></span>' +
+          '<span class="text-base font-black text-ink">' + v.n + 'x de ' + v.parc + '</span>' +
+          '<span class="rounded bg-emerald-600 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-white">sem juros</span></div>';
       }
 
       function payRows(v) {
@@ -683,7 +771,7 @@
         for (let i = 2; i <= 10; i++) {
           const val = Math.round((v.price / i) * 100) / 100;
           const last = i === 10;
-          rows += '<tr' + (last ? '' : ' class="border-b border-white/5"') + '><td class="px-4 py-2.5"><strong class="' + (last ? 'text-brand-yellow' : 'text-white') + '">' + i + 'x</strong> ' + fmt(val) + '</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>';
+          rows += '<tr' + (last ? '' : ' class="border-b border-slate-100"') + '><td class="px-4 py-2.5"><strong class="' + (last ? 'text-amber-600' : 'text-ink') + '">' + i + 'x</strong> ' + fmt(val) + '</td><td class="px-4 py-2.5 text-right text-emerald-700">Sem juros</td></tr>';
         }
         return rows;
       }
@@ -724,43 +812,54 @@
         let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" role="img" shape-rendering="geometricPrecision" aria-label="Gráfico do histórico de preço da cor ' + v.name + ': ' + v.hist.map((p) => fmt(p[1]) + ' em ' + p[0]).join(', ') + '">';
         s += '<defs>' +
           '<linearGradient id="' + id + 'a" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity="0.42"/><stop offset="55%" stop-color="#10b981" stop-opacity="0.14"/><stop offset="100%" stop-color="#10b981" stop-opacity="0"/></linearGradient>' +
-          '<linearGradient id="' + id + 's" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#6ee7b7"/><stop offset="60%" stop-color="#34d399"/><stop offset="100%" stop-color="#a7f3d0"/></linearGradient>' +
+          '<linearGradient id="' + id + 's" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#059669"/><stop offset="60%" stop-color="#34d399"/><stop offset="100%" stop-color="#047857"/></linearGradient>' +
           '<filter id="' + id + 'f" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
           '</defs>';
         for (let g = lo; g <= hi + 0.001; g += step) {
           const gy = y(g).toFixed(1);
-          s += '<line x1="' + pad.l + '" y1="' + gy + '" x2="' + (W - pad.r) + '" y2="' + gy + '" stroke="rgba(255,255,255,0.09)" stroke-width="1" stroke-dasharray="3 5"/>';
-          s += '<text x="' + (pad.l - 10) + '" y="' + (+gy + 4) + '" fill="#AAB3BD" font-size="' + fsAxis + '" text-anchor="end">' + kfmt(g) + '</text>';
+          s += '<line x1="' + pad.l + '" y1="' + gy + '" x2="' + (W - pad.r) + '" y2="' + gy + '" stroke="rgba(15,23,42,0.08)" stroke-width="1" stroke-dasharray="3 5"/>';
+          s += '<text x="' + (pad.l - 10) + '" y="' + (+gy + 4) + '" fill="#64748B" font-size="' + fsAxis + '" text-anchor="end">' + kfmt(g) + '</text>';
         }
         if (v.ref) {
           const ry = y(v.ref.v).toFixed(1);
           s += '<line x1="' + pad.l + '" y1="' + ry + '" x2="' + (W - pad.r) + '" y2="' + ry + '" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.85"/>';
-          s += '<text x="' + (pad.l + 8) + '" y="' + (+ry + fsAxis + 6) + '" fill="#7dd3fc" font-size="' + fsAxis + '" font-weight="700">' + v.ref.label + '</text>';
+          s += '<text x="' + (pad.l + 8) + '" y="' + (+ry + fsAxis + 6) + '" fill="#0284c7" font-size="' + fsAxis + '" font-weight="700">' + v.ref.label + '</text>';
         }
         const line = pts.map((p, i) => x(i).toFixed(1) + ',' + y(p[1]).toFixed(1)).join(' ');
         const base = (H - pad.b).toFixed(1);
         s += '<polygon fill="url(#' + id + 'a)" points="' + line + ' ' + x(pts.length - 1).toFixed(1) + ',' + base + ' ' + x(0).toFixed(1) + ',' + base + '"/>';
-        s += '<polyline fill="none" stroke="#34d399" stroke-opacity="0.55" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" filter="url(#' + id + 'f)" points="' + line + '"/>';
+        s += '<polyline fill="none" stroke="#34d399" stroke-opacity="0.25" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" filter="url(#' + id + 'f)" points="' + line + '"/>';
         s += '<polyline fill="none" stroke="url(#' + id + 's)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" points="' + line + '"/>';
         pts.forEach((p, i) => {
           if (i === pts.length - 1) return;
-          s += '<circle cx="' + x(i).toFixed(1) + '" cy="' + y(p[1]).toFixed(1) + '" r="4.5" fill="#0f172a" stroke="#6ee7b7" stroke-width="2.5"/>';
+          s += '<circle cx="' + x(i).toFixed(1) + '" cy="' + y(p[1]).toFixed(1) + '" r="4.5" fill="#ffffff" stroke="#10b981" stroke-width="2.5"/>';
         });
         const lx = x(pts.length - 1).toFixed(1), ly = y(pts[pts.length - 1][1]).toFixed(1);
         s += '<circle cx="' + lx + '" cy="' + ly + '" r="9" fill="#34d399" fill-opacity="0.25"><animate attributeName="r" values="7;13;7" dur="2s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values="0.35;0.05;0.35" dur="2s" repeatCount="indefinite"/></circle>';
         s += '<circle cx="' + lx + '" cy="' + ly + '" r="6" fill="#34d399" stroke="#fff" stroke-width="2.5"/>';
-        s += '<text x="' + (W - pad.r) + '" y="' + (+ly - 14) + '" fill="#6ee7b7" font-size="' + fsLabel + '" font-weight="800" text-anchor="end">' + fmt(pts[pts.length - 1][1], false) + '</text>';
+        s += '<text x="' + (W - pad.r) + '" y="' + (+ly - 14) + '" fill="#059669" font-size="' + fsLabel + '" font-weight="800" text-anchor="end">' + fmt(pts[pts.length - 1][1], false) + '</text>';
         const k = Math.max(1, Math.ceil(pts.length / (small ? 4 : 7)));
         pts.forEach((p, i) => {
           const last = i === pts.length - 1;
           if (!last && (i % k !== 0 || (pts.length - 1 - i) < k)) return;
           const anchor = i === 0 ? 'start' : last ? 'end' : 'middle';
           const tx = i === 0 ? x(i) - 4 : last ? x(i) + 4 : x(i);
-          s += '<text x="' + tx.toFixed(1) + '" y="' + (H - 10) + '" fill="' + (last ? '#6ee7b7' : '#AAB3BD') + '" font-size="' + fsDate + '" font-weight="' + (last ? 700 : 500) + '" text-anchor="' + anchor + '">' + p[0] + '</text>';
+          s += '<text x="' + tx.toFixed(1) + '" y="' + (H - 10) + '" fill="' + (last ? '#059669' : '#64748B') + '" font-size="' + fsDate + '" font-weight="' + (last ? 700 : 500) + '" text-anchor="' + anchor + '">' + p[0] + '</text>';
         });
         s += '</svg>';
         box.innerHTML = s;
       }
+
+      function setMedia(kind) {
+        const vw = document.getElementById('hero-video-wrap'), pw = document.getElementById('hero-photo-wrap'), hv = document.getElementById('hero-video');
+        vw.hidden = kind !== 'video'; pw.hidden = kind !== 'photo';
+        $all('.media-tab').forEach((t) => t.setAttribute('aria-selected', t.dataset.media === kind ? 'true' : 'false'));
+        if (kind === 'video') { hv.dataset.paused = ''; hv.play().catch(() => {}); } else { hv.dataset.paused = 'tab'; hv.pause(); }
+      }
+      $all('.media-tab').forEach((t) => t.addEventListener('click', () => {
+        setMedia(t.dataset.media);
+        if (typeof gtag === 'function') gtag('event', 'trocar_midia_hero', { midia: t.dataset.media });
+      }));
 
       let currentKey = 'preto';
       const offerChoice = {};
@@ -780,6 +879,7 @@
         swaps.forEach((el) => el.classList.add('is-swapping'));
         const heroImg = document.getElementById('hero-img');
         heroImg.classList.add('is-swapping');
+        if (!(opts && opts.silent)) setMedia('photo');
 
         setTimeout(() => {
           setBind('colorName', v.name);
@@ -789,11 +889,11 @@
           setBind('priceFull', fmt(v.price));
           setBind('anchorText', v.anchor ? 'De <span class="line-through decoration-orange-400/80">' + fmt(v.anchor, false) + '</span> no anúncio' : 'Preço do anúncio');
           setBind('discount', v.discount || 'preço estável');
-          setBind('installmentBlock', v.instHtml ? v.instHtml : v.semJuros ? semJurosBlock(v) : '<p class="text-base font-bold text-brand-yellow">ou ' + v.n + 'x de ' + v.parc + ' <span class="text-xs font-semibold text-brand-dim">(total ' + v.total + ', com juros)</span></p>');
+          setBind('installmentBlock', v.instHtml ? v.instHtml : v.semJuros ? semJurosBlock(v) : '<p class="text-base font-bold text-amber-600">ou ' + v.n + 'x de ' + v.parc + ' <span class="text-xs font-semibold text-brand-dim">(total ' + v.total + ', com juros)</span></p>');
           setBind('extraOffer', v.extra);
           setBind('delivery', v.delivery);
           setBind('ctaText', (v.cta || 'Ver X13 ' + v.name) + ' no Mercado Livre');
-          setBind('seals', v.seals.map((s) => '<li class="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2 py-2"><span aria-hidden="true">' + s[0] + '</span>' + s[1] + '</li>').join(''));
+          setBind('seals', trustBlock(v));
           setBind('imgBadge', 'Cor: ' + v.name);
 
           setBind('histBadge', v.badge);
@@ -801,14 +901,14 @@
           setBind('histPeriod', v.period);
           setBind('histNote', v.note);
           setBind('histCompare', v.compare.map((c, i) => i === 0
-            ? '<div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">' + c[0] + '</p><p class="mt-1 text-xl font-extrabold md:text-2xl ' + (c[2] ? 'text-brand-dim line-through decoration-orange-400/80' : 'text-brand-muted') + '">' + c[1] + '</p></div>'
-            : '<div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-center"><p class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">' + c[0] + '</p><p class="mt-1 text-xl font-extrabold text-emerald-300 md:text-2xl">' + c[1] + '</p></div>').join(''));
+            ? '<div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">' + c[0] + '</p><p class="mt-1 text-xl font-extrabold md:text-2xl ' + (c[2] ? 'text-brand-dim line-through decoration-orange-400/80' : 'text-brand-muted') + '">' + c[1] + '</p></div>'
+            : '<div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center"><p class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">' + c[0] + '</p><p class="mt-1 text-xl font-extrabold text-emerald-700 md:text-2xl">' + c[1] + '</p></div>').join(''));
 
           setBind('payCash', fmt(v.price));
           setBind('payCashSub', v.payCashSub ? v.payCashSub : v.semJuros ? 'mesmo valor do parcelado' : v.discount + ' sobre ' + fmt(v.anchor, false));
           setBind('payMax', v.payMax || 'em até ' + v.n + 'x');
           setBind('payInst', v.payInst || v.n + 'x de ' + v.parc);
-          setBind('payInstSub', v.payInstSub ? v.payInstSub : v.semJuros ? '<span class="font-bold text-emerald-300">sem juros</span>' : '<span class="text-brand-dim">total ' + v.total + ' (com juros)</span>');
+          setBind('payInstSub', v.payInstSub ? v.payInstSub : v.semJuros ? '<span class="font-bold text-emerald-700">sem juros</span>' : '<span class="text-brand-dim">total ' + v.total + ' (com juros)</span>');
           setBind('payProtSub', v.protSub);
           setBind('payRows', payRows(v));
           $all('[data-bind-visible="payRows"]').forEach((el) => { el.hidden = !v.semJuros; });
@@ -817,8 +917,8 @@
           setBind('finalSub', v.finalSub ? v.finalSub : ((v.semJuros ? 'ou ' + v.n + 'x de ' + v.parc + ' sem juros' : 'à vista · ou ' + v.n + 'x de ' + v.parc + ' com juros') + ' · Compra Garantida no Mercado Livre'));
           setBind('stickyInst', v.stickyInst ? v.stickyInst : v.semJuros ? v.n + 'x de ' + v.parc : fmt(v.price) + ' à vista');
           setBind('stickySub', v.stickySub ? v.stickySub : v.semJuros
-            ? '<span class="font-bold text-emerald-300">sem juros</span> <span class="text-brand-dim">· ou ' + fmt(v.price) + '</span>'
-            : '<span class="font-bold text-emerald-300">preço à vista</span> <span class="text-brand-dim">· ou ' + v.n + 'x de ' + v.parc + '</span>');
+            ? '<span class="font-bold text-emerald-700">sem juros</span> <span class="text-brand-dim">· ou ' + fmt(v.price) + '</span>'
+            : '<span class="font-bold text-emerald-700">preço à vista</span> <span class="text-brand-dim">· ou ' + v.n + 'x de ' + v.parc + '</span>');
 
           $all('[data-cta]').forEach((a) => { a.href = v.link; });
           heroImg.src = v.img; heroImg.alt = v.alt;
@@ -827,9 +927,9 @@
           const st = document.getElementById('sticky-img'); st.src = v.img;
 
           $all('.color-option').forEach((b) => b.setAttribute('aria-checked', b.dataset.color === key ? 'true' : 'false'));
-          $all('[data-dot]').forEach((d) => { d.style.outline = d.dataset.dot === key ? '2px solid #FFE600' : 'none'; d.style.outlineOffset = '2px'; });
+          $all('[data-dot]').forEach((d) => { d.style.outline = d.dataset.dot === key ? '2px solid #EAB308' : 'none'; d.style.outlineOffset = '2px'; });
           $all('[data-row]').forEach((r) => r.classList.toggle('ring-1', r.dataset.row === key));
-          $all('[data-row]').forEach((r) => r.classList.toggle('ring-brand-yellow/50', r.dataset.row === key));
+          $all('[data-row]').forEach((r) => r.classList.toggle('ring-amber-300', r.dataset.row === key));
 
           const picker = document.getElementById('offer-picker');
           picker.hidden = !VARIANTS[key].offers;
@@ -839,6 +939,7 @@
           }
 
           renderChart(v);
+          window.LP_PRICE = v.price; window.dispatchEvent(new Event('lp:price'));
           swaps.forEach((el) => el.classList.remove('is-swapping'));
           heroImg.classList.remove('is-swapping');
         }, opts && opts.instant ? 0 : 140);
@@ -929,6 +1030,94 @@
           video.play().catch(() => {});
         });
       });
+    })();
+  </script>
+  <script>
+    (function () {
+      const video = document.getElementById('hero-video');
+      if (!video) return;
+      const lowData = (navigator.connection && navigator.connection.saveData) || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (lowData) { video.removeAttribute('autoplay'); video.pause(); video.controls = true; }
+      let full = false;
+      if ('IntersectionObserver' in window && !lowData) {
+        new IntersectionObserver((entries) => entries.forEach((e) => {
+          if (full || video.dataset.paused === 'tab') return;
+          if (e.isIntersecting) video.play().catch(() => {}); else video.pause();
+        }), { threshold: 0.25 }).observe(video);
+      }
+      document.querySelectorAll('[data-full-video]').forEach((btn) => btn.addEventListener('click', () => {
+        full = true;
+        video.loop = false; video.muted = false; video.controls = true;
+        video.classList.remove('object-cover'); video.classList.add('object-contain');
+        video.src = btn.dataset.fullVideo;
+        video.play().catch(() => {});
+        btn.remove();
+        if (typeof gtag === 'function') gtag('event', 'assistir_video_completo', { produto: video.dataset.produto });
+      }));
+    })();
+  </script>
+  <script>
+    (function () {
+      const root = document.getElementById('calc-economia');
+      if (!root) return;
+      const MODES = {
+        app: { cmp: 'às corridas de app', perKm: 2.30 },
+        moto: { cmp: 'à moto a gasolina', perKm: 6.30 / 35 },
+        carro: { cmp: 'ao carro a gasolina', perKm: 6.30 / 11 },
+        onibus: { cmp: 'ao ônibus', perTrip: 5.00, trips: 2 }
+      };
+      const ELEC_PER_KM = 0.025 * 0.95;
+      const km = document.getElementById('calc-km');
+      const dias = document.getElementById('calc-dias');
+      const brl = (v) => 'R$ ' + Math.round(v).toLocaleString('pt-BR');
+      const price = () => Number(window.LP_PRICE || root.dataset.price);
+      let mode = 'app';
+      let gaTimer = null;
+
+      function calc(fromUser) {
+        const k = Number(km.value), d = Number(dias.value), m = MODES[mode];
+        const atual = m.perTrip ? m.perTrip * m.trips * d : k * d * m.perKm;
+        const scooter = k * d * ELEC_PER_KM;
+        const eco = Math.max(0, atual - scooter);
+        const meses = eco > 0 ? price() / eco : Infinity;
+        const n = Math.max(1, Math.round(meses));
+        document.getElementById('calc-km-out').textContent = k + ' km';
+        document.getElementById('calc-dias-out').textContent = d + ' dias';
+        document.getElementById('calc-atual').textContent = brl(atual);
+        document.getElementById('calc-scooter').textContent = brl(scooter);
+        document.getElementById('calc-eco').textContent = brl(eco);
+        document.getElementById('calc-ano').textContent = brl(eco * 12);
+        document.getElementById('calc-meses-label').textContent = !isFinite(meses) ? '—' : meses > 60 ? 'mais de 5 anos' : 'se paga em ~' + n + (n === 1 ? ' mês' : ' meses');
+        const bar = document.getElementById('calc-bar');
+        bar.style.width = isFinite(meses) ? Math.min(100, Math.max(6, 14 / meses * 100)) + '%' : '0%';
+        bar.className = 'h-3 rounded-full transition-all duration-500 bg-gradient-to-r ' + (meses < 14 ? 'from-emerald-400 to-emerald-600' : 'from-amber-300 to-orange-500');
+        const out = document.getElementById('calc-conclusao');
+        if (!isFinite(meses) || eco < 20) {
+          out.innerHTML = 'Com esse uso, a economia em relação ' + m.cmp + ' é pequena. Aumente a distância diária para ver o efeito.';
+        } else if (meses < 14) {
+          out.innerHTML = '🟢 Em menos de 14 meses (cerca de ' + n + '), a scooter se paga sozinha com a economia gerada.';
+        } else if (meses <= 36) {
+          out.innerHTML = '🟡 Em cerca de ' + n + ' meses, a scooter se paga sozinha com a economia gerada.';
+        } else {
+          out.innerHTML = meses <= 60
+            ? 'Em relação ' + m.cmp + ', a scooter se paga em cerca de ' + n + ' meses só com combustível. A economia cresce somando manutenção, IPVA e estacionamento.'
+            : 'Em relação ' + m.cmp + ', a economia só com combustível é de ' + brl(eco) + ' por mês. O ganho cresce somando troca de óleo, manutenção, IPVA e estacionamento, que a scooter elétrica não tem.';
+        }
+        if (fromUser && typeof gtag === 'function') {
+          clearTimeout(gaTimer);
+          gaTimer = setTimeout(() => gtag('event', 'calculadora_economia', { produto: root.dataset.produto, modo: mode, km_dia: k, dias_mes: d, economia_mensal: Math.round(eco) }), 1500);
+        }
+      }
+
+      root.querySelectorAll('.calc-mode').forEach((b) => b.addEventListener('click', () => {
+        mode = b.dataset.mode;
+        root.querySelectorAll('.calc-mode').forEach((x) => x.setAttribute('aria-checked', x === b ? 'true' : 'false'));
+        calc(true);
+      }));
+      km.addEventListener('input', () => calc(true));
+      dias.addEventListener('input', () => calc(true));
+      window.addEventListener('lp:price', () => calc(false));
+      calc(false);
     })();
   </script>
   <script src="assets/js/product-gallery-lightbox.js" defer></script>

@@ -14,29 +14,26 @@
   </script>
   <script>
     function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
       gtag('event', 'conversion', {
           'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE',
-          'event_callback': callback
+          'transport_type': 'beacon'
       });
-      return false;
+      gtag('event', 'clique_afiliado_ml', { 'link_url': url, 'produto': url.indexOf('2Ga7iza') > -1 ? 'x13-max' : 'x13-ex', 'transport_type': 'beacon' });
+      return true;
     }
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Scooter elétrica Foston X13 EX 1000W com NFC no menor preço histórico do Mercado Livre: R$ 6.233,00 à vista ou 12x de R$ 599,10. Compra Garantida e devolução grátis.">
-  <meta name="theme-color" content="#232F3E">
+  <link rel="canonical" href="https://www.tudodemelhor.com.br/lp-scooter-x13-ex-foston">
+  <meta name="description" content="Scooter elétrica Foston X13 EX 1000W com NFC no menor preço histórico do Mercado Livre: R$ 6.233,00 à vista. Compare com a Foston X13 Max por R$ 5.799 em 10x sem juros. Compra Garantida e devolução grátis.">
+  <meta name="theme-color" content="#F8FAFC">
   <link rel="icon" type="image/jpeg" href="assets/ui/logo-site/logo-tudo-melhor.jpeg">
   <title>Foston X13 EX 1000W NFC — Menor Preço Histórico: R$ 6.233 | Tudo de Melhor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://http2.mlstatic.com">
-  <link rel="preload" as="image" href="https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp">
+  <link rel="preload" as="image" href="assets/produtos/LP/x13-ex-capa-poster.webp" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -45,30 +42,33 @@
         extend: {
           colors: {
             brand: {
-              bg: '#232F3E',
-              yellow: '#FFE600',
-              orange: '#FF9900',
-              card: 'rgba(27, 37, 48, 0.7)',
-              elevated: '#1B2530',
-              border: '#37475A',
-              muted: '#D5D9D9',
-              dim: '#AAB3BD'
-            }
+              bg: '#F8FAFC',
+              yellow: '#FACC15',
+              gold: '#EAB308',
+              orange: '#F97316',
+              card: '#FFFFFF',
+              elevated: '#FFFFFF',
+              border: '#E2E8F0',
+              muted: '#475569',
+              dim: '#64748B'
+            },
+            ink: '#1E293B'
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif']
           },
           boxShadow: {
-            glow: '0 0 15px rgba(255, 230, 0, 0.4)',
-            'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
-            'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
-            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)',
-            'neon-emerald': '0 0 12px rgba(52, 211, 153, 0.55), inset 0 0 8px rgba(52, 211, 153, 0.15)',
-            'neon-yellow': '0 0 12px rgba(255, 230, 0, 0.5), inset 0 0 8px rgba(255, 230, 0, 0.12)',
-            'neon-sky': '0 0 12px rgba(56, 189, 248, 0.5), inset 0 0 8px rgba(56, 189, 248, 0.12)'
+            soft: '0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 30px -14px rgba(15, 23, 42, 0.16)',
+            glow: '0 8px 20px -8px rgba(234, 179, 8, 0.6)',
+            'glow-lg': '0 14px 32px -12px rgba(249, 115, 22, 0.55)',
+            'glow-orange': '0 6px 16px -6px rgba(249, 115, 22, 0.35)',
+            'glow-emerald': '0 1px 2px rgba(15, 23, 42, 0.04), 0 14px 32px -16px rgba(16, 185, 129, 0.45)',
+            'neon-emerald': '0 0 0 3px rgba(16, 185, 129, 0.08)',
+            'neon-yellow': '0 0 0 3px rgba(234, 179, 8, 0.1)',
+            'neon-sky': '0 0 0 3px rgba(14, 165, 233, 0.08)'
           },
           backgroundImage: {
-            'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
+            'brand-gradient': 'linear-gradient(135deg, #FACC15 0%, #F97316 100%)'
           }
         }
       }
@@ -77,19 +77,30 @@
   <style type="text/tailwindcss">
     @layer utilities {
       .glass {
-        @apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;
+        @apply bg-white border border-slate-200 rounded-2xl shadow-soft;
       }
     }
   </style>
   <style>
     body {
+      background-color: #F8FAFC;
       background-image:
-        radial-gradient(ellipse 70% 45% at 85% 10%, rgba(255, 153, 0, 0.14), transparent 55%),
-        radial-gradient(ellipse 50% 40% at 10% 85%, rgba(255, 230, 0, 0.07), transparent 50%),
-        radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-      background-size: auto, auto, 18px 18px;
+        radial-gradient(ellipse 65% 40% at 100% 0%, rgba(251, 191, 36, 0.16), transparent 60%),
+        radial-gradient(ellipse 55% 38% at 0% 100%, rgba(249, 115, 22, 0.08), transparent 55%),
+        radial-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+      background-size: auto, auto, 20px 20px;
       background-attachment: fixed;
     }
+    body[data-modelo="ex"] [data-only="max"],
+    body[data-modelo="max"] [data-only="ex"] { display: none !important; }
+    .text-gradient-brand { background: linear-gradient(90deg, #EAB308 0%, #F97316 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .trust-ico { box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06); }
+    .model-option[aria-checked="true"] { border-color: #EAB308; background: #FEFCE8; box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.55), 0 8px 18px -10px rgba(234, 179, 8, 0.6); }
+    .model-option[aria-checked="true"] .model-check { opacity: 1; transform: scale(1); }
+    .calc-mode[aria-checked="true"] { border-color: #F97316; background: #FFF7ED; color: #9A3412; box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.35); }
+    .calc-range { accent-color: #F97316; }
+    .swap-fade { transition: opacity 0.25s ease; }
+    .swap-fade.is-swapping { opacity: 0; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
@@ -111,31 +122,32 @@
     @media (prefers-reduced-motion: reduce) {
       .btn-shine::after { display: none; }
       .pulse-dot { animation: none; }
+      .swap-fade { transition: none; }
     }
     details > summary::-webkit-details-marker { display: none; }
     details[open] .faq-chevron { transform: rotate(180deg); }
   </style>
 </head>
-<body class="bg-brand-bg text-white font-sans antialiased min-h-screen pb-36 sm:pb-32">
+<body data-modelo="ex" class="bg-brand-bg text-ink font-sans antialiased min-h-screen pb-36 sm:pb-32">
 
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
     <div class="mx-auto flex h-16 max-w-6xl items-center gap-2 px-4 sm:gap-4">
       <a href="#oferta" class="flex shrink-0 items-center gap-2 transition hover:opacity-90" aria-label="Tudo de Melhor">
-        <span class="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-brand-bg shadow-glow-orange">
+        <span class="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white shadow-glow-orange">
           <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-full w-full object-cover" width="40" height="40">
         </span>
         <span class="hidden flex-col leading-none sm:flex">
-          <span class="text-sm font-black uppercase tracking-wider text-white">Tudo De</span>
-          <span class="text-sm font-black uppercase tracking-wider text-brand-yellow">Melhor</span>
+          <span class="text-sm font-black uppercase tracking-wider text-ink">Tudo De</span>
+          <span class="text-sm font-black uppercase tracking-wider text-amber-700">Melhor</span>
         </span>
       </a>
 
-      <span class="inline-flex shrink-0 items-center gap-1 rounded-full border border-emerald-400/50 bg-emerald-400/10 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300 shadow-neon-emerald sm:text-xs">
+      <span class="inline-flex shrink-0 items-center gap-1 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-700 shadow-neon-emerald sm:text-xs">
         <svg class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
         Oferta Verificada
       </span>
 
-      <a href="#oferta" class="ml-auto inline-flex h-10 shrink-0 items-center justify-center rounded-xl bg-brand-yellow px-3 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110 sm:px-5 sm:text-sm">Ver Oferta no ML</a>
+      <a href="https://meli.la/2DnA5yX" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="ml-auto inline-flex h-10 shrink-0 items-center justify-center rounded-xl bg-brand-yellow px-3 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110 sm:px-5 sm:text-sm">Ver Oferta no ML</a>
     </div>
   </header>
 
@@ -143,66 +155,86 @@
     <div class="mx-auto max-w-6xl">
 
       <!-- HERO -->
-      <section id="oferta" class="mb-8 scroll-mt-20 grid grid-cols-1 gap-5 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8" aria-label="Oferta Foston X13 EX">
+      <section id="oferta" class="mb-8 scroll-mt-20 grid grid-cols-1 gap-5 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8" aria-label="Oferta Foston X13 EX e X13 Max">
         <div class="lg:order-2">
           <div class="mb-3 flex flex-wrap gap-2">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300 shadow-neon-emerald sm:text-xs">⚡ Em estoque no Mercado Livre</span>
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-brand-yellow/60 bg-brand-yellow/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-brand-yellow shadow-neon-yellow sm:text-xs">💳 Parcelamento em até 12x</span>
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-sky-400/60 bg-sky-400/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-sky-300 shadow-neon-sky sm:text-xs">🛡️ Vendedor MercadoLíder Gold</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-700 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true"></span>Em estoque no Mercado Livre</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-amber-300 bg-amber-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-amber-700 shadow-neon-yellow sm:text-xs" data-bind="pill2">📉 Menor preço histórico</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-sky-700 shadow-neon-sky sm:text-xs" data-bind="pill3">🏅 Vendedor MercadoLíder Gold</span>
           </div>
 
-          <h1 class="mb-2 text-2xl font-extrabold leading-tight sm:text-3xl md:text-4xl">Scooter Elétrica <span class="text-brand-yellow">Foston X13 EX 1000W</span> com NFC no menor preço histórico</h1>
-          <p class="mb-4 text-sm text-brand-muted md:text-base">Até 32 km/h, partida por NFC e design cinza elegante para o dia a dia na cidade. Nota <strong class="text-white">9.0</strong> na nossa análise · <span class="text-brand-yellow">★★★★½</span> 4.5 com 73 avaliações no ML.</p>
+          <h1 class="mb-2 text-2xl font-extrabold leading-tight sm:text-3xl md:text-4xl" data-bind="h1">Scooter Elétrica <span class="text-gradient-brand">Foston X13 EX 1000W</span> com NFC no menor preço histórico</h1>
+          <p class="mb-4 text-sm text-brand-muted md:text-base" data-bind="sub">Até 32 km/h, partida por NFC e design cinza elegante para o dia a dia na cidade. Nota <strong class="text-ink">9.0</strong> na nossa análise · <span class="text-gradient-brand">★★★★½</span> 4.5 com 73 avaliações no ML.</p>
 
-          <!-- Galeria swipe (mobile aparece aqui; desktop na coluna da esquerda) -->
+          <!-- Mídia (mobile aparece aqui; desktop na coluna da esquerda) -->
           <div class="mb-5 lg:hidden" data-gallery-slot="mobile"></div>
 
-          <div class="glass relative overflow-hidden p-5 shadow-glow-emerald">
-            <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-brand-yellow/5"></div>
-            <div class="relative">
-              <p class="mb-1 text-xs text-brand-dim">Era ~R$ 7.900,00 em agosto · <span class="font-bold text-emerald-300">caiu R$ 1.667 (-21%)</span></p>
-              <div class="flex flex-wrap items-end gap-x-3 gap-y-1">
-                <span class="text-4xl font-black leading-none text-white md:text-5xl">R$ 6.233<span class="text-2xl md:text-3xl">,00</span></span>
-                <span class="pb-1 text-sm font-bold text-emerald-300">à vista</span>
-              </div>
-              <p class="mt-2 text-base font-bold text-brand-yellow">ou 12x de R$ 599,10 no cartão</p>
-              <p class="mt-1 flex items-center gap-2 text-xs text-brand-muted"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span>Frete grátis no checkout (economia de R$ 314 observada em 21/10)</p>
+          <!-- SELETOR DE MODELO -->
+          <div class="mb-4">
+            <p id="modelo-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Escolha o modelo: <span data-bind="modelName" class="text-ink">X13 EX</span></p>
+            <div class="grid grid-cols-2 gap-2" role="radiogroup" aria-labelledby="modelo-label">
+              <button type="button" role="radio" aria-checked="true" data-model="ex" class="model-option relative flex flex-col items-start gap-1 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-left transition hover:border-amber-300">
+                <span class="model-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
+                <span class="rounded bg-emerald-100 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-emerald-700">📉 Menor preço histórico</span>
+                <span class="text-sm font-extrabold text-ink">Foston X13 EX</span>
+                <span class="text-base font-black text-ink">R$ 6.233 <span class="text-[11px] font-bold text-emerald-700">à vista</span></span>
+                <span class="text-[11px] text-brand-muted">★ 4.5 · 73 avaliações · nota 9.0</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" data-model="max" class="model-option relative flex flex-col items-start gap-1 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-left transition hover:border-amber-300">
+                <span class="model-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
+                <span class="rounded bg-sky-50 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-sky-700">🏷️ Mais barata · 10x sem juros</span>
+                <span class="text-sm font-extrabold text-ink">Foston X13 Max</span>
+                <span class="text-base font-black text-ink">R$ 5.799 <span class="text-[11px] font-bold text-emerald-700">10x R$ 579,90</span></span>
+                <span class="text-[11px] text-brand-muted">cesto + painel digital · anúncio recente</span>
+              </button>
+            </div>
+          </div>
 
-              <a class="btn-shine mt-5 inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.98]" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2DnA5yX');" href="https://meli.la/2DnA5yX">
-                Ver Menor Preço no ML
+          <!-- CARD DE PREÇO -->
+          <div class="glass relative overflow-hidden p-5 shadow-glow-emerald">
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-50/80 via-transparent to-amber-50/50"></div>
+            <div class="relative swap-fade" data-swap>
+              <p class="mb-1 text-xs text-brand-dim" data-bind="anchor">Era ~R$ 7.900,00 em agosto · <span class="font-bold text-emerald-700">caiu R$ 1.667 (-21%)</span></p>
+              <div class="flex flex-wrap items-end gap-x-3 gap-y-1">
+                <span class="text-4xl font-black leading-none text-ink md:text-5xl" data-bind="priceBig">R$ 6.233<span class="text-2xl md:text-3xl">,00</span></span>
+                <span class="pb-1 text-sm font-bold text-emerald-700" data-bind="priceLabel">à vista</span>
+              </div>
+              <div class="mt-2" data-bind="inst"><p class="text-base font-bold text-amber-700">ou 12x de R$ 599,10 no cartão</p></div>
+              <p class="mt-1 flex items-center gap-2 text-xs text-brand-muted"><span class="pulse-dot inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-500" aria-hidden="true"></span><span data-bind="delivery">Frete grátis no checkout que simulamos em 21/10 (economia de R$ 314 · confira o seu CEP)</span></p>
+
+              <a href="https://meli.la/2DnA5yX" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine mt-5 inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.98]">
+                <span data-bind="ctaText">Ver Menor Preço da X13 EX no ML</span>
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
+              <p class="mt-2 text-center text-[11px] text-brand-dim">Abre o anúncio em uma nova aba · esta análise continua aberta aqui</p>
 
-              <ul class="mt-4 grid grid-cols-2 gap-2 text-[11px] text-brand-muted sm:text-xs">
-                <li class="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2 py-2"><span aria-hidden="true">🛡️</span>Compra Garantida ML</li>
-                <li class="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2 py-2"><span aria-hidden="true">↩️</span>Devolução grátis</li>
-                <li class="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2 py-2"><span aria-hidden="true">🏅</span>MercadoLíder Gold</li>
-                <li class="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2 py-2"><span aria-hidden="true">🔒</span>Pagamento no ML</li>
-              </ul>
+              <!-- SELOS DE CONFIANÇA -->
+              <div class="mt-4 rounded-xl border border-emerald-200 bg-gradient-to-b from-emerald-50/80 to-white p-3.5" aria-label="Garantias da compra">
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-3"><span class="trust-ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-lg ring-1 ring-emerald-100" aria-hidden="true">🛡️</span><span><strong class="block text-sm font-extrabold text-ink">Compra 100% protegida pelo Mercado Livre</strong><span class="text-xs leading-snug text-brand-dim">Compra Garantida: se não chegar ou vier diferente do anúncio, você recebe o dinheiro de volta.</span></span></li>
+                  <li class="flex items-start gap-3"><span class="trust-ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-lg ring-1 ring-emerald-100" aria-hidden="true">🚚</span><span><strong class="block text-sm font-extrabold text-ink" data-bind="shipTitle">Envio e logística direto do MercadoLíder Gold</strong><span class="text-xs leading-snug text-brand-dim" data-bind="ship">Vendedor com reputação máxima no Mercado Livre e entrega rastreada pela plataforma.</span></span></li>
+                  <li class="flex items-start gap-3"><span class="trust-ico flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-lg ring-1 ring-emerald-100" aria-hidden="true">↩️</span><span><strong class="block text-sm font-extrabold text-ink">Devolução grátis e garantia de fábrica</strong><span class="text-xs leading-snug text-brand-dim" data-bind="ret">Devolução grátis pelas regras do Mercado Livre; prazo da garantia de fábrica informado no anúncio.</span></span></li>
+                </ul>
+                <p class="mt-3 border-t border-emerald-100 pt-2.5 text-[11px] leading-relaxed text-brand-dim">A <strong class="text-ink">Tudo de Melhor</strong> é um portal editorial de curadoria: o pagamento, a entrega e a garantia acontecem dentro do Mercado Livre.</p>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="hidden lg:order-1 lg:block" data-gallery-slot="desktop">
-          <div id="hero-gallery" class="product-gallery relative" aria-label="Galeria de fotos da Foston X13 EX" aria-roledescription="carrossel" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp","alt":"Scooter elétrica Foston X13 EX 1000W NFC cinza — vista principal"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_954662-MLA116029635749_082026-F.webp","alt":"Foston X13 EX — foto do produto"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_918555-MLA116029635759_082026-F.webp","alt":"Moto scooter elétrica Foston 1000W NFC — detalhe"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_633348-MLA118209094109_092026-F.webp","alt":"Foston X13 EX NFC cinza — detalhe visual"}]'>
-            <div id="hero-track" class="flex snap-x snap-mandatory overflow-x-auto scroll-smooth scrollbar-hide rounded-2xl border border-white/10 bg-white">
-              <div class="w-full shrink-0 snap-center snap-always"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp" alt="Scooter elétrica Foston X13 EX 1000W NFC cinza — vista principal" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-contain" data-index="0" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" width="800" height="800"></div>
-              <div class="w-full shrink-0 snap-center snap-always"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_954662-MLA116029635749_082026-F.webp" alt="Foston X13 EX — foto do produto" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-contain" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="800" height="800"></div>
-              <div class="w-full shrink-0 snap-center snap-always"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_918555-MLA116029635759_082026-F.webp" alt="Moto scooter elétrica Foston 1000W NFC — detalhe" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-contain" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="800" height="800"></div>
-              <div class="w-full shrink-0 snap-center snap-always"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_633348-MLA118209094109_092026-F.webp" alt="Foston X13 EX NFC cinza — detalhe visual" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-contain" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="800" height="800"></div>
+          <div id="hero-gallery" class="product-gallery relative lg:mx-auto lg:max-w-[540px]" aria-label="Vídeo e fotos da Foston X13 EX" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp","alt":"Scooter elétrica Foston X13 EX 1000W NFC cinza — vista principal"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_954662-MLA116029635749_082026-F.webp","alt":"Foston X13 EX — foto do produto"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_918555-MLA116029635759_082026-F.webp","alt":"Moto scooter elétrica Foston 1000W NFC — detalhe"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_633348-MLA118209094109_092026-F.webp","alt":"Foston X13 EX NFC cinza — detalhe visual"}]'>
+            <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-black shadow-soft">
+              <video id="hero-video" data-produto="x13-ex" class="aspect-[4/5] w-full object-cover" autoplay muted loop playsinline preload="metadata" poster="assets/produtos/LP/x13-ex-capa-poster.webp" width="720" height="900" aria-label="Vídeo de demonstração da scooter elétrica Foston X13 EX"><source src="assets/produtos/LP/x13-ex-capa-loop.mp4" type="video/mp4"></video>
+              <span class="pointer-events-none absolute left-3 top-3 rounded-full bg-black/70 px-3 py-1 text-xs font-extrabold text-white" data-bind="videoBadge">▶ Vídeo real · Foston X13 EX</span>
+              <button type="button" id="full-video-btn" class="absolute bottom-3 left-1/2 inline-flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-white/95 px-4 py-2 text-xs font-extrabold text-ink shadow-lg transition hover:bg-white">🔊 Assistir completo com som · 1:10</button>
             </div>
-
-            <span id="hero-counter" class="pointer-events-none absolute right-3 top-3 rounded-full bg-black/70 px-2.5 py-1 text-xs font-bold text-white" aria-live="polite">1/4</span>
-            <button type="button" data-carousel-prev class="absolute left-2 top-1/2 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-2xl text-white transition hover:bg-black/80 md:flex" aria-label="Foto anterior">&#8249;</button>
-            <button type="button" data-carousel-next class="absolute right-2 top-1/2 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-2xl text-white transition hover:bg-black/80 md:flex" aria-label="Próxima foto">&#8250;</button>
-
-            <div id="hero-dots" class="mt-3 flex items-center justify-center gap-2">
-              <button type="button" class="h-2.5 w-6 rounded-full bg-brand-yellow transition-all" aria-label="Ver foto 1" aria-current="true"></button>
-              <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/30 transition-all" aria-label="Ver foto 2"></button>
-              <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/30 transition-all" aria-label="Ver foto 3"></button>
-              <button type="button" class="h-2.5 w-2.5 rounded-full bg-white/30 transition-all" aria-label="Ver foto 4"></button>
+            <div class="mt-3 grid grid-cols-4 gap-2" aria-label="Fotos do anúncio da X13 EX" data-only="ex">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp" alt="Scooter elétrica Foston X13 EX 1000W NFC cinza — vista principal" class="product-gallery-thumb aspect-square w-full cursor-zoom-in rounded-xl border border-slate-200 bg-white object-contain p-1 transition hover:border-amber-300 hover:shadow-glow" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="120" height="120">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_954662-MLA116029635749_082026-F.webp" alt="Foston X13 EX — foto do produto" class="product-gallery-thumb aspect-square w-full cursor-zoom-in rounded-xl border border-slate-200 bg-white object-contain p-1 transition hover:border-amber-300 hover:shadow-glow" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="120" height="120">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_918555-MLA116029635759_082026-F.webp" alt="Moto scooter elétrica Foston 1000W NFC — detalhe" class="product-gallery-thumb aspect-square w-full cursor-zoom-in rounded-xl border border-slate-200 bg-white object-contain p-1 transition hover:border-amber-300 hover:shadow-glow" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="120" height="120">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_633348-MLA118209094109_092026-F.webp" alt="Foston X13 EX NFC cinza — detalhe visual" class="product-gallery-thumb aspect-square w-full cursor-zoom-in rounded-xl border border-slate-200 bg-white object-contain p-1 transition hover:border-amber-300 hover:shadow-glow" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="120" height="120">
             </div>
-            <p class="mt-1 text-center text-[11px] text-brand-dim md:hidden">Deslize para ver mais fotos · toque para ampliar</p>
+            <p class="mt-2 text-center text-[11px] text-brand-dim" data-bind="mediaHint">Toque em uma foto do anúncio para ampliar</p>
           </div>
         </div>
       </section>
@@ -210,242 +242,361 @@
       <!-- HISTÓRICO DE PREÇO -->
       <section id="historico" class="mb-8 scroll-mt-20" aria-labelledby="historico-titulo">
         <div class="glass overflow-hidden p-5 md:p-7">
-          <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
-            <div>
-              <h2 id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</h2>
-              <p class="mt-1 text-xs text-brand-dim">Anúncio MLB74127236 · ago a out/2026</p>
+          <div data-only="ex">
+            <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h2 id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</h2>
+                <p class="mt-1 text-xs text-brand-dim">Foston X13 EX · anúncio MLB74127236 · ago a out/2026</p>
+              </div>
+              <span class="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">-21% desde agosto</span>
             </div>
-            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300">-21% desde agosto</span>
+
+            <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-50 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-700 shadow-neon-emerald md:text-base">
+              🟢 Menor preço histórico: R$ 6.233,00 à vista ou 12x de R$ 599,10
+            </div>
+
+            <div class="mb-5 grid grid-cols-2 gap-3">
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Agosto/2026</p>
+                <p class="mt-1 text-xl font-extrabold text-brand-dim line-through decoration-orange-400/80 md:text-2xl">~R$ 7.900</p>
+              </div>
+              <div class="rounded-xl border border-emerald-300 bg-emerald-50 p-4 text-center">
+                <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">Hoje · 21/10</p>
+                <p class="mt-1 text-xl font-extrabold text-emerald-700 md:text-2xl">R$ 6.233</p>
+              </div>
+            </div>
+
+            <figure>
+              <div class="rounded-xl border border-slate-100 bg-gradient-to-b from-slate-50 to-transparent p-2 sm:p-3">
+                <svg viewBox="0 0 600 240" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço da Foston X13 EX: cerca de R$ 7.900 em 04/08, R$ 6.390 em 12/08, cerca de R$ 7.330 entre 08/09 e 19/09 e R$ 6.233 em 21/10">
+                  <defs>
+                    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#10b981" stop-opacity="0.28"/>
+                      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <g stroke="rgba(15,23,42,0.08)" stroke-width="1" stroke-dasharray="3 5">
+                    <line x1="40" y1="20" x2="580" y2="20"/>
+                    <line x1="40" y1="62.5" x2="580" y2="62.5"/>
+                    <line x1="40" y1="105" x2="580" y2="105"/>
+                    <line x1="40" y1="147.5" x2="580" y2="147.5"/>
+                    <line x1="40" y1="190" x2="580" y2="190"/>
+                  </g>
+                  <g fill="#64748B" font-size="15" font-family="Inter, sans-serif" text-anchor="end">
+                    <text x="36" y="25">8k</text>
+                    <text x="36" y="67.5">7,5k</text>
+                    <text x="36" y="110">7k</text>
+                    <text x="36" y="152.5">6,5k</text>
+                    <text x="36" y="195">6k</text>
+                  </g>
+                  <polygon fill="url(#area)" points="56,28.5 141,156.9 226,77 311,77 396,77 481,77 566,170.2 566,190 56,190"/>
+                  <polyline fill="none" stroke="#10b981" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" points="56,28.5 141,156.9 226,77 311,77 396,77 481,77 566,170.2"/>
+                  <g fill="#ffffff" stroke="#10b981" stroke-width="2.5">
+                    <circle cx="56" cy="28.5" r="5"/>
+                    <circle cx="141" cy="156.9" r="4.5"/>
+                    <circle cx="226" cy="77" r="4.5"/>
+                    <circle cx="311" cy="77" r="4.5"/>
+                    <circle cx="396" cy="77" r="4.5"/>
+                    <circle cx="481" cy="77" r="4.5"/>
+                  </g>
+                  <circle cx="566" cy="170.2" r="11" fill="#10b981" fill-opacity="0.18"/>
+                  <circle cx="566" cy="170.2" r="6.5" fill="#10b981" stroke="#fff" stroke-width="2.5"/>
+                  <g font-family="Inter, sans-serif" font-weight="800" font-size="20">
+                    <text x="68" y="34" fill="#475569">~R$ 7.900</text>
+                    <text x="546" y="186" fill="#047857" text-anchor="end">R$ 6.233</text>
+                  </g>
+                  <g fill="#64748B" font-size="15" font-family="Inter, sans-serif" text-anchor="middle">
+                    <text x="56" y="218">04/08</text>
+                    <text x="141" y="218">12/08</text>
+                    <text x="226" y="218">08/09</text>
+                    <text x="311" y="218">09/09</text>
+                    <text x="396" y="218">10/09</text>
+                    <text x="481" y="218">19/09</text>
+                    <text x="562" y="218" fill="#047857" font-weight="700">21/10</text>
+                  </g>
+                </svg>
+              </div>
+              <figcaption class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+                <strong class="text-brand-muted">Transparência:</strong> histórico coletado do monitor de preço do anúncio no Mercado Livre em 21/10/2026. No checkout simulado, o frete (R$ 314) apareceu como <strong class="text-brand-muted">grátis</strong> — o valor pode variar conforme o seu CEP. A venda, entrega e garantia são feitas pelo vendedor do anúncio no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar a qualquer momento — confira tudo no anúncio antes de pagar.
+              </figcaption>
+            </figure>
           </div>
 
-          <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base">
-            🟢 Menor preço histórico: R$ 6.233,00 à vista ou 12x de R$ 599,10
-          </div>
-
-          <div class="mb-5 grid grid-cols-2 gap-3">
-            <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
-              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Agosto/2026</p>
-              <p class="mt-1 text-xl font-extrabold text-brand-dim line-through decoration-orange-400/80 md:text-2xl">~R$ 7.900</p>
+          <div data-only="max">
+            <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h2 class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</h2>
+                <p class="mt-1 text-xs text-brand-dim">Foston X13 Max · monitoramento iniciado em 28/10/2026</p>
+              </div>
+              <span class="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Bom preço no monitor</span>
             </div>
-            <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-center">
-              <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Hoje · 21/10</p>
-              <p class="mt-1 text-xl font-extrabold text-emerald-300 md:text-2xl">R$ 6.233</p>
-            </div>
-          </div>
 
-          <figure>
-            <svg viewBox="0 0 600 240" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço: cerca de R$ 7.900 em 04/08, R$ 6.390 em 12/08, cerca de R$ 7.330 entre 08/09 e 19/09 e R$ 6.233 em 21/10">
-              <defs>
-                <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/>
-                  <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <g stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <line x1="40" y1="20" x2="580" y2="20"/>
-                <line x1="40" y1="62.5" x2="580" y2="62.5"/>
-                <line x1="40" y1="105" x2="580" y2="105"/>
-                <line x1="40" y1="147.5" x2="580" y2="147.5"/>
-                <line x1="40" y1="190" x2="580" y2="190"/>
-              </g>
-              <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end">
-                <text x="36" y="25">8k</text>
-                <text x="36" y="67.5">7,5k</text>
-                <text x="36" y="110">7k</text>
-                <text x="36" y="152.5">6,5k</text>
-                <text x="36" y="195">6k</text>
-              </g>
-              <polygon fill="url(#area)" points="56,28.5 141,156.9 226,77 311,77 396,77 481,77 566,170.2 566,190 56,190"/>
-              <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56,28.5 141,156.9 226,77 311,77 396,77 481,77 566,170.2"/>
-              <g fill="#34d399">
-                <circle cx="56" cy="28.5" r="5"/>
-                <circle cx="141" cy="156.9" r="4"/>
-                <circle cx="226" cy="77" r="4"/>
-                <circle cx="311" cy="77" r="4"/>
-                <circle cx="396" cy="77" r="4"/>
-                <circle cx="481" cy="77" r="4"/>
-              </g>
-              <circle cx="566" cy="170.2" r="10" fill="#34d399" fill-opacity="0.25"/>
-              <circle cx="566" cy="170.2" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
-              <g font-family="Inter, sans-serif" font-weight="800" font-size="20">
-                <text x="68" y="34" fill="#D5D9D9">~R$ 7.900</text>
-                <text x="546" y="186" fill="#6ee7b7" text-anchor="end">R$ 6.233</text>
-              </g>
-              <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="middle">
-                <text x="56" y="218">04/08</text>
-                <text x="141" y="218">12/08</text>
-                <text x="226" y="218">08/09</text>
-                <text x="311" y="218">09/09</text>
-                <text x="396" y="218">10/09</text>
-                <text x="481" y="218">19/09</text>
-                <text x="562" y="218" fill="#6ee7b7" font-weight="700">21/10</text>
-              </g>
-            </svg>
-            <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
-              <strong class="text-brand-muted">Transparência:</strong> histórico coletado do monitor de preço do anúncio no Mercado Livre em 21/10/2026. No checkout simulado, o frete (R$ 314) apareceu como <strong class="text-brand-muted">grátis</strong> — o valor pode variar conforme o seu CEP. A venda, entrega e garantia são feitas pelo vendedor do anúncio no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar a qualquer momento — confira tudo no anúncio antes de pagar.
-            </figcaption>
-          </figure>
+            <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-50 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-700 shadow-neon-emerald md:text-base">
+              🟢 Menor preço registrado: R$ 5.799 em 10x de R$ 579,90 sem juros
+            </div>
+
+            <div class="mb-5 grid grid-cols-3 gap-3">
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-3 text-center md:p-4">
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">De (anúncio)</p>
+                <p class="mt-1 text-lg font-extrabold text-brand-dim line-through decoration-orange-400/80 md:text-2xl">R$ 6.499</p>
+              </div>
+              <div class="rounded-xl border border-emerald-300 bg-emerald-50 p-3 text-center md:p-4">
+                <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">Hoje · 28/10</p>
+                <p class="mt-1 text-lg font-extrabold text-emerald-700 md:text-2xl">R$ 5.799</p>
+              </div>
+              <div class="rounded-xl border border-sky-200 bg-sky-50 p-3 text-center md:p-4">
+                <p class="text-[10px] font-bold uppercase tracking-wider text-sky-700">Com cupom</p>
+                <p class="mt-1 text-lg font-extrabold text-sky-700 md:text-2xl">R$ 5.649</p>
+              </div>
+            </div>
+
+            <figure>
+              <div class="rounded-xl border border-slate-100 bg-gradient-to-b from-slate-50 to-transparent p-2 sm:p-3">
+                <svg viewBox="0 0 600 240" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço da Foston X13 Max: R$ 5.799 em 28/10, menor preço registrado e preço atual; preço de tabela do anúncio R$ 6.499 e R$ 5.649 com cupom de seguidor da loja">
+                  <defs>
+                    <linearGradient id="areaMax" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#10b981" stop-opacity="0.22"/>
+                      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <g stroke="rgba(15,23,42,0.08)" stroke-width="1" stroke-dasharray="3 5">
+                    <line x1="48" y1="20" x2="580" y2="20"/>
+                    <line x1="48" y1="62.5" x2="580" y2="62.5"/>
+                    <line x1="48" y1="105" x2="580" y2="105"/>
+                    <line x1="48" y1="147.5" x2="580" y2="147.5"/>
+                    <line x1="48" y1="190" x2="580" y2="190"/>
+                  </g>
+                  <g fill="#64748B" font-size="15" font-family="Inter, sans-serif" text-anchor="end">
+                    <text x="44" y="25">6,5k</text>
+                    <text x="44" y="67.5">6,25k</text>
+                    <text x="44" y="110">6k</text>
+                    <text x="44" y="152.5">5,75k</text>
+                    <text x="44" y="195">5,5k</text>
+                  </g>
+                  <line x1="64" y1="20.2" x2="566" y2="20.2" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6 6"/>
+                  <text x="72" y="40" fill="#64748B" font-size="14" font-weight="700" font-family="Inter, sans-serif">De R$ 6.499 no anúncio</text>
+                  <line x1="64" y1="164.7" x2="566" y2="164.7" stroke="#0EA5E9" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.85"/>
+                  <text x="72" y="183" fill="#0369A1" font-size="14" font-weight="700" font-family="Inter, sans-serif">Com cupom de seguidor: R$ 5.649</text>
+                  <polygon fill="url(#areaMax)" points="64,139.2 566,139.2 566,190 64,190"/>
+                  <polyline fill="none" stroke="#10b981" stroke-width="3.5" stroke-linecap="round" points="64,139.2 566,139.2"/>
+                  <circle cx="64" cy="139.2" r="5" fill="#ffffff" stroke="#10b981" stroke-width="2.5"/>
+                  <circle cx="566" cy="139.2" r="11" fill="#10b981" fill-opacity="0.18"/>
+                  <circle cx="566" cy="139.2" r="6.5" fill="#10b981" stroke="#fff" stroke-width="2.5"/>
+                  <text x="552" y="128" fill="#047857" font-size="20" font-weight="800" font-family="Inter, sans-serif" text-anchor="end">R$ 5.799</text>
+                  <g fill="#64748B" font-size="15" font-family="Inter, sans-serif">
+                    <text x="64" y="218" text-anchor="start">28/10 · início</text>
+                    <text x="570" y="218" text-anchor="end" fill="#047857" font-weight="700">Hoje</text>
+                  </g>
+                </svg>
+              </div>
+              <figcaption class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+                <strong class="text-brand-muted">Transparência:</strong> o monitor de preço começou a registrar este anúncio em 28/10/2026, com R$ 5.799 como menor preço histórico e preço atual (classificado como “bom preço”). O anúncio mostrava R$ 6.499 como preço de tabela e R$ 5.649 com o cupom de seguidor da loja. A venda, entrega e garantia são feitas pelo vendedor do anúncio no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e cupom podem mudar a qualquer momento — confira tudo no anúncio antes de pagar.
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
-      <!-- CONDIÇÕES DE PAGAMENTO -->
-      <section id="pagamento" class="mb-8 scroll-mt-20" aria-labelledby="pagamento-titulo">
-        <h2 id="pagamento-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Condições de <span class="text-brand-yellow">pagamento</span></h2>
-        <div class="glass overflow-hidden">
-          <table class="w-full text-left text-sm">
-            <caption class="sr-only">Formas de pagamento da Foston X13 EX no Mercado Livre</caption>
-            <tbody>
-              <tr class="border-b border-white/10 bg-emerald-400/[0.07]">
-                <th scope="row" class="px-4 py-4 align-top">
-                  <span class="block font-bold text-white">À vista</span>
-                  <span class="text-xs font-normal text-brand-dim">PIX / Boleto</span>
-                </th>
-                <td class="px-4 py-4 text-right align-top">
-                  <span class="block text-lg font-extrabold text-emerald-300">R$ 6.233,00</span>
-                  <span class="text-xs text-brand-dim">melhor preço</span>
-                </td>
-              </tr>
-              <tr class="border-b border-white/10">
-                <th scope="row" class="px-4 py-4 align-top">
-                  <span class="block font-bold text-white">Parcelado no cartão</span>
-                  <span class="text-xs font-normal text-brand-dim">em até 12x</span>
-                </th>
-                <td class="px-4 py-4 text-right align-top">
-                  <span class="block text-lg font-extrabold text-brand-yellow">12x de R$ 599,10</span>
-                  <span class="text-xs text-brand-dim">total R$ 7.189,14</span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row" class="px-4 py-4 align-top">
-                  <span class="block font-bold text-white">Proteção</span>
-                  <span class="text-xs font-normal text-brand-dim">Mercado Livre</span>
-                </th>
-                <td class="px-4 py-4 text-right align-top">
-                  <span class="block font-extrabold text-white">Compra Garantida</span>
-                  <span class="text-xs text-brand-dim">+ Devolução Grátis</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <details class="border-t border-white/10">
-            <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-white">
-              Ver todas as parcelas (6x a 12x)
-              <svg class="faq-chevron h-4 w-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <table class="w-full text-left text-sm">
-              <thead>
-                <tr class="border-y border-white/10 text-[10px] uppercase tracking-wider text-brand-dim">
-                  <th scope="col" class="px-4 py-2 font-bold">Parcelas</th>
-                  <th scope="col" class="px-4 py-2 text-right font-bold">Total</th>
-                </tr>
-              </thead>
-              <tbody class="text-brand-muted">
-                <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">6x</strong> R$ 1.163,18</td><td class="px-4 py-2.5 text-right">R$ 6.979,09</td></tr>
-                <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">7x</strong> R$ 1.003,42</td><td class="px-4 py-2.5 text-right">R$ 7.023,97</td></tr>
-                <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">8x</strong> R$ 882,52</td><td class="px-4 py-2.5 text-right">R$ 7.060,12</td></tr>
-                <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">9x</strong> R$ 789,44</td><td class="px-4 py-2.5 text-right">R$ 7.105,00</td></tr>
-                <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">10x</strong> R$ 713,12</td><td class="px-4 py-2.5 text-right">R$ 7.131,18</td></tr>
-                <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">11x</strong> R$ 651,41</td><td class="px-4 py-2.5 text-right">R$ 7.165,46</td></tr>
-                <tr><td class="px-4 py-2.5"><strong class="text-brand-yellow">12x</strong> R$ 599,10</td><td class="px-4 py-2.5 text-right">R$ 7.189,14</td></tr>
-              </tbody>
-            </table>
-            <p class="px-4 pb-4 pt-2 text-[11px] text-brand-dim">Valores simulados no checkout do Mercado Livre com cartão Visa em 21/10/2026. Parcelas e juros variam conforme cartão e banco.</p>
-          </details>
+      <!-- PARA QUEM É / NÃO É -->
+      <section id="para-quem" class="mb-8 scroll-mt-20" aria-labelledby="para-quem-titulo">
+        <h2 id="para-quem-titulo" class="mb-2 text-2xl font-extrabold md:text-3xl">Ela é para <span class="text-gradient-brand">você?</span></h2>
+        <p class="mb-4 text-sm text-brand-muted">Transparência antes da compra: veja se o seu uso combina com o que a <span data-bind="modelFull">Foston X13 EX</span> entrega.</p>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class="rounded-2xl border border-emerald-200 bg-white p-5 shadow-glow-emerald md:p-6">
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-emerald-700">✓ Para quem é</p>
+            <ul class="space-y-3 text-sm text-brand-muted">
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M5 13l4 4L19 7"/></svg></span><span><strong class="text-ink">Mobilidade urbana elegante</strong> — visual de scooter moderna para trabalho, faculdade e compras no bairro.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M5 13l4 4L19 7"/></svg></span><span><strong class="text-ink">Partida prática por NFC</strong> — aproxime o cartão e saia, sem procurar chave no bolso.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M5 13l4 4L19 7"/></svg></span><span><strong class="text-ink">Economia no trajeto diário</strong> — troca gasolina, app e estacionamento pela recarga na tomada no caminho de bairro.</span></li>
+              <li class="flex items-start gap-3" data-only="ex"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M5 13l4 4L19 7"/></svg></span><span><strong class="text-ink">Velocidade segura de até 32 km/h</strong> — ritmo de cidade, sem a agressividade de scooters de 55–60 km/h.</span></li>
+              <li class="flex items-start gap-3" data-only="max"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M5 13l4 4L19 7"/></svg></span><span><strong class="text-ink">Compras e mochila no cesto</strong> — cesto dianteiro e painel digital para o dia a dia de bairro.</span></li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-orange-200 bg-white p-5 shadow-soft md:p-6">
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full bg-orange-50 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-orange-700">✕ Para quem NÃO é</p>
+            <ul class="space-y-3 text-sm text-brand-muted">
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M6 18L18 6M6 6l12 12"/></svg></span><span><strong class="text-ink">Quem quer velocidade de moto de rodovia</strong> — acima de 50 km/h, avenidas rápidas e vias expressas.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M6 18L18 6M6 6l12 12"/></svg></span><span><strong class="text-ink">Entrega profissional pesada sem recarga</strong> — quem roda o dia inteiro com carga precisa de autonomia extrema e bateria reserva.</span></li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white" aria-hidden="true"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M6 18L18 6M6 6l12 12"/></svg></span><span><strong class="text-ink">Quem exige ficha de bateria detalhada</strong> — Ah e V variam conforme o lote: confira no anúncio antes de comprar.</span></li>
+            </ul>
+          </div>
         </div>
-        <a class="mt-4 inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition hover:brightness-110 active:scale-[0.98]" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2DnA5yX');" href="https://meli.la/2DnA5yX">Conferir parcelas no Mercado Livre</a>
       </section>
 
-      <!-- VEREDITO DO ESPECIALISTA -->
-      <section id="veredito" class="mb-8 scroll-mt-20" aria-labelledby="veredito-titulo">
-        <h2 id="veredito-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Veredito do <span class="text-brand-yellow">especialista</span></h2>
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-[0.9fr_1.1fr]">
-          <div class="glass p-5 md:p-6">
-            <div class="flex items-end gap-4">
-              <span class="text-6xl font-black leading-none text-brand-yellow drop-shadow-[0_0_15px_rgba(255,230,0,0.4)]">9.0</span>
-              <div class="pb-1">
-                <div class="text-lg text-brand-yellow" aria-hidden="true">★★★★★</div>
-                <p class="text-xs text-brand-dim">Nota editorial Tudo de Melhor</p>
+      <!-- CALCULADORA DE ECONOMIA -->
+      <section id="economia" class="mb-8 scroll-mt-20" aria-labelledby="economia-titulo">
+        <div id="calc-economia" class="glass overflow-hidden p-5 md:p-7" data-price="6233" data-produto="x13-ex">
+          <div class="mb-5">
+            <h2 id="economia-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">🧮 Calculadora de Economia Mensal</h2>
+            <p class="mt-1 text-sm text-brand-muted">Simule o seu trajeto e veja quanto você deixa de gastar trocando o transporte atual pela <span data-bind="modelFull">Foston X13 EX</span>.</p>
+          </div>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-[1.05fr_0.95fr]">
+            <div class="space-y-5">
+              <div>
+                <p id="calc-modo-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Como você se desloca hoje?</p>
+                <div class="grid grid-cols-2 gap-2 sm:grid-cols-4" role="radiogroup" aria-labelledby="calc-modo-label">
+                  <button type="button" role="radio" aria-checked="true" data-mode="app" class="calc-mode rounded-xl border border-slate-200 bg-white px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🚗 Uber/99</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="moto" class="calc-mode rounded-xl border border-slate-200 bg-white px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🏍️ Moto a gasolina</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="carro" class="calc-mode rounded-xl border border-slate-200 bg-white px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🚙 Carro</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="onibus" class="calc-mode rounded-xl border border-slate-200 bg-white px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🚌 Ônibus</button>
+                </div>
+              </div>
+              <div>
+                <div class="mb-1.5 flex items-baseline justify-between"><label for="calc-km" class="text-sm font-bold text-ink">Quilômetros por dia (ida e volta)</label><output id="calc-km-out" for="calc-km" class="text-lg font-black text-orange-600">12 km</output></div>
+                <input id="calc-km" type="range" min="2" max="60" step="1" value="12" class="calc-range w-full">
+                <div class="mt-1 flex justify-between text-[11px] text-brand-dim"><span>2 km</span><span>uso urbano de bairro</span><span>60 km</span></div>
+              </div>
+              <div>
+                <div class="mb-1.5 flex items-baseline justify-between"><label for="calc-dias" class="text-sm font-bold text-ink">Dias de uso por mês</label><output id="calc-dias-out" for="calc-dias" class="text-lg font-black text-orange-600">22 dias</output></div>
+                <input id="calc-dias" type="range" min="4" max="30" step="1" value="22" class="calc-range w-full">
               </div>
             </div>
-            <p class="mt-4 text-sm text-brand-muted">A melhor escolha para quem quer <strong class="text-white">mobilidade urbana elegante</strong>: motor 1000W, partida por NFC e teto de 32 km/h — ritmo de cidade, sem a agressividade de modelos de 55–60 km/h.</p>
-            <div class="mt-5 space-y-3">
-              <div>
-                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-white">Design e acabamento</span><span class="font-bold text-brand-yellow">9.5</span></div>
-                <div class="h-2 rounded-full bg-white/10"><div class="h-2 rounded-full bg-brand-gradient" style="width:95%"></div></div>
+            <div class="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 via-white to-orange-50/60 p-5" aria-live="polite">
+              <div class="grid grid-cols-2 gap-3 text-center">
+                <div class="rounded-xl border border-slate-200 bg-white p-3"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Você gasta hoje</p><p id="calc-atual" class="mt-1 text-lg font-extrabold text-brand-dim line-through decoration-orange-400/70">R$ 0</p><p class="text-[11px] text-brand-dim">por mês</p></div>
+                <div class="rounded-xl border border-slate-200 bg-white p-3"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Com a scooter</p><p id="calc-scooter" class="mt-1 text-lg font-extrabold text-ink">R$ 0</p><p class="text-[11px] text-brand-dim">de energia/mês</p></div>
               </div>
-              <div>
-                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-white">Praticidade (NFC)</span><span class="font-bold text-brand-yellow">9.2</span></div>
-                <div class="h-2 rounded-full bg-white/10"><div class="h-2 rounded-full bg-brand-gradient" style="width:92%"></div></div>
+              <div class="mt-4 text-center">
+                <p class="text-xs font-extrabold uppercase tracking-[0.14em] text-emerald-700">Economia estimada</p>
+                <p class="mt-1 text-4xl font-black leading-none text-emerald-600 md:text-5xl"><span id="calc-eco">R$ 0</span><span class="text-base font-bold text-brand-dim">/mês</span></p>
+                <p class="mt-1 text-sm font-semibold text-brand-muted"><span id="calc-ano">R$ 0</span> por ano</p>
               </div>
-              <div>
-                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-white">Custo-benefício</span><span class="font-bold text-brand-yellow">9.0</span></div>
-                <div class="h-2 rounded-full bg-white/10"><div class="h-2 rounded-full bg-brand-gradient" style="width:90%"></div></div>
+              <div class="mt-5">
+                <div class="mb-1 flex justify-between text-[11px] font-bold text-brand-dim"><span>Retorno do investimento</span><span id="calc-meses-label">—</span></div>
+                <div class="relative h-3 overflow-hidden rounded-full bg-slate-200"><div id="calc-bar" class="h-3 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600 transition-all duration-500" style="width:0%"></div></div>
               </div>
-              <div>
-                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-white">Potência urbana (1000W)</span><span class="font-bold text-brand-yellow">8.8</span></div>
-                <div class="h-2 rounded-full bg-white/10"><div class="h-2 rounded-full bg-brand-gradient" style="width:88%"></div></div>
-              </div>
-              <div>
-                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-white">Autonomia</span><span class="font-bold text-brand-yellow">8.0</span></div>
-                <div class="h-2 rounded-full bg-white/10"><div class="h-2 rounded-full bg-brand-gradient" style="width:80%"></div></div>
-              </div>
+              <p id="calc-conclusao" class="mt-4 rounded-xl bg-white p-3 text-center text-sm font-bold leading-snug text-ink ring-1 ring-emerald-200"></p>
             </div>
           </div>
-
-          <div class="grid grid-cols-1 gap-4">
-            <div class="glass border-emerald-500/30 p-5 shadow-glow-emerald">
-              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-emerald-300">Por que vale a pena</h3>
-              <ul class="space-y-3 text-sm text-brand-muted">
-                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">Economia no trajeto</strong> — troca combustível e estacionamento pela recarga na tomada.</span></li>
-                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">Partida por NFC</strong> — aproxime o cartão e saia, sem procurar chave.</span></li>
-                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">Motor 1000W</strong> — resposta firme em semáforos e aclives leves de bairro.</span></li>
-                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-white">Visual cinza elegante</strong> — conforto de scooter com cara de moto moderna.</span></li>
-              </ul>
-            </div>
-            <div class="glass border-orange-500/30 p-5">
-              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-orange-300">Antes de comprar, saiba</h3>
-              <ul class="space-y-2 text-sm text-brand-muted">
-                <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-400" aria-hidden="true">!</span>Velocidade máxima de 32 km/h: ideal para cidade, não para via expressa.</li>
-                <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-400" aria-hidden="true">!</span>Confira bateria e autonomia no anúncio — variam com peso, subidas e velocidade.</li>
-                <li class="flex items-start gap-3"><span class="mt-0.5 text-orange-400" aria-hidden="true">!</span>CNH: confirme as regras do CONTRAN e da sua cidade antes de circular.</li>
-              </ul>
-            </div>
-          </div>
+          <p class="mt-4 text-[11px] leading-relaxed text-brand-dim"><strong class="text-brand-muted">Premissas da estimativa:</strong> gasolina a R$ 6,30/l, moto 35 km/l, carro 11 km/l, app a R$ 2,30 por km, ônibus a R$ 5,00 por viagem (2 por dia) e energia a R$ 0,95/kWh, com consumo estimado de 0,025 kWh/km na scooter. Não inclui manutenção, IPVA, seguro e estacionamento, que aumentam a economia em relação ao carro e à moto. O retorno usa o preço de <span data-bind="calcPrice">R$ 6.233 à vista</span>. Confira a autonomia da bateria no anúncio antes de planejar trajetos longos.</p>
         </div>
       </section>
 
       <!-- PROVA SOCIAL -->
       <section id="compradores" class="mb-8 scroll-mt-20" aria-labelledby="compradores-titulo">
         <div class="mb-4 flex items-end justify-between gap-3">
-          <h2 id="compradores-titulo" class="text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-brand-yellow">quem comprou</span></h2>
+          <h2 id="compradores-titulo" class="text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-gradient-brand">quem comprou</span></h2>
           <div class="hidden gap-2 md:flex">
-            <button type="button" data-slider-prev="buyers-track" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-xl transition hover:border-brand-yellow/50 hover:text-brand-yellow" aria-label="Fotos anteriores">&#8249;</button>
-            <button type="button" data-slider-next="buyers-track" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-xl transition hover:border-brand-yellow/50 hover:text-brand-yellow" aria-label="Próximas fotos">&#8250;</button>
+            <button type="button" data-slider-prev class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-xl text-ink shadow-sm transition hover:border-amber-300 hover:text-amber-700" aria-label="Fotos anteriores">&#8249;</button>
+            <button type="button" data-slider-next class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-xl text-ink shadow-sm transition hover:border-amber-300 hover:text-amber-700" aria-label="Próximas fotos">&#8250;</button>
           </div>
         </div>
         <div class="glass p-4 md:p-5">
-          <p class="mb-3 flex items-center gap-2 text-sm text-brand-muted"><span class="text-brand-yellow">★★★★½</span> 4.5 de 5 · 73 avaliações no Mercado Livre</p>
-          <div class="product-gallery" aria-label="Fotos de compradores" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp","alt":"Foston X13 EX — foto de comprador 1"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp","alt":"Foston X13 EX — foto de comprador 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_746345-MLA114900892052_082026-F.webp","alt":"Foston X13 EX — foto de comprador 3"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_618410-MLA114900863492_082026-F.webp","alt":"Foston X13 EX — foto de comprador 4"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_813715-MLA116374497909_082026-F.webp","alt":"Foston X13 EX — foto de comprador 5"}]'>
-            <div id="buyers-track" class="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-1 pb-1">
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp" alt="Foston X13 EX — foto de comprador 1" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp" alt="Foston X13 EX — foto de comprador 2" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_746345-MLA114900892052_082026-F.webp" alt="Foston X13 EX — foto de comprador 3" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_618410-MLA114900863492_082026-F.webp" alt="Foston X13 EX — foto de comprador 4" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_813715-MLA116374497909_082026-F.webp" alt="Foston X13 EX — foto de comprador 5" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+          <div data-only="ex">
+            <p class="mb-3 flex items-center gap-2 text-sm text-brand-muted"><span class="text-amber-500">★★★★½</span> Foston X13 EX · 4.5 de 5 · 73 avaliações no Mercado Livre</p>
+            <div class="product-gallery" aria-label="Fotos de compradores da Foston X13 EX" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp","alt":"Foston X13 EX — foto de comprador 1"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp","alt":"Foston X13 EX — foto de comprador 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_746345-MLA114900892052_082026-F.webp","alt":"Foston X13 EX — foto de comprador 3"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_618410-MLA114900863492_082026-F.webp","alt":"Foston X13 EX — foto de comprador 4"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_813715-MLA116374497909_082026-F.webp","alt":"Foston X13 EX — foto de comprador 5"}]'>
+              <div data-buyers-track class="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-1 pb-1">
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp" alt="Foston X13 EX — foto de comprador 1" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp" alt="Foston X13 EX — foto de comprador 2" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_746345-MLA114900892052_082026-F.webp" alt="Foston X13 EX — foto de comprador 3" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_618410-MLA114900863492_082026-F.webp" alt="Foston X13 EX — foto de comprador 4" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_813715-MLA116374497909_082026-F.webp" alt="Foston X13 EX — foto de comprador 5" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              </div>
+            </div>
+          </div>
+          <div data-only="max">
+            <p class="mb-3 flex items-center gap-2 text-sm text-brand-muted"><span class="text-amber-500">★★★★★</span> Foston X13 Max · 5.0 de 5 · 1 avaliação no anúncio · fotos de quem já está rodando com ela</p>
+            <div class="product-gallery" aria-label="Fotos de compradores da Foston X13 Max" data-gallery-images='[{"url":"assets/produtos/LP/x13-max-compradores/comprador-1.webp","alt":"Foston X13 Max preta — foto de comprador 1"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-2.webp","alt":"Foston X13 Max — painel e guidão, foto de comprador 2"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-3.webp","alt":"Foston X13 Max com cesto — foto de comprador 3"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-4.webp","alt":"Foston X13 Max cinza — foto de comprador 4"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-5.webp","alt":"Foston X13 Max branca — foto de comprador 5"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-6.webp","alt":"Compradora pilotando a Foston X13 Max — foto 6"}]'>
+              <div data-buyers-track class="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-1 pb-1">
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-1.webp" alt="Foston X13 Max preta — foto de comprador 1" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-2.webp" alt="Foston X13 Max — painel e guidão, foto de comprador 2" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-3.webp" alt="Foston X13 Max com cesto — foto de comprador 3" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-4.webp" alt="Foston X13 Max cinza — foto de comprador 4" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-5.webp" alt="Foston X13 Max branca — foto de comprador 5" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="4" loading="lazy" decoding="async" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-amber-300 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-6.webp" alt="Compradora pilotando a Foston X13 Max — foto 6" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="5" loading="lazy" decoding="async" width="240" height="240"></figure>
+              </div>
             </div>
           </div>
           <p class="mt-2 text-[11px] text-brand-dim md:hidden">Arraste para o lado · toque para ampliar →</p>
         </div>
       </section>
 
+      <!-- VEREDITO DO ESPECIALISTA -->
+      <section id="veredito" class="mb-8 scroll-mt-20" aria-labelledby="veredito-titulo">
+        <h2 id="veredito-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Veredito do <span class="text-gradient-brand">especialista</span></h2>
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-[0.9fr_1.1fr]" data-only="ex">
+          <div class="glass p-5 md:p-6">
+            <div class="flex items-end gap-4">
+              <span class="text-gradient-brand text-6xl font-black leading-none">9.0</span>
+              <div class="pb-1">
+                <div class="text-lg text-amber-500" aria-hidden="true">★★★★★</div>
+                <p class="text-xs text-brand-dim">Nota editorial Tudo de Melhor</p>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-brand-muted">A melhor escolha para quem quer <strong class="text-ink">mobilidade urbana elegante</strong>: motor 1000W, partida por NFC e teto de 32 km/h — ritmo de cidade, sem a agressividade de modelos de 55–60 km/h.</p>
+            <div class="mt-5 space-y-3">
+              <div>
+                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-ink">Design e acabamento</span><span class="font-bold text-amber-700">9.5</span></div>
+                <div class="h-2 rounded-full bg-slate-100"><div class="h-2 rounded-full bg-brand-gradient" style="width:95%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-ink">Praticidade (NFC)</span><span class="font-bold text-amber-700">9.2</span></div>
+                <div class="h-2 rounded-full bg-slate-100"><div class="h-2 rounded-full bg-brand-gradient" style="width:92%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-ink">Custo-benefício</span><span class="font-bold text-amber-700">9.0</span></div>
+                <div class="h-2 rounded-full bg-slate-100"><div class="h-2 rounded-full bg-brand-gradient" style="width:90%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-ink">Potência urbana (1000W)</span><span class="font-bold text-amber-700">8.8</span></div>
+                <div class="h-2 rounded-full bg-slate-100"><div class="h-2 rounded-full bg-brand-gradient" style="width:88%"></div></div>
+              </div>
+              <div>
+                <div class="mb-1 flex justify-between text-xs"><span class="font-semibold text-ink">Autonomia</span><span class="font-bold text-amber-700">8.0</span></div>
+                <div class="h-2 rounded-full bg-slate-100"><div class="h-2 rounded-full bg-brand-gradient" style="width:80%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4">
+            <div class="glass border-emerald-200 p-5 shadow-glow-emerald">
+              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-emerald-700">Por que vale a pena</h3>
+              <ul class="space-y-3 text-sm text-brand-muted">
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Economia no trajeto</strong> — troca combustível e estacionamento pela recarga na tomada.</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Partida por NFC</strong> — aproxime o cartão e saia, sem procurar chave.</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Motor 1000W</strong> — resposta firme em semáforos e aclives leves de bairro.</span></li>
+                <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Visual cinza elegante</strong> — conforto de scooter com cara de moto moderna.</span></li>
+              </ul>
+            </div>
+            <div class="glass border-orange-200 p-5">
+              <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-orange-700">Antes de comprar, saiba</h3>
+              <ul class="space-y-2 text-sm text-brand-muted">
+                <li class="flex items-start gap-3"><span class="mt-0.5 font-black text-orange-500" aria-hidden="true">!</span>Velocidade máxima de 32 km/h: ideal para cidade, não para via expressa.</li>
+                <li class="flex items-start gap-3"><span class="mt-0.5 font-black text-orange-500" aria-hidden="true">!</span>Confira bateria e autonomia no anúncio — variam com peso, subidas e velocidade.</li>
+                <li class="flex items-start gap-3"><span class="mt-0.5 font-black text-orange-500" aria-hidden="true">!</span>CNH: confirme as regras do CONTRAN e da sua cidade antes de circular.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2" data-only="max">
+          <div class="glass border-emerald-200 p-5 shadow-glow-emerald">
+            <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-emerald-700">Por que considerar a X13 Max</h3>
+            <ul class="space-y-3 text-sm text-brand-muted">
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">R$ 434 mais barata</strong> que a X13 EX hoje, e ainda em 10x sem juros.</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Motor 1000W e NFC</strong> — mesma potência anunciada e partida por aproximação.</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Cesto e painel digital</strong> — praticidade para compras e mochila no dia a dia.</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Frete e devolução grátis</strong> — 30 dias para devolver pelo Mercado Livre.</span></li>
+            </ul>
+          </div>
+          <div class="glass border-orange-200 p-5">
+            <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-orange-700">Antes de comprar, saiba</h3>
+            <ul class="space-y-2 text-sm text-brand-muted">
+              <li class="flex items-start gap-3"><span class="mt-0.5 font-black text-orange-500" aria-hidden="true">!</span>Anúncio recente: 4 vendas e 1 avaliação até 28/10. A X13 EX tem 73 avaliações.</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 font-black text-orange-500" aria-hidden="true">!</span>O título não informa velocidade máxima nem bateria: confira a ficha no anúncio.</li>
+              <li class="flex items-start gap-3"><span class="mt-0.5 font-black text-orange-500" aria-hidden="true">!</span>Ainda não demos nota editorial à X13 Max; os dados aqui vêm do anúncio e do monitor de preço.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <!-- VÍDEO -->
-      <section id="video" class="mb-8 scroll-mt-20" aria-labelledby="video-titulo">
-        <h2 id="video-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Veja a X13 EX <span class="text-brand-yellow">em ação</span></h2>
+      <section id="video" class="mb-8 scroll-mt-20" aria-labelledby="video-titulo" data-only="ex">
+        <h2 id="video-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Mais um vídeo da X13 EX <span class="text-gradient-brand">em ação</span></h2>
         <div class="glass p-3 md:p-4">
           <div id="video-facade" class="relative aspect-video w-full overflow-hidden rounded-xl bg-black">
             <button type="button" data-video-id="1nbEgAPMfzg" class="group absolute inset-0 h-full w-full" aria-label="Reproduzir vídeo da Foston X13 EX">
-              <img src="https://i.ytimg.com/vi/1nbEgAPMfzg/hqdefault.jpg" alt="" class="h-full w-full object-cover opacity-80 transition group-hover:opacity-100" loading="lazy" decoding="async" width="480" height="360">
+              <img src="https://i.ytimg.com/vi/1nbEgAPMfzg/hqdefault.jpg" alt="" class="h-full w-full object-cover opacity-90 transition group-hover:opacity-100" loading="lazy" decoding="async" width="480" height="360">
               <span class="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-brand-yellow text-black shadow-glow-lg transition group-hover:scale-110">
                 <svg class="ml-1 h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
               </span>
@@ -456,43 +607,191 @@
 
       <!-- ESPECIFICAÇÕES -->
       <section id="especificacoes" class="mb-8 scroll-mt-20" aria-labelledby="specs-titulo">
-        <h2 id="specs-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Ficha <span class="text-brand-yellow">técnica</span></h2>
-        <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
-          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">⚙️</p><p class="mt-1 text-lg font-extrabold text-white">1000W</p><p class="text-xs text-brand-dim">Motor</p></div>
-          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">🏁</p><p class="mt-1 text-lg font-extrabold text-white">32 km/h</p><p class="text-xs text-brand-dim">Velocidade máx.</p></div>
-          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">📲</p><p class="mt-1 text-lg font-extrabold text-white">NFC</p><p class="text-xs text-brand-dim">Partida por aproximação</p></div>
-          <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">🎨</p><p class="mt-1 text-lg font-extrabold text-white">Cinza</p><p class="text-xs text-brand-dim">Cinza / cinza-escuro</p></div>
+        <h2 id="specs-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Ficha <span class="text-gradient-brand">técnica</span> · <span data-bind="modelName" class="text-ink">X13 EX</span></h2>
+        <div data-only="ex">
+          <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
+            <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">⚙️</p><p class="mt-1 text-lg font-extrabold text-ink">1000W</p><p class="text-xs text-brand-dim">Motor</p></div>
+            <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">🏁</p><p class="mt-1 text-lg font-extrabold text-ink">32 km/h</p><p class="text-xs text-brand-dim">Velocidade máx.</p></div>
+            <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">📲</p><p class="mt-1 text-lg font-extrabold text-ink">NFC</p><p class="text-xs text-brand-dim">Partida por aproximação</p></div>
+            <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">🎨</p><p class="mt-1 text-lg font-extrabold text-ink">Cinza</p><p class="text-xs text-brand-dim">Cinza / cinza-escuro</p></div>
+          </div>
+          <p class="mt-3 text-xs text-brand-dim">Modelo: Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza Cinza-escuro · Marca FOSTON. Bateria e autonomia conforme descrição do anúncio.</p>
         </div>
-        <p class="mt-3 text-xs text-brand-dim">Modelo: Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza Cinza-escuro · Marca FOSTON. Bateria e autonomia conforme descrição do anúncio.</p>
+        <div data-only="max">
+          <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
+            <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">⚙️</p><p class="mt-1 text-lg font-extrabold text-ink">1000W</p><p class="text-xs text-brand-dim">Motor</p></div>
+            <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">📲</p><p class="mt-1 text-lg font-extrabold text-ink">NFC</p><p class="text-xs text-brand-dim">Partida por aproximação</p></div>
+            <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">🧺</p><p class="mt-1 text-lg font-extrabold text-ink">Cesto</p><p class="text-xs text-brand-dim">Dianteiro</p></div>
+            <div class="glass p-4 text-center"><p class="text-2xl" aria-hidden="true">📟</p><p class="mt-1 text-lg font-extrabold text-ink">Painel digital</p><p class="text-xs text-brand-dim">Com carregador e chaves</p></div>
+          </div>
+          <p class="mt-3 text-xs text-brand-dim">Modelo: Bicicleta Elétrica Foston X13 Max Scooter 1000watts NFC · Marca FOSTON · cores no anúncio, incluindo cinza-escuro. Velocidade máxima, bateria e autonomia: confira na descrição do anúncio.</p>
+        </div>
+      </section>
+
+      <!-- CONDIÇÕES DE PAGAMENTO -->
+      <section id="pagamento" class="mb-8 scroll-mt-20" aria-labelledby="pagamento-titulo">
+        <h2 id="pagamento-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Condições de <span class="text-gradient-brand">pagamento</span> · <span data-bind="modelName" class="text-ink">X13 EX</span></h2>
+        <div class="glass overflow-hidden" data-only="ex">
+          <table class="w-full text-left text-sm">
+            <caption class="sr-only">Formas de pagamento da Foston X13 EX no Mercado Livre</caption>
+            <tbody>
+              <tr class="border-b border-slate-200 bg-emerald-50/70">
+                <th scope="row" class="px-4 py-4 align-top">
+                  <span class="block font-bold text-ink">À vista</span>
+                  <span class="text-xs font-normal text-brand-dim">PIX / Boleto</span>
+                </th>
+                <td class="px-4 py-4 text-right align-top">
+                  <span class="block text-lg font-extrabold text-emerald-700">R$ 6.233,00</span>
+                  <span class="text-xs text-brand-dim">melhor preço</span>
+                </td>
+              </tr>
+              <tr class="border-b border-slate-200">
+                <th scope="row" class="px-4 py-4 align-top">
+                  <span class="block font-bold text-ink">Parcelado no cartão</span>
+                  <span class="text-xs font-normal text-brand-dim">em até 12x</span>
+                </th>
+                <td class="px-4 py-4 text-right align-top">
+                  <span class="block text-lg font-extrabold text-amber-700">12x de R$ 599,10</span>
+                  <span class="text-xs text-brand-dim">total R$ 7.189,14</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="px-4 py-4 align-top">
+                  <span class="block font-bold text-ink">Proteção</span>
+                  <span class="text-xs font-normal text-brand-dim">Mercado Livre</span>
+                </th>
+                <td class="px-4 py-4 text-right align-top">
+                  <span class="block font-extrabold text-ink">Compra Garantida</span>
+                  <span class="text-xs text-brand-dim">+ Devolução Grátis</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <details class="border-t border-slate-200">
+            <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-ink">
+              Ver todas as parcelas (6x a 12x)
+              <svg class="faq-chevron h-4 w-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <table class="w-full text-left text-sm">
+              <thead>
+                <tr class="border-y border-slate-200 bg-slate-50 text-[10px] uppercase tracking-wider text-brand-dim">
+                  <th scope="col" class="px-4 py-2 font-bold">Parcelas</th>
+                  <th scope="col" class="px-4 py-2 text-right font-bold">Total</th>
+                </tr>
+              </thead>
+              <tbody class="text-brand-muted">
+                <tr class="border-b border-slate-100"><td class="px-4 py-2.5"><strong class="text-ink">6x</strong> R$ 1.163,18</td><td class="px-4 py-2.5 text-right">R$ 6.979,09</td></tr>
+                <tr class="border-b border-slate-100"><td class="px-4 py-2.5"><strong class="text-ink">7x</strong> R$ 1.003,42</td><td class="px-4 py-2.5 text-right">R$ 7.023,97</td></tr>
+                <tr class="border-b border-slate-100"><td class="px-4 py-2.5"><strong class="text-ink">8x</strong> R$ 882,52</td><td class="px-4 py-2.5 text-right">R$ 7.060,12</td></tr>
+                <tr class="border-b border-slate-100"><td class="px-4 py-2.5"><strong class="text-ink">9x</strong> R$ 789,44</td><td class="px-4 py-2.5 text-right">R$ 7.105,00</td></tr>
+                <tr class="border-b border-slate-100"><td class="px-4 py-2.5"><strong class="text-ink">10x</strong> R$ 713,12</td><td class="px-4 py-2.5 text-right">R$ 7.131,18</td></tr>
+                <tr class="border-b border-slate-100"><td class="px-4 py-2.5"><strong class="text-ink">11x</strong> R$ 651,41</td><td class="px-4 py-2.5 text-right">R$ 7.165,46</td></tr>
+                <tr><td class="px-4 py-2.5"><strong class="text-amber-700">12x</strong> R$ 599,10</td><td class="px-4 py-2.5 text-right">R$ 7.189,14</td></tr>
+              </tbody>
+            </table>
+            <p class="px-4 pb-4 pt-2 text-[11px] text-brand-dim">Valores simulados no checkout do Mercado Livre com cartão Visa em 21/10/2026. Parcelas e juros variam conforme cartão e banco.</p>
+          </details>
+        </div>
+
+        <div class="glass overflow-hidden" data-only="max">
+          <table class="w-full text-left text-sm">
+            <caption class="sr-only">Formas de pagamento da Foston X13 Max no Mercado Livre</caption>
+            <tbody>
+              <tr class="border-b border-slate-200 bg-emerald-50/70">
+                <th scope="row" class="px-4 py-4 align-top">
+                  <span class="block font-bold text-ink">Preço do anúncio</span>
+                  <span class="text-xs font-normal text-brand-dim">cartão, Pix ou boleto</span>
+                </th>
+                <td class="px-4 py-4 text-right align-top">
+                  <span class="block text-lg font-extrabold text-emerald-700">R$ 5.799,00</span>
+                  <span class="text-xs text-brand-dim">10% OFF sobre R$ 6.499</span>
+                </td>
+              </tr>
+              <tr class="border-b border-slate-200">
+                <th scope="row" class="px-4 py-4 align-top">
+                  <span class="block font-bold text-ink">Parcelado no cartão</span>
+                  <span class="text-xs font-normal text-brand-dim">em 10x sem juros</span>
+                </th>
+                <td class="px-4 py-4 text-right align-top">
+                  <span class="block text-lg font-extrabold text-amber-700">10x de R$ 579,90</span>
+                  <span class="text-xs font-bold text-emerald-700">sem juros</span>
+                </td>
+              </tr>
+              <tr class="border-b border-slate-200">
+                <th scope="row" class="px-4 py-4 align-top">
+                  <span class="block font-bold text-ink">Com cupom</span>
+                  <span class="text-xs font-normal text-brand-dim">seguindo a loja</span>
+                </th>
+                <td class="px-4 py-4 text-right align-top">
+                  <span class="block text-lg font-extrabold text-sky-700">R$ 5.649,00</span>
+                  <span class="text-xs text-brand-dim">cupom do anúncio em 28/10</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="px-4 py-4 align-top">
+                  <span class="block font-bold text-ink">Proteção</span>
+                  <span class="text-xs font-normal text-brand-dim">Mercado Livre</span>
+                </th>
+                <td class="px-4 py-4 text-right align-top">
+                  <span class="block font-extrabold text-ink">Compra Garantida</span>
+                  <span class="text-xs text-brand-dim">+ devolução grátis em 30 dias</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <details class="border-t border-slate-200">
+            <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-ink">
+              Ver todas as parcelas (2x a 10x)
+              <svg class="faq-chevron h-4 w-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <table class="w-full text-left text-sm">
+              <thead>
+                <tr class="border-y border-slate-200 bg-slate-50 text-[10px] uppercase tracking-wider text-brand-dim">
+                  <th scope="col" class="px-4 py-2 font-bold">Parcelas</th>
+                  <th scope="col" class="px-4 py-2 text-right font-bold">Condição</th>
+                </tr>
+              </thead>
+              <tbody class="text-brand-muted" id="max-pay-rows"></tbody>
+            </table>
+            <p class="px-4 pb-4 pt-2 text-[11px] text-brand-dim">Parcelas calculadas a partir do preço anunciado em 28/10/2026, com até 10x sem juros no cartão. Os centavos podem variar conforme cartão e banco.</p>
+          </details>
+        </div>
+        <a href="https://meli.la/2DnA5yX" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="mt-4 inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition hover:brightness-110 active:scale-[0.98]">Conferir parcelas no Mercado Livre</a>
       </section>
 
       <!-- FAQ -->
       <section id="faq" class="mb-8 scroll-mt-20" aria-labelledby="faq-titulo">
-        <h2 id="faq-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Dúvidas <span class="text-brand-yellow">frequentes</span></h2>
+        <h2 id="faq-titulo" class="mb-4 text-2xl font-extrabold md:text-3xl">Dúvidas <span class="text-gradient-brand">frequentes</span></h2>
         <div class="space-y-3">
           <details class="glass p-5" open>
-            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold">A Foston X13 EX vale a pena?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-ink">A Foston X13 EX vale a pena?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
             <p class="mt-3 text-sm text-brand-muted">Sim, para uso urbano. Ela junta motor 1000W, NFC e visual elegante, e hoje está no menor preço já registrado no anúncio: R$ 6.233,00. Se você precisa andar acima de 32 km/h, ela não é a escolha certa.</p>
           </details>
           <details class="glass p-5">
-            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold">O parcelamento em 12x tem juros?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
-            <p class="mt-3 text-sm text-brand-muted">Na simulação de 21/10, 12x de R$ 599,10 totalizou R$ 7.189,14 no cartão. O menor valor é à vista (R$ 6.233,00). Condições variam conforme o cartão — o Mercado Livre mostra todas as opções antes de você finalizar.</p>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-ink">Qual a diferença entre a Foston X13 EX e a X13 Max?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
+            <p class="mt-3 text-sm text-brand-muted">As duas são anunciadas com motor de 1000W e partida por NFC. A X13 Max aparece com cesto dianteiro e painel digital e, em 28/10, custava R$ 5.799 ou 10x de R$ 579,90 sem juros. A X13 EX está no menor preço histórico de R$ 6.233 à vista, com 12x com juros, e tem mais avaliações (4.5 com 73 notas). Antes de decidir, compare bateria, autonomia e vendedor nos dois anúncios.</p>
           </details>
           <details class="glass p-5">
-            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold">O frete é grátis?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
-            <p class="mt-3 text-sm text-brand-muted">No checkout que simulamos, o frete de R$ 314 saiu grátis. Isso depende do seu CEP — informe-o no anúncio para confirmar.</p>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-ink">O parcelamento tem juros?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
+            <p class="mt-3 text-sm text-brand-muted">Na X13 EX, a simulação de 21/10 mostrou 12x de R$ 599,10, total de R$ 7.189,14 no cartão; o menor valor é à vista (R$ 6.233,00). Na X13 Max, o anúncio mostrava 10x de R$ 579,90 sem juros em 28/10. Condições variam conforme o cartão — o Mercado Livre mostra todas as opções antes de você finalizar.</p>
           </details>
           <details class="glass p-5">
-            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold">E se eu não gostar ou chegar com defeito?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
-            <p class="mt-3 text-sm text-brand-muted">A compra é protegida pela Compra Garantida do Mercado Livre, com devolução grátis dentro das regras da plataforma. Você paga e recebe pelo Mercado Livre, não por nós.</p>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-ink">O frete é grátis?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
+            <p class="mt-3 text-sm text-brand-muted">No checkout que simulamos para a X13 EX, o frete de R$ 314 saiu grátis. O anúncio da X13 Max também mostrava frete grátis em 28/10. Isso depende do seu CEP — informe-o no anúncio para confirmar.</p>
           </details>
           <details class="glass p-5">
-            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold">Precisa de CNH?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
-            <p class="mt-3 text-sm text-brand-muted">Com teto de 32 km/h, em certas condições o modelo se aproxima do perfil de veículo autopropelido. Mesmo assim, confirme as regras do CONTRAN e da sua cidade — não prometemos "sem CNH" como garantia.</p>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-ink">E se eu não gostar ou chegar com defeito?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
+            <p class="mt-3 text-sm text-brand-muted">A compra é protegida pela Compra Garantida do Mercado Livre, com devolução grátis dentro das regras da plataforma (o anúncio da X13 Max informa 30 dias). Você paga e recebe pelo Mercado Livre, não por nós.</p>
           </details>
           <details class="glass p-5">
-            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold">Qual a autonomia?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
-            <p class="mt-3 text-sm text-brand-muted">Confira bateria e autonomia na descrição do anúncio. Na prática, o alcance varia com o peso do piloto, subidas, temperatura e velocidade média.</p>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-ink">Precisa de CNH?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
+            <p class="mt-3 text-sm text-brand-muted">Com teto de 32 km/h, em certas condições a X13 EX se aproxima do perfil de veículo autopropelido. Mesmo assim, confirme as regras do CONTRAN e da sua cidade — não prometemos "sem CNH" como garantia. Na X13 Max, confira a velocidade máxima no anúncio antes.</p>
+          </details>
+          <details class="glass p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-bold text-ink">Qual a autonomia?<svg class="faq-chevron h-4 w-4 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg></summary>
+            <p class="mt-3 text-sm text-brand-muted">Confira bateria e autonomia na descrição de cada anúncio. Na prática, o alcance varia com o peso do piloto, subidas, temperatura e velocidade média.</p>
           </details>
         </div>
       </section>
@@ -500,43 +799,43 @@
       <!-- CTA FINAL -->
       <section class="mb-8" aria-label="Oferta final">
         <div class="glass relative overflow-hidden p-6 text-center shadow-glow md:p-10">
-          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/15 blur-3xl"></div>
-          <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-emerald-300">🟢 Menor preço histórico</p>
-          <h2 class="mb-2 text-2xl font-extrabold md:text-4xl">Foston X13 EX por <span class="text-brand-yellow">R$ 6.233,00</span></h2>
-          <p class="mb-6 text-sm text-brand-muted md:text-base">ou 12x de R$ 599,10 · Compra Garantida + Devolução Grátis no Mercado Livre</p>
-          <a class="btn-shine mx-auto inline-flex h-14 w-full max-w-md items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.98]" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2DnA5yX');" href="https://meli.la/2DnA5yX">Garantir Menor Preço no ML</a>
-          <p class="mt-3 text-[11px] text-brand-dim">O preço pode mudar a qualquer momento. Valores verificados em 21/10/2026.</p>
+          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-amber-200/40 blur-3xl"></div>
+          <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-emerald-700" data-bind="finalKicker">🟢 Menor preço histórico</p>
+          <h2 class="mb-2 text-2xl font-extrabold md:text-4xl"><span data-bind="modelFull">Foston X13 EX</span> por <span class="text-gradient-brand" data-bind="priceFull">R$ 6.233,00</span></h2>
+          <p class="mb-6 text-sm text-brand-muted md:text-base" data-bind="finalSub">ou 12x de R$ 599,10 · Compra Garantida + Devolução Grátis no Mercado Livre</p>
+          <a href="https://meli.la/2DnA5yX" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine relative mx-auto inline-flex h-14 w-full max-w-md items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.98]"><span data-bind="finalCta">Garantir Menor Preço no ML</span></a>
+          <p class="mt-3 text-[11px] text-brand-dim" data-bind="finalDate">O preço pode mudar a qualquer momento. Valores verificados em 21/10/2026.</p>
         </div>
       </section>
     </div>
   </main>
 
-  <footer class="border-t border-brand-border bg-[#1a222d] px-4 py-8">
+  <footer class="border-t border-slate-200 bg-white px-4 py-8">
     <div class="mx-auto max-w-6xl text-xs text-brand-dim">
       <div class="mb-4 flex items-center gap-3">
         <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" width="32" height="32" alt="" class="h-8 w-8 rounded object-cover">
-        <span class="text-sm font-extrabold uppercase tracking-wider text-white">Tudo de Melhor</span>
+        <span class="text-sm font-extrabold uppercase tracking-wider text-ink">Tudo de Melhor</span>
       </div>
       <p class="mb-4 max-w-3xl">Conteúdo editorial independente. Esta página contém links de afiliado do Mercado Livre: podemos receber comissão pelas compras, sem custo extra para você. A venda, entrega, garantia e o atendimento são de responsabilidade do vendedor no Mercado Livre.</p>
       <nav class="mb-4 flex flex-wrap gap-x-5 gap-y-2" aria-label="Links institucionais">
-        <a href="sobre.html" class="hover:text-brand-yellow">Sobre</a>
-        <a href="privacidade.html" class="hover:text-brand-yellow">Privacidade</a>
-        <a href="trocas.html" class="hover:text-brand-yellow">Trocas e Devoluções</a>
-        <a href="contato.html" class="hover:text-brand-yellow">Contato</a>
+        <a href="sobre.html" class="hover:text-amber-700">Sobre</a>
+        <a href="privacidade.html" class="hover:text-amber-700">Privacidade</a>
+        <a href="trocas.html" class="hover:text-amber-700">Trocas e Devoluções</a>
+        <a href="contato.html" class="hover:text-amber-700">Contato</a>
       </nav>
       <p>© <span id="y"></span> tudodemelhor.com.br</p>
     </div>
   </footer>
 
   <!-- STICKY BAR -->
-  <div class="fixed bottom-0 left-0 z-50 w-full border-t border-white/10 bg-brand-bg/90 backdrop-blur-xl sm:bottom-5 sm:left-1/2 sm:w-auto sm:min-w-[620px] sm:max-w-3xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-white/15 sm:shadow-2xl">
+  <div class="fixed bottom-0 left-0 z-50 w-full border-t border-slate-200 bg-white/95 shadow-[0_-8px_24px_-12px_rgba(15,23,42,0.18)] backdrop-blur-xl sm:bottom-5 sm:left-1/2 sm:w-auto sm:min-w-[620px] sm:max-w-3xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:shadow-2xl">
     <div class="flex items-center gap-3 px-3 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:gap-5 sm:py-3 sm:pl-3 sm:pr-3">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp" alt="" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="h-11 w-11 shrink-0 rounded-lg border border-white/10 bg-white object-contain sm:h-12 sm:w-12">
+      <img id="sticky-img" src="https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp" alt="" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="h-11 w-11 shrink-0 rounded-lg border border-slate-200 bg-white object-cover sm:h-12 sm:w-12">
       <div class="min-w-0 flex-1">
-        <p class="text-[13px] font-extrabold leading-tight text-white sm:text-base"><span class="whitespace-nowrap">Foston X13 EX 1000W ·</span> <span class="whitespace-nowrap text-brand-yellow">12x de R$ 599,10</span></p>
-        <p class="mt-0.5 truncate text-[11px] text-emerald-300">ou R$ 6.233,00 à vista</p>
+        <p class="text-[13px] font-extrabold leading-tight text-ink sm:text-base"><span class="whitespace-nowrap"><span data-bind="stickyName">Foston X13 EX 1000W</span> ·</span> <span class="whitespace-nowrap text-amber-700" data-bind="stickyPrice">R$ 6.233 à vista</span></p>
+        <p class="mt-0.5 truncate text-[11px] text-emerald-700" data-bind="stickySub"><span class="font-bold">menor preço histórico</span> <span class="text-brand-dim">· ou 12x de R$ 599,10</span></p>
       </div>
-      <a class="btn-shine inline-flex h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-4 text-sm font-extrabold text-black shadow-glow transition-all hover:brightness-110 active:scale-[0.98] sm:px-6 sm:text-base" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2DnA5yX');" href="https://meli.la/2DnA5yX">Conferir Oferta</a>
+      <a href="https://meli.la/2DnA5yX" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine inline-flex h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-4 text-sm font-extrabold text-black shadow-glow transition-all hover:brightness-110 active:scale-[0.98] sm:px-6 sm:text-base">Conferir Oferta</a>
     </div>
   </div>
 
@@ -555,44 +854,10 @@
       placeGallery();
       mq.addEventListener('change', placeGallery);
 
-      const track = document.getElementById('hero-track');
-      const dots = Array.from(document.querySelectorAll('#hero-dots button'));
-      const counter = document.getElementById('hero-counter');
-      let current = 0;
-
-      function setActive(i) {
-        current = i;
-        counter.textContent = (i + 1) + '/' + dots.length;
-        dots.forEach((dot, d) => {
-          const active = d === i;
-          dot.classList.toggle('w-6', active);
-          dot.classList.toggle('w-2.5', !active);
-          dot.classList.toggle('bg-brand-yellow', active);
-          dot.classList.toggle('bg-white/30', !active);
-          if (active) dot.setAttribute('aria-current', 'true'); else dot.removeAttribute('aria-current');
-        });
-      }
-      function goTo(i) {
-        const n = (i + dots.length) % dots.length;
-        track.scrollTo({ left: n * track.clientWidth, behavior: 'smooth' });
-      }
-
-      let raf = null;
-      track.addEventListener('scroll', () => {
-        if (raf) cancelAnimationFrame(raf);
-        raf = requestAnimationFrame(() => {
-          const i = Math.round(track.scrollLeft / track.clientWidth);
-          if (i !== current) setActive(i);
-        });
-      }, { passive: true });
-
-      dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
-      gallery.querySelector('[data-carousel-prev]').addEventListener('click', () => goTo(current - 1));
-      gallery.querySelector('[data-carousel-next]').addEventListener('click', () => goTo(current + 1));
-
       document.querySelectorAll('[data-slider-prev], [data-slider-next]').forEach((btn) => {
         btn.addEventListener('click', () => {
-          const el = document.getElementById(btn.dataset.sliderPrev || btn.dataset.sliderNext);
+          const el = Array.from(document.querySelectorAll('[data-buyers-track]')).find((t) => t.offsetParent !== null);
+          if (!el) return;
           const dir = btn.hasAttribute('data-slider-prev') ? -1 : 1;
           el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: 'smooth' });
         });
@@ -609,6 +874,196 @@
         iframe.allowFullscreen = true;
         facadeBtn.replaceWith(iframe);
       });
+
+      let rows = '';
+      for (let i = 2; i <= 10; i++) {
+        const v = (Math.round(5799 / i * 100) / 100).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        rows += '<tr' + (i === 10 ? '' : ' class="border-b border-slate-100"') + '><td class="px-4 py-2.5"><strong class="' + (i === 10 ? 'text-amber-700' : 'text-ink') + '">' + i + 'x</strong> R$ ' + v + '</td><td class="px-4 py-2.5 text-right font-semibold text-emerald-700">Sem juros</td></tr>';
+      }
+      document.getElementById('max-pay-rows').innerHTML = rows;
+    })();
+  </script>
+  <script>
+    (function () {
+      const MODELS = {
+        ex: {
+          produto: 'x13-ex', name: 'X13 EX', full: 'Foston X13 EX', link: 'https://meli.la/2DnA5yX', price: 6233,
+          pill2: '📉 Menor preço histórico', pill3: '🏅 Vendedor MercadoLíder Gold',
+          h1: 'Scooter Elétrica <span class="text-gradient-brand">Foston X13 EX 1000W</span> com NFC no menor preço histórico',
+          sub: 'Até 32 km/h, partida por NFC e design cinza elegante para o dia a dia na cidade. Nota <strong class="text-ink">9.0</strong> na nossa análise · <span class="text-gradient-brand">★★★★½</span> 4.5 com 73 avaliações no ML.',
+          anchor: 'Era ~R$ 7.900,00 em agosto · <span class="font-bold text-emerald-700">caiu R$ 1.667 (-21%)</span>',
+          priceBig: 'R$ 6.233<span class="text-2xl md:text-3xl">,00</span>', priceLabel: 'à vista', priceFull: 'R$ 6.233,00',
+          inst: '<p class="text-base font-bold text-amber-700">ou 12x de R$ 599,10 no cartão</p>',
+          delivery: 'Frete grátis no checkout que simulamos em 21/10 (economia de R$ 314 · confira o seu CEP)',
+          ctaText: 'Ver Menor Preço da X13 EX no ML',
+          shipTitle: 'Envio e logística direto do MercadoLíder Gold', ship: 'Vendedor com reputação máxima no Mercado Livre e entrega rastreada pela plataforma.',
+          ret: 'Devolução grátis pelas regras do Mercado Livre; prazo da garantia de fábrica informado no anúncio.',
+          video: 'assets/produtos/LP/x13-ex-capa-loop.mp4', poster: 'assets/produtos/LP/x13-ex-capa-poster.webp', full_video: 'assets/produtos/LP/x13-ex-video-completo.mp4', full_label: '🔊 Assistir completo com som · 1:10',
+          videoBadge: '▶ Vídeo real · Foston X13 EX', mediaHint: 'Toque em uma foto do anúncio para ampliar',
+          calcPrice: 'R$ 6.233 à vista',
+          finalKicker: '🟢 Menor preço histórico', finalSub: 'ou 12x de R$ 599,10 · Compra Garantida + Devolução Grátis no Mercado Livre', finalCta: 'Garantir Menor Preço no ML', finalDate: 'O preço pode mudar a qualquer momento. Valores verificados em 21/10/2026.',
+          stickyName: 'Foston X13 EX 1000W', stickyPrice: 'R$ 6.233 à vista', stickySub: '<span class="font-bold">menor preço histórico</span> <span class="text-brand-dim">· ou 12x de R$ 599,10</span>',
+          stickyImg: 'https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp'
+        },
+        max: {
+          produto: 'x13-max', name: 'X13 Max', full: 'Foston X13 Max', link: 'https://meli.la/2Ga7iza', price: 5799,
+          pill2: '🏷️ Mais barata da linha X13', pill3: '💳 10x sem juros',
+          h1: 'Scooter Elétrica <span class="text-gradient-brand">Foston X13 Max 1000W</span> com NFC e cesto por R$ 5.799',
+          sub: 'Motor 1000W, partida por NFC, cesto dianteiro e painel digital. <span class="text-gradient-brand">★★★★★</span> 5.0 com 1 avaliação no ML · anúncio recente.',
+          anchor: 'De <span class="line-through decoration-orange-400/80">R$ 6.499</span> no anúncio · <span class="font-bold text-emerald-700">10% OFF</span>',
+          priceBig: 'R$ 5.799<span class="text-2xl md:text-3xl">,00</span>', priceLabel: 'no cartão ou Pix', priceFull: 'R$ 5.799,00',
+          inst: '<div class="inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300 bg-gradient-to-r from-emerald-50 via-emerald-50 to-amber-50 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true"></span><span class="text-base font-black text-ink">10x de R$ 579,90</span><span class="rounded bg-emerald-600 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-white">sem juros</span></div><p class="mt-1.5 text-xs font-semibold text-sky-700">🏷️ R$ 5.649 com o cupom de seguidor da loja (no anúncio)</p>',
+          delivery: 'Frete grátis no anúncio em 28/10, com 2 unidades em estoque (confira o seu CEP)',
+          ctaText: 'Ver a Foston X13 Max no ML',
+          shipTitle: 'Envio do vendedor MercadoLíder', ship: 'JANAINACORDEIRODOPRADO, com mais de 5 mil vendas e entrega rastreada pelo Mercado Livre.',
+          ret: 'Devolução grátis em 30 dias pelo Mercado Livre; prazo da garantia de fábrica informado no anúncio.',
+          video: 'assets/produtos/LP/x13-max-capa-loop.mp4', poster: 'assets/produtos/LP/x13-max-capa-poster.webp', full_video: 'assets/produtos/LP/x13-max-video-completo.mp4', full_label: '🔊 Assistir completo com som · 1:10',
+          videoBadge: '▶ Vídeo real · Foston X13 Max', mediaHint: 'Vídeo da X13 Max · veja as fotos de compradores mais abaixo',
+          calcPrice: 'R$ 5.799 do anúncio',
+          finalKicker: '🏷️ Opção mais barata da linha', finalSub: 'ou 10x de R$ 579,90 sem juros · Compra Garantida + Devolução Grátis no Mercado Livre', finalCta: 'Ver a X13 Max no ML', finalDate: 'O preço pode mudar a qualquer momento. Valores verificados em 28/10/2026.',
+          stickyName: 'Foston X13 Max 1000W', stickyPrice: '10x de R$ 579,90', stickySub: '<span class="font-bold">sem juros</span> <span class="text-brand-dim">· ou R$ 5.799</span>',
+          stickyImg: 'assets/produtos/LP/x13-max-compradores/comprador-3.webp'
+        }
+      };
+
+      const $all = (sel) => Array.from(document.querySelectorAll(sel));
+      const setBind = (key, html) => $all('[data-bind="' + key + '"]').forEach((el) => { el.innerHTML = html; });
+      const video = document.getElementById('hero-video');
+      const fullBtn = document.getElementById('full-video-btn');
+      const calcRoot = document.getElementById('calc-economia');
+      let current = 'ex';
+      let fullPlaying = false;
+
+      function setVideo(m) {
+        fullPlaying = false;
+        video.pause();
+        video.loop = true; video.muted = true; video.controls = false;
+        video.classList.add('object-cover'); video.classList.remove('object-contain');
+        video.poster = m.poster;
+        video.dataset.produto = m.produto;
+        video.setAttribute('aria-label', 'Vídeo de demonstração da scooter elétrica ' + m.full);
+        video.src = m.video;
+        video.load();
+        if (!window.TDM_LOW_DATA) video.play().catch(() => {});
+        fullBtn.hidden = false;
+        fullBtn.textContent = m.full_label;
+        fullBtn.dataset.fullVideo = m.full_video;
+      }
+
+      function apply(key, fromUser) {
+        const m = MODELS[key];
+        if (!m) return;
+        const changed = key !== current;
+        current = key;
+        document.body.dataset.modelo = key;
+        $all('.model-option').forEach((b) => b.setAttribute('aria-checked', b.dataset.model === key ? 'true' : 'false'));
+        const swap = $all('[data-swap]');
+        swap.forEach((el) => el.classList.add('is-swapping'));
+        const run = () => {
+          ['pill2', 'pill3', 'h1', 'sub', 'anchor', 'priceBig', 'priceLabel', 'priceFull', 'inst', 'delivery', 'ctaText', 'shipTitle', 'ship', 'ret', 'videoBadge', 'mediaHint', 'calcPrice', 'finalKicker', 'finalSub', 'finalCta', 'finalDate', 'stickyName', 'stickyPrice', 'stickySub'].forEach((k) => setBind(k, m[k]));
+          setBind('modelName', m.name);
+          setBind('modelFull', m.full);
+          $all('[data-cta]').forEach((a) => { a.href = m.link; });
+          document.getElementById('sticky-img').src = m.stickyImg;
+          calcRoot.dataset.price = m.price;
+          calcRoot.dataset.produto = m.produto;
+          window.dispatchEvent(new Event('lp:price'));
+          swap.forEach((el) => el.classList.remove('is-swapping'));
+        };
+        if (fromUser) setTimeout(run, 180); else run();
+        if (changed) setVideo(m);
+        if (fromUser) {
+          history.replaceState(null, '', key === 'max' ? '#modelo=max' : location.pathname + location.search);
+          if (typeof gtag === 'function') gtag('event', 'selecionar_modelo', { modelo: m.produto });
+        }
+      }
+
+      $all('.model-option').forEach((b) => b.addEventListener('click', () => apply(b.dataset.model, true)));
+
+      window.TDM_LOW_DATA = (navigator.connection && navigator.connection.saveData) || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (window.TDM_LOW_DATA) { video.removeAttribute('autoplay'); video.pause(); video.controls = true; }
+      if ('IntersectionObserver' in window && !window.TDM_LOW_DATA) {
+        new IntersectionObserver((entries) => entries.forEach((e) => {
+          if (fullPlaying) return;
+          if (e.isIntersecting) video.play().catch(() => {}); else video.pause();
+        }), { threshold: 0.25 }).observe(video);
+      }
+      fullBtn.dataset.fullVideo = MODELS.ex.full_video;
+      fullBtn.addEventListener('click', () => {
+        fullPlaying = true;
+        video.loop = false; video.muted = false; video.controls = true;
+        video.classList.remove('object-cover'); video.classList.add('object-contain');
+        video.src = fullBtn.dataset.fullVideo;
+        video.play().catch(() => {});
+        fullBtn.hidden = true;
+        if (typeof gtag === 'function') gtag('event', 'assistir_video_completo', { produto: video.dataset.produto });
+      });
+
+      if (/modelo=max/.test(location.hash)) apply('max', false);
+    })();
+  </script>
+  <script>
+    (function () {
+      const root = document.getElementById('calc-economia');
+      if (!root) return;
+      const MODES = {
+        app: { cmp: 'às corridas de app', perKm: 2.30 },
+        moto: { cmp: 'à moto a gasolina', perKm: 6.30 / 35 },
+        carro: { cmp: 'ao carro a gasolina', perKm: 6.30 / 11 },
+        onibus: { cmp: 'ao ônibus', perTrip: 5.00, trips: 2 }
+      };
+      const ELEC_PER_KM = 0.025 * 0.95;
+      const km = document.getElementById('calc-km');
+      const dias = document.getElementById('calc-dias');
+      const brl = (v) => 'R$ ' + Math.round(v).toLocaleString('pt-BR');
+      let mode = 'app';
+      let gaTimer = null;
+
+      function calc(fromUser) {
+        const price = Number(root.dataset.price);
+        const k = Number(km.value), d = Number(dias.value), m = MODES[mode];
+        const atual = m.perTrip ? m.perTrip * m.trips * d : k * d * m.perKm;
+        const scooter = k * d * ELEC_PER_KM;
+        const eco = Math.max(0, atual - scooter);
+        const meses = eco > 0 ? price / eco : Infinity;
+        const n = Math.max(1, Math.round(meses));
+        document.getElementById('calc-km-out').textContent = k + ' km';
+        document.getElementById('calc-dias-out').textContent = d + ' dias';
+        document.getElementById('calc-atual').textContent = brl(atual);
+        document.getElementById('calc-scooter').textContent = brl(scooter);
+        document.getElementById('calc-eco').textContent = brl(eco);
+        document.getElementById('calc-ano').textContent = brl(eco * 12);
+        document.getElementById('calc-meses-label').textContent = !isFinite(meses) ? '—' : meses > 60 ? 'mais de 5 anos' : 'se paga em ~' + n + (n === 1 ? ' mês' : ' meses');
+        const bar = document.getElementById('calc-bar');
+        bar.style.width = isFinite(meses) ? Math.min(100, Math.max(6, 14 / meses * 100)) + '%' : '0%';
+        bar.className = 'h-3 rounded-full transition-all duration-500 bg-gradient-to-r ' + (meses < 14 ? 'from-emerald-400 to-emerald-600' : 'from-amber-300 to-orange-500');
+        const out = document.getElementById('calc-conclusao');
+        if (!isFinite(meses) || eco < 20) {
+          out.innerHTML = 'Com esse uso, a economia em relação ' + m.cmp + ' é pequena. Aumente a distância diária para ver o efeito.';
+        } else if (meses < 14) {
+          out.innerHTML = '🟢 Em menos de 14 meses (cerca de ' + n + '), a scooter se paga sozinha com a economia gerada.';
+        } else if (meses <= 36) {
+          out.innerHTML = '🟡 Em cerca de ' + n + ' meses, a scooter se paga sozinha com a economia gerada.';
+        } else {
+          out.innerHTML = meses <= 60
+            ? 'Em relação ' + m.cmp + ', a scooter se paga em cerca de ' + n + ' meses só com combustível. A economia cresce somando manutenção, IPVA e estacionamento.'
+            : 'Em relação ' + m.cmp + ', a economia só com combustível é de ' + brl(eco) + ' por mês. O ganho cresce somando troca de óleo, manutenção, IPVA e estacionamento, que a scooter elétrica não tem.';
+        }
+        if (fromUser && typeof gtag === 'function') {
+          clearTimeout(gaTimer);
+          gaTimer = setTimeout(() => gtag('event', 'calculadora_economia', { produto: root.dataset.produto, modo: mode, km_dia: k, dias_mes: d, economia_mensal: Math.round(eco) }), 1500);
+        }
+      }
+
+      root.querySelectorAll('.calc-mode').forEach((b) => b.addEventListener('click', () => {
+        mode = b.dataset.mode;
+        root.querySelectorAll('.calc-mode').forEach((x) => x.setAttribute('aria-checked', x === b ? 'true' : 'false'));
+        calc(true);
+      }));
+      km.addEventListener('input', () => calc(true));
+      dias.addEventListener('input', () => calc(true));
+      window.addEventListener('lp:price', () => calc(false));
+      calc(false);
     })();
   </script>
   <script src="assets/js/product-gallery-lightbox.js" defer></script>
