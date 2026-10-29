@@ -114,14 +114,14 @@
             "@type": "ListItem",
             "position": 2,
             "name": "Reviews",
-            "item": "https://www.tudodemelhor.com.br/reviews.html"
+            "item": "https://www.tudodemelhor.com.br/reviews"
           }
         ]
       },
       {
         "@type": "CollectionPage",
         "name": "Análises Detalhadas",
-        "url": "https://www.tudodemelhor.com.br/reviews.html",
+        "url": "https://www.tudodemelhor.com.br/reviews",
         "description": "Fichas técnicas, testes e vereditos completos de bicicletas elétricas e patinetes elétricos."
       }
     ]
@@ -132,7 +132,7 @@
 
   <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
     <div class="mx-auto flex h-[100px] max-w-7xl items-center gap-4 px-4 lg:gap-8">
-      <a href="index.html" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
+      <a href="/" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
         <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
           <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-full w-full object-cover">
         </div>
@@ -151,11 +151,11 @@
       </button>
 
       <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
-        <a href="index.html#categorias" class="transition hover:text-white">Categorias</a>
-        <a href="categorias.html" class="transition hover:text-white">Rankings</a>
+        <a href="/#categorias" class="transition hover:text-white">Categorias</a>
+        <a href="/categorias" class="transition hover:text-white">Rankings</a>
 
-        <a href="reviews.html" class="font-semibold text-white">Reviews</a>
-        <a href="index.html#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
+        <a href="/reviews" class="font-semibold text-white">Reviews</a>
+        <a href="/#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
       </nav>
 
       <div class="hidden items-center gap-4 md:flex">
@@ -173,11 +173,11 @@
 
     <div id="mobile-nav" class="hidden border-t border-white/10 bg-brand-elevated/98 px-4 py-4 md:hidden">
       <nav class="flex flex-col gap-1 text-sm">
-        <a href="index.html#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Categorias</a>
-        <a href="categorias.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
+        <a href="/#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Categorias</a>
+        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
 
-        <a href="reviews.html" class="rounded-lg px-3 py-3 font-semibold text-white hover:bg-white/5">Reviews</a>
-        <a href="index.html#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
+        <a href="/reviews" class="rounded-lg px-3 py-3 font-semibold text-white hover:bg-white/5">Reviews</a>
+        <a href="/#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
       </nav>
       <label class="relative mt-3 block">
         <span class="sr-only">Buscar</span>
@@ -194,7 +194,7 @@
   <main class="px-4 pt-8 pb-14">
     <div class="mx-auto max-w-7xl">
       <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
-        <a href="index.html" class="hover:text-brand-yellow">Início</a>
+        <a href="/" class="hover:text-brand-yellow">Início</a>
         <span aria-hidden="true">/</span>
         <span class="text-white" aria-current="page">Reviews</span>
       </nav>
@@ -222,8 +222,10 @@
           <div class="mb-6 flex flex-wrap items-end justify-between gap-3">
             <h2 class="text-2xl font-extrabold md:text-3xl">Reviews em <span class="text-brand-yellow">destaque</span></h2>
             <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm font-semibold">
-              <a href="melhores-bicicletas-eletricas.html" class="text-brand-yellow hover:underline">Bicicletas →</a>
-              <a href="melhores-patinetes-eletricos.html" class="text-brand-yellow hover:underline">Patinetes →</a>
+              <a href="/melhores-bicicletas-eletricas" class="text-brand-yellow hover:underline">Bicicletas →</a>
+              <a href="/melhores-patinetes-eletricos" class="text-brand-yellow hover:underline">Patinetes →</a>
+              <a href="/melhores-scooters-eletricas" class="text-brand-yellow hover:underline">Scooters →</a>
+              <a href="/melhores-motos-eletricas" class="text-brand-yellow hover:underline">Motos →</a>
             </div>
           </div>
 
@@ -249,7 +251,7 @@
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Patinete elétrico dobrável para quem aceita investir acima de R$ 6.000 em performance.</span></li>
               </ul>
             </div>
-            <a href="review-honeywhale-g3-pro.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+            <a href="/review-honeywhale-g3-pro" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
           </article>
           <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
             <div class="mb-4 flex items-center justify-between gap-3">
@@ -268,7 +270,7 @@
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Adulto até 120 kg que quer torque sem pagar o preço da G3 Pro 1640W.</span></li>
               </ul>
             </div>
-            <a href="review-hitway-h18.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+            <a href="/review-hitway-h18" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
           </article>
           <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
             <div class="mb-4 flex items-center justify-between gap-3">
@@ -287,7 +289,7 @@
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Adulto urbano que aceita 25 km/h e prioriza conectividade no celular.</span></li>
               </ul>
             </div>
-            <a href="review-foston-s09-pro-bluetooth.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+            <a href="/review-foston-s09-pro-bluetooth" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
           </article>
           <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
             <div class="mb-4 flex items-center justify-between gap-3">
@@ -306,7 +308,7 @@
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>App Bluetooth da Honeywhale para modos e monitoramento básico.</span></li>
               </ul>
             </div>
-            <a href="review-honeywhale-m2-max-b.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+            <a href="/review-honeywhale-m2-max-b" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
           </article>
           <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
             <div class="mb-4 flex items-center justify-between gap-3">
@@ -325,7 +327,7 @@
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Última milha plana: condomínio, campus e deslocamento curto.</span></li>
               </ul>
             </div>
-            <a href="review-oimotoo-patinete-350w.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+            <a href="/review-oimotoo-patinete-350w" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
           </article>
 <div class="col-span-full border-t border-white/10 pt-8 first:border-0 first:pt-0" data-category="mobilidade">
             <p class="mb-1 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Mobilidade</p>
@@ -348,7 +350,7 @@
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Trajetos planos de até 35 km sem exigir potência extrema em subidas.</span></li>
               </ul>
             </div>
-            <a href="review-oimotoo-s6.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+            <a href="/review-oimotoo-s6" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
           </article>
           <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
             <div class="mb-4 flex items-center justify-between gap-3">
@@ -367,7 +369,7 @@
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Equilíbrio entre motor 750W e preço intermediário.</span></li>
               </ul>
             </div>
-            <a href="review-xroymexroy-ucitys.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+            <a href="/review-xroymexroy-ucitys" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
           </article>
           <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
             <div class="mb-4 flex items-center justify-between gap-3">
@@ -386,7 +388,7 @@
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer robustez dobrável com autonomia de 40 km.</span></li>
               </ul>
             </div>
-            <a href="review-honeywhale-s6-s.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+            <a href="/review-honeywhale-s6-s" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
           </article>
           <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
             <div class="mb-4 flex items-center justify-between gap-3">
@@ -405,7 +407,7 @@
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Trajetos planos de até 20 km sem subidas íngremes.</span></li>
               </ul>
             </div>
-            <a href="review-bike-dobravel-400w.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+            <a href="/review-bike-dobravel-400w" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
           </article>
           <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
             <div class="mb-4 flex items-center justify-between gap-3">
@@ -424,7 +426,7 @@
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Prioriza potência (1000W) e autonomia de 48 km.</span></li>
               </ul>
             </div>
-            <a href="review-v9-max.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+            <a href="/review-v9-max" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
           </article>
           <article class="glass group flex flex-col p-6 transition hover:-translate-y-1 hover:shadow-glow" data-category="mobilidade">
             <div class="mb-4 flex items-center justify-between gap-3">
@@ -443,10 +445,63 @@
                 <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Aro 20 ágil com motor 750W para manobras urbanas.</span></li>
               </ul>
             </div>
-            <a href="review-nado-k3.html" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
+            <a href="/review-nado-k3" class="inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow">Ler Review Completo</a>
           </article>
           </div>
 
+          <!-- INDICE-REVIEWS:INICIO -->
+          <section class="mt-12 border-t border-white/10 pt-8" aria-labelledby="indice-reviews-titulo">
+            <h2 id="indice-reviews-titulo" class="mb-6 text-2xl font-extrabold md:text-3xl">Todas as <span class="text-brand-yellow">reviews</span> por categoria</h2>
+            <div class="mb-8">
+              <div class="mb-3 flex flex-wrap items-end justify-between gap-2"><h3 class="text-lg font-extrabold text-white">Scooters e motos elétricas</h3><a href="/melhores-scooters-eletricas" class="text-sm font-semibold text-brand-yellow hover:underline">Ver ranking →</a></div>
+              <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                <li><a href="/review-scooter-x13-ex-foston" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Foston X13 EX 1000W: vale a pena?</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/foston-x13-max" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Foston X13 Max 1000W com cesto</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/scooter-eletrica-x13" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Scooter elétrica X13: preço e valor</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-scooter-x13-60v" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Scooter elétrica X13 60V</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-scooter-azm-x13" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">AZM X13 1000W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-scooter-eletrico-dx5" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Scooter elétrica Dx5 1500W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-moto-eletrica-chopper" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Scooter elétrica Chopper 1000W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-scooter-1000w-48v" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Scooter elétrica 1000W 48V</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-moto-eletrica-gt600" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Moto elétrica GT600</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-verdevento-1000w-60v" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Verdevento 1000W 60V</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+              </ul>
+            </div>
+            <div class="mb-8">
+              <div class="mb-3 flex flex-wrap items-end justify-between gap-2"><h3 class="text-lg font-extrabold text-white">Bicicletas elétricas</h3><a href="/melhores-bicicletas-eletricas" class="text-sm font-semibold text-brand-yellow hover:underline">Ver ranking →</a></div>
+              <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                <li><a href="/review-oimotoo-s6" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Oimotoo S6 dobrável 450W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-xroymexroy-ucitys" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Xroymexroy UCITYS 750W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-honeywhale-s6-s" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Honeywhale S6-S 750W fat tire</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-v9-max" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">V9 Max 1000W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-nado-k3" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Nado K3 750W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-xroymexroy-eb5" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Xroymexroy EB5</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-ouxi-v8-pro" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Ouxi V8 Pro</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-inow-v40-pro" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Inow V40 Pro</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-ouxi-gt2000" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Ouxi GT2000</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+              </ul>
+            </div>
+            <div class="mb-8">
+              <div class="mb-3 flex flex-wrap items-end justify-between gap-2"><h3 class="text-lg font-extrabold text-white">Bicicletas elétricas dobráveis</h3><a href="/melhores-bicicletas-eletricas-dobraveis" class="text-sm font-semibold text-brand-yellow hover:underline">Ver ranking →</a></div>
+              <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                <li><a href="/review-bike-dobravel-350w" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Bike elétrica dobrável 350W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-bike-dobravel-400w" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Bike elétrica dobrável 400W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-honeywhale-b20" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Honeywhale B20</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-oimotoo-a9" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Oimotoo A9</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+              </ul>
+            </div>
+            <div class="mb-8">
+              <div class="mb-3 flex flex-wrap items-end justify-between gap-2"><h3 class="text-lg font-extrabold text-white">Patinetes elétricos</h3><a href="/melhores-patinetes-eletricos" class="text-sm font-semibold text-brand-yellow hover:underline">Ver ranking →</a></div>
+              <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                <li><a href="/review-honeywhale-g3-pro" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Honeywhale G3 Pro 1640W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-foston-s09-pro-bluetooth" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Foston S09 Pro Bluetooth</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-hitway-h18" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Hitway H18 off-road 1000W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-honeywhale-m2-max-b" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Honeywhale M2 MAX-B com assento</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+                <li><a href="/review-oimotoo-patinete-350w" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Patinete Oimotoo 350W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+              </ul>
+            </div>
+          </section>
+          <!-- INDICE-REVIEWS:FIM -->
           <p id="filter-empty" class="mt-8 hidden text-sm text-brand-dim">Nenhuma análise nesta categoria ainda. Volte em breve.</p>
         </section>
       </div>
@@ -456,7 +511,7 @@
   <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
     <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
       <div>
-        <a href="index.html" class="mb-3 flex items-center gap-3">
+        <a href="/" class="mb-3 flex items-center gap-3">
           <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" width="42" height="42" alt="" class="h-10 w-10 object-contain">
           <span class="text-sm font-extrabold uppercase tracking-wider">Tudo de Melhor</span>
         </a>
@@ -465,26 +520,26 @@
       <div>
         <h4 class="mb-3 text-sm font-bold">Navegação</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="index.html" class="hover:text-brand-yellow">Home</a>
-          <a href="categorias.html" class="hover:text-brand-yellow">Rankings</a>
-          <a href="reviews.html" class="hover:text-brand-yellow">Reviews</a>
-          <a href="index.html#metodologia" class="hover:text-brand-yellow">Metodologia</a>
+          <a href="/" class="hover:text-brand-yellow">Home</a>
+          <a href="/categorias" class="hover:text-brand-yellow">Rankings</a>
+          <a href="/reviews" class="hover:text-brand-yellow">Reviews</a>
+          <a href="/#metodologia" class="hover:text-brand-yellow">Metodologia</a>
         </div>
       </div>
       <div>
         <h4 class="mb-3 text-sm font-bold">Categorias</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="melhores-bicicletas-eletricas.html" class="hover:text-brand-yellow">Bicicletas Elétricas</a>
-          <a href="melhores-patinetes-eletricos.html" class="hover:text-brand-yellow">Patinetes Elétricos</a>
+          <a href="/melhores-bicicletas-eletricas" class="hover:text-brand-yellow">Bicicletas Elétricas</a>
+          <a href="/melhores-patinetes-eletricos" class="hover:text-brand-yellow">Patinetes Elétricos</a>
         </div>
       </div>
       <div>
         <h4 class="mb-3 text-sm font-bold">Legal</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="sobre.html" class="hover:text-brand-yellow">Sobre</a>
-          <a href="privacidade.html" class="hover:text-brand-yellow">Privacidade</a>
-          <a href="trocas.html" class="hover:text-brand-yellow">Trocas e Devoluções</a>
-          <a href="contato.html" class="hover:text-brand-yellow">Contato</a>
+          <a href="/sobre" class="hover:text-brand-yellow">Sobre</a>
+          <a href="/privacidade" class="hover:text-brand-yellow">Privacidade</a>
+          <a href="/trocas" class="hover:text-brand-yellow">Trocas e Devoluções</a>
+          <a href="/contato" class="hover:text-brand-yellow">Contato</a>
         </div>
       </div>
     </div>

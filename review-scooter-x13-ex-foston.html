@@ -12,17 +12,31 @@
     gtag('config', 'AW-18490413648');
     gtag('event', 'conversion', {'send_to': 'AW-18490413648/FQ1MCJr2y5QdENCk9fBE'});
   </script>
+  <script>
+    function tdmAfiliado(a) {
+      gtag('event', 'clique_afiliado_ml', { 'link_url': a.href, 'produto': a.href.indexOf('2Ga7iza') > -1 ? 'x13-max' : 'x13-ex', 'transport_type': 'beacon' });
+      return true;
+    }
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Foston X13 EX vale a pena? Scooter elétrica 1000W com NFC, até 32 km/h e autonomia de até 50 km por carga. Confira o veredito antes de comprar!">
-  <meta property="og:title" content="Foston X13 EX Vale a Pena? Review Sincero e Preço 2026">
-  <meta property="og:description" content="Foston X13 EX vale a pena? Scooter elétrica 1000W com NFC, até 32 km/h e autonomia de até 50 km por carga. Confira o veredito antes de comprar!">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="description" content="Scooter elétrica Foston X13 EX 1000W, NFC e visual moderno: x13 preço hoje R$ 6.233 (menor histórico) x Foston X13 Max por R$ 5.799 em 10x sem juros.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Tudo de Melhor">
+  <meta property="og:url" content="https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston">
+  <meta property="og:title" content="Scooter Foston X13 EX 1000W Vale a Pena? Preço e Foston X13 Max">
+  <meta property="og:description" content="Scooter elétrica Foston X13 EX 1000W, NFC e visual moderno: x13 preço hoje R$ 6.233 (menor histórico) x Foston X13 Max por R$ 5.799 em 10x sem juros.">
+  <meta property="og:image" content="https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/jpeg" href="assets/ui/logo-site/logo-tudo-melhor.jpeg">
-  <title>Foston X13 EX Vale a Pena? Review Sincero e Preço 2026</title>
+  <title>Scooter Foston X13 EX 1000W Vale a Pena? Preço e Foston X13 Max</title>
   <link rel="canonical" href="https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://http2.mlstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -73,9 +87,14 @@
       background-size: auto, auto, 18px 18px;
       background-attachment: fixed;
     }
-    @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
-    .animate-marquee { animation: marquee 25s linear infinite; width: max-content; }
-    .animate-marquee:hover, .animate-marquee:active { animation-play-state: paused; }
+    body[data-modelo="ex"] [data-only="max"],
+    body[data-modelo="max"] [data-only="ex"] { display: none !important; }
+    .model-option[aria-checked="true"] { border-color: #FFE600; background: rgba(255, 230, 0, 0.08); box-shadow: 0 0 0 1px rgba(255, 230, 0, 0.5), 0 0 18px rgba(255, 230, 0, 0.22); }
+    .model-option[aria-checked="true"] .model-check { opacity: 1; transform: scale(1); }
+    .calc-mode[aria-checked="true"] { border-color: #FF9900; background: rgba(255, 153, 0, 0.14); color: #FFD08A; box-shadow: 0 0 0 1px rgba(255, 153, 0, 0.35); }
+    .calc-range { accent-color: #FF9900; }
+    .swap-fade { transition: opacity 0.25s ease; }
+    .swap-fade.is-swapping { opacity: 0; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
@@ -93,6 +112,7 @@
     @media (prefers-reduced-motion: reduce) {
       .btn-shine::after { display: none; }
       .pulse-dot { animation: none; }
+      .swap-fade { transition: none; }
     }
     details > summary::-webkit-details-marker { display: none; }
     details[open] .details-chevron { transform: rotate(180deg); }
@@ -102,36 +122,152 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Organization",
+        "@id": "https://www.tudodemelhor.com.br/#organization",
+        "name": "Tudo de Melhor",
+        "url": "https://www.tudodemelhor.com.br/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.tudodemelhor.com.br/assets/ui/logo-site/logo-tudo-melhor.jpeg"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.tudodemelhor.com.br/#website",
+        "name": "Tudo de Melhor",
+        "url": "https://www.tudodemelhor.com.br/",
+        "inLanguage": "pt-BR",
+        "publisher": { "@id": "https://www.tudodemelhor.com.br/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston#webpage",
+        "url": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston",
+        "name": "Scooter Foston X13 EX 1000W Vale a Pena? Preço e Foston X13 Max",
+        "description": "Scooter elétrica Foston X13 EX 1000W, NFC e visual moderno: x13 preço hoje R$ 6.233 (menor histórico) x Foston X13 Max por R$ 5.799 em 10x sem juros.",
+        "inLanguage": "pt-BR",
+        "isPartOf": { "@id": "https://www.tudodemelhor.com.br/#website" },
+        "breadcrumb": { "@id": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston#breadcrumb" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp"
+        },
+        "datePublished": "2026-09-22T16:40:00-03:00",
+        "dateModified": "2026-10-29T09:40:00-03:00"
+      },
+      {
         "@type": "Article",
-        "headline": "Foston X13 EX Vale a Pena? Review Sincero e Preço 2026",
-        "description": "Foston X13 EX vale a pena? Scooter elétrica 1000W com NFC, até 32 km/h e autonomia de até 50 km por carga. Confira o veredito antes de comprar!",
+        "@id": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston#article",
+        "headline": "Scooter elétrica X13: Foston X13 EX 1000W com NFC vale a pena? Preço e review 2026",
+        "description": "Review da scooter elétrica X13 EX Foston: motor 1000W, NFC, até 32 km/h, histórico de preço no Mercado Livre (menor preço R$ 6.233), calculadora de economia e comparativo com a Foston X13 Max.",
         "author": {
           "@type": "Organization",
           "name": "Equipe Tudo de Melhor",
           "url": "https://www.tudodemelhor.com.br/sobre"
         },
         "datePublished": "2026-09-22T16:40:00-03:00",
-        "dateModified": "2026-10-22T21:49:57-03:00",
+        "dateModified": "2026-10-29T09:40:00-03:00",
         "image": [
-          "https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp"
+          "https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp"
         ],
-        "publisher": {
-          "@type": "Organization",
-          "@id": "https://www.tudodemelhor.com.br/#organization",
-          "name": "Tudo de Melhor",
-          "url": "https://www.tudodemelhor.com.br/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://www.tudodemelhor.com.br/assets/ui/logo-site/logo-tudo-melhor.jpeg"
+        "publisher": { "@id": "https://www.tudodemelhor.com.br/#organization" },
+        "mainEntityOfPage": { "@id": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston#webpage" },
+        "about": { "@id": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston#product" },
+        "mentions": [
+          {
+            "@type": "Product",
+            "name": "Foston X13 Max",
+            "url": "https://www.tudodemelhor.com.br/foston-x13-max"
+          }
+        ],
+        "keywords": "scooter elétrica x13, x13 moto elétrica, moto elétrica x13, scooter x13, x13 preço, x13 valor, valor scooter x13, bicicleta elétrica x13, foston x13 ex, foston x13 max",
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "Product",
+        "@id": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston#product",
+        "name": "Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza Cinza-escuro",
+        "alternateName": ["Foston X13 EX", "Scooter elétrica X13 EX", "Moto elétrica X13", "X13 Ex NFC"],
+        "brand": {
+          "@type": "Brand",
+          "name": "FOSTON"
+        },
+        "model": "X13 EX",
+        "category": "Scooter elétrica",
+        "color": "Cinza / Cinza-escuro",
+        "image": [
+          "https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp",
+          "https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp"
+        ],
+        "description": "Scooter elétrica X13 EX Foston com motor 1000W, partida por NFC, velocidade máxima de até 32 km/h e design cinza / cinza-escuro. Número 2 do ranking de scooters elétricas Tudo de Melhor, badge uso urbano elegante.",
+        "additionalProperty": [
+          { "@type": "PropertyValue", "name": "Potência do motor", "value": "1000", "unitCode": "WTT" },
+          { "@type": "PropertyValue", "name": "Velocidade máxima", "value": "32", "unitText": "km/h" },
+          { "@type": "PropertyValue", "name": "Partida", "value": "NFC (aproximação)" }
+        ],
+        "review": {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "9.0",
+            "bestRating": "10",
+            "worstRating": "0"
+          },
+          "author": {
+            "@type": "Organization",
+            "name": "Tudo de Melhor",
+            "url": "https://www.tudodemelhor.com.br/"
+          },
+          "datePublished": "2026-09-22",
+          "positiveNotes": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Design elegante em cinza / cinza-escuro" },
+              { "@type": "ListItem", "position": 2, "name": "NFC (praticidade no dia a dia — confirme no lote)" },
+              { "@type": "ListItem", "position": 3, "name": "Motor 1000W para uso urbano" },
+              { "@type": "ListItem", "position": 4, "name": "32 km/h: cidade / perfil mais brando que Dx5 e Aima" },
+              { "@type": "ListItem", "position": 5, "name": "Menor preço histórico no Mercado Livre: R$ 6.233 à vista" }
+            ]
+          },
+          "negativeNotes": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Velocidade abaixo da Dx5 (55 km/h) e da Aima Tiger S5 (60 km/h)" },
+              { "@type": "ListItem", "position": 2, "name": "Parcelamento em 12x com juros (a X13 Max sai em 10x sem juros)" },
+              { "@type": "ListItem", "position": 3, "name": "NFC pode depender do seller / lote — valide no anúncio" },
+              { "@type": "ListItem", "position": 4, "name": "Autonomia / Ah pouco transparentes em alguns anúncios" },
+              { "@type": "ListItem", "position": 5, "name": "CNH: não prometemos “sem CNH” — confirme CONTRAN/local" }
+            ]
           }
         },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston"
-        }
+        "offers": {
+          "@type": "Offer",
+          "url": "https://meli.la/2DnA5yX",
+          "priceCurrency": "BRL",
+          "price": "6233.00",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": {
+            "@type": "Organization",
+            "name": "Mercado Livre"
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "BR",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 30,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          }
+        },
+        "url": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston"
       },
       {
         "@type": "BreadcrumbList",
+        "@id": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -143,171 +279,106 @@
             "@type": "ListItem",
             "position": 2,
             "name": "Scooters Elétricas",
-            "item": "https://www.tudodemelhor.com.br/melhores-scooters-eletricas.html"
+            "item": "https://www.tudodemelhor.com.br/melhores-scooters-eletricas"
           },
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "X13 Ex Foston"
+            "name": "X13 Ex Foston",
+            "item": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston"
           }
         ]
       },
       {
-        "@type": "Product",
-        "name": "Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza Cinza-escuro",
-        "brand": {
-          "@type": "Brand",
-          "name": "FOSTON"
-        },
-        "image": "https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp",
-        "description": "Scooter elétrica X13 Ex Foston com motor 1000W, NFC, velocidade até 32 km/h e design cinza / cinza-escuro. Número 3 do ranking de scooters elétricas Tudo de Melhor, badge uso urbano elegante.",
-        "review": {
-          "@type": "Review",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "9.0",
-            "bestRating": "10"
-          },
-          "author": {
-            "@type": "Organization",
-            "name": "Tudo de Melhor",
-            "url": "https://www.tudodemelhor.com.br/"
-          },
-          "positiveNotes": {
-            "@type": "ItemList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Design elegante em cinza / cinza-escuro"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "NFC (praticidade no dia a dia — confirme no lote)"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Motor 1000W para uso urbano"
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "32 km/h: cidade / perfil mais brando que Dx5 e Aima"
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "name": "Conforto de scooter no commute urbano"
-              }
-            ]
-          },
-          "negativeNotes": {
-            "@type": "ItemList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Velocidade abaixo da Dx5 (55 km/h) e da Aima Tiger S5 (60 km/h)"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Preço (~R$ 6 mil) sem ser o mais barato da faixa"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "NFC pode depender do seller / lote — valide no anúncio"
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "name": "Autonomia / Ah pouco transparentes em alguns anúncios"
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "name": "CNH: não prometemos “sem CNH” — confirme CONTRAN/local"
-              }
-            ]
-          }
-        },
-        "offers": {
-          "@type": "Offer",
-          "url": "https://meli.la/2DnA5yX",
-          "priceCurrency": "BRL",
-          "price": "6233.00",
-          "availability": "https://schema.org/InStock"
-        },
-        "url": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston"
-      },
-      {
         "@type": "FAQPage",
+        "@id": "https://www.tudodemelhor.com.br/review-scooter-x13-ex-foston#faq",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Scooter elétrica X13 Ex Foston vale a pena?",
+            "name": "Scooter elétrica Foston X13 Ex vale a pena?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sim, se você busca moto scooter elétrica 1000W com design cinza elegante, NFC e perfil urbano até 32 km/h. É a #2 do nosso ranking (nota 9.0), com badge de uso urbano elegante. Vale para o dia a dia na cidade — desde que o preço (~R$ 6.233) e a velocidade abaixo da Dx5/Aima façam sentido para o seu trajeto."
+              "text": "Sim, se você busca moto elétrica 1000W com visual cinza elegante, NFC e velocidade máxima de 32 km/h. A Foston X13 é a #2 do nosso ranking (nota 9.0), com badge de uso urbano elegante. Vale para o dia a dia — desde que o preço (R$ 6.233, menor preço histórico do anúncio) e o teto abaixo da Dx5/Aima façam sentido para o seu trajeto."
             }
           },
           {
             "@type": "Question",
-            "name": "Qual o preço da scooter elétrica X13 Ex Foston?",
+            "name": "Quanto custa X13?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "O preço observado no card afiliado do Mercado Livre fica em torno de R$ 6.233. Também vimos listagens perto de R$ 5.989 a R$ 7.999. Confira o valor do dia no anúncio rastreado, pois pode variar com promoção, frete e seller."
+              "text": "A scooter elétrica X13 EX da Foston custa R$ 6.233,00 à vista no Mercado Livre — o menor preço histórico do anúncio, verificado em 21/10/2026 — ou 12x de R$ 599,10 no cartão. A versão Foston X13 Max custava R$ 5.799 em 10x de R$ 579,90 sem juros em 28/10/2026. Outras X13 de 60V de outras marcas aparecem a partir de R$ 7.999. O valor da X13 muda com promoção, cupom, frete e vendedor."
             }
           },
           {
             "@type": "Question",
-            "name": "A X13 Ex Foston tem NFC?",
+            "name": "Qual o preço da elétrica Foston X13?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sim — o NFC é um dos diferenciais do modelo X13 Ex NFC / X13 Ex Foston em relação a rivais só com chave mecânica. Ainda assim, confirme no anúncio do lote se o seller lista NFC ativo: a função pode depender do seller e do lote."
+              "text": "O menor preço histórico que registramos para a Foston X13 EX no Mercado Livre é R$ 6.233,00 à vista (21/10/2026), contra cerca de R$ 7.900 em agosto. Também vimos listagens perto de R$ 5.989 a R$ 7.999. Confira o valor do dia no anúncio rastreado, pois pode variar com promoção, frete e seller."
             }
           },
           {
             "@type": "Question",
-            "name": "É preciso CNH para scooter elétrica X13 Ex Foston?",
+            "name": "Qual a diferença entre a X13 EX e a X13 Max?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Em certas condições o teto de 32 km/h se aproxima do perfil de veículo autopropelido; ainda assim confirme legislação CONTRAN/local e documentação antes de circular — não prometemos 'sem CNH' como garantia absoluta. Placas, seguros e exigências da sua cidade entram no pacote."
+              "text": "As duas são anunciadas com motor de 1000W e partida por NFC. As duas declaram até 32 km/h. A X13 EX tem 73 avaliações (nota 4.5) e está no menor preço histórico de R$ 6.233 à vista. A X13 Max traz cesto dianteiro e painel digital, bateria de lítio removível e carga máxima de 100 kg, e custava R$ 5.799 em 10x sem juros, mas é um anúncio recente, com 1 avaliação."
             }
           },
           {
             "@type": "Question",
-            "name": "Qual a autonomia da scooter elétrica X13 Ex Foston?",
+            "name": "A X13 é moto elétrica, scooter ou bicicleta elétrica?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Confira bateria e autonomia no anúncio. Não inventamos Ah/V quando o lote não fecha o número. O anúncio aponta pack adequado a trajetos urbanos; a autonomia prática depende de peso, subidas, velocidade e temperatura."
+              "text": "Os anúncios usam os três nomes: x13 moto elétrica, scooter elétrica X13 e bicicleta elétrica X13 (a X13 Max é vendida como “Bicicleta Elétrica Foston X13 Max Scooter”). O formato é de scooter com assento. O que define a categoria legal é velocidade máxima, potência, dimensões e a presença de pedais, então confira a ficha do anúncio e as regras do CONTRAN e da sua cidade."
             }
           },
           {
             "@type": "Question",
-            "name": "Quais as principais características da X13 Ex Foston?",
+            "name": "A Foston X13 Ex tem NFC?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Motor 1000W, velocidade máxima anunciada de até 32 km/h, NFC, cores cinza / cinza-escuro e perfil de moto scooter elétrica para mobilidade urbana. É a escolha #2 do ranking Tudo de Melhor, com badge uso urbano elegante."
+              "text": "Sim — o NFC é um dos diferenciais da Foston X13 Ex. Ainda assim, confirme no anúncio do lote se o seller lista NFC ativo: a função pode depender do seller e do lote."
             }
           },
           {
             "@type": "Question",
-            "name": "X13 Ex Foston, Dx5 ou Aima Tiger S5: qual escolher?",
+            "name": "É preciso CNH para a scooter elétrica Foston X13?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "A Aima Tiger S5 (fora do nosso ranking atual) é o pacote premium (Bosch, até 60 km/h). A Dx5 (#1, nota 9.3) prioriza custo-benefício com 1500W e até 55 km/h. A X13 Ex Foston (#2, nota 9.0) foca uso urbano elegante: 1000W, NFC e 32 km/h — perfil mais brando e design cinza."
+              "text": "Em certas condições o teto de 32 km/h se aproxima do perfil de veículo autopropelido; ainda assim confirme legislação CONTRAN/local e documentação antes de circular — não prometemos “sem CNH” como garantia absoluta."
             }
           },
           {
             "@type": "Question",
-            "name": "A scooter elétrica X13 Ex Foston é boa para o dia a dia?",
+            "name": "Qual a autonomia da Foston X13 Ex?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sim para commute urbano em ritmo de cidade, com conforto de scooter e visual cinza. Se você precisa acompanhar avenida rápida (55–60 km/h), olhe Dx5 ou Aima. Confirme NFC, bateria e frete no anúncio antes de comprar."
+              "text": "Confira bateria e autonomia no anúncio. Não inventamos Ah/V quando o lote não fecha o número. Alguns anúncios/irmãos de linha declaram autonomia de até 50 km por carga — trate como claim de listagem. A autonomia prática depende de peso, subidas, velocidade e temperatura."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais as principais características da Foston X13?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Motor potente de 1000W, velocidade máxima anunciada de até 32 km/h, NFC, cores cinza / cinza-escuro e perfil de moto elétrica para mobilidade urbana. É a escolha #2 do ranking, com badge uso urbano elegante."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Foston X13 Ex, Foston X13 Max, Dx5 ou Aima: qual escolher?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Aima Tiger S5 (fora do nosso ranking atual) é o pacote premium (Bosch, até 60 km/h). A Dx5 (#1, nota 9.3) prioriza custo-benefício com 1500W e até 55 km/h. A Foston X13 Ex (#2, nota 9.0) foca uso urbano elegante: 1000W, NFC e 32 km/h. A Foston X13 Max é a irmã com cesto e painel digital, mais barata e em 10x sem juros, mas com anúncio recente — confira a review dedicada."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A scooter elétrica Foston X13 é boa para o dia a dia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim para commute urbano em ritmo de cidade, com condução confortável e visual moderno. Se você precisa acompanhar avenida rápida (55–60 km/h), olhe Dx5 ou Aima. Confirme NFC, bateria, carregador e frete no anúncio antes de comprar."
             }
           }
         ]
@@ -315,7 +386,7 @@
       {
         "@type": "VideoObject",
         "name": "Scooter elétrica Foston X13 EX",
-        "description": "Foston X13 EX vale a pena? Scooter elétrica 1000W com NFC, até 32 km/h e autonomia de até 50 km por carga. Confira o veredito antes de comprar!",
+        "description": "Vídeo da scooter elétrica Foston X13 EX 1000W com NFC, até 32 km/h, em uso urbano.",
         "thumbnailUrl": [
           "https://i.ytimg.com/vi/1nbEgAPMfzg/hqdefault.jpg"
         ],
@@ -328,11 +399,11 @@
   }
   </script>
 </head>
-<body class="bg-brand-bg text-white font-sans antialiased min-h-screen pb-32">
+<body data-modelo="ex" class="bg-brand-bg text-white font-sans antialiased min-h-screen pb-32">
 
   <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
     <div class="mx-auto flex h-[100px] max-w-7xl items-center gap-4 px-4 lg:gap-8">
-      <a href="index.html" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
+      <a href="/" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
         <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
           <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-full w-full object-cover">
         </div>
@@ -351,10 +422,10 @@
       </button>
 
       <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
-        <a href="index.html#categorias" class="transition hover:text-white">Categorias</a>
-        <a href="categorias.html" class="transition hover:text-white">Rankings</a>
-        <a href="reviews.html" class="transition hover:text-white">Reviews</a>
-        <a href="index.html#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
+        <a href="/#categorias" class="transition hover:text-white">Categorias</a>
+        <a href="/categorias" class="transition hover:text-white">Rankings</a>
+        <a href="/reviews" class="transition hover:text-white">Reviews</a>
+        <a href="/#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
       </nav>
 
       <div class="hidden items-center gap-4 md:flex">
@@ -372,10 +443,10 @@
 
     <div id="mobile-nav" class="hidden border-t border-white/10 bg-brand-elevated/98 px-4 py-4 md:hidden">
       <nav class="flex flex-col gap-1 text-sm">
-        <a href="index.html#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Categorias</a>
-        <a href="categorias.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
-        <a href="reviews.html" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Reviews</a>
-        <a href="index.html#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
+        <a href="/#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Categorias</a>
+        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
+        <a href="/reviews" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Reviews</a>
+        <a href="/#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
       </nav>
       <label class="relative mt-3 block">
         <span class="sr-only">Buscar</span>
@@ -392,9 +463,9 @@
   <main class="px-4 pt-8">
     <div class="mx-auto max-w-6xl">
       <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
-        <a href="index.html" class="hover:text-brand-yellow">Início</a>
+        <a href="/" class="hover:text-brand-yellow">Início</a>
         <span aria-hidden="true">/</span>
-        <a href="melhores-scooters-eletricas.html" class="hover:text-brand-yellow">Scooters Elétricas</a>
+        <a href="/melhores-scooters-eletricas" class="hover:text-brand-yellow">Scooters Elétricas</a>
         <span aria-hidden="true">/</span>
         <span class="text-white" aria-current="page">X13 Ex Foston</span>
       </nav>
@@ -403,9 +474,50 @@
         <div class="glass relative order-2 overflow-hidden p-6 md:order-1 md:p-10">
           <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/10 blur-3xl"></div>
           <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · #2 do ranking scooters 2026</p>
-          <h1 class="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Foston X13 Ex: scooter elétrica Foston X13 1000W com NFC vale a pena?</h1>
-          <p class="mb-6 hidden max-w-2xl text-lg text-brand-muted md:block">
-            A <strong>elétrica Foston X13</strong> (modelo <strong>Foston X13 Ex</strong>) é a nossa escolha #2 entre as melhores scooters elétricas, com badge de <strong>uso urbano elegante</strong>: <strong>moto elétrica</strong> 1000W com NFC, até 32 km/h e visual cinza / cinza-escuro — preço observado perto de R$ 6.233 no Mercado Livre.
+          <h1 class="mb-5 text-3xl font-extrabold leading-tight md:text-5xl">Scooter elétrica X13: Foston X13 EX 1000W com NFC vale a pena? Preço e review 2026</h1>
+
+          <!-- SELETOR DE MODELO -->
+          <div class="relative mb-4">
+            <p id="modelo-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Escolha o modelo da linha X13: <span data-bind="modelName" class="text-white">X13 EX</span></p>
+            <div class="grid grid-cols-2 gap-2" role="radiogroup" aria-labelledby="modelo-label">
+              <button type="button" role="radio" aria-checked="true" data-model="ex" class="model-option relative flex flex-col items-start gap-1 rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-left transition hover:border-brand-yellow/40">
+                <span class="model-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
+                <span class="rounded bg-emerald-400/15 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-emerald-300">📉 Menor preço histórico</span>
+                <span class="text-sm font-extrabold text-white">Foston X13 EX</span>
+                <span class="text-base font-black text-white">R$ 6.233 <span class="text-[11px] font-bold text-emerald-300">à vista</span></span>
+                <span class="text-[11px] text-brand-dim">★ 4.5 · 73 avaliações · nota 9.0</span>
+              </button>
+              <button type="button" role="radio" aria-checked="false" data-model="max" class="model-option relative flex flex-col items-start gap-1 rounded-xl border border-white/10 bg-white/5 px-3 py-3 text-left transition hover:border-brand-yellow/40">
+                <span class="model-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
+                <span class="rounded bg-sky-400/15 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-sky-300">🏷️ Mais barata · 10x sem juros</span>
+                <span class="text-sm font-extrabold text-white">Foston X13 Max</span>
+                <span class="text-base font-black text-white">R$ 5.799 <span class="text-[11px] font-bold text-emerald-300">10x R$ 579,90</span></span>
+                <span class="text-[11px] text-brand-dim">cesto + painel digital · anúncio recente</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD DE PREÇO -->
+          <div class="relative mb-6 overflow-hidden rounded-2xl border border-emerald-400/30 bg-emerald-400/[0.06] p-5 shadow-glow-emerald">
+            <div class="swap-fade" data-swap>
+              <p class="mb-1 text-xs text-brand-dim" data-bind="anchor">Era ~R$ 7.900 em agosto · <span class="font-bold text-emerald-300">caiu R$ 1.667 (-21%)</span></p>
+              <div class="flex flex-wrap items-end gap-x-3 gap-y-1">
+                <span class="text-4xl font-black leading-none text-white md:text-5xl" data-bind="priceBig">R$ 6.233<span class="text-2xl md:text-3xl">,00</span></span>
+                <span class="pb-1 text-sm font-bold text-emerald-300" data-bind="priceLabel">à vista</span>
+              </div>
+              <div class="mt-2" data-bind="inst"><p class="text-base font-bold text-brand-yellow">ou 12x de R$ 599,10 no cartão</p></div>
+              <p class="mt-1 flex items-center gap-2 text-xs text-brand-dim"><span class="pulse-dot inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-400" aria-hidden="true"></span><span data-bind="delivery">Frete grátis no checkout que simulamos em 21/10 (economia de R$ 314 · confira o seu CEP)</span></p>
+              <a href="https://meli.la/2DnA5yX" data-cta rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" class="btn-shine mt-5 inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition-all hover:scale-[1.02]">
+                <span data-bind="ctaText">Ver menor preço da X13 EX no Mercado Livre</span>
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <p class="mt-2 text-center text-[11px] text-brand-dim">Abre o anúncio em nova aba · Compra Garantida e devolução grátis pelo Mercado Livre</p>
+              <p class="mt-3 text-center text-sm" data-only="max"><a href="/foston-x13-max" class="font-bold text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Ler a review completa da Foston X13 Max →</a></p>
+            </div>
+          </div>
+
+          <p class="mb-6 max-w-2xl text-base text-brand-muted md:text-lg">
+            A <strong>elétrica Foston X13</strong> (modelo <strong>Foston X13 Ex</strong>) é a nossa escolha #2 entre as melhores scooters elétricas, com badge de <strong>uso urbano elegante</strong>: <strong>moto elétrica</strong> 1000W com NFC, até 32 km/h e visual cinza / cinza-escuro — menor preço histórico de R$ 6.233 no Mercado Livre. Quer pagar menos e parcelar sem juros? Compare com a <a href="/foston-x13-max" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Foston X13 Max</a>.
           </p>
           <div class="mb-3 flex flex-wrap gap-2">
             <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Oferta Verificada no Mercado Livre</span>
@@ -413,15 +525,13 @@
           <div class="mb-6 flex flex-wrap gap-2">
             <span class="rounded-md bg-brand-yellow px-3 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#2 Ranking</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Nota editorial 9.0</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">~R$ 6.233</span>
+            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">★ 4.5 · 73 avaliações no ML</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Uso urbano elegante</span>
             <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">1000W · NFC · 32 km/h</span>
           </div>
-          <div class="flex flex-col gap-3 sm:flex-row">
-            <a class="btn-shine inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2DnA5yX">Comprar no Mercado Livre</a>
-          </div>
-          <div class="product-gallery mt-4" aria-label="Galeria de fotos do produto" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp","alt":"Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza — vista principal"},{"url":"https://http2.mlstatic.com/D_NQ_NP_683880-MLA116029400205_082026-O.webp","alt":"X13 Ex Foston — foto do anúncio no Mercado Livre"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp","alt":"Scooter elétrica X13 Ex Foston — foto de comprador / produto 1"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp","alt":"Moto scooter elétrica Foston 1000W NFC — foto 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_746345-MLA114900892052_082026-F.webp","alt":"X13 Ex NFC cinza — detalhe visual 3"}]'>
-            <p class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Fotos do produto</p>
+
+          <div class="product-gallery" aria-label="Galeria de fotos da Foston X13 EX" data-only="ex" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp","alt":"Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza — vista principal"},{"url":"https://http2.mlstatic.com/D_NQ_NP_683880-MLA116029400205_082026-O.webp","alt":"X13 Ex Foston — foto do anúncio no Mercado Livre"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp","alt":"Scooter elétrica X13 Ex Foston — foto de comprador / produto 1"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp","alt":"Moto scooter elétrica Foston 1000W NFC — foto 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_746345-MLA114900892052_082026-F.webp","alt":"X13 Ex NFC cinza — detalhe visual 3"}]'>
+            <p class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Fotos da X13 EX</p>
             <div class="flex flex-wrap gap-2">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp" alt="Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza — vista principal" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="0" loading="eager" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
               <img src="https://http2.mlstatic.com/D_NQ_NP_683880-MLA116029400205_082026-O.webp" alt="X13 Ex Foston — foto do anúncio no Mercado Livre" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
@@ -430,32 +540,44 @@
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_746345-MLA114900892052_082026-F.webp" alt="X13 Ex NFC cinza — detalhe visual 3" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
             </div>
           </div>
+          <div class="product-gallery" aria-label="Galeria de fotos da Foston X13 Max" data-only="max" data-gallery-images='[{"url":"assets/produtos/LP/x13-max-capa-poster.webp","alt":"Foston X13 Max 1000W com NFC — capa do vídeo"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-3.webp","alt":"Foston X13 Max com cesto dianteiro — foto de comprador"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-2.webp","alt":"Foston X13 Max — painel digital e guidão"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-1.webp","alt":"Foston X13 Max preta — foto de comprador"}]'>
+            <p class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Fotos da X13 Max</p>
+            <div class="flex flex-wrap gap-2">
+              <img src="assets/produtos/LP/x13-max-capa-poster.webp" alt="Foston X13 Max 1000W com NFC — capa do vídeo" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="0" loading="lazy" decoding="async" width="64" height="64">
+              <img src="assets/produtos/LP/x13-max-compradores/comprador-3.webp" alt="Foston X13 Max com cesto dianteiro — foto de comprador" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="1" loading="lazy" decoding="async" width="64" height="64">
+              <img src="assets/produtos/LP/x13-max-compradores/comprador-2.webp" alt="Foston X13 Max — painel digital e guidão" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="2" loading="lazy" decoding="async" width="64" height="64">
+              <img src="assets/produtos/LP/x13-max-compradores/comprador-1.webp" alt="Foston X13 Max preta — foto de comprador" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="3" loading="lazy" decoding="async" width="64" height="64">
+            </div>
+          </div>
         </div>
 
         <div class="glass relative order-1 flex flex-col self-center overflow-hidden p-5 shadow-glow-emerald md:order-2 md:p-6">
           <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-brand-yellow/5"></div>
           <div class="relative flex min-h-0 flex-1 items-center justify-center">
             <div class="aspect-video w-full overflow-hidden rounded-xl shadow-glow relative">
-              <iframe class="absolute inset-0 h-full w-full" src="https://www.youtube.com/embed/1nbEgAPMfzg?si=wRbyQxMRyJqF1gtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe class="absolute inset-0 h-full w-full" src="https://www.youtube.com/embed/1nbEgAPMfzg?si=wRbyQxMRyJqF1gtw" title="Vídeo da scooter elétrica Foston X13 EX" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
-          <p class="relative mt-4 text-center text-xs text-brand-dim">X13 Ex Foston · 1000W · NFC · até 32 km/h</p>
+          <p class="relative mt-4 text-center text-xs text-brand-dim" data-bind="videoCaption">Vídeo da Foston X13 EX · 1000W · NFC · até 32 km/h</p>
         </div>
       </header>
 
       <nav class="glass mb-8 flex items-center gap-2 overflow-x-auto snap-x whitespace-nowrap scrollbar-hide p-3 sm:p-4" aria-label="Índice da review">
         <p class="shrink-0 snap-start pr-1 text-[10px] font-bold uppercase tracking-wider text-brand-dim">Índice</p>
         <a href="#veredito" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Veredito</a>
+        <a href="#historico" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Histórico de preço</a>
+        <a href="#economia" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Calculadora</a>
         <a href="#compradores" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Compradores</a>
         <a href="#pros-contras" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Prós e Contras</a>
         <a href="#especificacoes" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Especificações</a>
+        <a href="#ofertas" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Onde comprar</a>
         <a href="#analise" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Análise</a>
         <a href="#faq" class="inline-flex min-h-11 shrink-0 snap-start items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">FAQ</a>
       </nav>
 
       <section id="veredito" class="mb-10 scroll-mt-28 grid grid-cols-2 gap-4 md:grid-cols-4" aria-label="Veredito rápido">
         <article class="glass col-span-2 p-6 md:row-span-2">
-          <h2 class="mb-4 text-sm font-bold uppercase tracking-wide text-brand-dim">Veredito rápido</h2>
+          <h2 class="mb-4 text-sm font-bold uppercase tracking-wide text-brand-dim">Veredito rápido: a scooter X13 EX vale a pena?</h2>
           <div class="flex items-end gap-4">
             <span class="text-6xl font-black leading-none text-brand-yellow drop-shadow-[0_0_15px_rgba(255,230,0,0.4)]">9.0</span>
             <div class="pb-1">
@@ -479,109 +601,244 @@
         </article>
       </section>
 
+      <!-- HISTÓRICO DE PREÇO -->
       <section id="historico" class="mb-10 scroll-mt-28" aria-labelledby="historico-titulo">
         <div class="glass overflow-hidden p-5 md:p-7">
           <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
             <div>
-              <p id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</p>
-              <p class="mt-1 text-xs text-brand-dim">Anúncio MLB74127236 · ago a out/2026</p>
+              <h2 id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 X13 preço: histórico real no Mercado Livre</h2>
+              <p class="mt-1 text-xs text-brand-dim" data-only="ex">Foston X13 EX · anúncio MLB74127236 · ago a out/2026</p>
+              <p class="mt-1 text-xs text-brand-dim" data-only="max">Foston X13 Max · monitoramento iniciado em 28/10/2026</p>
             </div>
-            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300">-21% desde agosto</span>
+            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300" data-only="ex">-21% desde agosto</span>
+            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300" data-only="max">Bom preço no monitor</span>
           </div>
 
-          <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base">
-            🟢 Menor preço histórico: R$ 6.233,00 à vista ou 12x de R$ 599,10
+          <div data-only="ex">
+            <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base">
+              🟢 Menor preço histórico: R$ 6.233,00 à vista ou 12x de R$ 599,10
+            </div>
+
+            <div class="mb-5 grid grid-cols-2 gap-3">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Agosto/2026</p>
+                <p class="mt-1 text-xl font-extrabold text-brand-dim line-through decoration-orange-400/80 md:text-2xl">~R$ 7.900</p>
+              </div>
+              <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-center">
+                <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Hoje · 21/10</p>
+                <p class="mt-1 text-xl font-extrabold text-emerald-300 md:text-2xl">R$ 6.233</p>
+              </div>
+            </div>
+
+            <figure>
+              <svg viewBox="0 0 600 240" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço da Foston X13 EX: cerca de R$ 7.900 em 04/08, R$ 6.390 em 12/08, cerca de R$ 7.330 entre 08/09 e 19/09 e R$ 6.233 em 21/10">
+                <defs>
+                  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <g stroke="rgba(255,255,255,0.08)" stroke-width="1">
+                  <line x1="40" y1="20" x2="580" y2="20"/>
+                  <line x1="40" y1="62.5" x2="580" y2="62.5"/>
+                  <line x1="40" y1="105" x2="580" y2="105"/>
+                  <line x1="40" y1="147.5" x2="580" y2="147.5"/>
+                  <line x1="40" y1="190" x2="580" y2="190"/>
+                </g>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end">
+                  <text x="36" y="25">8k</text>
+                  <text x="36" y="67.5">7,5k</text>
+                  <text x="36" y="110">7k</text>
+                  <text x="36" y="152.5">6,5k</text>
+                  <text x="36" y="195">6k</text>
+                </g>
+                <polygon fill="url(#area)" points="56,28.5 141,156.9 226,77 311,77 396,77 481,77 566,170.2 566,190 56,190"/>
+                <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56,28.5 141,156.9 226,77 311,77 396,77 481,77 566,170.2"/>
+                <g fill="#34d399">
+                  <circle cx="56" cy="28.5" r="5"/>
+                  <circle cx="141" cy="156.9" r="4"/>
+                  <circle cx="226" cy="77" r="4"/>
+                  <circle cx="311" cy="77" r="4"/>
+                  <circle cx="396" cy="77" r="4"/>
+                  <circle cx="481" cy="77" r="4"/>
+                </g>
+                <circle cx="566" cy="170.2" r="10" fill="#34d399" fill-opacity="0.25"/>
+                <circle cx="566" cy="170.2" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
+                <g font-family="Inter, sans-serif" font-weight="800" font-size="20">
+                  <text x="68" y="34" fill="#D5D9D9">~R$ 7.900</text>
+                  <text x="546" y="186" fill="#6ee7b7" text-anchor="end">R$ 6.233</text>
+                </g>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="middle">
+                  <text x="56" y="218">04/08</text>
+                  <text x="141" y="218">12/08</text>
+                  <text x="226" y="218">08/09</text>
+                  <text x="311" y="218">09/09</text>
+                  <text x="396" y="218">10/09</text>
+                  <text x="481" y="218">19/09</text>
+                  <text x="562" y="218" fill="#6ee7b7" font-weight="700">21/10</text>
+                </g>
+              </svg>
+              <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+                <strong class="text-brand-muted">Transparência:</strong> histórico coletado do monitor de preço do anúncio no Mercado Livre em 21/10/2026. No checkout simulado, o frete (R$ 314) apareceu como <strong class="text-brand-muted">grátis</strong> — o valor pode variar conforme o seu CEP. A venda, entrega e garantia são feitas pelo vendedor do anúncio no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar a qualquer momento — confira tudo no anúncio antes de pagar.
+              </figcaption>
+            </figure>
           </div>
 
-          <div class="mb-5 grid grid-cols-2 gap-3">
-            <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
-              <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Agosto/2026</p>
-              <p class="mt-1 text-xl font-extrabold text-brand-dim line-through decoration-orange-400/80 md:text-2xl">~R$ 7.900</p>
+          <div data-only="max">
+            <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base">
+              🟢 Menor preço registrado: R$ 5.799 em 10x de R$ 579,90 sem juros
             </div>
-            <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-center">
-              <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Hoje · 21/10</p>
-              <p class="mt-1 text-xl font-extrabold text-emerald-300 md:text-2xl">R$ 6.233</p>
-            </div>
-          </div>
 
-          <figure>
-            <svg viewBox="0 0 600 240" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço: cerca de R$ 7.900 em 04/08, R$ 6.390 em 12/08, cerca de R$ 7.330 entre 08/09 e 19/09 e R$ 6.233 em 21/10">
-              <defs>
-                <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/>
-                  <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <g stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <line x1="40" y1="20" x2="580" y2="20"/>
-                <line x1="40" y1="62.5" x2="580" y2="62.5"/>
-                <line x1="40" y1="105" x2="580" y2="105"/>
-                <line x1="40" y1="147.5" x2="580" y2="147.5"/>
-                <line x1="40" y1="190" x2="580" y2="190"/>
-              </g>
-              <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end">
-                <text x="36" y="25">8k</text>
-                <text x="36" y="67.5">7,5k</text>
-                <text x="36" y="110">7k</text>
-                <text x="36" y="152.5">6,5k</text>
-                <text x="36" y="195">6k</text>
-              </g>
-              <polygon fill="url(#area)" points="56,28.5 141,156.9 226,77 311,77 396,77 481,77 566,170.2 566,190 56,190"/>
-              <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56,28.5 141,156.9 226,77 311,77 396,77 481,77 566,170.2"/>
-              <g fill="#34d399">
-                <circle cx="56" cy="28.5" r="5"/>
-                <circle cx="141" cy="156.9" r="4"/>
-                <circle cx="226" cy="77" r="4"/>
-                <circle cx="311" cy="77" r="4"/>
-                <circle cx="396" cy="77" r="4"/>
-                <circle cx="481" cy="77" r="4"/>
-              </g>
-              <circle cx="566" cy="170.2" r="10" fill="#34d399" fill-opacity="0.25"/>
-              <circle cx="566" cy="170.2" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
-              <g font-family="Inter, sans-serif" font-weight="800" font-size="20">
-                <text x="68" y="34" fill="#D5D9D9">~R$ 7.900</text>
-                <text x="546" y="186" fill="#6ee7b7" text-anchor="end">R$ 6.233</text>
-              </g>
-              <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="middle">
-                <text x="56" y="218">04/08</text>
-                <text x="141" y="218">12/08</text>
-                <text x="226" y="218">08/09</text>
-                <text x="311" y="218">09/09</text>
-                <text x="396" y="218">10/09</text>
-                <text x="481" y="218">19/09</text>
-                <text x="562" y="218" fill="#6ee7b7" font-weight="700">21/10</text>
-              </g>
-            </svg>
-            <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
-              <strong class="text-brand-muted">Transparência:</strong> histórico coletado do monitor de preço do anúncio no Mercado Livre em 21/10/2026. No checkout simulado, o frete (R$ 314) apareceu como <strong class="text-brand-muted">grátis</strong> — o valor pode variar conforme o seu CEP. A venda, entrega e garantia são feitas pelo vendedor do anúncio no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar a qualquer momento — confira tudo no anúncio antes de pagar.
-            </figcaption>
-          </figure>
+            <div class="mb-5 grid grid-cols-3 gap-3">
+              <div class="rounded-xl border border-white/10 bg-white/5 p-3 text-center md:p-4">
+                <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">De (anúncio)</p>
+                <p class="mt-1 text-lg font-extrabold text-brand-dim line-through decoration-orange-400/80 md:text-2xl">R$ 6.499</p>
+              </div>
+              <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-3 text-center md:p-4">
+                <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Hoje · 28/10</p>
+                <p class="mt-1 text-lg font-extrabold text-emerald-300 md:text-2xl">R$ 5.799</p>
+              </div>
+              <div class="rounded-xl border border-sky-400/40 bg-sky-400/10 p-3 text-center md:p-4">
+                <p class="text-[10px] font-bold uppercase tracking-wider text-sky-300">Com cupom</p>
+                <p class="mt-1 text-lg font-extrabold text-sky-300 md:text-2xl">R$ 5.649</p>
+              </div>
+            </div>
+
+            <figure>
+              <svg viewBox="0 0 600 240" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço da Foston X13 Max: R$ 5.799 em 28/10, menor preço registrado e preço atual; preço de tabela do anúncio R$ 6.499 e R$ 5.649 com cupom de seguidor da loja">
+                <defs>
+                  <linearGradient id="areaMax" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#34d399" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#34d399" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <g stroke="rgba(255,255,255,0.08)" stroke-width="1">
+                  <line x1="48" y1="20" x2="580" y2="20"/>
+                  <line x1="48" y1="62.5" x2="580" y2="62.5"/>
+                  <line x1="48" y1="105" x2="580" y2="105"/>
+                  <line x1="48" y1="147.5" x2="580" y2="147.5"/>
+                  <line x1="48" y1="190" x2="580" y2="190"/>
+                </g>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end">
+                  <text x="44" y="25">6,5k</text>
+                  <text x="44" y="67.5">6,25k</text>
+                  <text x="44" y="110">6k</text>
+                  <text x="44" y="152.5">5,75k</text>
+                  <text x="44" y="195">5,5k</text>
+                </g>
+                <line x1="64" y1="20.2" x2="566" y2="20.2" stroke="#8B95A1" stroke-width="1.5" stroke-dasharray="6 6"/>
+                <text x="72" y="40" fill="#AAB3BD" font-size="14" font-weight="700" font-family="Inter, sans-serif">De R$ 6.499 no anúncio</text>
+                <line x1="64" y1="164.7" x2="566" y2="164.7" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.85"/>
+                <text x="72" y="183" fill="#7DD3FC" font-size="14" font-weight="700" font-family="Inter, sans-serif">Com cupom de seguidor: R$ 5.649</text>
+                <polygon fill="url(#areaMax)" points="64,139.2 566,139.2 566,190 64,190"/>
+                <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linecap="round" points="64,139.2 566,139.2"/>
+                <circle cx="64" cy="139.2" r="5" fill="#34d399"/>
+                <circle cx="566" cy="139.2" r="10" fill="#34d399" fill-opacity="0.25"/>
+                <circle cx="566" cy="139.2" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
+                <text x="552" y="128" fill="#6ee7b7" font-size="20" font-weight="800" font-family="Inter, sans-serif" text-anchor="end">R$ 5.799</text>
+                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif">
+                  <text x="64" y="218" text-anchor="start">28/10 · início</text>
+                  <text x="570" y="218" text-anchor="end" fill="#6ee7b7" font-weight="700">Hoje</text>
+                </g>
+              </svg>
+              <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+                <strong class="text-brand-muted">Transparência:</strong> o monitor de preço começou a registrar este anúncio em 28/10/2026, com R$ 5.799 como menor preço histórico e preço atual (classificado como “bom preço”). O anúncio mostrava R$ 6.499 como preço de tabela e R$ 5.649 com o cupom de seguidor da loja. A venda, entrega e garantia são feitas pelo vendedor do anúncio no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e cupom podem mudar a qualquer momento — confira tudo no anúncio antes de pagar.
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
-      <section id="compradores" class="mb-10 scroll-mt-28" aria-label="Fotos de quem comprou">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-brand-yellow">quem comprou</span></h2>
-        <div class="glass p-5 md:p-6">
-          <p class="mb-4 text-sm text-brand-muted">Imagens no estilo de quem comprou — o tipo de prova social que você vê em Instagram e no anúncio — e fotos do produto no contexto real de uso.</p>
-          <div class="overflow-x-auto scroll-smooth scrollbar-hide w-full relative">
-            <div class="flex gap-4 animate-marquee">
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_746345-MLA114900892052_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_618410-MLA114900863492_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_813715-MLA116374497909_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_746345-MLA114900892052_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_618410-MLA114900863492_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_813715-MLA116374497909_082026-F.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+      <!-- CALCULADORA DE ECONOMIA -->
+      <section id="economia" class="mb-10 scroll-mt-28" aria-labelledby="economia-titulo">
+        <div id="calc-economia" class="glass overflow-hidden p-5 md:p-7" data-price="6233" data-produto="x13-ex">
+          <div class="mb-5">
+            <h2 id="economia-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">🧮 Economia: quanto a moto elétrica X13 economiza por mês</h2>
+            <p class="mt-1 text-sm text-brand-muted">Simule o seu trajeto e veja quanto você deixa de gastar trocando o transporte atual pela <span data-bind="modelFull">Foston X13 EX</span>.</p>
+          </div>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-[1.05fr_0.95fr]">
+            <div class="space-y-5">
+              <div>
+                <p id="calc-modo-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Como você se desloca hoje?</p>
+                <div class="grid grid-cols-2 gap-2 sm:grid-cols-4" role="radiogroup" aria-labelledby="calc-modo-label">
+                  <button type="button" role="radio" aria-checked="true" data-mode="app" class="calc-mode rounded-xl border border-white/10 bg-white/5 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-brand-orange/50">🚗 Uber/99</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="moto" class="calc-mode rounded-xl border border-white/10 bg-white/5 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-brand-orange/50">🏍️ Moto a gasolina</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="carro" class="calc-mode rounded-xl border border-white/10 bg-white/5 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-brand-orange/50">🚙 Carro</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="onibus" class="calc-mode rounded-xl border border-white/10 bg-white/5 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-brand-orange/50">🚌 Ônibus</button>
+                </div>
+              </div>
+              <div>
+                <div class="mb-1.5 flex items-baseline justify-between"><label for="calc-km" class="text-sm font-bold text-white">Quilômetros por dia (ida e volta)</label><output id="calc-km-out" for="calc-km" class="text-lg font-black text-brand-orange">12 km</output></div>
+                <input id="calc-km" type="range" min="2" max="60" step="1" value="12" class="calc-range w-full">
+                <div class="mt-1 flex justify-between text-[11px] text-brand-dim"><span>2 km</span><span>uso urbano de bairro</span><span>60 km</span></div>
+              </div>
+              <div>
+                <div class="mb-1.5 flex items-baseline justify-between"><label for="calc-dias" class="text-sm font-bold text-white">Dias de uso por mês</label><output id="calc-dias-out" for="calc-dias" class="text-lg font-black text-brand-orange">22 dias</output></div>
+                <input id="calc-dias" type="range" min="4" max="30" step="1" value="22" class="calc-range w-full">
+              </div>
+            </div>
+            <div class="rounded-2xl border border-brand-yellow/20 bg-gradient-to-br from-brand-yellow/10 via-transparent to-brand-orange/10 p-5" aria-live="polite">
+              <div class="grid grid-cols-2 gap-3 text-center">
+                <div class="rounded-xl border border-white/10 bg-white/5 p-3"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Você gasta hoje</p><p id="calc-atual" class="mt-1 text-lg font-extrabold text-brand-dim line-through decoration-orange-400/70">R$ 0</p><p class="text-[11px] text-brand-dim">por mês</p></div>
+                <div class="rounded-xl border border-white/10 bg-white/5 p-3"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Com a scooter</p><p id="calc-scooter" class="mt-1 text-lg font-extrabold text-white">R$ 0</p><p class="text-[11px] text-brand-dim">de energia/mês</p></div>
+              </div>
+              <div class="mt-4 text-center">
+                <p class="text-xs font-extrabold uppercase tracking-[0.14em] text-emerald-300">Economia estimada</p>
+                <p class="mt-1 text-4xl font-black leading-none text-emerald-300 md:text-5xl"><span id="calc-eco">R$ 0</span><span class="text-base font-bold text-brand-dim">/mês</span></p>
+                <p class="mt-1 text-sm font-semibold text-brand-muted"><span id="calc-ano">R$ 0</span> por ano</p>
+              </div>
+              <div class="mt-5">
+                <div class="mb-1 flex justify-between text-[11px] font-bold text-brand-dim"><span>Retorno do investimento</span><span id="calc-meses-label">—</span></div>
+                <div class="relative h-3 overflow-hidden rounded-full bg-white/10"><div id="calc-bar" class="h-3 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600 transition-all duration-500" style="width:0%"></div></div>
+              </div>
+              <p id="calc-conclusao" class="mt-4 rounded-xl bg-white/5 p-3 text-center text-sm font-bold leading-snug text-white ring-1 ring-emerald-400/30"></p>
             </div>
           </div>
+          <p class="mt-4 text-[11px] leading-relaxed text-brand-dim"><strong class="text-brand-muted">Premissas da estimativa:</strong> gasolina a R$ 6,30/l, moto 35 km/l, carro 11 km/l, app a R$ 2,30 por km, ônibus a R$ 5,00 por viagem (2 por dia) e energia a R$ 0,95/kWh, com consumo estimado de 0,025 kWh/km na scooter. Não inclui manutenção, IPVA, seguro e estacionamento, que aumentam a economia em relação ao carro e à moto. O retorno usa o preço de <span data-bind="calcPrice">R$ 6.233 à vista</span>. Confira a autonomia da bateria no anúncio antes de planejar trajetos longos.</p>
+        </div>
+      </section>
+
+      <!-- PROVA SOCIAL -->
+      <section id="compradores" class="mb-10 scroll-mt-28" aria-labelledby="compradores-titulo">
+        <div class="mb-6 flex items-end justify-between gap-3">
+          <h2 id="compradores-titulo" class="text-2xl font-extrabold md:text-3xl">Fotos de quem comprou a <span class="text-brand-yellow">scooter X13</span></h2>
+          <div class="hidden gap-2 md:flex">
+            <button type="button" data-slider-prev class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white transition hover:border-brand-yellow/50 hover:text-brand-yellow" aria-label="Fotos anteriores">&#8249;</button>
+            <button type="button" data-slider-next class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white transition hover:border-brand-yellow/50 hover:text-brand-yellow" aria-label="Próximas fotos">&#8250;</button>
+          </div>
+        </div>
+        <div class="glass p-5 md:p-6">
+          <div data-only="ex">
+            <p class="mb-4 flex flex-wrap items-center gap-2 text-sm text-brand-muted"><span class="text-brand-yellow">★★★★½</span> Foston X13 EX · 4.5 de 5 · 73 avaliações no Mercado Livre · fotos do produto no contexto real de uso</p>
+            <div class="product-gallery" aria-label="Fotos de compradores da Foston X13 EX" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp","alt":"Foston X13 EX — foto de comprador 1"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp","alt":"Foston X13 EX — foto de comprador 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_746345-MLA114900892052_082026-F.webp","alt":"Foston X13 EX — foto de comprador 3"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_618410-MLA114900863492_082026-F.webp","alt":"Foston X13 EX — foto de comprador 4"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_813715-MLA116374497909_082026-F.webp","alt":"Foston X13 EX — foto de comprador 5"}]'>
+              <div data-buyers-track class="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-1 pb-1">
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_799032-MLA116279075387_082026-F.webp" alt="Foston X13 EX — foto de comprador 1" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_631495-MLA114900582608_082026-F.webp" alt="Foston X13 EX — foto de comprador 2" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_746345-MLA114900892052_082026-F.webp" alt="Foston X13 EX — foto de comprador 3" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_618410-MLA114900863492_082026-F.webp" alt="Foston X13 EX — foto de comprador 4" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_813715-MLA116374497909_082026-F.webp" alt="Foston X13 EX — foto de comprador 5" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              </div>
+            </div>
+          </div>
+          <div data-only="max">
+            <p class="mb-4 flex flex-wrap items-center gap-2 text-sm text-brand-muted"><span class="text-brand-yellow">★★★★★</span> Foston X13 Max · 5.0 de 5 · 1 avaliação no anúncio · fotos de quem já está rodando com ela</p>
+            <div class="product-gallery" aria-label="Fotos de compradores da Foston X13 Max" data-gallery-images='[{"url":"assets/produtos/LP/x13-max-compradores/comprador-1.webp","alt":"Foston X13 Max preta — foto de comprador 1"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-2.webp","alt":"Foston X13 Max — painel e guidão, foto de comprador 2"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-3.webp","alt":"Foston X13 Max com cesto — foto de comprador 3"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-4.webp","alt":"Foston X13 Max cinza — foto de comprador 4"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-5.webp","alt":"Foston X13 Max branca — foto de comprador 5"},{"url":"assets/produtos/LP/x13-max-compradores/comprador-6.webp","alt":"Compradora pilotando a Foston X13 Max — foto 6"}]'>
+              <div data-buyers-track class="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-1 pb-1">
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-1.webp" alt="Foston X13 Max preta — foto de comprador 1" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-2.webp" alt="Foston X13 Max — painel e guidão, foto de comprador 2" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-3.webp" alt="Foston X13 Max com cesto — foto de comprador 3" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-4.webp" alt="Foston X13 Max cinza — foto de comprador 4" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-5.webp" alt="Foston X13 Max branca — foto de comprador 5" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="4" loading="lazy" decoding="async" width="240" height="240"></figure>
+                <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="assets/produtos/LP/x13-max-compradores/comprador-6.webp" alt="Compradora pilotando a Foston X13 Max — foto 6" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="5" loading="lazy" decoding="async" width="240" height="240"></figure>
+              </div>
+            </div>
+          </div>
+          <p class="mt-3 text-[11px] text-brand-dim md:hidden">Arraste para o lado · toque para ampliar →</p>
         </div>
       </section>
 
       <section id="pros-contras" class="mb-10 scroll-mt-28">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-brand-yellow">contras</span> da Foston X13 Ex</h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-brand-yellow">contras</span> da scooter elétrica X13 EX</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div class="glass border-emerald-500/30 p-6 shadow-glow-emerald">
             <h3 class="mb-4 text-lg font-bold text-emerald-300">Pontos fortes</h3>
@@ -591,13 +848,14 @@
               <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Motor 1000W para uso urbano</li>
               <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>32 km/h: cidade / perfil mais brando que Dx5 e Aima</li>
               <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Conforto de scooter no commute urbano</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Menor preço histórico no anúncio: R$ 6.233 à vista, com 73 avaliações (nota 4.5)</li>
             </ul>
           </div>
           <div class="glass border-orange-500/30 p-6">
             <h3 class="mb-4 text-lg font-bold text-orange-300">Limitações</h3>
             <ul class="space-y-3 text-sm text-brand-muted">
               <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Velocidade abaixo da Dx5 (55 km/h) e da Aima Tiger S5 (60 km/h)</li>
-              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Preço (~R$ 6 mil) sem ser o mais barato da faixa</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Parcelamento em 12x com juros — a X13 Max sai em 10x sem juros</li>
               <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>NFC pode depender do seller / lote — valide no anúncio</li>
               <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Autonomia / Ah pouco transparentes em alguns anúncios</li>
               <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>CNH: não prometemos “sem CNH” — confirme CONTRAN/local</li>
@@ -607,7 +865,7 @@
       </section>
 
       <section id="especificacoes" class="mb-10 scroll-mt-28">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Especificações <span class="text-brand-yellow">técnicas</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Especificações técnicas da <span class="text-brand-yellow">X13 moto elétrica</span>: motor 1000W, 32 km/h e bateria</h2>
         <div class="glass overflow-x-auto">
           <table class="w-full text-left text-sm">
             <tbody>
@@ -622,86 +880,45 @@
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Perfil</th><td class="px-4 py-4 text-brand-muted">Scooter elétrica / mobilidade urbana</td></tr>
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Habilitação</th><td class="px-4 py-4 text-brand-muted">Em certas condições o teto de 32 km/h se aproxima do perfil autopropelido — confirme CONTRAN/local (não é garantia absoluta de “sem CNH”)</td></tr>
               <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Nota ranking</th><td class="px-4 py-4 text-brand-muted">9.0 (90/100) · #2 · badge Uso urbano elegante</td></tr>
-              <tr class="even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Preço observado</th><td class="px-4 py-4 text-brand-muted">~R$ 6.233 no Mercado Livre (confira o dia; listagens ~R$ 5.989–R$ 7.999)</td></tr>
+              <tr class="even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Preço observado</th><td class="px-4 py-4 text-brand-muted">R$ 6.233 à vista no Mercado Livre — menor preço histórico em 21/10/2026 (listagens ~R$ 5.989–R$ 7.999)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="mb-4 mt-10 text-2xl font-extrabold md:text-3xl">X13 scooter elétrica: <span class="text-brand-yellow">Foston X13 EX x Foston X13 Max 1000W</span></h2>
+        <div class="glass overflow-x-auto">
+          <table class="w-full min-w-[520px] text-left text-sm">
+            <caption class="sr-only">Comparativo entre Foston X13 EX e Foston X13 Max</caption>
+            <thead>
+              <tr class="border-b border-white/10 text-[11px] uppercase tracking-wider text-brand-dim">
+                <th scope="col" class="px-4 py-3 font-bold">Item</th>
+                <th scope="col" class="px-4 py-3 font-bold text-brand-yellow">Foston X13 EX</th>
+                <th scope="col" class="px-4 py-3 font-bold text-sky-300">Foston X13 Max 1000W</th>
+              </tr>
+            </thead>
+            <tbody class="text-brand-muted">
+              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Motor</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">1000W</td></tr>
+              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Partida</th><td class="px-4 py-3">NFC</td><td class="px-4 py-3">NFC</td></tr>
+              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Velocidade máxima</th><td class="px-4 py-3">Até 32 km/h</td><td class="px-4 py-3">Até 32 km/h</td></tr>
+              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Cesto e painel</th><td class="px-4 py-3">Confira no anúncio</td><td class="px-4 py-3">Cesto dianteiro + painel digital</td></tr>
+              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Preço</th><td class="px-4 py-3"><strong class="text-white">R$ 6.233</strong> à vista · 12x de R$ 599,10</td><td class="px-4 py-3"><strong class="text-white">R$ 5.799</strong> · 10x de R$ 579,90 sem juros</td></tr>
+              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Avaliações no ML</th><td class="px-4 py-3">4.5 · 73 avaliações</td><td class="px-4 py-3">5.0 · 1 avaliação (anúncio recente)</td></tr>
+              <tr><th scope="row" class="px-4 py-3 font-semibold text-white">Review</th><td class="px-4 py-3">Esta página · nota 9.0</td><td class="px-4 py-3"><a href="/foston-x13-max" class="font-bold text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Review da Foston X13 Max</a></td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <section id="analise" class="mb-10 scroll-mt-28">
-        <article class="glass p-6 leading-relaxed md:p-10">
-          <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: scooter elétrica <span class="text-brand-yellow">Foston X13 Ex</span></h2>
-
-          <p class="mb-5 text-brand-muted">
-            A pergunta que mais chega é direta: a <strong>elétrica Foston X13</strong> (Foston X13 Ex) vale a pena? No nosso ranking de <a href="melhores-scooters-eletricas.html" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">melhores scooters elétricas</a>, a <strong>Foston X13</strong> ocupa o segundo lugar com nota 9.0 e o badge de <strong>uso urbano elegante</strong> — não por ser a mais rápida da lista, e sim por entregar uma <strong>moto elétrica</strong> 1000W com NFC, até 32 km/h e <strong>visual</strong> cinza pensado para a cidade. Se o seu objetivo é <strong>mobilidade</strong> com economia e praticidade no <strong>dia a dia</strong>, a Foston X13 Ex entra na conversa certa.
-          </p>
-          <p class="mb-5 text-brand-muted">
-            Nos marketplaces, listagens irmãs aparecem com nomes parecidos — <strong>Foston X13 Max</strong>, X15 MAX (X13-EX) e outras SKUs da linha. São anúncios relacionados, não necessariamente o mesmo lote cinza que avaliamos aqui. Antes de qualquer entusiasmo: a <strong>autonomia</strong> e a bateria (Ah/V) devem ser conferidas no anúncio — não inventamos números quando o lote não fecha; o NFC pode depender do seller/lote; e, com teto de <strong>32 km/h</strong>, em certas condições o perfil se aproxima de veículo autopropelido, mas <strong>não prometemos “sem CNH” como garantia absoluta</strong>.
-          </p>
-
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Desempenho urbano até 32 km/h</h3>
-          <p class="mb-5 text-brand-muted">
-            Na <strong>condução</strong> do dia a dia na cidade, a <strong>scooter elétrica Foston X13</strong> se posiciona no ritmo urbano mais brando: a <strong>velocidade máxima</strong> de <strong>32 km/h</strong> basta para bairro e trajetos curtos/médios sem a agressividade de modelos de 55–60 km/h. Quem quer acompanhar avenida rápida vai preferir a <a href="review-scooter-eletrico-dx5.html" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Dx5</a>. Quem prioriza conforto e perfil de cidade leve encontra na Foston X13 Ex um encaixe natural.
-          </p>
-          <p class="mb-5 text-brand-muted">
-            O <strong>custo-benefício</strong> aqui não é “o mais barato absoluto”, e sim o pacote design moderno + NFC + 1000W na faixa de ~R$ 6 mil. Calibre expectativa: ela brilha no uso urbano elegante, não na disputa de teto de velocidade.
-          </p>
-
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Motor potente 1000W</h3>
-          <p class="mb-5 text-brand-muted">
-            O <strong>motor potente</strong> de <strong>1000W</strong> da <strong>elétrica Foston</strong> X13 Ex entrega reserva suficiente para semáforos, leve aclive de bairro e carga urbana típica de scooter. Não é o 1500W da Dx5 nem o Bosch 1200W da Aima — e não precisa ser, se o seu trajeto é cidade em ritmo moderado. Em plano, a resposta é imediata o bastante para o commute; em subida longa, espere menos folga que nas rivais mais potentes.
-          </p>
-          <p class="mb-5 text-brand-muted">
-            Potência com juízo: capacete, freios e piso seco continuam obrigatórios. Subida + velocidade no limite drenam a bateria mais rápido — a física não mente.
-          </p>
-
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">NFC e praticidade</h3>
-          <p class="mb-5 text-brand-muted">
-            O <strong>NFC</strong> é o diferencial de praticidade que separa a Foston X13 Ex de muitas scooters elétricas só com chave mecânica: aproximar o cartão ou tag para ligar/destravar (conforme o lote) deixa a rotina mais eficiente. Ainda assim, seja rigoroso na compra: confirme no anúncio do Mercado Livre se o seller lista NFC ativo — a função pode variar entre sellers e lotes.
-          </p>
-
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Autonomia, bateria e carga</h3>
-          <p class="mb-5 text-brand-muted">
-            Aqui vai a honestidade editorial: <strong>confira bateria e autonomia no anúncio</strong>. Não fechamos Ah ou V exatos quando o lote não deixa claro — inclusive se o pack é descrito como bateria de lítio removível. O anúncio aponta pack adequado a trajetos urbanos; a autonomia prática depende de peso do piloto, temperatura, subidas e se você anda sempre perto do teto de 32 km/h. Alguns anúncios/irmãos de linha declaram autonomia de até 50 km por carga — trate isso como claim de listagem, não como fato medido nesta review.
-          </p>
-          <p class="mb-5 text-brand-muted">
-            Planeje o commute com margem, confira o carregador incluso e prefira sellers que detalhem o pack. Se autonomia máxima declarada com números claros for o critério número 1, compare também a Aima Tiger S5, que costuma publicar ficha mais explícita.
-          </p>
-
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Segurança e conforto</h3>
-          <p class="mb-5 text-brand-muted">
-            Segurança na <strong>mobilidade urbana</strong> não é só velocidade. Capacete, iluminação, freios em bom estado e respeito ao fluxo continuam obrigatórios. O assento e a postura de scooter ajudam a deixar a condução confortável em trajetos médios; o visual cinza / cinza-escuro reforça a proposta de uso urbano elegante. Confira no anúncio freios, pneus e o que o seller garante em assistência.
-          </p>
-
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">CNH, CONTRAN e o teto de 32 km/h</h3>
-          <p class="mb-5 text-brand-muted">
-            Este é o filtro que evita compra errada. Em certas condições o teto de <strong>32 km/h</strong> se aproxima do perfil de veículo autopropelido; ainda assim confirme legislação CONTRAN/local e documentação antes de circular — <strong>não prometemos “sem CNH” como garantia absoluta</strong>. Placas, seguros e restrições da sua cidade entram no pacote. Modelos como Dx5 (55 km/h) e Aima (60 km/h), em regra, exigem ACC/CNH de forma mais clara.
-          </p>
-
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Compra no Mercado Livre: preço e o que conferir</h3>
-          <p class="mb-5 text-brand-muted">
-            O preço observado no card afiliado gira em torno de <strong>R$ 6.233</strong> — confira o dia no Mercado Livre (meli.la/2DnA5yX). Também vimos listagens perto de R$ 5.989 a R$ 7.999. Valide seller, garantia, frete, carregador e se o anúncio descreve mesmo a Foston X13 Ex com motor 1000W, até 32 km/h, NFC e cores cinza / cinza-escuro — e não um irmão de linha como Foston X13 Max ou X15 MAX rotulado de outro jeito. Prefira loja com boa reputação e fotos reais do lote. Amazon ainda não está ativa nesta página (em breve).
-          </p>
-
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Para quem é — e para quem não é</h3>
-          <p class="mb-5 text-brand-muted">
-            <strong>É para você</strong> se busca <strong>scooter elétrica</strong> Foston X13 para o dia a dia com design moderno, NFC e perfil urbano até 32 km/h — e aceita o ticket perto de R$ 6 mil pelo pacote Foston X13 Ex. Também faz sentido se a Dx5/Aima parecem “demais” em velocidade e você quer algo mais cidade leve, com economia de combustível e mobilidade eficiente.
-          </p>
-          <p class="text-brand-muted">
-            <strong>Não é para você</strong> se precisa de 55–60 km/h, se o critério número 1 é o menor preço absoluto, se você exige ficha de bateria 100% transparente antes de clicar, ou se quer o ecossistema Aima+Bosch. Nesse caso, olhe a <a href="review-scooter-eletrico-dx5.html" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Dx5 1500W</a> no ranking.
-          </p>
-        </article>
-      </section>
-
-      <section class="mb-10" id="ofertas">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Onde <span class="text-brand-yellow">comprar</span></h2>
+      <section class="mb-10 scroll-mt-28" id="ofertas">
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Valor da scooter X13 hoje: <span class="text-brand-yellow">onde comprar</span></h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
               <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Mercado Livre</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Link de oferta</span>
+              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Foston X13 EX</span>
+              <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2 py-1 text-xs font-bold text-emerald-300">Menor preço histórico</span>
             </div>
-            <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza Cinza-escuro. Confira seller, frete, garantia, NFC e o preço do dia (~R$ 6.233).</p>
+            <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza Cinza-escuro. Confira seller, frete, garantia, NFC e o preço do dia (R$ 6.233 à vista).</p>
             <div class="mb-4 overflow-hidden rounded-xl border border-white/10">
               <table class="w-full text-left text-sm">
                 <caption class="sr-only">Formas de pagamento da Foston X13 Ex no Mercado Livre</caption>
@@ -758,15 +975,61 @@
               <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">↩️</span>Devolução Grátis</li>
               <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🏅</span>MercadoLíder Gold</li>
             </ul>
-            <a class="btn-shine inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2DnA5yX">Ir para o Mercado Livre</a>
+            <a class="btn-shine inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" href="https://meli.la/2DnA5yX">Ver a X13 EX no Mercado Livre</a>
           </article>
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
-              <span class="rounded-md border border-white/25 bg-white/10 px-2 py-1 text-[10px] font-extrabold uppercase text-white">Amazon</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Em breve</span>
+              <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Mercado Livre</span>
+              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Foston X13 Max</span>
+              <span class="rounded-md border border-sky-400/40 bg-sky-400/10 px-2 py-1 text-xs font-bold text-sky-300">10x sem juros</span>
             </div>
-            <p class="mb-5 text-sm text-brand-muted">Link de afiliado Amazon entra aqui quando a oferta estiver ativa. Use o Mercado Livre enquanto isso.</p>
-            <span class="inline-flex h-12 w-full cursor-not-allowed items-center justify-center rounded-xl border border-white/25 bg-white/5 font-bold text-brand-dim">Em breve</span>
+            <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Bicicleta Elétrica Foston X13 Max Scooter 1000watts NFC, com cesto dianteiro e painel digital. Ficha com 32 km/h, bateria de lítio removível e carga máxima de 100 kg. Anúncio recente (1 avaliação).</p>
+            <div class="mb-4 overflow-hidden rounded-xl border border-white/10">
+              <table class="w-full text-left text-sm">
+                <caption class="sr-only">Formas de pagamento da Foston X13 Max no Mercado Livre</caption>
+                <tbody>
+                  <tr class="border-b border-white/10 bg-emerald-400/[0.07]">
+                    <th scope="row" class="px-4 py-3 align-top">
+                      <span class="block font-bold text-white">Preço do anúncio</span>
+                      <span class="text-xs font-normal text-brand-dim">cartão, Pix ou boleto</span>
+                    </th>
+                    <td class="px-4 py-3 text-right align-top">
+                      <span class="block text-lg font-extrabold text-emerald-300">R$ 5.799,00</span>
+                      <span class="text-xs text-brand-dim">10% OFF sobre R$ 6.499</span>
+                    </td>
+                  </tr>
+                  <tr class="border-b border-white/10">
+                    <th scope="row" class="px-4 py-3 align-top">
+                      <span class="block font-bold text-white">Parcelado no cartão</span>
+                      <span class="text-xs font-normal text-brand-dim">em 10x sem juros</span>
+                    </th>
+                    <td class="px-4 py-3 text-right align-top">
+                      <span class="block whitespace-nowrap text-base font-extrabold text-brand-yellow sm:text-lg">10x de R$ 579,90</span>
+                      <span class="text-xs font-bold text-emerald-300">sem juros</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="px-4 py-3 align-top">
+                      <span class="block font-bold text-white">Com cupom</span>
+                      <span class="text-xs font-normal text-brand-dim">seguindo a loja</span>
+                    </th>
+                    <td class="px-4 py-3 text-right align-top">
+                      <span class="block text-lg font-extrabold text-sky-300">R$ 5.649,00</span>
+                      <span class="text-xs text-brand-dim">cupom do anúncio em 28/10</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="mb-5 grid grid-cols-3 gap-2 text-[11px] text-brand-muted sm:text-xs">
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">↩️</span>Devolução 30 dias</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🚚</span>Frete grátis</li>
+            </ul>
+            <div class="flex flex-col gap-2">
+              <a class="btn-shine inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" href="https://meli.la/2Ga7iza">Ver a X13 Max no Mercado Livre</a>
+              <a class="inline-flex h-11 w-full items-center justify-center rounded-xl border border-brand-yellow bg-transparent text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="/foston-x13-max">Ler a review da X13 Max</a>
+            </div>
           </article>
         </div>
       </section>
@@ -800,7 +1063,7 @@
               <p class="text-xl font-bold text-white">Confira no ML</p>
               <div class="mt-3 flex flex-col gap-2">
                 <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1omWLKf">Comprar no Mercado Livre</a>
-                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="review-scooter-eletrico-dx5.html">Ver Análise Completa</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="/review-scooter-eletrico-dx5">Ver Análise Completa</a>
               </div>
             </div>
           </article>
@@ -831,12 +1094,12 @@
               <p class="text-xl font-bold text-white">Confira no ML</p>
               <div class="mt-3 flex flex-col gap-2">
                 <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1yrJ2iy">Comprar no Mercado Livre</a>
-                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="review-scooter-x13-60v.html">Ver Análise Completa</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="/review-scooter-x13-60v">Ver Análise Completa</a>
               </div>
             </div>
           </article>
 
-          <a class="glass flex flex-col justify-center p-5 transition hover:-translate-y-1 hover:shadow-glow" href="melhores-scooters-eletricas.html">
+          <a class="glass flex flex-col justify-center p-5 transition hover:-translate-y-1 hover:shadow-glow" href="/melhores-scooters-eletricas">
             <p class="mb-2 text-xs font-bold uppercase text-brand-yellow">Lista completa</p>
             <h3 class="mb-2 text-lg font-bold text-white">Voltar ao ranking</h3>
             <p class="text-sm text-brand-dim">Ver as scooters elétricas comparadas lado a lado no ranking Tudo de Melhor.</p>
@@ -844,16 +1107,118 @@
         </div>
       </section>
 
-            <section class="mb-10" id="faq">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre a <span class="text-brand-yellow">Foston X13 Ex</span></h2>
+      <!-- ANÁLISE DETALHADA (bloco editorial — imediatamente acima do FAQ) -->
+      <section id="analise" class="mb-10 scroll-mt-28">
+        <article class="glass p-6 leading-relaxed md:p-10">
+          <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada 2026: scooter elétrica <span class="text-brand-yellow">Foston X13 Ex</span></h2>
+
+          <p class="mb-5 text-brand-muted">
+            A pergunta que mais chega é direta: a <strong>elétrica Foston X13</strong> (Foston X13 Ex) vale a pena? No nosso ranking de <a href="/melhores-scooters-eletricas" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">melhores scooters elétricas</a>, a <strong>Foston X13</strong> ocupa o segundo lugar com nota 9.0 e o badge de <strong>uso urbano elegante</strong> — não por ser a mais rápida da lista, e sim por entregar uma <strong>moto elétrica</strong> 1000W com NFC, até 32 km/h e <strong>visual</strong> cinza pensado para a cidade. Se o seu objetivo é <strong>mobilidade</strong> com economia e praticidade no <strong>dia a dia</strong>, a Foston X13 Ex entra na conversa certa.
+          </p>
+          <p class="mb-5 text-brand-muted">
+            Nos marketplaces, listagens irmãs aparecem com nomes parecidos — <strong>Foston X13 Max</strong>, Foston X15MAX (X13-EX) e outras SKUs da linha. São anúncios relacionados, não necessariamente o mesmo lote cinza que avaliamos aqui. Antes de qualquer entusiasmo: a <strong>autonomia</strong> e a bateria (Ah/V) devem ser conferidas no anúncio — não inventamos números quando o lote não fecha; o NFC pode depender do seller/lote; e, com teto de <strong>32 km/h</strong>, em certas condições o perfil se aproxima de veículo autopropelido, mas <strong>não prometemos “sem CNH” como garantia absoluta</strong>.
+          </p>
+
+          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Desempenho urbano até 32 km/h</h3>
+          <p class="mb-5 text-brand-muted">
+            Na <strong>condução</strong> do dia a dia na cidade, a <strong>scooter elétrica Foston X13</strong> se posiciona no ritmo urbano mais brando: a <strong>velocidade máxima</strong> de <strong>32 km/h</strong> basta para bairro e trajetos curtos/médios sem a agressividade de modelos de 55–60 km/h. Quem quer acompanhar avenida rápida vai preferir a <a href="/review-scooter-eletrico-dx5" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Dx5</a>. Quem prioriza conforto e perfil de cidade leve encontra na Foston X13 Ex um encaixe natural.
+          </p>
+          <p class="mb-5 text-brand-muted">
+            O <strong>custo-benefício</strong> aqui não é “o mais barato absoluto”, e sim o pacote design moderno + NFC + 1000W na faixa de ~R$ 6 mil. Calibre expectativa: ela brilha no uso urbano elegante, não na disputa de teto de velocidade.
+          </p>
+
+          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Motor potente 1000W</h3>
+          <p class="mb-5 text-brand-muted">
+            O <strong>motor potente</strong> de <strong>1000W</strong> da <strong>elétrica Foston</strong> X13 Ex entrega reserva suficiente para semáforos, leve aclive de bairro e carga urbana típica de scooter. Não é o 1500W da Dx5 nem o Bosch 1200W da Aima — e não precisa ser, se o seu trajeto é cidade em ritmo moderado. Em plano, a resposta é imediata o bastante para o commute; em subida longa, espere menos folga que nas rivais mais potentes.
+          </p>
+          <p class="mb-5 text-brand-muted">
+            Potência com juízo: capacete, freios e piso seco continuam obrigatórios. Subida + velocidade no limite drenam a bateria mais rápido — a física não mente.
+          </p>
+
+          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">NFC e praticidade</h3>
+          <p class="mb-5 text-brand-muted">
+            O <strong>NFC</strong> é o diferencial de praticidade que separa a Foston X13 Ex de muitas scooters elétricas só com chave mecânica: aproximar o cartão ou tag para ligar/destravar (conforme o lote) deixa a rotina mais eficiente. Ainda assim, seja rigoroso na compra: confirme no anúncio do Mercado Livre se o seller lista NFC ativo — a função pode variar entre sellers e lotes.
+          </p>
+
+          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Autonomia, bateria e carga</h3>
+          <p class="mb-5 text-brand-muted">
+            Aqui vai a honestidade editorial: <strong>confira bateria e autonomia no anúncio</strong>. Não fechamos Ah ou V exatos quando o lote não deixa claro — inclusive se o pack é descrito como bateria de lítio removível. O anúncio aponta pack adequado a trajetos urbanos; a autonomia prática depende de peso do piloto, temperatura, subidas e se você anda sempre perto do teto de 32 km/h. Alguns anúncios/irmãos de linha declaram autonomia de até 50 km por carga — trate isso como claim de listagem, não como fato medido nesta review.
+          </p>
+          <p class="mb-5 text-brand-muted">
+            Planeje o commute com margem, confira o carregador incluso e prefira sellers que detalhem o pack. Se autonomia máxima declarada com números claros for o critério número 1, compare também a Aima Tiger S5, que costuma publicar ficha mais explícita.
+          </p>
+
+          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Segurança e conforto</h3>
+          <p class="mb-5 text-brand-muted">
+            Segurança na <strong>mobilidade urbana</strong> não é só velocidade. Capacete, iluminação, freios em bom estado e respeito ao fluxo continuam obrigatórios. O assento e a postura de scooter ajudam a deixar a condução confortável em trajetos médios; o visual cinza / cinza-escuro reforça a proposta de uso urbano elegante. Confira no anúncio freios, pneus, carga máxima em kg, se o lote traz alarme e o que o seller garante em assistência — é isso que torna a pilotagem segura no dia a dia.
+          </p>
+
+          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">CNH, CONTRAN e o teto de 32 km/h</h3>
+          <p class="mb-5 text-brand-muted">
+            Este é o filtro que evita compra errada. Em certas condições o teto de <strong>32 km/h</strong> se aproxima do perfil de veículo autopropelido; ainda assim confirme legislação CONTRAN/local e documentação antes de circular — <strong>não prometemos “sem CNH” como garantia absoluta</strong>. Placas, seguros e restrições da sua cidade entram no pacote. Modelos como Dx5 (55 km/h) e Aima (60 km/h), em regra, exigem ACC/CNH de forma mais clara.
+          </p>
+
+          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Compra no Mercado Livre: preço e o que conferir</h3>
+          <p class="mb-5 text-brand-muted">
+            O preço observado no card afiliado gira em torno de <strong>R$ 6.233</strong> — confira o dia no Mercado Livre (meli.la/2DnA5yX). Também vimos listagens perto de R$ 5.989 a R$ 7.999. Valide seller, garantia, frete, carregador e se o anúncio descreve mesmo a Foston X13 Ex com motor 1000W, até 32 km/h, NFC e cores cinza / cinza-escuro — e não um irmão de linha como Foston X13 Max ou X15 MAX rotulado de outro jeito. Prefira loja com boa reputação e fotos reais do lote. Amazon ainda não está ativa nesta página (em breve).
+          </p>
+
+          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">X13 preço e valor hoje: quanto custa a scooter X13</h3>
+          <p class="mb-5 text-brand-muted">
+            Quem pesquisa <strong>x13 preço</strong>, <strong>x13 valor</strong> ou <strong>valor x13</strong> quer um número, então vamos direto: em 21/10/2026 a Foston X13 EX estava por <strong>R$ 6.233,00 à vista</strong> (ou 12x de R$ 599,10, total de R$ 7.189,14) — o menor preço registrado no monitor do anúncio, que começou agosto perto de R$ 7.900. A irmã Foston X13 Max, com cesto e painel digital, aparecia por <strong>R$ 5.799 em 10x de R$ 579,90 sem juros</strong> em 28/10/2026.
+          </p>
+          <p class="mb-5 text-brand-muted">
+            Na prática, o <strong>valor scooter X13</strong> da linha Foston fica hoje entre R$ 5,8 mil e R$ 6,3 mil. X13 de outras marcas, com bateria de 60V, partem de R$ 7.999 — veja a review da <a href="/scooter-eletrica-x13" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">scooter elétrica X13 60V</a>. Antes de fechar, confira o <strong>preço X13 scooter</strong> do dia no anúncio: promoção, cupom, frete e vendedor mudam o total.
+          </p>
+
+          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Moto elétrica X13, scooter X13 ou bicicleta elétrica X13?</h3>
+          <p class="mb-5 text-brand-muted">
+            O nome confunde porque cada vendedor rotula de um jeito. A mesma família aparece como <strong>x13 moto elétrica</strong>, <strong>moto x13 elétrica</strong>, <strong>scooter x13</strong> e até <strong>bicicleta elétrica X13</strong> ou <strong>bike elétrica X13</strong> — a X13 Max, por exemplo, é anunciada como “Bicicleta Elétrica Foston X13 Max Scooter 1000watts NFC”. O formato, porém, é de scooter com assento e plataforma para os pés.
+          </p>
+          <p class="mb-5 text-brand-muted">
+            O que define a categoria legal não é o nome do anúncio, e sim velocidade máxima, potência, dimensões e a presença de pedais. Por isso, se você chegou aqui buscando <strong>x13 bicicleta elétrica</strong>, leia a ficha técnica com atenção e confirme as regras do CONTRAN e da sua cidade. Também existem X13 de outras marcas, como a <a href="/review-scooter-azm-x13" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">AZM X13</a> e a <a href="/review-scooter-x13-60v" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">X13 60V</a>.
+          </p>
+
+          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Foston X13 EX ou X13 Max: qual x13 scooter elétrica escolher</h3>
+          <p class="mb-5 text-brand-muted">
+            As duas versões da <strong>x13 scooter elétrica</strong> da Foston dividem motor 1000W e partida por NFC. A <strong>X13 EX</strong> tem o histórico mais sólido: 73 avaliações com nota 4.5, velocidade declarada de 32 km/h e menor preço histórico à vista. A <strong>Foston X13 Max scooter 1000W</strong> custa R$ 434 a menos, parcela em 10x sem juros e traz cesto dianteiro e painel digital, também declara 32 km/h, mas o anúncio é recente (1 avaliação) e suporta até 100 kg. Nas fotos de compradores, a Max aparece em preto, cinza e branco.
+          </p>
+          <p class="mb-5 text-brand-muted">
+            Resumo: se você quer a <strong>scooter elétrica X13</strong> com mais prova social e paga à vista, fique com a EX. Se prefere parcelar sem juros e precisa do cesto para compras e mochila, leia a <a href="/foston-x13-max" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">review completa da Foston X13 Max</a> antes de decidir.
+          </p>
+
+          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Para quem é — e para quem não é</h3>
+          <p class="mb-5 text-brand-muted">
+            <strong>É para você</strong> se busca <strong>scooter elétrica</strong> Foston X13 para o dia a dia com design moderno, NFC e perfil urbano até 32 km/h — e aceita o ticket perto de R$ 6 mil pelo pacote Foston X13 Ex. Também faz sentido se a Dx5/Aima parecem “demais” em velocidade e você quer algo mais cidade leve, com economia de combustível e mobilidade eficiente.
+          </p>
+          <p class="text-brand-muted">
+            <strong>Não é para você</strong> se precisa de 55–60 km/h, se o critério número 1 é o menor preço absoluto, se você exige ficha de bateria 100% transparente antes de clicar, ou se quer o ecossistema Aima+Bosch. Nesse caso, olhe a <a href="/review-scooter-eletrico-dx5" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Dx5 1500W</a> no ranking.
+          </p>
+        </article>
+      </section>
+
+      <section class="mb-10 scroll-mt-28" id="faq">
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre a <span class="text-brand-yellow">scooter elétrica X13</span> (Foston X13 Ex)</h2>
         <div class="space-y-3">
           <details class="glass p-5" open>
             <summary class="cursor-pointer list-none font-bold">Scooter elétrica Foston X13 Ex vale a pena?</summary>
-            <p class="mt-3 text-sm text-brand-muted">Sim, se você busca <strong>moto elétrica</strong> 1000W com visual cinza elegante, <strong>NFC</strong> e velocidade máxima de <strong>32 km/h</strong>. A Foston X13 é a #2 do nosso ranking (nota 9.0), com badge de uso urbano elegante. Vale para o dia a dia — desde que o preço (~R$ 6.233) e o teto abaixo da Dx5/Aima façam sentido para o seu trajeto.</p>
+            <p class="mt-3 text-sm text-brand-muted">Sim, se você busca <strong>moto elétrica</strong> 1000W com visual cinza elegante, <strong>NFC</strong> e velocidade máxima de <strong>32 km/h</strong>. A Foston X13 é a #2 do nosso ranking (nota 9.0), com badge de uso urbano elegante. Vale para o dia a dia — desde que o preço (R$ 6.233, menor preço histórico do anúncio) e o teto abaixo da Dx5/Aima façam sentido para o seu trajeto.</p>
+          </details>
+          <details class="glass p-5">
+            <summary class="cursor-pointer list-none font-bold">Quanto custa X13?</summary>
+            <p class="mt-3 text-sm text-brand-muted">A scooter elétrica X13 EX da Foston custa <strong>R$ 6.233,00 à vista</strong> no Mercado Livre — o menor preço histórico do anúncio, verificado em 21/10/2026 — ou 12x de R$ 599,10 no cartão. A versão Foston X13 Max custava <strong>R$ 5.799 em 10x de R$ 579,90 sem juros</strong> em 28/10/2026. Outras X13 de 60V de outras marcas aparecem a partir de R$ 7.999. O valor da X13 muda com promoção, cupom, frete e vendedor.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Qual o preço da elétrica Foston X13?</summary>
-            <p class="mt-3 text-sm text-brand-muted">O preço observado no card afiliado do Mercado Livre fica em torno de <strong>R$ 6.233</strong>. Também vimos listagens perto de R$ 5.989 a R$ 7.999. Confira o valor do dia no anúncio rastreado, pois pode variar com promoção, frete e seller.</p>
+            <p class="mt-3 text-sm text-brand-muted">O menor preço histórico que registramos para a Foston X13 EX no Mercado Livre é <strong>R$ 6.233,00</strong> à vista (21/10/2026), contra cerca de R$ 7.900 em agosto. Também vimos listagens perto de R$ 5.989 a R$ 7.999. Confira o valor do dia no anúncio rastreado, pois pode variar com promoção, frete e seller.</p>
+          </details>
+          <details class="glass p-5">
+            <summary class="cursor-pointer list-none font-bold">Qual a diferença entre a X13 EX e a X13 Max?</summary>
+            <p class="mt-3 text-sm text-brand-muted">As duas são anunciadas com motor de 1000W e partida por NFC. As duas declaram até 32 km/h. A X13 EX tem 73 avaliações (nota 4.5) e está no menor preço histórico de R$ 6.233 à vista. A X13 Max traz cesto dianteiro e painel digital, bateria de lítio removível e carga máxima de 100 kg, e custava R$ 5.799 em 10x sem juros, mas é um anúncio recente, com 1 avaliação.</p>
+          </details>
+          <details class="glass p-5">
+            <summary class="cursor-pointer list-none font-bold">A X13 é moto elétrica, scooter ou bicicleta elétrica?</summary>
+            <p class="mt-3 text-sm text-brand-muted">Os anúncios usam os três nomes: x13 moto elétrica, scooter elétrica X13 e bicicleta elétrica X13 (a X13 Max é vendida como “Bicicleta Elétrica Foston X13 Max Scooter”). O formato é de scooter com assento. O que define a categoria legal é velocidade máxima, potência, dimensões e a presença de pedais, então confira a ficha do anúncio e as regras do CONTRAN e da sua cidade.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">A Foston X13 Ex tem NFC?</summary>
@@ -873,7 +1238,7 @@
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Foston X13 Ex, Foston X13 Max, Dx5 ou Aima: qual escolher?</summary>
-            <p class="mt-3 text-sm text-brand-muted">A Aima Tiger S5 (fora do nosso ranking atual) é o pacote premium (Bosch, até 60 km/h). A Dx5 (#1, nota 9.3) prioriza custo-benefício com 1500W e até 55 km/h. A Foston X13 Ex (#2, nota 9.0) foca uso urbano elegante: 1000W, NFC e 32 km/h. Já Foston X13 Max / X15 MAX (X13-EX) costumam aparecer como SKUs irmãs em anúncios — confira se o lote é o mesmo.</p>
+            <p class="mt-3 text-sm text-brand-muted">A Aima Tiger S5 (fora do nosso ranking atual) é o pacote premium (Bosch, até 60 km/h). A Dx5 (#1, nota 9.3) prioriza custo-benefício com 1500W e até 55 km/h. A Foston X13 Ex (#2, nota 9.0) foca uso urbano elegante: 1000W, NFC e 32 km/h. A Foston X13 Max é a irmã com cesto e painel digital, mais barata e em 10x sem juros, mas com anúncio recente — confira a <a href="/foston-x13-max" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">review dedicada</a>.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">A scooter elétrica Foston X13 é boa para o dia a dia?</summary>
@@ -882,35 +1247,52 @@
         </div>
       </section>
 
-<section class="mb-10" aria-label="Autor">
+      <section class="mb-10" aria-label="Autor">
         <div class="glass flex flex-col items-start gap-4 p-6 sm:flex-row sm:items-center">
           <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-brand-gradient text-sm font-black text-black shadow-glow">Equipe</div>
           <div>
             <h3 class="mb-1 text-lg font-bold">Equipe Tudo de Melhor</h3>
-            <p class="text-sm text-brand-muted">Review do #2 do ranking de scooters elétricas (badge uso urbano elegante). Nome, imagem e preço extraídos do anúncio do Mercado Livre. Links de afiliados podem gerar comissão, sem custo extra para você.</p>
+            <p class="text-sm text-brand-muted">Review do #2 do ranking de scooters elétricas (badge uso urbano elegante). Nome, imagem e preço extraídos do anúncio do Mercado Livre; histórico de preço do monitor do anúncio. Atualizado em 29/10/2026. Links de afiliados podem gerar comissão, sem custo extra para você.</p>
           </div>
         </div>
       </section>
+      <!-- RELACIONADOS:INICIO -->
+      <section class="mb-10 mt-10" aria-labelledby="relacionados-titulo">
+        <div class="glass p-6 md:p-8">
+          <h2 id="relacionados-titulo" class="mb-2 text-xl font-extrabold md:text-2xl">Leia também</h2>
+          <p class="mb-5 text-sm text-brand-dim">Reviews e rankings relacionados a esta análise.</p>
+          <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <li><a href="/foston-x13-max" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Foston X13 Max 1000W com cesto</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+            <li><a href="/scooter-eletrica-x13" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Scooter elétrica X13: preço e valor</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-scooter-x13-60v" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Scooter elétrica X13 60V</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-scooter-azm-x13" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">AZM X13 1000W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-scooter-eletrico-dx5" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Scooter elétrica Dx5 1500W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+            <li><a href="/melhores-scooters-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Melhores scooters elétricas 2026</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+            <li><a href="/melhores-motos-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Melhores motos elétricas 2026</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- RELACIONADOS:FIM -->
     </div>
   </main>
 
   <div class="fixed bottom-0 left-0 z-50 w-full rounded-none border-t border-white/10 bg-brand-bg/85 backdrop-blur-xl sm:bottom-6 sm:left-1/2 sm:w-auto sm:min-w-[600px] sm:max-w-4xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-white/15 sm:shadow-2xl">
     <div class="flex flex-col gap-3 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:py-3 sm:pl-3 sm:pr-3">
       <div class="flex min-w-0 items-center gap-3">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp" alt="Scooter Moto Elétrica X13 Ex Foston 1000w 32km/h NFC Cinza — vista principal" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-white/10 bg-white/5 object-cover sm:block">
+        <img id="sticky-img" src="https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp" alt="" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-white/10 bg-white/5 object-cover sm:block">
         <div class="min-w-0">
-          <strong class="block max-w-[200px] truncate text-sm font-bold text-white sm:max-w-xs sm:text-base">X13 Ex Foston</strong>
-          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 9.0</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">~R$ 6.233</span></div>
+          <strong class="block max-w-[200px] truncate text-sm font-bold text-white sm:max-w-xs sm:text-base" data-bind="stickyName">Foston X13 EX</strong>
+          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> <span data-bind="stickyNota">9.0</span></span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white" data-bind="stickyPrice">R$ 6.233 à vista</span></div>
         </div>
       </div>
-      <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2DnA5yX">Comprar no Mercado Livre</a>
+      <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" data-cta rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" href="https://meli.la/2DnA5yX">Comprar no Mercado Livre</a>
     </div>
   </div>
 
   <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
     <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
       <div>
-        <a href="index.html" class="mb-3 flex items-center gap-3">
+        <a href="/" class="mb-3 flex items-center gap-3">
           <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" width="42" height="42" alt="" class="h-10 w-10 object-contain">
           <span class="text-sm font-extrabold uppercase tracking-wider">Tudo de Melhor</span>
         </a>
@@ -919,27 +1301,27 @@
       <div>
         <h4 class="mb-3 text-sm font-bold">Navegação</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="index.html" class="hover:text-brand-yellow">Home</a>
-          <a href="categorias.html" class="hover:text-brand-yellow">Rankings</a>
-          <a href="reviews.html" class="hover:text-brand-yellow">Reviews</a>
-          <a href="index.html#metodologia" class="hover:text-brand-yellow">Metodologia</a>
+          <a href="/" class="hover:text-brand-yellow">Home</a>
+          <a href="/categorias" class="hover:text-brand-yellow">Rankings</a>
+          <a href="/reviews" class="hover:text-brand-yellow">Reviews</a>
+          <a href="/#metodologia" class="hover:text-brand-yellow">Metodologia</a>
         </div>
       </div>
       <div>
         <h4 class="mb-3 text-sm font-bold">Categorias</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="melhores-bicicletas-eletricas.html" class="hover:text-brand-yellow">Bicicletas Elétricas</a>
-          <a href="melhores-patinetes-eletricos.html" class="hover:text-brand-yellow">Patinetes Elétricos</a>
-          <a href="melhores-scooters-eletricas.html" class="hover:text-brand-yellow">Scooters Elétricas</a>
+          <a href="/melhores-bicicletas-eletricas" class="hover:text-brand-yellow">Bicicletas Elétricas</a>
+          <a href="/melhores-patinetes-eletricos" class="hover:text-brand-yellow">Patinetes Elétricos</a>
+          <a href="/melhores-scooters-eletricas" class="hover:text-brand-yellow">Scooters Elétricas</a>
         </div>
       </div>
       <div>
         <h4 class="mb-3 text-sm font-bold">Legal</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="sobre.html" class="hover:text-brand-yellow">Sobre</a>
-          <a href="privacidade.html" class="hover:text-brand-yellow">Privacidade</a>
-          <a href="trocas.html" class="hover:text-brand-yellow">Trocas e Devoluções</a>
-          <a href="contato.html" class="hover:text-brand-yellow">Contato</a>
+          <a href="/sobre" class="hover:text-brand-yellow">Sobre</a>
+          <a href="/privacidade" class="hover:text-brand-yellow">Privacidade</a>
+          <a href="/trocas" class="hover:text-brand-yellow">Trocas e Devoluções</a>
+          <a href="/contato" class="hover:text-brand-yellow">Contato</a>
         </div>
       </div>
     </div>
@@ -962,6 +1344,143 @@
         toggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    document.querySelectorAll('[data-slider-prev], [data-slider-next]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const el = Array.from(document.querySelectorAll('[data-buyers-track]')).find((t) => t.offsetParent !== null);
+        if (!el) return;
+        const dir = btn.hasAttribute('data-slider-prev') ? -1 : 1;
+        el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: 'smooth' });
+      });
+    });
+  </script>
+  <script>
+    (function () {
+      const MODELS = {
+        ex: {
+          produto: 'x13-ex', name: 'X13 EX', full: 'Foston X13 EX', link: 'https://meli.la/2DnA5yX', price: 6233,
+          anchor: 'Era ~R$ 7.900 em agosto · <span class="font-bold text-emerald-300">caiu R$ 1.667 (-21%)</span>',
+          priceBig: 'R$ 6.233<span class="text-2xl md:text-3xl">,00</span>', priceLabel: 'à vista',
+          inst: '<p class="text-base font-bold text-brand-yellow">ou 12x de R$ 599,10 no cartão</p>',
+          delivery: 'Frete grátis no checkout que simulamos em 21/10 (economia de R$ 314 · confira o seu CEP)',
+          ctaText: 'Ver menor preço da X13 EX no Mercado Livre',
+          videoCaption: 'Vídeo da Foston X13 EX · 1000W · NFC · até 32 km/h',
+          calcPrice: 'R$ 6.233 à vista',
+          stickyName: 'Foston X13 EX', stickyNota: '9.0', stickyPrice: 'R$ 6.233 à vista',
+          stickyImg: 'https://http2.mlstatic.com/D_NQ_NP_2X_683880-MLA116029400205_082026-F.webp'
+        },
+        max: {
+          produto: 'x13-max', name: 'X13 Max', full: 'Foston X13 Max', link: 'https://meli.la/2Ga7iza', price: 5799,
+          anchor: 'De <span class="line-through decoration-orange-400/80">R$ 6.499</span> no anúncio · <span class="font-bold text-emerald-300">10% OFF</span>',
+          priceBig: 'R$ 5.799<span class="text-2xl md:text-3xl">,00</span>', priceLabel: 'no cartão ou Pix',
+          inst: '<div class="inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-400/40 bg-emerald-400/10 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span><span class="text-base font-black text-white">10x de R$ 579,90</span><span class="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div><p class="mt-1.5 text-xs font-semibold text-sky-300">🏷️ R$ 5.649 com o cupom de seguidor da loja (no anúncio)</p>',
+          delivery: 'Frete grátis no anúncio em 28/10, com 2 unidades em estoque (confira o seu CEP)',
+          ctaText: 'Ver a Foston X13 Max no Mercado Livre',
+          videoCaption: 'Vídeo da linha Foston X13 (versão EX) · veja a X13 Max nas fotos de compradores',
+          calcPrice: 'R$ 5.799 do anúncio',
+          stickyName: 'Foston X13 Max', stickyNota: '9.2', stickyPrice: '10x R$ 579,90 sem juros',
+          stickyImg: 'assets/produtos/LP/x13-max-compradores/comprador-3.webp'
+        }
+      };
+
+      const $all = (sel) => Array.from(document.querySelectorAll(sel));
+      const setBind = (key, html) => $all('[data-bind="' + key + '"]').forEach((el) => { el.innerHTML = html; });
+      const calcRoot = document.getElementById('calc-economia');
+
+      function apply(key, fromUser) {
+        const m = MODELS[key];
+        if (!m) return;
+        document.body.dataset.modelo = key;
+        $all('.model-option').forEach((b) => b.setAttribute('aria-checked', b.dataset.model === key ? 'true' : 'false'));
+        const swap = $all('[data-swap]');
+        swap.forEach((el) => el.classList.add('is-swapping'));
+        const run = () => {
+          ['anchor', 'priceBig', 'priceLabel', 'inst', 'delivery', 'ctaText', 'videoCaption', 'calcPrice', 'stickyName', 'stickyNota', 'stickyPrice'].forEach((k) => setBind(k, m[k]));
+          setBind('modelName', m.name);
+          setBind('modelFull', m.full);
+          $all('[data-cta]').forEach((a) => { a.href = m.link; });
+          const img = document.getElementById('sticky-img');
+          img.src = m.stickyImg;
+          if (key === 'max') img.removeAttribute('referrerpolicy'); else img.setAttribute('referrerpolicy', 'no-referrer');
+          calcRoot.dataset.price = m.price;
+          calcRoot.dataset.produto = m.produto;
+          window.dispatchEvent(new Event('review:price'));
+          swap.forEach((el) => el.classList.remove('is-swapping'));
+        };
+        if (fromUser) setTimeout(run, 180); else run();
+        if (fromUser) {
+          history.replaceState(null, '', key === 'max' ? '#modelo=max' : location.pathname + location.search);
+          if (typeof gtag === 'function') gtag('event', 'selecionar_modelo', { modelo: m.produto });
+        }
+      }
+
+      $all('.model-option').forEach((b) => b.addEventListener('click', () => apply(b.dataset.model, true)));
+      if (/modelo=max/.test(location.hash)) apply('max', false);
+    })();
+  </script>
+  <script>
+    (function () {
+      const root = document.getElementById('calc-economia');
+      if (!root) return;
+      const MODES = {
+        app: { cmp: 'às corridas de app', perKm: 2.30 },
+        moto: { cmp: 'à moto a gasolina', perKm: 6.30 / 35 },
+        carro: { cmp: 'ao carro a gasolina', perKm: 6.30 / 11 },
+        onibus: { cmp: 'ao ônibus', perTrip: 5.00, trips: 2 }
+      };
+      const ELEC_PER_KM = 0.025 * 0.95;
+      const km = document.getElementById('calc-km');
+      const dias = document.getElementById('calc-dias');
+      const brl = (v) => 'R$ ' + Math.round(v).toLocaleString('pt-BR');
+      let mode = 'app';
+      let gaTimer = null;
+
+      function calc(fromUser) {
+        const price = Number(root.dataset.price);
+        const k = Number(km.value), d = Number(dias.value), m = MODES[mode];
+        const atual = m.perTrip ? m.perTrip * m.trips * d : k * d * m.perKm;
+        const scooter = k * d * ELEC_PER_KM;
+        const eco = Math.max(0, atual - scooter);
+        const meses = eco > 0 ? price / eco : Infinity;
+        const n = Math.max(1, Math.round(meses));
+        document.getElementById('calc-km-out').textContent = k + ' km';
+        document.getElementById('calc-dias-out').textContent = d + ' dias';
+        document.getElementById('calc-atual').textContent = brl(atual);
+        document.getElementById('calc-scooter').textContent = brl(scooter);
+        document.getElementById('calc-eco').textContent = brl(eco);
+        document.getElementById('calc-ano').textContent = brl(eco * 12);
+        document.getElementById('calc-meses-label').textContent = !isFinite(meses) ? '—' : meses > 60 ? 'mais de 5 anos' : 'se paga em ~' + n + (n === 1 ? ' mês' : ' meses');
+        const bar = document.getElementById('calc-bar');
+        bar.style.width = isFinite(meses) ? Math.min(100, Math.max(6, 14 / meses * 100)) + '%' : '0%';
+        bar.className = 'h-3 rounded-full transition-all duration-500 bg-gradient-to-r ' + (meses < 14 ? 'from-emerald-400 to-emerald-600' : 'from-amber-300 to-orange-500');
+        const out = document.getElementById('calc-conclusao');
+        if (!isFinite(meses) || eco < 20) {
+          out.innerHTML = 'Com esse uso, a economia em relação ' + m.cmp + ' é pequena. Aumente a distância diária para ver o efeito.';
+        } else if (meses < 14) {
+          out.innerHTML = '🟢 Em menos de 14 meses (cerca de ' + n + '), a scooter se paga sozinha com a economia gerada.';
+        } else if (meses <= 36) {
+          out.innerHTML = '🟡 Em cerca de ' + n + ' meses, a scooter se paga sozinha com a economia gerada.';
+        } else {
+          out.innerHTML = meses <= 60
+            ? 'Em relação ' + m.cmp + ', a scooter se paga em cerca de ' + n + ' meses só com combustível. A economia cresce somando manutenção, IPVA e estacionamento.'
+            : 'Em relação ' + m.cmp + ', a economia só com combustível é de ' + brl(eco) + ' por mês. O ganho cresce somando troca de óleo, manutenção, IPVA e estacionamento, que a scooter elétrica não tem.';
+        }
+        if (fromUser && typeof gtag === 'function') {
+          clearTimeout(gaTimer);
+          gaTimer = setTimeout(() => gtag('event', 'calculadora_economia', { produto: root.dataset.produto, modo: mode, km_dia: k, dias_mes: d, economia_mensal: Math.round(eco) }), 1500);
+        }
+      }
+
+      root.querySelectorAll('.calc-mode').forEach((b) => b.addEventListener('click', () => {
+        mode = b.dataset.mode;
+        root.querySelectorAll('.calc-mode').forEach((x) => x.setAttribute('aria-checked', x === b ? 'true' : 'false'));
+        calc(true);
+      }));
+      km.addEventListener('input', () => calc(true));
+      dias.addEventListener('input', () => calc(true));
+      window.addEventListener('review:price', () => calc(false));
+      calc(false);
+    })();
   </script>
   <script src="assets/js/lazy-hero-video.js" defer></script>
   <script src="assets/js/product-gallery-lightbox.js" defer></script>

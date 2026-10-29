@@ -36,4 +36,5 @@ Sempre que criar uma página de produto ou comparativo, siga este esqueleto HTML
 - **Otimização de Assets (Performance):**
   - O HTML deve ser semântico, ultrarrápido e sem scripts pesados. 
   - Todos os scripts externos (Google Tag Manager, Lucide) DEVEM carregar com os atributos `async` ou `defer` para não bloquear a renderização.
-- **URLs (Slug):** A palavra-chave foco do conteúdo DEVE constar na URL do arquivo (ex: `review-[palavra-chave].html`).
+- **URLs (Slug):** Em páginas novas, o nome do arquivo e o canonical DEVEM ser exatamente a palavra-chave principal, sem prefixos como `review-`. Páginas já indexadas mantêm a URL atual (não renomear sem pedido explícito) (ex.: arquivo `foston-x13-max.html`, canonical `https://www.tudodemelhor.com.br/foston-x13-max`). A Vercel serve sem `.html` (`cleanUrls`).
+- **Links internos:** Sempre sem `.html` e com barra inicial (ex.: `href="/foston-x13-max"`). Toda review e todo ranking terminam com o bloco "Leia também" / "Reviews completas desta categoria" (marcadores `RELACIONADOS:INICIO`/`FIM`) apontando para páginas do mesmo assunto.
