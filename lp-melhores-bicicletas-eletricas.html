@@ -61,28 +61,28 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
+          colors: {ink:'#1E293B',
             brand: {
-              bg: '#232F3E',
-              yellow: '#FFE600',
-              orange: '#FF9900',
-              card: 'rgba(27, 37, 48, 0.7)',
-              elevated: '#1B2530',
-              border: '#37475A',
-              muted: '#D5D9D9',
-              dim: '#AAB3BD'
+              bg: '#F8FAFC',
+              yellow: '#FACC15',
+              orange: '#EA580C',
+              card: '#FFFFFF',
+              elevated: '#FFFFFF',
+              border: '#E2E8F0',
+              muted: '#475569',
+              dim: '#64748B'
             }
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif']
           },
-          boxShadow: {
-            glow: '0 0 15px rgba(255, 230, 0, 0.4)',
-            'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
-            'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)'
+          boxShadow: {soft:'0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 30px -14px rgba(15, 23, 42, 0.16)',
+            glow: '0 8px 20px -8px rgba(234, 179, 8, 0.6)',
+            'glow-lg': '0 14px 32px -12px rgba(234, 88, 12, 0.5)',
+            'glow-orange': '0 6px 16px -6px rgba(234, 88, 12, 0.35)'
           },
           backgroundImage: {
-            'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
+            'brand-gradient': 'linear-gradient(135deg, #FACC15 0%, #EA580C 100%)'
           }
         }
       }
@@ -91,16 +91,16 @@
   <style type="text/tailwindcss">
     @layer utilities {
       .glass {
-        @apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;
+        @apply bg-white backdrop-blur-md border border-slate-200 rounded-2xl shadow-soft;
       }
       .spec {
-        @apply rounded-xl border border-white/10 bg-white/5 px-3 py-2;
+        @apply rounded-xl border border-slate-200 bg-slate-50 px-3 py-2;
       }
       .spec dt {
         @apply text-[10px] font-bold uppercase tracking-wider text-brand-dim;
       }
       .spec dd {
-        @apply text-base font-black text-white;
+        @apply text-base font-black text-ink;
       }
       .cta-ml {
         @apply inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-6 text-base font-black text-black shadow-glow transition hover:-translate-y-0.5 hover:shadow-glow-lg;
@@ -111,25 +111,18 @@
     }
   </style>
   <style>
-    body {
-      background-image:
-        radial-gradient(ellipse 70% 45% at 85% 10%, rgba(255, 153, 0, 0.14), transparent 55%),
-        radial-gradient(ellipse 50% 40% at 10% 85%, rgba(255, 230, 0, 0.07), transparent 50%),
-        radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-      background-size: auto, auto, 18px 18px;
-      background-attachment: fixed;
-    }
+    body{background-color:#F8FAFC;background-image:radial-gradient(ellipse 65% 40% at 100% 0%,rgba(251,146,60,.16),transparent 60%),radial-gradient(ellipse 55% 38% at 0% 100%,rgba(234,88,12,.07),transparent 55%),radial-gradient(rgba(15,23,42,.035) 1px,transparent 1px);background-size:auto,auto,20px 20px;background-attachment:fixed}
   </style>
 </head>
-<body class="bg-brand-bg pb-24 font-sans text-white antialiased md:pb-0">
+<body class="bg-brand-bg pb-24 font-sans text-ink antialiased md:pb-0">
 
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
     <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
       <a href="/" class="flex items-center gap-3" aria-label="Tudo de Melhor">
-        <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-10 w-10 rounded-lg border border-white/10 object-cover" width="40" height="40">
-        <span class="text-sm font-black uppercase tracking-wider">Tudo de <span class="text-brand-yellow">Melhor</span></span>
+        <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-10 w-10 rounded-lg border border-slate-200 object-cover" width="40" height="40">
+        <span class="text-sm font-black uppercase tracking-wider">Tudo de <span class="text-orange-700">Melhor</span></span>
       </a>
-      <a href="#modelos" class="hidden min-h-12 items-center rounded-xl border border-brand-yellow/60 px-5 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10 sm:inline-flex">Ver os 5 modelos ↓</a>
+      <a href="#modelos" class="hidden min-h-12 items-center rounded-xl border border-orange-400 px-5 text-sm font-bold text-orange-700 transition hover:bg-orange-50 sm:inline-flex">Ver os 5 modelos ↓</a>
     </div>
   </header>
 
@@ -137,8 +130,8 @@
 
     <!-- HERO -->
     <section class="pb-8 pt-8 text-center md:pt-12">
-      <p class="mb-3 inline-flex items-center gap-2 rounded-full border border-brand-yellow/40 bg-brand-yellow/10 px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.14em] text-brand-yellow">🏆 Top 5 bikes elétricas 2026</p>
-      <h1 class="mx-auto mb-4 max-w-3xl text-3xl font-black leading-tight tracking-tight md:text-5xl">Qual a melhor <span class="text-brand-yellow">bike elétrica</span> para comprar em 2026?</h1>
+      <p class="mb-3 inline-flex items-center gap-2 rounded-full border border-orange-300 bg-orange-50 px-4 py-1.5 text-xs font-extrabold uppercase tracking-[0.14em] text-orange-700">🏆 Top 5 bikes elétricas 2026</p>
+      <h1 class="mx-auto mb-4 max-w-3xl text-3xl font-black leading-tight tracking-tight md:text-5xl">Qual a melhor <span class="text-orange-600">bike elétrica</span> para comprar em 2026?</h1>
       <p class="mx-auto mb-6 max-w-2xl text-base text-brand-muted md:text-lg">Assista ao comparativo e compre o modelo certo para o seu bolso — de R$ 2.806 a R$ 9.832, de 400W a 1000W.</p>
 
       <div class="mx-auto max-w-4xl">
@@ -148,35 +141,35 @@
       <nav class="mx-auto mb-6 max-w-4xl" aria-label="Modelos do vídeo">
         <p class="mb-3 text-xs font-bold uppercase tracking-wider text-brand-dim">Os 5 modelos do vídeo — toque para ver o preço</p>
         <div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
-          <a href="#modelo-1" class="glass flex min-h-12 items-center justify-center gap-2 px-3 py-2 text-sm font-bold transition hover:border-brand-yellow/50"><span class="text-brand-yellow">1</span> STARMEGA F9</a>
-          <a href="#modelo-2" class="glass flex min-h-12 items-center justify-center gap-2 px-3 py-2 text-sm font-bold transition hover:border-brand-yellow/50"><span class="text-brand-yellow">2</span> NADO C2</a>
-          <a href="#modelo-3" class="glass flex min-h-12 items-center justify-center gap-2 px-3 py-2 text-sm font-bold transition hover:border-brand-yellow/50"><span class="text-brand-yellow">3</span> Honeywhale S6-S</a>
-          <a href="#modelo-4" class="glass flex min-h-12 items-center justify-center gap-2 px-3 py-2 text-sm font-bold transition hover:border-brand-yellow/50"><span class="text-brand-yellow">4</span> Ouxi V9 Max</a>
-          <a href="#modelo-5" class="glass col-span-2 flex min-h-12 items-center justify-center gap-2 px-3 py-2 text-sm font-bold transition hover:border-brand-yellow/50 sm:col-span-1"><span class="text-brand-yellow">5</span> Ouxi V8 Pro S</a>
+          <a href="#modelo-1" class="glass flex min-h-12 items-center justify-center gap-2 px-3 py-2 text-sm font-bold transition hover:border-orange-300"><span class="text-orange-700">1</span> STARMEGA F9</a>
+          <a href="#modelo-2" class="glass flex min-h-12 items-center justify-center gap-2 px-3 py-2 text-sm font-bold transition hover:border-orange-300"><span class="text-orange-700">2</span> NADO C2</a>
+          <a href="#modelo-3" class="glass flex min-h-12 items-center justify-center gap-2 px-3 py-2 text-sm font-bold transition hover:border-orange-300"><span class="text-orange-700">3</span> Honeywhale S6-S</a>
+          <a href="#modelo-4" class="glass flex min-h-12 items-center justify-center gap-2 px-3 py-2 text-sm font-bold transition hover:border-orange-300"><span class="text-orange-700">4</span> Ouxi V9 Max</a>
+          <a href="#modelo-5" class="glass col-span-2 flex min-h-12 items-center justify-center gap-2 px-3 py-2 text-sm font-bold transition hover:border-orange-300 sm:col-span-1"><span class="text-orange-700">5</span> Ouxi V8 Pro S</a>
         </div>
       </nav>
 
       <ul class="mx-auto flex max-w-3xl flex-wrap justify-center gap-2 text-xs font-semibold text-brand-muted">
-        <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5">✅ Compra Garantida Mercado Livre</li>
-        <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5">🔋 Bateria e autonomia lado a lado</li>
-        <li class="rounded-full border border-white/10 bg-white/5 px-3 py-1.5">🚚 Entrega para todo o Brasil</li>
+        <li class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">✅ Compra Garantida Mercado Livre</li>
+        <li class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">🔋 Bateria e autonomia lado a lado</li>
+        <li class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">🚚 Entrega para todo o Brasil</li>
       </ul>
     </section>
 
     <!-- ESCOLHA RÁPIDA -->
     <section class="pb-10" aria-label="Escolha rápida">
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
-        <a href="#modelo-1" class="glass flex min-h-12 items-center gap-3 p-4 transition hover:border-brand-yellow/50">
+        <a href="#modelo-1" class="glass flex min-h-12 items-center gap-3 p-4 transition hover:border-orange-300">
           <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-gradient text-xl text-black">🏷️</span>
-          <span class="text-left"><span class="block text-[11px] font-extrabold uppercase tracking-wider text-brand-yellow">Mais barata</span><span class="block text-sm font-bold">STARMEGA F9 · R$ 2.806</span></span>
+          <span class="text-left"><span class="block text-[11px] font-extrabold uppercase tracking-wider text-orange-700">Mais barata</span><span class="block text-sm font-bold">STARMEGA F9 · R$ 2.806</span></span>
         </a>
-        <a href="#modelo-3" class="glass flex min-h-12 items-center gap-3 border-brand-yellow/40 p-4 shadow-glow transition hover:border-brand-yellow/70">
+        <a href="#modelo-3" class="glass flex min-h-12 items-center gap-3 border-orange-300 p-4 shadow-glow transition hover:border-orange-400">
           <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-gradient text-xl text-black">💰</span>
-          <span class="text-left"><span class="block text-[11px] font-extrabold uppercase tracking-wider text-brand-yellow">Melhor custo-benefício</span><span class="block text-sm font-bold">Honeywhale S6-S · R$ 3.685</span></span>
+          <span class="text-left"><span class="block text-[11px] font-extrabold uppercase tracking-wider text-orange-700">Melhor custo-benefício</span><span class="block text-sm font-bold">Honeywhale S6-S · R$ 3.685</span></span>
         </a>
-        <a href="#modelo-5" class="glass flex min-h-12 items-center gap-3 p-4 transition hover:border-brand-yellow/50">
+        <a href="#modelo-5" class="glass flex min-h-12 items-center gap-3 p-4 transition hover:border-orange-300">
           <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-gradient text-xl text-black">🔋</span>
-          <span class="text-left"><span class="block text-[11px] font-extrabold uppercase tracking-wider text-brand-yellow">Maior autonomia</span><span class="block text-sm font-bold">Ouxi V8 Pro S · até 100 km</span></span>
+          <span class="text-left"><span class="block text-[11px] font-extrabold uppercase tracking-wider text-orange-700">Maior autonomia</span><span class="block text-sm font-bold">Ouxi V8 Pro S · até 100 km</span></span>
         </a>
       </div>
     </section>
@@ -189,16 +182,16 @@
       <div class="space-y-6">
 
         <article id="modelo-1" class="glass scroll-mt-20 overflow-hidden">
-          <div class="flex items-center justify-between gap-3 border-b border-white/10 bg-white/5 px-5 py-3">
-            <span class="flex items-center gap-3"><span class="num">1</span><span class="text-sm font-black uppercase tracking-wider text-brand-yellow">🏷️ Mais barata</span></span>
+          <div class="flex items-center justify-between gap-3 border-b border-slate-200 bg-slate-50 px-5 py-3">
+            <span class="flex items-center gap-3"><span class="num">1</span><span class="text-sm font-black uppercase tracking-wider text-orange-700">🏷️ Mais barata</span></span>
             <span class="text-xs font-bold text-brand-dim">Modelo 1 do vídeo</span>
           </div>
           <div class="grid gap-6 p-5 md:grid-cols-[240px_1fr_260px] md:items-center md:p-6">
-            <div class="flex h-52 items-center justify-center rounded-xl bg-white/5 p-3 ring-1 ring-white/10 md:h-56">
+            <div class="flex h-52 items-center justify-center rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200 md:h-56">
               <img src="https://http2.mlstatic.com/D_NQ_NP_758401-MLA98377489225_112025-O.webp" alt="Bicicleta elétrica STARMEGA F9 400W 48V rodas 14 polegadas" class="max-h-full w-full object-contain" width="400" height="400" loading="eager" referrerpolicy="no-referrer">
             </div>
             <div>
-              <p class="mb-1 text-xs font-bold uppercase tracking-widest text-brand-yellow">STARMEGA</p>
+              <p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange-700">STARMEGA</p>
               <h3 class="mb-2 text-2xl font-black">F9 400W</h3>
               <p class="mb-4 text-sm text-brand-muted">A porta de entrada: compacta, rodas 14" e suporta até 150 kg. Para trajetos curtos e planos no bairro.</p>
               <dl class="grid grid-cols-2 gap-2">
@@ -208,9 +201,9 @@
                 <div class="spec"><dt>Velocidade</dt><dd>25 km/h</dd></div>
               </dl>
             </div>
-            <div class="flex flex-col gap-3 md:border-l md:border-white/10 md:pl-6">
+            <div class="flex flex-col gap-3 md:border-l md:border-slate-200 md:pl-6">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-dim">A partir de</p>
-              <p class="text-4xl font-black text-brand-yellow">R$ 2.806</p>
+              <p class="text-4xl font-black text-orange-600">R$ 2.806</p>
               <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/14nVSPT');" href="https://meli.la/14nVSPT">Ver oferta no Mercado Livre →</a>
               <p class="text-center text-xs text-brand-dim">✔ Ideal para primeira bike elétrica</p>
             </div>
@@ -218,16 +211,16 @@
         </article>
 
         <article id="modelo-2" class="glass scroll-mt-20 overflow-hidden">
-          <div class="flex items-center justify-between gap-3 border-b border-white/10 bg-white/5 px-5 py-3">
-            <span class="flex items-center gap-3"><span class="num">2</span><span class="text-sm font-black uppercase tracking-wider text-brand-yellow">⚡ 1000W com 60 km</span></span>
+          <div class="flex items-center justify-between gap-3 border-b border-slate-200 bg-slate-50 px-5 py-3">
+            <span class="flex items-center gap-3"><span class="num">2</span><span class="text-sm font-black uppercase tracking-wider text-orange-700">⚡ 1000W com 60 km</span></span>
             <span class="text-xs font-bold text-brand-dim">Modelo 2 do vídeo</span>
           </div>
           <div class="grid gap-6 p-5 md:grid-cols-[240px_1fr_260px] md:items-center md:p-6">
-            <div class="flex h-52 items-center justify-center rounded-xl bg-white/5 p-3 ring-1 ring-white/10 md:h-56">
+            <div class="flex h-52 items-center justify-center rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200 md:h-56">
               <img src="https://http2.mlstatic.com/D_NQ_NP_869095-MLA115153269282_082026-O.webp" alt="Bicicleta elétrica scooter NADO C2 1000W 48V" class="max-h-full w-full object-contain" width="400" height="400" loading="lazy" referrerpolicy="no-referrer">
             </div>
             <div>
-              <p class="mb-1 text-xs font-bold uppercase tracking-widest text-brand-yellow">NADO</p>
+              <p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange-700">NADO</p>
               <h3 class="mb-2 text-2xl font-black">C2 1000W</h3>
               <p class="mb-4 text-sm text-brand-muted">Bike scooter com motor de 1000W e bateria grande: força para subida e autonomia para a semana toda de trabalho.</p>
               <dl class="grid grid-cols-2 gap-2">
@@ -237,26 +230,26 @@
                 <div class="spec"><dt>Velocidade</dt><dd>32 km/h</dd></div>
               </dl>
             </div>
-            <div class="flex flex-col gap-3 md:border-l md:border-white/10 md:pl-6">
+            <div class="flex flex-col gap-3 md:border-l md:border-slate-200 md:pl-6">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-dim">A partir de</p>
-              <p class="text-4xl font-black text-brand-yellow">R$ 5.067</p>
+              <p class="text-4xl font-black text-orange-600">R$ 5.067</p>
               <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2bQvZua');" href="https://meli.la/2bQvZua">Ver oferta no Mercado Livre →</a>
               <p class="text-center text-xs text-brand-dim">✔ Ideal para trabalho e subidas</p>
             </div>
           </div>
         </article>
 
-        <article id="modelo-3" class="glass scroll-mt-20 overflow-hidden border-brand-yellow/50 shadow-glow">
+        <article id="modelo-3" class="glass scroll-mt-20 overflow-hidden border-orange-300 shadow-glow">
           <div class="flex items-center justify-between gap-3 bg-brand-gradient px-5 py-3 text-black">
-            <span class="flex items-center gap-3"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black text-lg font-black text-brand-yellow">3</span><span class="text-sm font-black uppercase tracking-wider">💰 Melhor custo-benefício</span></span>
+            <span class="flex items-center gap-3"><span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black text-lg font-black text-yellow-300">3</span><span class="text-sm font-black uppercase tracking-wider">💰 Melhor custo-benefício</span></span>
             <span class="text-xs font-bold">Modelo 3 do vídeo</span>
           </div>
           <div class="grid gap-6 p-5 md:grid-cols-[240px_1fr_260px] md:items-center md:p-6">
-            <div class="flex h-52 items-center justify-center rounded-xl bg-white/5 p-3 ring-1 ring-white/10 md:h-56">
+            <div class="flex h-52 items-center justify-center rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200 md:h-56">
               <img src="https://http2.mlstatic.com/D_NQ_NP_898061-MLA119183914029_102026-O.webp" alt="Bicicleta elétrica dobrável Honeywhale S6-S 750W fat tire" class="max-h-full w-full object-contain" width="400" height="400" loading="lazy" referrerpolicy="no-referrer">
             </div>
             <div>
-              <p class="mb-1 text-xs font-bold uppercase tracking-widest text-brand-yellow">Honeywhale</p>
+              <p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange-700">Honeywhale</p>
               <h3 class="mb-2 text-2xl font-black">S6-S 750W Dobrável</h3>
               <p class="mb-4 text-sm text-brand-muted">Fat tire dobrável com freio a disco, cesto e farol. O melhor equilíbrio entre potência, autonomia e preço da lista.</p>
               <dl class="grid grid-cols-2 gap-2">
@@ -266,9 +259,9 @@
                 <div class="spec"><dt>Velocidade</dt><dd>35 km/h</dd></div>
               </dl>
             </div>
-            <div class="flex flex-col gap-3 md:border-l md:border-white/10 md:pl-6">
+            <div class="flex flex-col gap-3 md:border-l md:border-slate-200 md:pl-6">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-dim">A partir de</p>
-              <p class="text-4xl font-black text-brand-yellow">R$ 3.685</p>
+              <p class="text-4xl font-black text-orange-600">R$ 3.685</p>
               <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/1MDt7cC');" href="https://meli.la/1MDt7cC">Ver oferta no Mercado Livre →</a>
               <p class="text-center text-xs text-brand-dim">✔ Ideal para cidade, buraco e apartamento</p>
             </div>
@@ -276,16 +269,16 @@
         </article>
 
         <article id="modelo-4" class="glass scroll-mt-20 overflow-hidden">
-          <div class="flex items-center justify-between gap-3 border-b border-white/10 bg-white/5 px-5 py-3">
-            <span class="flex items-center gap-3"><span class="num">4</span><span class="text-sm font-black uppercase tracking-wider text-brand-orange">⛰️ 1000W dobrável</span></span>
+          <div class="flex items-center justify-between gap-3 border-b border-slate-200 bg-slate-50 px-5 py-3">
+            <span class="flex items-center gap-3"><span class="num">4</span><span class="text-sm font-black uppercase tracking-wider text-orange-700">⛰️ 1000W dobrável</span></span>
             <span class="text-xs font-bold text-brand-dim">Modelo 4 do vídeo</span>
           </div>
           <div class="grid gap-6 p-5 md:grid-cols-[240px_1fr_260px] md:items-center md:p-6">
-            <div class="flex h-52 items-center justify-center rounded-xl bg-white/5 p-3 ring-1 ring-white/10 md:h-56">
+            <div class="flex h-52 items-center justify-center rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200 md:h-56">
               <img src="https://http2.mlstatic.com/D_NQ_NP_909996-MLB102088007791_122025-O.webp" alt="Bicicleta elétrica Ouxi V9 Max 1000W dobrável" class="max-h-full w-full object-contain" width="400" height="400" loading="lazy" referrerpolicy="no-referrer">
             </div>
             <div>
-              <p class="mb-1 text-xs font-bold uppercase tracking-widest text-brand-orange">Ouxi</p>
+              <p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange-700">Ouxi</p>
               <h3 class="mb-2 text-2xl font-black">V9 Max 1000W</h3>
               <p class="mb-4 text-sm text-brand-muted">Potência de 1000W que ainda dobra para guardar. Para ladeiras e quem quer trocar o ônibus ou a moto no dia a dia.</p>
               <dl class="grid grid-cols-2 gap-2">
@@ -295,26 +288,26 @@
                 <div class="spec"><dt>Formato</dt><dd>Dobrável</dd></div>
               </dl>
             </div>
-            <div class="flex flex-col gap-3 md:border-l md:border-white/10 md:pl-6">
+            <div class="flex flex-col gap-3 md:border-l md:border-slate-200 md:pl-6">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-dim">A partir de</p>
-              <p class="text-4xl font-black text-brand-yellow">R$ 7.053</p>
+              <p class="text-4xl font-black text-orange-600">R$ 7.053</p>
               <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2vgWTUZ');" href="https://meli.la/2vgWTUZ">Ver oferta no Mercado Livre →</a>
               <p class="text-center text-xs text-brand-dim">✔ Ideal para subidas e trajetos longos</p>
             </div>
           </div>
         </article>
 
-        <article id="modelo-5" class="glass scroll-mt-20 overflow-hidden border-brand-orange/40">
-          <div class="flex items-center justify-between gap-3 border-b border-white/10 bg-brand-orange/15 px-5 py-3">
-            <span class="flex items-center gap-3"><span class="num">5</span><span class="text-sm font-black uppercase tracking-wider text-brand-orange">🔋 Maior autonomia</span></span>
-            <span class="text-xs font-bold text-brand-dim">Modelo 5 do vídeo</span>
+        <article id="modelo-5" class="glass scroll-mt-20 overflow-hidden border-orange-300">
+          <div class="flex items-center justify-between gap-3 border-b border-slate-200 bg-orange-100 px-5 py-3">
+            <span class="flex items-center gap-3"><span class="num">5</span><span class="text-sm font-black uppercase tracking-wider text-orange-700">🔋 Maior autonomia</span></span>
+            <span class="text-xs font-bold text-brand-muted">Modelo 5 do vídeo</span>
           </div>
           <div class="grid gap-6 p-5 md:grid-cols-[240px_1fr_260px] md:items-center md:p-6">
-            <div class="flex h-52 items-center justify-center rounded-xl bg-white/5 p-3 ring-1 ring-white/10 md:h-56">
+            <div class="flex h-52 items-center justify-center rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200 md:h-56">
               <img src="https://http2.mlstatic.com/D_NQ_NP_764828-MLB89360879859_082025-O.webp" alt="Bicicleta elétrica Ouxi V8 Pro S 1000W com garupa e 2 baterias" class="max-h-full w-full object-contain" width="400" height="400" loading="lazy" referrerpolicy="no-referrer">
             </div>
             <div>
-              <p class="mb-1 text-xs font-bold uppercase tracking-widest text-brand-orange">Ouxi</p>
+              <p class="mb-1 text-xs font-bold uppercase tracking-widest text-orange-700">Ouxi</p>
               <h3 class="mb-2 text-2xl font-black">V8 Pro S 1000W · 2 baterias</h3>
               <p class="mb-4 text-sm text-brand-muted">Duas baterias e garupa: a que mais roda sem recarregar. Para quem roda muito por dia ou leva passageiro.</p>
               <dl class="grid grid-cols-2 gap-2">
@@ -324,9 +317,9 @@
                 <div class="spec"><dt>Extra</dt><dd>Garupa</dd></div>
               </dl>
             </div>
-            <div class="flex flex-col gap-3 md:border-l md:border-white/10 md:pl-6">
+            <div class="flex flex-col gap-3 md:border-l md:border-slate-200 md:pl-6">
               <p class="text-xs font-bold uppercase tracking-wider text-brand-dim">A partir de</p>
-              <p class="text-4xl font-black text-brand-yellow">R$ 9.832</p>
+              <p class="text-4xl font-black text-orange-600">R$ 9.832</p>
               <a class="cta-ml" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/23H3Ukp');" href="https://meli.la/23H3Ukp">Ver oferta no Mercado Livre →</a>
               <p class="text-center text-xs text-brand-dim">✔ Ideal para quem roda mais de 50 km por dia</p>
             </div>
@@ -341,7 +334,7 @@
       <h2 class="mb-6 text-center text-2xl font-black md:text-3xl">Comparativo rápido</h2>
       <div class="glass overflow-x-auto">
         <table class="w-full min-w-[640px] text-left text-sm">
-          <thead class="border-b border-white/10 bg-white/5 text-brand-yellow">
+          <thead class="border-b border-slate-200 bg-slate-50 text-orange-700">
             <tr>
               <th class="px-4 py-3 font-bold">Modelo</th>
               <th class="px-4 py-3 font-bold">Potência</th>
@@ -352,11 +345,11 @@
             </tr>
           </thead>
           <tbody class="text-brand-muted">
-            <tr class="border-b border-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">1. STARMEGA F9</th><td class="px-4 py-3">400W</td><td class="px-4 py-3">48V 10Ah</td><td class="px-4 py-3">15–20 km</td><td class="px-4 py-3 font-bold text-white">R$ 2.806</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/14nVSPT');" href="https://meli.la/14nVSPT">Ver oferta</a></td></tr>
-            <tr class="border-b border-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">2. NADO C2</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">48V 20Ah</td><td class="px-4 py-3">Até 60 km</td><td class="px-4 py-3 font-bold text-white">R$ 5.067</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2bQvZua');" href="https://meli.la/2bQvZua">Ver oferta</a></td></tr>
-            <tr class="border-b border-white/5 bg-brand-yellow/5"><th scope="row" class="px-4 py-3 font-semibold text-white">3. Honeywhale S6-S <span class="ml-1 text-[10px] font-black uppercase text-brand-yellow">Custo-benefício</span></th><td class="px-4 py-3">750W</td><td class="px-4 py-3">48V 15Ah</td><td class="px-4 py-3">Até 40 km</td><td class="px-4 py-3 font-bold text-white">R$ 3.685</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/1MDt7cC');" href="https://meli.la/1MDt7cC">Ver oferta</a></td></tr>
-            <tr class="border-b border-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">4. Ouxi V9 Max</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">48V 15,6Ah</td><td class="px-4 py-3">50–60 km</td><td class="px-4 py-3 font-bold text-white">R$ 7.053</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2vgWTUZ');" href="https://meli.la/2vgWTUZ">Ver oferta</a></td></tr>
-            <tr><th scope="row" class="px-4 py-3 font-semibold text-white">5. Ouxi V8 Pro S</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">2× 48V 15Ah</td><td class="px-4 py-3">80–100 km</td><td class="px-4 py-3 font-bold text-white">R$ 9.832</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/23H3Ukp');" href="https://meli.la/23H3Ukp">Ver oferta</a></td></tr>
+            <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">1. STARMEGA F9</th><td class="px-4 py-3">400W</td><td class="px-4 py-3">48V 10Ah</td><td class="px-4 py-3">15–20 km</td><td class="px-4 py-3 font-bold text-ink">R$ 2.806</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/14nVSPT');" href="https://meli.la/14nVSPT">Ver oferta</a></td></tr>
+            <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">2. NADO C2</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">48V 20Ah</td><td class="px-4 py-3">Até 60 km</td><td class="px-4 py-3 font-bold text-ink">R$ 5.067</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2bQvZua');" href="https://meli.la/2bQvZua">Ver oferta</a></td></tr>
+            <tr class="border-b border-slate-200 bg-orange-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">3. Honeywhale S6-S <span class="ml-1 text-[10px] font-black uppercase text-orange-700">Custo-benefício</span></th><td class="px-4 py-3">750W</td><td class="px-4 py-3">48V 15Ah</td><td class="px-4 py-3">Até 40 km</td><td class="px-4 py-3 font-bold text-ink">R$ 3.685</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/1MDt7cC');" href="https://meli.la/1MDt7cC">Ver oferta</a></td></tr>
+            <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">4. Ouxi V9 Max</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">48V 15,6Ah</td><td class="px-4 py-3">50–60 km</td><td class="px-4 py-3 font-bold text-ink">R$ 7.053</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/2vgWTUZ');" href="https://meli.la/2vgWTUZ">Ver oferta</a></td></tr>
+            <tr><th scope="row" class="px-4 py-3 font-semibold text-ink">5. Ouxi V8 Pro S</th><td class="px-4 py-3">1000W</td><td class="px-4 py-3">2× 48V 15Ah</td><td class="px-4 py-3">80–100 km</td><td class="px-4 py-3 font-bold text-ink">R$ 9.832</td><td class="px-4 py-2"><a class="inline-flex min-h-12 items-center rounded-lg bg-brand-yellow px-4 text-xs font-black text-black" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/23H3Ukp');" href="https://meli.la/23H3Ukp">Ver oferta</a></td></tr>
           </tbody>
         </table>
       </div>
@@ -384,9 +377,9 @@
 
     <!-- CTA FINAL -->
     <section class="pb-14">
-      <div class="glass relative overflow-hidden border-brand-yellow/40 p-6 text-center shadow-glow md:p-10">
-        <div class="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-brand-orange/20 blur-3xl" aria-hidden="true"></div>
-        <p class="relative mb-2 text-xs font-extrabold uppercase tracking-[0.14em] text-brand-yellow">Ainda em dúvida?</p>
+      <div class="glass relative overflow-hidden border-orange-300 p-6 text-center shadow-glow md:p-10">
+        <div class="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-orange-100 blur-3xl" aria-hidden="true"></div>
+        <p class="relative mb-2 text-xs font-extrabold uppercase tracking-[0.14em] text-orange-700">Ainda em dúvida?</p>
         <h2 class="relative mb-3 text-2xl font-black md:text-3xl">Vá de Honeywhale S6-S por R$ 3.685</h2>
         <p class="relative mx-auto mb-6 max-w-xl text-sm text-brand-muted">750W, bateria 48V, até 40 km, dobrável e com freio a disco. A escolha mais equilibrada do vídeo.</p>
         <div class="relative mx-auto max-w-md">
@@ -397,22 +390,22 @@
 
   </main>
 
-  <footer class="border-t border-brand-border bg-[#1a222d] px-4 py-8">
+  <footer class="border-t border-brand-border bg-white px-4 py-8">
     <div class="mx-auto max-w-6xl text-center text-xs text-brand-dim">
       <p class="mb-3">Tudo de Melhor é um site editorial independente. Links de afiliado podem gerar comissão, sem custo extra para você. Preços e disponibilidade consultados no Mercado Livre e sujeitos a alteração.</p>
       <p class="flex flex-wrap justify-center gap-4">
-        <a href="/sobre" class="hover:text-brand-yellow">Sobre</a>
-        <a href="/privacidade" class="hover:text-brand-yellow">Privacidade</a>
-        <a href="/contato" class="hover:text-brand-yellow">Contato</a>
+        <a href="/sobre" class="hover:text-orange-600">Sobre</a>
+        <a href="/privacidade" class="hover:text-orange-600">Privacidade</a>
+        <a href="/contato" class="hover:text-orange-600">Contato</a>
       </p>
       <p class="mt-3">© <span id="y"></span> tudodemelhor.com.br</p>
     </div>
   </footer>
 
-  <div class="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-brand-elevated/95 px-4 py-3 backdrop-blur-md md:hidden">
+  <div class="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-white/95 px-4 py-3 backdrop-blur-md md:hidden">
     <div class="flex items-center gap-3">
       <div class="min-w-0 flex-1 leading-tight">
-        <p class="text-[10px] font-extrabold uppercase tracking-wider text-brand-yellow">💰 Melhor custo-benefício</p>
+        <p class="text-[10px] font-extrabold uppercase tracking-wider text-orange-700">💰 Melhor custo-benefício</p>
         <p class="truncate text-sm font-bold">Honeywhale S6-S · R$ 3.685</p>
       </div>
       <a class="inline-flex min-h-12 shrink-0 items-center rounded-xl bg-brand-gradient px-5 text-sm font-black text-black shadow-glow" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion('https://meli.la/1MDt7cC');" href="https://meli.la/1MDt7cC">Ver oferta →</a>

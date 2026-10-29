@@ -28,30 +28,30 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
+          colors: {ink:'#1E293B',
             brand: {
-              bg: '#232F3E',
-              yellow: '#FFE600',
-              orange: '#FF9900',
-              card: 'rgba(27, 37, 48, 0.7)',
-              elevated: '#1B2530',
-              border: '#37475A',
-              muted: '#D5D9D9',
-              dim: '#AAB3BD'
+              bg: '#F8FAFC',
+              yellow: '#FACC15',
+              orange: '#EA580C',
+              card: '#FFFFFF',
+              elevated: '#FFFFFF',
+              border: '#E2E8F0',
+              muted: '#475569',
+              dim: '#64748B'
             }
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif']
           },
-          boxShadow: {
-            glow: '0 0 15px rgba(255, 230, 0, 0.4)',
-            'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
-            'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
-            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)',
-            'neon-emerald': '0 0 12px rgba(52, 211, 153, 0.55), inset 0 0 8px rgba(52, 211, 153, 0.15)'
+          boxShadow: {soft:'0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 30px -14px rgba(15, 23, 42, 0.16)',
+            glow: '0 8px 20px -8px rgba(234, 179, 8, 0.6)',
+            'glow-lg': '0 14px 32px -12px rgba(234, 88, 12, 0.5)',
+            'glow-orange': '0 6px 16px -6px rgba(234, 88, 12, 0.35)',
+            'glow-emerald': '0 1px 2px rgba(15, 23, 42, 0.04), 0 14px 32px -16px rgba(16, 185, 129, 0.45)',
+            'neon-emerald': '0 0 0 3px rgba(16, 185, 129, 0.08)'
           },
           backgroundImage: {
-            'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
+            'brand-gradient': 'linear-gradient(135deg, #FACC15 0%, #EA580C 100%)'
           }
         }
       }
@@ -60,19 +60,12 @@
   <style type="text/tailwindcss">
     @layer utilities {
       .glass {
-        @apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;
+        @apply bg-white backdrop-blur-md border border-slate-200 rounded-2xl shadow-soft;
       }
     }
   </style>
   <style>
-    body {
-      background-image:
-        radial-gradient(ellipse 70% 45% at 85% 10%, rgba(255, 153, 0, 0.14), transparent 55%),
-        radial-gradient(ellipse 50% 40% at 10% 85%, rgba(255, 230, 0, 0.07), transparent 50%),
-        radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-      background-size: auto, auto, 18px 18px;
-      background-attachment: fixed;
-    }
+    body{background-color:#F8FAFC;background-image:radial-gradient(ellipse 65% 40% at 100% 0%,rgba(251,146,60,.16),transparent 60%),radial-gradient(ellipse 55% 38% at 0% 100%,rgba(234,88,12,.07),transparent 55%),radial-gradient(rgba(15,23,42,.035) 1px,transparent 1px);background-size:auto,auto,20px 20px;background-attachment:fixed}
     @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
     .animate-marquee { animation: marquee 25s linear infinite; width: max-content; }
     .animate-marquee:hover, .animate-marquee:active { animation-play-state: paused; }
@@ -304,33 +297,33 @@
   }
   </script>
 </head>
-<body class="bg-brand-bg text-white font-sans antialiased min-h-screen pb-32">
+<body class="bg-brand-bg text-ink font-sans antialiased min-h-screen pb-32">
 
-  <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
     <div class="mx-auto flex h-[100px] max-w-7xl items-center gap-4 px-4 lg:gap-8">
       <a href="/" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
-        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
+        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
           <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-full w-full object-cover">
         </div>
         <div class="flex flex-col justify-center">
-          <span class="text-xl font-black uppercase leading-tight tracking-wider text-white lg:text-2xl">Tudo De</span>
-          <span class="text-xl font-black uppercase leading-tight tracking-wider text-brand-yellow lg:text-2xl">Melhor</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-ink lg:text-2xl">Tudo De</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-orange-700 lg:text-2xl">Melhor</span>
         </div>
       </a>
 
-      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-brand-elevated md:hidden" aria-label="Abrir menu" aria-expanded="false">
+      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-white md:hidden" aria-label="Abrir menu" aria-expanded="false">
         <span class="flex flex-col gap-1.5">
-          <span class="block h-0.5 w-6 bg-white"></span>
-          <span class="block h-0.5 w-6 bg-white"></span>
-          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-ink"></span>
+          <span class="block h-0.5 w-6 bg-ink"></span>
+          <span class="block h-0.5 w-6 bg-ink"></span>
         </span>
       </button>
 
       <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
-        <a href="/#categorias" class="transition hover:text-white">Categorias</a>
-        <a href="/categorias" class="transition hover:text-white">Rankings</a>
-        <a href="/reviews" class="transition hover:text-white">Reviews</a>
-        <a href="/#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
+        <a href="/#categorias" class="transition hover:text-ink">Categorias</a>
+        <a href="/categorias" class="transition hover:text-ink">Rankings</a>
+        <a href="/reviews" class="transition hover:text-ink">Reviews</a>
+        <a href="/#ofertas" class="font-bold text-orange-700 shadow-glow transition hover:text-ink">Melhores Ofertas</a>
       </nav>
 
       <div class="hidden items-center gap-4 md:flex">
@@ -340,18 +333,18 @@
             <circle cx="11" cy="11" r="7"></circle>
             <path d="M20 20l-3.5-3.5"></path>
           </svg>
-          <input type="search" placeholder="Buscar" class="h-11 w-44 rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim focus:border-brand-yellow/50 focus:bg-white/10 lg:w-52">
+          <input type="search" placeholder="Buscar" class="h-11 w-44 rounded-full border border-slate-200 bg-slate-50 pl-11 pr-4 text-sm text-ink outline-none backdrop-blur-sm placeholder:text-slate-400 focus:border-orange-400 focus:bg-white lg:w-52">
         </label>
-        <a href="#login" class="inline-flex h-11 items-center rounded-full border border-white/25 px-6 text-sm font-semibold transition hover:bg-white/10">Login</a>
+        <a href="#login" class="inline-flex h-11 items-center rounded-full border border-slate-300 px-6 text-sm font-semibold transition hover:bg-slate-100">Login</a>
       </div>
     </div>
 
-    <div id="mobile-nav" class="hidden border-t border-white/10 bg-brand-elevated/98 px-4 py-4 md:hidden">
+    <div id="mobile-nav" class="hidden border-t border-slate-200 bg-white px-4 py-4 md:hidden">
       <nav class="flex flex-col gap-1 text-sm">
-        <a href="/#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Categorias</a>
-        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
-        <a href="/reviews" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Reviews</a>
-        <a href="/#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
+        <a href="/#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Categorias</a>
+        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Rankings</a>
+        <a href="/reviews" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Reviews</a>
+        <a href="/#ofertas" class="rounded-lg px-3 py-3 font-bold text-orange-700">Melhores Ofertas</a>
       </nav>
       <label class="relative mt-3 block">
         <span class="sr-only">Buscar</span>
@@ -359,39 +352,39 @@
           <circle cx="11" cy="11" r="7"></circle>
           <path d="M20 20l-3.5-3.5"></path>
         </svg>
-        <input type="search" placeholder="Buscar" class="h-11 w-full rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim">
+        <input type="search" placeholder="Buscar" class="h-11 w-full rounded-full border border-slate-200 bg-slate-50 pl-11 pr-4 text-sm text-ink outline-none backdrop-blur-sm placeholder:text-slate-400">
       </label>
-      <a href="#login" class="mt-3 inline-flex h-11 w-full items-center justify-center rounded-full border border-white/25 font-semibold">Login</a>
+      <a href="#login" class="mt-3 inline-flex h-11 w-full items-center justify-center rounded-full border border-slate-300 font-semibold">Login</a>
     </div>
   </header>
 
   <main class="px-4 pt-8">
     <div class="mx-auto max-w-6xl">
       <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
-        <a href="/" class="hover:text-brand-yellow">Início</a>
+        <a href="/" class="hover:text-orange-600">Início</a>
         <span aria-hidden="true">/</span>
-        <a href="/melhores-scooters-eletricas" class="hover:text-brand-yellow">Scooters Elétricas</a>
+        <a href="/melhores-scooters-eletricas" class="hover:text-orange-600">Scooters Elétricas</a>
         <span aria-hidden="true">/</span>
-        <span class="text-white" aria-current="page">Chopper 1000W</span>
+        <span class="text-ink" aria-current="page">Chopper 1000W</span>
       </nav>
 
       <header class="mb-8 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div class="glass relative order-2 overflow-hidden p-6 md:order-1 md:p-10">
-          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/10 blur-3xl"></div>
-          <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · #4 do ranking scooters 2026</p>
+          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-orange-50 blur-3xl"></div>
+          <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-orange-700">Review · #4 do ranking scooters 2026</p>
           <h1 class="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Scooter elétrica chopper: moto elétrica 1000W 48V adulto vale a pena?</h1>
           <p class="mb-6 hidden max-w-2xl text-lg text-brand-muted md:block">
             A <strong>scooter elétrica chopper</strong> (modelo <strong>Chopper 1000W</strong> / <strong>moto chopper</strong> elétrica) é a nossa escolha #4, badge <strong>Maior desempenho visual</strong>: estilo moderno preto com laranja, <strong>motor elétrico</strong> potente de <strong>1000W</strong> e pack <strong>48V</strong> — preço observado perto de R$ 8.149 no Mercado Livre.
           </p>
           <div class="mb-3 flex flex-wrap gap-2">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Oferta Verificada no Mercado Livre</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-300 bg-emerald-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-700 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Oferta Verificada no Mercado Livre</span>
           </div>
           <div class="mb-6 flex flex-wrap gap-2">
             <span class="rounded-md bg-brand-yellow px-3 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">#4 Ranking</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Nota editorial 8.6</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">~R$ 8.149</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Maior desempenho visual</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">1000W · 48V · Preto/Laranja</span>
+            <span class="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-brand-muted">Nota editorial 8.6</span>
+            <span class="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-brand-muted">~R$ 8.149</span>
+            <span class="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-brand-muted">Maior desempenho visual</span>
+            <span class="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-brand-muted">1000W · 48V · Preto/Laranja</span>
           </div>
           <div class="flex flex-col gap-3 sm:flex-row">
             <a class="btn-shine inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1MuUgKZ">Comprar no Mercado Livre</a>
@@ -399,16 +392,16 @@
           <div class="product-gallery mt-4" aria-label="Galeria de fotos do produto" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_629658-MLB116506510564_092026-F.webp","alt":"Moto Elétrica Scooter 1000w 48v Adulto Chopper Preta — vista principal"},{"url":"https://http2.mlstatic.com/D_NQ_NP_629658-MLB116506510564_092026-O.webp","alt":"Chopper 1000W — foto do anúncio no Mercado Livre"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_649121-MLB116507598506_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp","alt":"Chopper elétrica preto laranja — ângulo 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_987399-MLB116507216074_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp","alt":"Moto elétrica chopper 1000W 48V — ângulo 3"}]'>
             <p class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Fotos do produto</p>
             <div class="flex flex-wrap gap-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_629658-MLB116506510564_092026-F.webp" alt="Moto Elétrica Scooter 1000w 48v Adulto Chopper Preta — vista principal" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="0" loading="eager" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_629658-MLB116506510564_092026-O.webp" alt="Chopper 1000W — foto do anúncio no Mercado Livre" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_649121-MLB116507598506_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" alt="Chopper elétrica preto laranja — ângulo 2" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_987399-MLB116507216074_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" alt="Moto elétrica chopper 1000W 48V — ângulo 3" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_629658-MLB116506510564_092026-F.webp" alt="Moto Elétrica Scooter 1000w 48v Adulto Chopper Preta — vista principal" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="0" loading="eager" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_629658-MLB116506510564_092026-O.webp" alt="Chopper 1000W — foto do anúncio no Mercado Livre" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_649121-MLB116507598506_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" alt="Chopper elétrica preto laranja — ângulo 2" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_987399-MLB116507216074_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" alt="Moto elétrica chopper 1000W 48V — ângulo 3" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
             </div>
           </div>
         </div>
 
         <div class="glass relative order-1 flex h-full min-h-[420px] flex-col overflow-hidden p-5 shadow-glow-emerald md:order-2 md:min-h-0 md:p-6">
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-brand-yellow/5"></div>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-50 via-transparent to-orange-50/60"></div>
           <div class="relative flex min-h-0 flex-1 items-center justify-center">
             <div class="hero-video-wrap relative mx-auto aspect-[9/16] h-full w-full max-h-full max-w-[min(100%,315px)] overflow-hidden rounded-2xl bg-white/95 shadow-lg dark:bg-black/20">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_629658-MLB116506510564_092026-F.webp" alt="Moto Elétrica Scooter 1000w 48v Adulto Chopper Preta 55km/h Preto Com Laranja 14" class="h-full w-full object-contain" referrerpolicy="no-referrer">
@@ -420,21 +413,21 @@
 
       <nav class="glass mb-8 flex flex-wrap gap-2 p-3 sm:p-4" aria-label="Índice da review">
         <p class="w-full text-[10px] font-bold uppercase tracking-wider text-brand-dim">Índice</p>
-        <a href="#veredito" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Veredito</a>
-        <a href="#pros-contras" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Prós e Contras</a>
-        <a href="#especificacoes" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Especificações</a>
-        <a href="#compradores" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Compradores</a>
-        <a href="#analise" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Análise</a>
-        <a href="#faq" class="rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">FAQ</a>
+        <a href="#veredito" class="rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Veredito</a>
+        <a href="#pros-contras" class="rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Prós e Contras</a>
+        <a href="#especificacoes" class="rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Especificações</a>
+        <a href="#compradores" class="rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Compradores</a>
+        <a href="#analise" class="rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Análise</a>
+        <a href="#faq" class="rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">FAQ</a>
       </nav>
 
       <section id="veredito" class="mb-10 scroll-mt-28 grid grid-cols-2 gap-4 md:grid-cols-4" aria-label="Veredito rápido">
         <article class="glass col-span-2 p-6 md:row-span-2">
           <h2 class="mb-4 text-sm font-bold uppercase tracking-wide text-brand-dim">Veredito rápido</h2>
           <div class="flex items-end gap-4">
-            <span class="text-6xl font-black leading-none text-brand-yellow drop-shadow-[0_0_15px_rgba(255,230,0,0.4)]">8.6</span>
+            <span class="text-6xl font-black leading-none text-orange-600">8.6</span>
             <div class="pb-1">
-              <div class="text-xl text-brand-yellow" aria-label="Nota máxima do ranking">★★★★★</div>
+              <div class="text-xl text-orange-700" aria-label="Nota máxima do ranking">★★★★★</div>
               <p class="m-0 text-sm text-brand-dim">Escala 0–10 · ranking Tudo de Melhor</p>
             </div>
           </div>
@@ -446,7 +439,7 @@
         </article>
         <article class="glass p-5">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">⭐</span> Diferencial</h3>
-          <p class="m-0 text-sm font-bold text-brand-yellow">Maior desempenho visual · estilo chopper · 1000W 48V</p>
+          <p class="m-0 text-sm font-bold text-orange-700">Maior desempenho visual · estilo chopper · 1000W 48V</p>
         </article>
         <article class="glass col-span-2 p-5 md:col-span-2">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">🤝</span> Promessa</h3>
@@ -460,38 +453,38 @@
             <div>
               <p id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</p>
             </div>
-            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300">Preço estável</span>
+            <span class="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Preço estável</span>
           </div>
 
-          <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base">
+          <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-50 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-700 shadow-neon-emerald md:text-base">
             🟢 Menor preço registrado: R$ 8.149,00 à vista ou 10x de R$ 932,33
           </div>
 
           <div class="mb-5 grid grid-cols-2 gap-3">
-            <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">14/10</p>
               <p class="mt-1 text-xl font-extrabold text-brand-dim md:text-2xl">R$ 8.149</p>
             </div>
-            <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-center">
-              <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Hoje · 22/10</p>
-              <p class="mt-1 text-xl font-extrabold text-emerald-300 md:text-2xl">R$ 8.149</p>
+            <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">Hoje · 22/10</p>
+              <p class="mt-1 text-xl font-extrabold text-emerald-700 md:text-2xl">R$ 8.149</p>
             </div>
           </div>
 
           <figure>
               <svg viewBox="0 0 600 220" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço: R$ 8.149,00 em 14/10">
-                <defs><linearGradient id="area-h" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/><stop offset="100%" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs>
-                <g stroke="rgba(255,255,255,0.08)" stroke-width="1"><line x1="40" y1="20.0" x2="580" y2="20.0"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95.0" x2="580" y2="95.0"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170.0" x2="580" y2="170.0"/></g>
-                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25.0">8,6k</text><text x="36" y="62.5">8,4k</text><text x="36" y="100.0">8,2k</text><text x="36" y="137.5">8k</text><text x="36" y="175.0">7,8k</text></g>
+                <defs><linearGradient id="area-h" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10B981" stop-opacity="0.35"/><stop offset="100%" stop-color="#10B981" stop-opacity="0"/></linearGradient></defs>
+                <g stroke="rgba(15,23,42,0.11)" stroke-width="1"><line x1="40" y1="20.0" x2="580" y2="20.0"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95.0" x2="580" y2="95.0"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170.0" x2="580" y2="170.0"/></g>
+                <g fill="#64748B" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25.0">8,6k</text><text x="36" y="62.5">8,4k</text><text x="36" y="100.0">8,2k</text><text x="36" y="137.5">8k</text><text x="36" y="175.0">7,8k</text></g>
                 <polygon fill="url(#area-h)" points="56,104.6 566,104.6 566,170 56,170"/>
-                <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56,104.6 566,104.6"/>
-                <g fill="#34d399"><circle cx="56" cy="104.6" r="4"/></g>
-                <circle cx="566" cy="104.6" r="10" fill="#34d399" fill-opacity="0.25"/>
-                <circle cx="566" cy="104.6" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
-                <g font-family="Inter, sans-serif" font-weight="800" font-size="20"><text x="566" y="88.6" fill="#6ee7b7" text-anchor="end">R$ 8.149</text></g>
-                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56" y="212">14/10</text><text x="562" y="212" fill="#6ee7b7" font-weight="700">22/10</text></g>
+                <polyline fill="none" stroke="#10B981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56,104.6 566,104.6"/>
+                <g fill="#10B981"><circle cx="56" cy="104.6" r="4"/></g>
+                <circle cx="566" cy="104.6" r="10" fill="#10B981" fill-opacity="0.25"/>
+                <circle cx="566" cy="104.6" r="6" fill="#10B981" stroke="#fff" stroke-width="2"/>
+                <g font-family="Inter, sans-serif" font-weight="800" font-size="20"><text x="566" y="88.6" fill="#047857" text-anchor="end">R$ 8.149</text></g>
+                <g fill="#64748B" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56" y="212">14/10</text><text x="562" y="212" fill="#047857" font-weight="700">22/10</text></g>
               </svg>
-            <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+            <figcaption class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
               <strong class="text-brand-muted">Transparência:</strong> Histórico de 14/10 a 22/10/2026. No checkout simulado, a entrega é combinada com o vendedor (Várzea Paulista/SP). As 10x têm juros (total R$ 9.323,27). A venda, entrega e garantia são do vendedor no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar — confira no anúncio antes de pagar.
             </figcaption>
           </figure>
@@ -499,24 +492,24 @@
       </section>
 
       <section id="pros-contras" class="mb-10 scroll-mt-28">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-brand-yellow">contras</span> da Chopper 1000W</h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-orange-600">contras</span> da Chopper 1000W</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div class="glass border-emerald-500/30 p-6 shadow-glow-emerald">
-            <h3 class="mb-4 text-lg font-bold text-emerald-300">Pontos fortes</h3>
+          <div class="glass border-emerald-200 p-6 shadow-glow-emerald">
+            <h3 class="mb-4 text-lg font-bold text-emerald-700">Pontos fortes</h3>
             <ul class="space-y-3 text-sm text-brand-muted">
-              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Visual chopper estiloso — presença de motoneta na rua</li>
-              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Motor de 1000W para uso urbano adulto</li>
-              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Até 55 km/h (se o lote confirmar — confira o anúncio)</li>
-              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Design preto com laranja chama atenção no ranking</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-700 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Visual chopper estiloso — presença de motoneta na rua</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-700 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Motor de 1000W para uso urbano adulto</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-700 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Até 55 km/h (se o lote confirmar — confira o anúncio)</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-emerald-700 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Design preto com laranja chama atenção no ranking</li>
             </ul>
           </div>
-          <div class="glass border-orange-500/30 p-6">
-            <h3 class="mb-4 text-lg font-bold text-orange-300">Limitações</h3>
+          <div class="glass border-orange-200 p-6">
+            <h3 class="mb-4 text-lg font-bold text-orange-700">Limitações</h3>
             <ul class="space-y-3 text-sm text-brand-muted">
-              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Disponível em poucas cores (preta / preto com laranja)</li>
-              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Pack 48V — abaixo do 60V da X13 60V</li>
-              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Preço pode ser alto (~R$ 8.149 observado)</li>
-              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-400 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Velocidade do lote precisa conferência (55 vs 32 km/h); marca genérica</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-700 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Disponível em poucas cores (preta / preto com laranja)</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-700 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Pack 48V — abaixo do 60V da X13 60V</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-700 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Preço pode ser alto (~R$ 8.149 observado)</li>
+              <li class="flex items-start gap-3 text-sm text-brand-muted"><svg class="w-5 h-5 shrink-0 text-orange-700 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Velocidade do lote precisa conferência (55 vs 32 km/h); marca genérica</li>
             </ul>
           </div>
         </div>
@@ -527,35 +520,35 @@
         <div class="glass overflow-hidden">
           <table class="w-full text-left text-sm">
             <tbody>
-              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Nome completo</th><td class="px-4 py-4 text-brand-muted">Moto Elétrica Scooter 1000w 48v Adulto Chopper Preta 55km/h Preto Com Laranja 14</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Modelo</th><td class="px-4 py-4 text-brand-muted">Chopper 1000W / Chopper elétrica — moto elétrica scooter chopper adulto</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Motor</th><td class="px-4 py-4 text-brand-muted">Motor elétrico 1000W potente — praticidade na mobilidade urbana adulta</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Bateria / autonomia</th><td class="px-4 py-4 text-brand-muted">Bateria 48V — confira Ah e autonomia em km no anúncio do dia (rivais citam 2000W ou scooter elétrica 3000W / 3000W)</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Velocidade máxima</th><td class="px-4 py-4 text-brand-muted">Ranking/título apontam até 55 km/h; há listagens/imagens com 32 km/h no filename — valide no anúncio do dia</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Cor</th><td class="px-4 py-4 text-brand-muted">Preta / Preto com Laranja (paleta limitada)</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Perfil</th><td class="px-4 py-4 text-brand-muted">Estilo chopper / presença de motoneta — farol LED, visual moderno; não é bike nem autopropelido de outra categoria</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Habilitação</th><td class="px-4 py-4 text-brand-muted">Em 55 km/h, em geral ACC/CNH; se o lote for 32 km/h, o perfil muda — confira CONTRAN/local com a velocidade real</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Nota ranking</th><td class="px-4 py-4 text-brand-muted">8.6 (86/100) · #4 · badge Maior desempenho visual</td></tr>
-              <tr class="even:bg-white/5 transition-colors hover:bg-white/[0.04]"><th scope="row" class="px-4 py-4 font-semibold text-white">Preço observado</th><td class="px-4 py-4 text-brand-muted">~R$ 8.149 no Mercado Livre (ofertas e parcelamento variam — confira o dia)</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50 transition-colors hover:bg-slate-50"><th scope="row" class="px-4 py-4 font-semibold text-ink">Nome completo</th><td class="px-4 py-4 text-brand-muted">Moto Elétrica Scooter 1000w 48v Adulto Chopper Preta 55km/h Preto Com Laranja 14</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50 transition-colors hover:bg-slate-50"><th scope="row" class="px-4 py-4 font-semibold text-ink">Modelo</th><td class="px-4 py-4 text-brand-muted">Chopper 1000W / Chopper elétrica — moto elétrica scooter chopper adulto</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50 transition-colors hover:bg-slate-50"><th scope="row" class="px-4 py-4 font-semibold text-ink">Motor</th><td class="px-4 py-4 text-brand-muted">Motor elétrico 1000W potente — praticidade na mobilidade urbana adulta</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50 transition-colors hover:bg-slate-50"><th scope="row" class="px-4 py-4 font-semibold text-ink">Bateria / autonomia</th><td class="px-4 py-4 text-brand-muted">Bateria 48V — confira Ah e autonomia em km no anúncio do dia (rivais citam 2000W ou scooter elétrica 3000W / 3000W)</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50 transition-colors hover:bg-slate-50"><th scope="row" class="px-4 py-4 font-semibold text-ink">Velocidade máxima</th><td class="px-4 py-4 text-brand-muted">Ranking/título apontam até 55 km/h; há listagens/imagens com 32 km/h no filename — valide no anúncio do dia</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50 transition-colors hover:bg-slate-50"><th scope="row" class="px-4 py-4 font-semibold text-ink">Cor</th><td class="px-4 py-4 text-brand-muted">Preta / Preto com Laranja (paleta limitada)</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50 transition-colors hover:bg-slate-50"><th scope="row" class="px-4 py-4 font-semibold text-ink">Perfil</th><td class="px-4 py-4 text-brand-muted">Estilo chopper / presença de motoneta — farol LED, visual moderno; não é bike nem autopropelido de outra categoria</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50 transition-colors hover:bg-slate-50"><th scope="row" class="px-4 py-4 font-semibold text-ink">Habilitação</th><td class="px-4 py-4 text-brand-muted">Em 55 km/h, em geral ACC/CNH; se o lote for 32 km/h, o perfil muda — confira CONTRAN/local com a velocidade real</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50 transition-colors hover:bg-slate-50"><th scope="row" class="px-4 py-4 font-semibold text-ink">Nota ranking</th><td class="px-4 py-4 text-brand-muted">8.6 (86/100) · #4 · badge Maior desempenho visual</td></tr>
+              <tr class="even:bg-slate-50 transition-colors hover:bg-slate-50"><th scope="row" class="px-4 py-4 font-semibold text-ink">Preço observado</th><td class="px-4 py-4 text-brand-muted">~R$ 8.149 no Mercado Livre (ofertas e parcelamento variam — confira o dia)</td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
       <section id="compradores" class="mb-10 scroll-mt-28" aria-label="Fotos de quem comprou">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-brand-yellow">quem comprou</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-orange-600">quem comprou</span></h2>
         <div class="glass p-5 md:p-6">
           <p class="mb-4 text-sm text-brand-muted">Imagens no estilo de quem comprou — o tipo de prova social que você vê em Instagram e no anúncio — e fotos do produto no contexto real de uso.</p>
           <div class="overflow-hidden w-full relative">
             <div class="flex gap-4 animate-marquee">
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://th.bing.com/th/id/OIP.aToWSnHdmp5LLyoWCUf6BQHaF2?w=247&h=194&c=7&r=0&o=7&pid=1.7&rm=3" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://th.bing.com/th/id/OIP.kIlL64tpiH93FtCKX_wVKwHaJ4?w=150&h=200&c=7&r=0&o=7&pid=1.7&rm=3" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_649121-MLB116507598506_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_987399-MLB116507216074_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://th.bing.com/th/id/OIP.aToWSnHdmp5LLyoWCUf6BQHaF2?w=247&h=194&c=7&r=0&o=7&pid=1.7&rm=3" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://th.bing.com/th/id/OIP.kIlL64tpiH93FtCKX_wVKwHaJ4?w=150&h=200&c=7&r=0&o=7&pid=1.7&rm=3" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_649121-MLB116507598506_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
-              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_987399-MLB116507216074_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all"><img src="https://th.bing.com/th/id/OIP.aToWSnHdmp5LLyoWCUf6BQHaF2?w=247&h=194&c=7&r=0&o=7&pid=1.7&rm=3" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all"><img src="https://th.bing.com/th/id/OIP.kIlL64tpiH93FtCKX_wVKwHaJ4?w=150&h=200&c=7&r=0&o=7&pid=1.7&rm=3" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_649121-MLB116507598506_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_987399-MLB116507216074_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all"><img src="https://th.bing.com/th/id/OIP.aToWSnHdmp5LLyoWCUf6BQHaF2?w=247&h=194&c=7&r=0&o=7&pid=1.7&rm=3" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all"><img src="https://th.bing.com/th/id/OIP.kIlL64tpiH93FtCKX_wVKwHaJ4?w=150&h=200&c=7&r=0&o=7&pid=1.7&rm=3" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_649121-MLB116507598506_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
+              <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_987399-MLB116507216074_092026-F-moto-eletrica-scooter-1000w-48v-adulto-chopper-preta-32kmh.webp" class="w-full h-full object-cover" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
             </div>
           </div>
         </div>
@@ -563,136 +556,136 @@
 
       <section id="analise" class="mb-10 scroll-mt-28">
         <article class="glass p-6 md:p-10">
-          <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: moto elétrica scooter <span class="text-brand-yellow">Chopper 1000W</span></h2>
+          <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: moto elétrica scooter <span class="text-orange-600">Chopper 1000W</span></h2>
 
           <p class="mb-5 text-brand-muted">
-            A pergunta que mais chega é direta: a <strong>moto elétrica scooter Chopper</strong> vale a pena? No nosso ranking de <a href="/melhores-scooters-eletricas" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">melhores scooters elétricas</a>, a <strong>Chopper 1000W</strong> ocupa o quarto lugar com nota 8.6 e o badge <strong>Maior desempenho visual</strong> — não por ser a mais técnica da lista, e sim por entregar uma <strong>chopper elétrica</strong> com presença de motoneta e visual preto com laranja pensado para se destacar. Se o objetivo é <strong>mobilidade urbana</strong> com <strong>design chopper</strong>, ela entra na conversa certa.
+            A pergunta que mais chega é direta: a <strong>moto elétrica scooter Chopper</strong> vale a pena? No nosso ranking de <a href="/melhores-scooters-eletricas" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">melhores scooters elétricas</a>, a <strong>Chopper 1000W</strong> ocupa o quarto lugar com nota 8.6 e o badge <strong>Maior desempenho visual</strong> — não por ser a mais técnica da lista, e sim por entregar uma <strong>chopper elétrica</strong> com presença de motoneta e visual preto com laranja pensado para se destacar. Se o objetivo é <strong>mobilidade urbana</strong> com <strong>design chopper</strong>, ela entra na conversa certa.
           </p>
           <p class="mb-5 text-brand-muted">
             Antes de qualquer entusiasmo: o ranking e o título do anúncio apontam <strong>até 55 km/h</strong>; confira o lote (há listagens/imagens com <strong>32 km/h</strong> no filename) — <strong>valide a velocidade máxima no anúncio do dia</strong>. Sem teto confirmado no seu lote, a orientação de CNH muda. Capacete, freios e leitura da ficha continuam obrigatórios.
           </p>
 
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Design chopper e presença visual</h3>
+          <h3 class="text-lg font-bold text-orange-700 border-l-4 border-orange-500 pl-4 py-1 mt-8 mb-4">Design chopper e presença visual</h3>
           <p class="mb-5 text-brand-muted">
-            O cartão de visita da <strong>moto elétrica chopper</strong> é o visual: linhas de chopper, cores <strong>preto laranja</strong> e silhueta próxima de motoneta. O badge <strong>Maior desempenho visual</strong> resume isso — quem quer se destacar no trânsito encontra encaixe. Contra: a paleta é limitada (poucas cores no ranking). Comparando com a <a href="/review-scooter-x13-60v" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">X13 60V</a> (pack 60V, perfil híbrido), a Chopper brilha no estilo, não na tensão da bateria.
+            O cartão de visita da <strong>moto elétrica chopper</strong> é o visual: linhas de chopper, cores <strong>preto laranja</strong> e silhueta próxima de motoneta. O badge <strong>Maior desempenho visual</strong> resume isso — quem quer se destacar no trânsito encontra encaixe. Contra: a paleta é limitada (poucas cores no ranking). Comparando com a <a href="/review-scooter-x13-60v" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">X13 60V</a> (pack 60V, perfil híbrido), a Chopper brilha no estilo, não na tensão da bateria.
           </p>
 
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Motor elétrico 1000W e condução</h3>
+          <h3 class="text-lg font-bold text-orange-700 border-l-4 border-orange-500 pl-4 py-1 mt-8 mb-4">Motor elétrico 1000W e condução</h3>
           <p class="mb-5 text-brand-muted">
             O <strong>motor elétrico</strong> <strong>potente</strong> de <strong>1000W</strong> entrega reserva para semáforos, leve aclive e trajetos urbanos típicos. Não é o 1500W da Dx5, o Bosch da Aima nem pacotes de <strong>2000W</strong>/<strong>scooter elétrica 3000W</strong> — mas para <strong>scooter elétrica</strong> adulta de uso diário costuma bastar. Em plano, a condução costuma estar ok; em subida longa, espere menos folga. A potência anunciada ajuda no desempenho e na praticidade, mas não substitui a leitura da ficha técnica do seller.
           </p>
 
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Bateria 48V</h3>
+          <h3 class="text-lg font-bold text-orange-700 border-l-4 border-orange-500 pl-4 py-1 mt-8 mb-4">Bateria 48V</h3>
           <p class="mb-5 text-brand-muted">
             O pack é <strong>48V</strong> — funcional para o perfil, porém abaixo do <strong>60V</strong> da X13 60V. Em teoria, tensão menor reduz margem frente a irmãs de pack mais alto; km reais dependem de Ah, peso, temperatura e estilo. Confira Ah e se o pack é removível no anúncio. Planeje o commute com margem e prefira sellers que detalhem a bateria.
           </p>
 
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Velocidade: 55 km/h vs 32 km/h — caveat honesto</h3>
+          <h3 class="text-lg font-bold text-orange-700 border-l-4 border-orange-500 pl-4 py-1 mt-8 mb-4">Velocidade: 55 km/h vs 32 km/h — caveat honesto</h3>
           <p class="mb-5 text-brand-muted">
             Este é o ponto mais sensível da review. O ranking e o título do anúncio apontam <strong>até 55 km/h</strong>; confira o lote (há listagens/imagens com <strong>32 km/h</strong> no filename) — valide a velocidade máxima no anúncio do dia. Não fechamos 55 nem 32 como fato absoluto deste card: use o número do seller no momento da compra. Isso define expectativa de desempenho e, principalmente, o enquadramento legal.
           </p>
 
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Segurança e CNH</h3>
+          <h3 class="text-lg font-bold text-orange-700 border-l-4 border-orange-500 pl-4 py-1 mt-8 mb-4">Segurança e CNH</h3>
           <p class="mb-5 text-brand-muted">
             Segurança na <strong>mobilidade urbana</strong> não é só velocidade. Capacete, freios, <strong>farol</strong> <strong>LED</strong> e iluminação continuam obrigatórios. Sobre habilitação: em geral, <strong>a 55 km/h o perfil costuma exigir ACC/CNH</strong> conforme CONTRAN/local; se a listagem for 32 km/h, o perfil muda — diga ao leitor para checar a velocidade do anúncio. Sellers às vezes rotulam “sem CNH”; nós <strong>não prometemos isenção</strong>. Placas, seguros e restrições da sua cidade entram no pacote. É opção moderna de estilo — não confunda com bike elétrica nem com veículo autopropelido de outra categoria.
           </p>
 
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Compra no Mercado Livre: preço e o que conferir</h3>
+          <h3 class="text-lg font-bold text-orange-700 border-l-4 border-orange-500 pl-4 py-1 mt-8 mb-4">Compra no Mercado Livre: preço e o que conferir</h3>
           <p class="mb-5 text-brand-muted">
-            O preço observado no card afiliado gira em torno de <strong>R$ 8.149</strong> — confira ofertas e condições no Mercado Livre (<a href="https://meli.la/1MuUgKZ" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');">meli.la/1MuUgKZ</a>). Valide seller, garantia, frete, carregador, Ah e sobretudo o <strong>teto de velocidade listado no dia</strong>. Prefira loja com boa reputação e fotos reais. Amazon ainda não está ativa nesta página (em breve).
+            O preço observado no card afiliado gira em torno de <strong>R$ 8.149</strong> — confira ofertas e condições no Mercado Livre (<a href="https://meli.la/1MuUgKZ" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');">meli.la/1MuUgKZ</a>). Valide seller, garantia, frete, carregador, Ah e sobretudo o <strong>teto de velocidade listado no dia</strong>. Prefira loja com boa reputação e fotos reais. Amazon ainda não está ativa nesta página (em breve).
           </p>
 
-          <h3 class="text-lg font-bold text-brand-yellow border-l-4 border-brand-yellow pl-4 py-1 mt-8 mb-4">Para quem é — e para quem não é</h3>
+          <h3 class="text-lg font-bold text-orange-700 border-l-4 border-orange-500 pl-4 py-1 mt-8 mb-4">Para quem é — e para quem não é</h3>
           <p class="mb-5 text-brand-muted">
             <strong>É para você</strong> se busca a Chopper elétrica com visual chopper estiloso, motor 1000W, pack 48V e presença de motoneta — e aceita ticket na faixa de ~R$ 8 mil, poucas cores e a obrigação de ler a velocidade (e CNH) no anúncio.
           </p>
           <p class="text-brand-muted">
-            <strong>Não é para você</strong> se prioriza pack 60V e perfil híbrido (olhe a <a href="/review-scooter-x13-60v" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">X13 60V</a>), se quer 1500W / ficha de 55 km/h mais explícita (olhe a <a href="/review-scooter-eletrico-dx5" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Dx5</a>), ou se precisa de marca premium Aima e muitas opções de cor.
+            <strong>Não é para você</strong> se prioriza pack 60V e perfil híbrido (olhe a <a href="/review-scooter-x13-60v" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">X13 60V</a>), se quer 1500W / ficha de 55 km/h mais explícita (olhe a <a href="/review-scooter-eletrico-dx5" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">Dx5</a>), ou se precisa de marca premium Aima e muitas opções de cor.
           </p>
         </article>
       </section>
 
       <section class="mb-10" id="ofertas">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Onde <span class="text-brand-yellow">comprar</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Onde <span class="text-orange-600">comprar</span></h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
               <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Mercado Livre</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Link de oferta</span>
+              <span class="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs text-brand-muted">Link de oferta</span>
             </div>
             <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Moto Elétrica Scooter 1000w 48v Adulto Chopper Preta. Confira seller, frete, garantia, velocidade do lote e o preço do dia (~R$ 8.149).</p>
-            <div class="mb-4 overflow-hidden rounded-xl border border-white/10">
+            <div class="mb-4 overflow-hidden rounded-xl border border-slate-200">
               <table class="w-full text-left text-sm">
                 <caption class="sr-only">Formas de pagamento da Chopper no Mercado Livre</caption>
                 <tbody>
-                  <tr class="border-b border-white/10 bg-emerald-400/[0.07]">
+                  <tr class="border-b border-slate-200 bg-emerald-50">
                     <th scope="row" class="px-4 py-3 align-top">
-                      <span class="block font-bold text-white">À vista</span>
+                      <span class="block font-bold text-ink">À vista</span>
                       <span class="text-xs font-normal text-brand-dim">PIX / Boleto</span>
                     </th>
                     <td class="px-4 py-3 text-right align-top">
-                      <span class="block whitespace-nowrap text-base font-extrabold text-emerald-300 sm:text-lg">R$ 8.149,00</span>
+                      <span class="block whitespace-nowrap text-base font-extrabold text-emerald-700 sm:text-lg">R$ 8.149,00</span>
                       <span class="text-xs text-brand-dim">desconto de R$ 4.180</span>
                     </td>
                   </tr>
                   <tr>
                     <th scope="row" class="px-4 py-3 align-top">
-                      <span class="block font-bold text-white">Parcelado no cartão</span>
+                      <span class="block font-bold text-ink">Parcelado no cartão</span>
                       <span class="text-xs font-normal text-brand-dim">em até 10x</span>
                     </th>
                     <td class="px-4 py-3 text-right align-top">
-                      <span class="block whitespace-nowrap text-base font-extrabold text-brand-yellow sm:text-lg">10x de R$ 932,33</span>
+                      <span class="block whitespace-nowrap text-base font-extrabold text-orange-700 sm:text-lg">10x de R$ 932,33</span>
                       <span class="text-xs text-brand-dim">total R$ 9.323,27</span>
                     </td>
                   </tr>
                 </tbody>
               </table>
-              <details class="border-t border-white/10">
-                <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-white">
+              <details class="border-t border-slate-200">
+                <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-ink">
                   Ver todas as parcelas (3x a 10x)
                   <svg class="details-chevron h-4 w-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
                 </summary>
                 <table class="w-full text-left text-sm">
                   <thead>
-                    <tr class="border-y border-white/10 text-[10px] uppercase tracking-wider text-brand-dim">
+                    <tr class="border-y border-slate-200 text-[10px] uppercase tracking-wider text-brand-dim">
                       <th scope="col" class="px-4 py-2 font-bold">Parcelas</th>
                       <th scope="col" class="px-4 py-2 text-right font-bold">Total</th>
                     </tr>
                   </thead>
                   <tbody class="text-brand-muted">
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">3x</strong> R$ 2.949,67</td><td class="px-4 py-2.5 text-right">R$ 8.849,00</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">4x</strong> R$ 2.235,27</td><td class="px-4 py-2.5 text-right">R$ 8.941,08</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">5x</strong> R$ 1.815,27</td><td class="px-4 py-2.5 text-right">R$ 9.076,36</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">6x</strong> R$ 1.520,74</td><td class="px-4 py-2.5 text-right">R$ 9.124,44</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">7x</strong> R$ 1.311,87</td><td class="px-4 py-2.5 text-right">R$ 9.183,11</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">8x</strong> R$ 1.153,80</td><td class="px-4 py-2.5 text-right">R$ 9.230,37</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">9x</strong> R$ 1.032,12</td><td class="px-4 py-2.5 text-right">R$ 9.289,05</td></tr>
-                    <tr><td class="px-4 py-2.5"><strong class="text-brand-yellow">10x</strong> R$ 932,33</td><td class="px-4 py-2.5 text-right">R$ 9.323,27</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">3x</strong> R$ 2.949,67</td><td class="px-4 py-2.5 text-right">R$ 8.849,00</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">4x</strong> R$ 2.235,27</td><td class="px-4 py-2.5 text-right">R$ 8.941,08</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">5x</strong> R$ 1.815,27</td><td class="px-4 py-2.5 text-right">R$ 9.076,36</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">6x</strong> R$ 1.520,74</td><td class="px-4 py-2.5 text-right">R$ 9.124,44</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">7x</strong> R$ 1.311,87</td><td class="px-4 py-2.5 text-right">R$ 9.183,11</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">8x</strong> R$ 1.153,80</td><td class="px-4 py-2.5 text-right">R$ 9.230,37</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">9x</strong> R$ 1.032,12</td><td class="px-4 py-2.5 text-right">R$ 9.289,05</td></tr>
+                    <tr><td class="px-4 py-2.5"><strong class="text-orange-700">10x</strong> R$ 932,33</td><td class="px-4 py-2.5 text-right">R$ 9.323,27</td></tr>
                   </tbody>
                 </table>
                 <p class="px-4 pb-4 pt-2 text-[11px] text-brand-dim">Valores simulados no checkout do Mercado Livre em 22/10/2026. Parcelas com juros variam conforme cartão e banco.</p>
               </details>
             </div>
             <ul class="mb-5 grid grid-cols-3 gap-2 text-[11px] text-brand-muted sm:text-xs">
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">📦</span>Entrega a combinar</li>
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🔒</span>Pagamento no ML</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">📦</span>Entrega a combinar</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">🔒</span>Pagamento no ML</li>
             </ul>
             <a class="btn-shine inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1MuUgKZ">Ir para o Mercado Livre</a>
           </article>
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
-              <span class="rounded-md border border-white/25 bg-white/10 px-2 py-1 text-[10px] font-extrabold uppercase text-white">Amazon</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Em breve</span>
+              <span class="rounded-md border border-slate-300 bg-slate-100 px-2 py-1 text-[10px] font-extrabold uppercase text-ink">Amazon</span>
+              <span class="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs text-brand-muted">Em breve</span>
             </div>
             <p class="mb-5 text-sm text-brand-muted">Link de afiliado Amazon entra aqui quando a oferta estiver ativa. Use o Mercado Livre enquanto isso.</p>
-            <span class="inline-flex h-12 w-full cursor-not-allowed items-center justify-center rounded-xl border border-white/25 bg-white/5 font-bold text-brand-dim">Em breve</span>
+            <span class="inline-flex h-12 w-full cursor-not-allowed items-center justify-center rounded-xl border border-slate-300 bg-slate-50 font-bold text-brand-dim">Em breve</span>
           </article>
         </div>
       </section>
 
       <section class="mb-10">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Alternativas no <span class="text-brand-yellow">ranking</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Alternativas no <span class="text-orange-600">ranking</span></h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           <article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow">
             <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 3">3</span>
@@ -700,27 +693,27 @@
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_773122-MLA107693927314_032026-F.webp" alt="Scooter Bicicleta Elétrica X13 1000w Bateria 60v Cor Azul" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy" referrerpolicy="no-referrer">
             </div>
             <div class="mt-4 flex flex-wrap items-center gap-2">
-              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">X13</span>
-              <h3 class="text-lg font-bold text-white">X13 60V</h3>
+              <span class="rounded border border-orange-400 px-2 py-0.5 text-[10px] font-bold tracking-widest text-orange-700">X13</span>
+              <h3 class="text-lg font-bold text-ink">X13 60V</h3>
             </div>
             <div class="mt-3 flex-1">
-              <div class="mb-3 flex gap-2"><strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <div class="mb-3 flex gap-2"><strong class="text-sm uppercase tracking-wide text-ink">Para quem é?</strong></div>
               <ul class="space-y-2">
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer pack 60V e perfil híbrido scooter/bike.</span></li>
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#3 do ranking — nota 8.8, badge Versátil.</span></li>
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Alternativa à Chopper com tensão de bateria mais alta.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer pack 60V e perfil híbrido scooter/bike.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#3 do ranking — nota 8.8, badge Versátil.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Alternativa à Chopper com tensão de bateria mais alta.</span></li>
               </ul>
             </div>
-            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+            <div class="mt-4 flex items-end justify-between border-t border-slate-200 pt-4">
               <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
-              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">88</span><span class="text-sm text-brand-dim">/100</span></div>
+              <div class="leading-none"><span class="text-3xl font-bold text-orange-600">88</span><span class="text-sm text-brand-dim">/100</span></div>
             </div>
-            <div class="mt-5 border-t border-white/10 pt-4">
+            <div class="mt-5 border-t border-slate-200 pt-4">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
-              <p class="text-xl font-bold text-white">Confira no ML</p>
+              <p class="text-xl font-bold text-ink">Confira no ML</p>
               <div class="mt-3 flex flex-col gap-2">
                 <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1yrJ2iy">Comprar no Mercado Livre</a>
-                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="/review-scooter-x13-60v">Ver Análise Completa</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-orange-500 bg-transparent px-4 text-sm font-bold text-orange-700 transition hover:bg-orange-50" href="/review-scooter-x13-60v">Ver Análise Completa</a>
               </div>
             </div>
           </article>
@@ -731,41 +724,41 @@
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_656446-MLA111034434156_052026-F.webp" alt="Scooter Elétrico Dx5 Motor 1500w Adulto Max 55km/h Preto" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy" referrerpolicy="no-referrer">
             </div>
             <div class="mt-4 flex flex-wrap items-center gap-2">
-              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">DX5</span>
-              <h3 class="text-lg font-bold text-white">Dx5 1500W</h3>
+              <span class="rounded border border-orange-400 px-2 py-0.5 text-[10px] font-bold tracking-widest text-orange-700">DX5</span>
+              <h3 class="text-lg font-bold text-ink">Dx5 1500W</h3>
             </div>
             <div class="mt-3 flex-1">
-              <div class="mb-3 flex gap-2"><strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <div class="mb-3 flex gap-2"><strong class="text-sm uppercase tracking-wide text-ink">Para quem é?</strong></div>
               <ul class="space-y-2">
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer custo-benefício com motor 1500W.</span></li>
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Até 55 km/h — ficha de velocidade mais explícita.</span></li>
-                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#1 do ranking — nota 9.3.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer custo-benefício com motor 1500W.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Até 55 km/h — ficha de velocidade mais explícita.</span></li>
+                <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>#1 do ranking — nota 9.3.</span></li>
               </ul>
             </div>
-            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+            <div class="mt-4 flex items-end justify-between border-t border-slate-200 pt-4">
               <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
-              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">93</span><span class="text-sm text-brand-dim">/100</span></div>
+              <div class="leading-none"><span class="text-3xl font-bold text-orange-600">93</span><span class="text-sm text-brand-dim">/100</span></div>
             </div>
-            <div class="mt-5 border-t border-white/10 pt-4">
+            <div class="mt-5 border-t border-slate-200 pt-4">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
-              <p class="text-xl font-bold text-white">Confira no ML</p>
+              <p class="text-xl font-bold text-ink">Confira no ML</p>
               <div class="mt-3 flex flex-col gap-2">
                 <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1omWLKf">Comprar no Mercado Livre</a>
-                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="/review-scooter-eletrico-dx5">Ver Análise Completa</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-orange-500 bg-transparent px-4 text-sm font-bold text-orange-700 transition hover:bg-orange-50" href="/review-scooter-eletrico-dx5">Ver Análise Completa</a>
               </div>
             </div>
           </article>
 
           <a class="glass flex flex-col justify-center p-5 transition hover:-translate-y-1 hover:shadow-glow" href="/melhores-scooters-eletricas">
-            <p class="mb-2 text-xs font-bold uppercase text-brand-yellow">Lista completa</p>
-            <h3 class="mb-2 text-lg font-bold text-white">Voltar ao ranking</h3>
+            <p class="mb-2 text-xs font-bold uppercase text-orange-700">Lista completa</p>
+            <h3 class="mb-2 text-lg font-bold text-ink">Voltar ao ranking</h3>
             <p class="text-sm text-brand-dim">Ver as scooters elétricas comparadas lado a lado no ranking Tudo de Melhor.</p>
           </a>
         </div>
       </section>
 
       <section class="mb-10" id="faq">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre a <span class="text-brand-yellow">Chopper 1000W</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre a <span class="text-orange-600">Chopper 1000W</span></h2>
         <div class="space-y-3">
           <details class="glass p-5" open>
             <summary class="cursor-pointer list-none font-bold">Moto elétrica scooter Chopper vale a pena?</summary>
@@ -821,13 +814,13 @@
           <h2 id="relacionados-titulo" class="mb-2 text-xl font-extrabold md:text-2xl">Leia também</h2>
           <p class="mb-5 text-sm text-brand-dim">Reviews e rankings relacionados a esta análise.</p>
           <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            <li><a href="/review-scooter-1000w-48v" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Scooter elétrica 1000W 48V</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-moto-eletrica-gt600" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Moto elétrica GT600</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-verdevento-1000w-60v" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Verdevento 1000W 60V</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-scooter-x13-ex-foston" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Foston X13 EX 1000W: vale a pena?</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/foston-x13-max" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Foston X13 Max 1000W com cesto</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/melhores-scooters-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Melhores scooters elétricas 2026</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/melhores-motos-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Melhores motos elétricas 2026</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-scooter-1000w-48v" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Scooter elétrica 1000W 48V</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-moto-eletrica-gt600" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Moto elétrica GT600</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-verdevento-1000w-60v" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Verdevento 1000W 60V</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-scooter-x13-ex-foston" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Foston X13 EX 1000W: vale a pena?</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/foston-x13-max" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Foston X13 Max 1000W com cesto</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/melhores-scooters-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Melhores scooters elétricas 2026</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/melhores-motos-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Melhores motos elétricas 2026</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
           </ul>
         </div>
       </section>
@@ -835,20 +828,20 @@
     </div>
   </main>
 
-  <div class="fixed bottom-0 left-0 z-50 w-full rounded-none border-t border-white/10 bg-brand-bg/85 backdrop-blur-xl sm:bottom-6 sm:left-1/2 sm:w-auto sm:min-w-[600px] sm:max-w-4xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-white/15 sm:shadow-2xl">
+  <div class="fixed bottom-0 left-0 z-50 w-full rounded-none border-t border-slate-200 bg-white/90 backdrop-blur-xl sm:bottom-6 sm:left-1/2 sm:w-auto sm:min-w-[600px] sm:max-w-4xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-slate-200 sm:shadow-2xl">
     <div class="flex flex-col gap-3 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:py-3 sm:pl-3 sm:pr-3">
       <div class="flex min-w-0 items-center gap-3">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_629658-MLB116506510564_092026-F.webp" alt="Moto Elétrica Scooter 1000w 48v Adulto Chopper Preta — vista principal" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-white/10 bg-white/5 object-cover sm:block">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_629658-MLB116506510564_092026-F.webp" alt="Moto Elétrica Scooter 1000w 48v Adulto Chopper Preta — vista principal" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-slate-200 bg-slate-50 object-cover sm:block">
         <div class="min-w-0">
-          <strong class="block max-w-[200px] truncate text-sm font-bold text-white sm:max-w-xs sm:text-base">Chopper 1000W</strong>
-          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 8.6</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">R$ 8.149</span></div>
+          <strong class="block max-w-[200px] truncate text-sm font-bold text-ink sm:max-w-xs sm:text-base">Chopper 1000W</strong>
+          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-orange-700"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 8.6</span><span class="text-slate-300" aria-hidden="true">|</span><span class="truncate font-extrabold text-ink">R$ 8.149</span></div>
         </div>
       </div>
       <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1MuUgKZ">Comprar no Mercado Livre</a>
     </div>
   </div>
 
-  <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
+  <footer class="mt-8 border-t border-brand-border bg-white px-4 py-10">
     <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
       <div>
         <a href="/" class="mb-3 flex items-center gap-3">
@@ -860,31 +853,31 @@
       <div>
         <h4 class="mb-3 text-sm font-bold">Navegação</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="/" class="hover:text-brand-yellow">Home</a>
-          <a href="/categorias" class="hover:text-brand-yellow">Rankings</a>
-          <a href="/reviews" class="hover:text-brand-yellow">Reviews</a>
-          <a href="/#metodologia" class="hover:text-brand-yellow">Metodologia</a>
+          <a href="/" class="hover:text-orange-600">Home</a>
+          <a href="/categorias" class="hover:text-orange-600">Rankings</a>
+          <a href="/reviews" class="hover:text-orange-600">Reviews</a>
+          <a href="/#metodologia" class="hover:text-orange-600">Metodologia</a>
         </div>
       </div>
       <div>
         <h4 class="mb-3 text-sm font-bold">Categorias</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="/melhores-bicicletas-eletricas" class="hover:text-brand-yellow">Bicicletas Elétricas</a>
-          <a href="/melhores-patinetes-eletricos" class="hover:text-brand-yellow">Patinetes Elétricos</a>
-          <a href="/melhores-scooters-eletricas" class="hover:text-brand-yellow">Scooters Elétricas</a>
+          <a href="/melhores-bicicletas-eletricas" class="hover:text-orange-600">Bicicletas Elétricas</a>
+          <a href="/melhores-patinetes-eletricos" class="hover:text-orange-600">Patinetes Elétricos</a>
+          <a href="/melhores-scooters-eletricas" class="hover:text-orange-600">Scooters Elétricas</a>
         </div>
       </div>
       <div>
         <h4 class="mb-3 text-sm font-bold">Legal</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="/sobre" class="hover:text-brand-yellow">Sobre</a>
-          <a href="/privacidade" class="hover:text-brand-yellow">Privacidade</a>
-          <a href="/trocas" class="hover:text-brand-yellow">Trocas e Devoluções</a>
-          <a href="/contato" class="hover:text-brand-yellow">Contato</a>
+          <a href="/sobre" class="hover:text-orange-600">Sobre</a>
+          <a href="/privacidade" class="hover:text-orange-600">Privacidade</a>
+          <a href="/trocas" class="hover:text-orange-600">Trocas e Devoluções</a>
+          <a href="/contato" class="hover:text-orange-600">Contato</a>
         </div>
       </div>
     </div>
-    <div class="mx-auto mt-8 max-w-6xl border-t border-white/10 pt-4 text-xs text-brand-dim">
+    <div class="mx-auto mt-8 max-w-6xl border-t border-slate-200 pt-4 text-xs text-brand-dim">
       © <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.
     </div>
   </footer>

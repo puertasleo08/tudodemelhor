@@ -63,7 +63,7 @@
             slate2: '#64748B',
             page: '#F8FAFC',
             ice: '#F1F5F9',
-            brand: { yellow: '#FACC15', gold: '#EAB308', orange: '#F97316' }
+            brand: { yellow: '#FACC15', gold: '#EAB308', orange: '#EA580C' }
           },
           fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
           boxShadow: {
@@ -80,7 +80,7 @@
       background-color: #F8FAFC;
       background-image:
         radial-gradient(ellipse 60% 40% at 90% 0%, rgba(250, 204, 21, 0.16), transparent 60%),
-        radial-gradient(ellipse 50% 35% at 0% 100%, rgba(249, 115, 22, 0.08), transparent 60%);
+        radial-gradient(ellipse 50% 35% at 0% 100%, rgba(234, 88, 12, 0.08), transparent 60%);
       background-attachment: fixed;
     }
     .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
@@ -99,14 +99,14 @@
     .option { transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease, background-color .2s ease; }
     .option:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -16px rgba(15, 23, 42, 0.35); }
     .option:active { transform: scale(0.97); }
-    .option[aria-checked="true"] { border-color: #F97316; background: linear-gradient(135deg, #FFFBEB 0%, #FFF7ED 100%); box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.16), 0 14px 28px -14px rgba(249, 115, 22, 0.45); }
-    .option[aria-checked="true"] .option-icon { background: linear-gradient(135deg, #FACC15, #F97316); transform: scale(1.06) rotate(-3deg); }
+    .option[aria-checked="true"] { border-color: #EA580C; background: linear-gradient(135deg, #FFFBEB 0%, #FFF7ED 100%); box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.16), 0 14px 28px -14px rgba(234, 88, 12, 0.45); }
+    .option[aria-checked="true"] .option-icon { background: linear-gradient(135deg, #FACC15, #EA580C); transform: scale(1.06) rotate(-3deg); }
     .option[aria-checked="true"] .option-check { opacity: 1; transform: scale(1); }
     .option-icon { transition: transform .25s cubic-bezier(.3,1.6,.5,1), background .2s ease; }
     .option-check { opacity: 0; transform: scale(.4); transition: transform .25s cubic-bezier(.3,1.6,.5,1), opacity .2s ease; }
     .pop { animation: pop .35s cubic-bezier(.3,1.6,.5,1); }
     @keyframes pop { 0% { transform: scale(1); } 40% { transform: scale(1.035); } 100% { transform: scale(1); } }
-    .spinner { border: 4px solid #FDE68A; border-top-color: #F97316; border-radius: 9999px; animation: spin 0.9s linear infinite; }
+    .spinner { border: 4px solid #FDE68A; border-top-color: #EA580C; border-radius: 9999px; animation: spin 0.9s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
     .bar { transform-origin: bottom; animation: grow .6s cubic-bezier(.2,.8,.2,1) both; }
     @keyframes grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
@@ -137,7 +137,7 @@
 
       <!-- INTRO -->
       <section id="intro" class="mb-6 text-center" aria-labelledby="intro-titulo">
-        <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-orange">Quiz de mobilidade elétrica · 6 perguntas · 1 minuto</p>
+        <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-orange-700">Quiz de mobilidade elétrica · 6 perguntas · 1 minuto</p>
         <h1 id="intro-titulo" class="mx-auto max-w-2xl text-3xl font-black leading-tight tracking-tight text-ink sm:text-4xl">Qual patinete, bike, moto ou scooter elétrica é ideal para você?</h1>
         <p class="mx-auto mt-3 max-w-xl text-base leading-relaxed text-slate2">Conte como é o seu dia a dia, o relevo da sua cidade e quanto quer investir. Cruzamos suas respostas com os 15 modelos que avaliamos e mostramos o ideal, com preço atual e histórico de preços do Mercado Livre.</p>
         <ul class="mx-auto mt-5 flex max-w-xl flex-wrap justify-center gap-2 text-xs font-semibold text-slate2">
@@ -472,12 +472,12 @@
           bars += '<text x="' + (x + bw / 2).toFixed(1) + '" y="' + (H - 6) + '" text-anchor="middle" font-size="10" fill="' + (last ? '#EA580C' : '#94A3B8') + '" font-weight="' + (last ? 800 : 600) + '">' + p[0] + '</text>';
         });
         const ay = yv(ins.avg).toFixed(1);
-        const tones = { emerald: 'border-emerald-200 bg-emerald-50 text-emerald-800', amber: 'border-amber-200 bg-amber-50 text-amber-800', orange: 'border-orange-200 bg-orange-50 text-orange-800', sky: 'border-sky-200 bg-sky-50 text-sky-800' };
+        const tones = { emerald: 'border-emerald-200 bg-emerald-50 text-emerald-800', amber: 'border-orange-200 bg-amber-50 text-amber-800', orange: 'border-orange-200 bg-orange-50 text-orange-800', sky: 'border-sky-200 bg-sky-50 text-sky-800' };
         return '<div class="mt-5 rounded-2xl border border-slate-200 bg-ice/60 p-4">' +
           '<div class="mb-3 flex flex-wrap items-center justify-between gap-2"><p class="text-sm font-black text-ink">📊 Histórico de preços no Mercado Livre</p>' +
           '<span class="rounded-full border px-2.5 py-1 text-[11px] font-extrabold ' + tones[ins.status.tone] + '">' + ins.status.label + '</span></div>' +
           '<div class="grid grid-cols-3 gap-2 text-center">' +
-            '<div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] font-bold uppercase tracking-wide text-slate2">Menor registrado</p><p class="mt-0.5 text-sm font-black text-emerald-600">' + fmt0(ins.min) + '</p></div>' +
+            '<div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] font-bold uppercase tracking-wide text-slate2">Menor registrado</p><p class="mt-0.5 text-sm font-black text-emerald-700">' + fmt0(ins.min) + '</p></div>' +
             '<div class="rounded-xl bg-white p-2.5 shadow-sm"><p class="text-[10px] font-bold uppercase tracking-wide text-slate2">Média dos registros</p><p class="mt-0.5 text-sm font-black text-ink">' + fmt0(ins.avg) + '</p></div>' +
             '<div class="rounded-xl bg-white p-2.5 shadow-sm ring-2 ring-brand-orange/40"><p class="text-[10px] font-bold uppercase tracking-wide text-brand-orange">Preço atual</p><p class="mt-0.5 text-sm font-black text-ink">' + fmt0(ins.cur) + '</p></div>' +
           '</div>' +
@@ -566,10 +566,10 @@
       const cta = (m, pos) => 'href="' + m.link + '" target="_blank" rel="sponsored noopener" onclick="return gtag_report_conversion(this.href);" data-modelo="' + m.id + '" data-posicao="' + pos + '"';
 
       function priceBlock(m, big) {
-        return '<p class="' + (big ? 'text-3xl' : 'text-lg') + ' font-black text-ink">' + fmt(m.price) + ' <span class="text-sm font-bold text-emerald-600">' + m.priceLabel + '</span></p>' +
+        return '<p class="' + (big ? 'text-3xl' : 'text-lg') + ' font-black text-ink">' + fmt(m.price) + ' <span class="text-sm font-bold text-emerald-700">' + m.priceLabel + '</span></p>' +
           (m.semJuros
             ? '<p class="mt-2 inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-1.5 ' + (big ? 'text-sm' : 'text-xs') + ' font-black text-emerald-800">' + (m.instNote ? 'ou ' : '') + m.inst + ' <span class="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] uppercase text-white">sem juros</span>' + (m.instNote ? '<span class="font-semibold text-emerald-700">' + m.instNote + '</span>' : '') + '</p>'
-            : '<p class="mt-1 text-sm font-bold text-amber-700">ou ' + m.inst + (m.instNote ? ' <span class="text-xs font-semibold text-slate2">(' + m.instNote + ')</span>' : '') + '</p>');
+            : '<p class="mt-1 text-sm font-bold text-orange-700">ou ' + m.inst + (m.instNote ? ' <span class="text-xs font-semibold text-slate2">(' + m.instNote + ')</span>' : '') + '</p>');
       }
 
       function mainCard(m, a, why) {
@@ -581,7 +581,7 @@
             '<figcaption class="sr-only">' + m.name + '</figcaption></figure>' +
           '<div class="p-5 sm:p-7 md:border-l md:border-slate-100">' +
             '<div class="mb-2 flex flex-wrap items-center gap-2"><span class="rounded-md bg-ice px-2 py-0.5 text-[11px] font-bold text-slate2">' + CAT[m.cat] + '</span><span class="rounded-md border border-slate-200 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-widest text-slate2">' + m.brand + '</span>' +
-            '<span class="inline-flex items-center gap-1 rounded-md bg-amber-50 px-2 py-0.5 text-xs font-black text-amber-700">★ ' + m.score.toFixed(1).replace('.', ',') + '/10</span></div>' +
+            '<span class="inline-flex items-center gap-1 rounded-md bg-amber-50 px-2 py-0.5 text-xs font-black text-orange-700">★ ' + m.score.toFixed(1).replace('.', ',') + '/10</span></div>' +
             '<h3 class="text-2xl font-black leading-tight text-ink">' + m.name + '</h3>' +
             '<p class="mt-1 text-sm text-slate2">' + m.tagline + '</p>' +
             '<p class="mt-4 rounded-xl bg-emerald-50 p-3 text-sm font-semibold leading-relaxed text-emerald-800">Ideal para você porque ' + rs[0] + '.</p>' +
@@ -627,8 +627,8 @@
         const items = STEPS.map((st) => {
           const ok = criterionMet(st.key, a, m);
           if (ok) met++;
-          return '<li class="flex items-center gap-3 rounded-xl border px-3 py-2.5 ' + (ok ? 'border-emerald-100 bg-emerald-50/70' : 'border-amber-200 bg-amber-50') + '">' + (ok ? OK : WARN) +
-            '<span class="min-w-0"><span class="block text-[10px] font-bold uppercase tracking-wider ' + (ok ? 'text-emerald-700/80' : 'text-amber-700') + '">' + CRITERIA[st.key] + (ok ? '' : ' · mais próximo possível') + '</span>' +
+          return '<li class="flex items-center gap-3 rounded-xl border px-3 py-2.5 ' + (ok ? 'border-emerald-100 bg-emerald-50/70' : 'border-orange-200 bg-amber-50') + '">' + (ok ? OK : WARN) +
+            '<span class="min-w-0"><span class="block text-[10px] font-bold uppercase tracking-wider ' + (ok ? 'text-emerald-700/80' : 'text-orange-700') + '">' + CRITERIA[st.key] + (ok ? '' : ' · mais próximo possível') + '</span>' +
             '<span class="block text-sm font-semibold leading-snug text-ink">' + cap(LABELS[st.key][a[st.key]]) + '</span></span>' +
             '<span class="sr-only">' + (ok ? 'critério atendido' : 'critério parcialmente atendido') + '</span></li>';
         }).join('');

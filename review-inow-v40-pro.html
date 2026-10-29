@@ -23,9 +23,9 @@
   <link rel="preconnect" href="https://www.youtube.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{brand:{bg:'#232F3E',yellow:'#FFE600',orange:'#FF9900',card:'rgba(27, 37, 48, 0.7)',elevated:'#1B2530',border:'#37475A',muted:'#D5D9D9',dim:'#AAB3BD'}},fontFamily:{sans:['Inter','system-ui','sans-serif']},boxShadow:{glow:'0 0 15px rgba(255, 230, 0, 0.4)','glow-lg':'0 0 28px rgba(255, 230, 0, 0.45)','glow-orange':'0 0 20px rgba(255, 153, 0, 0.35)','glow-emerald':'0 0 24px rgba(16, 185, 129, 0.3)','neon-emerald':'0 0 12px rgba(52, 211, 153, 0.55), inset 0 0 8px rgba(52, 211, 153, 0.15)'},backgroundImage:{'brand-gradient':'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'}}}};</script>
-  <style type="text/tailwindcss">@layer utilities{.glass{@apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;}}</style>
-  <style>body{background-image:radial-gradient(ellipse 70% 45% at 85% 10%,rgba(255,153,0,.14),transparent 55%),radial-gradient(ellipse 50% 40% at 10% 85%,rgba(255,230,0,.07),transparent 50%),radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:auto,auto,18px 18px;background-attachment:fixed}
+  <script>tailwind.config={theme:{extend:{colors:{brand:{bg:'#F8FAFC',yellow:'#FACC15',gold:'#EAB308',orange:'#EA580C',card:'#FFFFFF',elevated:'#FFFFFF',border:'#E2E8F0',muted:'#475569',dim:'#64748B'},ink:'#1E293B'},fontFamily:{sans:['Inter','system-ui','sans-serif']},boxShadow:{soft:'0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 30px -14px rgba(15, 23, 42, 0.16)',glow:'0 8px 20px -8px rgba(234, 179, 8, 0.6)','glow-lg':'0 14px 32px -12px rgba(249, 115, 22, 0.55)','glow-orange':'0 6px 16px -6px rgba(249, 115, 22, 0.35)','glow-emerald':'0 1px 2px rgba(15, 23, 42, 0.04), 0 14px 32px -16px rgba(16, 185, 129, 0.45)','neon-emerald':'0 0 0 3px rgba(16, 185, 129, 0.08)'},backgroundImage:{'brand-gradient':'linear-gradient(135deg, #FACC15 0%, #EA580C 100%)'}}}};</script>
+  <style type="text/tailwindcss">@layer utilities{.glass{@apply bg-white border border-slate-200 rounded-2xl shadow-soft;}}</style>
+  <style>body{background-color:#F8FAFC;background-image:radial-gradient(ellipse 65% 40% at 100% 0%,rgba(251,191,36,.16),transparent 60%),radial-gradient(ellipse 55% 38% at 0% 100%,rgba(234, 88, 12,.08),transparent 55%),radial-gradient(rgba(15,23,42,.035) 1px,transparent 1px);background-size:auto,auto,20px 20px;background-attachment:fixed}
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
@@ -37,13 +37,13 @@
     @keyframes shine { 0% { left: -75%; } 60%, 100% { left: 130%; } }
     @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
     .pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
-    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 6px rgba(52, 211, 153, 0.35), 0 0 0 rgba(255, 230, 0, 0); } 50% { box-shadow: 0 0 18px rgba(52, 211, 153, 0.75), 0 0 28px rgba(255, 230, 0, 0.3); } }
+    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.25); } 50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.08); } }
     .sem-juros-glow { animation: glow-pulse 2.2s ease-in-out infinite; }
-    .calc-mode[aria-checked="true"] { border-color: #FF9900; background: rgba(255, 153, 0, 0.14); color: #FFD08A; box-shadow: 0 0 0 1px rgba(255, 153, 0, 0.35); }
-    .calc-range { accent-color: #FF9900; }
+    .calc-mode[aria-checked="true"] { border-color: #EA580C; background: #FFF7ED; color: #9A3412; box-shadow: 0 0 0 1px rgba(234, 88, 12, 0.35); }
+    .calc-range { accent-color: #EA580C; }
     details > summary::-webkit-details-marker { display: none; }
     @media (prefers-reduced-motion: reduce) {
-      .btn-shine::after { display: none; } .pulse-dot { animation: none; } .sem-juros-glow { animation: none; box-shadow: 0 0 12px rgba(52, 211, 153, 0.5); }
+      .btn-shine::after { display: none; } .pulse-dot { animation: none; } .sem-juros-glow { animation: none; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12); }
       .animate-marquee { animation: none; } .marquee-wrap { overflow-x: auto; } .marquee-dup { display: none; }
     }
   </style>
@@ -251,32 +251,32 @@
   }
   </script>
 </head>
-<body class="bg-brand-bg text-white font-sans antialiased min-h-screen pb-32">
-  <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+<body class="bg-brand-bg text-ink font-sans antialiased min-h-screen pb-32">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
     <div class="mx-auto flex h-[100px] max-w-7xl items-center gap-4 px-4 lg:gap-8">
       <a href="/" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
-        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
+        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-glow-orange lg:h-20 lg:w-20">
           <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-full w-full object-cover">
         </div>
         <div class="flex flex-col justify-center">
-          <span class="text-xl font-black uppercase leading-tight tracking-wider text-white lg:text-2xl">Tudo De</span>
-          <span class="text-xl font-black uppercase leading-tight tracking-wider text-brand-yellow lg:text-2xl">Melhor</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-ink lg:text-2xl">Tudo De</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-orange-700 lg:text-2xl">Melhor</span>
         </div>
       </a>
-      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-brand-elevated md:hidden" aria-label="Abrir menu" aria-expanded="false">
-        <span class="flex flex-col gap-1.5"><span class="block h-0.5 w-6 bg-white"></span><span class="block h-0.5 w-6 bg-white"></span><span class="block h-0.5 w-6 bg-white"></span></span>
+      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white md:hidden" aria-label="Abrir menu" aria-expanded="false">
+        <span class="flex flex-col gap-1.5"><span class="block h-0.5 w-6 bg-ink"></span><span class="block h-0.5 w-6 bg-ink"></span><span class="block h-0.5 w-6 bg-ink"></span></span>
       </button>
       <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
-        <a href="/#categorias" class="transition hover:text-white">Categorias</a>
-        <a href="/categorias" class="transition hover:text-white">Rankings</a>
-        <a href="/reviews" class="transition hover:text-white">Reviews</a>
-        <a href="/#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
+        <a href="/#categorias" class="transition hover:text-ink">Categorias</a>
+        <a href="/categorias" class="transition hover:text-ink">Rankings</a>
+        <a href="/reviews" class="transition hover:text-ink">Reviews</a>
+        <a href="/#ofertas" class="font-bold text-orange-700 shadow-glow transition hover:text-ink">Melhores Ofertas</a>
       </nav>
     </div>
-    <div id="mobile-nav" class="hidden border-t border-white/10 bg-brand-elevated/98 px-4 py-4 md:hidden">
+    <div id="mobile-nav" class="hidden border-t border-slate-200 bg-white px-4 py-4 md:hidden">
       <nav class="flex flex-col gap-1 text-sm">
-        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
-        <a href="/reviews" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Reviews</a>
+        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Rankings</a>
+        <a href="/reviews" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Reviews</a>
       </nav>
     </div>
   </header>
@@ -284,27 +284,27 @@
   <main class="px-4 pt-8">
     <div class="mx-auto max-w-6xl">
       <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
-        <a href="/" class="hover:text-brand-yellow">Início</a>
+        <a href="/" class="hover:text-orange-600">Início</a>
         <span aria-hidden="true">/</span>
-        <a href="/guia-bicicleta-eletrica-1000w" class="hover:text-brand-yellow">Guia Bicicleta Elétrica 1000W</a>
+        <a href="/guia-bicicleta-eletrica-1000w" class="hover:text-orange-600">Guia Bicicleta Elétrica 1000W</a>
         <span aria-hidden="true">/</span>
-        <span class="text-white" aria-current="page">Inow V40 Pro</span>
+        <span class="text-ink" aria-current="page">Inow V40 Pro</span>
       </nav>
 
       <header class="mb-8 grid grid-cols-1 items-start gap-6 lg:grid-cols-[1.1fr_0.9fr]" aria-labelledby="titulo-review">
         <div class="glass relative order-2 overflow-hidden p-6 lg:order-1 md:p-8">
-          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/10 blur-3xl"></div>
-          <p class="relative mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · Inow Brasil · lançamento 2026</p>
+          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-orange-100/70 blur-3xl"></div>
+          <p class="relative mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-orange-700">Review · Inow Brasil · lançamento 2026</p>
           <h1 id="titulo-review" class="relative mb-5 text-3xl font-extrabold leading-tight md:text-4xl">Bicicleta elétrica Inow V40 Pro 1000W vale a pena? Review 2026, preço e onde comprar</h1>
 
-          <div class="relative mb-5 rounded-2xl border border-emerald-400/40 bg-emerald-400/[0.06] p-4 md:p-5">
+          <div class="relative mb-5 rounded-2xl border border-emerald-200 bg-emerald-50/70 p-4 md:p-5">
             <div class="mb-1 flex flex-wrap items-center gap-2">
               <span class="text-sm text-brand-dim line-through decoration-orange-400/80">R$ 8.999</span>
-              <span class="rounded bg-emerald-400 px-1.5 py-0.5 text-[11px] font-black text-black">15% OFF</span>
-              <span class="rounded-md border border-emerald-400/50 bg-emerald-400/10 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300">Bom preço</span>
+              <span class="rounded bg-emerald-700 px-1.5 py-0.5 text-[11px] font-black text-white">15% OFF</span>
+              <span class="rounded-md border border-emerald-300 bg-emerald-50 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-emerald-700">Bom preço</span>
             </div>
-            <p class="text-3xl font-black text-white md:text-4xl">R$ 7.600</p>
-            <div class="mt-2 sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-sm font-black text-white">10x de R$ 760</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>
+            <p class="text-3xl font-black text-ink md:text-4xl">R$ 7.600</p>
+            <div class="mt-2 sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300 bg-gradient-to-r from-emerald-50 via-emerald-50 to-amber-50 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true"></span><span class="text-sm font-black text-ink">10x de R$ 760</span><span class="rounded bg-emerald-700 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-white">sem juros</span></div>
             <ul class="mt-3 grid grid-cols-1 gap-1 text-xs text-brand-muted sm:grid-cols-2">
               <li>🚚 Frete grátis no anúncio</li>
               <li>↩️ Devolução grátis em 30 dias</li>
@@ -318,24 +318,24 @@
           <p class="relative mb-5 max-w-2xl text-base text-brand-muted md:text-lg">A <strong>Inow V40 Pro</strong> é a <strong>bicicleta elétrica Inow</strong> mais completa da linha 2026: <strong>motor de 1000W</strong>, bateria de lítio <strong>48V 18Ah</strong> removível, <strong>display colorido com NFC</strong>, alarme, <strong>cadeado integrado</strong>, freio duplo hidráulico e suporte para até <strong>150 kg</strong>, limitada a 32 km/h. Abaixo, você vê o vídeo, o histórico de preço, opiniões reais e se ela vale o investimento.</p>
           <div class="relative mb-5 flex flex-wrap gap-2">
             <span class="rounded-md bg-brand-yellow px-3 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Nota editorial 9.1</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">1000W · 48V 18Ah</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">NFC + alarme + cadeado</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Aro 20</span>
+            <span class="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-brand-muted">1000W · 48V 18Ah</span>
+            <span class="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-brand-muted">NFC + alarme + cadeado</span>
+            <span class="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-brand-muted">Aro 20</span>
           </div>
           <div class="product-gallery relative" aria-label="Galeria de fotos da Inow V40 Pro" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_685968-MLB116606880828_092026-O.webp","alt":"Bicicleta elétrica Inow V40 Pro preta com cartões NFC"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp","alt":"Inow V40 Pro 1000W — foto 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp","alt":"Inow V40 Pro 1000W — foto 3"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_899575-MLA115210928419_072026-F.webp","alt":"Inow V40 Pro 1000W — foto 4"}]'>
             <p class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Fotos do produto</p>
             <div class="flex flex-wrap gap-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_685968-MLB116606880828_092026-O.webp" alt="Bicicleta elétrica Inow V40 Pro preta com cartões NFC" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 bg-white object-contain transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="0" loading="eager" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp" alt="Inow V40 Pro 1000W — foto 2" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp" alt="Inow V40 Pro 1000W — foto 3" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_899575-MLA115210928419_072026-F.webp" alt="Inow V40 Pro 1000W — foto 4" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_685968-MLB116606880828_092026-O.webp" alt="Bicicleta elétrica Inow V40 Pro preta com cartões NFC" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 bg-white object-contain transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="0" loading="eager" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp" alt="Inow V40 Pro 1000W — foto 2" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp" alt="Inow V40 Pro 1000W — foto 3" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_899575-MLA115210928419_072026-F.webp" alt="Inow V40 Pro 1000W — foto 4" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
             </div>
           </div>
         </div>
 
         <div class="glass relative order-1 flex flex-col overflow-hidden p-4 shadow-glow-emerald lg:order-2 lg:sticky lg:top-28 md:p-5">
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-brand-yellow/5"></div>
-          <p class="relative mb-3 text-xs font-extrabold uppercase tracking-wide text-brand-yellow">▶ Vídeo: Inow V40 Pro 2026</p>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-50 via-transparent to-amber-50/60"></div>
+          <p class="relative mb-3 text-xs font-extrabold uppercase tracking-wide text-orange-700">▶ Vídeo: Inow V40 Pro 2026</p>
           <div class="relative w-full">
             <div class="hero-video-wrap relative mx-auto aspect-[9/16] h-full w-full max-h-full max-w-[min(100%,315px)] overflow-hidden rounded-2xl bg-black/20 shadow-lg">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/irDbAivrHAY?si=qd7bPBmoIDyrJArJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="absolute inset-0 h-full w-full object-cover rounded-2xl"></iframe>
@@ -347,29 +347,29 @@
 
       <nav class="glass mb-8 flex items-center gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide p-3 sm:p-4" aria-label="Índice da review">
         <p class="shrink-0 pr-1 text-[10px] font-bold uppercase tracking-wider text-brand-dim">Índice</p>
-        <a href="#veredito" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Veredito</a>
-        <a href="#historico" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Preço</a>
-        <a href="#economia" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Calculadora</a>
-        <a href="#prova-social" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Opiniões</a>
-        <a href="#pros-contras" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Prós e contras</a>
-        <a href="#especificacoes" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Ficha técnica</a>
-        <a href="#comparativo" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">V40 Pro × V9 Max</a>
-        <a href="#analise" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Análise</a>
-        <a href="#ofertas" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Onde comprar</a>
-        <a href="#faq" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">FAQ</a>
+        <a href="#veredito" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Veredito</a>
+        <a href="#historico" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Preço</a>
+        <a href="#economia" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Calculadora</a>
+        <a href="#prova-social" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Opiniões</a>
+        <a href="#pros-contras" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Prós e contras</a>
+        <a href="#especificacoes" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Ficha técnica</a>
+        <a href="#comparativo" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">V40 Pro × V9 Max</a>
+        <a href="#analise" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Análise</a>
+        <a href="#ofertas" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Onde comprar</a>
+        <a href="#faq" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">FAQ</a>
       </nav>
 
       <section id="veredito" class="mb-10 grid scroll-mt-28 grid-cols-2 gap-4 md:grid-cols-4" aria-label="Veredito rápido">
         <article class="glass col-span-2 p-6 md:row-span-2">
           <h2 class="mb-4 text-sm font-bold uppercase tracking-wide text-brand-dim">Veredito rápido: a Inow V40 Pro vale a pena?</h2>
           <div class="flex items-end gap-4">
-            <span class="text-6xl font-black leading-none text-brand-yellow drop-shadow-[0_0_15px_rgba(255,230,0,0.4)]">9.1</span>
+            <span class="text-6xl font-black leading-none text-orange-600">9.1</span>
             <div class="pb-1">
-              <div class="text-xl text-brand-yellow" aria-hidden="true">★★★★★</div>
+              <div class="text-xl text-orange-700" aria-hidden="true">★★★★★</div>
               <p class="m-0 text-sm text-brand-dim">Escala 0–10 · Tudo de Melhor</p>
             </div>
           </div>
-          <p class="mt-4 text-brand-muted">Sim, para quem quer uma <strong>bike elétrica</strong> de 1000W com o melhor pacote antifurto da faixa: cartão NFC, alarme e cadeado integrado, além de bateria de 18Ah e freio duplo hidráulico. Se você não precisa desses extras, a <a href="/review-v9-max" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">V9 Max</a>, da mesma marca, custa cerca de R$ 1.100 a menos.</p>
+          <p class="mt-4 text-brand-muted">Sim, para quem quer uma <strong>bike elétrica</strong> de 1000W com o melhor pacote antifurto da faixa: cartão NFC, alarme e cadeado integrado, além de bateria de 18Ah e freio duplo hidráulico. Se você não precisa desses extras, a <a href="/review-v9-max" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">V9 Max</a>, da mesma marca, custa cerca de R$ 1.100 a menos.</p>
         </article>
         <article class="glass p-5">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">🎯</span> Para quem é</h3>
@@ -377,7 +377,7 @@
         </article>
         <article class="glass p-5">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">⭐</span> Diferencial</h3>
-          <p class="m-0 text-sm font-bold text-brand-yellow">NFC + alarme + cadeado integrado</p>
+          <p class="m-0 text-sm font-bold text-orange-700">NFC + alarme + cadeado integrado</p>
         </article>
         <article class="glass col-span-2 p-5 md:col-span-2">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">💰</span> Momento de compra</h3>
@@ -392,37 +392,37 @@
               <h2 id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Inow V40 Pro preço: histórico no Mercado Livre</h2>
               <p class="mt-1 text-xs text-brand-dim">Anúncio MLB3770390849 · monitorado de 10/08 a 29/10/2026</p>
             </div>
-            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300">Bom preço</span>
+            <span class="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Bom preço</span>
           </div>
           <div class="mb-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Menor histórico · 10/08</p>
               <p class="mt-1 text-xl font-extrabold text-brand-muted md:text-2xl">R$ 7.471,50</p>
             </div>
-            <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Pico · setembro</p>
-              <p class="mt-1 text-xl font-extrabold text-orange-300 line-through decoration-orange-400/80 md:text-2xl">~R$ 9.000</p>
+              <p class="mt-1 text-xl font-extrabold text-orange-700 line-through decoration-orange-400/80 md:text-2xl">~R$ 9.000</p>
             </div>
-            <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-center">
-              <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Hoje · 29/10</p>
-              <p class="mt-1 text-xl font-extrabold text-emerald-300 md:text-2xl">R$ 7.600</p>
+            <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">Hoje · 29/10</p>
+              <p class="mt-1 text-xl font-extrabold text-emerald-700 md:text-2xl">R$ 7.600</p>
             </div>
           </div>
           <figure>
             <svg viewBox="0 0 600 220" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço da Inow V40 Pro: R$ 7.471,50 em 10/08, cerca de R$ 8.800 em 18/08 e 04/09, cerca de R$ 9.000 em 12/09 e 16/09, R$ 7.600 de 21/10 a 29/10">
-              <defs><linearGradient id="area-v40" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/><stop offset="100%" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs>
-              <g stroke="rgba(255,255,255,0.08)" stroke-width="1"><line x1="40" y1="20" x2="580" y2="20"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95" x2="580" y2="95"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170" x2="580" y2="170"/></g>
-              <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25">9k</text><text x="36" y="62.5">8,6k</text><text x="36" y="100">8,2k</text><text x="36" y="137.5">7,8k</text><text x="36" y="175">7,4k</text></g>
+              <defs><linearGradient id="area-v40" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10B981" stop-opacity="0.35"/><stop offset="100%" stop-color="#10B981" stop-opacity="0"/></linearGradient></defs>
+              <g stroke="rgba(15,23,42,0.08)" stroke-width="1"><line x1="40" y1="20" x2="580" y2="20"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95" x2="580" y2="95"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170" x2="580" y2="170"/></g>
+              <g fill="#64748B" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25">9k</text><text x="36" y="62.5">8,6k</text><text x="36" y="100">8,2k</text><text x="36" y="137.5">7,8k</text><text x="36" y="175">7,4k</text></g>
               <polygon fill="url(#area-v40)" points="56,163.3 119.75,38.75 183.5,38.75 247.25,20 311,20 374.75,151.25 438.5,151.25 502.25,151.25 566,151.25 566,170 56,170"/>
-              <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56,163.3 119.75,38.75 183.5,38.75 247.25,20 311,20 374.75,151.25 438.5,151.25 502.25,151.25 566,151.25"/>
-              <g fill="#34d399"><circle cx="119.75" cy="38.75" r="4"/><circle cx="183.5" cy="38.75" r="4"/><circle cx="374.75" cy="151.25" r="4"/><circle cx="438.5" cy="151.25" r="4"/><circle cx="502.25" cy="151.25" r="4"/></g>
-              <circle cx="56" cy="163.3" r="5" fill="#AAB3BD"/>
+              <polyline fill="none" stroke="#10B981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56,163.3 119.75,38.75 183.5,38.75 247.25,20 311,20 374.75,151.25 438.5,151.25 502.25,151.25 566,151.25"/>
+              <g fill="#10B981"><circle cx="119.75" cy="38.75" r="4"/><circle cx="183.5" cy="38.75" r="4"/><circle cx="374.75" cy="151.25" r="4"/><circle cx="438.5" cy="151.25" r="4"/><circle cx="502.25" cy="151.25" r="4"/></g>
+              <circle cx="56" cy="163.3" r="5" fill="#64748B"/>
               <circle cx="247.25" cy="20" r="5" fill="#fb923c"/><circle cx="311" cy="20" r="5" fill="#fb923c"/>
-              <circle cx="566" cy="151.25" r="10" fill="#34d399" fill-opacity="0.25"/><circle cx="566" cy="151.25" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
-              <g font-family="Inter, sans-serif" font-weight="800" font-size="17"><text x="64" y="150" fill="#D5D9D9">R$ 7.471</text><text x="279" y="44" fill="#fdba74" text-anchor="middle">~R$ 9.000</text><text x="566" y="137" fill="#6ee7b7" text-anchor="end">R$ 7.600</text></g>
-              <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56" y="212">10/08</text><text x="183.5" y="212">04/09</text><text x="311" y="212">16/09</text><text x="438.5" y="212">22/10</text><text x="562" y="212" fill="#6ee7b7" font-weight="700">29/10</text></g>
+              <circle cx="566" cy="151.25" r="10" fill="#10B981" fill-opacity="0.25"/><circle cx="566" cy="151.25" r="6" fill="#10B981" stroke="#fff" stroke-width="2"/>
+              <g font-family="Inter, sans-serif" font-weight="800" font-size="17"><text x="64" y="150" fill="#334155">R$ 7.471</text><text x="279" y="44" fill="#C2410C" text-anchor="middle">~R$ 9.000</text><text x="566" y="137" fill="#047857" text-anchor="end">R$ 7.600</text></g>
+              <g fill="#64748B" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56" y="212">10/08</text><text x="183.5" y="212">04/09</text><text x="311" y="212">16/09</text><text x="438.5" y="212">22/10</text><text x="562" y="212" fill="#047857" font-weight="700">29/10</text></g>
             </svg>
-            <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+            <figcaption class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
               <strong class="text-brand-muted">Transparência:</strong> o preço começou em R$ 7.471,50 em 10/08, subiu para cerca de R$ 8.800 a R$ 9.000 entre agosto e setembro e voltou para R$ 7.600 em 21/10, onde está até 29/10. A venda, a entrega e a garantia são do vendedor no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar — confira no anúncio antes de pagar.
             </figcaption>
           </figure>
@@ -440,37 +440,37 @@
               <div>
                 <p id="calc-modo-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Como você se desloca hoje?</p>
                 <div class="grid grid-cols-2 gap-2 sm:grid-cols-4" role="radiogroup" aria-labelledby="calc-modo-label">
-                  <button type="button" role="radio" aria-checked="true" data-mode="app" class="calc-mode rounded-xl border border-white/10 bg-white/5 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-brand-orange/50">🚗 Uber/99</button>
-                  <button type="button" role="radio" aria-checked="false" data-mode="moto" class="calc-mode rounded-xl border border-white/10 bg-white/5 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-brand-orange/50">🏍️ Moto a gasolina</button>
-                  <button type="button" role="radio" aria-checked="false" data-mode="carro" class="calc-mode rounded-xl border border-white/10 bg-white/5 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-brand-orange/50">🚙 Carro</button>
-                  <button type="button" role="radio" aria-checked="false" data-mode="onibus" class="calc-mode rounded-xl border border-white/10 bg-white/5 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-brand-orange/50">🚌 Ônibus</button>
+                  <button type="button" role="radio" aria-checked="true" data-mode="app" class="calc-mode rounded-xl border border-slate-200 bg-slate-50 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🚗 Uber/99</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="moto" class="calc-mode rounded-xl border border-slate-200 bg-slate-50 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🏍️ Moto a gasolina</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="carro" class="calc-mode rounded-xl border border-slate-200 bg-slate-50 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🚙 Carro</button>
+                  <button type="button" role="radio" aria-checked="false" data-mode="onibus" class="calc-mode rounded-xl border border-slate-200 bg-slate-50 px-2 py-2.5 text-xs font-bold text-brand-muted transition hover:border-orange-300">🚌 Ônibus</button>
                 </div>
               </div>
               <div>
-                <div class="mb-1.5 flex items-baseline justify-between"><label for="calc-km" class="text-sm font-bold text-white">Quilômetros por dia (ida e volta)</label><output id="calc-km-out" for="calc-km" class="text-lg font-black text-brand-orange">20 km</output></div>
+                <div class="mb-1.5 flex items-baseline justify-between"><label for="calc-km" class="text-sm font-bold text-ink">Quilômetros por dia (ida e volta)</label><output id="calc-km-out" for="calc-km" class="text-lg font-black text-orange-700">20 km</output></div>
                 <input id="calc-km" type="range" min="2" max="60" step="1" value="20" class="calc-range w-full">
                 <div class="mt-1 flex justify-between text-[11px] text-brand-dim"><span>2 km</span><span>autonomia de até 60 km</span><span>60 km</span></div>
               </div>
               <div>
-                <div class="mb-1.5 flex items-baseline justify-between"><label for="calc-dias" class="text-sm font-bold text-white">Dias de uso por mês</label><output id="calc-dias-out" for="calc-dias" class="text-lg font-black text-brand-orange">22 dias</output></div>
+                <div class="mb-1.5 flex items-baseline justify-between"><label for="calc-dias" class="text-sm font-bold text-ink">Dias de uso por mês</label><output id="calc-dias-out" for="calc-dias" class="text-lg font-black text-orange-700">22 dias</output></div>
                 <input id="calc-dias" type="range" min="4" max="30" step="1" value="22" class="calc-range w-full">
               </div>
             </div>
-            <div class="rounded-2xl border border-brand-yellow/20 bg-gradient-to-br from-brand-yellow/10 via-transparent to-brand-orange/10 p-5" aria-live="polite">
+            <div class="rounded-2xl border border-orange-200 bg-gradient-to-br from-amber-50 via-white to-orange-50/60 p-5" aria-live="polite">
               <div class="grid grid-cols-2 gap-3 text-center">
-                <div class="rounded-xl border border-white/10 bg-white/5 p-3"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Você gasta hoje</p><p id="calc-atual" class="mt-1 text-lg font-extrabold text-brand-dim line-through decoration-orange-400/70">R$ 0</p><p class="text-[11px] text-brand-dim">por mês</p></div>
-                <div class="rounded-xl border border-white/10 bg-white/5 p-3"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Com a V40 Pro</p><p id="calc-scooter" class="mt-1 text-lg font-extrabold text-white">R$ 0</p><p class="text-[11px] text-brand-dim">de energia/mês</p></div>
+                <div class="rounded-xl border border-slate-200 bg-slate-50 p-3"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Você gasta hoje</p><p id="calc-atual" class="mt-1 text-lg font-extrabold text-brand-dim line-through decoration-orange-400/70">R$ 0</p><p class="text-[11px] text-brand-dim">por mês</p></div>
+                <div class="rounded-xl border border-slate-200 bg-slate-50 p-3"><p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Com a V40 Pro</p><p id="calc-scooter" class="mt-1 text-lg font-extrabold text-ink">R$ 0</p><p class="text-[11px] text-brand-dim">de energia/mês</p></div>
               </div>
               <div class="mt-4 text-center">
-                <p class="text-xs font-extrabold uppercase tracking-[0.14em] text-emerald-300">Economia estimada</p>
-                <p class="mt-1 text-4xl font-black leading-none text-emerald-300 md:text-5xl"><span id="calc-eco">R$ 0</span><span class="text-base font-bold text-brand-dim">/mês</span></p>
+                <p class="text-xs font-extrabold uppercase tracking-[0.14em] text-emerald-700">Economia estimada</p>
+                <p class="mt-1 text-4xl font-black leading-none text-emerald-700 md:text-5xl"><span id="calc-eco">R$ 0</span><span class="text-base font-bold text-brand-dim">/mês</span></p>
                 <p class="mt-1 text-sm font-semibold text-brand-muted"><span id="calc-ano">R$ 0</span> por ano</p>
               </div>
               <div class="mt-5">
                 <div class="mb-1 flex justify-between text-[11px] font-bold text-brand-dim"><span>Retorno do investimento</span><span id="calc-meses-label">—</span></div>
-                <div class="relative h-3 overflow-hidden rounded-full bg-white/10"><div id="calc-bar" class="h-3 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600 transition-all duration-500" style="width:0%"></div></div>
+                <div class="relative h-3 overflow-hidden rounded-full bg-slate-200"><div id="calc-bar" class="h-3 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-600 transition-all duration-500" style="width:0%"></div></div>
               </div>
-              <p id="calc-conclusao" class="mt-4 rounded-xl bg-white/5 p-3 text-center text-sm font-bold leading-snug text-white ring-1 ring-emerald-400/30"></p>
+              <p id="calc-conclusao" class="mt-4 rounded-xl bg-slate-50 p-3 text-center text-sm font-bold leading-snug text-ink ring-1 ring-emerald-200"></p>
               <a class="btn-shine mt-4 inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/24UQNxa">Comprar no Mercado Livre</a>
             </div>
           </div>
@@ -480,25 +480,25 @@
 
       <section id="prova-social" class="mb-10 scroll-mt-28" aria-labelledby="prova-social-titulo">
         <div class="mb-3 text-center">
-          <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-black uppercase tracking-widest text-emerald-400">Vídeo e fotos do anúncio</span>
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[11px] font-black uppercase tracking-widest text-emerald-700">Vídeo e fotos do anúncio</span>
         </div>
-        <h2 id="prova-social-titulo" class="mb-2 text-center text-2xl font-extrabold md:text-3xl">Opiniões reais sobre a <span class="text-brand-yellow">bike elétrica V40 Pro</span></h2>
-        <p class="mx-auto mb-6 max-w-2xl text-center text-sm text-brand-muted"><span class="text-brand-yellow">★★★★★</span> 4.8 de 5 com 203 avaliações e mais de 500 unidades vendidas no Mercado Livre. Passe o mouse para pausar e toque numa foto para ampliar.</p>
+        <h2 id="prova-social-titulo" class="mb-2 text-center text-2xl font-extrabold md:text-3xl">Opiniões reais sobre a <span class="text-orange-600">bike elétrica V40 Pro</span></h2>
+        <p class="mx-auto mb-6 max-w-2xl text-center text-sm text-brand-muted"><span class="text-orange-700">★★★★★</span> 4.8 de 5 com 203 avaliações e mais de 500 unidades vendidas no Mercado Livre. Passe o mouse para pausar e toque numa foto para ampliar.</p>
         <div class="glass p-4 md:p-6">
           <div class="product-gallery marquee-wrap relative w-full overflow-hidden" aria-label="Fotos e vídeo da Inow V40 Pro" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp","alt":"Inow V40 Pro — foto 1"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp","alt":"Inow V40 Pro — foto 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_899575-MLA115210928419_072026-F.webp","alt":"Inow V40 Pro — foto 3"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_798355-MLA106638145494_022026-F.webp","alt":"Inow V40 Pro — foto 4"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_710233-MLA114730387191_072026-F.webp","alt":"Inow V40 Pro — foto 5"}]'>
             <div class="animate-marquee flex gap-4">
-              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:h-60 sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp" alt="Inow V40 Pro — foto 1" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-black transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:h-60 sm:w-60"><video src="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/019fa5c4df507b7ba6f23eb7374734be/master.m3u8" class="h-full w-full object-cover" controls muted loop playsinline preload="metadata" aria-label="Vídeo da Inow V40 Pro no anúncio"></video></figure>
-              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:h-60 sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp" alt="Inow V40 Pro — foto 2" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:h-60 sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_899575-MLA115210928419_072026-F.webp" alt="Inow V40 Pro — foto 3" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:h-60 sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_798355-MLA106638145494_022026-F.webp" alt="Inow V40 Pro — foto 4" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:h-60 sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_710233-MLA114730387191_072026-F.webp" alt="Inow V40 Pro — foto 5" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:h-60 sm:w-60" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp" alt="" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-black sm:h-60 sm:w-60" aria-hidden="true"><video src="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/019fa5c4df507b7ba6f23eb7374734be/master.m3u8" class="h-full w-full object-cover" muted loop playsinline preload="none" tabindex="-1"></video></figure>
-              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:h-60 sm:w-60" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp" alt="" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:h-60 sm:w-60" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_899575-MLA115210928419_072026-F.webp" alt="" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:h-60 sm:w-60" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_798355-MLA106638145494_022026-F.webp" alt="" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:h-60 sm:w-60" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_710233-MLA114730387191_072026-F.webp" alt="" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-soft sm:h-60 sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp" alt="Inow V40 Pro — foto 1" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 bg-black transition-all hover:border-orange-300 hover:shadow-soft sm:h-60 sm:w-60"><video src="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/019fa5c4df507b7ba6f23eb7374734be/master.m3u8" class="h-full w-full object-cover" controls muted loop playsinline preload="metadata" aria-label="Vídeo da Inow V40 Pro no anúncio"></video></figure>
+              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-soft sm:h-60 sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp" alt="Inow V40 Pro — foto 2" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-soft sm:h-60 sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_899575-MLA115210928419_072026-F.webp" alt="Inow V40 Pro — foto 3" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-soft sm:h-60 sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_798355-MLA106638145494_022026-F.webp" alt="Inow V40 Pro — foto 4" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-soft sm:h-60 sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_710233-MLA114730387191_072026-F.webp" alt="Inow V40 Pro — foto 5" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-soft sm:h-60 sm:w-60" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_857485-MLA107489289239_022026-F.webp" alt="" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 bg-black sm:h-60 sm:w-60" aria-hidden="true"><video src="https://video-vod-clips.mms.mlstatic.com/v1/video/hls/cli_04xzu0y81ntclips/019fa5c4df507b7ba6f23eb7374734be/master.m3u8" class="h-full w-full object-cover" muted loop playsinline preload="none" tabindex="-1"></video></figure>
+              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-soft sm:h-60 sm:w-60" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_653460-MLA115210841243_072026-F.webp" alt="" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-soft sm:h-60 sm:w-60" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_899575-MLA115210928419_072026-F.webp" alt="" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-soft sm:h-60 sm:w-60" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_798355-MLA106638145494_022026-F.webp" alt="" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="marquee-dup h-48 w-48 shrink-0 overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-soft sm:h-60 sm:w-60" aria-hidden="true"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_710233-MLA114730387191_072026-F.webp" alt="" class="product-gallery-thumb h-full w-full cursor-zoom-in object-cover" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
             </div>
           </div>
           <div class="mt-5 flex justify-center">
@@ -508,96 +508,96 @@
       </section>
 
       <section id="pros-contras" class="mb-10 scroll-mt-28">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-brand-yellow">contras</span> da bicicleta elétrica Inow V40 Pro</h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-orange-600">contras</span> da bicicleta elétrica Inow V40 Pro</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div class="glass h-full border-emerald-500/30 p-6 shadow-glow-emerald">
-            <h3 class="mb-4 text-lg font-bold text-emerald-300">Pontos fortes da Inow V40 Pro 1000W</h3>
+          <div class="glass h-full border-emerald-200 p-6 shadow-glow-emerald">
+            <h3 class="mb-4 text-lg font-bold text-emerald-700">Pontos fortes da Inow V40 Pro 1000W</h3>
             <ul class="space-y-3 text-sm text-brand-muted">
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Motor de 1000W com bateria 48V 18Ah e até 60 km de autonomia declarada</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Pacote antifurto: cartão NFC, alarme e cadeado integrado ao quadro</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Freio duplo hidráulico e suspensão hidráulica</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Suporta até 150 kg, com banco estendido para passageiro</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Bateria de lítio removível: dá para carregar dentro de casa</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>10x de R$ 760 sem juros e nota 4.8 com 203 avaliações</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Motor de 1000W com bateria 48V 18Ah e até 60 km de autonomia declarada</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Pacote antifurto: cartão NFC, alarme e cadeado integrado ao quadro</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Freio duplo hidráulico e suspensão hidráulica</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Suporta até 150 kg, com banco estendido para passageiro</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Bateria de lítio removível: dá para carregar dentro de casa</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>10x de R$ 760 sem juros e nota 4.8 com 203 avaliações</span></li>
             </ul>
           </div>
-          <div class="glass h-full border-orange-500/30 p-6">
-            <h3 class="mb-4 text-lg font-bold text-orange-300">Limitações</h3>
+          <div class="glass h-full border-orange-200 p-6">
+            <h3 class="mb-4 text-lg font-bold text-orange-700">Limitações</h3>
             <ul class="space-y-3 text-sm text-brand-muted">
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Hoje custa R$ 128,50 acima do menor preço histórico (R$ 7.471,50)</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Pesada: entre 36 e 42 kg, segundo fontes independentes</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Não dobra e exige altura mínima de 155 cm</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Custa cerca de R$ 1.100 a mais que a <a href="/review-v9-max" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">V9 Max</a>, também da Inow</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Há relatos de garfo dianteiro rígido; regule a suspensão na primeira revisão</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Hoje custa R$ 128,50 acima do menor preço histórico (R$ 7.471,50)</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Pesada: entre 36 e 42 kg, segundo fontes independentes</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Não dobra e exige altura mínima de 155 cm</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Custa cerca de R$ 1.100 a mais que a <a href="/review-v9-max" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">V9 Max</a>, também da Inow</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Há relatos de garfo dianteiro rígido; regule a suspensão na primeira revisão</span></li>
             </ul>
           </div>
         </div>
       </section>
 
       <section id="especificacoes" class="mb-10 scroll-mt-28">
-        <h2 class="mb-2 text-2xl font-extrabold md:text-3xl">Ficha técnica da bicicleta elétrica <span class="text-brand-yellow">Inow V40 Pro 1000W</span></h2>
+        <h2 class="mb-2 text-2xl font-extrabold md:text-3xl">Ficha técnica da bicicleta elétrica <span class="text-orange-600">Inow V40 Pro 1000W</span></h2>
         <p class="mb-6 text-sm text-brand-muted">Dados da ficha técnica do anúncio rastreado no Mercado Livre (29/10/2026).</p>
         <div class="glass overflow-x-auto">
           <table class="w-full min-w-[460px] text-left text-sm">
             <caption class="sr-only">Ficha técnica da bicicleta elétrica Inow V40 Pro</caption>
             <tbody class="text-brand-muted">
-              <tr class="border-b border-white/10"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-white">Marca e modelo</th><td class="px-4 py-3">Inow · V40 PRO Cadeado Segurança NFC</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Potência</th><td class="px-4 py-3">1.000 W</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Velocidade máxima</th><td class="px-4 py-3">32 km/h</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Bateria</th><td class="px-4 py-3">Íon de lítio · 48V · 18 Ah · removível</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Aro</th><td class="px-4 py-3">20</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Peso máximo suportado</th><td class="px-4 py-3">150 kg</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Altura mínima recomendada</th><td class="px-4 py-3">155 cm</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Dobrável</th><td class="px-4 py-3">Não</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Indicada para</th><td class="px-4 py-3">Adultos</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Cor</th><td class="px-4 py-3">Preto</td></tr>
-              <tr><th scope="row" class="px-4 py-3 font-semibold text-white">Inow V40 Pro preço</th><td class="px-4 py-3"><strong class="text-white">R$ 7.600</strong> · 10x de R$ 760 sem juros (29/10/2026)</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-ink">Marca e modelo</th><td class="px-4 py-3">Inow · V40 PRO Cadeado Segurança NFC</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Potência</th><td class="px-4 py-3">1.000 W</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Velocidade máxima</th><td class="px-4 py-3">32 km/h</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Bateria</th><td class="px-4 py-3">Íon de lítio · 48V · 18 Ah · removível</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Aro</th><td class="px-4 py-3">20</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Peso máximo suportado</th><td class="px-4 py-3">150 kg</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Altura mínima recomendada</th><td class="px-4 py-3">155 cm</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Dobrável</th><td class="px-4 py-3">Não</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Indicada para</th><td class="px-4 py-3">Adultos</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Cor</th><td class="px-4 py-3">Preto</td></tr>
+              <tr><th scope="row" class="px-4 py-3 font-semibold text-ink">Inow V40 Pro preço</th><td class="px-4 py-3"><strong class="text-ink">R$ 7.600</strong> · 10x de R$ 760 sem juros (29/10/2026)</td></tr>
             </tbody>
           </table>
         </div>
-        <h3 class="mb-2 mt-8 text-lg font-bold text-white">Recursos declarados pela Inow Brasil e por lojas</h3>
+        <h3 class="mb-2 mt-8 text-lg font-bold text-ink">Recursos declarados pela Inow Brasil e por lojas</h3>
         <p class="mb-4 text-sm text-brand-muted">Itens que não aparecem na ficha do anúncio, mas constam na página oficial da Inow V40 Pro e em outras lojas. Confirme no anúncio antes de comprar.</p>
         <div class="glass overflow-x-auto">
           <table class="w-full min-w-[460px] text-left text-sm">
             <caption class="sr-only">Recursos da Inow V40 Pro declarados pelo fabricante e por lojas</caption>
             <tbody class="text-brand-muted">
-              <tr class="border-b border-white/10"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-white">Autonomia</th><td class="px-4 py-3">Até 60 km (Inow) · algumas lojas citam 50 km</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Freios</th><td class="px-4 py-3">Duplo hidráulico</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Suspensão</th><td class="px-4 py-3">Hidráulica (lojas citam suspensão dupla)</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Pneus e câmbio</th><td class="px-4 py-3">Pneus Kenda 20x4 · câmbio Shimano de 7 marchas</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Painel e chave</th><td class="px-4 py-3">Display colorido com NFC · chave por cartão NFC</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Segurança</th><td class="px-4 py-3">Alarme + cadeado pérola integrado ao quadro</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Aplicativo</th><td class="px-4 py-3">Android e iOS</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Banco</th><td class="px-4 py-3">Estendido, para passageiro</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Recarga</th><td class="px-4 py-3">5 a 6 horas</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Peso da bike</th><td class="px-4 py-3">Não divulgado pela Inow · fontes citam 36 a 42 kg</td></tr>
-              <tr><th scope="row" class="px-4 py-3 font-semibold text-white">Cores na Inow</th><td class="px-4 py-3">Preto, Azul Satin e Camuflado</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-ink">Autonomia</th><td class="px-4 py-3">Até 60 km (Inow) · algumas lojas citam 50 km</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Freios</th><td class="px-4 py-3">Duplo hidráulico</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Suspensão</th><td class="px-4 py-3">Hidráulica (lojas citam suspensão dupla)</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Pneus e câmbio</th><td class="px-4 py-3">Pneus Kenda 20x4 · câmbio Shimano de 7 marchas</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Painel e chave</th><td class="px-4 py-3">Display colorido com NFC · chave por cartão NFC</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Segurança</th><td class="px-4 py-3">Alarme + cadeado pérola integrado ao quadro</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Aplicativo</th><td class="px-4 py-3">Android e iOS</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Banco</th><td class="px-4 py-3">Estendido, para passageiro</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Recarga</th><td class="px-4 py-3">5 a 6 horas</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Peso da bike</th><td class="px-4 py-3">Não divulgado pela Inow · fontes citam 36 a 42 kg</td></tr>
+              <tr><th scope="row" class="px-4 py-3 font-semibold text-ink">Cores na Inow</th><td class="px-4 py-3">Preto, Azul Satin e Camuflado</td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
       <section id="comparativo" class="mb-10 scroll-mt-28">
-        <h2 class="mb-2 text-2xl font-extrabold md:text-3xl">Inow V40 Pro × <span class="text-brand-yellow">V9 Max</span>: qual bicicleta elétrica Inow comprar?</h2>
+        <h2 class="mb-2 text-2xl font-extrabold md:text-3xl">Inow V40 Pro × <span class="text-orange-600">V9 Max</span>: qual bicicleta elétrica Inow comprar?</h2>
         <p class="mb-6 text-sm text-brand-muted">As duas são vendidas pela mesma loja no Mercado Livre. Preços de 29/10/2026.</p>
         <div class="glass overflow-x-auto">
           <table class="w-full min-w-[520px] text-left text-sm">
             <caption class="sr-only">Comparativo entre Inow V40 Pro e V9 Max</caption>
             <thead>
-              <tr class="border-b border-white/10 text-[11px] uppercase tracking-wider text-brand-dim">
+              <tr class="border-b border-slate-200 text-[11px] uppercase tracking-wider text-brand-dim">
                 <th scope="col" class="px-4 py-3 font-bold">Item</th>
-                <th scope="col" class="px-4 py-3 font-bold text-brand-yellow">Inow V40 Pro</th>
-                <th scope="col" class="px-4 py-3 font-bold text-sky-300">V9 Max</th>
+                <th scope="col" class="px-4 py-3 font-bold text-orange-700">Inow V40 Pro</th>
+                <th scope="col" class="px-4 py-3 font-bold text-sky-700">V9 Max</th>
               </tr>
             </thead>
             <tbody class="text-brand-muted">
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Motor e velocidade</th><td class="px-4 py-3">1000W · 32 km/h</td><td class="px-4 py-3">1000W · 32 km/h</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Bateria</th><td class="px-4 py-3"><strong class="text-white">48V 18Ah</strong></td><td class="px-4 py-3">48V 15,6Ah</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Antifurto</th><td class="px-4 py-3"><strong class="text-white">NFC + alarme + cadeado integrado</strong></td><td class="px-4 py-3">NFC e alarme em algumas versões</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Carga máxima</th><td class="px-4 py-3">150 kg</td><td class="px-4 py-3">150 kg</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Avaliações no ML</th><td class="px-4 py-3">4.8 · 203 avaliações</td><td class="px-4 py-3">4.8 · 373 avaliações</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Preço</th><td class="px-4 py-3">R$ 7.600 · 10x R$ 760</td><td class="px-4 py-3"><strong class="text-white">R$ 6.472,23</strong> · 10x R$ 647,22</td></tr>
-              <tr><th scope="row" class="px-4 py-3 font-semibold text-white">Review</th><td class="px-4 py-3">Esta página · nota 9.1</td><td class="px-4 py-3"><a href="/review-v9-max" class="font-bold text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Review da V9 Max · nota 8.9</a></td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Motor e velocidade</th><td class="px-4 py-3">1000W · 32 km/h</td><td class="px-4 py-3">1000W · 32 km/h</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Bateria</th><td class="px-4 py-3"><strong class="text-ink">48V 18Ah</strong></td><td class="px-4 py-3">48V 15,6Ah</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Antifurto</th><td class="px-4 py-3"><strong class="text-ink">NFC + alarme + cadeado integrado</strong></td><td class="px-4 py-3">NFC e alarme em algumas versões</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Carga máxima</th><td class="px-4 py-3">150 kg</td><td class="px-4 py-3">150 kg</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Avaliações no ML</th><td class="px-4 py-3">4.8 · 203 avaliações</td><td class="px-4 py-3">4.8 · 373 avaliações</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Preço</th><td class="px-4 py-3">R$ 7.600 · 10x R$ 760</td><td class="px-4 py-3"><strong class="text-ink">R$ 6.472,23</strong> · 10x R$ 647,22</td></tr>
+              <tr><th scope="row" class="px-4 py-3 font-semibold text-ink">Review</th><td class="px-4 py-3">Esta página · nota 9.1</td><td class="px-4 py-3"><a href="/review-v9-max" class="font-bold text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">Review da V9 Max · nota 8.9</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -605,86 +605,86 @@
 
       <section id="analise" class="mb-10 scroll-mt-28">
         <article class="glass p-6 leading-relaxed md:p-10">
-          <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: a <span class="text-brand-yellow">bicicleta elétrica Inow V40 Pro</span> vale a pena em 2026?</h2>
+          <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: a <span class="text-orange-600">bicicleta elétrica Inow V40 Pro</span> vale a pena em 2026?</h2>
           <p class="mb-5 text-brand-muted">A <strong>bicicleta elétrica Inow V40 Pro</strong> é o lançamento 2026 da <strong>Inow Brasil</strong> para quem quer uma e-bike urbana potente, de design robusto e bem protegida contra furto. O pacote junta <strong>motor de 1000W</strong>, bateria de lítio 48V 18Ah, <strong>display colorido com NFC</strong>, alarme, <strong>cadeado pérola integrado ao quadro</strong> e freio duplo hidráulico. Nesta análise, cruzamos a ficha do anúncio, a página oficial da Inow, o histórico de preço e as avaliações de compradores para responder se ela vale o investimento.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Inow V40, V40 Pro ou bicicleta elétrica V40: é o mesmo modelo?</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Inow V40, V40 Pro ou bicicleta elétrica V40: é o mesmo modelo?</h3>
           <p class="mb-5 text-brand-muted">Sim. Nas buscas e nos marketplaces, o modelo aparece como <strong>Inow V40 Pro</strong>, <strong>V40 Pro</strong>, <strong>Inow V40</strong> ou <strong>bicicleta elétrica V40</strong>. Também é comum encontrar a grafia sem acento — “v40 pro bike eletrica”, “v40 bike eletrica” ou “bicicleta eletrica inow” —, que leva ao mesmo produto. O anúncio que rastreamos se chama “Bicicleta Elétrica Inow V40 Pro Lançamento 2026 1000w Nfc” e é vendido pela URBIKES, MercadoLíder com mais de 1.000 vendas. Ao comparar ofertas, confira se a ficha traz bateria de 18Ah e o cadeado integrado, que são os diferenciais desta versão.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Motor de 1000W: desempenho da bike elétrica V40 Pro no dia a dia</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Motor de 1000W: desempenho da bike elétrica V40 Pro no dia a dia</h3>
           <p class="mb-5 text-brand-muted">O motor de 1000W da <strong>bike elétrica V40 Pro</strong> dá potência de sobra para subidas e arrancadas no trânsito. Como a velocidade máxima é limitada a 32 km/h, essa força vira torque: a bike mantém o ritmo em ladeira, com piloto pesado ou com passageiro no banco estendido. Lojas informam câmbio Shimano de 7 marchas, então dá para pedalar com assistência e poupar bateria no plano. O motor é silencioso e a resposta é suave: boa performance sobre duas rodas no deslocamento urbano com paradas frequentes.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Bateria 48V 18Ah e autonomia de até 60 km</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Bateria 48V 18Ah e autonomia de até 60 km</h3>
           <p class="mb-5 text-brand-muted">A ficha do anúncio confirma bateria de íon de lítio 48V 18Ah, removível — maior que a de 15,6Ah da V9 Max. A Inow declara até 60 km por carga, e algumas lojas falam em 50 km. No uso real, peso do ciclista, subidas, modo de assistência e calibragem dos pneus mudam o resultado, então trate 60 km como referência. Reviews que consultaram o anúncio oficial citam recarga de 5 a 6 horas; como a bateria sai do quadro, dá para carregar no apartamento ou no trabalho.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Cadeado integrado, NFC e alarme: segurança contra furto</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Cadeado integrado, NFC e alarme: segurança contra furto</h3>
           <p class="mb-5 text-brand-muted">É aqui que a Inow V40 Pro se destaca. O display colorido com NFC faz o desbloqueio da bike por aproximação do cartão, sem chave tradicional. A Inow informa alarme e cadeado pérola integrado ao quadro, e o nome do modelo no anúncio — “V40 PRO Cadeado Segurança NFC” — confirma esse foco. Há ainda aplicativo para Android e iOS. Para quem deixa a bike na rua, no trabalho ou na faculdade por algumas horas, esse conjunto reduz bastante o risco de furto. Mesmo assim, use uma trava extra em locais de muito movimento.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Freios hidráulicos, suspensão e aro 20</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Freios hidráulicos, suspensão e aro 20</h3>
           <p class="mb-5 text-brand-muted">O freio duplo hidráulico dá frenagem progressiva e firme, importante para uma bike pesada com motor de 1000W. A suspensão é hidráulica, e lojas citam suspensão dupla (dianteira e traseira) e pneus Kenda 20x4 no aro 20, o que deixa a pilotagem confortável em asfalto ruim e paralelepípedo. Um ponto de atenção: há relatos de garfo dianteiro rígido de fábrica. Peça a regulagem na primeira revisão.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Precisa de CNH? Velocidade de 32 km/h e legislação</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Precisa de CNH? Velocidade de 32 km/h e legislação</h3>
           <p class="mb-5 text-brand-muted">A ficha informa velocidade máxima de 32 km/h. Com motor de até 1000W e esse limite, a Inow V40 Pro fica dentro das regras da Resolução CONTRAN nº 996/2023 para bicicleta elétrica ou veículo autopropelido, que não exigem CNH, emplacamento nem IPVA. Algumas lojas mencionam velocidades maiores sem o limitador, mas retirar o limitador tira a bike dessa categoria e pode afetar a garantia. Use capacete e confira as regras de circulação da sua cidade.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Inow V40 Pro preço: quanto custa e quando comprar</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Inow V40 Pro preço: quanto custa e quando comprar</h3>
           <p class="mb-5 text-brand-muted">Quem pesquisa <strong>Inow V40 Pro preço</strong> quer um número: em 29/10/2026, a bicicleta custava <strong>R$ 7.600</strong> no Mercado Livre — 15% abaixo dos R$ 8.999 de tabela —, ou <strong>10x de R$ 760 sem juros</strong>, com frete grátis. O histórico mostra que o menor valor foi R$ 7.471,50 em 10/08; depois o preço subiu para cerca de R$ 8.800 a R$ 9.000 entre agosto e setembro e voltou para R$ 7.600 em 21/10. Ou seja: o preço atual está a apenas R$ 128,50 do piso histórico e cerca de R$ 1.400 abaixo do pico. É um bom momento para comprar.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Onde comprar a Inow V40 Pro com segurança</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Onde comprar a Inow V40 Pro com segurança</h3>
           <p class="mb-5 text-brand-muted">O anúncio rastreado reúne nota 4.8 com 203 avaliações, mais de 500 unidades vendidas, vendedor MercadoLíder, Compra Garantida e devolução grátis em 30 dias. A Inow Brasil também vende no site oficial e oferece garantia de fábrica e assistência técnica. Antes de fechar, confirme a garantia, o prazo de entrega para o seu CEP e se a bike vem montada ou exige montagem.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Para quem é esta e-bike de mobilidade elétrica — e para quem não é</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Para quem é esta e-bike de mobilidade elétrica — e para quem não é</h3>
           <p class="mb-5 text-brand-muted"><strong>É para você</strong> se roda de 20 a 40 km por dia, precisa deixar a bike estacionada na rua, quer levar passageiro no banco estendido ou busca uma opção de mobilidade elétrica para trocar ônibus, aplicativo ou moto. Exige altura mínima de 155 cm.</p>
-          <p class="mb-5 text-brand-muted"><strong>Não é para você</strong> se mora em prédio sem elevador, precisa dobrar a bike ou faz trajetos curtos e planos. Se o orçamento for o limite, a <a href="/review-v9-max" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">V9 Max</a> entrega o mesmo motor de 1000W por cerca de R$ 6.472. Para off-road e bateria maior, compare com a <a href="/review-ouxi-gt2000" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Ouxi GT2000</a> no <a href="/guia-bicicleta-eletrica-1000w" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">guia de bicicleta elétrica 1000W</a>.</p>
+          <p class="mb-5 text-brand-muted"><strong>Não é para você</strong> se mora em prédio sem elevador, precisa dobrar a bike ou faz trajetos curtos e planos. Se o orçamento for o limite, a <a href="/review-v9-max" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">V9 Max</a> entrega o mesmo motor de 1000W por cerca de R$ 6.472. Para off-road e bateria maior, compare com a <a href="/review-ouxi-gt2000" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">Ouxi GT2000</a> no <a href="/guia-bicicleta-eletrica-1000w" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">guia de bicicleta elétrica 1000W</a>.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Conclusão: vale a pena comprar a Inow V40 Pro?</h3>
-          <p class="text-brand-muted">Vale. A <strong>bicicleta elétrica V40 Pro</strong> junta potência, bateria grande, freio hidráulico e o pacote antifurto mais completo entre as bikes de 1000W que analisamos, com boa reputação entre compradores e preço perto do mínimo histórico. Se esse é o seu perfil, confira o preço do dia e garanta a oferta: <a class="font-bold text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/24UQNxa">ver a Inow V40 Pro no Mercado Livre</a>.</p>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Conclusão: vale a pena comprar a Inow V40 Pro?</h3>
+          <p class="text-brand-muted">Vale. A <strong>bicicleta elétrica V40 Pro</strong> junta potência, bateria grande, freio hidráulico e o pacote antifurto mais completo entre as bikes de 1000W que analisamos, com boa reputação entre compradores e preço perto do mínimo histórico. Se esse é o seu perfil, confira o preço do dia e garanta a oferta: <a class="font-bold text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/24UQNxa">ver a Inow V40 Pro no Mercado Livre</a>.</p>
         </article>
       </section>
 
       <section class="mb-10 scroll-mt-28" id="ofertas">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Onde <span class="text-brand-yellow">comprar</span> a Inow V40 Pro</h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Onde <span class="text-orange-600">comprar</span> a Inow V40 Pro</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <article class="glass flex flex-col p-6">
             <div class="mb-3 flex flex-wrap gap-2">
               <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Mercado Livre</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">URBIKES · MercadoLíder</span>
+              <span class="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs text-brand-muted">URBIKES · MercadoLíder</span>
             </div>
             <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Bicicleta Elétrica Inow V40 Pro Lançamento 2026 1000W NFC. Confira vendedor, frete para o seu CEP, garantia e o preço do dia.</p>
-            <div class="mb-4 overflow-hidden rounded-xl border border-white/10">
+            <div class="mb-4 overflow-hidden rounded-xl border border-slate-200">
               <table class="w-full text-left text-sm">
                 <caption class="sr-only">Formas de pagamento da Inow V40 Pro no Mercado Livre</caption>
                 <tbody>
-                  <tr class="border-b border-white/10 bg-emerald-400/[0.07]">
-                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-white">À vista</span><span class="text-xs font-normal text-brand-dim">PIX / boleto</span></th>
-                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-emerald-300 sm:text-lg">R$ 7.600</span><span class="text-xs text-brand-dim">15% OFF</span></td>
+                  <tr class="border-b border-slate-200 bg-emerald-50">
+                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-ink">À vista</span><span class="text-xs font-normal text-brand-dim">PIX / boleto</span></th>
+                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-emerald-700 sm:text-lg">R$ 7.600</span><span class="text-xs text-brand-dim">15% OFF</span></td>
                   </tr>
                   <tr>
-                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-white">Parcelado no cartão</span><span class="text-xs font-normal text-brand-dim">em até 10x</span></th>
-                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-brand-yellow sm:text-lg">10x de R$ 760</span><span class="text-xs font-bold text-emerald-300">sem juros</span></td>
+                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-ink">Parcelado no cartão</span><span class="text-xs font-normal text-brand-dim">em até 10x</span></th>
+                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-orange-700 sm:text-lg">10x de R$ 760</span><span class="text-xs font-bold text-emerald-700">sem juros</span></td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <ul class="mb-5 grid grid-cols-3 gap-2 text-[11px] text-brand-muted sm:text-xs">
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">↩️</span>Devolução grátis</li>
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🚚</span>Frete grátis</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">↩️</span>Devolução grátis</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">🚚</span>Frete grátis</li>
             </ul>
             <a class="btn-shine mt-auto inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/24UQNxa">Comprar no Mercado Livre</a>
           </article>
           <article class="glass flex flex-col p-6">
             <div class="mb-3 flex flex-wrap gap-2">
-              <span class="rounded-md border border-white/25 bg-white/10 px-2 py-1 text-[10px] font-extrabold uppercase text-white">Categoria</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Mais opções 1000W</span>
+              <span class="rounded-md border border-slate-300 bg-slate-200 px-2 py-1 text-[10px] font-extrabold uppercase text-ink">Categoria</span>
+              <span class="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs text-brand-muted">Mais opções 1000W</span>
             </div>
-            <p class="mb-5 text-sm text-brand-muted">Quer comparar outras bicicletas elétricas 1000W antes de decidir? Veja a categoria completa no Mercado Livre ou a review da <a href="/review-v9-max" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">V9 Max</a>, a opção mais barata da Inow.</p>
-            <a class="mt-auto inline-flex h-12 w-full items-center justify-center rounded-xl border border-brand-yellow bg-transparent font-bold text-brand-yellow transition hover:bg-brand-yellow/10" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/24dinso">Ver categoria completa</a>
+            <p class="mb-5 text-sm text-brand-muted">Quer comparar outras bicicletas elétricas 1000W antes de decidir? Veja a categoria completa no Mercado Livre ou a review da <a href="/review-v9-max" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">V9 Max</a>, a opção mais barata da Inow.</p>
+            <a class="mt-auto inline-flex h-12 w-full items-center justify-center rounded-xl border border-orange-500 bg-white font-bold text-orange-700 transition hover:bg-orange-50" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/24dinso">Ver categoria completa</a>
           </article>
         </div>
       </section>
 
       <section class="mb-10 scroll-mt-28" id="faq">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre a <span class="text-brand-yellow">bicicleta elétrica Inow V40 Pro</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre a <span class="text-orange-600">bicicleta elétrica Inow V40 Pro</span></h2>
         <div class="space-y-3">
           <details class="glass p-5" open>
             <summary class="cursor-pointer list-none font-bold">Inow V40 Pro preço: quanto custa a bicicleta elétrica V40 Pro hoje?</summary>
@@ -748,13 +748,13 @@
           <h2 id="relacionados-titulo" class="mb-2 text-xl font-extrabold md:text-2xl">Leia também</h2>
           <p class="mb-5 text-sm text-brand-dim">Reviews e rankings relacionados a esta análise.</p>
           <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            <li><a href="/review-ouxi-gt2000" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Ouxi GT2000</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-oimotoo-s6" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Oimotoo S6 dobrável 450W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-xroymexroy-ucitys" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Xroymexroy UCITYS 750W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-honeywhale-s6-s" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Honeywhale S6-S 750W fat tire</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-v9-max" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">V9 Max 1000W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/melhores-bicicletas-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Melhores bicicletas elétricas 2026</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/guia-bicicleta-eletrica-1000w" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Bicicleta elétrica 1000W: top 5</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-ouxi-gt2000" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Ouxi GT2000</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-oimotoo-s6" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Oimotoo S6 dobrável 450W</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-xroymexroy-ucitys" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Xroymexroy UCITYS 750W</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-honeywhale-s6-s" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Honeywhale S6-S 750W fat tire</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-v9-max" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">V9 Max 1000W</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/melhores-bicicletas-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Melhores bicicletas elétricas 2026</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/guia-bicicleta-eletrica-1000w" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Bicicleta elétrica 1000W: top 5</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
           </ul>
         </div>
       </section>
@@ -762,20 +762,20 @@
     </div>
   </main>
 
-  <div class="fixed bottom-0 left-0 z-50 w-full rounded-none border-t border-white/10 bg-brand-bg/85 backdrop-blur-xl sm:bottom-6 sm:left-1/2 sm:w-auto sm:min-w-[600px] sm:max-w-4xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-white/15 sm:shadow-2xl">
+  <div class="fixed bottom-0 left-0 z-50 w-full rounded-none border-t border-slate-200 bg-white/90 backdrop-blur-xl sm:bottom-6 sm:left-1/2 sm:w-auto sm:min-w-[600px] sm:max-w-4xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-slate-200 sm:shadow-2xl">
     <div class="flex flex-col gap-3 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:py-3 sm:pl-3 sm:pr-3">
       <div class="flex min-w-0 items-center gap-3">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_685968-MLB116606880828_092026-O.webp" alt="Inow V40 Pro" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-white/10 bg-white object-contain sm:block">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_685968-MLB116606880828_092026-O.webp" alt="Inow V40 Pro" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-slate-200 bg-white object-contain sm:block">
         <div class="min-w-0">
-          <strong class="block max-w-[200px] truncate text-sm font-bold text-white sm:max-w-xs sm:text-base">Inow V40 Pro 1000W</strong>
-          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 9.1</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">R$ 7.600</span><span class="text-white/20" aria-hidden="true">|</span><span class="whitespace-nowrap font-extrabold text-emerald-300">10x sem juros</span></div>
+          <strong class="block max-w-[200px] truncate text-sm font-bold text-ink sm:max-w-xs sm:text-base">Inow V40 Pro 1000W</strong>
+          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-orange-700"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 9.1</span><span class="text-slate-300" aria-hidden="true">|</span><span class="truncate font-extrabold text-ink">R$ 7.600</span><span class="text-slate-300" aria-hidden="true">|</span><span class="whitespace-nowrap font-extrabold text-emerald-700">10x sem juros</span></div>
         </div>
       </div>
       <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/24UQNxa">Comprar no Mercado Livre</a>
     </div>
   </div>
 
-  <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
+  <footer class="mt-8 border-t border-slate-200 bg-white px-4 py-10">
     <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
       <div>
         <a href="/" class="mb-3 flex items-center gap-3">
@@ -787,28 +787,28 @@
       <div>
         <h4 class="mb-3 text-sm font-bold">Navegação</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="/" class="hover:text-brand-yellow">Home</a>
-          <a href="/categorias" class="hover:text-brand-yellow">Rankings</a>
-          <a href="/reviews" class="hover:text-brand-yellow">Reviews</a>
+          <a href="/" class="hover:text-orange-600">Home</a>
+          <a href="/categorias" class="hover:text-orange-600">Rankings</a>
+          <a href="/reviews" class="hover:text-orange-600">Reviews</a>
         </div>
       </div>
       <div>
         <h4 class="mb-3 text-sm font-bold">Categorias</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="/melhores-bicicletas-eletricas" class="hover:text-brand-yellow">Bicicletas Elétricas</a>
-          <a href="/melhores-scooters-eletricas" class="hover:text-brand-yellow">Scooters Elétricas</a>
+          <a href="/melhores-bicicletas-eletricas" class="hover:text-orange-600">Bicicletas Elétricas</a>
+          <a href="/melhores-scooters-eletricas" class="hover:text-orange-600">Scooters Elétricas</a>
         </div>
       </div>
       <div>
         <h4 class="mb-3 text-sm font-bold">Legal</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="/sobre" class="hover:text-brand-yellow">Sobre</a>
-          <a href="/privacidade" class="hover:text-brand-yellow">Privacidade</a>
-          <a href="/contato" class="hover:text-brand-yellow">Contato</a>
+          <a href="/sobre" class="hover:text-orange-600">Sobre</a>
+          <a href="/privacidade" class="hover:text-orange-600">Privacidade</a>
+          <a href="/contato" class="hover:text-orange-600">Contato</a>
         </div>
       </div>
     </div>
-    <div class="mx-auto mt-8 max-w-6xl border-t border-white/10 pt-4 text-xs text-brand-dim">© <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.</div>
+    <div class="mx-auto mt-8 max-w-6xl border-t border-slate-200 pt-4 text-xs text-brand-dim">© <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.</div>
   </footer>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();

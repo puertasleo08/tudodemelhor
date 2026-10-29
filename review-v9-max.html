@@ -23,9 +23,9 @@
   <link rel="preconnect" href="https://www.youtube.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{brand:{bg:'#232F3E',yellow:'#FFE600',orange:'#FF9900',card:'rgba(27, 37, 48, 0.7)',elevated:'#1B2530',border:'#37475A',muted:'#D5D9D9',dim:'#AAB3BD'}},fontFamily:{sans:['Inter','system-ui','sans-serif']},boxShadow:{glow:'0 0 15px rgba(255, 230, 0, 0.4)','glow-lg':'0 0 28px rgba(255, 230, 0, 0.45)','glow-orange':'0 0 20px rgba(255, 153, 0, 0.35)','glow-emerald':'0 0 24px rgba(16, 185, 129, 0.3)','neon-emerald':'0 0 12px rgba(52, 211, 153, 0.55), inset 0 0 8px rgba(52, 211, 153, 0.15)'},backgroundImage:{'brand-gradient':'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'}}}};</script>
-  <style type="text/tailwindcss">@layer utilities{.glass{@apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;}}</style>
-  <style>body{background-image:radial-gradient(ellipse 70% 45% at 85% 10%,rgba(255,153,0,.14),transparent 55%),radial-gradient(ellipse 50% 40% at 10% 85%,rgba(255,230,0,.07),transparent 50%),radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:auto,auto,18px 18px;background-attachment:fixed}
+  <script>tailwind.config={theme:{extend:{colors:{ink:'#1E293B',brand:{bg:'#F8FAFC',yellow:'#FACC15',orange:'#EA580C',card:'#FFFFFF',elevated:'#FFFFFF',border:'#E2E8F0',muted:'#475569',dim:'#64748B'}},fontFamily:{sans:['Inter','system-ui','sans-serif']},boxShadow:{soft:'0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 30px -14px rgba(15, 23, 42, 0.16)',glow:'0 8px 20px -8px rgba(234, 179, 8, 0.6)','glow-lg':'0 14px 32px -12px rgba(234, 88, 12, 0.5)','glow-orange':'0 6px 16px -6px rgba(234, 88, 12, 0.35)','glow-emerald':'0 1px 2px rgba(15, 23, 42, 0.04), 0 14px 32px -16px rgba(16, 185, 129, 0.45)','neon-emerald':'0 0 0 3px rgba(16, 185, 129, 0.08)'},backgroundImage:{'brand-gradient':'linear-gradient(135deg, #FACC15 0%, #EA580C 100%)'}}}};</script>
+  <style type="text/tailwindcss">@layer utilities{.glass{@apply bg-white backdrop-blur-md border border-slate-200 rounded-2xl shadow-soft;}}</style>
+  <style>body{background-color:#F8FAFC;background-image:radial-gradient(ellipse 65% 40% at 100% 0%,rgba(251,146,60,.16),transparent 60%),radial-gradient(ellipse 55% 38% at 0% 100%,rgba(234,88,12,.07),transparent 55%),radial-gradient(rgba(15,23,42,.035) 1px,transparent 1px);background-size:auto,auto,20px 20px;background-attachment:fixed}
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
@@ -33,11 +33,11 @@
     @keyframes shine { 0% { left: -75%; } 60%, 100% { left: 130%; } }
     @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
     .pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
-    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 6px rgba(52, 211, 153, 0.35), 0 0 0 rgba(255, 230, 0, 0); } 50% { box-shadow: 0 0 18px rgba(52, 211, 153, 0.75), 0 0 28px rgba(255, 230, 0, 0.3); } }
+    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.25); } 50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.08); } }
     .sem-juros-glow { animation: glow-pulse 2.2s ease-in-out infinite; }
     details > summary::-webkit-details-marker { display: none; }
     details[open] .details-chevron { transform: rotate(180deg); }
-    @media (prefers-reduced-motion: reduce) { .btn-shine::after { display: none; } .pulse-dot { animation: none; } .sem-juros-glow { animation: none; box-shadow: 0 0 12px rgba(52, 211, 153, 0.5); } }
+    @media (prefers-reduced-motion: reduce) { .btn-shine::after { display: none; } .pulse-dot { animation: none; } .sem-juros-glow { animation: none; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12); } }
   </style>
   <script type="application/ld+json">
   {
@@ -242,32 +242,32 @@
   }
   </script>
 </head>
-<body class="bg-brand-bg text-white font-sans antialiased min-h-screen pb-32">
-  <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+<body class="bg-brand-bg text-ink font-sans antialiased min-h-screen pb-32">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
     <div class="mx-auto flex h-[100px] max-w-7xl items-center gap-4 px-4 lg:gap-8">
       <a href="/" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
-        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
+        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
           <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-full w-full object-cover">
         </div>
         <div class="flex flex-col justify-center">
-          <span class="text-xl font-black uppercase leading-tight tracking-wider text-white lg:text-2xl">Tudo De</span>
-          <span class="text-xl font-black uppercase leading-tight tracking-wider text-brand-yellow lg:text-2xl">Melhor</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-ink lg:text-2xl">Tudo De</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-orange-700 lg:text-2xl">Melhor</span>
         </div>
       </a>
-      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-brand-elevated md:hidden" aria-label="Abrir menu" aria-expanded="false">
-        <span class="flex flex-col gap-1.5"><span class="block h-0.5 w-6 bg-white"></span><span class="block h-0.5 w-6 bg-white"></span><span class="block h-0.5 w-6 bg-white"></span></span>
+      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-white md:hidden" aria-label="Abrir menu" aria-expanded="false">
+        <span class="flex flex-col gap-1.5"><span class="block h-0.5 w-6 bg-ink"></span><span class="block h-0.5 w-6 bg-ink"></span><span class="block h-0.5 w-6 bg-ink"></span></span>
       </button>
       <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
-        <a href="/#categorias" class="transition hover:text-white">Categorias</a>
-        <a href="/categorias" class="transition hover:text-white">Rankings</a>
-        <a href="/reviews" class="transition hover:text-white">Reviews</a>
-        <a href="/#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
+        <a href="/#categorias" class="transition hover:text-ink">Categorias</a>
+        <a href="/categorias" class="transition hover:text-ink">Rankings</a>
+        <a href="/reviews" class="transition hover:text-ink">Reviews</a>
+        <a href="/#ofertas" class="font-bold text-orange-700 shadow-glow transition hover:text-ink">Melhores Ofertas</a>
       </nav>
     </div>
-    <div id="mobile-nav" class="hidden border-t border-white/10 bg-brand-elevated/98 px-4 py-4 md:hidden">
+    <div id="mobile-nav" class="hidden border-t border-slate-200 bg-white px-4 py-4 md:hidden">
       <nav class="flex flex-col gap-1 text-sm">
-        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
-        <a href="/reviews" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Reviews</a>
+        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Rankings</a>
+        <a href="/reviews" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Reviews</a>
       </nav>
     </div>
   </header>
@@ -275,27 +275,27 @@
   <main class="px-4 pt-8">
     <div class="mx-auto max-w-6xl">
       <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
-        <a href="/" class="hover:text-brand-yellow">Início</a>
+        <a href="/" class="hover:text-orange-600">Início</a>
         <span aria-hidden="true">/</span>
-        <a href="/melhores-bicicletas-eletricas" class="hover:text-brand-yellow">Melhores Bicicletas Elétricas</a>
+        <a href="/melhores-bicicletas-eletricas" class="hover:text-orange-600">Melhores Bicicletas Elétricas</a>
         <span aria-hidden="true">/</span>
-        <span class="text-white" aria-current="page">V9 Max 1000W</span>
+        <span class="text-ink" aria-current="page">V9 Max 1000W</span>
       </nav>
 
       <header class="mb-8 grid grid-cols-1 items-start gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div class="glass relative order-2 overflow-hidden p-6 lg:order-1 md:p-8">
-          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/10 blur-3xl"></div>
-          <p class="relative mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · #6 do ranking de bicicletas elétricas 2026</p>
+          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-orange-50 blur-3xl"></div>
+          <p class="relative mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-orange-700">Review · #6 do ranking de bicicletas elétricas 2026</p>
           <h1 class="relative mb-5 text-3xl font-extrabold leading-tight md:text-4xl">Bicicleta elétrica V9 Max 1000W vale a pena? Review 2026 da bike potente: preço e onde comprar</h1>
 
-          <div class="relative mb-5 rounded-2xl border border-emerald-400/40 bg-emerald-400/[0.06] p-4 md:p-5">
+          <div class="relative mb-5 rounded-2xl border border-emerald-200 bg-emerald-50/70 p-4 md:p-5">
             <div class="mb-1 flex flex-wrap items-center gap-2">
               <span class="text-sm text-brand-dim line-through decoration-orange-400/80">R$ 9.999,90</span>
               <span class="rounded bg-emerald-400 px-1.5 py-0.5 text-[11px] font-black text-black">35% OFF</span>
-              <span class="rounded-md border border-emerald-400/50 bg-emerald-400/10 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300">Menor preço histórico</span>
+              <span class="rounded-md border border-emerald-300 bg-emerald-50 px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wide text-emerald-700">Menor preço histórico</span>
             </div>
-            <p class="text-3xl font-black text-white md:text-4xl">R$ 6.472,23</p>
-            <div class="mt-2 sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-sm font-black text-white">10x de R$ 647,22</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>
+            <p class="text-3xl font-black text-ink md:text-4xl">R$ 6.472,23</p>
+            <div class="mt-2 sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300 bg-gradient-to-r from-emerald-50 via-emerald-50 to-orange-50 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-sm font-black text-ink">10x de R$ 647,22</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>
             <ul class="mt-3 grid grid-cols-1 gap-1 text-xs text-brand-muted sm:grid-cols-2">
               <li>🚚 Frete grátis no anúncio</li>
               <li>↩️ Devolução grátis em 30 dias</li>
@@ -309,24 +309,24 @@
           <p class="relative mb-5 max-w-2xl text-base text-brand-muted md:text-lg">A <strong>V9 Max</strong> é a <strong>bike elétrica</strong> mais potente do nosso ranking: motor de <strong>1000W</strong>, bateria de lítio <strong>48V 15,6 Ah removível</strong>, <strong>freio hidráulico</strong>, aro 20 e suporte para até <strong>150 kg</strong>, limitada a <strong>32 km/h</strong>. Abaixo, você vê o vídeo de teste, o histórico de preço, fotos de quem comprou e se ela vale o investimento.</p>
           <div class="relative mb-5 flex flex-wrap gap-2">
             <span class="rounded-md bg-brand-yellow px-3 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Mais potente do ranking</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Nota editorial 8.9</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">1000W · 48V · 32 km/h</span>
+            <span class="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-brand-muted">Nota editorial 8.9</span>
+            <span class="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-brand-muted">1000W · 48V · 32 km/h</span>
           </div>
           <div class="product-gallery relative" aria-label="Galeria de fotos da V9 Max" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_872353-MLB115691776769_082026-O.webp","alt":"Bicicleta elétrica V9 Max 1000W preta com banco marrom"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_778025-MLB108428875465_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp","alt":"V9 Max 1000W — foto 2 do anúncio"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_769187-MLB107689205204_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp","alt":"V9 Max 1000W — foto 3 do anúncio"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_854622-MLB108427266093_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp","alt":"V9 Max 1000W — foto 4 do anúncio"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_749200-MLB108426020599_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp","alt":"V9 Max 1000W — foto 5 do anúncio"}]'>
             <p class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Fotos do anúncio</p>
             <div class="flex flex-wrap gap-2">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_872353-MLB115691776769_082026-O.webp" alt="Bicicleta elétrica V9 Max 1000W preta com banco marrom" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 bg-white object-contain transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="0" loading="eager" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_778025-MLB108428875465_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp" alt="V9 Max 1000W — foto 2 do anúncio" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_769187-MLB107689205204_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp" alt="V9 Max 1000W — foto 3 do anúncio" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_854622-MLB108427266093_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp" alt="V9 Max 1000W — foto 4 do anúncio" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_749200-MLB108426020599_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp" alt="V9 Max 1000W — foto 5 do anúncio" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_872353-MLB115691776769_082026-O.webp" alt="Bicicleta elétrica V9 Max 1000W preta com banco marrom" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 bg-white object-contain transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="0" loading="eager" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_778025-MLB108428875465_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp" alt="V9 Max 1000W — foto 2 do anúncio" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_769187-MLB107689205204_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp" alt="V9 Max 1000W — foto 3 do anúncio" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_854622-MLB108427266093_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp" alt="V9 Max 1000W — foto 4 do anúncio" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+              <img src="https://http2.mlstatic.com/D_NQ_NP_2X_749200-MLB108426020599_032026-F-bicicleta-bike-eletrica-v9-max-1000w-48km-freio-hidraulico.webp" alt="V9 Max 1000W — foto 5 do anúncio" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="4" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
             </div>
           </div>
         </div>
 
         <div class="glass relative order-1 flex flex-col overflow-hidden p-4 shadow-glow-emerald lg:order-2 lg:sticky lg:top-28 md:p-5">
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-brand-yellow/5"></div>
-          <p class="relative mb-3 text-xs font-extrabold uppercase tracking-wide text-brand-yellow">▶ Vídeo: teste da V9 Max</p>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-50 via-transparent to-orange-50/60"></div>
+          <p class="relative mb-3 text-xs font-extrabold uppercase tracking-wide text-orange-700">▶ Vídeo: teste da V9 Max</p>
           <div class="relative mx-auto aspect-[9/16] w-full max-w-[280px] overflow-hidden rounded-2xl bg-black shadow-lg sm:max-w-[320px] [&>iframe]:absolute [&>iframe]:inset-0">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/3VHHon5DBOQ?si=us2V70VSNFoTTZ2n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-full rounded-2xl object-cover"></iframe>
           </div>
@@ -336,23 +336,23 @@
 
       <nav class="glass mb-8 flex items-center gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide p-3 sm:p-4" aria-label="Índice da review">
         <p class="shrink-0 pr-1 text-[10px] font-bold uppercase tracking-wider text-brand-dim">Índice</p>
-        <a href="#veredito" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Veredito</a>
-        <a href="#historico" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Preço</a>
-        <a href="#compradores" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Compradores</a>
-        <a href="#pros-contras" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Prós e contras</a>
-        <a href="#especificacoes" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Ficha técnica</a>
-        <a href="#analise" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Análise</a>
-        <a href="#ofertas" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">Onde comprar</a>
-        <a href="#faq" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-white/10 px-3 py-2 text-sm text-brand-muted transition hover:border-brand-yellow/40 hover:text-brand-yellow">FAQ</a>
+        <a href="#veredito" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Veredito</a>
+        <a href="#historico" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Preço</a>
+        <a href="#compradores" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Compradores</a>
+        <a href="#pros-contras" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Prós e contras</a>
+        <a href="#especificacoes" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Ficha técnica</a>
+        <a href="#analise" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Análise</a>
+        <a href="#ofertas" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">Onde comprar</a>
+        <a href="#faq" class="inline-flex min-h-11 shrink-0 items-center rounded-lg border border-slate-200 px-3 py-2 text-sm text-brand-muted transition hover:border-orange-300 hover:text-orange-600">FAQ</a>
       </nav>
 
       <section id="veredito" class="mb-10 grid scroll-mt-28 grid-cols-2 gap-4 md:grid-cols-4" aria-label="Veredito rápido">
         <article class="glass col-span-2 p-6 md:row-span-2">
           <h2 class="mb-4 text-sm font-bold uppercase tracking-wide text-brand-dim">Veredito rápido: a V9 Max vale a pena?</h2>
           <div class="flex items-end gap-4">
-            <span class="text-6xl font-black leading-none text-brand-yellow drop-shadow-[0_0_15px_rgba(255,230,0,0.4)]">8.9</span>
+            <span class="text-6xl font-black leading-none text-orange-600">8.9</span>
             <div class="pb-1">
-              <div class="text-xl text-brand-yellow" aria-hidden="true">★★★★★</div>
+              <div class="text-xl text-orange-700" aria-hidden="true">★★★★★</div>
               <p class="m-0 text-sm text-brand-dim">Escala 0–10 · ranking Tudo de Melhor</p>
             </div>
           </div>
@@ -364,7 +364,7 @@
         </article>
         <article class="glass p-5">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">⭐</span> Diferencial</h3>
-          <p class="m-0 text-sm font-bold text-brand-yellow">1000W + freio hidráulico + 150 kg</p>
+          <p class="m-0 text-sm font-bold text-orange-700">1000W + freio hidráulico + 150 kg</p>
         </article>
         <article class="glass col-span-2 p-5 md:col-span-2">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">💰</span> Momento de compra</h3>
@@ -379,39 +379,39 @@
               <h2 id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 V9 Max preço: histórico no Mercado Livre</h2>
               <p class="mt-1 text-xs text-brand-dim">Anúncio MLB3840440426 · monitorado de 27/07 a 29/10/2026</p>
             </div>
-            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300">Menor preço histórico</span>
+            <span class="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Menor preço histórico</span>
           </div>
-          <div class="mb-5 flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base">
+          <div class="mb-5 flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-50 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-700 shadow-neon-emerald md:text-base">
             🟢 Hoje: R$ 6.472,23 à vista ou 10x de R$ 647,22 sem juros
           </div>
           <div class="mb-5 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Pico · 29/08</p>
-              <p class="mt-1 text-xl font-extrabold text-orange-300 md:text-2xl">~R$ 7.900</p>
+              <p class="mt-1 text-xl font-extrabold text-orange-700 md:text-2xl">~R$ 7.900</p>
             </div>
-            <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+            <div class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-center">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Agosto/2026</p>
               <p class="mt-1 text-xl font-extrabold text-brand-muted line-through decoration-orange-400/80 md:text-2xl">~R$ 6.600</p>
             </div>
-            <div class="rounded-xl border border-emerald-400/40 bg-emerald-400/10 p-4 text-center">
-              <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">Hoje · 29/10</p>
-              <p class="mt-1 text-xl font-extrabold text-emerald-300 md:text-2xl">R$ 6.472</p>
+            <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">Hoje · 29/10</p>
+              <p class="mt-1 text-xl font-extrabold text-emerald-700 md:text-2xl">R$ 6.472</p>
             </div>
           </div>
           <figure>
             <svg viewBox="0 0 600 220" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço da V9 Max: R$ 6.600 em 27/07, R$ 6.620 em 08/08, R$ 6.600 em 10/08, R$ 7.900 em 29/08, R$ 6.530 em 30/08, R$ 6.480 em 31/08, R$ 6.530 em 04/09 e 08/09, R$ 6.472,23 de 10/09 até 29/10">
-              <defs><linearGradient id="area-v9max" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/><stop offset="100%" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs>
-              <g stroke="rgba(255,255,255,0.08)" stroke-width="1"><line x1="40" y1="20.0" x2="580" y2="20.0"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95.0" x2="580" y2="95.0"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170.0" x2="580" y2="170.0"/></g>
-              <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25.0">8k</text><text x="36" y="62.5">7,5k</text><text x="36" y="100.0">7k</text><text x="36" y="137.5">6,5k</text><text x="36" y="175.0">6k</text></g>
+              <defs><linearGradient id="area-v9max" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10B981" stop-opacity="0.35"/><stop offset="100%" stop-color="#10B981" stop-opacity="0"/></linearGradient></defs>
+              <g stroke="rgba(15,23,42,0.11)" stroke-width="1"><line x1="40" y1="20.0" x2="580" y2="20.0"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95.0" x2="580" y2="95.0"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170.0" x2="580" y2="170.0"/></g>
+              <g fill="#64748B" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25.0">8k</text><text x="36" y="62.5">7,5k</text><text x="36" y="100.0">7k</text><text x="36" y="137.5">6,5k</text><text x="36" y="175.0">6k</text></g>
               <polygon fill="url(#area-v9max)" points="56.0,125.0 112.7,123.5 169.3,125.0 226.0,27.5 282.7,130.2 339.3,134.0 396.0,130.2 452.7,130.2 509.3,134.6 566.0,134.6 566.0,170 56.0,170"/>
-              <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56.0,125.0 112.7,123.5 169.3,125.0 226.0,27.5 282.7,130.2 339.3,134.0 396.0,130.2 452.7,130.2 509.3,134.6 566.0,134.6"/>
-              <g fill="#34d399"><circle cx="56.0" cy="125.0" r="4"/><circle cx="112.7" cy="123.5" r="4"/><circle cx="169.3" cy="125.0" r="4"/><circle cx="282.7" cy="130.2" r="4"/><circle cx="339.3" cy="134.0" r="4"/><circle cx="396.0" cy="130.2" r="4"/><circle cx="452.7" cy="130.2" r="4"/><circle cx="509.3" cy="134.6" r="4"/></g>
+              <polyline fill="none" stroke="#10B981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56.0,125.0 112.7,123.5 169.3,125.0 226.0,27.5 282.7,130.2 339.3,134.0 396.0,130.2 452.7,130.2 509.3,134.6 566.0,134.6"/>
+              <g fill="#10B981"><circle cx="56.0" cy="125.0" r="4"/><circle cx="112.7" cy="123.5" r="4"/><circle cx="169.3" cy="125.0" r="4"/><circle cx="282.7" cy="130.2" r="4"/><circle cx="339.3" cy="134.0" r="4"/><circle cx="396.0" cy="130.2" r="4"/><circle cx="452.7" cy="130.2" r="4"/><circle cx="509.3" cy="134.6" r="4"/></g>
               <circle cx="226.0" cy="27.5" r="5" fill="#fb923c"/>
-              <circle cx="566.0" cy="134.6" r="10" fill="#34d399" fill-opacity="0.25"/><circle cx="566.0" cy="134.6" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
-              <g font-family="Inter, sans-serif" font-weight="800" font-size="18"><text x="56.0" y="113.0" fill="#D5D9D9">~R$ 6.600</text><text x="240.0" y="33.0" fill="#fdba74">~R$ 7.900</text><text x="566.0" y="118.6" fill="#6ee7b7" text-anchor="end">R$ 6.472</text></g>
-              <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56.0" y="212">27/07</text><text x="169.3" y="212">10/08</text><text x="282.7" y="212">30/08</text><text x="396.0" y="212">04/09</text><text x="562" y="212" fill="#6ee7b7" font-weight="700">29/10</text></g>
+              <circle cx="566.0" cy="134.6" r="10" fill="#10B981" fill-opacity="0.25"/><circle cx="566.0" cy="134.6" r="6" fill="#10B981" stroke="#fff" stroke-width="2"/>
+              <g font-family="Inter, sans-serif" font-weight="800" font-size="18"><text x="56.0" y="113.0" fill="#334155">~R$ 6.600</text><text x="240.0" y="33.0" fill="#C2410C">~R$ 7.900</text><text x="566.0" y="118.6" fill="#047857" text-anchor="end">R$ 6.472</text></g>
+              <g fill="#64748B" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56.0" y="212">27/07</text><text x="169.3" y="212">10/08</text><text x="282.7" y="212">30/08</text><text x="396.0" y="212">04/09</text><text x="562" y="212" fill="#047857" font-weight="700">29/10</text></g>
             </svg>
-            <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+            <figcaption class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
               <strong class="text-brand-muted">Transparência:</strong> histórico de 27/07 a 29/10/2026, com pico pontual de ~R$ 7.900 em 29/08. Desde 10/09 o preço está estável em R$ 6.472,23, o menor do período. A venda, a entrega e a garantia são do vendedor no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar — confira no anúncio antes de pagar.
             </figcaption>
           </figure>
@@ -420,20 +420,20 @@
 
       <section id="compradores" class="mb-10 scroll-mt-28" aria-labelledby="compradores-titulo">
         <div class="mb-6 flex items-end justify-between gap-3">
-          <h2 id="compradores-titulo" class="text-2xl font-extrabold md:text-3xl">Fotos de quem comprou a <span class="text-brand-yellow">bike V9 Max</span></h2>
+          <h2 id="compradores-titulo" class="text-2xl font-extrabold md:text-3xl">Fotos de quem comprou a <span class="text-orange-600">bike V9 Max</span></h2>
           <div class="hidden gap-2 md:flex">
-            <button type="button" data-slider-prev class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white transition hover:border-brand-yellow/50 hover:text-brand-yellow" aria-label="Fotos anteriores">&#8249;</button>
-            <button type="button" data-slider-next class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white transition hover:border-brand-yellow/50 hover:text-brand-yellow" aria-label="Próximas fotos">&#8250;</button>
+            <button type="button" data-slider-prev class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-xl text-ink transition hover:border-orange-300 hover:text-orange-600" aria-label="Fotos anteriores">&#8249;</button>
+            <button type="button" data-slider-next class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-xl text-ink transition hover:border-orange-300 hover:text-orange-600" aria-label="Próximas fotos">&#8250;</button>
           </div>
         </div>
         <div class="glass p-5 md:p-6">
-          <p class="mb-4 flex flex-wrap items-center gap-2 text-sm text-brand-muted"><span class="text-brand-yellow">★★★★★</span> V9 Max · 4.8 de 5 · 373 avaliações no Mercado Livre · fotos enviadas por compradores</p>
+          <p class="mb-4 flex flex-wrap items-center gap-2 text-sm text-brand-muted"><span class="text-orange-700">★★★★★</span> V9 Max · 4.8 de 5 · 373 avaliações no Mercado Livre · fotos enviadas por compradores</p>
           <div class="product-gallery" aria-label="Fotos de compradores da V9 Max" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_857542-MLA112343395659_052026-F.webp","alt":"V9 Max 1000W — foto de comprador 1"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_672823-MLA111446969218_052026-F.webp","alt":"V9 Max 1000W — foto de comprador 2"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_797527-MLA111446969216_052026-F.webp","alt":"V9 Max 1000W — foto de comprador 3"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_937828-MLA115989278097_082026-F.webp","alt":"V9 Max 1000W — foto de comprador 4"}]'>
             <div data-buyers-track class="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth scrollbar-hide px-1 pb-1">
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_857542-MLA112343395659_052026-F.webp" alt="V9 Max 1000W — foto de comprador 1" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_672823-MLA111446969218_052026-F.webp" alt="V9 Max 1000W — foto de comprador 2" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_797527-MLA111446969216_052026-F.webp" alt="V9 Max 1000W — foto de comprador 3" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
-              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-white/10 transition-all hover:border-brand-yellow/50 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_937828-MLA115989278097_082026-F.webp" alt="V9 Max 1000W — foto de comprador 4" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_857542-MLA112343395659_052026-F.webp" alt="V9 Max 1000W — foto de comprador 1" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="0" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_672823-MLA111446969218_052026-F.webp" alt="V9 Max 1000W — foto de comprador 2" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_797527-MLA111446969216_052026-F.webp" alt="V9 Max 1000W — foto de comprador 3" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
+              <figure class="w-[72%] shrink-0 snap-start overflow-hidden rounded-xl border border-slate-200 transition-all hover:border-orange-300 hover:shadow-glow sm:w-60"><img src="https://http2.mlstatic.com/D_NQ_NP_2X_937828-MLA115989278097_082026-F.webp" alt="V9 Max 1000W — foto de comprador 4" class="product-gallery-thumb aspect-square w-full cursor-zoom-in object-cover" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="240" height="240"></figure>
             </div>
           </div>
           <p class="mt-3 text-[11px] text-brand-dim md:hidden">Arraste para o lado · toque para ampliar →</p>
@@ -441,68 +441,68 @@
       </section>
 
       <section id="pros-contras" class="mb-10 scroll-mt-28">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-brand-yellow">contras</span> da bicicleta elétrica V9 Max</h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-orange-600">contras</span> da bicicleta elétrica V9 Max</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div class="glass h-full border-emerald-500/30 p-6 shadow-glow-emerald">
-            <h3 class="mb-4 text-lg font-bold text-emerald-300">Pontos fortes</h3>
+          <div class="glass h-full border-emerald-200 p-6 shadow-glow-emerald">
+            <h3 class="mb-4 text-lg font-bold text-emerald-700">Pontos fortes</h3>
             <ul class="space-y-3 text-sm text-brand-muted">
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Motor de 1000W, o mais potente do ranking de bicicletas</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Freio hidráulico: frenagem firme mesmo com carga e em descida</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Bateria de lítio 48V 15,6 Ah removível, para carregar dentro de casa</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Suporta até 150 kg</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Nota 4.8 com 373 avaliações e mais de 1.000 vendidos no anúncio</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Menor preço histórico: R$ 6.472,23 em 10x sem juros</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Motor de 1000W, o mais potente do ranking de bicicletas</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Freio hidráulico: frenagem firme mesmo com carga e em descida</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Bateria de lítio 48V 15,6 Ah removível, para carregar dentro de casa</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Suporta até 150 kg</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Nota 4.8 com 373 avaliações e mais de 1.000 vendidos no anúncio</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Menor preço histórico: R$ 6.472,23 em 10x sem juros</span></li>
             </ul>
           </div>
-          <div class="glass h-full border-orange-500/30 p-6">
-            <h3 class="mb-4 text-lg font-bold text-orange-300">Limitações</h3>
+          <div class="glass h-full border-orange-200 p-6">
+            <h3 class="mb-4 text-lg font-bold text-orange-700">Limitações</h3>
             <ul class="space-y-3 text-sm text-brand-muted">
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Não dobra: exige garagem, varanda ampla ou bicicletário</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Velocidade limitada a 32 km/h: o 1000W é para força, não para correr</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Chega desmontada: requer montagem</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Custa cerca de 2,5 vezes a <a href="/review-oimotoo-s6" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Oimotoo S6</a>, dobrável de entrada</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Pesada: cerca de 46,5 kg, segundo a ficha de uma loja</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Não dobra: exige garagem, varanda ampla ou bicicletário</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Velocidade limitada a 32 km/h: o 1000W é para força, não para correr</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Chega desmontada: requer montagem</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Custa cerca de 2,5 vezes a <a href="/review-oimotoo-s6" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">Oimotoo S6</a>, dobrável de entrada</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Pesada: cerca de 46,5 kg, segundo a ficha de uma loja</span></li>
             </ul>
           </div>
         </div>
       </section>
 
       <section id="especificacoes" class="mb-10 scroll-mt-28">
-        <h2 class="mb-2 text-2xl font-extrabold md:text-3xl">Ficha técnica da bike elétrica <span class="text-brand-yellow">V9 Max 1000W</span></h2>
+        <h2 class="mb-2 text-2xl font-extrabold md:text-3xl">Ficha técnica da bike elétrica <span class="text-orange-600">V9 Max 1000W</span></h2>
         <p class="mb-6 text-sm text-brand-muted">Dados da ficha técnica do anúncio rastreado no Mercado Livre (29/10/2026).</p>
         <div class="glass overflow-x-auto">
           <table class="w-full min-w-[460px] text-left text-sm">
             <caption class="sr-only">Ficha técnica da bicicleta elétrica V9 Max 1000W</caption>
             <tbody class="text-brand-muted">
-              <tr class="border-b border-white/10"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-white">Modelo</th><td class="px-4 py-3">V9 MAX 1000W (lançamento)</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Potência</th><td class="px-4 py-3">1.000 W</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Velocidade máxima</th><td class="px-4 py-3">32 km/h</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Bateria</th><td class="px-4 py-3">Íon de lítio · 48V · 15,6 Ah · removível</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Autonomia</th><td class="px-4 py-3">Até 48 km (título do anúncio) · a Inow declara até 60 km</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Freios</th><td class="px-4 py-3">Hidráulicos</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Aro</th><td class="px-4 py-3">20</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Peso máximo suportado</th><td class="px-4 py-3">150 kg</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Dobrável</th><td class="px-4 py-3">Não</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Montagem</th><td class="px-4 py-3">Requer montagem</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="px-4 py-3 font-semibold text-white">Indicada para</th><td class="px-4 py-3">Adultos</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Cor</th><td class="px-4 py-3">Preto</td></tr>
-              <tr><th scope="row" class="px-4 py-3 font-semibold text-white">Preço</th><td class="px-4 py-3"><strong class="text-white">R$ 6.472,23</strong> · 10x de R$ 647,22 sem juros (29/10/2026)</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-ink">Modelo</th><td class="px-4 py-3">V9 MAX 1000W (lançamento)</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Potência</th><td class="px-4 py-3">1.000 W</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Velocidade máxima</th><td class="px-4 py-3">32 km/h</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Bateria</th><td class="px-4 py-3">Íon de lítio · 48V · 15,6 Ah · removível</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Autonomia</th><td class="px-4 py-3">Até 48 km (título do anúncio) · a Inow declara até 60 km</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Freios</th><td class="px-4 py-3">Hidráulicos</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Aro</th><td class="px-4 py-3">20</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Peso máximo suportado</th><td class="px-4 py-3">150 kg</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Dobrável</th><td class="px-4 py-3">Não</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Montagem</th><td class="px-4 py-3">Requer montagem</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="px-4 py-3 font-semibold text-ink">Indicada para</th><td class="px-4 py-3">Adultos</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Cor</th><td class="px-4 py-3">Preto</td></tr>
+              <tr><th scope="row" class="px-4 py-3 font-semibold text-ink">Preço</th><td class="px-4 py-3"><strong class="text-ink">R$ 6.472,23</strong> · 10x de R$ 647,22 sem juros (29/10/2026)</td></tr>
             </tbody>
           </table>
         </div>
-        <h3 class="mb-2 mt-8 text-lg font-bold text-white">Recursos declarados pela Inow e por outras lojas</h3>
+        <h3 class="mb-2 mt-8 text-lg font-bold text-ink">Recursos declarados pela Inow e por outras lojas</h3>
         <p class="mb-4 text-sm text-brand-muted">Itens que não aparecem na ficha do anúncio rastreado, mas constam na ficha da Inow V9 Max e de outras lojas. Confirme no anúncio antes de comprar.</p>
         <div class="glass overflow-x-auto">
           <table class="w-full min-w-[460px] text-left text-sm">
             <caption class="sr-only">Recursos da V9 Max declarados pelo fabricante e por lojas</caption>
             <tbody class="text-brand-muted">
-              <tr class="border-b border-white/10"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-white">Suspensão</th><td class="px-4 py-3">Dianteira e traseira (suspensão dupla)</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-white">Câmbio e pedais</th><td class="px-4 py-3">Shimano 7 marchas · modos elétrico, pedal assistido e manual</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-white">Pneus</th><td class="px-4 py-3">20 x 4 polegadas (fat)</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-white">Painel e iluminação</th><td class="px-4 py-3">Display LCD · farol LED (algumas versões com full LED e setas)</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-white">Partida</th><td class="px-4 py-3">Cartão NFC com alarme antifurto em algumas versões</td></tr>
-              <tr class="border-b border-white/10 bg-white/5"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-white">Recarga</th><td class="px-4 py-3">5 a 8 horas com carregador bivolt (110V/220V)</td></tr>
-              <tr class="border-b border-white/10"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-white">Peso da bike</th><td class="px-4 py-3">46,5 kg</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-ink">Suspensão</th><td class="px-4 py-3">Dianteira e traseira (suspensão dupla)</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-ink">Câmbio e pedais</th><td class="px-4 py-3">Shimano 7 marchas · modos elétrico, pedal assistido e manual</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-ink">Pneus</th><td class="px-4 py-3">20 x 4 polegadas (fat)</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-ink">Painel e iluminação</th><td class="px-4 py-3">Display LCD · farol LED (algumas versões com full LED e setas)</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-ink">Partida</th><td class="px-4 py-3">Cartão NFC com alarme antifurto em algumas versões</td></tr>
+              <tr class="border-b border-slate-200 bg-slate-50"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-ink">Recarga</th><td class="px-4 py-3">5 a 8 horas com carregador bivolt (110V/220V)</td></tr>
+              <tr class="border-b border-slate-200"><th scope="row" class="w-1/2 px-4 py-3 font-semibold text-ink">Peso da bike</th><td class="px-4 py-3">46,5 kg</td></tr>
             </tbody>
           </table>
         </div>
@@ -510,123 +510,123 @@
 
       <section id="analise" class="mb-10 scroll-mt-28">
         <article class="glass p-6 leading-relaxed md:p-10">
-          <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: a <span class="text-brand-yellow">bicicleta elétrica V9 Max</span> vale a pena?</h2>
+          <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: a <span class="text-orange-600">bicicleta elétrica V9 Max</span> vale a pena?</h2>
           <p class="mb-5 text-brand-muted">A <strong>V9 Max</strong> ocupa o topo de potência do nosso ranking de bicicletas elétricas — e também o topo de preço. Se o seu trajeto tem 15 a 30 km, subidas, mochila pesada ou uso profissional leve, o motor de 1000W faz diferença real. Para 5 km planos no bairro, é exagero caro. Nesta análise da <strong>bicicleta elétrica V9 Max</strong>, cruzamos a ficha técnica do anúncio, o histórico de preço, as fotos e avaliações de compradores e o vídeo de teste para responder se ela vale o investimento.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">V9 Max, Max V9, V9MAX ou Inow V9 Max: é a mesma bike?</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">V9 Max, Max V9, V9MAX ou Inow V9 Max: é a mesma bike?</h3>
           <p class="mb-5 text-brand-muted">Sim. O modelo aparece com vários nomes nas buscas e nos marketplaces: <strong>V9 Max</strong>, <strong>Max V9</strong>, <strong>V9MAX</strong>, <strong>bike V9 Max</strong>, <strong>bicicleta V9 Max</strong> ou o título longo do anúncio, “Bicicleta Bike Eletrica V9 Max 1000w 48km Freio Hidraulico”. A Inow vende o modelo como <strong>Inow V9 Max</strong>, com a mesma ficha que analisamos (1000W, bateria 48V 15,6 Ah e 32 km/h), e revendedores do Mercado Livre anunciam a mesma bicicleta com nomes parecidos. O anúncio que rastreamos é da loja URBIKES, MercadoLíder com mais de 1.000 vendas. Ao comparar anúncios, olhe a ficha técnica, não só o nome: voltagem, Ah e tipo de freio precisam bater.</p>
           <p class="mb-5 text-brand-muted">Nas buscas, a ordem das palavras e os acentos variam bastante: tem quem digite “max v9 bike elétrica”, “max v9 bike eletrica”, “v9 max bike eletrica”, “bicicleta elétrica max v9”, “bicicleta eletrica max v9”, “bicicleta eletrica v9 max” ou “bicicleta bike eletrica max v9”. Quem já decidiu costuma procurar “max v9 comprar” ou “comprar max v9”. Todas essas buscas levam à mesma bicicleta; o que muda é o anúncio, o vendedor e a garantia. E, apesar do visual de moto, ela não é uma scooter elétrica: tem pedais, câmbio e é vendida como bicicleta.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Motor de 1000W: o que a V9 Max 1000W entrega no dia a dia</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Motor de 1000W: o que a V9 Max 1000W entrega no dia a dia</h3>
           <p class="mb-5 text-brand-muted">O motor da <strong>V9 Max 1000W</strong> é o mais forte do nosso ranking de bikes. Na prática, ele aparece na saída do semáforo, nas ladeiras e quando você leva carga: onde motores de 450W e 750W perdem fôlego, a <strong>Max V9 1000W</strong> mantém o ritmo. Como a velocidade máxima é limitada a 32 km/h, toda essa potência vira torque, não velocidade. É por isso que ela atende bem quem pesa mais, quem leva mochila de entrega ou quem mora em bairro com muita subida. A Inow e outras lojas informam câmbio Shimano de 7 marchas e três modos de uso — só elétrico, pedal assistido e manual —, então dá para pedalar e poupar bateria no plano.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Bateria de lítio 48V 15,6 Ah e autonomia real</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Bateria de lítio 48V 15,6 Ah e autonomia real</h3>
           <p class="mb-5 text-brand-muted">A ficha confirma bateria de íon de lítio de 48V e 15,6 Ah, e ela é removível: você tira a bateria e carrega na tomada de casa ou do trabalho, sem levar a bike junto. O título do anúncio fala em até 48 km por carga, e a Inow declara até 60 km. No uso real, com piloto pesado, subidas e acelerador no máximo, espere ficar perto da faixa mais baixa. Para quem roda 20 a 30 km por dia, uma carga por dia resolve. Lojas informam recarga de 5 a 8 horas com carregador bivolt (110V/220V): deixe carregando à noite e evite descarregar a bateria até zero com frequência.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Freio hidráulico, aro 20 e estrutura para 150 kg</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Freio hidráulico, aro 20 e estrutura para 150 kg</h3>
           <p class="mb-5 text-brand-muted">Com 1000W e carga, frear bem é obrigatório. O freio hidráulico da <strong>V9 Max bike elétrica</strong> tem mais força e modulação que o freio a disco mecânico, e a diferença aparece em descidas e no trânsito. O aro 20 com pneus largos deixa a bike mais estável em asfalto ruim, e a estrutura suporta até 150 kg — mais que a média das bikes urbanas. Em troca, freio hidráulico pede revisão periódica (sangria e troca de pastilhas).</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Suspensão dupla, conforto e garupa</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Suspensão dupla, conforto e garupa</h3>
           <p class="mb-5 text-brand-muted">A Inow e outras lojas descrevem a V9 Max com suspensão dianteira (no garfo) e traseira e pneus de 20 x 4 polegadas, o que deixa a pilotagem confortável em buraco e paralelepípedo. O selim é longo, no estilo moto, e algumas lojas anunciam pedaleiras para garupa. Se for levar alguém, some os dois pesos: o limite da ficha é de 150 kg. A própria bike pesa cerca de 46,5 kg, segundo a ficha de uma loja, então subir escada com ela não é tarefa simples.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Painel LCD, farol LED, NFC e alarme antifurto</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Painel LCD, farol LED, NFC e alarme antifurto</h3>
           <p class="mb-5 text-brand-muted">O painel é um display LCD com velocidade e nível de bateria, e o farol é de LED — algumas versões trazem iluminação full LED com setas. Há anúncios da V9 Max com partida por cartão NFC e alarme antifurto, mas o anúncio que rastreamos não cita esse item. Se a segurança contra furto pesa na sua escolha, confirme na ficha do anúncio antes de comprar e use uma trava resistente.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Velocidade de 32 km/h, CNH e legislação</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Velocidade de 32 km/h, CNH e legislação</h3>
           <p class="mb-5 text-brand-muted">A ficha informa velocidade máxima de 32 km/h. Com motor de até 1000W e esse limite, a V9 Max fica dentro das regras da Resolução CONTRAN nº 996/2023 para bicicleta elétrica ou veículo autopropelido, que não exigem CNH, emplacamento nem IPVA. Use capacete, respeite ciclovias e confira as regras de circulação da sua cidade.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">V9 Max preço e valor: quanto custa e quando comprar</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">V9 Max preço e valor: quanto custa e quando comprar</h3>
           <p class="mb-5 text-brand-muted">Quem pesquisa <strong>V9 Max preço</strong> ou <strong>V9 Max valor</strong> quer um número: em 29/10/2026, a bicicleta custava <strong>R$ 6.472,23</strong> no Mercado Livre — 35% abaixo dos R$ 9.999,90 de tabela —, ou <strong>10x de R$ 647,22 sem juros</strong>, com frete grátis. Esse é o menor preço do histórico que monitoramos: ela estava perto de R$ 6.600 em agosto, teve um pico de cerca de R$ 7.900 em 29/08 e está estável em R$ 6.472,23 desde 10/09. No mesmo dia, outros anúncios da <strong>Max V9</strong> apareciam entre R$ 6.251 e R$ 6.642. Ou seja: o <strong>Max V9 preço</strong> atual já está no piso da faixa, e esperar uma queda maior não tem respaldo no histórico.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">V9 Max comprar: onde comprar a Max V9 com segurança</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">V9 Max comprar: onde comprar a Max V9 com segurança</h3>
           <p class="mb-5 text-brand-muted">Para <strong>comprar a Max V9</strong> com tranquilidade, o anúncio que rastreamos reúne o que importa: vendedor MercadoLíder, nota 4.8 com 373 avaliações, mais de 1.000 unidades vendidas, Compra Garantida e devolução grátis em 30 dias. Antes de fechar, confira três pontos: se a ficha informa 48V 15,6 Ah e freio hidráulico, qual é a garantia de fábrica e o prazo de entrega para o seu CEP. Como a bike chega desmontada, separe chaves básicas ou combine a montagem com uma bicicletaria.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Para quem é — e para quem não é</h3>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Para quem é — e para quem não é</h3>
           <p class="mb-5 text-brand-muted"><strong>É para você</strong> se quer trocar ônibus, aplicativo ou moto por uma <strong>bicicleta elétrica V9 Max</strong> em trajetos de 15 a 30 km com subidas, se faz entregas leves ou se pesa mais de 100 kg e precisa de uma estrutura reforçada.</p>
-          <p class="mb-5 text-brand-muted"><strong>Não é para você</strong> se mora em apartamento sem elevador, precisa dobrar a bike para guardar ou levar no carro, ou roda poucos quilômetros no plano. Nesse caso, a <a href="/review-oimotoo-s6" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Oimotoo S6 dobrável</a> e a <a href="/review-honeywhale-s6-s" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">Honeywhale S6-S</a> custam bem menos. Para comparar outras bikes de 1000W, veja o <a href="/guia-bicicleta-eletrica-1000w" class="text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow">guia de bicicletas elétricas 1000W</a>.</p>
+          <p class="mb-5 text-brand-muted"><strong>Não é para você</strong> se mora em apartamento sem elevador, precisa dobrar a bike para guardar ou levar no carro, ou roda poucos quilômetros no plano. Nesse caso, a <a href="/review-oimotoo-s6" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">Oimotoo S6 dobrável</a> e a <a href="/review-honeywhale-s6-s" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">Honeywhale S6-S</a> custam bem menos. Para comparar outras bikes de 1000W, veja o <a href="/guia-bicicleta-eletrica-1000w" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">guia de bicicletas elétricas 1000W</a>.</p>
 
-          <h3 class="mb-3 mt-8 border-l-4 border-brand-yellow py-1 pl-4 text-lg font-bold text-brand-yellow">Conclusão: vale a pena comprar a V9 Max?</h3>
-          <p class="text-brand-muted">Vale, se você precisa de força. A <strong>bike V9 Max</strong> junta motor de 1000W, freio hidráulico, bateria removível e estrutura para 150 kg, com boa reputação entre compradores e no menor preço do histórico. É uma opção de mobilidade urbana ideal para passeio e trabalho, com conforto e segurança para quem roda todos os dias. Se esse é o seu perfil, confira o preço do dia e garanta a oferta: <a class="font-bold text-brand-yellow underline decoration-brand-yellow/40 hover:decoration-brand-yellow" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2VBFMUG">ver a V9 Max no Mercado Livre</a>.</p>
+          <h3 class="mb-3 mt-8 border-l-4 border-orange-500 py-1 pl-4 text-lg font-bold text-orange-700">Conclusão: vale a pena comprar a V9 Max?</h3>
+          <p class="text-brand-muted">Vale, se você precisa de força. A <strong>bike V9 Max</strong> junta motor de 1000W, freio hidráulico, bateria removível e estrutura para 150 kg, com boa reputação entre compradores e no menor preço do histórico. É uma opção de mobilidade urbana ideal para passeio e trabalho, com conforto e segurança para quem roda todos os dias. Se esse é o seu perfil, confira o preço do dia e garanta a oferta: <a class="font-bold text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2VBFMUG">ver a V9 Max no Mercado Livre</a>.</p>
         </article>
       </section>
 
       <section class="mb-10 scroll-mt-28" id="ofertas">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Onde <span class="text-brand-yellow">comprar</span> a V9 Max</h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Onde <span class="text-orange-600">comprar</span> a V9 Max</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
               <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Mercado Livre</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">URBIKES · MercadoLíder</span>
+              <span class="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs text-brand-muted">URBIKES · MercadoLíder</span>
             </div>
             <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Bicicleta Bike Elétrica V9 Max 1000W 48km Freio Hidráulico. Confira vendedor, frete para o seu CEP, garantia e o preço do dia.</p>
-            <div class="mb-4 overflow-hidden rounded-xl border border-white/10">
+            <div class="mb-4 overflow-hidden rounded-xl border border-slate-200">
               <table class="w-full text-left text-sm">
                 <caption class="sr-only">Formas de pagamento da V9 Max no Mercado Livre</caption>
                 <tbody>
-                  <tr class="border-b border-white/10 bg-emerald-400/[0.07]">
-                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-white">À vista</span><span class="text-xs font-normal text-brand-dim">PIX / boleto</span></th>
-                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-emerald-300 sm:text-lg">R$ 6.472,23</span><span class="text-xs text-brand-dim">menor preço do histórico</span></td>
+                  <tr class="border-b border-slate-200 bg-emerald-50">
+                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-ink">À vista</span><span class="text-xs font-normal text-brand-dim">PIX / boleto</span></th>
+                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-emerald-700 sm:text-lg">R$ 6.472,23</span><span class="text-xs text-brand-dim">menor preço do histórico</span></td>
                   </tr>
                   <tr>
-                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-white">Parcelado no cartão</span><span class="text-xs font-normal text-brand-dim">em até 10x</span></th>
-                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-brand-yellow sm:text-lg">10x de R$ 647,22</span><span class="text-xs font-bold text-emerald-300">sem juros</span></td>
+                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-ink">Parcelado no cartão</span><span class="text-xs font-normal text-brand-dim">em até 10x</span></th>
+                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-orange-700 sm:text-lg">10x de R$ 647,22</span><span class="text-xs font-bold text-emerald-700">sem juros</span></td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <ul class="mb-5 grid grid-cols-3 gap-2 text-[11px] text-brand-muted sm:text-xs">
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">↩️</span>Devolução grátis</li>
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🚚</span>Frete grátis</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">↩️</span>Devolução grátis</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">🚚</span>Frete grátis</li>
             </ul>
             <a class="btn-shine inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2VBFMUG">Comprar a V9 Max no Mercado Livre</a>
           </article>
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
-              <span class="rounded-md border border-white/25 bg-white/10 px-2 py-1 text-[10px] font-extrabold uppercase text-white">Amazon</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Em breve</span>
+              <span class="rounded-md border border-slate-300 bg-slate-100 px-2 py-1 text-[10px] font-extrabold uppercase text-ink">Amazon</span>
+              <span class="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs text-brand-muted">Em breve</span>
             </div>
             <p class="mb-5 text-sm text-brand-muted">O link de afiliado da Amazon entra aqui quando a oferta estiver ativa. Use o Mercado Livre enquanto isso.</p>
-            <span class="inline-flex h-12 w-full cursor-not-allowed items-center justify-center rounded-xl border border-white/25 bg-white/5 font-bold text-brand-dim">Em breve</span>
+            <span class="inline-flex h-12 w-full cursor-not-allowed items-center justify-center rounded-xl border border-slate-300 bg-slate-50 font-bold text-brand-dim">Em breve</span>
           </article>
         </div>
       </section>
 
       <section class="mb-10">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Alternativas no <span class="text-brand-yellow">ranking</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Alternativas no <span class="text-orange-600">ranking</span></h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"><article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow">
             <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 3">3</span>
             <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
               <img src="https://http2.mlstatic.com/D_NQ_NP_801018-MLA115363054279_072026-O.webp" alt="Honeywhale S6-S bike eletrica dobrável 750W fat tire — melhores bicicletas eletricas" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
             </div>
             <div class="mt-4 flex flex-wrap items-center gap-2">
-              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">HONEYWHALE</span>
-              <h3 class="text-lg font-bold text-white">S6-S 750W</h3>
+              <span class="rounded border border-orange-400 px-2 py-0.5 text-[10px] font-bold tracking-widest text-orange-700">HONEYWHALE</span>
+              <h3 class="text-lg font-bold text-ink">S6-S 750W</h3>
             </div>
             <div class="mt-3 flex-1">
-              <div class="mb-3 flex items-center gap-2"><span class="text-violet-400">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <div class="mb-3 flex items-center gap-2"><span class="text-violet-600">👤</span> <strong class="text-sm uppercase tracking-wide text-ink">Para quem é?</strong></div>
               <ul class="space-y-2">
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Calçadas irregulares e vias com buracos: fat tire + motor 750W.</span></li>
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Uso urbano com carga até 125 kg e cesto para compras.</span></li>
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer robustez dobrável com autonomia de 40 km.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Calçadas irregulares e vias com buracos: fat tire + motor 750W.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Uso urbano com carga até 125 kg e cesto para compras.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer robustez dobrável com autonomia de 40 km.</span></li>
               </ul>
             </div>
-            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+            <div class="mt-4 flex items-end justify-between border-t border-slate-200 pt-4">
               <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
-              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">93</span><span class="text-sm text-brand-dim">/100</span></div>
+              <div class="leading-none"><span class="text-3xl font-bold text-orange-600">93</span><span class="text-sm text-brand-dim">/100</span></div>
             </div>
             <div class="mt-3 flex flex-wrap gap-2">
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Motor 750W</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Autonomia 40 km</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Fat tire</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Cesto</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Motor 750W</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Autonomia 40 km</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Fat tire</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Cesto</span>
             </div>
-            <div class="mt-5 border-t border-white/10 pt-4">
+            <div class="mt-5 border-t border-slate-200 pt-4">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
-              <p class="text-xl font-bold text-white">R$ 3.799</p>
+              <p class="text-xl font-bold text-ink">R$ 3.799</p>
               <div class="mt-3 flex flex-col gap-2">
                 <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1MDt7cC">Comprar no Mercado Livre</a>
-                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="/review-honeywhale-s6-s">Ver Análise Completa</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-orange-500 bg-transparent px-4 text-sm font-bold text-orange-700 transition hover:bg-orange-50" href="/review-honeywhale-s6-s">Ver Análise Completa</a>
               </div>
             </div>
           </article><article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow">
@@ -635,46 +635,46 @@
               <img src="https://http2.mlstatic.com/D_NQ_NP_898691-MLB113402906913_062026-O.webp" alt="Nado K3 750W scooter aro 20 bateria lítio removível — melhores bicicletas eletricas utilitárias" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
             </div>
             <div class="mt-4 flex flex-wrap items-center gap-2">
-              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">NADO</span>
-              <h3 class="text-lg font-bold text-white">K3 750W</h3>
+              <span class="rounded border border-orange-400 px-2 py-0.5 text-[10px] font-bold tracking-widest text-orange-700">NADO</span>
+              <h3 class="text-lg font-bold text-ink">K3 750W</h3>
             </div>
             <div class="mt-3 flex-1">
-              <div class="mb-3 flex items-center gap-2"><span class="text-violet-400">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <div class="mb-3 flex items-center gap-2"><span class="text-violet-600">👤</span> <strong class="text-sm uppercase tracking-wide text-ink">Para quem é?</strong></div>
               <ul class="space-y-2">
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Entregas leves e commute multimodal em corredores apertados.</span></li>
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Bateria de lítio 48V removível para carregar no destino.</span></li>
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Aro 20 ágil com motor 750W para manobras urbanas.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Entregas leves e commute multimodal em corredores apertados.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Bateria de lítio 48V removível para carregar no destino.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Aro 20 ágil com motor 750W para manobras urbanas.</span></li>
               </ul>
             </div>
-            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+            <div class="mt-4 flex items-end justify-between border-t border-slate-200 pt-4">
               <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
-              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">86</span><span class="text-sm text-brand-dim">/100</span></div>
+              <div class="leading-none"><span class="text-3xl font-bold text-orange-600">86</span><span class="text-sm text-brand-dim">/100</span></div>
             </div>
             <div class="mt-3 flex flex-wrap gap-2">
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Motor 750W</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">48V Lítio</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Aro 20</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Bateria removível</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Motor 750W</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">48V Lítio</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Aro 20</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Bateria removível</span>
             </div>
-            <div class="mt-5 border-t border-white/10 pt-4">
+            <div class="mt-5 border-t border-slate-200 pt-4">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
-              <p class="text-xl font-bold text-white">R$ 6.034</p>
+              <p class="text-xl font-bold text-ink">R$ 6.034</p>
               <div class="mt-3 flex flex-col gap-2">
                 <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1GuHCbJ">Comprar no Mercado Livre</a>
-                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="/review-nado-k3">Ver Análise Completa</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-orange-500 bg-transparent px-4 text-sm font-bold text-orange-700 transition hover:bg-orange-50" href="/review-nado-k3">Ver Análise Completa</a>
               </div>
             </div>
           </article>
           <a class="glass flex flex-col justify-center p-5 transition hover:-translate-y-1 hover:shadow-glow" href="/melhores-bicicletas-eletricas">
-            <p class="mb-2 text-xs font-bold uppercase text-brand-yellow">Lista completa</p>
-            <h3 class="mb-2 text-lg font-bold text-white">Voltar ao ranking</h3>
+            <p class="mb-2 text-xs font-bold uppercase text-orange-700">Lista completa</p>
+            <h3 class="mb-2 text-lg font-bold text-ink">Voltar ao ranking</h3>
             <p class="text-sm text-brand-dim">Ver as 7 bicicletas elétricas comparadas lado a lado.</p>
           </a>
         </div>
       </section>
 
       <section class="mb-10 scroll-mt-28" id="faq">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre a <span class="text-brand-yellow">V9 Max 1000W</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre a <span class="text-orange-600">V9 Max 1000W</span></h2>
         <div class="space-y-3">
           <details class="glass p-5" open>
             <summary class="cursor-pointer list-none font-bold">V9 Max preço: quanto custa a bicicleta elétrica V9 Max hoje?</summary>
@@ -738,13 +738,13 @@
           <h2 id="relacionados-titulo" class="mb-2 text-xl font-extrabold md:text-2xl">Leia também</h2>
           <p class="mb-5 text-sm text-brand-dim">Reviews e rankings relacionados a esta análise.</p>
           <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            <li><a href="/review-nado-k3" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Nado K3 750W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-xroymexroy-eb5" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Xroymexroy EB5</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-ouxi-v8-pro" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Ouxi V8 Pro</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-inow-v40-pro" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Inow V40 Pro</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-ouxi-gt2000" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Ouxi GT2000</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/melhores-bicicletas-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Melhores bicicletas elétricas 2026</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/guia-bicicleta-eletrica-1000w" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Bicicleta elétrica 1000W: top 5</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-nado-k3" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Nado K3 750W</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-xroymexroy-eb5" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Xroymexroy EB5</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-ouxi-v8-pro" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Ouxi V8 Pro</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-inow-v40-pro" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Inow V40 Pro</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-ouxi-gt2000" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Ouxi GT2000</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/melhores-bicicletas-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Melhores bicicletas elétricas 2026</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/guia-bicicleta-eletrica-1000w" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Bicicleta elétrica 1000W: top 5</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
           </ul>
         </div>
       </section>
@@ -752,27 +752,27 @@
     </div>
   </main>
 
-  <div class="fixed bottom-0 left-0 z-50 w-full rounded-none border-t border-white/10 bg-brand-bg/85 backdrop-blur-xl sm:bottom-6 sm:left-1/2 sm:w-auto sm:min-w-[600px] sm:max-w-4xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-white/15 sm:shadow-2xl">
+  <div class="fixed bottom-0 left-0 z-50 w-full rounded-none border-t border-slate-200 bg-white/90 backdrop-blur-xl sm:bottom-6 sm:left-1/2 sm:w-auto sm:min-w-[600px] sm:max-w-4xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-slate-200 sm:shadow-2xl">
     <div class="flex flex-col gap-3 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:py-3 sm:pl-3 sm:pr-3">
       <div class="flex min-w-0 items-center gap-3">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_872353-MLB115691776769_082026-O.webp" alt="V9 Max 1000W" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-white/10 bg-white object-contain sm:block">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_872353-MLB115691776769_082026-O.webp" alt="V9 Max 1000W" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-slate-200 bg-white object-contain sm:block">
         <div class="min-w-0">
-          <strong class="block max-w-[200px] truncate text-sm font-bold text-white sm:max-w-xs sm:text-base">V9 Max 1000W</strong>
-          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 8.9</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">R$ 6.472</span><span class="text-white/20" aria-hidden="true">|</span><span class="whitespace-nowrap font-extrabold text-emerald-300">10x sem juros</span></div>
+          <strong class="block max-w-[200px] truncate text-sm font-bold text-ink sm:max-w-xs sm:text-base">V9 Max 1000W</strong>
+          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-orange-700"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 8.9</span><span class="text-slate-300" aria-hidden="true">|</span><span class="truncate font-extrabold text-ink">R$ 6.472</span><span class="text-slate-300" aria-hidden="true">|</span><span class="whitespace-nowrap font-extrabold text-emerald-700">10x sem juros</span></div>
         </div>
       </div>
       <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/2VBFMUG">Comprar no Mercado Livre</a>
     </div>
   </div>
 
-  <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
+  <footer class="mt-8 border-t border-brand-border bg-white px-4 py-10">
     <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
       <div><a href="/" class="mb-3 flex items-center gap-3"><img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" width="42" height="42" alt="" class="h-10 w-10 object-contain"><span class="text-sm font-extrabold uppercase tracking-wider">Tudo de Melhor</span></a><p class="text-sm text-brand-dim">Rankings e reviews para decidir com segurança. Links de afiliados podem gerar comissão.</p></div>
-      <div><h4 class="mb-3 text-sm font-bold">Navegação</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/" class="hover:text-brand-yellow">Home</a><a href="/categorias" class="hover:text-brand-yellow">Rankings</a><a href="/reviews" class="hover:text-brand-yellow">Reviews</a></div></div>
-      <div><h4 class="mb-3 text-sm font-bold">Categorias</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/melhores-bicicletas-eletricas" class="hover:text-brand-yellow">Bicicletas Elétricas</a></div></div>
-      <div><h4 class="mb-3 text-sm font-bold">Legal</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/sobre" class="hover:text-brand-yellow">Sobre</a><a href="/privacidade" class="hover:text-brand-yellow">Privacidade</a><a href="/contato" class="hover:text-brand-yellow">Contato</a></div></div>
+      <div><h4 class="mb-3 text-sm font-bold">Navegação</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/" class="hover:text-orange-600">Home</a><a href="/categorias" class="hover:text-orange-600">Rankings</a><a href="/reviews" class="hover:text-orange-600">Reviews</a></div></div>
+      <div><h4 class="mb-3 text-sm font-bold">Categorias</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/melhores-bicicletas-eletricas" class="hover:text-orange-600">Bicicletas Elétricas</a></div></div>
+      <div><h4 class="mb-3 text-sm font-bold">Legal</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/sobre" class="hover:text-orange-600">Sobre</a><a href="/privacidade" class="hover:text-orange-600">Privacidade</a><a href="/contato" class="hover:text-orange-600">Contato</a></div></div>
     </div>
-    <div class="mx-auto mt-8 max-w-6xl border-t border-white/10 pt-4 text-xs text-brand-dim">© <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.</div>
+    <div class="mx-auto mt-8 max-w-6xl border-t border-slate-200 pt-4 text-xs text-brand-dim">© <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.</div>
   </footer>
   <script>
     document.getElementById('y').textContent=new Date().getFullYear();

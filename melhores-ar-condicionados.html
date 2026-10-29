@@ -57,32 +57,32 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
+          colors: {ink:'#1E293B',
             brand: {
-              bg: '#232F3E',
-              yellow: '#FFE600',
-              orange: '#FF9900',
-              card: 'rgba(27, 37, 48, 0.7)',
-              elevated: '#1B2530',
-              border: '#37475A',
-              muted: '#D5D9D9',
-              dim: '#AAB3BD',
-              neon: '#34F5A0'
+              bg: '#F8FAFC',
+              yellow: '#FACC15',
+              orange: '#EA580C',
+              card: '#FFFFFF',
+              elevated: '#FFFFFF',
+              border: '#E2E8F0',
+              muted: '#475569',
+              dim: '#64748B',
+              neon: '#059669'
             }
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif']
           },
-          boxShadow: {
-            glow: '0 0 15px rgba(255, 230, 0, 0.4)',
-            'glow-lg': '0 0 28px rgba(255, 230, 0, 0.45)',
-            'glow-orange': '0 0 20px rgba(255, 153, 0, 0.35)',
-            'glow-emerald': '0 0 24px rgba(16, 185, 129, 0.3)',
-            'glow-green': '0 0 20px rgba(16, 185, 129, 0.4)',
-            'glow-dual': '0 0 28px rgba(255, 230, 0, 0.3), 0 0 44px rgba(16, 185, 129, 0.35)'
+          boxShadow: {soft:'0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 30px -14px rgba(15, 23, 42, 0.16)',
+            glow: '0 8px 20px -8px rgba(234, 179, 8, 0.6)',
+            'glow-lg': '0 14px 32px -12px rgba(234, 88, 12, 0.5)',
+            'glow-orange': '0 6px 16px -6px rgba(234, 88, 12, 0.35)',
+            'glow-emerald': '0 1px 2px rgba(15, 23, 42, 0.04), 0 14px 32px -16px rgba(16, 185, 129, 0.45)',
+            'glow-green': '0 1px 2px rgba(15, 23, 42, 0.04), 0 14px 32px -16px rgba(16, 185, 129, 0.45)',
+            'glow-dual': '0 14px 32px -14px rgba(234, 88, 12, 0.4)'
           },
           backgroundImage: {
-            'brand-gradient': 'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'
+            'brand-gradient': 'linear-gradient(135deg, #FACC15 0%, #EA580C 100%)'
           },
           keyframes: {
             'pulse-soft': {
@@ -100,29 +100,22 @@
   <style type="text/tailwindcss">
     @layer utilities {
       .glass {
-        @apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;
+        @apply bg-white backdrop-blur-md border border-slate-200 rounded-2xl shadow-soft;
       }
       .badge-neon {
-        @apply inline-flex items-center gap-1.5 rounded-full border border-brand-neon/50 bg-emerald-500/15 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-brand-neon shadow-glow-green animate-pulse-soft sm:text-[11px];
+        @apply inline-flex items-center gap-1.5 rounded-full border border-emerald-300 bg-emerald-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-emerald-700 shadow-glow-green animate-pulse-soft sm:text-[11px];
       }
     }
   </style>
   <style>
-    body {
-      background-image:
-        radial-gradient(ellipse 70% 45% at 85% 10%, rgba(255, 153, 0, 0.14), transparent 55%),
-        radial-gradient(ellipse 50% 40% at 10% 85%, rgba(255, 230, 0, 0.07), transparent 50%),
-        radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-      background-size: auto, auto, 18px 18px;
-      background-attachment: fixed;
-    }
+    body{background-color:#F8FAFC;background-image:radial-gradient(ellipse 65% 40% at 100% 0%,rgba(251,146,60,.16),transparent 60%),radial-gradient(ellipse 55% 38% at 0% 100%,rgba(234,88,12,.07),transparent 55%),radial-gradient(rgba(15,23,42,.035) 1px,transparent 1px);background-size:auto,auto,20px 20px;background-attachment:fixed}
     article p a, .prose-copy a {
-      color: #FFE600;
+      color: #C2410C;
       text-decoration: underline;
       text-underline-offset: 2px;
     }
     .snap-x::-webkit-scrollbar { height: 6px; }
-    .snap-x::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 3px; }
+    .snap-x::-webkit-scrollbar-thumb { background: rgba(15, 23, 42, 0.2); border-radius: 3px; }
     details > summary { list-style: none; }
     details > summary::-webkit-details-marker { display: none; }
     details[open] .faq-chevron { transform: rotate(180deg); }
@@ -132,69 +125,69 @@
     }
   </style>
 </head>
-<body class="bg-brand-bg text-white font-sans antialiased min-h-screen pb-24 md:pb-0">
+<body class="bg-brand-bg text-ink font-sans antialiased min-h-screen pb-24 md:pb-0">
 
-  <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
     <div class="mx-auto flex h-[100px] max-w-7xl items-center gap-4 px-4 lg:gap-8">
       <a href="/" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
-        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
+        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
           <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-full w-full object-cover">
         </div>
         <div class="flex flex-col justify-center">
-          <span class="text-xl font-black uppercase leading-tight tracking-wider text-white lg:text-2xl">Tudo De</span>
-          <span class="text-xl font-black uppercase leading-tight tracking-wider text-brand-yellow lg:text-2xl">Melhor</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-ink lg:text-2xl">Tudo De</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-orange-700 lg:text-2xl">Melhor</span>
         </div>
       </a>
-      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-brand-elevated md:hidden" aria-label="Abrir menu" aria-expanded="false">
+      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-white md:hidden" aria-label="Abrir menu" aria-expanded="false">
         <span class="flex flex-col gap-1.5">
-          <span class="block h-0.5 w-6 bg-white"></span>
-          <span class="block h-0.5 w-6 bg-white"></span>
-          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-ink"></span>
+          <span class="block h-0.5 w-6 bg-ink"></span>
+          <span class="block h-0.5 w-6 bg-ink"></span>
         </span>
       </button>
       <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
-        <a href="/#categorias" class="transition hover:text-white">Categorias</a>
-        <a href="/categorias" class="transition hover:text-white">Rankings</a>
-        <a href="/reviews" class="transition hover:text-white">Reviews</a>
-        <a href="/#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
+        <a href="/#categorias" class="transition hover:text-ink">Categorias</a>
+        <a href="/categorias" class="transition hover:text-ink">Rankings</a>
+        <a href="/reviews" class="transition hover:text-ink">Reviews</a>
+        <a href="/#ofertas" class="font-bold text-orange-700 shadow-glow transition hover:text-ink">Melhores Ofertas</a>
       </nav>
       <div class="hidden items-center gap-4 md:flex">
         <label class="relative">
           <span class="sr-only">Buscar</span>
           <svg class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-brand-dim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
-          <input type="search" placeholder="Buscar" class="h-11 w-44 rounded-full border border-white/15 bg-white/5 pl-11 pr-4 text-sm text-white outline-none backdrop-blur-sm placeholder:text-brand-dim focus:border-brand-yellow/50 focus:bg-white/10 lg:w-52">
+          <input type="search" placeholder="Buscar" class="h-11 w-44 rounded-full border border-slate-200 bg-slate-50 pl-11 pr-4 text-sm text-ink outline-none backdrop-blur-sm placeholder:text-slate-400 focus:border-orange-400 focus:bg-white lg:w-52">
         </label>
-        <a href="#login" class="inline-flex h-11 items-center rounded-full border border-white/25 px-6 text-sm font-semibold transition hover:bg-white/10">Login</a>
+        <a href="#login" class="inline-flex h-11 items-center rounded-full border border-slate-300 px-6 text-sm font-semibold transition hover:bg-slate-100">Login</a>
       </div>
     </div>
-    <div id="mobile-nav" class="hidden border-t border-white/10 bg-brand-elevated/98 px-4 py-4 md:hidden">
+    <div id="mobile-nav" class="hidden border-t border-slate-200 bg-white px-4 py-4 md:hidden">
       <nav class="flex flex-col gap-1 text-sm">
-        <a href="/#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Categorias</a>
-        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
-        <a href="/reviews" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Reviews</a>
-        <a href="/#ofertas" class="rounded-lg px-3 py-3 font-bold text-brand-yellow">Melhores Ofertas</a>
+        <a href="/#categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Categorias</a>
+        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Rankings</a>
+        <a href="/reviews" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Reviews</a>
+        <a href="/#ofertas" class="rounded-lg px-3 py-3 font-bold text-orange-700">Melhores Ofertas</a>
       </nav>
     </div>
   </header>
 
   <main class="mx-auto max-w-7xl px-4 pt-6">
     <nav class="mb-4 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
-      <a href="/" class="hover:text-brand-yellow">Início</a>
+      <a href="/" class="hover:text-orange-600">Início</a>
       <span aria-hidden="true">/</span>
-      <a href="/categorias" class="hover:text-brand-yellow">Rankings</a>
+      <a href="/categorias" class="hover:text-orange-600">Rankings</a>
       <span aria-hidden="true">/</span>
-      <span class="text-white" aria-current="page">Ar-Condicionados</span>
+      <span class="text-ink" aria-current="page">Ar-Condicionados</span>
     </nav>
 
     <!-- HERO -->
     <section class="py-6 text-center sm:py-10">
       <div class="mb-4 flex flex-wrap items-center justify-center gap-2">
-        <span class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-emerald-400">Top 5 sem patrocínio</span>
-        <span class="rounded-full border border-brand-yellow/30 bg-brand-yellow/10 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-brand-yellow">Atualizado em 06/10/2026</span>
+        <span class="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-emerald-700">Top 5 sem patrocínio</span>
+        <span class="rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-[11px] font-black uppercase tracking-wider text-orange-700">Atualizado em 06/10/2026</span>
       </div>
-      <p class="mb-3 text-sm font-extrabold uppercase tracking-[0.14em] text-brand-orange">O melhor ar-condicionado de 2026 não é o mais caro</p>
-      <h1 class="mx-auto max-w-4xl text-3xl font-black leading-tight tracking-tight text-white sm:text-5xl">Pare de sofrer no calor e de pagar caro na conta de luz. <span class="bg-brand-gradient bg-clip-text text-transparent">Veja o Top 5 Inverter de 2026.</span></h1>
-      <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-brand-muted">Comparamos os 5 ar-condicionados Inverter e AI com melhor custo-benefício do mercado. Spoiler: o modelo certo <strong class="text-white">se paga na conta de energia</strong> — e não é o mais caro da loja.</p>
+      <p class="mb-3 text-sm font-extrabold uppercase tracking-[0.14em] text-orange-700">O melhor ar-condicionado de 2026 não é o mais caro</p>
+      <h1 class="mx-auto max-w-4xl text-3xl font-black leading-tight tracking-tight text-ink sm:text-5xl">Pare de sofrer no calor e de pagar caro na conta de luz. <span class="bg-brand-gradient bg-clip-text text-transparent">Veja o Top 5 Inverter de 2026.</span></h1>
+      <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-brand-muted">Comparamos os 5 ar-condicionados Inverter e AI com melhor custo-benefício do mercado. Spoiler: o modelo certo <strong class="text-ink">se paga na conta de energia</strong> — e não é o mais caro da loja.</p>
 
       <div class="mx-auto mt-8 max-w-4xl">
         <div class="glass relative overflow-hidden p-4 shadow-glow sm:p-6">
@@ -203,9 +196,9 @@
           </div>
         </div>
         <ul class="mt-5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-semibold text-brand-muted sm:text-sm">
-          <li class="flex items-center gap-1.5"><svg class="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Até 70% menos energia</li>
-          <li class="flex items-center gap-1.5"><svg class="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Silenciosos para dormir</li>
-          <li class="flex items-center gap-1.5"><svg class="h-4 w-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Compra segura no Mercado Livre</li>
+          <li class="flex items-center gap-1.5"><svg class="h-4 w-4 text-emerald-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Até 70% menos energia</li>
+          <li class="flex items-center gap-1.5"><svg class="h-4 w-4 text-emerald-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Silenciosos para dormir</li>
+          <li class="flex items-center gap-1.5"><svg class="h-4 w-4 text-emerald-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Compra segura no Mercado Livre</li>
         </ul>
         <a href="#vencedor" class="mt-6 inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-8 text-base font-black text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.99] sm:w-auto">Ver o campeão de economia ↓</a>
       </div>
@@ -213,7 +206,7 @@
 
     <!-- PROVA SOCIAL -->
     <section class="py-8">
-      <h2 class="mb-2 text-center text-2xl font-black uppercase tracking-tight text-white sm:text-3xl">Veja o produto gelando na casa de quem já comprou</h2>
+      <h2 class="mb-2 text-center text-2xl font-black uppercase tracking-tight text-ink sm:text-3xl">Veja o produto gelando na casa de quem já comprou</h2>
       <p class="mx-auto mb-6 max-w-2xl text-center text-sm leading-relaxed text-brand-muted">Instalados em quartos e salas de verdade. Arraste para o lado e veja cada modelo em ação →</p>
       <div class="-mx-4 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth px-4 pb-4">
         <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="glass group relative aspect-[9/16] w-48 shrink-0 snap-start overflow-hidden sm:w-60">
@@ -256,88 +249,88 @@
 
     <!-- VENCEDOR IMEDIATO -->
     <section id="vencedor" class="scroll-mt-28 py-8">
-      <div class="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border-2 border-brand-yellow bg-brand-elevated shadow-glow-dual ring-1 ring-emerald-400/40">
+      <div class="relative mx-auto max-w-4xl overflow-hidden rounded-2xl border-2 border-orange-500 bg-white shadow-glow-dual ring-1 ring-emerald-200">
         <div class="bg-brand-gradient px-4 py-2.5 text-center text-xs font-black uppercase tracking-[0.18em] text-black sm:text-sm">🏆 Recomendação do Especialista</div>
         <div class="grid grid-cols-1 md:grid-cols-[300px_1fr]">
           <div class="flex items-center justify-center p-4 pb-0 sm:p-6 sm:pb-0 md:items-start md:pb-6 md:pr-0">
-            <div class="relative flex min-h-[220px] w-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div class="relative flex min-h-[220px] w-full flex-col items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-4">
               <img src="https://http2.mlstatic.com/D_NQ_NP_838481-MLA99949573633_112025-O.webp" alt="Midea AI EcoMaster Inverter 9.000 BTUs" referrerpolicy="no-referrer" class="max-h-56 w-auto max-w-full rounded-xl object-contain sm:max-h-64">
               <span class="absolute bottom-2 right-2 rounded bg-black/50 px-1.5 py-0.5 text-[9px] text-white">Fonte: Mercado Livre</span>
             </div>
           </div>
           <div class="space-y-4 p-5 sm:p-7">
             <div class="flex flex-wrap items-center gap-2">
-              <span class="inline-block rounded-md bg-emerald-600 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-white">💰 Maior economia comprovada</span>
+              <span class="inline-block rounded-md bg-emerald-700 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-white">💰 Maior economia comprovada</span>
               <span class="badge-neon">💡 Até 70% de economia de energia*</span>
               <span class="badge-neon">🔒 Compra Garantida Mercado Livre</span>
             </div>
-            <h2 class="text-2xl font-black leading-tight text-white sm:text-3xl">Midea AI EcoMaster Inverter Q/F</h2>
-            <p class="text-sm leading-relaxed text-brand-muted sm:text-base">Se você quer <strong class="text-white">uma resposta rápida</strong>, é este. A inteligência artificial do EcoMaster aprende seu padrão de uso e ajusta o compressor sozinha para gastar o mínimo de energia possível. Gela e esquenta, é silencioso e custa menos que vários concorrentes "premium".</p>
+            <h2 class="text-2xl font-black leading-tight text-ink sm:text-3xl">Midea AI EcoMaster Inverter Q/F</h2>
+            <p class="text-sm leading-relaxed text-brand-muted sm:text-base">Se você quer <strong class="text-ink">uma resposta rápida</strong>, é este. A inteligência artificial do EcoMaster aprende seu padrão de uso e ajusta o compressor sozinha para gastar o mínimo de energia possível. Gela e esquenta, é silencioso e custa menos que vários concorrentes "premium".</p>
             <ul class="grid grid-cols-1 gap-2 text-sm sm:grid-cols-2">
-              <li class="flex items-center gap-2 text-white"><svg class="h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Modo AI Eco que economiza sozinho</li>
-              <li class="flex items-center gap-2 text-white"><svg class="h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Quente e frio: uso o ano todo</li>
-              <li class="flex items-center gap-2 text-white"><svg class="h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Um dos menores preços do Top 5</li>
-              <li class="flex items-center gap-2 text-white"><svg class="h-5 w-5 shrink-0 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>10 anos de garantia no compressor*</li>
+              <li class="flex items-center gap-2 text-ink"><svg class="h-5 w-5 shrink-0 text-emerald-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Modo AI Eco que economiza sozinho</li>
+              <li class="flex items-center gap-2 text-ink"><svg class="h-5 w-5 shrink-0 text-emerald-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Quente e frio: uso o ano todo</li>
+              <li class="flex items-center gap-2 text-ink"><svg class="h-5 w-5 shrink-0 text-emerald-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>Um dos menores preços do Top 5</li>
+              <li class="flex items-center gap-2 text-ink"><svg class="h-5 w-5 shrink-0 text-emerald-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg>10 anos de garantia no compressor*</li>
             </ul>
-            <div class="rounded-xl border border-emerald-400/40 bg-emerald-500/10 p-3 shadow-glow-green sm:p-4">
+            <div class="rounded-xl border border-emerald-200 bg-emerald-50 p-3 shadow-glow-green sm:p-4">
               <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
-                <p class="text-sm font-black uppercase tracking-wide text-brand-neon">📉 Faixa de preço no Mercado Livre (últimos 30 dias)</p>
+                <p class="text-sm font-black uppercase tracking-wide text-emerald-700">📉 Faixa de preço no Mercado Livre (últimos 30 dias)</p>
                 <span class="badge-neon">🟢 Ofertas a partir de R$ 1.912,68 *</span>
               </div>
               <div class="mb-3 grid grid-cols-3 gap-1.5 text-center sm:gap-2">
-                <div class="rounded-lg border border-white/10 bg-white/5 px-2 py-2">
+                <div class="rounded-lg border border-slate-200 bg-slate-50 px-2 py-2">
                   <p class="text-[9px] font-bold uppercase tracking-wide text-brand-dim sm:text-[10px]">Início do mês</p>
-                  <p class="whitespace-nowrap text-xs font-black text-white line-through decoration-rose-400/70 sm:text-base">≈ R$ 2.750</p>
+                  <p class="whitespace-nowrap text-xs font-black text-ink line-through decoration-rose-400/70 sm:text-base">≈ R$ 2.750</p>
                 </div>
-                <div class="rounded-lg border border-white/10 bg-white/5 px-2 py-2">
+                <div class="rounded-lg border border-slate-200 bg-slate-50 px-2 py-2">
                   <p class="text-[9px] font-bold uppercase tracking-wide text-brand-dim sm:text-[10px]">Menor histórico</p>
-                  <p class="whitespace-nowrap text-xs font-black text-white sm:text-base">R$ 1.889,00</p>
+                  <p class="whitespace-nowrap text-xs font-black text-ink sm:text-base">R$ 1.889,00</p>
                 </div>
-                <div class="rounded-lg border border-emerald-400/50 bg-emerald-500/15 px-2 py-2">
-                  <p class="text-[9px] font-bold uppercase tracking-wide text-brand-neon sm:text-[10px]">Menor atual</p>
-                  <p class="whitespace-nowrap text-xs font-black text-brand-neon sm:text-base">R$ 1.912,68</p>
+                <div class="rounded-lg border border-emerald-300 bg-emerald-50 px-2 py-2">
+                  <p class="text-[9px] font-bold uppercase tracking-wide text-emerald-700 sm:text-[10px]">Menor atual</p>
+                  <p class="whitespace-nowrap text-xs font-black text-emerald-700 sm:text-base">R$ 1.912,68</p>
                 </div>
               </div>
               <svg viewBox="0 0 320 124" class="h-auto w-full" role="img" aria-label="Menor preço do Midea AI EcoMaster no Mercado Livre entre 02/10 e 14/10: cerca de R$ 2.750 até 04/10, queda para cerca de R$ 2.050 em 05/10, mínimo de R$ 1.889 em 07/10 e R$ 1.912,68 em 14/10">
                 <defs>
                   <linearGradient id="ac-line" x1="0" x2="1" y1="0" y2="0">
-                    <stop offset="0%" stop-color="#FFE600"/>
-                    <stop offset="45%" stop-color="#FF9900"/>
-                    <stop offset="100%" stop-color="#34F5A0"/>
+                    <stop offset="0%" stop-color="#EA580C"/>
+                    <stop offset="45%" stop-color="#EA580C"/>
+                    <stop offset="100%" stop-color="#059669"/>
                   </linearGradient>
                   <linearGradient id="ac-area" x1="0" x2="0" y1="0" y2="1">
                     <stop offset="0%" stop-color="rgba(52, 245, 160, 0.15)"/>
                     <stop offset="100%" stop-color="rgba(52, 245, 160, 0)"/>
                   </linearGradient>
                 </defs>
-                <g stroke="rgba(255,255,255,0.08)" stroke-width="1">
+                <g stroke="rgba(15,23,42,0.11)" stroke-width="1">
                   <line x1="20" x2="300" y1="12" y2="12"/>
                   <line x1="20" x2="300" y1="60" y2="60"/>
                   <line x1="20" x2="300" y1="108" y2="108"/>
                 </g>
-                <g fill="#AAB3BD" font-size="7" font-family="Inter, sans-serif">
+                <g fill="#64748B" font-size="7" font-family="Inter, sans-serif">
                   <text x="0" y="14">2.800</text>
                   <text x="0" y="62">2.300</text>
                   <text x="0" y="110">1.800</text>
                 </g>
                 <path d="M20 16.8 L100 16.8 C120 16.8 120 84 140 84 C160 84 160 82.1 180 82.1 C200 82.1 200 99.5 220 99.5 C240 99.5 240 82.1 260 82.1 C280 82.1 280 97.2 300 97.2 L300 108 L20 108 Z" fill="url(#ac-area)"/>
                 <path d="M20 16.8 L100 16.8 C120 16.8 120 84 140 84 C160 84 160 82.1 180 82.1 C200 82.1 200 99.5 220 99.5 C240 99.5 240 82.1 260 82.1 C280 82.1 280 97.2 300 97.2" fill="none" stroke="url(#ac-line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                <g fill="#1B2530" stroke="#FFE600" stroke-width="1.5">
+                <g fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5">
                   <circle cx="20" cy="16.8" r="2.5"/>
                   <circle cx="60" cy="16.8" r="2.5"/>
                   <circle cx="100" cy="16.8" r="2.5"/>
-                  <circle cx="140" cy="84" r="2.5" stroke="#FF9900"/>
-                  <circle cx="180" cy="82.1" r="2.5" stroke="#FF9900"/>
-                  <circle cx="260" cy="82.1" r="2.5" stroke="#34F5A0"/>
+                  <circle cx="140" cy="84" r="2.5" stroke="#EA580C"/>
+                  <circle cx="180" cy="82.1" r="2.5" stroke="#EA580C"/>
+                  <circle cx="260" cy="82.1" r="2.5" stroke="#059669"/>
                 </g>
                 <circle cx="220" cy="99.5" r="3" fill="#fff"/>
-                <text x="220" y="119" fill="#D5D9D9" font-size="7" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">mín. R$ 1.889</text>
-                <circle class="price-dot-ring" cx="300" cy="97.2" r="5" fill="none" stroke="#34F5A0" stroke-width="2">
+                <text x="220" y="119" fill="#334155" font-size="7" font-weight="700" text-anchor="middle" font-family="Inter, sans-serif">mín. R$ 1.889</text>
+                <circle class="price-dot-ring" cx="300" cy="97.2" r="5" fill="none" stroke="#059669" stroke-width="2">
                   <animate attributeName="r" values="5;11;5" dur="2.2s" repeatCount="indefinite"/>
                   <animate attributeName="opacity" values="0.9;0;0.9" dur="2.2s" repeatCount="indefinite"/>
                 </circle>
-                <circle cx="300" cy="97.2" r="5" fill="#34F5A0"/>
-                <text x="304" y="70" fill="#34F5A0" font-size="8" font-weight="800" text-anchor="end" font-family="Inter, sans-serif">hoje R$ 1.912,68</text>
+                <circle cx="300" cy="97.2" r="5" fill="#059669"/>
+                <text x="304" y="70" fill="#059669" font-size="8" font-weight="800" text-anchor="end" font-family="Inter, sans-serif">hoje R$ 1.912,68</text>
               </svg>
               <div class="relative mt-1 h-4 text-[9px] font-semibold text-brand-dim sm:text-[10px]" aria-hidden="true">
                 <span class="absolute -translate-x-1/2" style="left:6.25%">02/10</span>
@@ -347,10 +340,10 @@
                 <span class="absolute -translate-x-1/2" style="left:56.25%">06/10</span>
                 <span class="absolute -translate-x-1/2" style="left:68.75%">07/10</span>
                 <span class="absolute -translate-x-1/2" style="left:81.25%">08/10</span>
-                <span class="absolute -translate-x-1/2 text-brand-neon" style="left:93.75%">14/10</span>
+                <span class="absolute -translate-x-1/2 text-emerald-700" style="left:93.75%">14/10</span>
               </div>
-              <div class="mt-3 rounded-lg border border-brand-yellow/30 bg-brand-yellow/10 p-3 text-[11px] leading-relaxed text-brand-muted sm:text-xs">
-                <p><strong class="text-brand-yellow">* 📌 Nota sobre valores:</strong> O preço pode variar entre R$ 1.889 e R$ 2.579 conforme a voltagem escolhida (127V ou 220V), a região do frete e o vendedor selecionado. Clique em 'Ver Preço' para conferir a oferta ativa para a sua cidade.</p>
+              <div class="mt-3 rounded-lg border border-orange-200 bg-orange-50 p-3 text-[11px] leading-relaxed text-brand-muted sm:text-xs">
+                <p><strong class="text-orange-700">* 📌 Nota sobre valores:</strong> O preço pode variar entre R$ 1.889 e R$ 2.579 conforme a voltagem escolhida (127V ou 220V), a região do frete e o vendedor selecionado. Clique em 'Ver Preço' para conferir a oferta ativa para a sua cidade.</p>
               </div>
             </div>
             <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-4 text-base font-black sm:px-6 sm:text-lg text-black shadow-glow-lg transition-transform duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-[0.99]">Ver Preço no Mercado Livre →</a>
@@ -362,74 +355,74 @@
 
     <!-- INTRO -->
     <section id="intro" class="mx-auto max-w-3xl space-y-4 py-6">
-      <h2 class="text-2xl font-black text-white">Por que o mais caro não é o melhor</h2>
-      <p class="text-base leading-relaxed text-brand-muted">O preço na etiqueta é só metade da conta. A outra metade chega todo mês na fatura de energia. Um ar-condicionado convencional liga e desliga o compressor o tempo todo, e cada partida é um pico de consumo. Já o <strong class="text-white">Inverter</strong> trabalha em rotação variável: atinge a temperatura rápido e depois só mantém, gastando o mínimo.</p>
-      <p class="text-base leading-relaxed text-brand-muted">Os modelos com <strong class="text-white">AI</strong> vão além: aprendem sua rotina e ajustam o funcionamento sozinhos. Resultado: um aparelho intermediário bem escolhido pode economizar mais do que um topo de linha mal dimensionado. Todos os modelos abaixo têm <strong class="text-white">9.000 BTUs</strong>, ideais para quartos de até cerca de 15 m².</p>
+      <h2 class="text-2xl font-black text-ink">Por que o mais caro não é o melhor</h2>
+      <p class="text-base leading-relaxed text-brand-muted">O preço na etiqueta é só metade da conta. A outra metade chega todo mês na fatura de energia. Um ar-condicionado convencional liga e desliga o compressor o tempo todo, e cada partida é um pico de consumo. Já o <strong class="text-ink">Inverter</strong> trabalha em rotação variável: atinge a temperatura rápido e depois só mantém, gastando o mínimo.</p>
+      <p class="text-base leading-relaxed text-brand-muted">Os modelos com <strong class="text-ink">AI</strong> vão além: aprendem sua rotina e ajustam o funcionamento sozinhos. Resultado: um aparelho intermediário bem escolhido pode economizar mais do que um topo de linha mal dimensionado. Todos os modelos abaixo têm <strong class="text-ink">9.000 BTUs</strong>, ideais para quartos de até cerca de 15 m².</p>
     </section>
 
     <!-- TABELA COMPARATIVA -->
     <section id="comparativo" class="scroll-mt-28 py-8">
-      <h2 class="mb-1 text-2xl font-black text-white">Comparativo rápido: decida em 10 segundos</h2>
+      <h2 class="mb-1 text-2xl font-black text-ink">Comparativo rápido: decida em 10 segundos</h2>
       <p class="mb-4 text-sm text-brand-dim"><span class="md:hidden">Arraste a tabela para o lado →</span><span class="hidden md:inline">Os 5 modelos lado a lado.</span></p>
       <div class="glass overflow-x-auto snap-x scroll-smooth">
         <table class="w-full min-w-[640px] border-collapse text-left text-sm">
           <caption class="sr-only">Comparativo rápido dos 5 melhores ar-condicionados de 2026</caption>
-          <thead class="border-b border-white/10 bg-white/5 text-brand-yellow">
+          <thead class="border-b border-slate-200 bg-slate-50 text-orange-700">
             <tr>
-              <th scope="col" class="sticky left-0 z-10 bg-brand-elevated px-3 py-3 text-[11px] font-black uppercase tracking-wider">Modelo</th>
+              <th scope="col" class="sticky left-0 z-10 bg-white px-3 py-3 text-[11px] font-black uppercase tracking-wider">Modelo</th>
               <th scope="col" class="px-3 py-3 text-[11px] font-black uppercase tracking-wider">Ponto forte</th>
               <th scope="col" class="px-3 py-3 text-[11px] font-black uppercase tracking-wider">Consumo</th>
               <th scope="col" class="px-3 py-3 text-[11px] font-black uppercase tracking-wider"><span class="sr-only">Comprar</span></th>
             </tr>
           </thead>
           <tbody class="text-brand-muted">
-            <tr class="border-b border-white/5 bg-brand-yellow/5">
-              <th scope="row" class="sticky left-0 z-10 bg-brand-elevated px-3 py-4 align-middle font-semibold text-white">
-                <a href="#midea-ai-ecomaster" class="hover:text-brand-yellow"><span class="font-black text-brand-yellow">1.</span> Midea AI EcoMaster</a>
-                <span class="mt-1 block text-[10px] font-black uppercase text-emerald-400">🏆 Campeão</span>
+            <tr class="border-b border-slate-200 bg-orange-50">
+              <th scope="row" class="sticky left-0 z-10 bg-white px-3 py-4 align-middle font-semibold text-ink">
+                <a href="#midea-ai-ecomaster" class="hover:text-orange-600"><span class="font-black text-orange-700">1.</span> Midea AI EcoMaster</a>
+                <span class="mt-1 block text-[10px] font-black uppercase text-emerald-700">🏆 Campeão</span>
               </th>
               <td class="px-3 py-4 align-middle">Maior economia comprovada</td>
-              <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-400">●●●●●</span><span class="block text-xs">Muito baixo</span></td>
+              <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-700">●●●●●</span><span class="block text-xs">Muito baixo</span></td>
               <td class="whitespace-nowrap px-3 py-4 align-middle">
                 <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-gradient px-4 text-sm font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110">Ver Preço</a>
               </td>
             </tr>
-            <tr class="border-b border-white/5">
-              <th scope="row" class="sticky left-0 z-10 bg-brand-elevated px-3 py-4 align-middle font-semibold text-white">
-                <a href="#samsung-windfree-ai-pro" class="hover:text-brand-yellow"><span class="font-black text-brand-yellow">2.</span> Samsung WindFree AI Pro</a>
+            <tr class="border-b border-slate-200">
+              <th scope="row" class="sticky left-0 z-10 bg-white px-3 py-4 align-middle font-semibold text-ink">
+                <a href="#samsung-windfree-ai-pro" class="hover:text-orange-600"><span class="font-black text-orange-700">2.</span> Samsung WindFree AI Pro</a>
               </th>
               <td class="px-3 py-4 align-middle">Gela sem vento direto</td>
-              <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-400">●●●●●</span><span class="block text-xs">Muito baixo</span></td>
+              <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-700">●●●●●</span><span class="block text-xs">Muito baixo</span></td>
               <td class="whitespace-nowrap px-3 py-4 align-middle">
                 <a href="https://meli.la/2ZZLurG" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-gradient px-4 text-sm font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110">Ver Preço</a>
               </td>
             </tr>
-            <tr class="border-b border-white/5">
-              <th scope="row" class="sticky left-0 z-10 bg-brand-elevated px-3 py-4 align-middle font-semibold text-white">
-                <a href="#lg-dual-inverter-voice-ai" class="hover:text-brand-yellow"><span class="font-black text-brand-yellow">3.</span> LG Dual Inverter +AI</a>
+            <tr class="border-b border-slate-200">
+              <th scope="row" class="sticky left-0 z-10 bg-white px-3 py-4 align-middle font-semibold text-ink">
+                <a href="#lg-dual-inverter-voice-ai" class="hover:text-orange-600"><span class="font-black text-orange-700">3.</span> LG Dual Inverter +AI</a>
               </th>
               <td class="px-3 py-4 align-middle">Confiável + controle por voz</td>
-              <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-400">●●●●○</span><span class="block text-xs">Baixo</span></td>
+              <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-700">●●●●○</span><span class="block text-xs">Baixo</span></td>
               <td class="whitespace-nowrap px-3 py-4 align-middle">
                 <a href="https://meli.la/1dShFqo" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-gradient px-4 text-sm font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110">Ver Preço</a>
               </td>
             </tr>
-            <tr class="border-b border-white/5">
-              <th scope="row" class="sticky left-0 z-10 bg-brand-elevated px-3 py-4 align-middle font-semibold text-white">
-                <a href="#gree-g-side" class="hover:text-brand-yellow"><span class="font-black text-brand-yellow">4.</span> Gree G-Side</a>
+            <tr class="border-b border-slate-200">
+              <th scope="row" class="sticky left-0 z-10 bg-white px-3 py-4 align-middle font-semibold text-ink">
+                <a href="#gree-g-side" class="hover:text-orange-600"><span class="font-black text-orange-700">4.</span> Gree G-Side</a>
               </th>
               <td class="px-3 py-4 align-middle">Robusto, quente e frio</td>
-              <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-400">●●●●○</span><span class="block text-xs">Baixo</span></td>
+              <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-700">●●●●○</span><span class="block text-xs">Baixo</span></td>
               <td class="whitespace-nowrap px-3 py-4 align-middle">
                 <a href="https://meli.la/1u6ycm8" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-gradient px-4 text-sm font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110">Ver Preço</a>
               </td>
             </tr>
             <tr>
-              <th scope="row" class="sticky left-0 z-10 bg-brand-elevated px-3 py-4 align-middle font-semibold text-white">
-                <a href="#elgin-eco-inverter-iii" class="hover:text-brand-yellow"><span class="font-black text-brand-yellow">5.</span> Elgin Eco Inverter III</a>
+              <th scope="row" class="sticky left-0 z-10 bg-white px-3 py-4 align-middle font-semibold text-ink">
+                <a href="#elgin-eco-inverter-iii" class="hover:text-orange-600"><span class="font-black text-orange-700">5.</span> Elgin Eco Inverter III</a>
               </th>
               <td class="px-3 py-4 align-middle">Inverter + Wi-Fi mais acessível</td>
-              <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-400">●●●●○</span><span class="block text-xs">Baixo</span></td>
+              <td class="px-3 py-4 align-middle"><span class="font-bold text-emerald-700">●●●●○</span><span class="block text-xs">Baixo</span></td>
               <td class="whitespace-nowrap px-3 py-4 align-middle">
                 <a href="https://meli.la/24WS5Ui" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="inline-flex h-11 items-center rounded-lg bg-brand-gradient px-4 text-sm font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02] hover:brightness-110">Ver Preço</a>
               </td>
@@ -447,42 +440,42 @@
 
     <!-- REVIEWS INDIVIDUAIS -->
     <section class="space-y-14 py-10">
-      <h2 class="text-center text-2xl font-black uppercase tracking-tight text-white sm:text-3xl">Review completo dos 5 modelos</h2>
+      <h2 class="text-center text-2xl font-black uppercase tracking-tight text-ink sm:text-3xl">Review completo dos 5 modelos</h2>
 
       <!-- 1. MIDEA -->
       <article id="midea-ai-ecomaster" class="scroll-mt-28 mx-auto max-w-4xl space-y-5">
-        <div class="glass overflow-hidden border-emerald-400/50 shadow-glow-green">
+        <div class="glass overflow-hidden border-emerald-300 shadow-glow-green">
           <div class="grid grid-cols-1 items-stretch md:grid-cols-[280px_1fr]">
             <div class="relative flex min-h-[220px] items-center justify-center bg-white p-5">
               <img src="https://http2.mlstatic.com/D_NQ_NP_838481-MLA99949573633_112025-O.webp" alt="Ar Condicionado Split 9.000 Btus Inverter AI EcoMaster Q/F Midea" referrerpolicy="no-referrer" loading="lazy" class="max-h-48 w-full object-contain">
               <span class="absolute bottom-2 right-2 rounded bg-black/50 px-1.5 py-0.5 text-[9px] text-white">Fonte: Mercado Livre</span>
-              <span class="absolute left-0 top-0 rounded-br-lg bg-emerald-600 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-white shadow">💰 Maior economia comprovada</span>
+              <span class="absolute left-0 top-0 rounded-br-lg bg-emerald-700 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-white shadow">💰 Maior economia comprovada</span>
             </div>
             <div class="flex flex-col justify-center space-y-3 p-5 md:p-6">
               <div class="flex items-center gap-3">
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-lg font-black text-black">1</span>
-                <h3 class="text-xl font-black leading-snug text-white">Midea AI EcoMaster Inverter 9.000 BTUs Q/F</h3>
+                <h3 class="text-xl font-black leading-snug text-ink">Midea AI EcoMaster Inverter 9.000 BTUs Q/F</h3>
               </div>
-              <p class="text-sm leading-relaxed text-brand-muted">O aparelho que mais entrega economia por real investido. O modo <strong class="text-white">AI Eco</strong> monitora o ambiente e reduz a rotação do compressor assim que o quarto atinge a temperatura, cortando o desperdício que você nem percebe.</p>
+              <p class="text-sm leading-relaxed text-brand-muted">O aparelho que mais entrega economia por real investido. O modo <strong class="text-ink">AI Eco</strong> monitora o ambiente e reduz a rotação do compressor assim que o quarto atinge a temperatura, cortando o desperdício que você nem percebe.</p>
             </div>
           </div>
         </div>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-3">
-          <li class="flex items-center gap-2 rounded-xl border border-brand-neon/50 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-brand-neon shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-300 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700 shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
         </ul>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div class="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-5">
-            <p class="mb-3 font-black text-white">Prós</p>
+          <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+            <p class="mb-3 font-black text-ink">Prós</p>
             <ul class="space-y-2 text-sm text-brand-muted">
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Economia automática com inteligência artificial</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Quente e frio pelo preço de muitos "só frio"</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Melhor custo-benefício do ranking</li>
             </ul>
           </div>
-          <div class="rounded-2xl border border-rose-400/20 bg-rose-400/10 p-5">
-            <p class="mb-3 font-black text-white">Contras</p>
+          <div class="rounded-2xl border border-rose-200 bg-rose-50 p-5">
+            <p class="mb-3 font-black text-ink">Contras</p>
             <ul class="space-y-2 text-sm text-brand-muted">
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400"></span>Garantia estendida exige instalação credenciada</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400"></span>Design discreto, sem grandes firulas</li>
@@ -504,28 +497,28 @@
             <div class="flex flex-col justify-center space-y-3 p-5 md:p-6">
               <div class="flex items-center gap-3">
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-lg font-black text-black">2</span>
-                <h3 class="text-xl font-black leading-snug text-white">Samsung WindFree AI Pro Inverter 9.000 BTUs</h3>
+                <h3 class="text-xl font-black leading-snug text-ink">Samsung WindFree AI Pro Inverter 9.000 BTUs</h3>
               </div>
-              <p class="text-sm leading-relaxed text-brand-muted">Odeia acordar com o vento gelado batendo no rosto? O <strong class="text-white">WindFree</strong> resfria rápido e depois passa a liberar o ar por milhares de microfuros, sem corrente de vento direta. O modo AI ajusta o funcionamento à sua rotina pelo app SmartThings.</p>
+              <p class="text-sm leading-relaxed text-brand-muted">Odeia acordar com o vento gelado batendo no rosto? O <strong class="text-ink">WindFree</strong> resfria rápido e depois passa a liberar o ar por milhares de microfuros, sem corrente de vento direta. O modo AI ajusta o funcionamento à sua rotina pelo app SmartThings.</p>
             </div>
           </div>
         </div>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-3">
-          <li class="flex items-center gap-2 rounded-xl border border-brand-neon/50 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-brand-neon shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-300 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700 shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
         </ul>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div class="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-5">
-            <p class="mb-3 font-black text-white">Prós</p>
+          <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+            <p class="mb-3 font-black text-ink">Prós</p>
             <ul class="space-y-2 text-sm text-brand-muted">
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Conforto sem vento direto no corpo</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Wi-Fi e controle pelo celular</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Marca com assistência em todo o Brasil</li>
             </ul>
           </div>
-          <div class="rounded-2xl border border-rose-400/20 bg-rose-400/10 p-5">
-            <p class="mb-3 font-black text-white">Contras</p>
+          <div class="rounded-2xl border border-rose-200 bg-rose-50 p-5">
+            <p class="mb-3 font-black text-ink">Contras</p>
             <ul class="space-y-2 text-sm text-brand-muted">
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400"></span>O anúncio indicado é só frio (sem aquecimento)</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400"></span>O mais caro do Top 5</li>
@@ -547,28 +540,28 @@
             <div class="flex flex-col justify-center space-y-3 p-5 md:p-6">
               <div class="flex items-center gap-3">
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-lg font-black text-black">3</span>
-                <h3 class="text-xl font-black leading-snug text-white">LG Dual Inverter Voice +AI 9.000 BTUs Q/F</h3>
+                <h3 class="text-xl font-black leading-snug text-ink">LG Dual Inverter Voice +AI 9.000 BTUs Q/F</h3>
               </div>
-              <p class="text-sm leading-relaxed text-brand-muted">A escolha de quem não quer dor de cabeça. O compressor <strong class="text-white">Dual Inverter</strong> de dois rotores vibra menos, faz menos barulho e dura mais. Com a IA e o controle por voz, você liga, desliga e ajusta a temperatura sem procurar o controle remoto.</p>
+              <p class="text-sm leading-relaxed text-brand-muted">A escolha de quem não quer dor de cabeça. O compressor <strong class="text-ink">Dual Inverter</strong> de dois rotores vibra menos, faz menos barulho e dura mais. Com a IA e o controle por voz, você liga, desliga e ajusta a temperatura sem procurar o controle remoto.</p>
             </div>
           </div>
         </div>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-3">
-          <li class="flex items-center gap-2 rounded-xl border border-brand-neon/50 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-brand-neon shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-300 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700 shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
         </ul>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div class="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-5">
-            <p class="mb-3 font-black text-white">Prós</p>
+          <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+            <p class="mb-3 font-black text-ink">Prós</p>
             <ul class="space-y-2 text-sm text-brand-muted">
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Compressor Dual Inverter, referência em durabilidade</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Controle por voz e pelo app LG ThinQ</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Quente e frio</li>
             </ul>
           </div>
-          <div class="rounded-2xl border border-rose-400/20 bg-rose-400/10 p-5">
-            <p class="mb-3 font-black text-white">Contras</p>
+          <div class="rounded-2xl border border-rose-200 bg-rose-50 p-5">
+            <p class="mb-3 font-black text-ink">Contras</p>
             <ul class="space-y-2 text-sm text-brand-muted">
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400"></span>Recursos de voz dependem de Wi-Fi estável</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400"></span>Preço acima do Midea</li>
@@ -590,28 +583,28 @@
             <div class="flex flex-col justify-center space-y-3 p-5 md:p-6">
               <div class="flex items-center gap-3">
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-lg font-black text-black">4</span>
-                <h3 class="text-xl font-black leading-snug text-white">Gree G-Side Auto Inverter 9.000 BTUs Q/F</h3>
+                <h3 class="text-xl font-black leading-snug text-ink">Gree G-Side Auto Inverter 9.000 BTUs Q/F</h3>
               </div>
-              <p class="text-sm leading-relaxed text-brand-muted">A Gree é a maior fabricante de ar-condicionado do mundo, e o G-Side mostra por quê: construção robusta, Inverter eficiente e <strong class="text-white">quente e frio</strong> para usar o ano inteiro. Uma escolha segura para quem quer gelar bem sem complicação.</p>
+              <p class="text-sm leading-relaxed text-brand-muted">A Gree é a maior fabricante de ar-condicionado do mundo, e o G-Side mostra por quê: construção robusta, Inverter eficiente e <strong class="text-ink">quente e frio</strong> para usar o ano inteiro. Uma escolha segura para quem quer gelar bem sem complicação.</p>
             </div>
           </div>
         </div>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-3">
-          <li class="flex items-center gap-2 rounded-xl border border-brand-neon/50 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-brand-neon shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-300 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700 shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de 10 anos no compressor*</li>
         </ul>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div class="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-5">
-            <p class="mb-3 font-black text-white">Prós</p>
+          <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+            <p class="mb-3 font-black text-ink">Prós</p>
             <ul class="space-y-2 text-sm text-brand-muted">
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Fabricante líder mundial em climatização</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Quente e frio para o ano todo</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Entre os mais vendidos da categoria</li>
             </ul>
           </div>
-          <div class="rounded-2xl border border-rose-400/20 bg-rose-400/10 p-5">
-            <p class="mb-3 font-black text-white">Contras</p>
+          <div class="rounded-2xl border border-rose-200 bg-rose-50 p-5">
+            <p class="mb-3 font-black text-ink">Contras</p>
             <ul class="space-y-2 text-sm text-brand-muted">
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400"></span>Menos recursos de IA que Midea e LG</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400"></span>Garantia estendida exige instalador credenciado Gree</li>
@@ -633,28 +626,28 @@
             <div class="flex flex-col justify-center space-y-3 p-5 md:p-6">
               <div class="flex items-center gap-3">
                 <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-lg font-black text-black">5</span>
-                <h3 class="text-xl font-black leading-snug text-white">Elgin Eco Inverter III Wi-Fi 9.000 BTUs Q/F</h3>
+                <h3 class="text-xl font-black leading-snug text-ink">Elgin Eco Inverter III Wi-Fi 9.000 BTUs Q/F</h3>
               </div>
-              <p class="text-sm leading-relaxed text-brand-muted">A porta de entrada para sair do ar-condicionado convencional. Você leva <strong class="text-white">Inverter, Wi-Fi, gás R-32</strong> (mais eficiente e menos poluente) e quente e frio por um dos menores preços do ranking. Ideal para quem quer economia sem gastar muito na compra.</p>
+              <p class="text-sm leading-relaxed text-brand-muted">A porta de entrada para sair do ar-condicionado convencional. Você leva <strong class="text-ink">Inverter, Wi-Fi, gás R-32</strong> (mais eficiente e menos poluente) e quente e frio por um dos menores preços do ranking. Ideal para quem quer economia sem gastar muito na compra.</p>
             </div>
           </div>
         </div>
         <ul class="grid grid-cols-1 gap-2 sm:grid-cols-3">
-          <li class="flex items-center gap-2 rounded-xl border border-brand-neon/50 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-brand-neon shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
-          <li class="flex items-center gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-3 text-sm font-semibold text-emerald-300"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de fábrica no compressor**</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-300 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700 shadow-glow-green animate-pulse-soft"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>💡 Até 70% de economia (Inverter)</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>Silencioso para dormir</li>
+          <li class="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-3 text-sm font-semibold text-emerald-700"><svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>Garantia de fábrica no compressor**</li>
         </ul>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <div class="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-5">
-            <p class="mb-3 font-black text-white">Prós</p>
+          <div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+            <p class="mb-3 font-black text-ink">Prós</p>
             <ul class="space-y-2 text-sm text-brand-muted">
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Inverter com Wi-Fi por preço de entrada</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Gás R-32, mais eficiente</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>Quente e frio</li>
             </ul>
           </div>
-          <div class="rounded-2xl border border-rose-400/20 bg-rose-400/10 p-5">
-            <p class="mb-3 font-black text-white">Contras</p>
+          <div class="rounded-2xl border border-rose-200 bg-rose-50 p-5">
+            <p class="mb-3 font-black text-ink">Contras</p>
             <ul class="space-y-2 text-sm text-brand-muted">
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400"></span>Sem os recursos de IA dos concorrentes</li>
               <li class="flex items-start gap-2"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400"></span>Rede de assistência menor que LG e Samsung</li>
@@ -669,31 +662,31 @@
 
     <!-- GUIA BTUs -->
     <section id="guia-btus" class="scroll-mt-28 mx-auto max-w-3xl space-y-5 py-10">
-      <h2 class="text-2xl font-black text-white">Guia rápido: quantos BTUs o seu quarto precisa?</h2>
+      <h2 class="text-2xl font-black text-ink">Guia rápido: quantos BTUs o seu quarto precisa?</h2>
       <p class="text-base leading-relaxed text-brand-muted">Ar-condicionado fraco demais trabalha no máximo o tempo todo e gasta mais. Forte demais liga e desliga sem parar. Acertar os BTUs é o que garante a economia. Use a regra prática:</p>
       <div class="glass space-y-3 p-5">
-        <p class="text-sm font-black uppercase tracking-wider text-brand-yellow">A conta em 3 passos</p>
+        <p class="text-sm font-black uppercase tracking-wider text-orange-700">A conta em 3 passos</p>
         <ol class="space-y-3 text-sm text-brand-muted">
-          <li class="flex gap-3"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-xs font-black text-black">1</span><span><strong class="text-white">600 BTUs por m²</strong> do cômodo (até 2 pessoas).</span></li>
-          <li class="flex gap-3"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-xs font-black text-black">2</span><span>Some <strong class="text-white">600 BTUs</strong> para cada pessoa a mais e para cada aparelho que esquenta (TV, computador).</span></li>
-          <li class="flex gap-3"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-xs font-black text-black">3</span><span>Bate <strong class="text-white">sol da tarde</strong>? Use 800 BTUs por m² em vez de 600.</span></li>
+          <li class="flex gap-3"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-xs font-black text-black">1</span><span><strong class="text-ink">600 BTUs por m²</strong> do cômodo (até 2 pessoas).</span></li>
+          <li class="flex gap-3"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-xs font-black text-black">2</span><span>Some <strong class="text-ink">600 BTUs</strong> para cada pessoa a mais e para cada aparelho que esquenta (TV, computador).</span></li>
+          <li class="flex gap-3"><span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-yellow text-xs font-black text-black">3</span><span>Bate <strong class="text-ink">sol da tarde</strong>? Use 800 BTUs por m² em vez de 600.</span></li>
         </ol>
-        <p class="rounded-xl bg-white/5 p-3 text-sm text-brand-muted">Exemplo: quarto de 12 m² com 2 pessoas → 12 × 600 = <strong class="text-white">7.200 BTUs</strong>. Um aparelho de <strong class="text-brand-yellow">9.000 BTUs</strong> resolve com folga.</p>
+        <p class="rounded-xl bg-slate-50 p-3 text-sm text-brand-muted">Exemplo: quarto de 12 m² com 2 pessoas → 12 × 600 = <strong class="text-ink">7.200 BTUs</strong>. Um aparelho de <strong class="text-orange-700">9.000 BTUs</strong> resolve com folga.</p>
       </div>
       <div class="glass overflow-hidden">
         <table class="w-full border-collapse text-left text-sm">
           <caption class="sr-only">Tabela de BTUs por tamanho de cômodo</caption>
-          <thead class="border-b border-white/10 bg-white/5 text-brand-yellow">
+          <thead class="border-b border-slate-200 bg-slate-50 text-orange-700">
             <tr>
               <th scope="col" class="px-4 py-3 text-[11px] font-black uppercase tracking-wider">Tamanho do cômodo</th>
               <th scope="col" class="px-4 py-3 text-[11px] font-black uppercase tracking-wider">BTUs indicados</th>
             </tr>
           </thead>
           <tbody class="text-brand-muted">
-            <tr class="border-b border-white/5 bg-brand-yellow/5"><td class="px-4 py-3">Até 15 m²</td><td class="px-4 py-3 font-black text-brand-yellow">9.000 BTUs ← todos deste Top 5</td></tr>
-            <tr class="border-b border-white/5"><td class="px-4 py-3">15 a 20 m²</td><td class="px-4 py-3 font-bold text-white">12.000 BTUs</td></tr>
-            <tr class="border-b border-white/5"><td class="px-4 py-3">20 a 30 m²</td><td class="px-4 py-3 font-bold text-white">18.000 BTUs</td></tr>
-            <tr><td class="px-4 py-3">30 a 40 m²</td><td class="px-4 py-3 font-bold text-white">24.000 BTUs</td></tr>
+            <tr class="border-b border-slate-200 bg-orange-50"><td class="px-4 py-3">Até 15 m²</td><td class="px-4 py-3 font-black text-orange-700">9.000 BTUs ← todos deste Top 5</td></tr>
+            <tr class="border-b border-slate-200"><td class="px-4 py-3">15 a 20 m²</td><td class="px-4 py-3 font-bold text-ink">12.000 BTUs</td></tr>
+            <tr class="border-b border-slate-200"><td class="px-4 py-3">20 a 30 m²</td><td class="px-4 py-3 font-bold text-ink">18.000 BTUs</td></tr>
+            <tr><td class="px-4 py-3">30 a 40 m²</td><td class="px-4 py-3 font-bold text-ink">24.000 BTUs</td></tr>
           </tbody>
         </table>
       </div>
@@ -702,36 +695,36 @@
 
     <!-- FAQ QUEBRA-OBJEÇÕES -->
     <section id="faq" class="scroll-mt-28 mx-auto max-w-3xl space-y-3 pb-10 pt-6">
-      <h2 class="mb-2 text-center text-2xl font-black text-white">Ainda com dúvida? A gente responde.</h2>
+      <h2 class="mb-2 text-center text-2xl font-black text-ink">Ainda com dúvida? A gente responde.</h2>
       <p class="mb-6 text-center text-sm text-brand-dim">As perguntas que todo mundo faz antes de comprar.</p>
 
       <details class="glass group p-5" open>
-        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-white">⚡ Qual a voltagem?<svg class="faq-chevron h-5 w-5 shrink-0 text-brand-yellow transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <p class="pt-3 text-sm leading-relaxed text-brand-muted">Os anúncios selecionados são, em sua maioria, <strong class="text-white">220V</strong>. Alguns modelos também existem em 127V. Antes de finalizar, confira a voltagem escolhida no anúncio e a tomada do cômodo onde o aparelho vai ficar. Na dúvida, o instalador confirma em segundos.</p>
+        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-ink">⚡ Qual a voltagem?<svg class="faq-chevron h-5 w-5 shrink-0 text-orange-700 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <p class="pt-3 text-sm leading-relaxed text-brand-muted">Os anúncios selecionados são, em sua maioria, <strong class="text-ink">220V</strong>. Alguns modelos também existem em 127V. Antes de finalizar, confira a voltagem escolhida no anúncio e a tomada do cômodo onde o aparelho vai ficar. Na dúvida, o instalador confirma em segundos.</p>
       </details>
       <details class="glass group p-5">
-        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-white">🧱 Precisa quebrar a parede?<svg class="faq-chevron h-5 w-5 shrink-0 text-brand-yellow transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <p class="pt-3 text-sm leading-relaxed text-brand-muted"><strong class="text-white">Não.</strong> A instalação de um split hi-wall exige só um furo de cerca de 6 a 7 cm para passar a tubulação e o dreno até a unidade externa. Não é obra: um instalador faz o serviço em poucas horas, sem sujeira de reforma.</p>
+        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-ink">🧱 Precisa quebrar a parede?<svg class="faq-chevron h-5 w-5 shrink-0 text-orange-700 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <p class="pt-3 text-sm leading-relaxed text-brand-muted"><strong class="text-ink">Não.</strong> A instalação de um split hi-wall exige só um furo de cerca de 6 a 7 cm para passar a tubulação e o dreno até a unidade externa. Não é obra: um instalador faz o serviço em poucas horas, sem sujeira de reforma.</p>
       </details>
       <details class="glass group p-5">
-        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-white">💡 Inverter realmente economiza na conta de energia?<svg class="faq-chevron h-5 w-5 shrink-0 text-brand-yellow transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <p class="pt-3 text-sm leading-relaxed text-brand-muted"><strong class="text-white">Sim, e é a principal razão para escolher um.</strong> O convencional liga e desliga o compressor o tempo todo, com picos de consumo. O Inverter mantém o compressor em rotação variável, usando só a força necessária. Os fabricantes divulgam economia de <strong class="text-white">até 70%</strong> em relação aos convencionais. Com uso diário, a diferença na fatura ajuda a pagar o aparelho ao longo dos anos.</p>
+        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-ink">💡 Inverter realmente economiza na conta de energia?<svg class="faq-chevron h-5 w-5 shrink-0 text-orange-700 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <p class="pt-3 text-sm leading-relaxed text-brand-muted"><strong class="text-ink">Sim, e é a principal razão para escolher um.</strong> O convencional liga e desliga o compressor o tempo todo, com picos de consumo. O Inverter mantém o compressor em rotação variável, usando só a força necessária. Os fabricantes divulgam economia de <strong class="text-ink">até 70%</strong> em relação aos convencionais. Com uso diário, a diferença na fatura ajuda a pagar o aparelho ao longo dos anos.</p>
       </details>
       <details class="glass group p-5">
-        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-white">🔧 Quanto custa a instalação?<svg class="faq-chevron h-5 w-5 shrink-0 text-brand-yellow transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <p class="pt-3 text-sm leading-relaxed text-brand-muted">Varia conforme a cidade e a distância entre as unidades interna e externa. Peça orçamento a uma <strong class="text-white">empresa credenciada pela marca</strong>: além de evitar problemas, a instalação credenciada costuma ser exigida para manter a garantia estendida do compressor. Guarde a nota fiscal do serviço.</p>
+        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-ink">🔧 Quanto custa a instalação?<svg class="faq-chevron h-5 w-5 shrink-0 text-orange-700 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <p class="pt-3 text-sm leading-relaxed text-brand-muted">Varia conforme a cidade e a distância entre as unidades interna e externa. Peça orçamento a uma <strong class="text-ink">empresa credenciada pela marca</strong>: além de evitar problemas, a instalação credenciada costuma ser exigida para manter a garantia estendida do compressor. Guarde a nota fiscal do serviço.</p>
       </details>
       <details class="glass group p-5">
-        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-white">😴 Faz barulho para dormir?<svg class="faq-chevron h-5 w-5 shrink-0 text-brand-yellow transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <p class="pt-3 text-sm leading-relaxed text-brand-muted">Os Inverter são bem mais silenciosos que os convencionais, porque o compressor não fica ligando e desligando. Todos os modelos da lista têm <strong class="text-white">modo noturno (sleep)</strong>, que reduz a ventilação e ajusta a temperatura durante a madrugada. Quem tem sono leve costuma preferir o Samsung WindFree, que elimina o vento direto.</p>
+        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-ink">😴 Faz barulho para dormir?<svg class="faq-chevron h-5 w-5 shrink-0 text-orange-700 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <p class="pt-3 text-sm leading-relaxed text-brand-muted">Os Inverter são bem mais silenciosos que os convencionais, porque o compressor não fica ligando e desligando. Todos os modelos da lista têm <strong class="text-ink">modo noturno (sleep)</strong>, que reduz a ventilação e ajusta a temperatura durante a madrugada. Quem tem sono leve costuma preferir o Samsung WindFree, que elimina o vento direto.</p>
       </details>
       <details class="glass group p-5">
-        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-white">🛡️ Como funciona a garantia de 10 anos?<svg class="faq-chevron h-5 w-5 shrink-0 text-brand-yellow transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <p class="pt-3 text-sm leading-relaxed text-brand-muted">Samsung, LG, Gree e Midea oferecem <strong class="text-white">10 anos de garantia no compressor</strong> dos modelos Inverter, geralmente condicionada à instalação por empresa credenciada e à nota fiscal do serviço. Sem isso, a cobertura pode cair para a garantia legal. Para a Elgin, confira o prazo no anúncio.</p>
+        <summary class="flex cursor-pointer items-center justify-between gap-4 font-bold text-ink">🛡️ Como funciona a garantia de 10 anos?<svg class="faq-chevron h-5 w-5 shrink-0 text-orange-700 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <p class="pt-3 text-sm leading-relaxed text-brand-muted">Samsung, LG, Gree e Midea oferecem <strong class="text-ink">10 anos de garantia no compressor</strong> dos modelos Inverter, geralmente condicionada à instalação por empresa credenciada e à nota fiscal do serviço. Sem isso, a cobertura pode cair para a garantia legal. Para a Elgin, confira o prazo no anúncio.</p>
       </details>
 
-      <div class="glass mt-8 space-y-4 border-brand-yellow/40 p-6 text-center">
-        <p class="text-lg font-black text-white">Resumo: se é para escolher um só, vá de <span class="text-brand-yellow">Midea AI EcoMaster</span>.</p>
+      <div class="glass mt-8 space-y-4 border-orange-300 p-6 text-center">
+        <p class="text-lg font-black text-ink">Resumo: se é para escolher um só, vá de <span class="text-orange-700">Midea AI EcoMaster</span>.</p>
         <p class="text-sm text-brand-muted">Maior economia, quente e frio e um dos menores preços do Top 5.</p>
         <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-16 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-4 text-base font-black sm:px-6 sm:text-lg text-black shadow-glow-lg transition-transform duration-300 hover:scale-[1.02] hover:brightness-110 active:scale-[0.99] md:mx-auto md:max-w-md">Ver Preço no Mercado Livre →</a>
       </div>
@@ -739,11 +732,11 @@
   </main>
 
   <!-- CTA fixo mobile -->
-  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-brand-elevated/95 p-3 backdrop-blur-md md:hidden">
+  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/95 p-3 backdrop-blur-md md:hidden">
     <a href="https://meli.la/19UGnqv" target="_blank" rel="sponsored noopener noreferrer" onclick="gtag('event', 'clique_afiliado_ml'); gtag('event', 'conversion', {'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE'});" class="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-gradient px-4 text-base font-black text-black shadow-glow transition-transform duration-300 hover:scale-[1.02]">🏆 Ver preço do campeão →</a>
   </div>
 
-  <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
+  <footer class="mt-8 border-t border-brand-border bg-white px-4 py-10">
     <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
       <div>
         <a href="/" class="mb-3 flex items-center gap-3">
@@ -755,30 +748,30 @@
       <div>
         <h4 class="mb-3 text-sm font-bold">Navegação</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="/" class="hover:text-brand-yellow">Home</a>
-          <a href="/categorias" class="hover:text-brand-yellow">Rankings</a>
-          <a href="/reviews" class="hover:text-brand-yellow">Reviews</a>
-          <a href="/#metodologia" class="hover:text-brand-yellow">Metodologia</a>
+          <a href="/" class="hover:text-orange-600">Home</a>
+          <a href="/categorias" class="hover:text-orange-600">Rankings</a>
+          <a href="/reviews" class="hover:text-orange-600">Reviews</a>
+          <a href="/#metodologia" class="hover:text-orange-600">Metodologia</a>
         </div>
       </div>
       <div>
         <h4 class="mb-3 text-sm font-bold">Categorias</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="/melhores-bicicletas-eletricas" class="hover:text-brand-yellow">Bicicletas Elétricas</a>
-          <a href="/melhores-patinetes-eletricos" class="hover:text-brand-yellow">Patinetes Elétricos</a>
+          <a href="/melhores-bicicletas-eletricas" class="hover:text-orange-600">Bicicletas Elétricas</a>
+          <a href="/melhores-patinetes-eletricos" class="hover:text-orange-600">Patinetes Elétricos</a>
         </div>
       </div>
       <div>
         <h4 class="mb-3 text-sm font-bold">Legal</h4>
         <div class="flex flex-col gap-2 text-sm text-brand-dim">
-          <a href="/sobre" class="hover:text-brand-yellow">Sobre</a>
-          <a href="/privacidade" class="hover:text-brand-yellow">Privacidade</a>
-          <a href="/trocas" class="hover:text-brand-yellow">Trocas e Devoluções</a>
-          <a href="/contato" class="hover:text-brand-yellow">Contato</a>
+          <a href="/sobre" class="hover:text-orange-600">Sobre</a>
+          <a href="/privacidade" class="hover:text-orange-600">Privacidade</a>
+          <a href="/trocas" class="hover:text-orange-600">Trocas e Devoluções</a>
+          <a href="/contato" class="hover:text-orange-600">Contato</a>
         </div>
       </div>
     </div>
-    <div class="mx-auto mt-8 max-w-6xl border-t border-white/10 pt-4 text-xs text-brand-dim">
+    <div class="mx-auto mt-8 max-w-6xl border-t border-slate-200 pt-4 text-xs text-brand-dim">
       © <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.
     </div>
   </footer>

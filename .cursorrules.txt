@@ -1,13 +1,14 @@
 # Regras do Projeto: tudodemelhor.com.br
 
 ## 1. Identidade Visual (CSS / Design System)
-- Cor de Fundo Principal: `#232F3E` (Charcoal / Midnight Blue).
-- Cor do Card/Conteúdo: `#1B2530` com bordas sutis em `#37475A`.
-- Botões de Ação Principal (CTA / Comprar): `#FFE600` (Amarelo Mercado Livre) com texto escuro `#0F1111` em negrito.
-- Destaques / Selos de Desconto / Preço: `#FF9900` (Laranja Amazon).
-- Textos: Títulos em `#FFFFFF`, corpo de texto em `#D5D9D9`.
+- Tema claro em todo o site. Fundo principal: `#F8FAFC` (`bg-brand-bg`) com gradientes suaves em laranja.
+- Cards/Conteúdo: branco `#FFFFFF` com borda `#E2E8F0` e sombra suave (`.glass` = `bg-white border border-slate-200 rounded-2xl shadow-soft`).
+- Botões de Ação Principal (CTA / Comprar): amarelo `#FACC15` (`bg-brand-yellow`) com texto preto em negrito.
+- Laranja de destaque (`brand.orange` = `#EA580C`): `text-orange-600` só em títulos de 24px ou mais; textos menores, links e kickers em `text-orange-700` (contraste AA no fundo claro); hovers em `orange-500`; bordas ativas em `border-orange-500`.
+- Textos: títulos em `#1E293B` (`text-ink`), corpo em `#475569` (`text-brand-muted`), apoio em `#64748B` (`text-brand-dim`).
+- Selos de preço/desconto: verde esmeralda (`bg-emerald-50`, `border-emerald-200`, `text-emerald-700`).
 - Fontes: Sans-serif moderna e legível (Inter, System-UI).
-- Elementos: Use `backdrop-blur-md bg-brand-card border border-white/10 rounded-2xl` para blocos principais (.glass).
+- Não use `text-white`, `border-white/xx` nem `bg-white/5` fora de elementos com fundo escuro sólido (selos, overlays sobre fotos).
 
 ## 2. Estrutura de Páginas de Review (Arquitetura Técnica & Conversão)
 Sempre que criar uma página de produto ou comparativo, siga este esqueleto HTML estrito:

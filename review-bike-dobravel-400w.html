@@ -15,48 +15,48 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{brand:{bg:'#232F3E',yellow:'#FFE600',orange:'#FF9900',card:'rgba(27, 37, 48, 0.7)',elevated:'#1B2530',border:'#37475A',muted:'#D5D9D9',dim:'#AAB3BD'}},fontFamily:{sans:['Inter','system-ui','sans-serif']},boxShadow:{glow:'0 0 15px rgba(255, 230, 0, 0.4)','glow-lg':'0 0 28px rgba(255, 230, 0, 0.45)','glow-orange':'0 0 20px rgba(255, 153, 0, 0.35)','glow-emerald':'0 0 24px rgba(16, 185, 129, 0.3)','neon-emerald':'0 0 12px rgba(52, 211, 153, 0.55), inset 0 0 8px rgba(52, 211, 153, 0.15)'},backgroundImage:{'brand-gradient':'linear-gradient(135deg, #FFE600 0%, #FF9900 100%)'}}}};</script>
-  <style type="text/tailwindcss">@layer utilities{.glass{@apply bg-brand-card backdrop-blur-md border border-white/10 rounded-2xl;}}</style>
-  <style>body{background-image:radial-gradient(ellipse 70% 45% at 85% 10%,rgba(255,153,0,.14),transparent 55%),radial-gradient(ellipse 50% 40% at 10% 85%,rgba(255,230,0,.07),transparent 50%),radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:auto,auto,18px 18px;background-attachment:fixed} @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } } .animate-marquee { animation: marquee 25s linear infinite; width: max-content; } .animate-marquee:hover, .animate-marquee:active { animation-play-state: paused; }
+  <script>tailwind.config={theme:{extend:{colors:{ink:'#1E293B',brand:{bg:'#F8FAFC',yellow:'#FACC15',orange:'#EA580C',card:'#FFFFFF',elevated:'#FFFFFF',border:'#E2E8F0',muted:'#475569',dim:'#64748B'}},fontFamily:{sans:['Inter','system-ui','sans-serif']},boxShadow:{soft:'0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 30px -14px rgba(15, 23, 42, 0.16)',glow:'0 8px 20px -8px rgba(234, 179, 8, 0.6)','glow-lg':'0 14px 32px -12px rgba(234, 88, 12, 0.5)','glow-orange':'0 6px 16px -6px rgba(234, 88, 12, 0.35)','glow-emerald':'0 1px 2px rgba(15, 23, 42, 0.04), 0 14px 32px -16px rgba(16, 185, 129, 0.45)','neon-emerald':'0 0 0 3px rgba(16, 185, 129, 0.08)'},backgroundImage:{'brand-gradient':'linear-gradient(135deg, #FACC15 0%, #EA580C 100%)'}}}};</script>
+  <style type="text/tailwindcss">@layer utilities{.glass{@apply bg-white backdrop-blur-md border border-slate-200 rounded-2xl shadow-soft;}}</style>
+  <style>body{background-color:#F8FAFC;background-image:radial-gradient(ellipse 65% 40% at 100% 0%,rgba(251,146,60,.16),transparent 60%),radial-gradient(ellipse 55% 38% at 0% 100%,rgba(234,88,12,.07),transparent 55%),radial-gradient(rgba(15,23,42,.035) 1px,transparent 1px);background-size:auto,auto,20px 20px;background-attachment:fixed} @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } } .animate-marquee { animation: marquee 25s linear infinite; width: max-content; } .animate-marquee:hover, .animate-marquee:active { animation-play-state: paused; }
     .btn-shine { position: relative; overflow: hidden; isolation: isolate; }
     .btn-shine::after { content: ''; position: absolute; top: 0; left: -75%; z-index: -1; width: 50%; height: 100%; background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.75), transparent); transform: skewX(-20deg); animation: shine 2.8s ease-in-out infinite; }
     @keyframes shine { 0% { left: -75%; } 60%, 100% { left: 130%; } }
     @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
     .pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
-    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 6px rgba(52, 211, 153, 0.35), 0 0 0 rgba(255, 230, 0, 0); } 50% { box-shadow: 0 0 18px rgba(52, 211, 153, 0.75), 0 0 28px rgba(255, 230, 0, 0.3); } }
+    @keyframes glow-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.25); } 50% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.08); } }
     .sem-juros-glow { animation: glow-pulse 2.2s ease-in-out infinite; }
     details > summary::-webkit-details-marker { display: none; }
     details[open] .details-chevron { transform: rotate(180deg); }
-    @media (prefers-reduced-motion: reduce) { .btn-shine::after { display: none; } .pulse-dot { animation: none; } .sem-juros-glow { animation: none; box-shadow: 0 0 12px rgba(52, 211, 153, 0.5); } }
+    @media (prefers-reduced-motion: reduce) { .btn-shine::after { display: none; } .pulse-dot { animation: none; } .sem-juros-glow { animation: none; box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12); } }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Bike Dobrável 400W Vale a Pena? Review Sincero e Preço 2026","description":"Bike elétrica dobrável 400W vale a pena? Versão 48V 10Ah com suspensão: autonomia real de 18 a 25 km e até 25 km/h. Confira o veredito antes de comprar!","author":{"@type":"Organization","name":"Equipe Tudo de Melhor","url":"https://www.tudodemelhor.com.br/sobre"},"datePublished":"2026-09-01T13:52:22-03:00","dateModified":"2026-10-23T10:04:06-03:00","image":["https://http2.mlstatic.com/D_NQ_NP_708869-MLB97636357574_112025-O.webp"],"publisher":{"@type":"Organization","@id":"https://www.tudodemelhor.com.br/#organization","name":"Tudo de Melhor","url":"https://www.tudodemelhor.com.br/","logo":{"@type":"ImageObject","url":"https://www.tudodemelhor.com.br/assets/ui/logo-site/logo-tudo-melhor.jpeg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.tudodemelhor.com.br/review-bike-dobravel-400w"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.tudodemelhor.com.br/"},{"@type":"ListItem","position":2,"name":"Melhores Bicicletas Elétricas","item":"https://www.tudodemelhor.com.br/melhores-bicicletas-eletricas"},{"@type":"ListItem","position":3,"name":"Bike Dobrável 400W"}]},{"@type":"Product","name":"Bicicleta Elétrica Dobrável 400W 48V 10Ah","brand":{"@type":"Brand","name":"Dobrável"},"image":"https://http2.mlstatic.com/D_NQ_NP_708869-MLB97636357574_112025-O.webp","description":"Bike elétrica dobrável 400W 48V 10Ah com suspensão. #5 do ranking Tudo de Melhor.","review":{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"9.1","bestRating":"10"},"author":{"@type":"Organization","name":"Tudo de Melhor","url":"https://www.tudodemelhor.com.br/"},"positiveNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"Entrada honesta com 48V 10Ah e suspensão dianteira"},{"@type":"ListItem","position":2,"name":"Formato dobrável para apartamento e corredor estreito"},{"@type":"ListItem","position":3,"name":"Suspensão absorve impactos leves em valetas e buracos"},{"@type":"ListItem","position":4,"name":"Preço intermediário sem exigir motor 750W"},{"@type":"ListItem","position":5,"name":"Adequada para commute de bairro até 20 km"},{"@type":"ListItem","position":6,"name":"Freios a disco dianteiro e traseiro"}]},"negativeNotes":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"Motor 400W limitado em subidas íngremes prolongadas"},{"@type":"ListItem","position":2,"name":"Autonomia de 18–25 km — menor que modelos de 35–40 km"},{"@type":"ListItem","position":3,"name":"Marca genérica sem rede ampla de assistência"},{"@type":"ListItem","position":4,"name":"Preço próximo da Oimotoo S6 (450W, mais barata e melhor nota)"},{"@type":"ListItem","position":5,"name":"Pack 10Ah não é removível em todos os anúncios"}]}},"offers":{"@type":"Offer","url":"https://meli.la/31i9Cjq","priceCurrency":"BRL","price":"3199.99","availability":"https://schema.org/InStock"},"url":"https://www.tudodemelhor.com.br/review-bike-dobravel-400w"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"A bike dobrável 400W vale como primeira bike elétrica?","acceptedAnswer":{"@type":"Answer","text":"Sim, para trajetos planos curtos. Antes de comprar, compare com a Oimotoo S6 — mais barata e com nota superior."}},{"@type":"Question","name":"Qual a autonomia real?","acceptedAnswer":{"@type":"Answer","text":"Entre 18 e 25 km em uso urbano misto. Não espere 35–40 km de modelos superiores."}},{"@type":"Question","name":"Tem suspensão?","acceptedAnswer":{"@type":"Answer","text":"Sim, dianteira — ajuda em buracos leves e valetas."}},{"@type":"Question","name":"400W ou Oimotoo S6 450W?","acceptedAnswer":{"@type":"Answer","text":"A Oimotoo custa menos (R$ 2.552), tem motor mais forte e bateria 48V removível. Esta 400W só faz sentido se a suspensão for decisiva para você."}},{"@type":"Question","name":"A bike 400W dobra?","acceptedAnswer":{"@type":"Answer","text":"Sim. Formato compacto para elevador e porta-malas de hatchback."}},{"@type":"Question","name":"Quanto tempo para carregar?","acceptedAnswer":{"@type":"Answer","text":"Carga completa em 5 a 6 horas com carregador bivolt incluso."}}]}]}</script>
 </head>
-<body class="bg-brand-bg text-white font-sans antialiased min-h-screen pb-32">
-  <header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-brand-elevated/90 backdrop-blur-md">
+<body class="bg-brand-bg text-ink font-sans antialiased min-h-screen pb-32">
+  <header id="site-header" class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
     <div class="mx-auto flex h-[100px] max-w-7xl items-center gap-4 px-4 lg:gap-8">
       <a href="/" class="flex shrink-0 items-center gap-4 transition hover:opacity-90" aria-label="Tudo de Melhor — início">
-        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
+        <div class="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-brand-bg shadow-glow-orange lg:h-20 lg:w-20">
           <img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" alt="Logo Tudo de Melhor" class="h-full w-full object-cover">
         </div>
         <div class="flex flex-col justify-center">
-          <span class="text-xl font-black uppercase leading-tight tracking-wider text-white lg:text-2xl">Tudo De</span>
-          <span class="text-xl font-black uppercase leading-tight tracking-wider text-brand-yellow lg:text-2xl">Melhor</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-ink lg:text-2xl">Tudo De</span>
+          <span class="text-xl font-black uppercase leading-tight tracking-wider text-orange-700 lg:text-2xl">Melhor</span>
         </div>
       </a>
-      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-brand-elevated md:hidden" aria-label="Abrir menu" aria-expanded="false">
-        <span class="flex flex-col gap-1.5"><span class="block h-0.5 w-6 bg-white"></span><span class="block h-0.5 w-6 bg-white"></span><span class="block h-0.5 w-6 bg-white"></span></span>
+      <button id="nav-toggle" type="button" class="ml-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-brand-border bg-white md:hidden" aria-label="Abrir menu" aria-expanded="false">
+        <span class="flex flex-col gap-1.5"><span class="block h-0.5 w-6 bg-ink"></span><span class="block h-0.5 w-6 bg-ink"></span><span class="block h-0.5 w-6 bg-ink"></span></span>
       </button>
       <nav id="site-nav" class="hidden flex-1 items-center justify-center gap-8 text-sm font-medium text-brand-muted md:flex">
-        <a href="/#categorias" class="transition hover:text-white">Categorias</a>
-        <a href="/categorias" class="transition hover:text-white">Rankings</a>
-        <a href="/reviews" class="transition hover:text-white">Reviews</a>
-        <a href="/#ofertas" class="font-bold text-brand-yellow shadow-glow transition hover:text-white">Melhores Ofertas</a>
+        <a href="/#categorias" class="transition hover:text-ink">Categorias</a>
+        <a href="/categorias" class="transition hover:text-ink">Rankings</a>
+        <a href="/reviews" class="transition hover:text-ink">Reviews</a>
+        <a href="/#ofertas" class="font-bold text-orange-700 shadow-glow transition hover:text-ink">Melhores Ofertas</a>
       </nav>
     </div>
-    <div id="mobile-nav" class="hidden border-t border-white/10 bg-brand-elevated/98 px-4 py-4 md:hidden">
+    <div id="mobile-nav" class="hidden border-t border-slate-200 bg-white px-4 py-4 md:hidden">
       <nav class="flex flex-col gap-1 text-sm">
-        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Rankings</a>
-        <a href="/reviews" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-white/5 hover:text-white">Reviews</a>
+        <a href="/categorias" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Rankings</a>
+        <a href="/reviews" class="rounded-lg px-3 py-3 text-brand-muted hover:bg-slate-50 hover:text-ink">Reviews</a>
       </nav>
     </div>
   </header>
@@ -64,41 +64,41 @@
   <main class="px-4 pt-8">
     <div class="mx-auto max-w-6xl">
       <nav class="mb-6 flex flex-wrap items-center gap-2 text-sm text-brand-dim" aria-label="Breadcrumb">
-        <a href="/" class="hover:text-brand-yellow">Início</a>
+        <a href="/" class="hover:text-orange-600">Início</a>
         <span aria-hidden="true">/</span>
-        <a href="/melhores-bicicletas-eletricas" class="hover:text-brand-yellow">Melhores Bicicletas Elétricas</a>
+        <a href="/melhores-bicicletas-eletricas" class="hover:text-orange-600">Melhores Bicicletas Elétricas</a>
         <span aria-hidden="true">/</span>
-        <span class="text-white" aria-current="page">Bike Dobrável 400W</span>
+        <span class="text-ink" aria-current="page">Bike Dobrável 400W</span>
       </nav>
 
       <header class="mb-8 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[1.15fr_0.85fr]">
         <div class="glass relative order-2 overflow-hidden p-6 md:order-1 md:p-10">
-          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-yellow/10 blur-3xl"></div>
-          <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-brand-yellow">Review · #5 do ranking 2026</p>
+          <div class="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-orange-50 blur-3xl"></div>
+          <p class="mb-3 text-xs font-extrabold uppercase tracking-[0.16em] text-orange-700">Review · #5 do ranking 2026</p>
           <h1 class="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">Bike dobrável 400W vale a pena? Análise da bicicleta elétrica 48V 10Ah</h1>
           <p class="mb-6 hidden max-w-2xl text-lg text-brand-muted md:block">Esta <strong>bike elétrica dobrável 400W</strong> com bateria <strong>48V 10Ah</strong> e <strong>suspensão dianteira</strong> é a porta de entrada honesta do ranking — nota <strong>9.1</strong> por cerca de <strong>R$ 3.199</strong> no Mercado Livre. Ideal para quem quer testar mobilidade elétrica sem investir em 750W.</p>
           <div class="mb-3 flex flex-wrap items-center gap-2">
-            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/60 bg-emerald-400/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-300 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Oferta Verificada no Mercado Livre</span>
-            <div class="sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-sm font-black text-white">10x de R$ 320,00</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-300 bg-emerald-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wide text-emerald-700 shadow-neon-emerald sm:text-xs"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span> Oferta Verificada no Mercado Livre</span>
+            <div class="sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300 bg-gradient-to-r from-emerald-50 via-emerald-50 to-orange-50 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-sm font-black text-ink">10x de R$ 320,00</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>
           </div>
           <div class="mb-6 flex flex-wrap gap-2">
             <span class="rounded-md bg-brand-yellow px-3 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Entrada Honesta com Suspensão</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">Nota editorial 9.1</span>
-            <span class="rounded-md border border-white/10 bg-white/5 px-3 py-1 text-xs text-brand-muted">A partir de R$ 3.199</span>
+            <span class="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-brand-muted">Nota editorial 9.1</span>
+            <span class="rounded-md border border-slate-200 bg-slate-50 px-3 py-1 text-xs text-brand-muted">A partir de R$ 3.199</span>
           </div>
           <div class="flex flex-col gap-3 sm:flex-row">
             <a class="btn-shine inline-flex h-12 items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/31i9Cjq">Comprar no Mercado Livre</a>
           </div>
           <div class="product-gallery mt-4" aria-label="Galeria de fotos do produto" data-gallery-images='[{"url":"https://http2.mlstatic.com/D_NQ_NP_708869-MLB97636357574_112025-O.webp","alt":"Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_796112-MLB98099441441_112025-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp","alt":"Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio — foto 2 da galeria"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_635535-MLB98099123737_112025-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp","alt":"Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio — foto 3 da galeria"},{"url":"https://http2.mlstatic.com/D_NQ_NP_2X_840232-MLA105448315693_012026-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp","alt":"Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio — foto 4 da galeria"}]'>
             <p class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Fotos do produto</p>
-            <div class="flex flex-wrap gap-2"><img src="https://http2.mlstatic.com/D_NQ_NP_708869-MLB97636357574_112025-O.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="0" loading="eager" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_796112-MLB98099441441_112025-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio — foto 2 da galeria" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_635535-MLB98099123737_112025-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio — foto 3 da galeria" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_840232-MLA105448315693_012026-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio — foto 4 da galeria" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-white/10 object-cover transition hover:border-brand-yellow/40 hover:ring-1 hover:ring-brand-yellow/30" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64"></div>
+            <div class="flex flex-wrap gap-2"><img src="https://http2.mlstatic.com/D_NQ_NP_708869-MLB97636357574_112025-O.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="0" loading="eager" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_796112-MLB98099441441_112025-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio — foto 2 da galeria" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="1" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_635535-MLB98099123737_112025-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio — foto 3 da galeria" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="2" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_840232-MLA105448315693_012026-F-bicicleta-eletrica-400w-48v-10ah-scooter-dobravel-potente.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio — foto 4 da galeria" class="product-gallery-thumb h-16 w-16 shrink-0 cursor-pointer rounded-lg border border-slate-200 object-cover transition hover:border-orange-300 hover:ring-1 hover:ring-orange-200" data-index="3" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="64" height="64"></div>
           </div>
         </div>
         <div class="glass relative order-1 flex h-full min-h-[420px] flex-col overflow-hidden p-5 shadow-glow-emerald md:order-2 md:min-h-0 md:p-6">
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-brand-yellow/5"></div>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-emerald-50 via-transparent to-orange-50/60"></div>
           <div class="relative flex min-h-0 flex-1 items-center justify-center">
             <div class="hero-video-wrap relative mx-auto aspect-[9/16] h-full w-full max-h-full max-w-[min(100%,315px)] overflow-hidden rounded-2xl bg-black/20 shadow-lg">
               <img src="https://http2.mlstatic.com/D_NQ_NP_708869-MLB97636357574_112025-O.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio" class="hero-video-fallback absolute inset-0 w-full h-full object-cover z-0" loading="eager" decoding="async" referrerpolicy="no-referrer">
@@ -121,9 +121,9 @@
         <article class="glass col-span-2 p-6 md:row-span-2">
           <h2 class="mb-4 text-sm font-bold uppercase tracking-wide text-brand-dim">Veredito rápido</h2>
           <div class="flex items-end gap-4">
-            <span class="text-6xl font-black leading-none text-brand-yellow drop-shadow-[0_0_15px_rgba(255,230,0,0.4)]">9.1</span>
+            <span class="text-6xl font-black leading-none text-orange-600">9.1</span>
             <div class="pb-1">
-              <div class="text-xl text-brand-yellow" aria-label="Nota do ranking">★★★★★</div>
+              <div class="text-xl text-orange-700" aria-label="Nota do ranking">★★★★★</div>
               <p class="m-0 text-sm text-brand-dim">Escala 0–10 · ranking Tudo de Melhor</p>
             </div>
           </div>
@@ -135,7 +135,7 @@
         </article>
         <article class="glass p-5">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Diferencial</h3>
-          <p class="m-0 text-sm font-bold text-brand-yellow">Dobrável com suspensão e 48V 10Ah</p>
+          <p class="m-0 text-sm font-bold text-orange-700">Dobrável com suspensão e 48V 10Ah</p>
         </article>
         <article class="glass col-span-2 p-5 md:col-span-2">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim">Promessa</h3>
@@ -147,24 +147,24 @@
         <div class="glass overflow-hidden p-5 md:p-7">
           <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
             <p id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</p>
-            <span class="rounded-md border border-emerald-400/40 bg-emerald-400/10 px-2.5 py-1 text-xs font-bold text-emerald-300">Novo monitoramento</span>
+            <span class="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Novo monitoramento</span>
           </div>
-          <div class="mb-5 flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-400/10 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-300 shadow-neon-emerald md:text-base">
+          <div class="mb-5 flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-50 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-700 shadow-neon-emerald md:text-base">
             🟢 Menor preço registrado: R$ 3.199,99 à vista ou 10x de R$ 320,00 sem juros
           </div>
           <figure>
               <svg viewBox="0 0 600 220" class="h-auto w-full" role="img" aria-label="Gráfico do histórico de preço: R$ 3.199,99 em 22/10">
-                <defs><linearGradient id="area-reviewbikedobravel400whtml" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity="0.35"/><stop offset="100%" stop-color="#34d399" stop-opacity="0"/></linearGradient></defs>
-                <g stroke="rgba(255,255,255,0.08)" stroke-width="1"><line x1="40" y1="20.0" x2="580" y2="20.0"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95.0" x2="580" y2="95.0"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170.0" x2="580" y2="170.0"/></g>
-                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25.0">3,4k</text><text x="36" y="62.5">3,3k</text><text x="36" y="100.0">3,2k</text><text x="36" y="137.5">3,1k</text><text x="36" y="175.0">3k</text></g>
+                <defs><linearGradient id="area-reviewbikedobravel400whtml" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10B981" stop-opacity="0.35"/><stop offset="100%" stop-color="#10B981" stop-opacity="0"/></linearGradient></defs>
+                <g stroke="rgba(15,23,42,0.11)" stroke-width="1"><line x1="40" y1="20.0" x2="580" y2="20.0"/><line x1="40" y1="57.5" x2="580" y2="57.5"/><line x1="40" y1="95.0" x2="580" y2="95.0"/><line x1="40" y1="132.5" x2="580" y2="132.5"/><line x1="40" y1="170.0" x2="580" y2="170.0"/></g>
+                <g fill="#64748B" font-size="15" font-family="Inter, sans-serif" text-anchor="end"><text x="36" y="25.0">3,4k</text><text x="36" y="62.5">3,3k</text><text x="36" y="100.0">3,2k</text><text x="36" y="137.5">3,1k</text><text x="36" y="175.0">3k</text></g>
                 <polygon fill="url(#area-reviewbikedobravel400whtml)" points="56.0,95.0 566.0,95.0 566.0,170 56.0,170"/>
-                <polyline fill="none" stroke="#34d399" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56.0,95.0 566.0,95.0"/>
-                <g fill="#34d399"><circle cx="56.0" cy="95.0" r="4"/></g>
-                <circle cx="566.0" cy="95.0" r="10" fill="#34d399" fill-opacity="0.25"/><circle cx="566.0" cy="95.0" r="6" fill="#34d399" stroke="#fff" stroke-width="2"/>
-                <g font-family="Inter, sans-serif" font-weight="800" font-size="20"><text x="566.0" y="79.0" fill="#6ee7b7" text-anchor="end">R$ 3.199</text></g>
-                <g fill="#AAB3BD" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56.0" y="212">22/10</text><text x="562" y="212" fill="#6ee7b7" font-weight="700">Hoje</text></g>
+                <polyline fill="none" stroke="#10B981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" points="56.0,95.0 566.0,95.0"/>
+                <g fill="#10B981"><circle cx="56.0" cy="95.0" r="4"/></g>
+                <circle cx="566.0" cy="95.0" r="10" fill="#10B981" fill-opacity="0.25"/><circle cx="566.0" cy="95.0" r="6" fill="#10B981" stroke="#fff" stroke-width="2"/>
+                <g font-family="Inter, sans-serif" font-weight="800" font-size="20"><text x="566.0" y="79.0" fill="#047857" text-anchor="end">R$ 3.199</text></g>
+                <g fill="#64748B" font-size="15" font-family="Inter, sans-serif" text-anchor="middle"><text x="56.0" y="212">22/10</text><text x="562" y="212" fill="#047857" font-weight="700">Hoje</text></g>
               </svg>
-            <figcaption class="mt-3 rounded-xl border border-white/10 bg-white/5 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
+            <figcaption class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-3 text-[11px] leading-relaxed text-brand-dim md:text-xs">
               <strong class="text-brand-muted">Transparência:</strong> Monitoramento iniciado em 22/10/2026. No checkout simulado, o frete (R$ 14) saiu grátis. A venda, entrega e garantia são do vendedor no Mercado Livre; a Tudo de Melhor não vende o produto. Preço, estoque e vendedor podem mudar — confira no anúncio antes de pagar.
             </figcaption>
           </figure>
@@ -172,76 +172,76 @@
       </section>
 
       <section class="mb-10">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-brand-yellow">contras</span> da Dobrável 400W</h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Prós e <span class="text-orange-600">contras</span> da Dobrável 400W</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div class="glass border-emerald-500/30 p-6 shadow-glow-emerald">
-            <h3 class="mb-4 text-lg font-bold text-emerald-300">Pontos fortes</h3>
-            <ul class="space-y-3 text-sm text-brand-muted"><li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Entrada honesta com 48V 10Ah e suspensão dianteira</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Formato dobrável para apartamento e corredor estreito</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Suspensão absorve impactos leves em valetas e buracos</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Preço intermediário sem exigir motor 750W</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Adequada para commute de bairro até 20 km</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Freios a disco dianteiro e traseiro</span></li></ul>
+          <div class="glass border-emerald-200 p-6 shadow-glow-emerald">
+            <h3 class="mb-4 text-lg font-bold text-emerald-700">Pontos fortes</h3>
+            <ul class="space-y-3 text-sm text-brand-muted"><li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Entrada honesta com 48V 10Ah e suspensão dianteira</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Formato dobrável para apartamento e corredor estreito</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Suspensão absorve impactos leves em valetas e buracos</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Preço intermediário sem exigir motor 750W</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Adequada para commute de bairro até 20 km</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Freios a disco dianteiro e traseiro</span></li></ul>
           </div>
-          <div class="glass border-orange-500/30 p-6">
-            <h3 class="mb-4 text-lg font-bold text-orange-300">Limitações</h3>
-            <ul class="space-y-3 text-sm text-brand-muted"><li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Motor 400W limitado em subidas íngremes prolongadas</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Autonomia de 18–25 km — menor que modelos de 35–40 km</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Marca genérica sem rede ampla de assistência</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Preço próximo da Oimotoo S6 (450W, mais barata e melhor nota)</span></li>
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Pack 10Ah não é removível em todos os anúncios</span></li></ul>
+          <div class="glass border-orange-200 p-6">
+            <h3 class="mb-4 text-lg font-bold text-orange-700">Limitações</h3>
+            <ul class="space-y-3 text-sm text-brand-muted"><li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Motor 400W limitado em subidas íngremes prolongadas</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Autonomia de 18–25 km — menor que modelos de 35–40 km</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Marca genérica sem rede ampla de assistência</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Preço próximo da Oimotoo S6 (450W, mais barata e melhor nota)</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-orange-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg><span>Pack 10Ah não é removível em todos os anúncios</span></li></ul>
           </div>
         </div>
       </section>
 
       <section class="mb-10">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Especificações <span class="text-brand-yellow">técnicas</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Especificações <span class="text-orange-600">técnicas</span></h2>
         <div class="glass overflow-hidden">
           <table class="w-full text-left text-sm"><tbody>
-              <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Marca</th><td class="px-4 py-3 text-brand-muted">Genérica / Dobrável</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Modelo</th><td class="px-4 py-3 text-brand-muted">400W · bicicleta elétrica dobrável</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Motor</th><td class="px-4 py-3 text-brand-muted">400W brushless</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Bateria</th><td class="px-4 py-3 text-brand-muted">48V 10Ah lítio</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Autonomia</th><td class="px-4 py-3 text-brand-muted">18–25 km (uso urbano misto)</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Suspensão</th><td class="px-4 py-3 text-brand-muted">Dianteira</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Freios</th><td class="px-4 py-3 text-brand-muted">Disco D/T</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Velocidade máxima</th><td class="px-4 py-3 text-brand-muted">~25 km/h</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Peso suportado</th><td class="px-4 py-3 text-brand-muted">Até 120 kg</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Formato</th><td class="px-4 py-3 text-brand-muted">Dobrável compacto</td></tr>
-              <tr class="border-b border-white/10 even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Tempo de carga</th><td class="px-4 py-3 text-brand-muted">5 a 6 horas</td></tr>
-              <tr class="even:bg-white/5"><th scope="row" class="px-4 py-3 font-semibold text-white">Preço observado</th><td class="px-4 py-3 text-brand-muted">A partir de R$ 3.199 (confira o dia)</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Marca</th><td class="px-4 py-3 text-brand-muted">Genérica / Dobrável</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Modelo</th><td class="px-4 py-3 text-brand-muted">400W · bicicleta elétrica dobrável</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Motor</th><td class="px-4 py-3 text-brand-muted">400W brushless</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Bateria</th><td class="px-4 py-3 text-brand-muted">48V 10Ah lítio</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Autonomia</th><td class="px-4 py-3 text-brand-muted">18–25 km (uso urbano misto)</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Suspensão</th><td class="px-4 py-3 text-brand-muted">Dianteira</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Freios</th><td class="px-4 py-3 text-brand-muted">Disco D/T</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Velocidade máxima</th><td class="px-4 py-3 text-brand-muted">~25 km/h</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Peso suportado</th><td class="px-4 py-3 text-brand-muted">Até 120 kg</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Formato</th><td class="px-4 py-3 text-brand-muted">Dobrável compacto</td></tr>
+              <tr class="border-b border-slate-200 even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Tempo de carga</th><td class="px-4 py-3 text-brand-muted">5 a 6 horas</td></tr>
+              <tr class="even:bg-slate-50"><th scope="row" class="px-4 py-3 font-semibold text-ink">Preço observado</th><td class="px-4 py-3 text-brand-muted">A partir de R$ 3.199 (confira o dia)</td></tr>
           </tbody></table>
         </div>
       </section>
 
       <section class="mb-10" aria-label="Fotos de quem comprou">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-brand-yellow">quem comprou</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Fotos de <span class="text-orange-600">quem comprou</span></h2>
         <div class="glass p-5 md:p-6">
           <p class="mb-4 text-sm text-brand-muted">Imagens reais enviadas por clientes que compraram o produto no Mercado Livre.</p>
           <div class="overflow-hidden w-full relative">
             <div class="flex gap-4 animate-marquee">
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_788946-MLA109396003683_032026-F.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — foto real de comprador no Mercado Livre 1" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_645846-MLA111472532593_052026-F.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — foto real de comprador no Mercado Livre 2" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_923887-MLA109394572439_032026-F.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — foto real de comprador no Mercado Livre 3" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_885313-MLA111472388181_052026-F.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista de comprador no Mercado Livre 4" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_788946-MLA109396003683_032026-F.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
             </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_645846-MLA111472532593_052026-F.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
             </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_923887-MLA109394572439_032026-F.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
             </div>
-            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-white/10 hover:border-brand-yellow/50 hover:shadow-glow transition-all">
+            <div class="glass shrink-0 w-48 h-48 sm:w-60 sm:h-60 relative rounded-xl overflow-hidden border border-slate-200 hover:border-orange-300 hover:shadow-glow transition-all">
               <img src="https://http2.mlstatic.com/D_NQ_NP_2X_885313-MLA111472388181_052026-F.webp" alt="" class="w-full h-full object-cover" loading="lazy" decoding="async" aria-hidden="true">
             </div>
             </div>
@@ -251,123 +251,123 @@
 
       <section class="mb-10">
         <article class="glass p-6 md:p-10">
-          <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: avaliação da <span class="text-brand-yellow">bike elétrica dobrável 400W</span></h2>
+          <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: avaliação da <span class="text-orange-600">bike elétrica dobrável 400W</span></h2>
           <p class="mb-5 text-brand-muted">A pergunta "vale a pena uma bike 400W?" depende do trajeto. Para bairro plano, mercado e academia num raio de 10 km, o motor de entrada cumpre. A suspensão dianteira diferencia este modelo de dobráveis básicas sem amortecimento — mas compare sempre com a Oimotoo S6, que custa menos e entrega 450W com bateria removível.</p>
           
-          <h3 class="mb-2 text-lg font-bold text-brand-yellow">Uso diário e autonomia real</h3>
+          <h3 class="mb-2 text-lg font-bold text-orange-700">Uso diário e autonomia real</h3>
           <p class="mb-5 text-brand-muted">Trajetos de 8 a 15 km em terreno plano são o habitat natural. O pack 48V 10Ah entrega 18–25 km conforme modo e peso — suficiente para ida ao trabalho curto, não para commute longo. Uma carga por dia cobre a maioria dos usos de bairro.</p>
-          <h3 class="mb-2 text-lg font-bold text-brand-yellow">Suspensão e conforto urbano</h3>
+          <h3 class="mb-2 text-lg font-bold text-orange-700">Suspensão e conforto urbano</h3>
           <p class="mb-5 text-brand-muted">A suspensão dianteira reduz impacto em valetas e buracos leves — não substitui fat tire, mas melhora o conforto vs. quadros rígidos. O formato dobrável permite guardar em closet ou atrás da porta em apartamentos sem garagem.</p>
-          <h3 class="mb-2 text-lg font-bold text-brand-yellow">Motor 400W: limites reais</h3>
+          <h3 class="mb-2 text-lg font-bold text-orange-700">Motor 400W: limites reais</h3>
           <p class="mb-5 text-brand-muted">400W é motor de entrada. Funciona em plano e aclives muito leves. Ladeiras moderadas exigem pedal forte; íngremes podem ser inviáveis só no motor. Se subidas fazem parte do trajeto diário, a Oimotoo S6 (450W, R$ 2.552) ou Honeywhale S6-S (750W) são upgrades lógicos.</p>
-          <h3 class="mb-2 text-lg font-bold text-brand-yellow">Compra e manutenção</h3>
+          <h3 class="mb-2 text-lg font-bold text-orange-700">Compra e manutenção</h3>
           <p class="mb-5 text-brand-muted">Confira reputação do vendedor, frete e garantia no Mercado Livre. Peças de desgaste (pastilhas, pneus) são acessíveis. Evite chuva forte no conector da bateria. Calibre pneus regularmente para preservar autonomia.</p>
         </article>
       </section>
 
       <section class="mb-10" id="ofertas">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Onde <span class="text-brand-yellow">comprar</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Onde <span class="text-orange-600">comprar</span></h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
               <span class="rounded-md bg-brand-yellow px-2 py-1 text-[10px] font-extrabold uppercase text-black shadow-glow">Mercado Livre</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Link de oferta</span>
+              <span class="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs text-brand-muted">Link de oferta</span>
             </div>
             <p class="mb-5 text-sm text-brand-muted">Anúncio rastreado: Dobrável 400W 48V 10Ah. Confira seller, frete, garantia e o preço do dia.</p>
-            <div class="mb-4"><div class="sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300/80 bg-gradient-to-r from-emerald-500/30 via-emerald-400/20 to-brand-yellow/25 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-base font-black text-white">10x de R$ 320,00</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div></div>
-            <div class="mb-4 overflow-hidden rounded-xl border border-white/10">
+            <div class="mb-4"><div class="sem-juros-glow inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300 bg-gradient-to-r from-emerald-50 via-emerald-50 to-orange-50 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true"></span><span class="text-base font-black text-ink">10x de R$ 320,00</span><span class="rounded bg-emerald-300 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div></div>
+            <div class="mb-4 overflow-hidden rounded-xl border border-slate-200">
               <table class="w-full text-left text-sm">
                 <caption class="sr-only">Formas de pagamento da Dobrável 400W no Mercado Livre</caption>
                 <tbody>
-                  <tr class="border-b border-white/10 bg-emerald-400/[0.07]">
-                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-white">À vista</span><span class="text-xs font-normal text-brand-dim">PIX / Boleto</span></th>
-                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-emerald-300 sm:text-lg">R$ 3.199,99</span><span class="text-xs text-brand-dim">frete grátis</span></td>
+                  <tr class="border-b border-slate-200 bg-emerald-50">
+                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-ink">À vista</span><span class="text-xs font-normal text-brand-dim">PIX / Boleto</span></th>
+                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-emerald-700 sm:text-lg">R$ 3.199,99</span><span class="text-xs text-brand-dim">frete grátis</span></td>
                   </tr>
                   <tr>
-                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-white">Parcelado no cartão</span><span class="text-xs font-normal text-brand-dim">em até 10x</span></th>
-                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-brand-yellow sm:text-lg">10x de R$ 320,00</span><span class="text-xs font-bold text-emerald-300">sem juros</span></td>
+                    <th scope="row" class="px-4 py-3 align-top"><span class="block font-bold text-ink">Parcelado no cartão</span><span class="text-xs font-normal text-brand-dim">em até 10x</span></th>
+                    <td class="px-4 py-3 text-right align-top"><span class="block whitespace-nowrap text-base font-extrabold text-orange-700 sm:text-lg">10x de R$ 320,00</span><span class="text-xs font-bold text-emerald-700">sem juros</span></td>
                   </tr>
                 </tbody>
               </table>
-              <details class="border-t border-white/10">
-                <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-white">
+              <details class="border-t border-slate-200">
+                <summary class="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-semibold text-brand-muted hover:text-ink">
                   Ver todas as parcelas (3x a 10x)
                   <svg class="details-chevron h-4 w-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></svg>
                 </summary>
                 <table class="w-full text-left text-sm">
                   <thead>
-                    <tr class="border-y border-white/10 text-[10px] uppercase tracking-wider text-brand-dim">
+                    <tr class="border-y border-slate-200 text-[10px] uppercase tracking-wider text-brand-dim">
                       <th scope="col" class="px-4 py-2 font-bold">Parcelas</th>
                       <th scope="col" class="px-4 py-2 text-right font-bold">Condição</th>
                     </tr>
                   </thead>
                   <tbody class="text-brand-muted">
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">3x</strong> R$ 1.066,66</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">4x</strong> R$ 800,00</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">5x</strong> R$ 640,00</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">6x</strong> R$ 533,33</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">7x</strong> R$ 457,14</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">8x</strong> R$ 400,00</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
-                    <tr class="border-b border-white/5"><td class="px-4 py-2.5"><strong class="text-white">9x</strong> R$ 355,55</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
-                    <tr><td class="px-4 py-2.5"><strong class="text-brand-yellow">10x</strong> R$ 320,00</td><td class="px-4 py-2.5 text-right text-emerald-300">Sem juros</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">3x</strong> R$ 1.066,66</td><td class="px-4 py-2.5 text-right text-emerald-700">Sem juros</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">4x</strong> R$ 800,00</td><td class="px-4 py-2.5 text-right text-emerald-700">Sem juros</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">5x</strong> R$ 640,00</td><td class="px-4 py-2.5 text-right text-emerald-700">Sem juros</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">6x</strong> R$ 533,33</td><td class="px-4 py-2.5 text-right text-emerald-700">Sem juros</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">7x</strong> R$ 457,14</td><td class="px-4 py-2.5 text-right text-emerald-700">Sem juros</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">8x</strong> R$ 400,00</td><td class="px-4 py-2.5 text-right text-emerald-700">Sem juros</td></tr>
+                    <tr class="border-b border-slate-200"><td class="px-4 py-2.5"><strong class="text-ink">9x</strong> R$ 355,55</td><td class="px-4 py-2.5 text-right text-emerald-700">Sem juros</td></tr>
+                    <tr><td class="px-4 py-2.5"><strong class="text-orange-700">10x</strong> R$ 320,00</td><td class="px-4 py-2.5 text-right text-emerald-700">Sem juros</td></tr>
                   </tbody>
                 </table>
                 <p class="px-4 pb-4 pt-2 text-[11px] text-brand-dim">Valores simulados no checkout do Mercado Livre em 22/10/2026: até 10x sem juros. Parcelas variam conforme cartão e banco.</p>
               </details>
             </div>
             <ul class="mb-5 grid grid-cols-3 gap-2 text-[11px] text-brand-muted sm:text-xs">
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">↩️</span>Devolução Grátis</li>
-              <li class="flex flex-col items-center gap-1 rounded-lg border border-white/10 bg-white/5 px-2 py-2 text-center"><span aria-hidden="true">🚚</span>Frete grátis</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">🛡️</span>Compra Garantida</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">↩️</span>Devolução Grátis</li>
+              <li class="flex flex-col items-center gap-1 rounded-lg border border-slate-200 bg-slate-50 px-2 py-2 text-center"><span aria-hidden="true">🚚</span>Frete grátis</li>
             </ul>
             <a class="btn-shine inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow font-extrabold text-black shadow-glow transition-all hover:scale-[1.02]" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/31i9Cjq">Ir para o Mercado Livre</a>
           </article>
           <article class="glass p-6">
             <div class="mb-3 flex flex-wrap gap-2">
-              <span class="rounded-md border border-white/25 bg-white/10 px-2 py-1 text-[10px] font-extrabold uppercase text-white">Amazon</span>
-              <span class="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-brand-muted">Em breve</span>
+              <span class="rounded-md border border-slate-300 bg-slate-100 px-2 py-1 text-[10px] font-extrabold uppercase text-ink">Amazon</span>
+              <span class="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-xs text-brand-muted">Em breve</span>
             </div>
             <p class="mb-5 text-sm text-brand-muted">Link de afiliado Amazon entra aqui quando a oferta estiver ativa. Use o Mercado Livre enquanto isso.</p>
-            <span class="inline-flex h-12 w-full cursor-not-allowed items-center justify-center rounded-xl border border-white/25 bg-white/5 font-bold text-brand-dim">Em breve</span>
+            <span class="inline-flex h-12 w-full cursor-not-allowed items-center justify-center rounded-xl border border-slate-300 bg-slate-50 font-bold text-brand-dim">Em breve</span>
           </article>
         </div>
       </section>
 
       <section class="mb-10">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Alternativas no <span class="text-brand-yellow">ranking</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Alternativas no <span class="text-orange-600">ranking</span></h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"><article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow">
             <span class="absolute left-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-brand-yellow text-sm font-extrabold text-black shadow-glow" aria-label="Posição 1">1</span>
             <div class="mx-auto mt-8 flex h-44 w-full items-center justify-center">
               <img src="https://http2.mlstatic.com/D_NQ_NP_822384-MLB109485329446_042026-O.webp" alt="Melhor bike elétrica dobrável Oimotoo S6 450W — melhores bicicletas eletricas urbana" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
             </div>
             <div class="mt-4 flex flex-wrap items-center gap-2">
-              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">OIMOTOO</span>
-              <h3 class="text-lg font-bold text-white">S6 Dobrável 450W</h3>
+              <span class="rounded border border-orange-400 px-2 py-0.5 text-[10px] font-bold tracking-widest text-orange-700">OIMOTOO</span>
+              <h3 class="text-lg font-bold text-ink">S6 Dobrável 450W</h3>
             </div>
             <div class="mt-3 flex-1">
-              <div class="mb-3 flex items-center gap-2"><span class="text-violet-400">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <div class="mb-3 flex items-center gap-2"><span class="text-violet-600">👤</span> <strong class="text-sm uppercase tracking-wide text-ink">Para quem é?</strong></div>
               <ul class="space-y-2">
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Commute urbano dobrável: cabe no elevador e porta-malas com bateria 48V removível.</span></li>
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Melhor custo-benefício dobrável da lista para orçamento até R$ 2.600.</span></li>
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Trajetos planos de até 35 km sem exigir potência extrema em subidas.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Commute urbano dobrável: cabe no elevador e porta-malas com bateria 48V removível.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Melhor custo-benefício dobrável da lista para orçamento até R$ 2.600.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Trajetos planos de até 35 km sem exigir potência extrema em subidas.</span></li>
               </ul>
             </div>
-            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+            <div class="mt-4 flex items-end justify-between border-t border-slate-200 pt-4">
               <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
-              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">97</span><span class="text-sm text-brand-dim">/100</span></div>
+              <div class="leading-none"><span class="text-3xl font-bold text-orange-600">97</span><span class="text-sm text-brand-dim">/100</span></div>
             </div>
             <div class="mt-3 flex flex-wrap gap-2">
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Motor 450W</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Bateria 48V</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Autonomia 35 km</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Dobrável</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Motor 450W</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Bateria 48V</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Autonomia 35 km</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Dobrável</span>
             </div>
-            <div class="mt-5 border-t border-white/10 pt-4">
+            <div class="mt-5 border-t border-slate-200 pt-4">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
-              <p class="text-xl font-bold text-white">R$ 2.552</p>
+              <p class="text-xl font-bold text-ink">R$ 2.552</p>
               <div class="mt-3 flex flex-col gap-2">
                 <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1eqMgcv">Comprar no Mercado Livre</a>
-                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="/review-oimotoo-s6">Ver Análise Completa</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-orange-500 bg-transparent px-4 text-sm font-bold text-orange-700 transition hover:bg-orange-50" href="/review-oimotoo-s6">Ver Análise Completa</a>
               </div>
             </div>
           </article><article class="glass relative flex flex-col p-5 transition hover:-translate-y-1 hover:shadow-glow">
@@ -376,50 +376,50 @@
               <img src="https://http2.mlstatic.com/D_NQ_NP_801018-MLA115363054279_072026-O.webp" alt="Honeywhale S6-S bike eletrica dobrável 750W fat tire — melhores bicicletas eletricas" class="max-h-44 w-full object-contain" width="400" height="400" loading="lazy">
             </div>
             <div class="mt-4 flex flex-wrap items-center gap-2">
-              <span class="rounded border border-brand-yellow/60 px-2 py-0.5 text-[10px] font-bold tracking-widest text-brand-yellow">HONEYWALE</span>
-              <h3 class="text-lg font-bold text-white">S6-S 750W</h3>
+              <span class="rounded border border-orange-400 px-2 py-0.5 text-[10px] font-bold tracking-widest text-orange-700">HONEYWALE</span>
+              <h3 class="text-lg font-bold text-ink">S6-S 750W</h3>
             </div>
             <div class="mt-3 flex-1">
-              <div class="mb-3 flex items-center gap-2"><span class="text-violet-400">👤</span> <strong class="text-sm uppercase tracking-wide text-white">Para quem é?</strong></div>
+              <div class="mb-3 flex items-center gap-2"><span class="text-violet-600">👤</span> <strong class="text-sm uppercase tracking-wide text-ink">Para quem é?</strong></div>
               <ul class="space-y-2">
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Calçadas irregulares e vias com buracos: fat tire + motor 750W.</span></li>
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Uso urbano com carga até 125 kg e cesto para compras.</span></li>
-              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer robustez dobrável com autonomia de 40 km.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Calçadas irregulares e vias com buracos: fat tire + motor 750W.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Uso urbano com carga até 125 kg e cesto para compras.</span></li>
+              <li class="flex gap-2 text-sm text-brand-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg><span>Quem quer robustez dobrável com autonomia de 40 km.</span></li>
               </ul>
             </div>
-            <div class="mt-4 flex items-end justify-between border-t border-white/10 pt-4">
+            <div class="mt-4 flex items-end justify-between border-t border-slate-200 pt-4">
               <span class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Nota Tudo de Melhor</span>
-              <div class="leading-none"><span class="text-3xl font-bold text-brand-yellow">93</span><span class="text-sm text-brand-dim">/100</span></div>
+              <div class="leading-none"><span class="text-3xl font-bold text-orange-600">93</span><span class="text-sm text-brand-dim">/100</span></div>
             </div>
             <div class="mt-3 flex flex-wrap gap-2">
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Motor 750W</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Autonomia 40 km</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Fat tire</span>
-              <span class="rounded-md bg-brand-elevated/90 px-2.5 py-1 text-[11px] text-brand-muted">Cesto</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Motor 750W</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Autonomia 40 km</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Fat tire</span>
+              <span class="rounded-md bg-white/90 px-2.5 py-1 text-[11px] text-brand-muted">Cesto</span>
             </div>
-            <div class="mt-5 border-t border-white/10 pt-4">
+            <div class="mt-5 border-t border-slate-200 pt-4">
               <p class="text-[10px] font-bold uppercase tracking-wider text-brand-dim">Melhor preço</p>
-              <p class="text-xl font-bold text-white">R$ 3.799</p>
+              <p class="text-xl font-bold text-ink">R$ 3.799</p>
               <div class="mt-3 flex flex-col gap-2">
                 <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/1MDt7cC">Comprar no Mercado Livre</a>
-                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-brand-yellow bg-transparent px-4 text-sm font-bold text-brand-yellow transition hover:bg-brand-yellow/10" href="/review-honeywhale-s6-s">Ver Análise Completa</a>
+                <a class="inline-flex h-11 items-center justify-center rounded-xl border border-orange-500 bg-transparent px-4 text-sm font-bold text-orange-700 transition hover:bg-orange-50" href="/review-honeywhale-s6-s">Ver Análise Completa</a>
               </div>
             </div>
           </article>
           <a class="glass flex flex-col justify-center p-5 transition hover:-translate-y-1 hover:shadow-glow" href="/melhores-bicicletas-eletricas">
-            <p class="mb-2 text-xs font-bold uppercase text-brand-yellow">Lista completa</p>
-            <h3 class="mb-2 text-lg font-bold text-white">Voltar ao ranking</h3>
+            <p class="mb-2 text-xs font-bold uppercase text-orange-700">Lista completa</p>
+            <h3 class="mb-2 text-lg font-bold text-ink">Voltar ao ranking</h3>
             <p class="text-sm text-brand-dim">Ver as 7 bicicletas elétricas comparadas lado a lado.</p>
           </a>
         </div>
       </section>
 
       <section class="mb-10" id="faq">
-        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre a <span class="text-brand-yellow">Dobrável 400W</span></h2>
+        <h2 class="mb-6 text-2xl font-extrabold md:text-3xl">Perguntas frequentes sobre a <span class="text-orange-600">Dobrável 400W</span></h2>
         <div class="space-y-3">
           <details class="glass p-5" open>
             <summary class="cursor-pointer list-none font-bold">A bike dobrável 400W vale como primeira bike elétrica?</summary>
-            <p class="mt-3 text-sm text-brand-muted">Sim, para trajetos planos curtos. Antes de comprar, compare com a <a href="/review-oimotoo-s6" class="text-brand-yellow underline">Oimotoo S6</a> — mais barata e com nota superior.</p>
+            <p class="mt-3 text-sm text-brand-muted">Sim, para trajetos planos curtos. Antes de comprar, compare com a <a href="/review-oimotoo-s6" class="text-orange-700 underline">Oimotoo S6</a> — mais barata e com nota superior.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Qual a autonomia real?</summary>
@@ -458,13 +458,13 @@
           <h2 id="relacionados-titulo" class="mb-2 text-xl font-extrabold md:text-2xl">Leia também</h2>
           <p class="mb-5 text-sm text-brand-dim">Reviews e rankings relacionados a esta análise.</p>
           <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            <li><a href="/review-honeywhale-b20" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Honeywhale B20</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-oimotoo-a9" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Oimotoo A9</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-bike-dobravel-350w" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Bike elétrica dobrável 350W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-oimotoo-s6" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Oimotoo S6 dobrável 450W</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/review-honeywhale-s6-s" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Honeywhale S6-S 750W fat tire</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/melhores-bicicletas-eletricas-dobraveis" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Melhores bicicletas elétricas dobráveis</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
-            <li><a href="/melhores-bicicletas-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-brand-yellow/40"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-white group-hover:text-brand-yellow">Melhores bicicletas elétricas 2026</span></span><span class="text-brand-yellow" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-honeywhale-b20" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Honeywhale B20</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-oimotoo-a9" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Oimotoo A9</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-bike-dobravel-350w" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Bike elétrica dobrável 350W</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-oimotoo-s6" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Oimotoo S6 dobrável 450W</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/review-honeywhale-s6-s" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Review</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Honeywhale S6-S 750W fat tire</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/melhores-bicicletas-eletricas-dobraveis" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Melhores bicicletas elétricas dobráveis</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
+            <li><a href="/melhores-bicicletas-eletricas" class="group flex h-full items-center justify-between gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition hover:border-orange-300"><span><span class="block text-[10px] font-bold uppercase tracking-wider text-brand-dim">Ranking</span><span class="text-sm font-semibold text-ink group-hover:text-orange-600">Melhores bicicletas elétricas 2026</span></span><span class="text-orange-700" aria-hidden="true">→</span></a></li>
           </ul>
         </div>
       </section>
@@ -472,27 +472,27 @@
     </div>
   </main>
 
-  <div class="fixed bottom-0 left-0 z-50 w-full rounded-none border-t border-white/10 bg-brand-bg/85 backdrop-blur-xl sm:bottom-6 sm:left-1/2 sm:w-auto sm:min-w-[600px] sm:max-w-4xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-white/15 sm:shadow-2xl">
+  <div class="fixed bottom-0 left-0 z-50 w-full rounded-none border-t border-slate-200 bg-white/90 backdrop-blur-xl sm:bottom-6 sm:left-1/2 sm:w-auto sm:min-w-[600px] sm:max-w-4xl sm:-translate-x-1/2 sm:rounded-2xl sm:border sm:border-slate-200 sm:shadow-2xl">
     <div class="flex flex-col gap-3 px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:py-3 sm:pl-3 sm:pr-3">
       <div class="flex min-w-0 items-center gap-3">
-        <img src="https://http2.mlstatic.com/D_NQ_NP_708869-MLB97636357574_112025-O.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-white/10 bg-white/5 object-cover sm:block">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_708869-MLB97636357574_112025-O.webp" alt="Bike elétrica dobrável 400W 48V 10Ah — vista do anúncio" width="48" height="48" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="hidden h-12 w-12 shrink-0 rounded-xl border border-slate-200 bg-slate-50 object-cover sm:block">
         <div class="min-w-0">
-          <strong class="block max-w-[200px] truncate text-sm font-bold text-white sm:max-w-xs sm:text-base">Dobrável 400W</strong>
-          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-brand-yellow"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 9.1</span><span class="text-white/20" aria-hidden="true">|</span><span class="truncate font-extrabold text-white">R$ 3.199</span><span class="text-white/20" aria-hidden="true">|</span><span class="whitespace-nowrap font-extrabold text-emerald-300">10x sem juros</span></div>
+          <strong class="block max-w-[200px] truncate text-sm font-bold text-ink sm:max-w-xs sm:text-base">Dobrável 400W</strong>
+          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-orange-700"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 9.1</span><span class="text-slate-300" aria-hidden="true">|</span><span class="truncate font-extrabold text-ink">R$ 3.199</span><span class="text-slate-300" aria-hidden="true">|</span><span class="whitespace-nowrap font-extrabold text-emerald-700">10x sem juros</span></div>
         </div>
       </div>
       <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="gtag('event', 'clique_afiliado_ml');" href="https://meli.la/31i9Cjq">Comprar no Mercado Livre</a>
     </div>
   </div>
 
-  <footer class="mt-8 border-t border-brand-border bg-[#1a222d] px-4 py-10">
+  <footer class="mt-8 border-t border-brand-border bg-white px-4 py-10">
     <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-4">
       <div><a href="/" class="mb-3 flex items-center gap-3"><img src="assets/ui/logo-site/logo-tudo-melhor.jpeg" width="42" height="42" alt="" class="h-10 w-10 object-contain"><span class="text-sm font-extrabold uppercase tracking-wider">Tudo de Melhor</span></a><p class="text-sm text-brand-dim">Rankings e reviews para decidir com segurança. Links de afiliados podem gerar comissão.</p></div>
-      <div><h4 class="mb-3 text-sm font-bold">Navegação</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/" class="hover:text-brand-yellow">Home</a><a href="/categorias" class="hover:text-brand-yellow">Rankings</a><a href="/reviews" class="hover:text-brand-yellow">Reviews</a></div></div>
-      <div><h4 class="mb-3 text-sm font-bold">Categorias</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/melhores-bicicletas-eletricas" class="hover:text-brand-yellow">Bicicletas Elétricas</a></div></div>
-      <div><h4 class="mb-3 text-sm font-bold">Legal</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/sobre" class="hover:text-brand-yellow">Sobre</a><a href="/privacidade" class="hover:text-brand-yellow">Privacidade</a><a href="/contato" class="hover:text-brand-yellow">Contato</a></div></div>
+      <div><h4 class="mb-3 text-sm font-bold">Navegação</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/" class="hover:text-orange-600">Home</a><a href="/categorias" class="hover:text-orange-600">Rankings</a><a href="/reviews" class="hover:text-orange-600">Reviews</a></div></div>
+      <div><h4 class="mb-3 text-sm font-bold">Categorias</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/melhores-bicicletas-eletricas" class="hover:text-orange-600">Bicicletas Elétricas</a></div></div>
+      <div><h4 class="mb-3 text-sm font-bold">Legal</h4><div class="flex flex-col gap-2 text-sm text-brand-dim"><a href="/sobre" class="hover:text-orange-600">Sobre</a><a href="/privacidade" class="hover:text-orange-600">Privacidade</a><a href="/contato" class="hover:text-orange-600">Contato</a></div></div>
     </div>
-    <div class="mx-auto mt-8 max-w-6xl border-t border-white/10 pt-4 text-xs text-brand-dim">© <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.</div>
+    <div class="mx-auto mt-8 max-w-6xl border-t border-slate-200 pt-4 text-xs text-brand-dim">© <span id="y"></span> tudodemelhor.com.br — Conteúdo editorial independente.</div>
   </footer>
   <script>
     document.getElementById('y').textContent=new Date().getFullYear();
