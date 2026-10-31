@@ -14,20 +14,21 @@
   </script>
   <script>
     function tdmAfiliado(a) {
-      gtag('event', 'clique_afiliado_ml', { 'link_url': a.href, 'produto': a.href.indexOf('2DnA5yX') > -1 ? 'x13-ex' : 'x13-max', 'transport_type': 'beacon' });
+      var v = { '15dJ3LG': ['x13-ex', 'cinza'], '1R58Roz': ['x13-ex', 'branco'], '2wUSZpv': ['x13-ex', 'preto'], '2Ga7iza': ['x13-max', 'cinza'], '1kT6WD9': ['x13-max', 'branco'], '1aPjQ8V': ['x13-max', 'preto'] }[a.href.split('?')[0].split('/').pop()] || ['x13-max', 'cinza'];
+      gtag('event', 'clique_afiliado_ml', { 'link_url': a.href, 'produto': v[0], 'cor': v[1], 'transport_type': 'beacon' });
       return true;
     }
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-  <meta name="description" content="Scooter elétrica Foston X13 Max 1000W com NFC, cesto e painel digital por R$ 5.799 em 10x sem juros. Veja bateria de lítio, motor potente e se a moto vale a pena.">
+  <meta name="description" content="Scooter elétrica Foston X13 Max 1000W com NFC, cesto e painel digital a partir de R$ 5.784 em 10x sem juros. Veja bateria de lítio, motor potente e se a moto vale a pena.">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Tudo de Melhor">
   <meta property="og:url" content="https://www.tudodemelhor.com.br/foston-x13-max">
   <meta property="og:title" content="Foston X13 Max: Moto Scooter Elétrica 1000W Vale a Pena? R$ 5.799">
-  <meta property="og:description" content="Scooter elétrica Foston X13 Max 1000W com NFC, cesto e painel digital por R$ 5.799 em 10x sem juros. Veja bateria de lítio, motor potente e se a moto vale a pena.">
+  <meta property="og:description" content="Scooter elétrica Foston X13 Max 1000W com NFC, cesto e painel digital a partir de R$ 5.784 em 10x sem juros. Veja bateria de lítio, motor potente e se a moto vale a pena.">
   <meta property="og:image" content="https://www.tudodemelhor.com.br/assets/produtos/LP/x13-max-capa-poster.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/jpeg" href="assets/ui/logo-site/logo-tudo-melhor.jpeg">
@@ -81,6 +82,11 @@
   <style>
     body{background-color:#F8FAFC;background-image:radial-gradient(ellipse 65% 40% at 100% 0%,rgba(251,146,60,.16),transparent 60%),radial-gradient(ellipse 55% 38% at 0% 100%,rgba(234,88,12,.07),transparent 55%),radial-gradient(rgba(15,23,42,.035) 1px,transparent 1px);background-size:auto,auto,20px 20px;background-attachment:fixed}
     .calc-mode[aria-checked="true"] { border-color: #EA580C; background: #FFF7ED; color: #9A3412; box-shadow: 0 0 0 1px rgba(234, 88, 12, 0.35); }
+    .color-dot[aria-pressed="true"] { box-shadow: 0 0 0 2px #EA580C; }
+    .color-dot:focus-visible { outline: 2px solid #EA580C; outline-offset: 2px; }
+    .swap-fade { transition: opacity 0.2s ease; }
+    .swap-fade.is-swapping { opacity: 0; }
+    @media (prefers-reduced-motion: reduce) { .swap-fade { transition: none; } }
     .calc-range { accent-color: #EA580C; }
     .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
@@ -130,7 +136,7 @@
         "@id": "https://www.tudodemelhor.com.br/foston-x13-max#webpage",
         "url": "https://www.tudodemelhor.com.br/foston-x13-max",
         "name": "Foston X13 Max: Moto Scooter Elétrica 1000W Vale a Pena? R$ 5.799",
-        "description": "Scooter elétrica Foston X13 Max 1000W com NFC, cesto e painel digital por R$ 5.799 em 10x sem juros. Veja bateria de lítio, motor potente e se a moto vale a pena.",
+        "description": "Scooter elétrica Foston X13 Max 1000W com NFC, cesto e painel digital a partir de R$ 5.784 em 10x sem juros. Veja bateria de lítio, motor potente e se a moto vale a pena.",
         "inLanguage": "pt-BR",
         "isPartOf": { "@id": "https://www.tudodemelhor.com.br/#website" },
         "breadcrumb": { "@id": "https://www.tudodemelhor.com.br/foston-x13-max#breadcrumb" },
@@ -218,7 +224,7 @@
           "positiveNotes": {
             "@type": "ItemList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Mais barata da linha Foston X13: R$ 5.799" },
+              { "@type": "ListItem", "position": 1, "name": "10x sem juros em todas as cores, a partir de R$ 5.784,11 na branca" },
               { "@type": "ListItem", "position": 2, "name": "10x de R$ 579,90 sem juros no cartão" },
               { "@type": "ListItem", "position": 3, "name": "Motor 1000W, partida por NFC e 32 km/h confirmados na ficha" },
               { "@type": "ListItem", "position": 4, "name": "Cesto dianteiro e painel digital" },
@@ -235,26 +241,26 @@
             ]
           }
         },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "BR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
         "offers": {
-          "@type": "Offer",
-          "url": "https://meli.la/2Ga7iza",
+          "@type": "AggregateOffer",
           "priceCurrency": "BRL",
-          "price": "5799.00",
-          "priceValidUntil": "2026-12-31",
+          "lowPrice": "5784.11",
+          "highPrice": "5799.71",
+          "offerCount": 3,
           "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition",
-          "seller": {
-            "@type": "Organization",
-            "name": "Mercado Livre"
-          },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": "BR",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 30,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
-          }
+          "offers": [
+            { "@type": "Offer", "name": "Foston X13 Max cinza", "url": "https://meli.la/2Ga7iza", "priceCurrency": "BRL", "price": "5799.00", "priceValidUntil": "2026-12-31", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "seller": { "@type": "Organization", "name": "Mercado Livre" } },
+            { "@type": "Offer", "name": "Foston X13 Max branca", "url": "https://meli.la/1kT6WD9", "priceCurrency": "BRL", "price": "5784.11", "priceValidUntil": "2026-12-31", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "seller": { "@type": "Organization", "name": "Mercado Livre" } },
+            { "@type": "Offer", "name": "Foston X13 Max preta", "url": "https://meli.la/1aPjQ8V", "priceCurrency": "BRL", "price": "5799.71", "priceValidUntil": "2026-12-31", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "seller": { "@type": "Organization", "name": "Mercado Livre" } }
+          ]
         },
         "isSimilarTo": {
           "@type": "Product",
@@ -296,7 +302,7 @@
             "name": "A Foston X13 Max vale a pena?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sim, para quem quer a scooter elétrica mais barata da linha Foston X13 e precisa de cesto: motor 1000W, NFC, até 32 km/h, bateria de lítio removível, cesto dianteiro e painel digital por R$ 5.799 em 10x sem juros. Nossa nota é 9.2. O anúncio ainda é recente (1 avaliação) e não informa voltagem nem autonomia, então confirme esses dois pontos com o vendedor."
+              "text": "Sim, para quem quer uma scooter elétrica da linha Foston X13 com cesto: motor 1000W, NFC, até 32 km/h, bateria de lítio removível, cesto dianteiro e painel digital, de R$ 5.784 a R$ 5.800 conforme a cor, em 10x sem juros. Nossa nota é 9.2. O anúncio ainda é recente (1 avaliação) e não informa voltagem nem autonomia, então confirme esses dois pontos com o vendedor."
             }
           },
           {
@@ -304,7 +310,7 @@
             "name": "Qual o preço da Foston X13 Max?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Em 28/10/2026, a Foston X13 Max custava R$ 5.799 no Mercado Livre (10% OFF sobre R$ 6.499), em até 10x de R$ 579,90 sem juros, ou R$ 5.649 com o cupom de seguidor da loja. O frete saiu grátis no anúncio. O preço pode mudar a qualquer momento."
+              "text": "Em 28/10/2026, a Foston X13 Max custava R$ 5.799 no Mercado Livre (10% OFF sobre R$ 6.499), em até 10x de R$ 579,90 sem juros, ou R$ 5.649 com o cupom de seguidor da loja. O frete saiu grátis no anúncio. Por cor, a X13 Max branca saía por R$ 5.784,11 (31/10) e a preta por R$ 5.799,71 (29/10), ambas em 10x sem juros. O preço pode mudar a qualquer momento."
             }
           },
           {
@@ -344,7 +350,7 @@
             "name": "Qual a diferença entre a Foston X13 Max e a X13 EX?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "As duas têm motor de 1000W, partida por NFC e velocidade máxima de 32 km/h. A X13 Max traz cesto dianteiro e painel digital, pesa 48 kg, suporta até 100 kg e custa R$ 5.799 em 10x sem juros. A X13 EX tem 73 avaliações (nota 4.5) e está no menor preço histórico de R$ 6.233 à vista, com 12x com juros."
+              "text": "As duas têm motor de 1000W, partida por NFC e velocidade máxima de 32 km/h. A X13 Max traz cesto dianteiro e painel digital, pesa 48 kg, suporta até 100 kg e custa R$ 5.799 em 10x sem juros. A X13 EX tem 73 avaliações (nota 4.5) e está no menor preço histórico de R$ 6.233 à vista na cor cinza, com 12x com juros. Na cor preta, a X13 EX sai por R$ 5.566,92 em 10x sem juros."
             }
           },
           {
@@ -460,23 +466,32 @@
           <!-- CARD DE PREÇO -->
           <div class="relative mb-6 overflow-hidden rounded-2xl border border-emerald-200 bg-emerald-50/70 p-5 shadow-glow-emerald">
             <div class="mb-2 flex flex-wrap gap-2">
-              <span class="rounded bg-sky-50 px-1.5 py-0.5 text-[10px] font-extrabold uppercase text-sky-700">🏷️ Mais barata da linha X13</span>
+              <span class="rounded bg-sky-50 px-1.5 py-0.5 text-[10px] font-extrabold uppercase text-sky-700">🧺 Cesto + painel digital</span>
               <span class="rounded bg-emerald-50 px-1.5 py-0.5 text-[10px] font-extrabold uppercase text-emerald-700">💳 10x sem juros</span>
             </div>
-            <p class="mb-1 text-xs text-brand-dim">De <span class="line-through decoration-orange-400/80">R$ 6.499</span> no anúncio · <span class="font-bold text-emerald-700">10% OFF</span></p>
+            <div class="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 rounded-xl border border-emerald-200 bg-white/70 px-3 py-2">
+              <p class="text-[11px] font-bold uppercase tracking-wide text-brand-dim">Cor: <span class="text-ink" data-bind="colorName">Cinza</span></p>
+              <div class="flex items-center gap-2" role="group" aria-label="Cores da Foston X13 Max">
+                <button type="button" class="color-dot flex h-7 w-7 items-center justify-center rounded-full transition hover:scale-110" data-color="cinza" aria-pressed="true" title="Cinza" aria-label="Foston X13 Max cinza"><span class="h-5 w-5 rounded-full bg-slate-500 ring-1 ring-inset ring-black/15"></span></button>
+                <button type="button" class="color-dot flex h-7 w-7 items-center justify-center rounded-full transition hover:scale-110" data-color="branco" aria-pressed="false" title="Branco" aria-label="Foston X13 Max branca"><span class="h-5 w-5 rounded-full bg-white ring-1 ring-inset ring-slate-300"></span></button>
+                <button type="button" class="color-dot flex h-7 w-7 items-center justify-center rounded-full transition hover:scale-110" data-color="preto" aria-pressed="false" title="Preto" aria-label="Foston X13 Max preta"><span class="h-5 w-5 rounded-full bg-neutral-900 ring-1 ring-inset ring-black/15"></span></button>
+              </div>
+            </div>
+            <div class="swap-fade" data-swap>
+            <p class="mb-1 text-xs text-brand-dim" data-bind="anchor">De <span class="line-through decoration-orange-400/80">R$ 6.499</span> no anúncio · <span class="font-bold text-emerald-700">10% OFF</span></p>
             <div class="flex flex-wrap items-end gap-x-3 gap-y-1">
-              <span class="text-4xl font-black leading-none text-ink md:text-5xl">R$ 5.799<span class="text-2xl md:text-3xl">,00</span></span>
+              <span class="text-4xl font-black leading-none text-ink md:text-5xl" data-bind="priceBig">R$ 5.799<span class="text-2xl md:text-3xl">,00</span></span>
               <span class="pb-1 text-sm font-bold text-emerald-700">no cartão ou Pix</span>
             </div>
-            <div class="mt-2 inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span><span class="text-base font-black text-ink">10x de R$ 579,90</span><span class="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>
-            <p class="mt-1.5 text-xs font-semibold text-sky-700">🏷️ R$ 5.649 com o cupom de seguidor da loja (no anúncio)</p>
-            <p class="mt-1 flex items-center gap-2 text-xs text-brand-dim"><span class="pulse-dot inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-400" aria-hidden="true"></span>Frete grátis no anúncio em 28/10, com 2 unidades em estoque (confira o seu CEP)</p>
-            <a href="https://meli.la/2Ga7iza" rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" class="btn-shine mt-5 inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition-all hover:scale-[1.02]">
-              Ver a Foston X13 Max no Mercado Livre
+            <div class="mt-2" data-bind="inst"><div class="inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span><span class="text-base font-black text-ink">10x de R$ 579,90</span><span class="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div><p class="mt-1.5 text-xs font-semibold text-sky-700">🏷️ R$ 5.649 com o cupom de seguidor da loja (no anúncio)</p></div>
+            <p class="mt-1 flex items-center gap-2 text-xs text-brand-dim"><span class="pulse-dot inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-400" aria-hidden="true"></span><span data-bind="delivery">Frete grátis no anúncio em 28/10, com 2 unidades em estoque (confira o seu CEP)</span></p>
+            <a href="https://meli.la/2Ga7iza" data-cta rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" class="btn-shine mt-5 inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition-all hover:scale-[1.02]">
+              <span data-bind="ctaText">Ver a Foston X13 Max no Mercado Livre</span>
               <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <p class="mt-2 text-center text-[11px] text-brand-dim">Abre o anúncio em nova aba · Compra Garantida e devolução grátis em 30 dias</p>
-            <p class="mt-3 text-center text-sm"><a href="/review-scooter-x13-ex-foston" class="font-bold text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">Prefere a X13 EX no menor preço histórico (R$ 6.233)? Ver review →</a></p>
+            <p class="mt-2 text-center text-[11px] text-brand-dim">Cor: <strong class="text-ink" data-bind="colorName">Cinza</strong> · o preço pode variar conforme a cor · Compra Garantida pelo Mercado Livre</p>
+            </div>
+            <p class="mt-3 text-center text-sm"><a href="/review-scooter-x13-ex-foston" class="font-bold text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">Prefere a X13 EX? Na cor preta sai por R$ 5.566,92 · Ver review →</a></p>
           </div>
 
           <p class="mb-6 max-w-2xl text-base text-brand-muted md:text-lg">
@@ -536,7 +551,7 @@
               <p class="m-0 text-sm text-brand-dim">Nota Tudo de Melhor · escala 0–10</p>
             </div>
           </div>
-          <p class="mt-4 text-brand-muted">A <strong>Foston X13 Max</strong> vale a pena para quem quer a <strong>scooter elétrica</strong> mais barata da linha X13 e precisa de cesto: motor 1000W, NFC, 32 km/h, bateria de lítio removível e painel digital por R$ 5.799 em 10x sem juros. O que segura a nota abaixo de 10: o anúncio ainda é recente (1 avaliação), a ficha não informa voltagem nem autonomia e a carga máxima é de 100 kg.</p>
+          <p class="mt-4 text-brand-muted">A <strong>Foston X13 Max</strong> vale a pena para quem quer uma <strong>scooter elétrica</strong> da linha X13 com cesto: motor 1000W, NFC, 32 km/h, bateria de lítio removível e painel digital a partir de R$ 5.784 em 10x sem juros. O que segura a nota abaixo de 10: o anúncio ainda é recente (1 avaliação), a ficha não informa voltagem nem autonomia e a carga máxima é de 100 kg.</p>
         </article>
         <article class="glass p-5">
           <h3 class="mb-2 text-xs font-bold uppercase tracking-wide text-brand-dim"><span aria-hidden="true">🎯</span> Para quem é</h3>
@@ -558,13 +573,23 @@
           <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
             <div>
               <h2 id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Preço da Foston X13 Max: histórico no Mercado Livre</h2>
-              <p class="mt-1 text-xs text-brand-dim">Foston X13 Max · monitoramento iniciado em 28/10/2026</p>
+              <p class="mt-1 text-xs text-brand-dim">Preço por cor e histórico da Foston X13 Max cinza · monitoramento iniciado em 28/10/2026</p>
             </div>
             <span class="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Bom preço no monitor</span>
           </div>
 
+          <div class="mb-6">
+            <h3 class="text-sm font-extrabold uppercase tracking-wide text-ink">🎨 Preço da Foston X13 Max por cor</h3>
+            <p class="mt-1 text-xs text-brand-dim">Cada cor tem um anúncio próprio no Mercado Livre, com preço diferente. O gráfico abaixo acompanha a cor cinza.</p>
+            <div class="mt-3 grid grid-cols-3 gap-2">
+              <a href="https://meli.la/2Ga7iza" rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" class="flex flex-col items-center gap-0.5 rounded-xl border border-slate-200 bg-white p-2.5 text-center transition hover:border-orange-300 hover:shadow-soft"><span class="mb-1 h-4 w-4 rounded-full bg-slate-500 ring-1 ring-inset ring-black/15" aria-hidden="true"></span><span class="text-[10px] font-bold uppercase tracking-wide text-brand-dim">Cinza</span><span class="whitespace-nowrap text-[13px] font-extrabold text-ink sm:text-base">R$ 5.799,00</span><span class="text-[10px] font-semibold text-emerald-700">10x R$ 579,90 sem juros</span><span class="text-[10px] text-brand-dim">28/10</span></a>
+              <a href="https://meli.la/1kT6WD9" rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" class="flex flex-col items-center gap-0.5 rounded-xl border border-emerald-300 bg-emerald-50 p-2.5 text-center transition hover:border-orange-300 hover:shadow-soft"><span class="mb-1 h-4 w-4 rounded-full bg-white ring-1 ring-inset ring-slate-300" aria-hidden="true"></span><span class="text-[10px] font-bold uppercase tracking-wide text-brand-dim">Branco</span><span class="whitespace-nowrap text-[13px] font-extrabold text-emerald-700 sm:text-base">R$ 5.784,11</span><span class="text-[10px] font-semibold text-emerald-700">10x R$ 578,41 sem juros</span><span class="text-[10px] text-brand-dim">31/10 · a mais barata</span></a>
+              <a href="https://meli.la/1aPjQ8V" rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" class="flex flex-col items-center gap-0.5 rounded-xl border border-slate-200 bg-white p-2.5 text-center transition hover:border-orange-300 hover:shadow-soft"><span class="mb-1 h-4 w-4 rounded-full bg-neutral-900 ring-1 ring-inset ring-black/15" aria-hidden="true"></span><span class="text-[10px] font-bold uppercase tracking-wide text-brand-dim">Preto</span><span class="whitespace-nowrap text-[13px] font-extrabold text-ink sm:text-base">R$ 5.799,71</span><span class="text-[10px] font-semibold text-emerald-700">10x R$ 579,97 sem juros</span><span class="text-[10px] text-brand-dim">29/10</span></a>
+            </div>
+          </div>
+
           <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-50 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-700 shadow-neon-emerald md:text-base">
-            🟢 Menor preço registrado: R$ 5.799 em 10x de R$ 579,90 sem juros
+            🟢 Cor cinza · menor preço registrado: R$ 5.799 em 10x de R$ 579,90 sem juros
           </div>
 
           <div class="mb-5 grid grid-cols-3 gap-3">
@@ -706,7 +731,7 @@
           <div class="glass border-emerald-200 p-6 shadow-glow-emerald">
             <h3 class="mb-4 text-lg font-bold text-emerald-700">Pontos fortes</h3>
             <ul class="space-y-3 text-sm text-brand-muted">
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Mais barata da linha Foston X13: R$ 5.799 (R$ 434 a menos que a X13 EX)</li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>10x sem juros em todas as cores, a partir de R$ 5.784,11 na branca</li>
               <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>10x de R$ 579,90 sem juros no cartão</li>
               <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Motor 1000W, partida por NFC e 32 km/h confirmados na ficha</li>
               <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Bateria de íon de lítio removível: dá para carregar dentro de casa</li>
@@ -873,7 +898,7 @@
               <div class="leading-none"><span class="text-3xl font-bold text-orange-600">90</span><span class="text-sm text-brand-dim">/100</span></div>
             </div>
             <div class="mt-4 flex flex-col gap-2">
-              <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" href="https://meli.la/2DnA5yX">Ver a X13 EX no Mercado Livre</a>
+              <a class="inline-flex h-11 items-center justify-center rounded-xl bg-brand-yellow px-4 text-sm font-bold text-black shadow-glow transition hover:brightness-110" rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" href="https://meli.la/15dJ3LG">Ver a X13 EX no Mercado Livre</a>
               <a class="inline-flex h-11 items-center justify-center rounded-xl border border-orange-500 bg-transparent px-4 text-sm font-bold text-orange-700 transition hover:bg-orange-50" href="/review-scooter-x13-ex-foston">Ver Análise Completa</a>
             </div>
           </article>
@@ -910,7 +935,7 @@
           <h2 class="mb-4 text-2xl font-extrabold md:text-3xl">Análise detalhada: a <span class="text-orange-600">scooter elétrica Foston X13 Max</span> vale a pena?</h2>
 
           <p class="mb-5 text-brand-muted">
-            A <strong>Foston X13 Max 1000W é</strong> a versão mais utilitária da linha X13 da Foston. Ela mantém a base que fez a <a href="/review-scooter-x13-ex-foston" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">Foston X13 EX</a> chegar ao #2 do nosso ranking — <strong>motor potente de 1000W</strong> e partida por <strong>NFC</strong> — e acrescenta <strong>cesto dianteiro</strong> e <strong>painel digital</strong>. No anúncio da Foston X13 Max 1000W NFC que rastreamos no Mercado Livre, o <strong>preço</strong> também é menor: R$ 5.799 em 10x de R$ 579,90 sem juros (28/10/2026), contra R$ 6.233 à vista da EX.
+            A <strong>Foston X13 Max 1000W é</strong> a versão mais utilitária da linha X13 da Foston. Ela mantém a base que fez a <a href="/review-scooter-x13-ex-foston" class="text-orange-700 underline decoration-orange-400/60 hover:decoration-orange-600">Foston X13 EX</a> chegar ao #2 do nosso ranking — <strong>motor potente de 1000W</strong> e partida por <strong>NFC</strong> — e acrescenta <strong>cesto dianteiro</strong> e <strong>painel digital</strong>. No anúncio da Foston X13 Max 1000W NFC que rastreamos no Mercado Livre, o <strong>preço</strong> também é menor: R$ 5.799 em 10x de R$ 579,90 sem juros (28/10/2026), contra R$ 6.233 à vista da EX cinza. A EX preta, porém, sai por R$ 5.566,92.
           </p>
           <p class="mb-5 text-brand-muted">
             A ficha técnica do anúncio confirma o essencial: <strong>velocidade máxima de 32 km/h</strong>, bateria de íon de lítio removível, 48 kg de peso e até 100 kg de carga. O anúncio ainda é recente (4 vendas e 1 avaliação 5.0) e a ficha não traz voltagem, Ah nem autonomia; para esses itens, mostramos o que outras lojas declaram para a mesma <strong>moto elétrica</strong>, sempre identificado como tal. Nossa nota é 9.2.
@@ -974,11 +999,11 @@
         <div class="space-y-3">
           <details class="glass p-5" open>
             <summary class="cursor-pointer list-none font-bold">A Foston X13 Max vale a pena?</summary>
-            <p class="mt-3 text-sm text-brand-muted">Sim, para quem quer a scooter elétrica mais barata da linha Foston X13 e precisa de cesto: motor 1000W, NFC, até 32 km/h, bateria de lítio removível, cesto dianteiro e painel digital por R$ 5.799 em 10x sem juros. Nossa nota é 9.2. O anúncio ainda é recente (1 avaliação) e não informa voltagem nem autonomia, então confirme esses dois pontos com o vendedor.</p>
+            <p class="mt-3 text-sm text-brand-muted">Sim, para quem quer uma scooter elétrica da linha Foston X13 com cesto: motor 1000W, NFC, até 32 km/h, bateria de lítio removível, cesto dianteiro e painel digital, de R$ 5.784 a R$ 5.800 conforme a cor, em 10x sem juros. Nossa nota é 9.2. O anúncio ainda é recente (1 avaliação) e não informa voltagem nem autonomia, então confirme esses dois pontos com o vendedor.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Qual o preço da Foston X13 Max?</summary>
-            <p class="mt-3 text-sm text-brand-muted">Em 28/10/2026, a Foston X13 Max custava R$ 5.799 no Mercado Livre (10% OFF sobre R$ 6.499), em até 10x de R$ 579,90 sem juros, ou R$ 5.649 com o cupom de seguidor da loja. O frete saiu grátis no anúncio. O preço pode mudar a qualquer momento.</p>
+            <p class="mt-3 text-sm text-brand-muted">Em 28/10/2026, a Foston X13 Max custava R$ 5.799 no Mercado Livre (10% OFF sobre R$ 6.499), em até 10x de R$ 579,90 sem juros, ou R$ 5.649 com o cupom de seguidor da loja. O frete saiu grátis no anúncio. Por cor, a X13 Max branca saía por R$ 5.784,11 (31/10) e a preta por R$ 5.799,71 (29/10), ambas em 10x sem juros. O preço pode mudar a qualquer momento.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Qual a velocidade máxima da Foston X13 Max?</summary>
@@ -998,7 +1023,7 @@
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">Qual a diferença entre a Foston X13 Max e a X13 EX?</summary>
-            <p class="mt-3 text-sm text-brand-muted">As duas têm motor de 1000W, partida por NFC e velocidade máxima de 32 km/h. A X13 Max traz cesto dianteiro e painel digital, pesa 48 kg, suporta até 100 kg e custa R$ 5.799 em 10x sem juros. A X13 EX tem 73 avaliações (nota 4.5) e está no menor preço histórico de R$ 6.233 à vista, com 12x com juros.</p>
+            <p class="mt-3 text-sm text-brand-muted">As duas têm motor de 1000W, partida por NFC e velocidade máxima de 32 km/h. A X13 Max traz cesto dianteiro e painel digital, pesa 48 kg, suporta até 100 kg e custa R$ 5.799 em 10x sem juros. A X13 EX tem 73 avaliações (nota 4.5) e está no menor preço histórico de R$ 6.233 à vista na cor cinza, com 12x com juros. Na cor preta, a X13 EX sai por R$ 5.566,92 em 10x sem juros.</p>
           </details>
           <details class="glass p-5">
             <summary class="cursor-pointer list-none font-bold">O que vem na caixa da Foston X13 Max?</summary>
@@ -1045,11 +1070,11 @@
       <div class="flex min-w-0 items-center gap-3">
         <img src="assets/produtos/LP/x13-max-compradores/comprador-3.webp" alt="" width="48" height="48" loading="lazy" decoding="async" class="hidden h-12 w-12 shrink-0 rounded-xl border border-slate-200 bg-slate-50 object-cover sm:block">
         <div class="min-w-0">
-          <strong class="block max-w-[200px] truncate text-sm font-bold text-ink sm:max-w-xs sm:text-base">Foston X13 Max</strong>
-          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-orange-700"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 9.2</span><span class="text-slate-300" aria-hidden="true">|</span><span class="truncate font-extrabold text-ink">10x R$ 579,90 sem juros</span></div>
+          <strong class="block max-w-[200px] truncate text-sm font-bold text-ink sm:max-w-xs sm:text-base" data-bind="stickyName">Foston X13 Max</strong>
+          <div class="mt-0.5 flex items-center gap-2 text-xs"><span class="flex items-center gap-1 font-black text-orange-700"><svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><span class="sr-only">Nota</span> 9.2</span><span class="text-slate-300" aria-hidden="true">|</span><span class="truncate font-extrabold text-ink" data-bind="stickyPrice">10x R$ 579,90 sem juros</span></div>
         </div>
       </div>
-      <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" href="https://meli.la/2Ga7iza">Comprar no Mercado Livre</a>
+      <a class="btn-shine inline-flex w-full shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-6 py-3 text-sm font-extrabold text-black shadow-glow transition-all hover:scale-105 hover:brightness-110 active:scale-[0.98] sm:w-auto sm:text-base" rel="sponsored noopener" target="_blank" onclick="return tdmAfiliado(this);" data-cta href="https://meli.la/2Ga7iza">Comprar no Mercado Livre</a>
     </div>
   </div>
 
@@ -1144,6 +1169,57 @@
       }
       document.getElementById('max-pay-rows').innerHTML = rows;
     })();
+
+    (function () {
+      const inst10 = (v) => '<div class="inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span><span class="text-base font-black text-ink">10x de R$ ' + v + '</span><span class="rounded bg-emerald-500 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-black">sem juros</span></div>';
+      const $all = (sel) => Array.from(document.querySelectorAll(sel));
+      const bind = $all('[data-bind]').reduce((o, el) => { (o[el.dataset.bind] = o[el.dataset.bind] || []).push(el); return o; }, {});
+      const base = {};
+      Object.keys(bind).forEach((k) => { base[k] = bind[k][0].innerHTML; });
+      const COLORS = {
+        cinza: { name: 'Cinza', link: 'https://meli.la/2Ga7iza', price: 5799 },
+        branco: {
+          name: 'Branco', link: 'https://meli.la/1kT6WD9', price: 5784.11,
+          anchor: 'Preço verificado em 31/10/2026 · <span class="font-bold text-emerald-700">a X13 Max mais barata hoje</span>',
+          priceBig: 'R$ 5.784<span class="text-2xl md:text-3xl">,11</span>', inst: inst10('578,41'),
+          delivery: 'Preço verificado em 31/10/2026 · confira o frete para o seu CEP no anúncio',
+          ctaText: 'Ver a X13 Max branca no Mercado Livre', stickyName: 'Foston X13 Max Branca', stickyPrice: '10x R$ 578,41 sem juros'
+        },
+        preto: {
+          name: 'Preto', link: 'https://meli.la/1aPjQ8V', price: 5799.71,
+          anchor: 'Preço verificado em 29/10/2026 · <span class="font-bold text-emerald-700">menor preço registrado</span>',
+          priceBig: 'R$ 5.799<span class="text-2xl md:text-3xl">,71</span>', inst: inst10('579,97'),
+          delivery: 'Preço verificado em 29/10/2026 · confira o frete para o seu CEP no anúncio',
+          ctaText: 'Ver a X13 Max preta no Mercado Livre', stickyName: 'Foston X13 Max Preta', stickyPrice: '10x R$ 579,97 sem juros'
+        }
+      };
+      const calcRoot = document.getElementById('calc-economia');
+
+      function apply(color, fromUser) {
+        const c = COLORS[color];
+        if (!c) return;
+        document.body.dataset.cor = color;
+        $all('.color-dot').forEach((d) => d.setAttribute('aria-pressed', d.dataset.color === color ? 'true' : 'false'));
+        $all('[data-cta]').forEach((a) => { a.href = c.link; });
+        const swap = $all('[data-swap]');
+        swap.forEach((el) => el.classList.add('is-swapping'));
+        const run = () => {
+          ['anchor', 'priceBig', 'inst', 'delivery', 'ctaText', 'stickyName', 'stickyPrice'].forEach((k) => (bind[k] || []).forEach((el) => { el.innerHTML = c[k] || base[k]; }));
+          (bind.colorName || []).forEach((el) => { el.textContent = c.name; });
+          if (calcRoot) { calcRoot.dataset.price = c.price; window.dispatchEvent(new Event('max:price')); }
+          swap.forEach((el) => el.classList.remove('is-swapping'));
+        };
+        if (fromUser) setTimeout(run, 150); else run();
+        if (fromUser) {
+          history.replaceState(null, '', color === 'cinza' ? location.pathname + location.search : '#cor=' + color);
+          if (typeof gtag === 'function') gtag('event', 'selecionar_cor', { modelo: 'x13-max', cor: color });
+        }
+      }
+
+      $all('.color-dot').forEach((d) => d.addEventListener('click', () => apply(d.dataset.color, true)));
+      const hashColor = (location.hash.match(/cor=(branco|preto)/) || [])[1];
+      if (hashColor) apply(hashColor, false);
+    })();
   </script>
   <script>
     (function () {
@@ -1205,6 +1281,7 @@
       }));
       km.addEventListener('input', () => calc(true));
       dias.addEventListener('input', () => calc(true));
+      window.addEventListener('max:price', () => calc(false));
       calc(false);
     })();
   </script>

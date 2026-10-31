@@ -13,12 +13,14 @@
     gtag('event', 'conversion', {'send_to': 'AW-18490413648/FQ1MCJr2y5QdENCk9fBE'});
   </script>
   <script>
+    var TDM_X13 = { '15dJ3LG': ['x13-ex', 'cinza'], '1R58Roz': ['x13-ex', 'branco'], '2wUSZpv': ['x13-ex', 'preto'], '2Ga7iza': ['x13-max', 'cinza'], '1kT6WD9': ['x13-max', 'branco'], '1aPjQ8V': ['x13-max', 'preto'] };
     function gtag_report_conversion(url) {
+      var v = TDM_X13[String(url).split('?')[0].split('/').pop()] || ['x13-ex', 'cinza'];
       gtag('event', 'conversion', {
           'send_to': 'AW-18490413648/GawxCPD075wdENCk9fBE',
           'transport_type': 'beacon'
       });
-      gtag('event', 'clique_afiliado_ml', { 'link_url': url, 'produto': url.indexOf('2Ga7iza') > -1 ? 'x13-max' : 'x13-ex', 'transport_type': 'beacon' });
+      gtag('event', 'clique_afiliado_ml', { 'link_url': url, 'produto': v[0], 'cor': v[1], 'transport_type': 'beacon' });
       return true;
     }
   </script>
@@ -95,8 +97,10 @@
     body[data-modelo="max"] [data-only="ex"] { display: none !important; }
     .text-gradient-brand { background: linear-gradient(90deg, #EAB308 0%, #EA580C 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .trust-ico { box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06); }
-    .model-option[aria-checked="true"] { border-color: #EAB308; background: #FEFCE8; box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.55), 0 8px 18px -10px rgba(234, 179, 8, 0.6); }
+    .model-card.is-active { border-color: #EAB308; background: #FEFCE8; box-shadow: 0 0 0 1px rgba(234, 179, 8, 0.55), 0 8px 18px -10px rgba(234, 179, 8, 0.6); }
     .model-option[aria-checked="true"] .model-check { opacity: 1; transform: scale(1); }
+    .color-dot[aria-pressed="true"] { box-shadow: 0 0 0 2px #EA580C; }
+    .color-dot:focus-visible { outline: 2px solid #EA580C; outline-offset: 2px; }
     .calc-mode[aria-checked="true"] { border-color: #EA580C; background: #FFF7ED; color: #9A3412; box-shadow: 0 0 0 1px rgba(234, 88, 12, 0.35); }
     .calc-range { accent-color: #EA580C; }
     .swap-fade { transition: opacity 0.25s ease; }
@@ -128,7 +132,7 @@
     details[open] .faq-chevron { transform: rotate(180deg); }
   </style>
 </head>
-<body data-modelo="ex" class="bg-brand-bg text-ink font-sans antialiased min-h-screen pb-36 sm:pb-32">
+<body data-modelo="ex" data-cor="cinza" class="bg-brand-bg text-ink font-sans antialiased min-h-screen pb-36 sm:pb-32">
 
   <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
     <div class="mx-auto flex h-16 max-w-6xl items-center gap-2 px-4 sm:gap-4">
@@ -147,7 +151,7 @@
         Oferta Verificada
       </span>
 
-      <a href="https://meli.la/2DnA5yX" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="ml-auto inline-flex h-10 shrink-0 items-center justify-center rounded-xl bg-brand-yellow px-3 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110 sm:px-5 sm:text-sm">Ver Oferta no ML</a>
+      <a href="https://meli.la/15dJ3LG" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="ml-auto inline-flex h-10 shrink-0 items-center justify-center rounded-xl bg-brand-yellow px-3 text-xs font-extrabold text-black shadow-glow transition hover:brightness-110 sm:px-5 sm:text-sm">Ver Oferta no ML</a>
     </div>
   </header>
 
@@ -173,20 +177,40 @@
           <div class="mb-4">
             <p id="modelo-label" class="mb-2 text-xs font-bold uppercase tracking-wider text-brand-dim">Escolha o modelo: <span data-bind="modelName" class="text-ink">X13 EX</span></p>
             <div class="grid grid-cols-2 gap-2" role="radiogroup" aria-labelledby="modelo-label">
-              <button type="button" role="radio" aria-checked="true" data-model="ex" class="model-option relative flex flex-col items-start gap-1 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-left transition hover:border-orange-300">
-                <span class="model-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
-                <span class="rounded bg-emerald-100 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-emerald-700">📉 Menor preço histórico</span>
-                <span class="text-sm font-extrabold text-ink">Foston X13 EX</span>
-                <span class="text-base font-black text-ink">R$ 6.233 <span class="text-[11px] font-bold text-emerald-700">à vista</span></span>
-                <span class="text-[11px] text-brand-muted">★ 4.5 · 73 avaliações · nota 9.0</span>
-              </button>
-              <button type="button" role="radio" aria-checked="false" data-model="max" class="model-option relative flex flex-col items-start gap-1 rounded-xl border border-slate-200 bg-slate-50 px-3 py-3 text-left transition hover:border-orange-300">
-                <span class="model-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
-                <span class="rounded bg-sky-50 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-sky-700">🏷️ Mais barata · 10x sem juros</span>
-                <span class="text-sm font-extrabold text-ink">Foston X13 Max</span>
-                <span class="text-base font-black text-ink">R$ 5.799 <span class="text-[11px] font-bold text-emerald-700">10x R$ 579,90</span></span>
-                <span class="text-[11px] text-brand-muted">cesto + painel digital · anúncio recente</span>
-              </button>
+              <div class="model-card is-active flex flex-col rounded-xl border border-slate-200 bg-slate-50 transition hover:border-orange-300" data-model-card="ex">
+                <button type="button" role="radio" aria-checked="true" data-model="ex" class="model-option relative flex flex-1 flex-col items-start gap-1 rounded-xl px-3 pb-2 pt-3 text-left">
+                  <span class="model-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
+                  <span class="rounded bg-emerald-100 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-emerald-700">📉 Menor preço histórico</span>
+                  <span class="text-sm font-extrabold text-ink">Foston X13 EX</span>
+                  <span class="text-base font-black text-ink" data-card-price="ex">R$ 6.233 <span class="text-[11px] font-bold text-emerald-700">à vista</span></span>
+                  <span class="text-[11px] text-brand-muted">★ 4.5 · 73 avaliações · nota 9.0</span>
+                </button>
+                <div class="mx-3 mb-2.5 flex flex-col gap-1.5 border-t border-slate-200 pt-2 sm:flex-row sm:items-center sm:justify-between">
+                  <p class="text-[10px] font-bold uppercase tracking-wide text-brand-dim">Cor: <span class="text-ink" data-color-label="ex">Cinza</span></p>
+                  <div class="flex items-center gap-2" role="group" aria-label="Cores da Foston X13 EX">
+                    <button type="button" class="color-dot flex h-7 w-7 items-center justify-center rounded-full transition hover:scale-110" data-color-model="ex" data-color="cinza" aria-pressed="true" title="Cinza" aria-label="Foston X13 EX cinza"><span class="h-5 w-5 rounded-full bg-slate-500 ring-1 ring-inset ring-black/15"></span></button>
+                    <button type="button" class="color-dot flex h-7 w-7 items-center justify-center rounded-full transition hover:scale-110" data-color-model="ex" data-color="branco" aria-pressed="false" title="Branco" aria-label="Foston X13 EX branca"><span class="h-5 w-5 rounded-full bg-white ring-1 ring-inset ring-slate-300"></span></button>
+                    <button type="button" class="color-dot flex h-7 w-7 items-center justify-center rounded-full transition hover:scale-110" data-color-model="ex" data-color="preto" aria-pressed="false" title="Preto" aria-label="Foston X13 EX preta"><span class="h-5 w-5 rounded-full bg-neutral-900 ring-1 ring-inset ring-black/15"></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="model-card flex flex-col rounded-xl border border-slate-200 bg-slate-50 transition hover:border-orange-300" data-model-card="max">
+                <button type="button" role="radio" aria-checked="false" data-model="max" class="model-option relative flex flex-1 flex-col items-start gap-1 rounded-xl px-3 pb-2 pt-3 text-left">
+                  <span class="model-check absolute right-1.5 top-1.5 flex h-4 w-4 scale-75 items-center justify-center rounded-full bg-brand-yellow text-[10px] font-black text-black opacity-0 transition" aria-hidden="true">✓</span>
+                  <span class="rounded bg-sky-50 px-1.5 py-0.5 text-[9px] font-extrabold uppercase text-sky-700">💳 10x sem juros · cesto</span>
+                  <span class="text-sm font-extrabold text-ink">Foston X13 Max</span>
+                  <span class="text-base font-black text-ink" data-card-price="max">R$ 5.799 <span class="text-[11px] font-bold text-emerald-700">10x R$ 579,90</span></span>
+                  <span class="text-[11px] text-brand-muted">cesto + painel digital · anúncio recente</span>
+                </button>
+                <div class="mx-3 mb-2.5 flex flex-col gap-1.5 border-t border-slate-200 pt-2 sm:flex-row sm:items-center sm:justify-between">
+                  <p class="text-[10px] font-bold uppercase tracking-wide text-brand-dim">Cor: <span class="text-ink" data-color-label="max">Cinza</span></p>
+                  <div class="flex items-center gap-2" role="group" aria-label="Cores da Foston X13 Max">
+                    <button type="button" class="color-dot flex h-7 w-7 items-center justify-center rounded-full transition hover:scale-110" data-color-model="max" data-color="cinza" aria-pressed="true" title="Cinza" aria-label="Foston X13 Max cinza"><span class="h-5 w-5 rounded-full bg-slate-500 ring-1 ring-inset ring-black/15"></span></button>
+                    <button type="button" class="color-dot flex h-7 w-7 items-center justify-center rounded-full transition hover:scale-110" data-color-model="max" data-color="branco" aria-pressed="false" title="Branco" aria-label="Foston X13 Max branca"><span class="h-5 w-5 rounded-full bg-white ring-1 ring-inset ring-slate-300"></span></button>
+                    <button type="button" class="color-dot flex h-7 w-7 items-center justify-center rounded-full transition hover:scale-110" data-color-model="max" data-color="preto" aria-pressed="false" title="Preto" aria-label="Foston X13 Max preta"><span class="h-5 w-5 rounded-full bg-neutral-900 ring-1 ring-inset ring-black/15"></span></button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -202,11 +226,11 @@
               <div class="mt-2" data-bind="inst"><p class="text-base font-bold text-orange-700">ou 12x de R$ 599,10 no cartão</p></div>
               <p class="mt-1 flex items-center gap-2 text-xs text-brand-muted"><span class="pulse-dot inline-block h-2 w-2 shrink-0 rounded-full bg-emerald-500" aria-hidden="true"></span><span data-bind="delivery">Frete grátis no checkout que simulamos em 21/10 (economia de R$ 314 · confira o seu CEP)</span></p>
 
-              <a href="https://meli.la/2DnA5yX" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine mt-5 inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.98]">
+              <a href="https://meli.la/15dJ3LG" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine mt-5 inline-flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.98]">
                 <span data-bind="ctaText">Ver Menor Preço da X13 EX no ML</span>
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
-              <p class="mt-2 text-center text-[11px] text-brand-dim">Abre o anúncio em uma nova aba · esta análise continua aberta aqui</p>
+              <p class="mt-2 text-center text-[11px] text-brand-dim">Cor: <strong class="text-ink" data-bind="colorName">Cinza</strong> · o preço pode variar conforme a cor · abre em nova aba</p>
 
               <!-- SELOS DE CONFIANÇA -->
               <div class="mt-4 rounded-xl border border-emerald-200 bg-gradient-to-b from-emerald-50/80 to-white p-3.5" aria-label="Garantias da compra">
@@ -242,17 +266,31 @@
       <!-- HISTÓRICO DE PREÇO -->
       <section id="historico" class="mb-8 scroll-mt-20" aria-labelledby="historico-titulo">
         <div class="glass overflow-hidden p-5 md:p-7">
+          <div class="mb-6">
+            <h2 id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">🎨 Preço por cor no Mercado Livre</h2>
+            <p class="mt-1 text-xs text-brand-dim">Cada cor tem um anúncio próprio, com preço diferente. Toque numa cor para abrir o anúncio dela.</p>
+            <div class="mt-3 grid grid-cols-3 gap-2" data-only="ex">
+              <a href="https://meli.la/15dJ3LG" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="flex flex-col items-center gap-0.5 rounded-xl border border-slate-200 bg-white p-2.5 text-center transition hover:border-orange-300 hover:shadow-soft"><span class="mb-1 h-4 w-4 rounded-full bg-slate-500 ring-1 ring-inset ring-black/15" aria-hidden="true"></span><span class="text-[10px] font-bold uppercase tracking-wide text-brand-dim">Cinza</span><span class="whitespace-nowrap text-[13px] font-extrabold text-ink sm:text-base">R$ 6.233,00</span><span class="text-[10px] font-semibold text-brand-muted">à vista · ou 12x R$ 599,10</span><span class="text-[10px] text-brand-dim">21/10</span></a>
+              <a href="https://meli.la/1R58Roz" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="flex flex-col items-center gap-0.5 rounded-xl border border-slate-200 bg-white p-2.5 text-center transition hover:border-orange-300 hover:shadow-soft"><span class="mb-1 h-4 w-4 rounded-full bg-white ring-1 ring-inset ring-slate-300" aria-hidden="true"></span><span class="text-[10px] font-bold uppercase tracking-wide text-brand-dim">Branco</span><span class="whitespace-nowrap text-[13px] font-extrabold text-ink sm:text-base">R$ 5.979,08</span><span class="text-[10px] font-semibold text-emerald-700">10x R$ 597,91 sem juros</span><span class="text-[10px] text-brand-dim">31/10 · menor histórico</span></a>
+              <a href="https://meli.la/2wUSZpv" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="flex flex-col items-center gap-0.5 rounded-xl border border-emerald-300 bg-emerald-50 p-2.5 text-center transition hover:border-orange-300 hover:shadow-soft"><span class="mb-1 h-4 w-4 rounded-full bg-neutral-900 ring-1 ring-inset ring-black/15" aria-hidden="true"></span><span class="text-[10px] font-bold uppercase tracking-wide text-brand-dim">Preto</span><span class="whitespace-nowrap text-[13px] font-extrabold text-emerald-700 sm:text-base">R$ 5.566,92</span><span class="text-[10px] font-semibold text-emerald-700">10x R$ 556,69 sem juros</span><span class="text-[10px] text-brand-dim">31/10 · a mais barata</span></a>
+            </div>
+            <div class="mt-3 grid grid-cols-3 gap-2" data-only="max">
+              <a href="https://meli.la/2Ga7iza" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="flex flex-col items-center gap-0.5 rounded-xl border border-slate-200 bg-white p-2.5 text-center transition hover:border-orange-300 hover:shadow-soft"><span class="mb-1 h-4 w-4 rounded-full bg-slate-500 ring-1 ring-inset ring-black/15" aria-hidden="true"></span><span class="text-[10px] font-bold uppercase tracking-wide text-brand-dim">Cinza</span><span class="whitespace-nowrap text-[13px] font-extrabold text-ink sm:text-base">R$ 5.799,00</span><span class="text-[10px] font-semibold text-emerald-700">10x R$ 579,90 sem juros</span><span class="text-[10px] text-brand-dim">28/10</span></a>
+              <a href="https://meli.la/1kT6WD9" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="flex flex-col items-center gap-0.5 rounded-xl border border-emerald-300 bg-emerald-50 p-2.5 text-center transition hover:border-orange-300 hover:shadow-soft"><span class="mb-1 h-4 w-4 rounded-full bg-white ring-1 ring-inset ring-slate-300" aria-hidden="true"></span><span class="text-[10px] font-bold uppercase tracking-wide text-brand-dim">Branco</span><span class="whitespace-nowrap text-[13px] font-extrabold text-emerald-700 sm:text-base">R$ 5.784,11</span><span class="text-[10px] font-semibold text-emerald-700">10x R$ 578,41 sem juros</span><span class="text-[10px] text-brand-dim">31/10 · a mais barata</span></a>
+              <a href="https://meli.la/1aPjQ8V" rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="flex flex-col items-center gap-0.5 rounded-xl border border-slate-200 bg-white p-2.5 text-center transition hover:border-orange-300 hover:shadow-soft"><span class="mb-1 h-4 w-4 rounded-full bg-neutral-900 ring-1 ring-inset ring-black/15" aria-hidden="true"></span><span class="text-[10px] font-bold uppercase tracking-wide text-brand-dim">Preto</span><span class="whitespace-nowrap text-[13px] font-extrabold text-ink sm:text-base">R$ 5.799,71</span><span class="text-[10px] font-semibold text-emerald-700">10x R$ 579,97 sem juros</span><span class="text-[10px] text-brand-dim">29/10</span></a>
+            </div>
+          </div>
           <div data-only="ex">
             <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
               <div>
-                <h2 id="historico-titulo" class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</h2>
-                <p class="mt-1 text-xs text-brand-dim">Foston X13 EX · anúncio MLB74127236 · ago a out/2026</p>
+                <h3 class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço da cor cinza</h3>
+                <p class="mt-1 text-xs text-brand-dim">Foston X13 EX cinza · anúncio MLB74127236 · ago a out/2026</p>
               </div>
               <span class="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">-21% desde agosto</span>
             </div>
 
             <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-50 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-700 shadow-neon-emerald md:text-base">
-              🟢 Menor preço histórico: R$ 6.233,00 à vista ou 12x de R$ 599,10
+              🟢 Cor cinza · menor preço histórico: R$ 6.233,00 à vista ou 12x de R$ 599,10
             </div>
 
             <div class="mb-5 grid grid-cols-2 gap-3">
@@ -325,14 +363,14 @@
           <div data-only="max">
             <div class="mb-4 flex flex-wrap items-start justify-between gap-3">
               <div>
-                <h2 class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço real no Mercado Livre</h2>
-                <p class="mt-1 text-xs text-brand-dim">Foston X13 Max · monitoramento iniciado em 28/10/2026</p>
+                <h3 class="text-lg font-extrabold uppercase tracking-wide md:text-xl">📉 Histórico de preço da cor cinza</h3>
+                <p class="mt-1 text-xs text-brand-dim">Foston X13 Max cinza · monitoramento iniciado em 28/10/2026</p>
               </div>
               <span class="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700">Bom preço no monitor</span>
             </div>
 
             <div class="mb-5 inline-flex w-full items-center justify-center rounded-xl border-2 border-emerald-400 bg-emerald-50 px-4 py-3 text-center text-sm font-black uppercase leading-snug tracking-wide text-emerald-700 shadow-neon-emerald md:text-base">
-              🟢 Menor preço registrado: R$ 5.799 em 10x de R$ 579,90 sem juros
+              🟢 Cor cinza · menor preço registrado: R$ 5.799 em 10x de R$ 579,90 sem juros
             </div>
 
             <div class="mb-5 grid grid-cols-3 gap-3">
@@ -573,7 +611,7 @@
           <div class="glass border-emerald-200 p-5 shadow-glow-emerald">
             <h3 class="mb-3 text-sm font-bold uppercase tracking-wide text-emerald-700">Por que considerar a X13 Max</h3>
             <ul class="space-y-3 text-sm text-brand-muted">
-              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">R$ 434 mais barata</strong> que a X13 EX hoje, e ainda em 10x sem juros.</span></li>
+              <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">R$ 434 mais barata</strong> que a X13 EX cinza, e ainda em 10x sem juros.</span></li>
               <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Motor 1000W e NFC</strong> — mesma potência anunciada e partida por aproximação.</span></li>
               <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Cesto e painel digital</strong> — praticidade para compras e mochila no dia a dia.</span></li>
               <li class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-emerald-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong class="text-ink">Frete e devolução grátis</strong> — 30 dias para devolver pelo Mercado Livre.</span></li>
@@ -758,7 +796,7 @@
             <p class="px-4 pb-4 pt-2 text-[11px] text-brand-dim">Parcelas calculadas a partir do preço anunciado em 28/10/2026, com até 10x sem juros no cartão. Os centavos podem variar conforme cartão e banco.</p>
           </details>
         </div>
-        <a href="https://meli.la/2DnA5yX" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="mt-4 inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition hover:brightness-110 active:scale-[0.98]">Conferir parcelas no Mercado Livre</a>
+        <a href="https://meli.la/15dJ3LG" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="mt-4 inline-flex h-12 w-full items-center justify-center rounded-xl bg-brand-yellow px-6 font-extrabold text-black shadow-glow transition hover:brightness-110 active:scale-[0.98]">Conferir parcelas no Mercado Livre</a>
       </section>
 
       <!-- FAQ -->
@@ -803,7 +841,7 @@
           <p class="mb-2 text-xs font-extrabold uppercase tracking-[0.16em] text-emerald-700" data-bind="finalKicker">🟢 Menor preço histórico</p>
           <h2 class="mb-2 text-2xl font-extrabold md:text-4xl"><span data-bind="modelFull">Foston X13 EX</span> por <span class="text-gradient-brand" data-bind="priceFull">R$ 6.233,00</span></h2>
           <p class="mb-6 text-sm text-brand-muted md:text-base" data-bind="finalSub">ou 12x de R$ 599,10 · Compra Garantida + Devolução Grátis no Mercado Livre</p>
-          <a href="https://meli.la/2DnA5yX" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine relative mx-auto inline-flex h-14 w-full max-w-md items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.98]"><span data-bind="finalCta">Garantir Menor Preço no ML</span></a>
+          <a href="https://meli.la/15dJ3LG" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine relative mx-auto inline-flex h-14 w-full max-w-md items-center justify-center gap-2 rounded-xl bg-brand-yellow px-6 text-base font-extrabold text-black shadow-glow-lg transition hover:brightness-110 active:scale-[0.98]"><span data-bind="finalCta">Garantir Menor Preço no ML</span></a>
           <p class="mt-3 text-[11px] text-brand-dim" data-bind="finalDate">O preço pode mudar a qualquer momento. Valores verificados em 21/10/2026.</p>
         </div>
       </section>
@@ -835,7 +873,7 @@
         <p class="text-[13px] font-extrabold leading-tight text-ink sm:text-base"><span class="whitespace-nowrap"><span data-bind="stickyName">Foston X13 EX 1000W</span> ·</span> <span class="whitespace-nowrap text-orange-700" data-bind="stickyPrice">R$ 6.233 à vista</span></p>
         <p class="mt-0.5 truncate text-[11px] text-emerald-700" data-bind="stickySub"><span class="font-bold">menor preço histórico</span> <span class="text-brand-dim">· ou 12x de R$ 599,10</span></p>
       </div>
-      <a href="https://meli.la/2DnA5yX" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine inline-flex h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-4 text-sm font-extrabold text-black shadow-glow transition-all hover:brightness-110 active:scale-[0.98] sm:px-6 sm:text-base">Conferir Oferta</a>
+      <a href="https://meli.la/15dJ3LG" data-cta rel="sponsored noopener" target="_blank" onclick="return gtag_report_conversion(this.href);" class="btn-shine inline-flex h-12 shrink-0 items-center justify-center whitespace-nowrap rounded-xl bg-brand-yellow px-4 text-sm font-extrabold text-black shadow-glow transition-all hover:brightness-110 active:scale-[0.98] sm:px-6 sm:text-base">Conferir Oferta</a>
     </div>
   </div>
 
@@ -887,7 +925,7 @@
     (function () {
       const MODELS = {
         ex: {
-          produto: 'x13-ex', name: 'X13 EX', full: 'Foston X13 EX', link: 'https://meli.la/2DnA5yX', price: 6233,
+          produto: 'x13-ex', name: 'X13 EX', full: 'Foston X13 EX', link: 'https://meli.la/15dJ3LG', price: 6233,
           pill2: '📉 Menor preço histórico', pill3: '🏅 Vendedor MercadoLíder Gold',
           h1: 'Scooter Elétrica <span class="text-gradient-brand">Foston X13 EX 1000W</span> com NFC no menor preço histórico',
           sub: 'Até 32 km/h, partida por NFC e design cinza elegante para o dia a dia na cidade. Nota <strong class="text-ink">9.0</strong> na nossa análise · <span class="text-gradient-brand">★★★★½</span> 4.5 com 73 avaliações no ML.',
@@ -907,7 +945,7 @@
         },
         max: {
           produto: 'x13-max', name: 'X13 Max', full: 'Foston X13 Max', link: 'https://meli.la/2Ga7iza', price: 5799,
-          pill2: '🏷️ Mais barata da linha X13', pill3: '💳 10x sem juros',
+          pill2: '🧺 Cesto + painel digital', pill3: '💳 10x sem juros',
           h1: 'Scooter Elétrica <span class="text-gradient-brand">Foston X13 Max 1000W</span> com NFC e cesto por R$ 5.799',
           sub: 'Motor 1000W, partida por NFC, cesto dianteiro e painel digital. <span class="text-gradient-brand">★★★★★</span> 5.0 com 1 avaliação no ML · anúncio recente.',
           anchor: 'De <span class="line-through decoration-orange-400/80">R$ 6.499</span> no anúncio · <span class="font-bold text-emerald-700">10% OFF</span>',
@@ -920,14 +958,97 @@
           video: 'assets/produtos/LP/x13-max-capa-loop.mp4', poster: 'assets/produtos/LP/x13-max-capa-poster.webp', full_video: 'assets/produtos/LP/x13-max-video-completo.mp4', full_label: '🔊 Assistir completo com som · 1:10',
           videoBadge: '▶ Vídeo real · Foston X13 Max', mediaHint: 'Vídeo da X13 Max · veja as fotos de compradores mais abaixo',
           calcPrice: 'R$ 5.799 do anúncio',
-          finalKicker: '🏷️ Opção mais barata da linha', finalSub: 'ou 10x de R$ 579,90 sem juros · Compra Garantida + Devolução Grátis no Mercado Livre', finalCta: 'Ver a X13 Max no ML', finalDate: 'O preço pode mudar a qualquer momento. Valores verificados em 28/10/2026.',
+          finalKicker: '💳 10x sem juros', finalSub: 'ou 10x de R$ 579,90 sem juros · Compra Garantida + Devolução Grátis no Mercado Livre', finalCta: 'Ver a X13 Max no ML', finalDate: 'O preço pode mudar a qualquer momento. Valores verificados em 28/10/2026.',
           stickyName: 'Foston X13 Max 1000W', stickyPrice: '10x de R$ 579,90', stickySub: '<span class="font-bold">sem juros</span> <span class="text-brand-dim">· ou R$ 5.799</span>',
           stickyImg: 'assets/produtos/LP/x13-max-compradores/comprador-3.webp'
         }
       };
 
+      const COLORS = {
+        ex: { cinza: 'https://meli.la/15dJ3LG', branco: 'https://meli.la/1R58Roz', preto: 'https://meli.la/2wUSZpv' },
+        max: { cinza: 'https://meli.la/2Ga7iza', branco: 'https://meli.la/1kT6WD9', preto: 'https://meli.la/1aPjQ8V' }
+      };
+      const COLOR_NAMES = { cinza: 'Cinza', branco: 'Branco', preto: 'Preto' };
+      const chosen = { ex: 'cinza', max: 'cinza' };
+
+      const inst10 = (v) => '<div class="inline-flex flex-wrap items-center gap-2 rounded-lg border border-emerald-300 bg-gradient-to-r from-emerald-50 via-emerald-50 to-amber-50 px-3 py-1.5"><span class="pulse-dot inline-block h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true"></span><span class="text-base font-black text-ink">10x de R$ ' + v + '</span><span class="rounded bg-emerald-700 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide text-white">sem juros</span></div>';
+      const cardPrice = (price, note) => price + ' <span class="text-[11px] font-bold text-emerald-700">' + note + '</span>';
+      const colorShared = (date) => ({
+        pill3: '💳 10x sem juros',
+        delivery: 'Preço verificado em ' + date + '/2026 · confira o frete para o seu CEP no anúncio',
+        shipTitle: 'Envio rastreado pelo Mercado Livre',
+        ship: 'Confira no anúncio desta cor o vendedor, a reputação e o prazo de entrega para o seu CEP.',
+        ret: 'Devolução grátis pelas regras do Mercado Livre; prazo da garantia de fábrica informado no anúncio.',
+        finalDate: 'O preço pode mudar a qualquer momento. Valores verificados em ' + date + '/2026.'
+      });
+      const VARIANTS = {
+        ex: {
+          cinza: { card: cardPrice('R$ 6.233', 'à vista') },
+          branco: Object.assign(colorShared('31/10'), {
+            price: 5979.08, card: cardPrice('R$ 5.979,08', '10x s/ juros'),
+            pill2: '📉 Menor preço histórico',
+            sub: 'Até 32 km/h, partida por NFC e acabamento branco para o dia a dia na cidade. Nota <strong class="text-ink">9.0</strong> na nossa análise.',
+            anchor: 'Era ~R$ 6.230 em 22/10 · <span class="font-bold text-emerald-700">caiu ~R$ 250 (-4%)</span>',
+            priceBig: 'R$ 5.979<span class="text-2xl md:text-3xl">,08</span>', priceLabel: 'no cartão ou Pix', priceFull: 'R$ 5.979,08',
+            inst: inst10('597,91'), ctaText: 'Ver a X13 EX Branca no ML', calcPrice: 'R$ 5.979,08 da cor branca',
+            finalKicker: '📉 Menor preço histórico da cor branca', finalSub: 'ou 10x de R$ 597,91 sem juros · Compra Garantida + Devolução Grátis no Mercado Livre',
+            stickyName: 'Foston X13 EX Branca', stickyPrice: '10x de R$ 597,91', stickySub: '<span class="font-bold">sem juros</span> <span class="text-brand-dim">· ou R$ 5.979,08</span>'
+          }),
+          preto: Object.assign(colorShared('31/10'), {
+            price: 5566.92, card: cardPrice('R$ 5.566,92', '10x s/ juros'),
+            pill2: '🏷️ Cor mais barata da linha X13',
+            sub: 'Até 32 km/h, partida por NFC e acabamento preto para o dia a dia na cidade. Nota <strong class="text-ink">9.0</strong> na nossa análise.',
+            anchor: 'Preço verificado em 31/10/2026 · <span class="font-bold text-emerald-700">a opção mais barata da linha X13</span>',
+            priceBig: 'R$ 5.566<span class="text-2xl md:text-3xl">,92</span>', priceLabel: 'no cartão ou Pix', priceFull: 'R$ 5.566,92',
+            inst: inst10('556,69'), ctaText: 'Ver a X13 EX Preta no ML', calcPrice: 'R$ 5.566,92 da cor preta',
+            finalKicker: '🏷️ Cor mais barata da linha X13', finalSub: 'ou 10x de R$ 556,69 sem juros · Compra Garantida + Devolução Grátis no Mercado Livre',
+            stickyName: 'Foston X13 EX Preta', stickyPrice: '10x de R$ 556,69', stickySub: '<span class="font-bold">sem juros</span> <span class="text-brand-dim">· ou R$ 5.566,92</span>'
+          })
+        },
+        max: {
+          cinza: { card: cardPrice('R$ 5.799', '10x R$ 579,90') },
+          branco: Object.assign(colorShared('31/10'), {
+            price: 5784.11, card: cardPrice('R$ 5.784,11', '10x R$ 578,41'),
+            sub: 'Motor 1000W, partida por NFC, cesto dianteiro e painel digital, na cor branca. Anúncio recente no Mercado Livre.',
+            anchor: 'Preço verificado em 31/10/2026 · <span class="font-bold text-emerald-700">a X13 Max mais barata hoje</span>',
+            priceBig: 'R$ 5.784<span class="text-2xl md:text-3xl">,11</span>', priceLabel: 'no cartão ou Pix', priceFull: 'R$ 5.784,11',
+            inst: inst10('578,41'), ctaText: 'Ver a X13 Max Branca no ML', calcPrice: 'R$ 5.784,11 da cor branca',
+            finalSub: 'ou 10x de R$ 578,41 sem juros · Compra Garantida + Devolução Grátis no Mercado Livre',
+            stickyName: 'Foston X13 Max Branca', stickyPrice: '10x de R$ 578,41', stickySub: '<span class="font-bold">sem juros</span> <span class="text-brand-dim">· ou R$ 5.784,11</span>'
+          }),
+          preto: Object.assign(colorShared('29/10'), {
+            price: 5799.71, card: cardPrice('R$ 5.799,71', '10x R$ 579,97'),
+            sub: 'Motor 1000W, partida por NFC, cesto dianteiro e painel digital, na cor preta. Anúncio recente no Mercado Livre.',
+            anchor: 'Preço verificado em 29/10/2026 · <span class="font-bold text-emerald-700">menor preço registrado</span>',
+            priceBig: 'R$ 5.799<span class="text-2xl md:text-3xl">,71</span>', priceLabel: 'no cartão ou Pix', priceFull: 'R$ 5.799,71',
+            inst: inst10('579,97'), ctaText: 'Ver a X13 Max Preta no ML', calcPrice: 'R$ 5.799,71 da cor preta',
+            finalSub: 'ou 10x de R$ 579,97 sem juros · Compra Garantida + Devolução Grátis no Mercado Livre',
+            stickyName: 'Foston X13 Max Preta', stickyPrice: '10x de R$ 579,97', stickySub: '<span class="font-bold">sem juros</span> <span class="text-brand-dim">· ou R$ 5.799,71</span>'
+          })
+        }
+      };
+      const data = (key) => Object.assign({}, MODELS[key], VARIANTS[key][chosen[key]]);
+
       const $all = (sel) => Array.from(document.querySelectorAll(sel));
       const setBind = (key, html) => $all('[data-bind="' + key + '"]').forEach((el) => { el.innerHTML = html; });
+
+      function syncColor() {
+        const color = chosen[current];
+        const link = COLORS[current][color];
+        document.body.dataset.cor = color;
+        $all('[data-cta]').forEach((a) => { a.href = link; });
+        $all('.color-dot').forEach((d) => d.setAttribute('aria-pressed', chosen[d.dataset.colorModel] === d.dataset.color ? 'true' : 'false'));
+        $all('[data-color-label]').forEach((el) => { el.textContent = COLOR_NAMES[chosen[el.dataset.colorLabel]]; });
+        $all('[data-card-price]').forEach((el) => { el.innerHTML = data(el.dataset.cardPrice).card; });
+        setBind('colorName', COLOR_NAMES[color]);
+      }
+
+      function hashFor() {
+        const parts = [];
+        if (current === 'max') parts.push('modelo=max');
+        if (chosen[current] !== 'cinza') parts.push('cor=' + chosen[current]);
+        return parts.length ? '#' + parts.join('&') : location.pathname + location.search;
+      }
       const video = document.getElementById('hero-video');
       const fullBtn = document.getElementById('full-video-btn');
       const calcRoot = document.getElementById('calc-economia');
@@ -951,19 +1072,21 @@
       }
 
       function apply(key, fromUser) {
-        const m = MODELS[key];
-        if (!m) return;
+        if (!MODELS[key]) return;
+        const m = data(key);
         const changed = key !== current;
         current = key;
         document.body.dataset.modelo = key;
         $all('.model-option').forEach((b) => b.setAttribute('aria-checked', b.dataset.model === key ? 'true' : 'false'));
+        $all('.model-card').forEach((c) => c.classList.toggle('is-active', c.dataset.modelCard === key));
+        syncColor();
         const swap = $all('[data-swap]');
         swap.forEach((el) => el.classList.add('is-swapping'));
         const run = () => {
           ['pill2', 'pill3', 'h1', 'sub', 'anchor', 'priceBig', 'priceLabel', 'priceFull', 'inst', 'delivery', 'ctaText', 'shipTitle', 'ship', 'ret', 'videoBadge', 'mediaHint', 'calcPrice', 'finalKicker', 'finalSub', 'finalCta', 'finalDate', 'stickyName', 'stickyPrice', 'stickySub'].forEach((k) => setBind(k, m[k]));
           setBind('modelName', m.name);
           setBind('modelFull', m.full);
-          $all('[data-cta]').forEach((a) => { a.href = m.link; });
+          syncColor();
           document.getElementById('sticky-img').src = m.stickyImg;
           calcRoot.dataset.price = m.price;
           calcRoot.dataset.produto = m.produto;
@@ -973,12 +1096,18 @@
         if (fromUser) setTimeout(run, 180); else run();
         if (changed) setVideo(m);
         if (fromUser) {
-          history.replaceState(null, '', key === 'max' ? '#modelo=max' : location.pathname + location.search);
-          if (typeof gtag === 'function') gtag('event', 'selecionar_modelo', { modelo: m.produto });
+          history.replaceState(null, '', hashFor());
+          if (changed && typeof gtag === 'function') gtag('event', 'selecionar_modelo', { modelo: m.produto });
         }
       }
 
       $all('.model-option').forEach((b) => b.addEventListener('click', () => apply(b.dataset.model, true)));
+      $all('.color-dot').forEach((d) => d.addEventListener('click', () => {
+        const model = d.dataset.colorModel;
+        chosen[model] = d.dataset.color;
+        apply(model, true);
+        if (typeof gtag === 'function') gtag('event', 'selecionar_cor', { modelo: MODELS[model].produto, cor: d.dataset.color });
+      }));
 
       window.TDM_LOW_DATA = (navigator.connection && navigator.connection.saveData) || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (window.TDM_LOW_DATA) { video.removeAttribute('autoplay'); video.pause(); video.controls = true; }
@@ -999,7 +1128,10 @@
         if (typeof gtag === 'function') gtag('event', 'assistir_video_completo', { produto: video.dataset.produto });
       });
 
-      if (/modelo=max/.test(location.hash)) apply('max', false);
+      const hashColor = (location.hash.match(/cor=(cinza|branco|preto)/) || [])[1];
+      const hashModel = /modelo=max/.test(location.hash) ? 'max' : 'ex';
+      if (hashColor) chosen[hashModel] = hashColor;
+      if (hashModel === 'max' || hashColor) apply(hashModel, false); else syncColor();
     })();
   </script>
   <script>
